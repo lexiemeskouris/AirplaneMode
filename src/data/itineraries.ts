@@ -28,6 +28,8 @@ export type Itinerary = {
   gated: boolean;
   /** A short intro shown for both free and gated itineraries. */
   teaser: string;
+  /** Short food/activity hashtags shown as chips on feed cards. */
+  tags: string[];
   highlights: string[];
   /** Full day-by-day plan. Omitted/abbreviated for gated itineraries. */
   days?: ItineraryDay[];
