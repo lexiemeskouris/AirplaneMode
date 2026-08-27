@@ -1,21 +1,20 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { itineraries } from "@/data/itineraries";
-import heroImg from "@/assets/hero-journal.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Wayfarer — Hand-drawn Travel Itineraries" },
+      { title: "Wayfarer — High-Energy Travel Itineraries" },
       {
         name: "description",
         content:
-          "Slow, hand-drawn travel itineraries for the curious traveller. Free guides and supporter-funded deep dives.",
+          "High-energy travel itineraries for people who keep moving and love food. Free guides and supporter-funded deep dives.",
       },
-      { property: "og:title", content: "Wayfarer — Hand-drawn Travel Itineraries" },
+      { property: "og:title", content: "Wayfarer — High-Energy Travel Itineraries" },
       {
         property: "og:description",
         content:
-          "Slow, hand-drawn travel itineraries for the curious traveller. Free guides and supporter-funded deep dives.",
+          "High-energy travel itineraries for people who keep moving and love food. Free guides and supporter-funded deep dives.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -30,115 +29,162 @@ function Index() {
 
   return (
     <div>
-      {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 md:grid-cols-2 md:py-24">
-          <div>
-            <p className="stamp text-xs text-primary">Field Notes · Est. 2026</p>
-            <h1 className="mt-4 font-serif text-5xl font-semibold leading-[1.05] text-foreground md:text-7xl">
-              Itineraries for the
-              <span className="block italic text-primary">slow traveller.</span>
-            </h1>
-            <p className="mt-6 max-w-md text-lg leading-relaxed text-muted-foreground">
-              Hand-drawn route notes from the road — pacing, timing, and the
-              small detours that make a place stay with you. Read the free guides,
-              or unlock the deeper dives with a coffee.
-            </p>
-            <div className="mt-8 flex flex-wrap items-center gap-3">
-              <a
-                href="#journeys"
-                className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-              >
-                Browse journeys
-              </a>
-              <a
-                href="https://www.buymeacoffee.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-primary px-6 py-3 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
-              >
-                ☕ Buy me a coffee
-              </a>
-            </div>
-            <div className="mt-8 flex flex-wrap gap-x-8 gap-y-2 text-sm text-muted-foreground">
-              <span><strong className="font-semibold text-foreground">{free.length}</strong> free guides</span>
-              <span><strong className="font-semibold text-foreground">{gated.length}</strong> supporter deep dives</span>
-              <span>Updated each season</span>
-            </div>
-          </div>
-          <div className="relative">
-            <div className="overflow-hidden rounded-sm border border-border shadow-[0_20px_60px_-30px_oklch(0.3_0.05_60)]">
-              <img
-                src={heroImg}
-                alt="An open travel journal with maps, stamps, and photographs on a warm wooden desk"
-                width={1600}
-                height={1008}
-                className="h-full w-full object-cover"
-                fetchPriority="high"
-              />
-            </div>
-            <div className="absolute -bottom-5 -left-5 hidden rotate-[-3deg] rounded-sm border border-border bg-card px-4 py-3 shadow-md md:block">
-              <p className="font-serif text-lg italic text-primary">"the road writes the best plans"</p>
-            </div>
+      {/* Hero intro band */}
+      <section className="mx-auto max-w-7xl px-6 pt-20 pb-16">
+        <div className="max-w-3xl">
+          <span className="mb-6 inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-accent">
+            <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
+            Live Travel Feed
+          </span>
+          <h1 className="font-display text-5xl font-extrabold leading-[1.05] tracking-tight text-foreground md:text-8xl">
+            Less planning.
+            <br />
+            <span className="text-primary">More moving.</span>
+          </h1>
+          <p className="mt-6 max-w-xl text-lg font-medium leading-relaxed text-muted-foreground md:text-xl">
+            High-energy itineraries for the generation that never stops. Street
+            food, fast moves, and zero filler. Read the free guides or unlock the
+            deep dives with a coffee.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-x-8 gap-y-2 text-sm font-semibold text-muted-foreground">
+            <span>
+              <strong className="font-extrabold text-foreground">{free.length}</strong>{" "}
+              free guides
+            </span>
+            <span>
+              <strong className="font-extrabold text-foreground">{gated.length}</strong>{" "}
+              supporter deep dives
+            </span>
+            <span>Updated each season</span>
           </div>
         </div>
       </section>
 
-      {/* Journey grid */}
-      <section id="journeys" className="mx-auto max-w-6xl scroll-mt-24 px-5 py-12">
-        <div className="mb-10 flex items-end justify-between">
-          <div>
-            <p className="stamp text-xs text-primary">The Collection</p>
-            <h2 className="mt-2 font-serif text-4xl font-semibold text-foreground">
-              Recent journeys
-            </h2>
-          </div>
-          <p className="hidden text-sm text-muted-foreground sm:block">
-            {itineraries.length} itineraries
-          </p>
-        </div>
-
-        <div className="masonry">
-          {itineraries.map((it) => (
-            <Link
+      {/* Itinerary feed */}
+      <section className="mx-auto flex max-w-7xl flex-col gap-24 px-6 pb-32">
+        {itineraries.map((it, idx) => {
+          const reversed = idx % 2 === 1;
+          return (
+            <article
               key={it.slug}
-              to="/itineraries/$slug"
-              params={{ slug: it.slug }}
-              className="group block overflow-hidden rounded-sm border border-border bg-card transition-all hover:-translate-y-1 hover:shadow-[0_18px_40px_-20px_oklch(0.3_0.05_60)]"
+              className={`group flex flex-col gap-10 ${reversed ? "md:flex-row-reverse" : "md:flex-row"}`}
             >
-              <div className="relative overflow-hidden">
-                <img
-                  src={it.cover}
-                  alt={it.title}
-                  width={800}
-                  height={1100}
-                  loading="lazy"
-                  className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                {it.gated ? (
-                  <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-background/90 px-3 py-1 text-xs font-medium text-primary backdrop-blur-sm">
-                    ☕ Supporter
-                  </span>
-                ) : (
-                  <span className="absolute right-3 top-3 rounded-full bg-background/90 px-3 py-1 text-xs font-medium text-foreground backdrop-blur-sm">
-                    Free
-                  </span>
+              {/* Image */}
+              <div className="relative flex-1">
+                <Link
+                  to="/itineraries/$slug"
+                  params={{ slug: it.slug }}
+                  className="block"
+                >
+                  <img
+                    src={it.cover}
+                    alt={it.title}
+                    width={1200}
+                    height={800}
+                    loading="lazy"
+                    className={`aspect-[16/10] w-full overflow-hidden rounded-[2.5rem] bg-secondary object-cover shadow-2xl transition-all duration-500 group-hover:scale-[1.02] ${
+                      it.gated ? "grayscale group-hover:grayscale-0" : ""
+                    }`}
+                  />
+                </Link>
+
+                {/* Gated unlock overlay */}
+                {it.gated && (
+                  <div className="absolute inset-0 flex items-center justify-center rounded-[2.5rem] bg-foreground/40 backdrop-blur-[4px]">
+                    <div className="text-center">
+                      <p className="mb-6 text-sm font-extrabold uppercase tracking-[0.2em] text-background">
+                        Premium Access
+                      </p>
+                      <a
+                        href={it.bmcUrl ?? "https://www.buymeacoffee.com/"}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-3 rounded-2xl bg-accent px-8 py-4 font-bold text-accent-foreground shadow-2xl transition-transform hover:scale-105"
+                      >
+                        <svg
+                          className="h-5 w-5"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M20.25 18H3.75c-.414 0-.75.336-.75.75v1.5c0 .414.336.75.75.75h16.5c.414 0 .75-.336.75-.75v-1.5c0-.414-.336-.75-.75-.75zM5.25 15h13.5c.828 0 1.5-.672 1.5-1.5v-9c0-.828-.672-1.5-1.5-1.5H5.25c-.828 0-1.5.672-1.5 1.5v9c0 .828.672 1.5 1.5 1.5z" />
+                        </svg>
+                        Buy a Coffee to Unlock
+                      </a>
+                    </div>
+                  </div>
                 )}
+
+                {/* Chips */}
+                <div
+                  className={`absolute top-6 flex gap-2 ${reversed ? "right-6" : "left-6"}`}
+                >
+                  <span className="rounded-full bg-background/95 px-4 py-2 text-xs font-extrabold tracking-tight text-foreground shadow-sm backdrop-blur-md">
+                    {it.season.toUpperCase()}
+                  </span>
+                  <span className="rounded-full bg-accent px-4 py-2 text-xs font-extrabold tracking-tight text-accent-foreground shadow-sm">
+                    {it.duration.toUpperCase()}
+                  </span>
+                  {it.gated && (
+                    <span className="rounded-full bg-primary px-4 py-2 text-xs font-extrabold tracking-tight text-primary-foreground shadow-sm">
+                      ☕ Supporter
+                    </span>
+                  )}
+                </div>
               </div>
-              <div className="p-5">
-                <p className="stamp text-[0.7rem] text-muted-foreground">
-                  {it.country} · {it.duration} · {it.season}
+
+              {/* Text panel */}
+              <div className="flex flex-col justify-center md:w-[400px]">
+                <p
+                  className={`mb-2 text-sm font-bold uppercase tracking-widest ${it.gated ? "text-muted-foreground/70" : "text-primary"}`}
+                >
+                  {it.destination}, {it.country}
                 </p>
-                <h3 className="mt-2 font-serif text-2xl font-semibold text-foreground transition-colors group-hover:text-primary">
+                <h2
+                  className={`mb-4 font-display text-4xl font-extrabold tracking-tight text-foreground ${it.gated ? "opacity-60" : ""}`}
+                >
                   {it.title}
-                </h3>
-                <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-muted-foreground">
+                </h2>
+                <p
+                  className={`mb-8 leading-relaxed ${it.gated ? "text-muted-foreground/70" : "text-muted-foreground"}`}
+                >
                   {it.summary}
                 </p>
+                <div
+                  className={`mb-10 flex flex-wrap gap-2 ${it.gated ? "opacity-50" : ""}`}
+                >
+                  {it.tags.map((t) => (
+                    <span
+                      key={t}
+                      className="rounded-xl bg-secondary px-3 py-1.5 text-xs font-bold text-accent"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+                <Link
+                  to="/itineraries/$slug"
+                  params={{ slug: it.slug }}
+                  className={`inline-flex w-fit items-center font-bold transition-all hover:translate-x-2 ${it.gated ? "text-muted-foreground" : "text-primary"}`}
+                >
+                  {it.gated ? "Read the free sample" : "View full sprint"}
+                  <svg
+                    className="ml-2 h-5 w-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2.5}
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </Link>
               </div>
-            </Link>
-          ))}
-        </div>
+            </article>
+          );
+        })}
       </section>
     </div>
   );

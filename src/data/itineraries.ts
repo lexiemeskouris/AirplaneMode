@@ -28,6 +28,8 @@ export type Itinerary = {
   gated: boolean;
   /** A short intro shown for both free and gated itineraries. */
   teaser: string;
+  /** Short food/activity hashtags shown as chips on feed cards. */
+  tags: string[];
   highlights: string[];
   /** Full day-by-day plan. Omitted/abbreviated for gated itineraries. */
   days?: ItineraryDay[];
@@ -51,6 +53,7 @@ export const itineraries: Itinerary[] = [
     gated: false,
     teaser:
       "Lisbon rewards the unhurried. This route threads the old Moorish Alfama with breezy riverfront afternoons and late-night fado in a candlelit tasca.",
+    tags: ["#PastelDeNata", "#Tram28", "#FadoNights"],
     highlights: [
       "Sunrise miradouro over the terracotta roofs",
       "Tram 28 from Graça to Estrela",
@@ -106,6 +109,7 @@ export const itineraries: Itinerary[] = [
     bmcUrl: BMC_URL,
     teaser:
       "Kyoto is not a checklist. This itinerary is paced for stillness: early-morning temples before the crowds, a private tea ceremony, and a day walking the Philosopher's Path as the maples turn. Day 1 below is free to read — the full seven-day plan unlocks with a coffee.",
+    tags: ["#TempleDawn", "#TeaCeremony", "#MapleWalk"],
     highlights: [
       "Fushimi Inari at first light",
       "Private tea ceremony in Higashiyama",
@@ -139,6 +143,7 @@ export const itineraries: Itinerary[] = [
     gated: false,
     teaser:
       "The SS163 is one of the world's great drives — but it punishes the rushed. This route times each stop to light and traffic, with a swim before lunch and a spritz at the right hour.",
+    tags: ["#CliffDrive", "#PathOfGods", "#LemonSpritz"],
     highlights: [
       "Positano from the sea",
       "Ravello gardens at sunset",
@@ -203,6 +208,7 @@ export const itineraries: Itinerary[] = [
     bmcUrl: BMC_URL,
     teaser:
       "Marrakech overwhelms the senses by design. This itinerary pairs a guided souk route with the quiet of a hammam, a cookery class, and a desert night under the stars. Day 1 is free below; the full five-day plan unlocks with a coffee.",
+    tags: ["#SoukMaze", "#Hammam", "#DesertStars"],
     highlights: [
       "Jemaa el-Fnaa at dusk",
       "A traditional hammam ritual",
@@ -236,6 +242,7 @@ export const itineraries: Itinerary[] = [
     gated: false,
     teaser:
       "Route 1 circles the island and rarely disappoints. This seven-day loop is paced to the midnight sun — early starts, long detours, and soaks in remote pools after the day-trippers leave.",
+    tags: ["#RingRoad", "#WaterfallChase", "#MidnightSun"],
     highlights: [
       "Sunrise at Jökulsárlón glacier lagoon",
       "Diamond Beach ice diamonds",
@@ -326,6 +333,7 @@ export const itineraries: Itinerary[] = [
     bmcUrl: BMC_URL,
     teaser:
       "Oaxaca is Mexico's deepest flavor. This plan threads the markets, a mezcal tasting, a cookery class, and Monte Albán above the valley. Day 1 is free to read — the full 72-hour plan opens with a coffee.",
+    tags: ["#MoleMarkets", "#Mezcal", "#MonteAlban"],
     highlights: [
       "Mercado 20 de Noviembre's pasillo de humo",
       "Mezcal tasting at a family palenque",
