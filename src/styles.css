@@ -5,9 +5,10 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Nomad Journal design system.
- * Warm muted, paper-and-ink, travel-diary aesthetic.
- * Headings: Cormorant Garamond. Body: Karla.
+ * Wayfarer — Gen Z citrus feed design system.
+ * Clean, relaxed, on-the-move, food-forward.
+ * Headings: Sora. Body: Manrope.
+ * Palette: Sunset Citrus — cream base, citrus orange, coral.
  */
 
 @theme inline {
@@ -53,93 +54,96 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  --font-serif: "Cormorant Garamond", ui-serif, Georgia, serif;
-  --font-sans: "Karla", ui-sans-serif, system-ui, sans-serif;
+  /* Headings use Sora via --font-serif alias (kept for existing font-serif utility) */
+  --font-serif: "Sora", "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Sora", "Manrope", ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
-  --radius: 0.5rem;
+  --radius: 0.75rem;
 
-  /* Paper cream background */
-  --background: oklch(0.969 0.025 95);
-  /* Warm charcoal ink */
-  --foreground: oklch(0.344 0.012 277);
-  /* Card surface — slightly warmer paper */
-  --card: oklch(0.978 0.02 90);
-  --card-foreground: oklch(0.344 0.012 277);
-  --popover: oklch(0.978 0.02 90);
-  --popover-foreground: oklch(0.344 0.012 277);
+  /* Cream base — #fffaf3 */
+  --background: oklch(0.985 0.012 90);
+  /* Warm near-black ink — #2d2621 */
+  --foreground: oklch(0.26 0.012 50);
+  /* Card surface — clean white */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.26 0.012 50);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.26 0.012 50);
 
-  /* Sepia brown — primary accent */
-  --primary: oklch(0.451 0.131 56);
-  --primary-foreground: oklch(0.969 0.025 95);
+  /* Coral — #ff5a5f (primary accent) */
+  --primary: oklch(0.66 0.21 18);
+  --primary-foreground: oklch(0.985 0.012 90);
 
-  /* Muted tan — secondary */
-  --secondary: oklch(0.742 0.041 75);
-  --secondary-foreground: oklch(0.344 0.012 277);
+  /* Soft cream — #fdf3e3 (secondary surface) */
+  --secondary: oklch(0.955 0.028 85);
+  --secondary-foreground: oklch(0.26 0.012 50);
 
-  --muted: oklch(0.905 0.03 85);
-  --muted-foreground: oklch(0.52 0.03 70);
+  --muted: oklch(0.955 0.028 85);
+  --muted-foreground: oklch(0.55 0.018 285);
 
-  --accent: oklch(0.742 0.041 75);
-  --accent-foreground: oklch(0.344 0.012 277);
+  /* Citrus orange — #ff8a3d (accent) */
+  --accent: oklch(0.74 0.165 60);
+  --accent-foreground: oklch(0.985 0.012 90);
 
-  --destructive: oklch(0.505 0.19 30);
-  --destructive-foreground: oklch(0.969 0.025 95);
+  --destructive: oklch(0.66 0.21 18);
+  --destructive-foreground: oklch(0.985 0.012 90);
 
-  --border: oklch(0.86 0.035 80);
-  --input: oklch(0.86 0.035 80);
-  --ring: oklch(0.451 0.131 56);
+  --border: oklch(0.91 0.02 85);
+  --input: oklch(0.91 0.02 85);
+  --ring: oklch(0.66 0.21 18);
 
-  --chart-1: oklch(0.451 0.131 56);
-  --chart-2: oklch(0.742 0.041 75);
-  --chart-3: oklch(0.52 0.03 70);
+  --chart-1: oklch(0.66 0.21 18);
+  --chart-2: oklch(0.74 0.165 60);
+  --chart-3: oklch(0.74 0.09 70);
   --chart-4: oklch(0.6 0.09 60);
-  --chart-5: oklch(0.4 0.04 270);
+  --chart-5: oklch(0.5 0.04 270);
 
-  --sidebar: oklch(0.978 0.02 90);
-  --sidebar-foreground: oklch(0.344 0.012 277);
-  --sidebar-primary: oklch(0.451 0.131 56);
-  --sidebar-primary-foreground: oklch(0.969 0.025 95);
-  --sidebar-accent: oklch(0.905 0.03 85);
-  --sidebar-accent-foreground: oklch(0.344 0.012 277);
-  --sidebar-border: oklch(0.86 0.035 80);
-  --sidebar-ring: oklch(0.451 0.131 56);
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.26 0.012 50);
+  --sidebar-primary: oklch(0.66 0.21 18);
+  --sidebar-primary-foreground: oklch(0.985 0.012 90);
+  --sidebar-accent: oklch(0.955 0.028 85);
+  --sidebar-accent-foreground: oklch(0.26 0.012 50);
+  --sidebar-border: oklch(0.91 0.02 85);
+  --sidebar-ring: oklch(0.66 0.21 18);
 }
 
 .dark {
-  --background: oklch(0.27 0.012 277);
-  --foreground: oklch(0.94 0.022 90);
-  --card: oklch(0.33 0.016 277);
-  --card-foreground: oklch(0.94 0.022 90);
-  --popover: oklch(0.33 0.016 277);
-  --popover-foreground: oklch(0.94 0.022 90);
-  --primary: oklch(0.72 0.1 60);
-  --primary-foreground: oklch(0.27 0.012 277);
-  --secondary: oklch(0.42 0.03 70);
-  --secondary-foreground: oklch(0.94 0.022 90);
-  --muted: oklch(0.4 0.014 277);
-  --muted-foreground: oklch(0.72 0.03 80);
-  --accent: oklch(0.42 0.03 70);
-  --accent-foreground: oklch(0.94 0.022 90);
-  --destructive: oklch(0.62 0.19 30);
-  --destructive-foreground: oklch(0.94 0.022 90);
+  --background: oklch(0.22 0.01 50);
+  --foreground: oklch(0.96 0.012 90);
+  --card: oklch(0.27 0.012 50);
+  --card-foreground: oklch(0.96 0.012 90);
+  --popover: oklch(0.27 0.012 50);
+  --popover-foreground: oklch(0.96 0.012 90);
+  --primary: oklch(0.7 0.2 20);
+  --primary-foreground: oklch(0.22 0.01 50);
+  --secondary: oklch(0.32 0.02 60);
+  --secondary-foreground: oklch(0.96 0.012 90);
+  --muted: oklch(0.32 0.02 60);
+  --muted-foreground: oklch(0.7 0.03 80);
+  --accent: oklch(0.74 0.165 60);
+  --accent-foreground: oklch(0.22 0.01 50);
+  --destructive: oklch(0.7 0.2 20);
+  --destructive-foreground: oklch(0.22 0.01 50);
   --border: oklch(1 0 0 / 12%);
   --input: oklch(1 0 0 / 16%);
-  --ring: oklch(0.72 0.1 60);
-  --chart-1: oklch(0.72 0.1 60);
-  --chart-2: oklch(0.742 0.041 75);
-  --chart-3: oklch(0.72 0.03 80);
+  --ring: oklch(0.7 0.2 20);
+  --chart-1: oklch(0.7 0.2 20);
+  --chart-2: oklch(0.74 0.165 60);
+  --chart-3: oklch(0.74 0.09 70);
   --chart-4: oklch(0.6 0.09 60);
-  --chart-5: oklch(0.65 0.04 270);
-  --sidebar: oklch(0.33 0.016 277);
-  --sidebar-foreground: oklch(0.94 0.022 90);
-  --sidebar-primary: oklch(0.72 0.1 60);
-  --sidebar-primary-foreground: oklch(0.27 0.012 277);
-  --sidebar-accent: oklch(0.4 0.014 277);
-  --sidebar-accent-foreground: oklch(0.94 0.022 90);
+  --chart-5: oklch(0.6 0.04 270);
+  --sidebar: oklch(0.27 0.012 50);
+  --sidebar-foreground: oklch(0.96 0.012 90);
+  --sidebar-primary: oklch(0.7 0.2 20);
+  --sidebar-primary-foreground: oklch(0.22 0.01 50);
+  --sidebar-accent: oklch(0.32 0.02 60);
+  --sidebar-accent-foreground: oklch(0.96 0.012 90);
   --sidebar-border: oklch(1 0 0 / 12%);
-  --sidebar-ring: oklch(0.72 0.1 60);
+  --sidebar-ring: oklch(0.7 0.2 20);
 }
 
 @layer base {
@@ -151,46 +155,21 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
-    /* subtle paper texture via layered gradients */
-    background-image:
-      radial-gradient(circle at 20% 10%, oklch(0.93 0.04 80 / 0.5), transparent 40%),
-      radial-gradient(circle at 80% 80%, oklch(0.9 0.04 70 / 0.4), transparent 45%);
-    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-serif);
-    font-weight: 600;
-    letter-spacing: -0.01em;
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: -0.02em;
   }
 }
 
-/* Masonry via CSS columns for the itinerary grid */
-.masonry {
-  column-count: 1;
-  column-gap: 1.5rem;
-}
-@media (min-width: 640px) {
-  .masonry { column-count: 2; }
-}
-@media (min-width: 1024px) {
-  .masonry { column-count: 3; }
-}
-.masonry > * {
-  break-inside: avoid;
-  margin-bottom: 1.5rem;
-}
-
-/* Aged-paper stamp utility */
-.stamp {
+/* Small caps-style metadata label */
+@utility label-caps {
   font-family: var(--font-sans);
-  letter-spacing: 0.08em;
+  font-weight: 700;
   text-transform: uppercase;
-}
-
-/* Dashed route line like a journey path */
-.route-line {
-  background-image: linear-gradient(to bottom, var(--color-border) 50%, transparent 50%);
-  background-size: 2px 8px;
-  background-repeat: repeat-y;
+  letter-spacing: 0.12em;
 }
