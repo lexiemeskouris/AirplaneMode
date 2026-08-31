@@ -67,8 +67,11 @@ function AllPage() {
         kind: "recommendation" as const,
         slug: g.slug,
         destination: g.destination,
-        meta:
-          spots >= tips ? `Recommendations · ${spots} spots` : `Guide · ${tips} tips`,
+        // Match the tile's own label, so a day trip does not describe itself as
+        // "Recommendations" here and "DAY TRIP" on the feed.
+        meta: `${
+          g.label ? g.label[0] + g.label.slice(1).toLowerCase() : "Recommendations"
+        } · ${spots >= tips ? `${spots} spots` : `${tips} tips`}`,
         coords: g.coords,
       };
     }),

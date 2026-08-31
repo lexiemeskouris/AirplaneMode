@@ -5,6 +5,12 @@ import taipei from "@/assets/taipei.svg";
 import amsterdam from "@/assets/amsterdam.svg";
 import nashville from "@/assets/nashville.svg";
 import paris from "@/assets/paris.svg";
+import copenhagen from "@/assets/copenhagen.svg";
+import budapest from "@/assets/budapest.svg";
+import thailand from "@/assets/thailand.svg";
+import singapore from "@/assets/singapore.svg";
+import vietnam from "@/assets/vietnam.svg";
+import cambodia from "@/assets/cambodia.svg";
 
 /** A named venue, with its map link if we have a real one. */
 export type Place = {
@@ -1185,6 +1191,789 @@ export const itineraries: Itinerary[] = [
           { time: "19:00", description: "Check-in for the train closes." },
           { time: "20:00", description: "Late train to London." },
         ],
+      },
+    ],
+  },
+  {
+    slug: "copenhagen",
+    title: "Three Days in Copenhagen",
+    destination: "Copenhagen",
+    country: "Denmark",
+    coords: { lat: 55.6761, lon: 12.5683 },
+    duration: "3 days",
+    season: "Early Spring",
+    summary:
+      "A packed first day on foot, a boat and Tivoli on the second, and a burger queue on the third.",
+    cover: copenhagen,
+    gated: false,
+    teaser:
+      "Copenhagen is small enough that day one can be almost entirely walked. Day two is a boat, a bike ride and five hours in Tivoli. Day three is one very good burger before the airport.",
+    tags: ["#Tivoli", "#Reffen", "#RoundTower"],
+    highlights: [
+      "The Round Tower, fifteen minutes up and worth it",
+      "A picnic from the Glass Market on the castle grounds",
+      "Hot tubs at La Banchina and Hot Tub Copenhagen",
+      "Five hours in Tivoli Gardens",
+      "Queueing for Gasoline Grill from half ten",
+    ],
+    days: [
+      {
+        day: "Day One",
+        title: "The Whole City on Foot",
+        activities: [
+          { time: "09:00", description: "Land, drop the suitcases at the hotel and change." },
+          {
+            description: "Coffee at Union Kitchen.",
+            places: [{ name: "Union Kitchen" }],
+          },
+          {
+            description:
+              "Amalienborg. The changing of the guard is at 12:00, but it is not essential.",
+            places: [{ name: "Amalienborg" }],
+          },
+          {
+            description: "Havnegade Harbour Promenade.",
+            places: [{ name: "Havnegade Harbour Promenade" }],
+          },
+          {
+            description: "Pastries and coffee at Sankt Peders Bageri, the famous one.",
+            places: [{ name: "Sankt Peders Bageri" }],
+          },
+          {
+            description: "The Round Tower. Fifteen minutes to climb.",
+            places: [{ name: "Round Tower" }],
+          },
+          {
+            description:
+              "Walk through the Glass Market, pick up wine and a snack, and picnic on the grounds. Or sit and eat at Slurp Ramen instead.",
+            places: [{ name: "Glass Market" }, { name: "Slurp Ramen" }],
+          },
+          {
+            description: "The Botanical Garden, for as long as you fancy the free areas.",
+            places: [{ name: "Botanical Garden" }],
+          },
+          {
+            description: "Rosenborg Castle.",
+            places: [{ name: "Rosenborg Castle" }],
+          },
+          {
+            description: "Drinks at La Banchina, and the sauna if you want it.",
+            places: [{ name: "La Banchina" }],
+          },
+          {
+            description: "Hot Tub Copenhagen. You can go at 17:00 or 18:00.",
+            places: [{ name: "Hot Tub Copenhagen" }],
+          },
+          {
+            description: "Dinner at the Reffen stalls.",
+            places: [{ name: "Reffen" }],
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "Boat, Bikes, and Tivoli",
+        activities: [
+          { time: "10:00", description: "Boat, until 11:00." },
+          {
+            time: "11:30",
+            description: "Six minute Uber to Wulff & Konstali for brunch. Book it.",
+            places: [{ name: "Wulff & Konstali" }],
+          },
+          {
+            description: "Superkilen, on bikes.",
+            places: [{ name: "Superkilen" }],
+          },
+          {
+            description: "Designmuseum Danmark. Most people spend about two hours.",
+            places: [{ name: "Designmuseum Danmark" }],
+          },
+          {
+            description:
+              "Walk Strøget, the main shopping street, and past Christiansborg Palace on the way to Tivoli.",
+            places: [{ name: "Strøget" }, { name: "Christiansborg Palace" }],
+          },
+          {
+            description:
+              "Tivoli Gardens. People spend around five hours, and there is a food hall inside.",
+            places: [{ name: "Tivoli Gardens" }],
+          },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "One Burger, Then the Airport",
+        activities: [
+          {
+            time: "11:00",
+            description: "Gasoline Grill. Start queueing at about 10:30.",
+            places: [{ name: "Gasoline Grill" }],
+          },
+          {
+            description: "Buka Bakery, if a burger is not the move.",
+            places: [{ name: "Buka Bakery" }],
+          },
+          {
+            description:
+              "If there is time, Christiania and the Church of Our Saviour. Good view, but it is the other side of town.",
+            places: [{ name: "Christiania" }, { name: "Church of Our Saviour" }],
+          },
+          { description: "Leave thirty minutes to reach the airport by train." },
+          { time: "15:40", description: "Flight." },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "budapest",
+    title: "Three Days in Budapest",
+    destination: "Budapest",
+    country: "Hungary",
+    coords: { lat: 47.4979, lon: 19.0402 },
+    duration: "3 days",
+    season: "Early Spring",
+    summary:
+      "Castle Hill and the heavy museums on one day, the baths and a long dinner on the next.",
+    teaser:
+      "Two full days either side of a late landing. The first is Buda, the museums and a night in the ruin bars. The second is deliberately slow: sandwiches, several hours in the baths, and dinner.",
+    cover: budapest,
+    gated: false,
+    tags: ["#RuinBars", "#TheBaths", "#CastleHill"],
+    days: [
+      {
+        day: "Arrival",
+        title: "Land Late, Eat at Karaván",
+        activities: [
+          { time: "17:35", description: "Land in Budapest." },
+          {
+            description:
+              "Express bus from the airport, every twenty minutes, about forty minutes into town.",
+          },
+          {
+            description: "Walk to Karaván for dinner from the food stalls.",
+            places: [{ name: "Karaván Street Food" }],
+          },
+        ],
+      },
+      {
+        day: "Day One",
+        title: "Buda, the Museums, and the Ruin Bars",
+        activities: [
+          {
+            time: "11:00",
+            description: "Brunch at Franziska, over in Buda.",
+            places: [{ name: "Franziska" }],
+          },
+          {
+            description: "Fisherman's Bastion and Castle Hill.",
+            places: [{ name: "Fisherman's Bastion" }, { name: "Castle Hill" }],
+          },
+          {
+            description: "Hospital in the Rock, or the Semmelweis Museum.",
+            places: [{ name: "Hospital in the Rock" }, { name: "Semmelweis Museum" }],
+          },
+          {
+            description: "Shoes on the Danube Bank.",
+            places: [{ name: "Shoes on the Danube Bank" }],
+          },
+          {
+            description: "House of Terror, the communist museum. Ninety minutes.",
+            places: [{ name: "House of Terror" }],
+          },
+          {
+            time: "18:30",
+            description: "Dinner at Mazel Tov.",
+            places: [{ name: "Mazel Tov" }],
+          },
+          { time: "21:00", description: "Prosecco cruise." },
+          {
+            description: "Out at the ruin bars.",
+            places: [
+              { name: "Krimo Pub" },
+              { name: "Szimpla Kert", note: "Go early." },
+              { name: "Fotó Instant" },
+            ],
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "Sandwiches, the Baths, and a Long Dinner",
+        activities: [
+          { description: "Sleep in." },
+          {
+            description: "Pick up sandwiches from Bors and cookies from Cookie Beacon.",
+            places: [{ name: "Bors GasztroBár" }, { name: "Cookie Beacon" }],
+          },
+          { description: "Train out to the baths." },
+          {
+            description: "Two to four hours at the baths. You can buy tickets there.",
+          },
+          { description: "Back to the hotel to change, shower and rest." },
+          {
+            description: "Walk to For Sale Pub for a drink.",
+            places: [{ name: "For Sale Pub" }],
+          },
+          {
+            time: "20:00",
+            description: "Dinner at Dionysos Taverna.",
+            places: [{ name: "Dionysos Taverna" }],
+          },
+          { description: "Go out again, if you want." },
+        ],
+      },
+      {
+        day: "Departure",
+        title: "Train Out",
+        activities: [
+          { time: "12:40", description: "Train onward, arriving 15:20." },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "thailand",
+    title: "Thirteen Days in Thailand",
+    destination: "Thailand",
+    country: "Thailand",
+    coords: { lat: 13.7563, lon: 100.5018 },
+    duration: "13 days",
+    season: "December",
+    summary:
+      "Phuket, Chiang Mai and Bangkok in one run: islands, elephants, temples and a lot of booked tours.",
+    cover: thailand,
+    gated: false,
+    teaser:
+      "Six days on Phuket, four in Chiang Mai, three in Bangkok. Most of the big days are booked tours, so this one needs planning well ahead rather than deciding on the morning.",
+    tags: ["#PhiPhi", "#ChiangMai", "#Ayutthaya"],
+    highlights: [
+      "Phi Phi and Bamboo Islands on a small group boat",
+      "A half-day Thai cooking class with the local market tour",
+      "A day as an elephant caregiver at Patara Elephant Farm",
+      "The Monk's Trail up to Wat Phra That Doi Suthep",
+      "Ayutthaya and the floating market as a day trip from Bangkok",
+    ],
+    days: [
+      {
+        day: "Day One",
+        title: "Land in Phuket",
+        activities: [
+          {
+            time: "09:20",
+            description: "Arrive in Phuket.",
+            places: [{ name: "Phuket International Airport", near: "Phuket, Thailand" }],
+          },
+          { description: "Check in after 14:00. We stayed in Patong.", places: [{ name: "Patong" }] },
+          {
+            description: "Relax, then dinner on Bangla Road.",
+            places: [{ name: "Bangla Road", near: "Patong, Phuket" }],
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "Cooking Class and the Market",
+        activities: [
+          {
+            time: "15:00",
+            description: "Half-day Thai cooking class with a local market tour, until 19:00.",
+          },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "Phi Phi and Bamboo Islands",
+        activities: [
+          {
+            time: "07:30",
+            description:
+              "Small group Phi Phi and Bamboo Islands tour with lunch, back at 18:30.",
+            places: [
+              { name: "Phi Phi Islands", near: "Thailand" },
+              { name: "Bamboo Island", near: "Krabi, Thailand" },
+            ],
+          },
+        ],
+      },
+      {
+        day: "Day Four",
+        title: "Phuket City",
+        activities: [
+          {
+            time: "13:00",
+            description: "Half day Phuket city tour, until 19:00.",
+            places: [{ name: "Phuket Old Town", near: "Phuket, Thailand" }],
+          },
+        ],
+      },
+      {
+        day: "Day Five",
+        title: "Beach, Then Muay Thai",
+        activities: [
+          { description: "Beach." },
+          { description: "Yoga, or a Muay Thai class, or both." },
+        ],
+      },
+      {
+        day: "Day Six",
+        title: "Beach and the Night Market",
+        activities: [
+          { description: "Beach day." },
+          {
+            description: "The weekend night market.",
+            places: [{ name: "Phuket Weekend Night Market", near: "Phuket, Thailand" }],
+          },
+        ],
+      },
+      {
+        day: "Day Seven",
+        title: "Fly to Chiang Mai",
+        activities: [
+          {
+            time: "08:45",
+            description: "Flight to Chiang Mai, landing 10:40.",
+            places: [{ name: "Chiang Mai" }],
+          },
+          { description: "Check in at 14:00. Take the rest of the day at leisure." },
+          { description: "Ladyboy cabaret show." },
+        ],
+      },
+      {
+        day: "Day Eight",
+        title: "Chiang Rai",
+        activities: [
+          {
+            time: "06:00",
+            description: "Picked up for Chiang Rai.",
+            places: [{ name: "Chiang Rai" }],
+          },
+        ],
+      },
+      {
+        day: "Day Nine",
+        title: "A Day as an Elephant Caregiver",
+        activities: [
+          {
+            time: "13:00",
+            description:
+              "Picked up for Patara Elephant Farm, caregiver for a day, back at 18:30. Check the booking email for what to bring.",
+            places: [{ name: "Patara Elephant Farm", near: "Chiang Mai, Thailand" }],
+          },
+        ],
+      },
+      {
+        day: "Day Ten",
+        title: "The Monk's Trail",
+        activities: [
+          {
+            description:
+              "Walk one hour and seventeen minutes to the Monk's Trail trailhead at Wat Pha Lat, stopping for breakfast on the way.",
+            places: [{ name: "Wat Pha Lat", near: "Chiang Mai, Thailand" }],
+          },
+          {
+            description: "Pass Wat Suan Dok on the way.",
+            places: [{ name: "Wat Suan Dok", near: "Chiang Mai, Thailand" }],
+          },
+          {
+            description: "Fifty-three minutes further up to Wat Phra That Doi Suthep.",
+            places: [{ name: "Wat Phra That Doi Suthep", near: "Chiang Mai, Thailand" }],
+          },
+          { description: "Stop for lunch or dinner on the way back down." },
+        ],
+      },
+      {
+        day: "Day Eleven",
+        title: "Fly to Bangkok",
+        activities: [
+          {
+            time: "08:25",
+            description: "Flight to Bangkok, landing 09:35.",
+            places: [{ name: "Bangkok" }],
+          },
+          { description: "Check in at 15:00." },
+          { description: "Walk the temples." },
+          {
+            description:
+              "Maeklong Railway Market. You need to book a shuttle if you want to go.",
+            places: [{ name: "Maeklong Railway Market", near: "Samut Songkhram, Thailand" }],
+          },
+        ],
+      },
+      {
+        day: "Day Twelve",
+        title: "Ayutthaya and the Floating Market",
+        activities: [
+          {
+            time: "09:50",
+            description:
+              "Ayutthaya and Ayothaya Floating Market day trip, until 18:50. Meeting point is by the McDonald's at Robinson Mall Sukhumvit, near BTS Asok. Get there ten minutes early.",
+            places: [
+              { name: "Ayutthaya", near: "Thailand" },
+              { name: "Ayothaya Floating Market", near: "Ayutthaya, Thailand" },
+              { name: "BTS Asok", near: "Bangkok, Thailand" },
+            ],
+          },
+        ],
+      },
+      {
+        day: "Day Thirteen",
+        title: "Breakfast, Then Singapore",
+        activities: [
+          { description: "Breakfast and a chill morning." },
+          { time: "09:45", description: "Flight to Singapore." },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "singapore",
+    title: "Three Days in Singapore",
+    destination: "Singapore",
+    country: "Singapore",
+    coords: { lat: 1.3521, lon: 103.8198 },
+    duration: "3 days",
+    season: "January",
+    summary:
+      "Orchard Road and the Botanic Gardens, a jungle hike with monkeys, and Gardens by the Bay after dark.",
+    cover: singapore,
+    gated: false,
+    teaser:
+      "Three days based at Marina Bay Sands, walked hard. A hike through MacRitchie in the middle of the city, hawker food on Haji Lane, and the light show at Gardens by the Bay.",
+    tags: ["#GardensByTheBay", "#MacRitchie", "#HajiLane"],
+    notes: [
+      "The first night here happened to be New Year's Eve, which is the only reason there are fireworks on it. Any other time of year that is just dinner.",
+    ],
+    highlights: [
+      "The Botanic Gardens, open until midnight",
+      "MacRitchie, a three to four hour hike with monkeys",
+      "Lunch on Haji Lane, Arab Street and Little India",
+      "The free Spectra light show at Marina Bay",
+      "Walking the Henderson Waves before the flight",
+    ],
+    days: [
+      {
+        day: "Day One",
+        title: "Land, Orchard Road, Fireworks",
+        activities: [
+          {
+            description: "Land and check in at Marina Bay Sands.",
+            places: [{ name: "Marina Bay Sands" }],
+          },
+          {
+            description:
+              "Walk Orchard Road, the upscale shopping stretch, for the department stores, restaurants and coffee houses.",
+            places: [{ name: "Orchard Road" }],
+          },
+          {
+            description: "Walk the Botanic Gardens. They are open until midnight.",
+            places: [{ name: "Singapore Botanic Gardens" }],
+          },
+          { description: "Dinner, then fireworks." },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "MacRitchie, Haji Lane, Gardens by the Bay",
+        activities: [
+          {
+            description: "Breakfast at Tiong Bahru Bakery.",
+            places: [{ name: "Tiong Bahru Bakery" }],
+          },
+          {
+            description: "The MacRitchie trail. Three to four hours, with monkeys.",
+            places: [{ name: "MacRitchie Reservoir" }],
+          },
+          {
+            description: "Lunch on Haji Lane, Arab Street or in Little India.",
+            places: [{ name: "Haji Lane" }, { name: "Arab Street" }, { name: "Little India" }],
+          },
+          {
+            description: "Gardens by the Bay.",
+            places: [{ name: "Gardens by the Bay" }],
+          },
+          { description: "The Spectra light show. Free, fifteen minutes." },
+          {
+            time: "19:30",
+            description: "Dinner at Spago, up in Marina Bay Sands.",
+            places: [{ name: "Spago Singapore" }],
+          },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "Henderson Waves, Then Out",
+        activities: [
+          {
+            description: "Walk the Henderson Waves.",
+            places: [{ name: "Henderson Waves" }],
+          },
+          { description: "Breakfast somewhere around there." },
+          { description: "Check out." },
+          { time: "15:00", description: "Flight." },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "vietnam",
+    title: "Seven Days in Vietnam",
+    destination: "Vietnam",
+    country: "Vietnam",
+    coords: { lat: 21.0285, lon: 105.8542 },
+    duration: "7 days",
+    season: "January",
+    summary:
+      "Hanoi's Old Quarter, an overnight cruise on Ha Long Bay, then street food on the back of a motorbike in Saigon.",
+    cover: vietnam,
+    gated: false,
+    teaser:
+      "Split between Hanoi and Ho Chi Minh City, with an overnight boat in the middle. The two best things on it were both booked: the Ha Long Bay cruise and the motorbike street food tour.",
+    tags: ["#HaLongBay", "#OldQuarter", "#StreetFood"],
+    highlights: [
+      "The Old Quarter's 36 streets, each once dedicated to one trade",
+      "An overnight cruise on Ha Long Bay",
+      "Bun cha at the place Bourdain and Obama ate at",
+      "A motorbike street food tour with ten tastings",
+      "Dinner in complete darkness at NOIR",
+    ],
+    days: [
+      {
+        day: "Arrival",
+        title: "Land in Hanoi",
+        activities: [
+          { time: "17:30", description: "Land, check in, sleep." },
+          { description: "Book the airport taxi in advance." },
+        ],
+      },
+      {
+        day: "Day One",
+        title: "The Old Quarter",
+        activities: [
+          {
+            description:
+              "Coffee, then walk the Old Quarter. It is the heart of Hanoi, 36 streets each once dedicated to a single trade: haberdashery, hardware, porcelain.",
+            places: [{ name: "Old Quarter", near: "Hanoi, Vietnam" }],
+          },
+          {
+            description: "Hoan Kiem Lake and Train Street.",
+            places: [
+              { name: "Hoan Kiem Lake", near: "Hanoi, Vietnam" },
+              { name: "Train Street", near: "Hanoi, Vietnam" },
+            ],
+          },
+          {
+            description: "Van Mieu, the 11th century Temple of Literature.",
+            places: [{ name: "Van Mieu Temple of Literature", near: "Hanoi, Vietnam" }],
+          },
+          {
+            description: "The Museum of Ethnology.",
+            places: [{ name: "Vietnam Museum of Ethnology", near: "Hanoi, Vietnam" }],
+          },
+          {
+            description:
+              "Dinner at Bun Cha Huong Lien, where Anthony Bourdain and Obama shared pork noodles and fried spring rolls.",
+            places: [{ name: "Bun Cha Huong Lien", near: "Hanoi, Vietnam" }],
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "Out to Ha Long Bay",
+        activities: [
+          {
+            description: "Two hour minivan to Tuan Chau. Arrive thirty minutes before departure.",
+            places: [{ name: "Tuan Chau", near: "Ha Long, Vietnam" }],
+          },
+          {
+            time: "12:00",
+            description:
+              "The Ha Long Bay overnight cruise starts. Thousands of individual islands, and one of the most famous stretches of water in Asia.",
+            places: [{ name: "Ha Long Bay", near: "Vietnam" }],
+          },
+          {
+            description: "Titop Island hike, swimming, kayaking, karaoke.",
+            places: [{ name: "Titop Island", near: "Ha Long Bay, Vietnam" }],
+          },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "The Cruise, Then Back to Hanoi",
+        activities: [
+          { description: "Tai chi lesson on deck." },
+          { description: "Explore the largest cave system in Vietnam." },
+          { description: "Pass the Fighting Chicken rock, and hear its story." },
+          { description: "Cooking class." },
+          { time: "12:30", description: "Cruise ends." },
+          {
+            description:
+              "There is no bus from Tuan Chau at a useful time, so take a fourteen minute taxi to Ha Long SB1 instead.",
+          },
+          { description: "Two hour minivan back to Hanoi, arriving around 19:00." },
+        ],
+      },
+      {
+        day: "Day Four",
+        title: "Fly South, Then Eat From a Motorbike",
+        activities: [
+          {
+            time: "09:00",
+            description: "Flight from Hanoi, landing in Ho Chi Minh City at 11:15.",
+            places: [{ name: "Ho Chi Minh City" }],
+          },
+          {
+            time: "18:00",
+            description:
+              "Motorbike street food tour until 22:00, picked up from the hotel. Ten tastings, no seafood.",
+          },
+        ],
+      },
+      {
+        day: "Day Five",
+        title: "The Post Office, and a Coffee Class",
+        activities: [
+          {
+            description: "Seven minute walk to the Central Post Office.",
+            places: [{ name: "Saigon Central Post Office", near: "Ho Chi Minh City, Vietnam" }],
+          },
+          {
+            description:
+              "Ten minutes further to the Café Apartments, an old apartment block where the owners rented their units out to cafes and shops.",
+            places: [{ name: "Cafe Apartments", near: "Ho Chi Minh City, Vietnam" }],
+          },
+          {
+            time: "13:30",
+            description: "Coffee class on Nguyen Hue Boulevard, until 15:30.",
+            places: [{ name: "Nguyen Hue Boulevard", near: "Ho Chi Minh City, Vietnam" }],
+          },
+        ],
+      },
+      {
+        day: "Day Six",
+        title: "War Remnants and Book Street",
+        activities: [
+          {
+            description: "The War Remnants Museum.",
+            places: [{ name: "War Remnants Museum", near: "Ho Chi Minh City, Vietnam" }],
+          },
+          {
+            description: "Book Street.",
+            places: [{ name: "Nguyen Van Binh Book Street", near: "Ho Chi Minh City, Vietnam" }],
+          },
+        ],
+      },
+      {
+        day: "Day Seven",
+        title: "Cu Chi Tunnels, Then Dinner in the Dark",
+        activities: [
+          {
+            time: "07:30",
+            description: "Cu Chi Tunnels and Mekong Delta full day tour, back at 18:30.",
+            places: [
+              { name: "Cu Chi Tunnels", near: "Ho Chi Minh City, Vietnam" },
+              { name: "Mekong Delta", near: "Vietnam" },
+            ],
+          },
+          {
+            time: "19:00",
+            description:
+              "Dinner at NOIR, eaten in pitch black and led by visually impaired staff.",
+            places: [{ name: "NOIR Dining in the Dark", near: "Ho Chi Minh City, Vietnam" }],
+          },
+        ],
+      },
+      {
+        day: "Departure",
+        title: "On to Cambodia",
+        activities: [
+          { description: "Check out." },
+          { time: "08:20", description: "Flight to Siem Reap." },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "cambodia",
+    title: "Three Days in Cambodia",
+    destination: "Cambodia",
+    country: "Cambodia",
+    coords: { lat: 13.3671, lon: 103.8448 },
+    duration: "3 days",
+    season: "January",
+    summary:
+      "Angkor Wat at sunrise, a pottery class, and a bike ride through the countryside from Siem Reap.",
+    cover: cambodia,
+    gated: false,
+    teaser:
+      "Three days in Siem Reap, with the two big ones booked well ahead: sunrise at Angkor Wat, and a morning bike tour out through the rice fields.",
+    tags: ["#AngkorWat", "#SiemReap", "#PubStreet"],
+    highlights: [
+      "A 04:30 pickup to reach Angkor Wat for sunrise",
+      "A pottery class at the Khmer Fine Art Center",
+      "A countryside bike tour past a mushroom field and a rice wine distillery",
+      "A Khmer cooking class in the evening",
+      "Old Market for dinner and Pub Street after",
+    ],
+    days: [
+      {
+        day: "Day One",
+        title: "Land, Old Market, Pub Street",
+        activities: [
+          {
+            time: "13:40",
+            description: "Land at Siem Reap.",
+            places: [{ name: "Siem Reap" }],
+          },
+          {
+            description:
+              "Walk King's Road, Old Market for dinner, and Pub Street for a drink after.",
+            places: [
+              { name: "King's Road Angkor", near: "Siem Reap, Cambodia" },
+              { name: "Old Market", near: "Siem Reap, Cambodia" },
+              { name: "Pub Street", near: "Siem Reap, Cambodia" },
+            ],
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "Angkor Wat at Sunrise, Then Pottery",
+        activities: [
+          {
+            time: "04:30",
+            description: "Picked up for the Angkor Wat small group tour and the sunrise hike.",
+            places: [{ name: "Angkor Wat", near: "Siem Reap, Cambodia" }],
+          },
+          {
+            description: "Walk to Wat Bo, near the pottery class.",
+            places: [{ name: "Wat Bo", near: "Siem Reap, Cambodia" }],
+          },
+          {
+            time: "16:00",
+            description: "Pottery class at the Khmer Fine Art Center.",
+            places: [{ name: "Khmer Fine Art Center", near: "Siem Reap, Cambodia" }],
+          },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "Bikes, Then a Cooking Class",
+        activities: [
+          {
+            time: "07:30",
+            description:
+              "Morning bike tour, picked up from the hotel and back by 12:30. A mushroom field, the countryside, and a rice wine distillery.",
+          },
+          {
+            time: "17:00",
+            description: "Picked up for a Khmer gourmet cooking class.",
+          },
+        ],
+      },
+      {
+        day: "Departure",
+        title: "Leave the Country",
+        activities: [{ description: "Leave the country, reluctantly." }],
       },
     ],
   },
