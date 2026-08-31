@@ -53,19 +53,7 @@ function ItineraryDetail() {
 
       {/* Header */}
       <header className="max-w-3xl">
-        <div className="flex flex-wrap items-center gap-3 text-xs font-bold uppercase tracking-widest text-muted-foreground">
-          <span>{it.country}</span>
-          <span className="text-border">•</span>
-          <span>{it.duration}</span>
-          <span className="text-border">•</span>
-          <span>{it.season}</span>
-          {it.gated && (
-            <span className="rounded-full bg-primary px-2.5 py-0.5 text-primary-foreground">
-              ☕ Supporter
-            </span>
-          )}
-        </div>
-        <h1 className="mt-3 font-display text-5xl font-extrabold leading-tight tracking-tight text-foreground md:text-6xl">
+        <h1 className="font-display text-5xl font-extrabold leading-tight tracking-tight text-foreground md:text-6xl">
           {it.title}
         </h1>
         <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
@@ -161,10 +149,7 @@ function ItineraryDetail() {
       {/* Gated CTA */}
       {it.gated && (
         <section className="mt-12 overflow-hidden rounded-[2rem] bg-foreground p-8 text-center text-background md:p-12">
-          <p className="text-xs font-bold uppercase tracking-widest text-accent">
-            Unlock the full itinerary
-          </p>
-          <h2 className="mt-3 font-display text-4xl font-extrabold tracking-tight">
+          <h2 className="font-display text-4xl font-extrabold tracking-tight">
             The rest of this journey
           </h2>
           <p className="mx-auto mt-4 max-w-md leading-relaxed text-background/70">

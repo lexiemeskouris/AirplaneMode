@@ -29,9 +29,6 @@ function AboutPage() {
 
   return (
     <div className="mx-auto max-w-3xl px-6 py-16">
-      <span className="mb-6 inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-accent">
-        About
-      </span>
       <h1 className="font-display text-5xl font-extrabold leading-tight tracking-tight text-foreground md:text-7xl">
         Plans for people who
         <span className="block text-primary">never stop moving.</span>
