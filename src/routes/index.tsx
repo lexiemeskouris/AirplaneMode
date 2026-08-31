@@ -56,114 +56,86 @@ function Index() {
         </div>
       </section>
 
-      {/* Itinerary feed */}
-      <section className="mx-auto flex max-w-7xl flex-col gap-24 px-6 pb-32">
-        {itineraries.map((it, idx) => {
-          const reversed = idx % 2 === 1;
-          return (
+      {/* Itinerary feed - uniform tiles, four to a row on desktop. */}
+      <section className="mx-auto max-w-7xl px-6 pb-32">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {itineraries.map((it) => (
             <article
               key={it.slug}
-              className={`group flex flex-col gap-10 ${reversed ? "md:flex-row-reverse" : "md:flex-row"}`}
+              className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-shadow duration-300 hover:shadow-xl"
             >
-              {/* Image */}
-              <div className="relative flex-1">
-                <Link
-                  to="/itineraries/$slug"
-                  params={{ slug: it.slug }}
-                  className="block"
-                >
+              <div className="relative overflow-hidden">
+                <Link to="/itineraries/$slug" params={{ slug: it.slug }} className="block">
                   <img
                     src={it.cover}
                     alt={it.title}
-                    width={1200}
-                    height={800}
+                    width={1000}
+                    height={1250}
                     loading="lazy"
-                    className={`aspect-[16/10] w-full overflow-hidden rounded-[2.5rem] bg-secondary object-cover shadow-2xl transition-all duration-500 group-hover:scale-[1.02] ${
+                    className={`aspect-[4/5] w-full bg-secondary object-cover transition-transform duration-500 group-hover:scale-[1.04] ${
                       it.gated ? "grayscale group-hover:grayscale-0" : ""
                     }`}
                   />
                 </Link>
 
-                {/* Gated unlock overlay */}
-                {it.gated && (
-                  <div className="absolute inset-0 flex items-center justify-center rounded-[2.5rem] bg-foreground/40 backdrop-blur-[4px]">
-                    <div className="text-center">
-                      <p className="mb-6 text-sm font-extrabold uppercase tracking-[0.2em] text-background">
-                        Premium Access
-                      </p>
-                      <a
-                        href={it.bmcUrl ?? "https://www.buymeacoffee.com/"}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-3 rounded-2xl bg-accent px-8 py-4 font-bold text-accent-foreground shadow-2xl transition-transform hover:scale-105"
-                      >
-                        <svg
-                          className="h-5 w-5"
-                          fill="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M20.25 18H3.75c-.414 0-.75.336-.75.75v1.5c0 .414.336.75.75.75h16.5c.414 0 .75-.336.75-.75v-1.5c0-.414-.336-.75-.75-.75zM5.25 15h13.5c.828 0 1.5-.672 1.5-1.5v-9c0-.828-.672-1.5-1.5-1.5H5.25c-.828 0-1.5.672-1.5 1.5v9c0 .828.672 1.5 1.5 1.5z" />
-                        </svg>
-                        Buy a Coffee to Unlock
-                      </a>
-                    </div>
-                  </div>
-                )}
-
-                {/* Chips */}
-                <div
-                  className={`absolute top-6 flex gap-2 ${reversed ? "right-6" : "left-6"}`}
-                >
-                  <span className="rounded-full bg-brand-yellow px-4 py-2 text-xs font-extrabold tracking-tight text-foreground shadow-sm">
+                <div className="pointer-events-none absolute inset-x-3 top-3 z-10 flex flex-wrap gap-1.5">
+                  <span className="rounded-full bg-brand-yellow px-2.5 py-1 text-[0.65rem] font-extrabold tracking-tight text-foreground shadow-sm">
                     {it.season.toUpperCase()}
                   </span>
-                  <span className="rounded-full bg-accent px-4 py-2 text-xs font-extrabold tracking-tight text-accent-foreground shadow-sm">
+                  <span className="rounded-full bg-accent px-2.5 py-1 text-[0.65rem] font-extrabold tracking-tight text-accent-foreground shadow-sm">
                     {it.duration.toUpperCase()}
                   </span>
                   {it.gated && (
-                    <span className="rounded-full bg-primary px-4 py-2 text-xs font-extrabold tracking-tight text-primary-foreground shadow-sm">
-                      ☕ Supporter
+                    <span className="rounded-full bg-primary px-2.5 py-1 text-[0.65rem] font-extrabold tracking-tight text-primary-foreground shadow-sm">
+                      SUPPORTER
                     </span>
                   )}
                 </div>
+
+                {it.gated && (
+                  <div className="absolute inset-0 flex items-end justify-center bg-foreground/35 p-4 backdrop-blur-[3px]">
+                    <a
+                      href={it.bmcUrl ?? "https://www.buymeacoffee.com/"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full rounded-xl bg-accent px-3 py-2.5 text-center text-xs font-bold text-accent-foreground shadow-lg transition-transform hover:scale-[1.03]"
+                    >
+                      Buy a coffee to unlock
+                    </a>
+                  </div>
+                )}
               </div>
 
-              {/* Text panel */}
-              <div className="flex flex-col justify-center md:w-[400px]">
-                <h2
-                  className={`mb-4 font-display text-4xl font-extrabold tracking-tight text-foreground ${it.gated ? "opacity-60" : ""}`}
-                >
-                  {it.title}
+              <div className="flex flex-1 flex-col p-5">
+                <h2 className="font-display text-xl font-extrabold leading-tight tracking-tight text-foreground">
+                  <Link to="/itineraries/$slug" params={{ slug: it.slug }}>
+                    {it.title}
+                  </Link>
                 </h2>
-                <p
-                  className={`mb-8 leading-relaxed ${it.gated ? "text-muted-foreground/70" : "text-muted-foreground"}`}
-                >
+                {/* Clamped so a long summary cannot make one tile taller than its row. */}
+                <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-muted-foreground">
                   {it.summary}
                 </p>
-                <div
-                  className={`mb-10 flex flex-wrap gap-2 ${it.gated ? "opacity-50" : ""}`}
-                >
-                  {it.tags.map((t) => (
+                <div className="mt-4 flex flex-wrap gap-1.5">
+                  {it.tags.slice(0, 3).map((t) => (
                     <span
                       key={t}
-                      className="rounded-xl bg-brand-pink px-3 py-1.5 text-xs font-bold text-foreground"
+                      className="rounded-lg bg-brand-pink px-2 py-1 text-[0.65rem] font-bold text-foreground"
                     >
                       {t}
                     </span>
                   ))}
                 </div>
+                {/* mt-auto pins the link to the bottom so it lines up across the row. */}
                 <Link
                   to="/itineraries/$slug"
                   params={{ slug: it.slug }}
-                  className={`inline-flex w-fit items-center font-bold transition-all hover:translate-x-2 ${it.gated ? "text-muted-foreground" : "text-primary"}`}
+                  className={`mt-auto inline-flex w-fit items-center pt-5 text-sm font-bold transition-transform hover:translate-x-1 ${
+                    it.gated ? "text-muted-foreground" : "text-primary"
+                  }`}
                 >
                   {it.gated ? "Read the free sample" : "View full sprint"}
-                  <svg
-                    className="ml-2 h-5 w-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
+                  <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -174,8 +146,8 @@ function Index() {
                 </Link>
               </div>
             </article>
-          );
-        })}
+          ))}
+        </div>
       </section>
     </div>
   );
