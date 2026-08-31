@@ -11,6 +11,7 @@ import thailand from "@/assets/thailand.svg";
 import singapore from "@/assets/singapore.svg";
 import vietnam from "@/assets/vietnam.svg";
 import cambodia from "@/assets/cambodia.svg";
+import vienna from "@/assets/vienna.svg";
 
 /** A named venue, with its map link if we have a real one. */
 export type Place = {
@@ -68,9 +69,16 @@ export type Itinerary = {
   notes?: string[];
   /**
    * Places worth knowing about that are not pinned to any day: the running
-   * list of recommendations that comes back from a trip.
+   * list of recommendations that comes back from a trip. Grouped, because a
+   * city's bars, museums and the things to skip are not one list.
    */
-  extras?: { title: string; places: Place[] };
+  extras?: {
+    title: string;
+    note?: string;
+    places: Place[];
+    /** Renders muted, as a warning rather than a recommendation. */
+    avoid?: boolean;
+  }[];
 };
 
 export const BMC_URL = "https://buymeacoffee.com/lexiemeskouris";
@@ -658,16 +666,18 @@ export const itineraries: Itinerary[] = [
       "An afternoon in Vondelpark with nothing planned",
       "A Secret Food Tour, then the Anne Frank House",
     ],
-    extras: {
-      title: "Not on the plan, but worth knowing",
-      places: [
-        { name: "Cafe Baskets", note: "Coffee." },
-        { name: "Louf", note: "Bakery." },
-        { name: "Samuals", note: "Wine, apero, dinner." },
-        { name: "Broodje Gerald", note: "Coffee and sandwiches." },
-        { name: "Oeuf", note: "Brunch." },
-      ],
-    },
+    extras: [
+      {
+        title: "Not on the plan, but worth knowing",
+        places: [
+          { name: "Cafe Baskets", note: "Coffee." },
+          { name: "Louf", note: "Bakery." },
+          { name: "Samuals", note: "Wine, apero, dinner." },
+          { name: "Broodje Gerald", note: "Coffee and sandwiches." },
+          { name: "Oeuf", note: "Brunch." },
+        ],
+      },
+    ],
     days: [
       {
         day: "Arrival",
@@ -1974,6 +1984,173 @@ export const itineraries: Itinerary[] = [
         day: "Departure",
         title: "Leave the Country",
         activities: [{ description: "Leave the country, reluctantly." }],
+      },
+    ],
+  },
+  {
+    slug: "vienna",
+    title: "Three Days in Vienna",
+    destination: "Vienna",
+    country: "Austria",
+    coords: { lat: 48.2082, lon: 16.3738 },
+    duration: "3 days",
+    season: "Early Spring",
+    summary:
+      "Churches and the State Opera, a day trip to Salzburg, and the museums with the sausage stands taken seriously.",
+    cover: vienna,
+    gated: false,
+    teaser:
+      "Three days: churches and cheap opera tickets on the first, Salzburg on the second, and the big museums, the Naschmarkt and the oldest sausage stand in the city on the third.",
+    tags: ["#StateOpera", "#Salzburg", "#Wurstelstand"],
+    notes: ["Bring cash. Most places are cash only."],
+    highlights: [
+      "State Opera tickets from 16 euros, with two intervals if you want to slip out",
+      "A day trip to Salzburg, and the cable car up to the castle",
+      "One to three hours in the Kunsthistorisches Museum",
+      "Leo's Würstelstand, the oldest sausage stand in Vienna",
+      "The Austrian National Library, on the way to breakfast",
+    ],
+    days: [
+      {
+        day: "Day One",
+        title: "Churches, the Opera, and Bars",
+        activities: [
+          { time: "12:40", description: "Train in, arriving 15:20." },
+          {
+            description:
+              "St Stephen's Cathedral, or St Peter's Church, or both. They are about ten minutes apart.",
+            places: [{ name: "St Stephen's Cathedral" }, { name: "St Peter's Church" }],
+          },
+          {
+            description: "Belvedere Palace, if there is time.",
+            places: [{ name: "Belvedere Palace" }],
+          },
+          {
+            time: "18:00",
+            description:
+              "Get tickets for the Vienna State Opera. They start at 16 euros, and there are two intervals, so you can leave whenever you like.",
+            places: [{ name: "Vienna State Opera" }],
+          },
+          {
+            time: "20:00",
+            description: "Dinner at Glacis Beisl.",
+            places: [{ name: "Glacis Beisl" }],
+          },
+          {
+            time: "22:00",
+            description: "Walk around the bars.",
+            places: [
+              { name: "Blue Mustard" },
+              { name: "Leo Hillinger", note: "Wine shop and bar." },
+              { name: "Jamie's Italian" },
+            ],
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "Salzburg",
+        activities: [
+          {
+            description: "Day trip to Salzburg.",
+            places: [{ name: "Salzburg", near: "Austria" }],
+          },
+          { description: "Walk through the town." },
+          {
+            description: "Take the cable car up to the castle.",
+            places: [{ name: "Hohensalzburg Fortress", near: "Salzburg, Austria" }],
+          },
+          { description: "Grab a beer in a precious alley." },
+          {
+            description: "Go to Mozart's Birthplace.",
+            places: [{ name: "Mozart's Birthplace", near: "Salzburg, Austria" }],
+          },
+          {
+            description: "Out at one of the clubs afterwards.",
+            places: [{ name: "Volksgarten" }, { name: "Prater Dome" }],
+          },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "Museums, the Naschmarkt, and a Sausage",
+        activities: [
+          { description: "Sleep in." },
+          {
+            description: "Stop at the Austrian National Library on the way to breakfast.",
+            places: [{ name: "Austrian National Library" }],
+          },
+          {
+            description: "Walk the grounds of the Hofburg Palace.",
+            places: [{ name: "Hofburg Palace" }],
+          },
+          { description: "Brunch at Erich.", places: [{ name: "Erich" }] },
+          {
+            description: "Kunsthistorisches Museum Wien. One to three hours.",
+            places: [{ name: "Kunsthistorisches Museum Wien" }],
+          },
+          {
+            description: "Walk through the Naschmarkt, a cute open market.",
+            places: [{ name: "Naschmarkt" }],
+          },
+          {
+            description:
+              "The Sigmund Freud Museum, which says it takes 45 minutes to an hour. Honestly, skip it: it does not describe his psychology at all, only his upbringing.",
+            places: [{ name: "Sigmund Freud Museum" }],
+          },
+          {
+            description:
+              "Walk, and build up an appetite, to Leo's Würstelstand, the oldest sausage stand in Vienna.",
+            places: [{ name: "Leo's Würstelstand" }],
+          },
+          { description: "Take a nap." },
+          { time: "20:00", description: "Dinner at Mochi.", places: [{ name: "Mochi" }] },
+          { description: "Go out again, if you dare." },
+        ],
+      },
+      {
+        day: "Departure",
+        title: "Fly Out",
+        activities: [{ description: "Fly out." }],
+      },
+    ],
+    extras: [
+      {
+        title: "Bars",
+        places: [
+          { name: "Travel Shack", note: "You are going to die at this place, it's awesome." },
+        ],
+      },
+      {
+        title: "Clubs",
+        places: [
+          { name: "Volksgarten", note: "21+, and the best music ever." },
+          { name: "Prater Dome" },
+        ],
+      },
+      {
+        title: "Eat",
+        note: "Eat at every hot dog and kebab stand. They are so good.",
+        places: [
+          {
+            name: "Würstelstand",
+            url: "https://www.google.com/maps/place/W%C3%BCrstelstand/@48.2114965,16.3773391,20.86z/data=!4m19!1m12!4m11!1m6!1m2!1s0x476d07bbd806e0e5:0x5fa5f935f7f0ca57!2sSigmund+Freud+Museum,+Berggasse,+Vienna,+Austria!2m2!1d16.3630759!2d48.2186272!1m3!2m2!1d16.3771171!2d48.2113613!3m5!1s0x476d07a0510894b1:0x2b0e892b270738ec!8m2!3d48.2115422!4d16.3775781!16s%2Fg%2F11b7tvq97h?entry=ttu&g_ep=EgoyMDI2MDEwNy4wIKXMDSoASAFQAw%3D%3D",
+            note: "This one literally changed my life. I ate it three times.",
+          },
+        ],
+      },
+      {
+        title: "Museums",
+        places: [
+          { name: "Albertina" },
+          { name: "Leopold Museum" },
+          { name: "Kunsthistorisches Museum Wien" },
+        ],
+      },
+      {
+        title: "Skip",
+        avoid: true,
+        places: [{ name: "Sigmund Freud Museum" }],
       },
     ],
   },

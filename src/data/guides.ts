@@ -1,5 +1,4 @@
 import type { Activity, Place } from "./itineraries";
-import vienna from "@/assets/vienna.svg";
 import kilimanjaro from "@/assets/kilimanjaro.svg";
 import barcelona from "@/assets/barcelona.svg";
 import malta from "@/assets/malta.svg";
@@ -55,72 +54,6 @@ export type Guide = {
 };
 
 export const guides: Guide[] = [
-  {
-    slug: "vienna",
-    title: "Vienna Recommendations",
-    destination: "Vienna",
-    country: "Austria",
-    coords: { lat: 48.2082, lon: 16.3738 },
-    cover: vienna,
-    summary:
-      "No itinerary, just the list. Where to drink, what to eat, which museums earn it and which one does not.",
-    teaser:
-      "Vienna without a plan attached. The bars and clubs worth the night, the sausage stand worth going back to three times, the three museums that earn their entry fee, and the one to skip.",
-    tags: ["#Wurstelstand", "#Volksgarten", "#Albertina"],
-    notes: ["Bring cash. Most places are cash only."],
-    sections: [
-      {
-        title: "Bars",
-        places: [
-          { name: "Travel Shack", note: "You are going to die at this place, it's awesome." },
-        ],
-      },
-      {
-        title: "Clubs",
-        places: [
-          { name: "Volksgarten", note: "21+, and the best music ever." },
-          { name: "Prater Dome" },
-        ],
-      },
-      {
-        title: "Eat",
-        note: "Eat at every hot dog and kebab stand. They are so good.",
-        places: [
-          {
-            name: "Würstelstand",
-            url: "https://www.google.com/maps/place/W%C3%BCrstelstand/@48.2114965,16.3773391,20.86z/data=!4m19!1m12!4m11!1m6!1m2!1s0x476d07bbd806e0e5:0x5fa5f935f7f0ca57!2sSigmund+Freud+Museum,+Berggasse,+Vienna,+Austria!2m2!1d16.3630759!2d48.2186272!1m3!2m2!1d16.3771171!2d48.2113613!3m5!1s0x476d07a0510894b1:0x2b0e892b270738ec!8m2!3d48.2115422!4d16.3775781!16s%2Fg%2F11b7tvq97h?entry=ttu&g_ep=EgoyMDI2MDEwNy4wIKXMDSoASAFQAw%3D%3D",
-            note: "This one literally changed my life. I ate it three times.",
-          },
-        ],
-      },
-      {
-        title: "Museums",
-        places: [
-          { name: "Albertina" },
-          { name: "Leopold Museum" },
-          { name: "Kunsthistorisches Museum Wien" },
-        ],
-      },
-      {
-        title: "Skip",
-        avoid: true,
-        places: [{ name: "Sigmund Freud Museum" }],
-      },
-      {
-        title: "Day trip to Salzburg",
-        note: "Worth the trip out.",
-        places: [
-          { name: "Salzburg", near: "Austria" },
-          { name: "Hohensalzburg Fortress", near: "Salzburg, Austria" },
-        ],
-        items: [
-          "Walk through the town.",
-          "Take the cable car up to the castle.",
-          "Take 1900s photos.",
-        ],
-      },
-    ],
-  },
   {
     slug: "kilimanjaro",
     title: "Climbing Kilimanjaro",

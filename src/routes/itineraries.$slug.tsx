@@ -153,32 +153,43 @@ function ItineraryDetail() {
         </section>
       )}
 
-      {it.extras && it.extras.places.length > 0 && (
-        <section className="mt-12">
-          <h2 className="font-display text-3xl font-extrabold tracking-tight text-foreground">
-            {it.extras.title}
-          </h2>
-          <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-            {it.extras.places.map((place) => (
-              <li
-                key={place.name}
-                className="rounded-2xl border border-border bg-card px-5 py-4 leading-snug"
-              >
-                <a
-                  href={placeHref(place, it.destination)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={placeLinkClass}
-                >
-                  {place.name}
-                </a>
-                {place.note && (
-                  <span className="block text-sm text-muted-foreground">{place.note}</span>
-                )}
-              </li>
-            ))}
-          </ul>
-        </section>
+      {it.extras && it.extras.length > 0 && (
+        <div className="mt-12 space-y-8">
+          {it.extras.map((group) => (
+            <section key={group.title}>
+              <h2 className="font-display text-3xl font-extrabold tracking-tight text-foreground">
+                {group.title}
+              </h2>
+              {group.note && (
+                <p className="mt-3 leading-relaxed text-foreground/90">{group.note}</p>
+              )}
+              <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+                {group.places.map((place) => (
+                  <li
+                    key={place.name}
+                    className="rounded-2xl border border-border bg-card px-5 py-4 leading-snug"
+                  >
+                    <a
+                      href={placeHref(place, it.destination)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={
+                        group.avoid
+                          ? "font-bold text-muted-foreground underline decoration-muted-foreground/30 underline-offset-4"
+                          : placeLinkClass
+                      }
+                    >
+                      {place.name}
+                    </a>
+                    {place.note && (
+                      <span className="block text-sm text-muted-foreground">{place.note}</span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))}
+        </div>
       )}
 
       {/* Gated CTA */}
