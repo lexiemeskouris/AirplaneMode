@@ -14,18 +14,26 @@ const shell = readFileSync(join(clientDir, "_shell.html"), "utf8");
 // Static routes, mirroring src/routes/*.tsx (index is already dist/client/index.html).
 const routes = ["/about"];
 
-// Dynamic route: src/routes/itineraries.$slug.tsx, one page per itinerary.
-const data = readFileSync(join(root, "src", "data", "itineraries.ts"), "utf8");
-const slugs = [...data.matchAll(/^\s{4}slug:\s*"([^"]+)"/gm)].map((m) => m[1]);
-
-if (slugs.length === 0) {
-  throw new Error(
-    "No itinerary slugs found in src/data/itineraries.ts — the shape of that " +
-      "file changed and this script needs updating.",
+// Dynamic routes, one page per entry. Slugs are read from the data rather than
+// listed here, so adding an itinerary or a city needs no change to this script.
+function slugsIn(file, indent) {
+  const src = readFileSync(join(root, "src", "data", file), "utf8");
+  const found = [...src.matchAll(new RegExp(`^\\s{${indent}}slug:\\s*"([^"]+)"`, "gm"))].map(
+    (m) => m[1],
   );
+  if (found.length === 0) {
+    throw new Error(
+      `No slugs found in src/data/${file} — the shape of that file changed and ` +
+        "this script needs updating.",
+    );
+  }
+  return found;
 }
 
-for (const slug of slugs) routes.push(`/itineraries/${slug}`);
+// src/routes/itineraries.$slug.tsx
+for (const slug of slugsIn("itineraries.ts", 4)) routes.push(`/itineraries/${slug}`);
+// src/routes/recommendations.$slug.tsx
+for (const slug of slugsIn("guides.ts", 4)) routes.push(`/recommendations/${slug}`);
 
 for (const route of routes) {
   const dir = join(clientDir, route);
