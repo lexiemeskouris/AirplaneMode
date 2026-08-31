@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { itineraries } from "@/data/itineraries";
+import { itineraries, BMC_URL } from "@/data/itineraries";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -95,7 +95,7 @@ function Index() {
                 {it.gated && (
                   <div className="absolute inset-0 flex items-end justify-center bg-foreground/35 p-4 backdrop-blur-[3px]">
                     <a
-                      href={it.bmcUrl ?? "https://www.buymeacoffee.com/"}
+                      href={it.bmcUrl ?? BMC_URL}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full rounded-xl bg-accent px-3 py-2.5 text-center text-xs font-bold text-accent-foreground shadow-lg transition-transform hover:scale-[1.03]"

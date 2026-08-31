@@ -51,7 +51,7 @@ export type Itinerary = {
   bmcUrl?: string;
 };
 
-export const BMC_URL = "https://www.buymeacoffee.com/";
+export const BMC_URL = "https://buymeacoffee.com/lexiemeskouris";
 
 export const itineraries: Itinerary[] = [
   {
