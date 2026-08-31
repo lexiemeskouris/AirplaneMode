@@ -12,6 +12,18 @@ import singapore from "@/assets/singapore.svg";
 import vietnam from "@/assets/vietnam.svg";
 import cambodia from "@/assets/cambodia.svg";
 import vienna from "@/assets/vienna.svg";
+import ireland from "@/assets/ireland.svg";
+import mallorca from "@/assets/mallorca.svg";
+import maine from "@/assets/maine.svg";
+import berkshires from "@/assets/berkshires.svg";
+import milan from "@/assets/milan.svg";
+import edinburgh from "@/assets/edinburgh.svg";
+import brussels from "@/assets/brussels.svg";
+import switzerland from "@/assets/switzerland.svg";
+import lisbon from "@/assets/lisbon.svg";
+import ecuador from "@/assets/ecuador.svg";
+import japan from "@/assets/japan.svg";
+import mexicoCity from "@/assets/mexico-city.svg";
 
 /** A named venue, with its map link if we have a real one. */
 export type Place = {
@@ -75,7 +87,9 @@ export type Itinerary = {
   extras?: {
     title: string;
     note?: string;
-    places: Place[];
+    places?: Place[];
+    /** Lines that are not a place, e.g. what to know before you go. */
+    items?: string[];
     /** Renders muted, as a warning rather than a recommendation. */
     avoid?: boolean;
   }[];
@@ -1219,6 +1233,18 @@ export const itineraries: Itinerary[] = [
     teaser:
       "Copenhagen is small enough that day one can be almost entirely walked. Day two is a boat, a bike ride and five hours in Tivoli. Day three is one very good burger before the airport.",
     tags: ["#Tivoli", "#Reffen", "#RoundTower"],
+    extras: [
+      {
+        title: "Also worth seeing",
+        places: [
+          { name: "Nyhavn" },
+          { name: "The Little Mermaid", note: "Just walk by." },
+          { name: "Superkilen" },
+          { name: "Hørsholm" },
+          { name: "Sidecar", note: "Brunch." },
+        ],
+      },
+    ],
     highlights: [
       "The Round Tower, fifteen minutes up and worth it",
       "A picnic from the Glass Market on the castle grounds",
@@ -2151,6 +2177,2025 @@ export const itineraries: Itinerary[] = [
         title: "Skip",
         avoid: true,
         places: [{ name: "Sigmund Freud Museum" }],
+      },
+    ],
+  },
+  {
+    slug: "ireland",
+    title: "Eight Days in Ireland",
+    destination: "Ireland",
+    country: "Ireland",
+    coords: { lat: 53.3498, lon: -6.2603 },
+    duration: "8 days",
+    season: "March",
+    summary:
+      "Dublin for St Patrick's Day, then west to Galway for the Cliffs of Moher and south to Cork.",
+    cover: ireland,
+    gated: false,
+    teaser:
+      "Three days in Dublin over St Patrick's Day, two in Galway with a full day out at the Cliffs of Moher, and two in Cork for Blarney Castle. All of it by train.",
+    tags: ["#StPatricks", "#CliffsOfMoher", "#Blarney"],
+    notes: [
+      "The Dublin days are timed for St Patrick's Day. Everything else here works any time of year.",
+    ],
+    highlights: [
+      "St Patrick's Day in Dublin",
+      "The Guinness Storehouse tour",
+      "A full day tour out to the Cliffs of Moher",
+      "Blarney Castle, and two to three hours to kiss the stone",
+      "Climbing St Anne's for the panorama over Cork",
+    ],
+    days: [
+      {
+        day: "Day One",
+        title: "Land in Dublin",
+        activities: [
+          { time: "08:45", description: "Arrive and check in." },
+          {
+            time: "13:00",
+            description: "Guinness Storehouse tour, until 15:00.",
+            places: [{ name: "Guinness Storehouse", near: "Dublin, Ireland" }],
+          },
+          {
+            description: "Anne's Lane, and the Arisu photo booth.",
+            places: [{ name: "Anne's Lane", near: "Dublin, Ireland" }],
+          },
+          {
+            time: "19:30",
+            description: "Dinner at Krewe North.",
+            places: [{ name: "Krewe North", near: "Dublin, Ireland" }],
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "St Patrick's Day",
+        activities: [
+          {
+            description: "Pastries at Bread41.",
+            places: [{ name: "Bread41", near: "Dublin, Ireland" }],
+          },
+          {
+            description: "Temple Bar and the Ha'penny Bridge.",
+            places: [
+              { name: "Temple Bar", near: "Dublin, Ireland" },
+              { name: "Ha'penny Bridge", near: "Dublin, Ireland" },
+            ],
+          },
+          { description: "St Patrick's Day festivities." },
+          {
+            description: "Walk into Leo Burdock's for the famous fish and chips.",
+            places: [{ name: "Leo Burdock", near: "Dublin, Ireland" }],
+          },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "Dublin to Galway",
+        activities: [
+          { time: "11:30", description: "Late check out." },
+          {
+            description: "Brunch at Spread Cafe.",
+            places: [{ name: "Spread Cafe", near: "Dublin, Ireland" }],
+          },
+          {
+            description: "Dubh Linn Gardens.",
+            places: [{ name: "Dubh Linn Gardens", near: "Dublin, Ireland" }],
+          },
+          { time: "16:35", description: "Train to Galway." },
+        ],
+      },
+      {
+        day: "Day Four",
+        title: "Galway",
+        activities: [
+          {
+            description: "Coffee at Coffeewerk + Press.",
+            places: [{ name: "Coffeewerk + Press", near: "Galway, Ireland" }],
+          },
+          {
+            description:
+              "Walk Quay Street and the Latin Quarter, and watch the street performers.",
+            places: [
+              { name: "Quay Street", near: "Galway, Ireland" },
+              { name: "Latin Quarter", near: "Galway, Ireland" },
+            ],
+          },
+          {
+            description: "Acai bowls at Tribe Coffee.",
+            places: [{ name: "Tribe Coffee", near: "Galway, Ireland" }],
+          },
+          {
+            time: "18:00",
+            description: "Dinner at Ruibin, then Murphy's ice cream for dessert.",
+            places: [
+              { name: "Ruibin", near: "Galway, Ireland" },
+              { name: "Murphy's Ice Cream", near: "Galway, Ireland" },
+            ],
+          },
+        ],
+      },
+      {
+        day: "Day Five",
+        title: "The Cliffs of Moher, Then Cork",
+        activities: [
+          {
+            time: "09:15",
+            description: "Picked up for the full day Cliffs of Moher tour, back in Galway at 17:30.",
+            places: [{ name: "Cliffs of Moher", near: "County Clare, Ireland" }],
+          },
+          {
+            time: "18:05",
+            description: "Train to Cork. It is a tight turnaround, so be careful.",
+          },
+        ],
+      },
+      {
+        day: "Day Six",
+        title: "Blarney Castle",
+        activities: [
+          {
+            description:
+              "Blarney Castle, about a 31 minute bus from Cork city centre. Give it two to three hours to explore and kiss the stone.",
+            places: [{ name: "Blarney Castle", near: "Cork, Ireland" }],
+          },
+          {
+            description: "Walk through the English Market.",
+            places: [{ name: "English Market", near: "Cork, Ireland" }],
+          },
+        ],
+      },
+      {
+        day: "Day Seven",
+        title: "St Anne's, Then Back to Dublin",
+        activities: [
+          {
+            description: "Climb St Anne's Church for the panoramic views.",
+            places: [{ name: "St Anne's Church Shandon", near: "Cork, Ireland" }],
+          },
+          { description: "Three hour bus from Cork to Dublin Airport." },
+        ],
+      },
+      {
+        day: "Day Eight",
+        title: "Fly Home",
+        activities: [
+          { description: "Airport shuttle from the hotel, around 08:00." },
+          { time: "10:25", description: "Fly out." },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "maine",
+    title: "Five Days in Maine",
+    destination: "Maine",
+    country: "United States",
+    coords: { lat: 44.3386, lon: -68.2733 },
+    duration: "5 days",
+    season: "Summer",
+    summary:
+      "Acadia at its hardest: sunrise on Cadillac Mountain, the Beehive before breakfast, and a lot of lobster.",
+    cover: maine,
+    gated: false,
+    teaser:
+      "Driven up from New York with a night in Portsmouth and a long stop in Portland. The third day starts at 03:00 for sunrise on Cadillac Mountain and does not really stop.",
+    tags: ["#Acadia", "#CadillacMountain", "#Lobster"],
+    notes: [
+      "Cadillac Mountain sunrise tickets are released well in advance and go fast. Set an alarm for the morning they drop.",
+    ],
+    highlights: [
+      "Sunrise from Cadillac Mountain, after a 03:00 alarm",
+      "The Beehive Trail straight afterwards",
+      "The land bridge over to Bar Island, at low tide",
+      "Jordan Pond Path and the Bubbles",
+      "A long afternoon of eating your way through Portland",
+    ],
+    days: [
+      {
+        day: "Day One",
+        title: "Drive to Portsmouth",
+        activities: [
+          { time: "16:00", description: "Start the drive up." },
+          {
+            time: "21:00",
+            description: "Arrive in Portsmouth.",
+            places: [{ name: "Portsmouth", near: "New Hampshire" }],
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "Portland, Then Into Acadia",
+        activities: [
+          {
+            time: "08:00",
+            description: "Pastries at Greenery.",
+            places: [{ name: "Greenery Cafe", near: "Portsmouth, New Hampshire" }],
+          },
+          { time: "09:00", description: "Leave for Acadia." },
+          { time: "10:00", description: "Cadillac Mountain tickets are released." },
+          {
+            time: "11:00",
+            description: "Arrive in Portland and eat your way along Commercial Street and Old Port.",
+            places: [
+              { name: "Portland", near: "Maine" },
+              { name: "Luke's Lobster", near: "Portland, Maine" },
+              { name: "Good Mood Matcha", near: "Portland, Maine" },
+              { name: "Saltyard", near: "Portland, Maine" },
+              { name: "Post Supply", near: "Portland, Maine" },
+              { name: "Blanche + Mimi", near: "Portland, Maine" },
+              { name: "Holy Donut", near: "Portland, Maine" },
+              { name: "Tandem Bakery", near: "Portland, Maine" },
+              { name: "Duckfat", near: "Portland, Maine" },
+            ],
+          },
+          {
+            time: "16:00",
+            description: "Thunder Hole and Otter Cliffs.",
+            places: [
+              { name: "Thunder Hole", near: "Acadia National Park, Maine" },
+              { name: "Otter Cliffs", near: "Acadia National Park, Maine" },
+            ],
+          },
+          {
+            description: "Dinner at Peekytoe Provisions in Bar Harbor.",
+            places: [{ name: "Peekytoe Provisions", near: "Bar Harbor, Maine" }],
+          },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "Jordan Pond and the Bubbles",
+        activities: [
+          {
+            time: "10:00",
+            description: "Brunch at Jordan Pond House.",
+            places: [{ name: "Jordan Pond House", near: "Acadia National Park, Maine" }],
+          },
+          {
+            time: "11:00",
+            description: "Jordan Pond Path.",
+            places: [{ name: "Jordan Pond Path", near: "Acadia National Park, Maine" }],
+          },
+          {
+            time: "13:00",
+            description: "North Bubble, South Bubble, or both.",
+            places: [{ name: "The Bubbles", near: "Acadia National Park, Maine" }],
+          },
+          {
+            description: "Rent bikes and ride the Eagle Lake trail, if you fancy it.",
+            places: [{ name: "Eagle Lake", near: "Acadia National Park, Maine" }],
+          },
+          {
+            time: "17:00",
+            description: "Drinks at Ivy Manor Inn.",
+            places: [{ name: "Ivy Manor Inn", near: "Bar Harbor, Maine" }],
+          },
+          {
+            time: "19:00",
+            description: "Dinner at Side Street, with blueberry pie for dessert.",
+            places: [{ name: "Side Street Cafe", near: "Bar Harbor, Maine" }],
+          },
+          { time: "20:30", description: "Early night. Tomorrow starts at 03:00." },
+        ],
+      },
+      {
+        day: "Day Four",
+        title: "Sunrise on Cadillac, Then Everything Else",
+        activities: [
+          { time: "03:00", description: "Wake up." },
+          {
+            time: "04:15",
+            description: "Sunrise at Cadillac Mountain.",
+            places: [{ name: "Cadillac Mountain", near: "Acadia National Park, Maine" }],
+          },
+          {
+            time: "05:30",
+            description:
+              "The Beehive Trail. You can add the Gorham Mountain loop and push everything back a few hours.",
+            places: [{ name: "Beehive Trail", near: "Acadia National Park, Maine" }],
+          },
+          {
+            time: "08:00",
+            description:
+              "The land bridge over to Bar Island. Make sure you have twenty minutes of low tide.",
+            places: [{ name: "Bar Island", near: "Bar Harbor, Maine" }],
+          },
+          {
+            time: "09:30",
+            description: "Breakfast at Cafe This Way.",
+            places: [{ name: "Cafe This Way", near: "Bar Harbor, Maine" }],
+          },
+          {
+            time: "10:30",
+            description: "Explore downtown Bar Harbor.",
+            places: [{ name: "Bar Harbor", near: "Maine" }],
+          },
+          {
+            time: "12:00",
+            description: "Lounge at Sand Beach.",
+            places: [{ name: "Sand Beach", near: "Acadia National Park, Maine" }],
+          },
+          { time: "15:00", description: "Nap." },
+          {
+            description: "Dinner at Route 66 in Bar Harbor.",
+            places: [{ name: "Route 66 Restaurant", near: "Bar Harbor, Maine" }],
+          },
+          {
+            description:
+              "Drinks at Atlantic Brewing Company, blueberry ale and soda. Or Geddy's.",
+            places: [
+              { name: "Atlantic Brewing Company", near: "Bar Harbor, Maine" },
+              { name: "Geddy's", near: "Bar Harbor, Maine" },
+            ],
+          },
+          { description: "Walk through town for ice cream or a drink at sunset." },
+        ],
+      },
+      {
+        day: "Day Five",
+        title: "One Last Trail, Then Home",
+        activities: [
+          {
+            time: "07:00",
+            description: "Witch Hole Path, three miles.",
+            places: [{ name: "Witch Hole Pond", near: "Acadia National Park, Maine" }],
+          },
+          {
+            time: "11:00",
+            description: "Perkins Cove, and lunch at Footbridge.",
+            places: [
+              { name: "Perkins Cove", near: "Ogunquit, Maine" },
+              { name: "Footbridge Lobster", near: "Ogunquit, Maine" },
+            ],
+          },
+          { time: "13:00", description: "Drive home." },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "mallorca",
+    title: "Seven Days in Mallorca and Ibiza",
+    destination: "Mallorca",
+    country: "Spain",
+    coords: { lat: 39.6953, lon: 3.0176 },
+    duration: "7 days",
+    season: "Summer",
+    summary:
+      "Pollença as a base, a market day in Palma, a boat day in the south, then over to Ibiza for the clubs.",
+    cover: mallorca,
+    gated: false,
+    teaser:
+      "Five days in the north of Mallorca with a villa to cook in, then three in Ibiza built entirely around what is on at the clubs. The Ibiza half is deliberately not scheduled.",
+    tags: ["#Pollenca", "#BoatDay", "#Ibiza"],
+    notes: [
+      "The Ibiza nights depend entirely on who is playing that week, so this lists the clubs rather than a schedule. Check the line-ups before you book anything.",
+    ],
+    highlights: [
+      "The Sunday market at Santa Maria for ensaimadas and cheese",
+      "A boat day in the south, and the beaches after it",
+      "Sóller, Deià and Valldemossa in the north",
+      "The Calvari steps in Pollença",
+      "Ibiza, planned around the line-ups rather than the days",
+    ],
+    days: [
+      {
+        day: "Day One",
+        title: "Into Pollença",
+        activities: [
+          { description: "Fly into Mallorca and transfer north." },
+          { time: "14:00", description: "Check in at Pollença.", places: [{ name: "Pollença" }] },
+          {
+            description: "Explore, and shop for groceries. Lidl is a ten minute walk.",
+          },
+          {
+            description:
+              "Plaça Major in the old town, about 25 minutes on foot or five by car, then the Calvari steps.",
+            places: [
+              { name: "Plaça Major", near: "Pollença, Mallorca" },
+              { name: "Calvari Steps", near: "Pollença, Mallorca" },
+            ],
+          },
+          {
+            time: "21:00",
+            description: "Dinner at La Font de Gall.",
+            places: [{ name: "La Font del Gall", near: "Pollença, Mallorca" }],
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "Santa Maria Market, Then Palma",
+        activities: [
+          { description: "An early hike near the villa, if anyone is up for it." },
+          {
+            time: "12:00",
+            description:
+              "Drive to the Santa Maria market for ensaimadas, cheese and produce. It ends at 14:00.",
+            places: [{ name: "Santa Maria del Camí", near: "Mallorca" }],
+          },
+          {
+            description: "Drive to Palma for the rest of the day.",
+            places: [{ name: "Palma", near: "Mallorca" }],
+          },
+          {
+            time: "21:00",
+            description: "Dinner at Sumailla.",
+            places: [{ name: "Sumailla", near: "Palma, Mallorca" }],
+          },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "Boat Day",
+        activities: [
+          { description: "Boat day in the south. Arrange cars in advance." },
+          { description: "Beaches in the south afterwards." },
+          { description: "Grill and cook dinner back at the house." },
+        ],
+      },
+      {
+        day: "Day Four",
+        title: "Up North",
+        activities: [
+          {
+            description: "Sóller, Deià and Valldemossa.",
+            places: [
+              { name: "Sóller", near: "Mallorca" },
+              { name: "Deià", near: "Mallorca" },
+              { name: "Valldemossa", near: "Mallorca" },
+            ],
+          },
+          {
+            description: "Dinner in Port de Pollença or somewhere else up north.",
+            places: [{ name: "Port de Pollença", near: "Mallorca" }],
+          },
+        ],
+      },
+      {
+        day: "Day Five",
+        title: "Check Out, Fly to Ibiza",
+        activities: [
+          { time: "10:00", description: "Check out." },
+          {
+            description: "The Port de Pollença market on the way out, 09:00 to 13:00.",
+            places: [{ name: "Port de Pollença Market", near: "Mallorca" }],
+          },
+          { time: "14:20", description: "Fly to Ibiza, landing 15:00.", places: [{ name: "Ibiza" }] },
+          { description: "Check in, then out to whichever club has the better line-up." },
+        ],
+      },
+      {
+        day: "Day Six",
+        title: "Ibiza",
+        activities: [{ description: "Whatever is on. See the clubs below." }],
+      },
+      {
+        day: "Day Seven",
+        title: "Ibiza, Then Home",
+        activities: [
+          { description: "Check out and transfer back to Barcelona." },
+          { description: "Fly on from there." },
+        ],
+      },
+    ],
+    extras: [
+      {
+        title: "Ibiza clubs",
+        note: "Which night you go where depends on the line-up, so these are the rooms rather than a plan.",
+        places: [
+          { name: "Hï Ibiza" },
+          { name: "Pacha Ibiza" },
+          { name: "Ushuaïa Ibiza" },
+          { name: "UNVRS Ibiza" },
+        ],
+      },
+      {
+        title: "Around Pollença",
+        note: "Wine is a booming industry in Mallorca, so look for a tour and tasting. Pa amb oli is the local thing to eat: toast with tomato, cheese and toppings.",
+        places: [
+          { name: "La Trobada", near: "Pollença, Mallorca", note: "Very authentic Mallorcan food." },
+          { name: "Bar Gorreta", near: "Pollença, Mallorca", note: "Casual, cheap, drinks come with tapas." },
+          { name: "Cal Patró", near: "Cala Sant Vicenç, Mallorca", note: "Family seafood place north of Pollença, highly recommended." },
+          { name: "La Fonda", near: "Pollença, Mallorca", note: "Really good lamb, another local speciality. Book ahead." },
+          { name: "Ca'n Moixet", near: "Pollença, Mallorca", note: "More good tapas and pintxos." },
+        ],
+      },
+      {
+        title: "Around Palma",
+        places: [
+          { name: "Tast", near: "Palma, Mallorca", note: "Great tapas and pintxos." },
+          { name: "Passeig del Born", near: "Palma, Mallorca", note: "Cute pedestrian street." },
+          { name: "Santa Catalina", near: "Palma, Mallorca", note: "Another area, lots of cafes." },
+        ],
+      },
+      {
+        title: "Also in Pollença",
+        items: [
+          "There is an easy 2km hike in Pollença with a local restaurant at the top. Call ahead to check it is open.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "berkshires",
+    title: "Three Days in the Berkshires",
+    destination: "Berkshires",
+    country: "United States",
+    coords: { lat: 42.3601, lon: -73.2854 },
+    duration: "3 days",
+    season: "Spring",
+    summary:
+      "A slow weekend out of New York: a spa afternoon, a lot of cafes, and hikes if you want them.",
+    cover: berkshires,
+    gated: false,
+    teaser:
+      "Two and a half hours from New York, and deliberately unambitious. Brunch, a spa appointment, and a run of small cafes, with hikes and a lake on hand if the mood changes.",
+    tags: ["#Lenox", "#Spa", "#Hikes"],
+    highlights: [
+      "Brunch at Haven Cafe in Lenox on the way in",
+      "A spa afternoon at Seven Salon Spa",
+      "The Berkshire Grown winter farmers market",
+      "Free bike rentals at the inn",
+      "Five hikes within easy reach, if you want them",
+    ],
+    days: [
+      {
+        day: "Day One",
+        title: "Drive Up, Spa, Dinner",
+        activities: [
+          { description: "Two and a half hour drive up from New York." },
+          {
+            time: "11:45",
+            description: "Brunch at Haven Cafe in Lenox, until 12:45.",
+            places: [{ name: "Haven Cafe", near: "Lenox, Massachusetts" }],
+          },
+          {
+            description: "Five minute drive to Seven Hills Inn, and check in.",
+            places: [{ name: "Seven Hills Inn", near: "Lenox, Massachusetts" }],
+          },
+          {
+            time: "13:15",
+            description: "Spa appointment at Seven Salon Spa, until 14:20.",
+            places: [{ name: "Seven Salon Spa", near: "Lenox, Massachusetts" }],
+          },
+          {
+            time: "18:30",
+            description: "Dinner at Frankie's Ristorante, five minutes from the hotel.",
+            places: [{ name: "Frankie's Ristorante", near: "Lenox, Massachusetts" }],
+          },
+          {
+            time: "20:00",
+            description: "Berkshire Grown winter farmers market, until 22:00.",
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "Cafes, and Not Much Else",
+        activities: [
+          {
+            description:
+              "Continental breakfast at the inn, or the Starving Artist Cafe and Creperie five minutes away.",
+            places: [{ name: "Starving Artist Cafe and Creperie", near: "Lee, Massachusetts" }],
+          },
+          {
+            description: "Lunch at Main Street Cafe, seven minutes away.",
+            places: [{ name: "Main Street Cafe", near: "Lenox, Massachusetts" }],
+          },
+          {
+            time: "18:30",
+            description:
+              "Dinner at Pizzeria Boema, four minutes away, or Truc's Orient Express, fifteen.",
+            places: [
+              { name: "Pizzeria Boema", near: "Lenox, Massachusetts" },
+              { name: "Truc Orient Express", near: "West Stockbridge, Massachusetts" },
+            ],
+          },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "One More Coffee, Then Home",
+        activities: [
+          {
+            description: "Continental breakfast, or Electra's Cafe eight minutes away.",
+            places: [{ name: "Electra's Cafe", near: "Pittsfield, Massachusetts" }],
+          },
+          {
+            description: "Lunch at Shots Cafe, five minutes away.",
+            places: [{ name: "Shots Cafe", near: "Lenox, Massachusetts" }],
+          },
+          { description: "Two and a half hour drive back to New York." },
+        ],
+      },
+    ],
+    extras: [
+      {
+        title: "Hikes and outdoors",
+        places: [
+          { name: "Monument Mountain", near: "Great Barrington, Massachusetts" },
+          { name: "Mount Greylock", near: "Massachusetts" },
+          { name: "Bash Bish Falls State Park", near: "Massachusetts" },
+          { name: "Pleasant Valley Wildlife Sanctuary", near: "Lenox, Massachusetts" },
+          { name: "Natural Bridge State Park", near: "North Adams, Massachusetts" },
+          { name: "Onota Lake", near: "Pittsfield, Massachusetts", note: "Kayak rentals, about twenty minutes away." },
+        ],
+      },
+      {
+        title: "Worth knowing",
+        items: [
+          "The inn does free bike rentals.",
+          "The Berkshires visitor site keeps a directory of the local wineries and breweries.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "milan",
+    title: "Three Days in Milan and Venice",
+    destination: "Milan",
+    country: "Italy",
+    coords: { lat: 45.4642, lon: 9.19 },
+    duration: "3 days",
+    season: "Any",
+    summary:
+      "One day of Milan on foot, then two in Venice doing the famous things back to back.",
+    cover: milan,
+    gated: false,
+    teaser:
+      "A weekend split across two cities. Milan is the Duomo and an afternoon of shopping; Venice is timed almost to the minute because everything is a five minute walk from everything else.",
+    tags: ["#Duomo", "#Venice", "#Navigli"],
+    highlights: [
+      "Turning three times on the bull's mosaic in the Galleria",
+      "The Duomo, with the afternoon free afterwards",
+      "Going out in Navigli and Colonne di San Lorenzo",
+      "Doge's Palace and the Bridge of Sighs",
+      "Pasta to go from Dal Moro's on the way to the airport",
+    ],
+    days: [
+      {
+        day: "Day One",
+        title: "Milan on Foot",
+        activities: [
+          { time: "08:45", description: "Flight in, landing at 11:00. About 45 minutes to the centre." },
+          {
+            description: "Lunch at Spontini, right next to the Duomo.",
+            places: [{ name: "Spontini", near: "Milan, Italy" }],
+          },
+          {
+            time: "13:30",
+            description: "The Duomo, until 15:00.",
+            places: [{ name: "Duomo di Milano" }],
+          },
+          {
+            time: "15:00",
+            description:
+              "Shop until 20:00. Walk the Galleria Vittorio Emanuele first and turn three times on your heel on the bull's mosaic.",
+            places: [{ name: "Galleria Vittorio Emanuele II", near: "Milan, Italy" }],
+          },
+          {
+            description:
+              "Past La Scala, then along Via Dante with Castello Sforzesco at the end of it, and shop the Quadrilatero d'Oro.",
+            places: [
+              { name: "La Scala", near: "Milan, Italy" },
+              { name: "Via Dante", near: "Milan, Italy" },
+              { name: "Castello Sforzesco", near: "Milan, Italy" },
+              { name: "Quadrilatero della Moda", near: "Milan, Italy" },
+            ],
+          },
+          {
+            time: "20:00",
+            description: "Dinner at Platina. Miscusi and Mani in Pasta are the other options.",
+            places: [
+              { name: "Platina", near: "Milan, Italy" },
+              { name: "Miscusi", near: "Milan, Italy" },
+              { name: "Mani in Pasta", near: "Milan, Italy" },
+            ],
+          },
+          {
+            description: "Out in Navigli and Colonne di San Lorenzo.",
+            places: [
+              { name: "Navigli", near: "Milan, Italy" },
+              { name: "Colonne di San Lorenzo", near: "Milan, Italy" },
+              { name: "Bar Rattazzo", near: "Milan, Italy" },
+              { name: "La Bicicletta", near: "Milan, Italy" },
+            ],
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "Into Venice",
+        activities: [
+          { time: "15:45", description: "Arrive in Venice, check in and get settled." },
+          {
+            time: "16:15",
+            description: "Six minute walk to the Ponte di Rialto, stopping at Gelatoteca Suso.",
+            places: [
+              { name: "Ponte di Rialto", near: "Venice, Italy" },
+              { name: "Gelatoteca Suso", near: "Venice, Italy" },
+            ],
+          },
+          {
+            time: "16:35",
+            description: "Seven minutes on to St Mark's Basilica. Go inside for ten minutes.",
+            places: [{ name: "St Mark's Basilica", near: "Venice, Italy" }],
+          },
+          {
+            time: "17:00",
+            description: "Doge's Palace, until 18:30, then a minute's walk to the Bridge of Sighs.",
+            places: [
+              { name: "Doge's Palace", near: "Venice, Italy" },
+              { name: "Bridge of Sighs", near: "Venice, Italy" },
+            ],
+          },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "Venice, All of It",
+        activities: [
+          { time: "10:35", description: "St Mark's Basilica, until 11:45." },
+          { time: "11:00", description: "Island cruise, until 15:30." },
+          { time: "15:35", description: "Gondola ride, half an hour." },
+          { time: "16:10", description: "Ponte di Rialto again." },
+          { time: "16:35", description: "The Bridge of Sighs." },
+          {
+            time: "17:00",
+            description: "Back to the hotel, grabbing pasta to go from Dal Moro's.",
+            places: [{ name: "Dal Moro's Fresh Pasta To Go", near: "Venice, Italy" }],
+          },
+          { time: "17:30", description: "Water taxi to the airport." },
+          { time: "20:30", description: "Flight out." },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "edinburgh",
+    title: "Three Days in Edinburgh and Glasgow",
+    destination: "Edinburgh",
+    country: "Scotland",
+    coords: { lat: 55.9533, lon: -3.1883 },
+    duration: "3 days",
+    season: "Any",
+    summary:
+      "A night out in Glasgow, a full day tour, and the castle before the flight home.",
+    cover: edinburgh,
+    gated: false,
+    teaser:
+      "Based in Edinburgh, with the first night spent over in Glasgow. The bars below are almost all student bars, which is the point.",
+    tags: ["#Glasgow", "#EdinburghCastle", "#StudentBars"],
+    highlights: [
+      "Dinner in Merchant City, Glasgow",
+      "A full day tour, eight until eight",
+      "Edinburgh Castle at eleven",
+      "Lunch at I.J. Mellis Cheesemonger",
+      "A very long list of student bars",
+    ],
+    days: [
+      {
+        day: "Day One",
+        title: "Straight to Glasgow",
+        activities: [
+          { time: "14:55", description: "Land in Edinburgh. About 28 minutes to the flat." },
+          { description: "Go over to Glasgow.", places: [{ name: "Glasgow" }] },
+          {
+            time: "19:30",
+            description: "Dinner in Merchant City, at The Citizen.",
+            places: [
+              { name: "Merchant City", near: "Glasgow, Scotland" },
+              { name: "The Citizen", near: "Glasgow, Scotland" },
+            ],
+          },
+          { description: "Walk around, shop, drink. The Glasgow bars are listed below." },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "A Full Day Tour",
+        activities: [
+          { time: "08:00", description: "Tour, until 20:00." },
+          { description: "Out afterwards. The Edinburgh bars are listed below." },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "The Castle, Then Home",
+        activities: [
+          { time: "09:30", description: "Wake up." },
+          {
+            time: "11:00",
+            description: "Edinburgh Castle.",
+            places: [{ name: "Edinburgh Castle" }],
+          },
+          {
+            description: "Lunch at I.J. Mellis Cheesemonger.",
+            places: [{ name: "I.J. Mellis Cheesemonger", near: "Edinburgh, Scotland" }],
+          },
+          { time: "14:15", description: "Leave the flat." },
+          { time: "15:45", description: "Take off." },
+        ],
+      },
+    ],
+    extras: [
+      {
+        title: "Glasgow bars",
+        places: [
+          { name: "Revolution Glasgow", note: "Popular student bar, party atmosphere." },
+          { name: "Vodka Wodka", near: "Glasgow, Scotland", note: "One of the busiest student bars, next to the university, with a beer garden." },
+          { name: "Tingle Shooter Bar", near: "Glasgow, Scotland", note: "Pre-club student bar, specialises in cheap fancy shots." },
+          { name: "Firewater", near: "Glasgow, Scotland", note: "Busy student bar, indie rock, cheap cocktail pitchers." },
+          { name: "Bloc+", near: "Glasgow, Scotland", note: "Another student bar. Free entry before midnight." },
+        ],
+      },
+      {
+        title: "Edinburgh bars",
+        places: [
+          { name: "McSorleys", near: "Edinburgh, Scotland", note: "Party atmosphere, popular with sports teams." },
+          { name: "Cabaret Voltaire", near: "Edinburgh, Scotland", note: "Cheap entry and cheap drinks, popular with students." },
+          { name: "The Mash House", near: "Edinburgh, Scotland", note: "Live music, three floors." },
+          { name: "The Hive", near: "Edinburgh, Scotland", note: "Ugly, cheap, student discounts." },
+          { name: "Big Cheese", near: "Edinburgh, Scotland", note: "The biggest student club night, and the music is pure cheese." },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "brussels",
+    title: "Three Days in Brussels",
+    destination: "Brussels",
+    country: "Belgium",
+    coords: { lat: 50.8503, lon: 4.3517 },
+    duration: "3 days",
+    season: "Any",
+    summary:
+      "A walking tour, a chocolate tasting, and a full day out in Ghent and Bruges.",
+    cover: brussels,
+    gated: false,
+    teaser:
+      "Two nights, reached by train from London. The first day is the Grand Place and chocolate, the second is entirely Ghent and Bruges, and the waffles are non-negotiable.",
+    tags: ["#GrandPlace", "#Bruges", "#Waffles"],
+    highlights: [
+      "A two hour walking tour from the Grand Place",
+      "A chocolate tasting straight afterwards",
+      "A full day tour of Ghent and Bruges",
+      "Waffles at Chez Albert in Bruges",
+      "The nightlife is all within a few minutes of the centre",
+    ],
+    days: [
+      {
+        day: "Day One",
+        title: "The Grand Place and Chocolate",
+        activities: [
+          { time: "06:47", description: "Train from London, arriving 10:07." },
+          { description: "Check in and settle. Six minute walk to the Grand Place." },
+          {
+            time: "11:00",
+            description:
+              "Two hour walking tour, meeting at the orange umbrella in the Grand Place.",
+            places: [{ name: "Grand Place", near: "Brussels, Belgium" }],
+          },
+          {
+            time: "13:15",
+            description: "Tonton Garby, until 14:15.",
+            places: [{ name: "Tonton Garby", near: "Brussels, Belgium" }],
+          },
+          { time: "14:30", description: "Chocolate tasting, until 16:30." },
+          { description: "Hang about, walk, nap." },
+          {
+            time: "19:00",
+            description: "Dinner at Publico.",
+            places: [{ name: "Publico", near: "Brussels, Belgium" }],
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "Ghent and Bruges",
+        activities: [
+          {
+            time: "09:00",
+            description: "Ghent and Bruges day tour, until 19:30.",
+            places: [{ name: "Ghent", near: "Belgium" }, { name: "Bruges", near: "Belgium" }],
+          },
+          {
+            description: "Waffles in Bruges, at Chez Albert.",
+            places: [{ name: "Chez Albert", near: "Bruges, Belgium" }],
+          },
+          {
+            time: "20:00",
+            description: "Dinner at Grimbergen Cafe, or Gazette Pasta.",
+            places: [
+              { name: "Grimbergen Cafe", near: "Brussels, Belgium" },
+              { name: "Gazette Pasta", near: "Brussels, Belgium" },
+            ],
+          },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "Train Home",
+        activities: [
+          { time: "08:50", description: "Leave the hotel." },
+          { time: "09:22", description: "Train back to London." },
+        ],
+      },
+    ],
+    extras: [
+      {
+        title: "Bars in the centre",
+        note: "There is a lot of nightlife right by the centre, but if you need names:",
+        places: [
+          { name: "Celtica", near: "Brussels, Belgium" },
+          { name: "Delirium Cafe", near: "Brussels, Belgium" },
+          { name: "Madame Moustache", near: "Brussels, Belgium" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "switzerland",
+    title: "Zurich and Interlaken",
+    destination: "Switzerland",
+    country: "Switzerland",
+    coords: { lat: 47.3769, lon: 8.5417 },
+    duration: "3 days",
+    season: "Any",
+    summary:
+      "A long travel day into Interlaken, and one very full day in Zurich on the way back.",
+    cover: switzerland,
+    gated: false,
+    teaser:
+      "Zurich to Interlaken and back, with the Zurich day timed tightly: Uetliberg, Bahnhofstrasse, a lake cruise and fondue, all before the evening flight.",
+    tags: ["#Interlaken", "#Uetliberg", "#Fondue"],
+    notes: [
+      "Sunday counts as a public holiday in Zurich and a lot of the shops close. The Zurich day below is built around that.",
+      "The middle day in Interlaken was never written down, so this covers the travel day out and the day in Zurich.",
+    ],
+    highlights: [
+      "The train from Zurich down to Interlaken",
+      "Uetliberg, reached on tram line 13",
+      "Sprüngli on Bahnhofstrasse",
+      "A cruise on Lake Zurich",
+      "Fondue at Raclette Stube before the flight",
+    ],
+    days: [
+      {
+        day: "Day One",
+        title: "London to Interlaken",
+        activities: [
+          { time: "04:30", description: "Wake up. It is a long morning." },
+          { time: "06:50", description: "Flight to Zurich, landing 09:30." },
+          { description: "Fifteen minute bus to the train station." },
+          {
+            time: "11:22",
+            description: "Train from Zurich to Interlaken, arriving 13:38.",
+            places: [{ name: "Interlaken" }],
+          },
+          { description: "Eleven minute bus to the hostel. Check in, drop everything, get lunch." },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "Interlaken",
+        activities: [
+          { description: "Not recorded. Whatever Interlaken gives you." },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "Zurich in a Day",
+        activities: [
+          { time: "07:19", description: "Train from Interlaken back to Zurich, arriving 09:28." },
+          {
+            time: "09:45",
+            description: "Brunch at Bubbles, until 10:45.",
+            places: [{ name: "Bubbles", near: "Zurich, Switzerland" }],
+          },
+          {
+            time: "11:18",
+            description: "Uetliberg, on tram line 13.",
+            places: [{ name: "Uetliberg", near: "Zurich, Switzerland" }],
+          },
+          {
+            time: "12:15",
+            description:
+              "Walk down Bahnhofstrasse until 13:45, stopping at Sprüngli for the best Swiss chocolate.",
+            places: [
+              { name: "Bahnhofstrasse", near: "Zurich, Switzerland" },
+              { name: "Sprüngli", near: "Zurich, Switzerland" },
+            ],
+          },
+          {
+            time: "14:00",
+            description: "Cruise on Lake Zurich from Bürkliplatz, until 15:25.",
+            places: [{ name: "Bürkliplatz", near: "Zurich, Switzerland" }],
+          },
+          {
+            time: "15:35",
+            description: "Grossmünster.",
+            places: [{ name: "Grossmünster", near: "Zurich, Switzerland" }],
+          },
+          {
+            time: "16:00",
+            description: "Walk the Old Town until 17:15.",
+            places: [{ name: "Zurich Old Town" }],
+          },
+          {
+            time: "17:30",
+            description: "Fondue at Raclette Stube.",
+            places: [{ name: "Raclette Stube", near: "Zurich, Switzerland" }],
+          },
+          { time: "21:25", description: "Flight out." },
+        ],
+      },
+    ],
+    extras: [
+      {
+        title: "If the shops are shut",
+        places: [
+          {
+            name: "Kunsthaus Zürich",
+            note: "Art museum in the Old Town, and open when most things are not.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "lisbon",
+    title: "Three Days in Lisbon",
+    destination: "Lisbon",
+    country: "Portugal",
+    coords: { lat: 38.7223, lon: -9.1393 },
+    duration: "3 days",
+    season: "Any",
+    summary:
+      "Alfama on foot, a day out to Sintra and Cabo da Roca, and the best chocolate cake in the city.",
+    cover: lisbon,
+    gated: false,
+    teaser:
+      "One day in the old city, one long day out at Sintra and the western edge of Europe, and a very hilly walking tour in between. Wear comfortable shoes, seriously.",
+    tags: ["#Alfama", "#Sintra", "#PasteisDeBelem"],
+    notes: [
+      "The Alfama walking tour is very hilly. Wear comfortable shoes.",
+    ],
+    highlights: [
+      "A free 90 minute walking tour of Alfama",
+      "Saint George's Castle for the best views of the city",
+      "Landeau for the best chocolate cake",
+      "Pena Palace, Cabo da Roca and Belém in one day",
+      "Dinner at the Time Out Market",
+    ],
+    days: [
+      {
+        day: "Day One",
+        title: "Alfama on Foot",
+        activities: [
+          { time: "07:55", description: "Flight from London Luton, landing 10:40." },
+          { description: "Pick up the unlimited travel card." },
+          { time: "11:15", description: "Train into the centre, about 33 minutes." },
+          {
+            time: "12:00",
+            description: "Brunch at Nicolau, in Baixa.",
+            places: [{ name: "Nicolau Lisboa", near: "Lisbon, Portugal" }],
+          },
+          {
+            time: "13:30",
+            description:
+              "Saint George's Castle. Best views of the city, and an hour to an hour and a half is enough.",
+            places: [{ name: "São Jorge Castle", near: "Lisbon, Portugal" }],
+          },
+          {
+            time: "14:50",
+            description:
+              "Free 90 minute walking tour of Alfama, meeting at the castle and ending near the Fado Museum. Tip about 12 euros.",
+            places: [
+              { name: "Alfama", near: "Lisbon, Portugal" },
+              { name: "Museu do Fado", near: "Lisbon, Portugal" },
+            ],
+          },
+          {
+            time: "16:30",
+            description: "Landeau, for the best chocolate cake. Open 11:00 to 23:00.",
+            places: [{ name: "Landeau Chocolate", near: "Lisbon, Portugal" }],
+          },
+          {
+            description: "Dinner at Tapa Bucho in Bairro Alto, then out in Bairro Alto.",
+            places: [
+              { name: "Tapa Bucho", near: "Lisbon, Portugal" },
+              { name: "Bairro Alto", near: "Lisbon, Portugal" },
+            ],
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "Sintra, Cabo da Roca, Belém",
+        activities: [
+          { time: "08:00", description: "Breakfast, then the hour-long train to Sintra." },
+          {
+            time: "09:45",
+            description: "Arrive in Sintra, and take bus 434 up to Pena Palace, about 30 minutes.",
+            places: [{ name: "Sintra", near: "Portugal" }],
+          },
+          {
+            time: "11:30",
+            description: "Pena Palace until 13:30. Just the palace is two hours.",
+            places: [{ name: "Pena Palace", near: "Sintra, Portugal" }],
+          },
+          {
+            time: "13:30",
+            description: "Uber to Cabo da Roca, the westernmost point of Europe. Half an hour there.",
+            places: [{ name: "Cabo da Roca", near: "Portugal" }],
+          },
+          {
+            time: "15:30",
+            description:
+              "Jerónimos Monastery and Belém Tower, both closing at 17:00, and Pastéis de Belém, open until 23:00.",
+            places: [
+              { name: "Jerónimos Monastery", near: "Lisbon, Portugal" },
+              { name: "Belém Tower", near: "Lisbon, Portugal" },
+              { name: "Pastéis de Belém", near: "Lisbon, Portugal" },
+            ],
+          },
+          {
+            time: "19:00",
+            description: "Dinner at the Time Out Market.",
+            places: [{ name: "Time Out Market", near: "Lisbon, Portugal" }],
+          },
+          {
+            description:
+              "Red Frog speakeasy afterwards, about 25 minutes' walk. A get-a-drink-and-chill place rather than a night out.",
+            places: [{ name: "Red Frog Speakeasy", near: "Lisbon, Portugal" }],
+          },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "Out Early",
+        activities: [
+          { time: "07:00", description: "Breakfast, then the 33 minute train to the airport." },
+          { time: "10:55", description: "Flight back to London." },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ecuador",
+    title: "Ten Days in Ecuador and the Galápagos",
+    destination: "Ecuador",
+    country: "Ecuador",
+    coords: { lat: -0.7437, lon: -90.3139 },
+    duration: "10 days",
+    season: "March",
+    summary:
+      "A day in Quito, then island-hopping between Santa Cruz and San Cristóbal by ferry, snorkelling everything.",
+    cover: ecuador,
+    gated: false,
+    teaser:
+      "One day at altitude in Quito, then eight in the Galápagos across three stays and two ferries. The tips at the bottom are the part worth reading twice.",
+    tags: ["#Galapagos", "#Snorkelling", "#SeaLions"],
+    notes: [
+      "Costs here are what we paid on this trip, so treat them as a rough shape rather than current prices.",
+    ],
+    highlights: [
+      "Standing on the equator at Mitad del Mundo",
+      "Biking 13 miles to the giant tortoises at La Ruta de la Tortuga",
+      "Tortuga Bay, reached on foot along a mile and a half of paved trail",
+      "The Cerro Tijeretas and Playa Baquerizo hike, given a whole day",
+      "Snorkelling with sea lions at La Lobería",
+    ],
+    days: [
+      {
+        day: "Day One",
+        title: "Quito, and the Equator",
+        activities: [
+          {
+            description: "Pastries and coffee at FANKØR.",
+            places: [{ name: "FANKØR Coffee", near: "Quito, Ecuador" }],
+          },
+          {
+            description:
+              "Forty-five minute Uber to Mitad del Mundo, and two to three hours there. A coffee museum, a beer museum, restaurants, alpacas, parks.",
+            places: [{ name: "Mitad del Mundo", near: "Quito, Ecuador" }],
+          },
+          {
+            description: "Uber to the TelefériQo cable car.",
+            places: [{ name: "TelefériQo", near: "Quito, Ecuador" }],
+          },
+          {
+            description: "Ceviche at Pezbela.",
+            places: [{ name: "Pezbela", near: "Quito, Ecuador" }],
+          },
+          {
+            description: "Old Town Quito, a UNESCO world heritage site, if there is time.",
+            places: [{ name: "Old Town Quito" }],
+          },
+          {
+            time: "20:00",
+            description: "Dinner at Somos.",
+            places: [{ name: "Somos Restaurante", near: "Quito, Ecuador" }],
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "Fly to Santa Cruz",
+        activities: [
+          { description: "An hour to the airport, and two hours for the forms." },
+          {
+            description: "Land and settle in. Get to the hotel at least two hours after landing.",
+            places: [{ name: "Santa Cruz Island", near: "Galápagos" }],
+          },
+          {
+            description: "Drinks at Finch Bay, dinner at Ayora.",
+            places: [
+              { name: "Finch Bay", near: "Puerto Ayora, Galápagos" },
+              { name: "Ayora", near: "Puerto Ayora, Galápagos" },
+            ],
+          },
+          {
+            description: "Santa Cruz pier at night, to see the sharks.",
+            places: [{ name: "Santa Cruz Pier", near: "Puerto Ayora, Galápagos" }],
+          },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "Tortoises by Bike",
+        activities: [
+          {
+            description: "Breakfast at Gelateria.",
+            places: [{ name: "Gelateria", near: "Puerto Ayora, Galápagos" }],
+          },
+          {
+            description:
+              "Rent bikes and ride 13 miles to La Ruta de la Tortuga, a one to two hour tour of the giant tortoises' natural habitat. It closes at 17:30.",
+            places: [{ name: "La Ruta de la Tortuga", near: "Santa Cruz Island, Galápagos" }],
+          },
+          { description: "The lava cave." },
+          {
+            description: "Late lunch at Agave.",
+            places: [{ name: "Agave", near: "Puerto Ayora, Galápagos" }],
+          },
+          {
+            description: "Walk the town, the art galleries, and eat Darwin's chocolate.",
+          },
+          {
+            description: "Dinner at Rock.",
+            places: [{ name: "The Rock", near: "Puerto Ayora, Galápagos" }],
+          },
+        ],
+      },
+      {
+        day: "Day Four",
+        title: "Tortuga Bay, Then the Ferry",
+        activities: [
+          {
+            description:
+              "Tortuga Bay in the morning. Head to the western end of Charles Binford Avenue in Puerto Ayora and follow the flat paved trail about a mile and a half to the entrance. A 45 minute hike, then lounging and snorkelling.",
+            places: [{ name: "Tortuga Bay", near: "Santa Cruz Island, Galápagos" }],
+          },
+          {
+            description: "Lunch at 1835.",
+            places: [{ name: "1835 Coffee Lab", near: "Puerto Ayora, Galápagos" }],
+          },
+          {
+            time: "15:00",
+            description: "Ferry to San Cristóbal, until 18:00. Be at the dock an hour early.",
+            places: [{ name: "San Cristóbal Island", near: "Galápagos" }],
+          },
+          {
+            description: "Happy hour drinks in town, then dinner at Umami.",
+            places: [{ name: "Umami", near: "Puerto Baquerizo Moreno, Galápagos" }],
+          },
+        ],
+      },
+      {
+        day: "Day Five",
+        title: "Cerro Tijeretas, All Day",
+        activities: [
+          {
+            description: "Pastries, coffee and lunch from Kachi Tanta.",
+            places: [{ name: "Kachi Tanta", near: "Puerto Baquerizo Moreno, Galápagos" }],
+          },
+          {
+            description:
+              "The Cerro Tijeretas and Playa Baquerizo hike. Read a map and plan to spend most of the day: there are watering holes, snorkel spots and observation decks, and it is worth exploring every offshoot.",
+            places: [
+              { name: "Cerro Tijeretas", near: "San Cristóbal, Galápagos" },
+              { name: "Playa Baquerizo", near: "San Cristóbal, Galápagos" },
+            ],
+          },
+          {
+            description: "Sunset at Playa Mann as you walk back into town.",
+            places: [{ name: "Playa Mann", near: "Puerto Baquerizo Moreno, Galápagos" }],
+          },
+          {
+            description: "Dinner at Iska Pizza.",
+            places: [{ name: "Iska Pizza", near: "Puerto Baquerizo Moreno, Galápagos" }],
+          },
+          {
+            description:
+              "Go to Galapagos Eco Fishing to pay the rest of the tour deposit and try on wetsuits.",
+          },
+        ],
+      },
+      {
+        day: "Day Six",
+        title: "The 360 Tour",
+        activities: [
+          { description: "360 tour of San Cristóbal." },
+          {
+            description: "Dinner at Giuseppe's.",
+            places: [{ name: "Giuseppe's", near: "Puerto Baquerizo Moreno, Galápagos" }],
+          },
+        ],
+      },
+      {
+        day: "Day Seven",
+        title: "Sea Lions, Then Back to Santa Cruz",
+        activities: [
+          {
+            description:
+              "Coffee and croissants at Ranti Kamak. Locally sourced, absolutely delicious, and you choose how the coffee is brewed.",
+            places: [{ name: "Ranti Kamak", near: "Puerto Baquerizo Moreno, Galápagos" }],
+          },
+          {
+            description: "Taxi to La Lobería, to snorkel and swim with sea lions.",
+            places: [{ name: "La Lobería", near: "San Cristóbal, Galápagos" }],
+          },
+          {
+            description: "Lunch and cheap cocktails at La Pescadería.",
+            places: [{ name: "La Pescadería", near: "Puerto Baquerizo Moreno, Galápagos" }],
+          },
+          { time: "15:00", description: "Ferry back, until 18:00." },
+          {
+            description: "Dinner at The Point, where you can see rays and sharks from the pier.",
+            places: [{ name: "The Point", near: "Puerto Ayora, Galápagos" }],
+          },
+        ],
+      },
+      {
+        day: "Day Eight",
+        title: "Kayaks and One Last Swim",
+        activities: [
+          {
+            description: "Coffee and breakfast at Island Coffee.",
+            places: [{ name: "Island Coffee", near: "Puerto Ayora, Galápagos" }],
+          },
+          {
+            description: "Playa Los Alemanes, for a swim and a snorkel.",
+            places: [{ name: "Playa Los Alemanes", near: "Santa Cruz Island, Galápagos" }],
+          },
+          { description: "Rent kayaks next to Finch Bay." },
+          {
+            description: "Las Grietas. You can skip this one, honestly.",
+            places: [{ name: "Las Grietas", near: "Santa Cruz Island, Galápagos" }],
+          },
+          {
+            description: "Lunch at Oy. Highly recommend.",
+            places: [{ name: "Oy", near: "Puerto Ayora, Galápagos" }],
+          },
+          {
+            description: "Drinks at Bahia Mar, dinner at Midori.",
+            places: [
+              { name: "Bahia Mar", near: "Puerto Ayora, Galápagos" },
+              { name: "Midori", near: "Puerto Ayora, Galápagos" },
+            ],
+          },
+        ],
+      },
+      {
+        day: "Day Nine",
+        title: "Fly Out",
+        activities: [{ description: "Fly out." }],
+      },
+    ],
+    extras: [
+      {
+        title: "Tips and tricks",
+        items: [
+          "In Quito, go to the TelefériQo first thing. Quito is known for afternoon fog.",
+          "Arrive at both airports with plenty of time. Quito and the Galápagos airports are each about an hour from where you would stay.",
+          "There is paperwork and security at Quito airport just to enter the Galápagos, so leave extra time in case of crowds.",
+          "You need $20 for the transit card, and you have to get it BEFORE security at Quito airport.",
+          "On arrival in the Galápagos you pay a national park entry fee.",
+          "To get from the airport to civilisation everyone boards a $5 bus to a $1 taxi, then it is your choice: a $25 taxi to town or another $5 bus. We took the bus and it was easy.",
+          "We packed reef safe sunscreen because Reddit told us to. Nobody thoroughly checked our bags.",
+          "Bring lots of sunscreen, sun shirts, hats, sunglasses and linen. I am serious, the sun is so strong and sunscreen is extremely expensive there.",
+          "Bring an underwater camera for the snorkelling.",
+          "Buy your own snorkel gear before you go and carry it everywhere. You stumble on gorgeous spots and you always want to be ready. Rentals exist but you cannot predict the hours or the cleanliness.",
+          "Respect the animals and stay two metres away. There have been incidents of sea lions biting tourists who crowd them.",
+          "Go with the flow. Things close unexpectedly and restaurants run out of what is on the menu.",
+          "Most restaurants take card, but carry petty cash for rentals and entrance fees. Some beaches charge, others are free.",
+          "Always have a photo of your passport handy. You have to register at some of the beaches.",
+          "Negotiate. Some of the bike rentals wanted double what we ended up paying.",
+          "Taxis in town are a couple of dollars, so carry $1 coins.",
+          "Water taxis are $1 each, even if you go one metre.",
+          "Wear shoes you are happy to get wet and walk through mud in.",
+          "Dress casually. Everyone is in athletic wear or casual linen, even at the fancier restaurants.",
+          "Arrive at the ferry an hour early and hunt down your boat's captain. It is disorganised, and we almost got left behind.",
+          "Bring reusable water bottles. You cannot drink the tap water, so most rooms have a filter you will want to fill from.",
+          "Every Airbnb was generous about letting us leave luggage after check out. Just ask.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "japan",
+    title: "Twelve Days in Japan",
+    destination: "Japan",
+    country: "Japan",
+    coords: { lat: 35.6762, lon: 139.6503 },
+    duration: "12 days",
+    season: "Late Spring",
+    summary:
+      "Tokyo, Kyoto and Osaka, organised almost entirely around what and where to eat next.",
+    cover: japan,
+    gated: false,
+    teaser:
+      "Four days in Tokyo, three in Kyoto, two in Osaka, then back to Tokyo. Standing sushi bars, a 5am tuna auction, Golden Gai, and a lot of walking between meals.",
+    tags: ["#GoldenGai", "#Kyoto", "#Tsukiji"],
+    highlights: [
+      "The Toyosu and Tsukiji tuna auction, starting at 05:00",
+      "Golden Gai and Omoide Yokocho on the first night",
+      "The Arashiyama monkey park and bamboo grove",
+      "Feeding the deer at Nara on the way to Osaka",
+      "Go-karting through Shibuya",
+    ],
+    days: [
+      {
+        day: "Day One",
+        title: "Land, and Straight Into Shinjuku",
+        activities: [
+          { time: "16:00", description: "Land." },
+          {
+            description: "Dinner, drinks and a night out in Shinjuku.",
+            places: [
+              { name: "Godzilla Head", near: "Shinjuku, Tokyo" },
+              { name: "Udon Shin", near: "Tokyo, Japan" },
+              { name: "Uogashi Nihon-Ichi", near: "Tokyo, Japan", note: "Standing sushi bar." },
+              { name: "Omoide Yokocho", near: "Shinjuku, Tokyo", note: "Memory Lane. Food stalls." },
+              { name: "Golden Gai", near: "Shinjuku, Tokyo", note: "All the tiny bars, for hopping around." },
+              { name: "The Open Book", near: "Shinjuku, Tokyo", note: "Order lemon sours." },
+              { name: "Albatross", near: "Shinjuku, Tokyo" },
+              { name: "Deathmatch in Hell", near: "Shinjuku, Tokyo", note: "Death metal bar." },
+              { name: "Nikuto", near: "Shinjuku, Tokyo", note: "Beef and chicken over charcoal. The kimchi beef." },
+              { name: "One Coin Bar Champion", near: "Shinjuku, Tokyo", note: "Karaoke." },
+              { name: "Ramen Nagi", near: "Shinjuku, Tokyo", note: "Tokusei niboshi ramen. Most people eat ramen as late night drunk food, so go here last. It is on the second floor." },
+            ],
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "The Tuna Auction, Then Ginza",
+        activities: [
+          {
+            time: "05:00",
+            description: "Toyosu and Tsukiji market with the tuna auction, until 09:00. Sushi for breakfast.",
+            places: [
+              { name: "Toyosu Market", near: "Tokyo, Japan" },
+              { name: "Tsukiji Outer Market", near: "Tokyo, Japan" },
+            ],
+          },
+          {
+            time: "11:00",
+            description: "Koffee Mameya Kakeru, omakase-style coffee.",
+            places: [{ name: "Koffee Mameya Kakeru", near: "Tokyo, Japan" }],
+          },
+          {
+            description: "Get a ticket from the Onitsuka pop-up, then shop Ginza Six.",
+            places: [{ name: "Ginza Six", near: "Tokyo, Japan" }],
+          },
+          {
+            description: "Truffle shoyu ramen at Ginza Kagari.",
+            places: [{ name: "Ginza Kagari", near: "Tokyo, Japan" }],
+          },
+          {
+            time: "17:45",
+            description: "Appetisers at Kan Agari Hanare in Shinjuku, then bar and snack hop.",
+          },
+          {
+            description:
+              "Walk into Star Bar. Bar High Five, Tender Bar and Ginza Music Bar are the alternatives.",
+            places: [
+              { name: "Star Bar Ginza", near: "Tokyo, Japan" },
+              { name: "Bar High Five", near: "Ginza, Tokyo" },
+              { name: "Tender Bar", near: "Ginza, Tokyo" },
+              { name: "Ginza Music Bar", near: "Tokyo, Japan" },
+            ],
+          },
+          {
+            description: "Ginza Stand sandwiches for a late night snack.",
+            places: [{ name: "Ginza Stand", near: "Tokyo, Japan" }],
+          },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "Asakusa",
+        activities: [
+          {
+            time: "09:00",
+            description: "Kappabashi kitchen street until 11:00. Opening times vary, so leave room to come back.",
+            places: [{ name: "Kappabashi Street", near: "Tokyo, Japan" }],
+          },
+          {
+            time: "11:00",
+            description: "Hat Coffee, for the 3D lattes.",
+            places: [{ name: "Hat Coffee", near: "Tokyo, Japan" }],
+          },
+          {
+            time: "11:30",
+            description: "Savoy Kaminarimon, open 11:30 to 15:00. Supposed to be the best.",
+            places: [{ name: "Savoy Kaminarimon", near: "Tokyo, Japan" }],
+          },
+          {
+            description: "Nakamise shopping street, and Harry's hedgehog cafe.",
+            places: [{ name: "Nakamise Shopping Street", near: "Asakusa, Tokyo" }],
+          },
+          {
+            description: "More food, if there is time.",
+            places: [
+              { name: "Asakusa Sarashina Horii", near: "Tokyo, Japan", note: "Soba." },
+              { name: "Tonkatsu Oribe", near: "Tokyo, Japan" },
+              { name: "Sushi Dokoro Suzu", near: "Tokyo, Japan" },
+            ],
+          },
+          {
+            description: "Ueno Park, if it fits: peony garden, pond, zoo, museums.",
+            places: [{ name: "Ueno Park", near: "Tokyo, Japan" }],
+          },
+        ],
+      },
+      {
+        day: "Day Four",
+        title: "Train to Kyoto, and Arashiyama",
+        activities: [
+          { time: "09:00", description: "Train to Kyoto.", places: [{ name: "Kyoto" }] },
+          {
+            description:
+              "Arashiyama Monkey Park Iwatayama, then a fifteen minute walk to the bamboo grove. Two to three hours for both.",
+            places: [
+              { name: "Monkey Park Iwatayama", near: "Kyoto, Japan" },
+              { name: "Arashiyama Bamboo Grove", near: "Kyoto, Japan" },
+            ],
+          },
+          {
+            description: "% Arabica, for the views and the beans.",
+            places: [{ name: "% Arabica Arashiyama", near: "Kyoto, Japan" }],
+          },
+          {
+            description: "Lunch at Tempura Koisus.",
+            places: [{ name: "Tempura Koisus", near: "Kyoto, Japan" }],
+          },
+          {
+            time: "17:00",
+            description:
+              "Pontocho Alley, six blocks of restaurants and bars to hop. Start early, there are no reservations.",
+            places: [
+              { name: "Pontocho Alley", near: "Kyoto, Japan" },
+              { name: "Manten Kushiyaki", near: "Kyoto, Japan" },
+              { name: "Gyukatsu Kyoto Katsugyu", near: "Kyoto, Japan", note: "The original branch." },
+              { name: "Hello Dolly", near: "Kyoto, Japan", note: "Jazz bar." },
+            ],
+          },
+        ],
+      },
+      {
+        day: "Day Five",
+        title: "Fushimi Inari, Nishiki, Gion",
+        activities: [
+          {
+            description: "Le Labo cafe. The best matcha of the trip.",
+            places: [{ name: "Le Labo Kyoto", near: "Kyoto, Japan" }],
+          },
+          {
+            description: "Fushimi Inari Temple.",
+            places: [{ name: "Fushimi Inari Taisha", near: "Kyoto, Japan" }],
+          },
+          {
+            description: "Nishiki Market, and lunch in it. Aritsugu is the best knife shop.",
+            places: [
+              { name: "Nishiki Market", near: "Kyoto, Japan" },
+              { name: "Aritsugu", near: "Kyoto, Japan" },
+            ],
+          },
+          {
+            description: "Walk through Gion, the geisha district.",
+            places: [{ name: "Gion", near: "Kyoto, Japan" }],
+          },
+          {
+            description: "Sweet potato ice cream at Imo Pippi.",
+            places: [{ name: "Imo Pippi", near: "Kyoto, Japan" }],
+          },
+          {
+            description: "Other food worth queueing for.",
+            places: [
+              { name: "Gion Kitagawa Hanbei Honten", near: "Kyoto, Japan", note: "Matcha desserts. Needs a reservation." },
+              { name: "Motoi Gyoza", near: "Kyoto, Japan", note: "Walk in only." },
+              { name: "Men-ya Inoichi", near: "Kyoto, Japan", note: "Bib gourmand ramen. Queue at 11:00 for a ticket." },
+            ],
+          },
+          {
+            description: "If you are not templed out, Kiyomizu-dera or Kinkaku-ji.",
+            places: [
+              { name: "Kiyomizu-dera", near: "Kyoto, Japan" },
+              { name: "Kinkaku-ji", near: "Kyoto, Japan" },
+            ],
+          },
+          {
+            time: "18:30",
+            description: "Drinks at K36 Rooftop.",
+            places: [{ name: "K36 Rooftop", near: "Kyoto, Japan" }],
+          },
+          {
+            time: "20:30",
+            description: "Dinner at Mouyria Gion, then drinks at Bee's Knees.",
+            places: [
+              { name: "Mouriya Gion", near: "Kyoto, Japan" },
+              { name: "Bee's Knees", near: "Kyoto, Japan" },
+            ],
+          },
+        ],
+      },
+      {
+        day: "Day Six",
+        title: "The Philosopher's Path",
+        activities: [
+          {
+            description:
+              "Blue Bottle on the Philosopher's Path, then walk the path in reverse. Thirty minutes, with shops and cafes along it.",
+            places: [
+              { name: "Blue Bottle Coffee Kyoto", near: "Kyoto, Japan" },
+              { name: "Philosopher's Path", near: "Kyoto, Japan" },
+            ],
+          },
+          {
+            description: "The afternoon freed up, so I got a massage and a haircut.",
+          },
+        ],
+      },
+      {
+        day: "Day Seven",
+        title: "Nara, Then Osaka",
+        activities: [
+          {
+            time: "08:00",
+            description: "Coffee and pastries at Amam Dacotan, which opens at 08:00.",
+            places: [{ name: "Amam Dacotan", near: "Kyoto, Japan" }],
+          },
+          {
+            description: "Thirty minute train to Nara.",
+            places: [{ name: "Nara", near: "Japan" }],
+          },
+          {
+            description:
+              "Nakatanidou for the famous mochi and the pounding demonstration, roughly every fifteen to twenty minutes. You will see the crowd form.",
+            places: [{ name: "Nakatanidou", near: "Nara, Japan" }],
+          },
+          {
+            description: "Nara Park, to feed the wild deer, then Todai-ji and the Great Buddha Hall.",
+            places: [
+              { name: "Nara Park", near: "Nara, Japan" },
+              { name: "Todai-ji", near: "Nara, Japan" },
+            ],
+          },
+          {
+            description: "Afternoon pick-me-up at Salon Naramachi, a traditional green tea house.",
+            places: [{ name: "Salon Naramachi", near: "Nara, Japan" }],
+          },
+          { time: "14:00", description: "Hour-long train on to Osaka.", places: [{ name: "Osaka" }] },
+          {
+            time: "17:30",
+            description: "Walk into Alto Tritone when it opens. It sells out quickly.",
+            places: [{ name: "Alto Tritone", near: "Osaka, Japan" }],
+          },
+          {
+            description: "Post-dinner drinks at Bar K, or Bar Juniper.",
+            places: [
+              { name: "Bar K", near: "Osaka, Japan" },
+              { name: "Bar Juniper", near: "Osaka, Japan" },
+            ],
+          },
+        ],
+      },
+      {
+        day: "Day Eight",
+        title: "Osaka",
+        activities: [
+          {
+            description: "Walk the castle grounds, if you are up early enough to walk there.",
+            places: [{ name: "Osaka Castle" }],
+          },
+          {
+            description: "Amerikamura, for shopping.",
+            places: [{ name: "Amerikamura", near: "Osaka, Japan" }],
+          },
+          {
+            description:
+              "Kuromon Market, stopping at Maguroya Kurogin, where you pick your tuna and tell him how you want it.",
+            places: [
+              { name: "Kuromon Ichiba Market", near: "Osaka, Japan" },
+              { name: "Maguroya Kurogin", near: "Osaka, Japan" },
+            ],
+          },
+          {
+            description: "Osaka Aquarium. Two to four hours.",
+            places: [{ name: "Osaka Aquarium Kaiyukan" }],
+          },
+          {
+            description: "Shopping. Supposedly the best luxury prices in Japan.",
+            places: [
+              { name: "QOO", near: "Osaka, Japan" },
+              { name: "Brand Jungle", near: "Osaka, Japan" },
+            ],
+          },
+          {
+            description:
+              "Dotonbori at night, stumbling into dinner, and a picture with the Glico running man.",
+            places: [{ name: "Dotonbori", near: "Osaka, Japan" }],
+          },
+          {
+            description: "Drinks at Nayuta, before or after dinner.",
+            places: [{ name: "Nayuta", near: "Osaka, Japan" }],
+          },
+        ],
+      },
+      {
+        day: "Day Nine",
+        title: "Back Toward Tokyo",
+        activities: [
+          { description: "Namba theatre, and breakfast at My Neighbor." },
+          {
+            description:
+              "We went back to Kyoto for the day for more Le Labo matcha ice cream and curry, and one more temple.",
+          },
+          {
+            description: "Dinner at Tsujita, Shibuya Fukuras.",
+            places: [{ name: "Tsujita Shibuya", near: "Tokyo, Japan" }],
+          },
+        ],
+      },
+      {
+        day: "Day Ten",
+        title: "Harajuku, Shibuya, Go-Karting",
+        activities: [
+          {
+            time: "10:00",
+            description: "Walk into Gyukatsu Motomura Shibuya when it opens.",
+            places: [{ name: "Gyukatsu Motomura Shibuya", near: "Tokyo, Japan" }],
+          },
+          {
+            description: "Yoyogi Park and the Meiji Shrine.",
+            places: [
+              { name: "Yoyogi Park", near: "Tokyo, Japan" },
+              { name: "Meiji Shrine", near: "Tokyo, Japan" },
+            ],
+          },
+          { description: "Tokyo Pride." },
+          {
+            description: "Lunch at Sen Sushi.",
+            places: [{ name: "Sen Sushi", near: "Tokyo, Japan" }],
+          },
+          {
+            description: "Harajuku shopping.",
+            places: [
+              { name: "The Real McCoy's", near: "Tokyo, Japan", note: "Men's americana." },
+              { name: "Takeshita Street", near: "Tokyo, Japan", note: "Quirky shops, crepes." },
+            ],
+          },
+          {
+            description: "Shibuya crossing, then Shibuya shopping.",
+            places: [
+              { name: "Shibuya Crossing", near: "Tokyo, Japan" },
+              { name: "Studio D'Artisan Tokyo", near: "Tokyo, Japan", note: "Denim." },
+              { name: "The Flat Head", near: "Tokyo, Japan", note: "Denim." },
+              { name: "Forget Me Nots", near: "Tokyo, Japan", note: "Women's clothing." },
+              { name: "CAID", near: "Tokyo, Japan" },
+            ],
+          },
+          { time: "20:00", description: "Go-karting in Shibuya. Be there at 19:30." },
+          {
+            description: "Drinks at SG Club.",
+            places: [{ name: "SG Club", near: "Tokyo, Japan" }],
+          },
+        ],
+      },
+      {
+        day: "Day Eleven",
+        title: "Ebisu, and a Baseball Game",
+        activities: [
+          {
+            description:
+              "Free morning. We went back to Tsukiji and Ginza to get our shoes embroidered. The Imperial Palace would fit here too.",
+            places: [{ name: "Imperial Palace", near: "Tokyo, Japan" }],
+          },
+          {
+            description: "Baseball game at the Tokyo Dome.",
+            places: [{ name: "Tokyo Dome" }],
+          },
+          {
+            description: "Ebisu in the evening.",
+            places: [
+              { name: "Yebisu Brewery", near: "Tokyo, Japan" },
+              { name: "Udon Shodai", near: "Ebisu, Tokyo" },
+              { name: "Bar Trench", near: "Ebisu, Tokyo" },
+              { name: "A10", near: "Ebisu, Tokyo" },
+              { name: "Janai Coffee", near: "Ebisu, Tokyo" },
+            ],
+          },
+        ],
+      },
+      {
+        day: "Day Twelve",
+        title: "Fly Out",
+        activities: [{ time: "09:55", description: "Flight out." }],
+      },
+    ],
+  },
+  {
+    slug: "mexico-city",
+    title: "Four Days in Mexico City",
+    destination: "Mexico City",
+    country: "Mexico",
+    coords: { lat: 19.4326, lon: -99.1332 },
+    duration: "4 days",
+    season: "January",
+    summary:
+      "A taco crawl, Rosetta, and a free walking tour of the historic centre, at altitude.",
+    cover: mexicoCity,
+    gated: false,
+    teaser:
+      "Four days, one of which is given over entirely to tacos. The first day is deliberately slow while you get used to the altitude.",
+    tags: ["#Tacos", "#Rosetta", "#Roma"],
+    notes: [
+      "Mid 60s to low 70s during the day and high 50s to low 60s at night, so bring layers.",
+    ],
+    highlights: [
+      "A taco crawl with a must-eat list and an if-still-hungry list",
+      "Dinner at Rosetta, and pastries from its bakery the night before",
+      "Chapultepec, twice the size of Central Park",
+      "A free walking tour of the historic centre",
+      "A mezcal mixology class to finish",
+    ],
+    days: [
+      {
+        day: "Arrival",
+        title: "Land Late",
+        activities: [
+          { time: "16:52", description: "Flight out." },
+          { time: "22:00", description: "Land, check in, sleep." },
+        ],
+      },
+      {
+        day: "Day One",
+        title: "Eat, and Get Used to the Altitude",
+        activities: [
+          {
+            description: "Wake up at leisure and get coffee and pastries, maybe at Quentin Cafe.",
+            places: [{ name: "Quentin Cafe", near: "Mexico City" }],
+          },
+          {
+            time: "12:00",
+            description: "Museo Soumaya. Free, and very good.",
+            places: [{ name: "Museo Soumaya", near: "Mexico City" }],
+          },
+          {
+            time: "14:00",
+            description: "Lunch at Entremar, the sister restaurant to the famous seafood one, same menu.",
+            places: [{ name: "Entremar", near: "Mexico City" }],
+          },
+          {
+            time: "19:00",
+            description:
+              "Pick up pastries at Panadería Rosetta. Snack on them or save them for the morning.",
+            places: [{ name: "Panadería Rosetta", near: "Mexico City" }],
+          },
+          {
+            time: "19:30",
+            description: "Drinks at Handshake.",
+            places: [{ name: "Handshake Speakeasy", near: "Mexico City" }],
+          },
+          {
+            time: "21:30",
+            description: "Dinner at Rosetta, one of the World's 50 Best.",
+            places: [{ name: "Rosetta", near: "Mexico City" }],
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "Roma, Chapultepec, and Jazz",
+        activities: [
+          {
+            description: "Walk through Parque México, then coffee at Odette.",
+            places: [
+              { name: "Parque México", near: "Mexico City" },
+              { name: "Odette", near: "Mexico City" },
+            ],
+          },
+          {
+            time: "10:00",
+            description:
+              "Brunch at Expendio de Maíz Sin Nombre. There is no menu, they just make you whatever is fresh until you stop being hungry.",
+            places: [{ name: "Expendio de Maiz Sin Nombre", near: "Mexico City" }],
+          },
+          {
+            description: "Walk the street art in Roma.",
+            places: [{ name: "Colonia Roma", near: "Mexico City" }],
+          },
+          {
+            description:
+              "Chapultepec on foot or by bike. It is twice the size of Central Park, with a free zoo and a castle.",
+            places: [{ name: "Chapultepec Park", near: "Mexico City" }],
+          },
+          {
+            time: "16:45",
+            description: "Get ready at the hotel, or drinks at Tlecān. Walk in.",
+            places: [{ name: "Tlecan", near: "Mexico City" }],
+          },
+          {
+            time: "19:00",
+            description: "Dinner at Máximo Bistrot.",
+            places: [{ name: "Maximo Bistrot", near: "Mexico City" }],
+          },
+          {
+            time: "21:00",
+            description:
+              "Casa Franca, a jazz bar. Reserve over WhatsApp between 11:00 and 17:00 the same day. Small entry fee.",
+            places: [{ name: "Casa Franca", near: "Mexico City" }],
+          },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "The Taco Crawl",
+        activities: [
+          { description: "Coffee, and relax at a cafe first. You will need the room." },
+          {
+            description: "The must-eat list, in order.",
+            places: [
+              { name: "Jenni's Quesadillas", near: "Mexico City" },
+              { name: "Taqueria Orinoco", near: "Mexico City" },
+              { name: "El Pescadito", near: "Mexico City", note: "Famous for shrimp tacos." },
+            ],
+          },
+          {
+            description: "If still hungry, keep going.",
+            places: [
+              { name: "Tacos del Juan", near: "Mexico City" },
+              { name: "El Tizoncito", near: "Mexico City", note: "Birthplace of al pastor." },
+              { name: "Taqueria El Turix", near: "Mexico City" },
+              { name: "Siembra Taqueria", near: "Mexico City" },
+            ],
+          },
+          {
+            description: "Stop into the Palacio Postal for a picture.",
+            places: [{ name: "Palacio Postal", near: "Mexico City" }],
+          },
+          {
+            description: "Churros at El Moro, famous since 1935. The original is in the historic centre.",
+            places: [{ name: "Churreria El Moro", near: "Mexico City" }],
+          },
+          {
+            time: "14:30",
+            description:
+              "Free walking tour of the historic centre, two and a half hours, including the Palacio de Bellas Artes. Just tip the guide.",
+            places: [
+              { name: "Palacio de Bellas Artes", near: "Mexico City" },
+              { name: "Alameda Central", near: "Mexico City" },
+            ],
+          },
+          {
+            time: "17:00",
+            description: "A drink and a bite at Hanky Panky.",
+            places: [{ name: "Hanky Panky Cocktail Bar", near: "Mexico City" }],
+          },
+          { time: "20:00", description: "Mezcal mixology masterclass." },
+        ],
+      },
+      {
+        day: "Day Four",
+        title: "La Condesa, Then Home",
+        activities: [
+          { description: "Wake up at leisure. You will need the rest after that weekend." },
+          { description: "Brunch." },
+          {
+            description: "Casually explore La Condesa: vintage shops and design stores.",
+            places: [{ name: "La Condesa", near: "Mexico City" }],
+          },
+          { time: "13:00", description: "Check out." },
+          { time: "13:15", description: "Leave for the airport, about twenty minutes." },
+          { time: "15:35", description: "Flight out." },
+        ],
       },
     ],
   },

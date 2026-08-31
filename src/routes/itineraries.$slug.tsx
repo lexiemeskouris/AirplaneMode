@@ -163,8 +163,21 @@ function ItineraryDetail() {
               {group.note && (
                 <p className="mt-3 leading-relaxed text-foreground/90">{group.note}</p>
               )}
+              {group.items && group.items.length > 0 && (
+                <ul className="mt-6 space-y-3">
+                  {group.items.map((item) => (
+                    <li key={item} className="flex gap-3 leading-relaxed text-foreground/90">
+                      <span
+                        aria-hidden
+                        className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary"
+                      />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              )}
               <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-                {group.places.map((place) => (
+                {(group.places ?? []).map((place) => (
                   <li
                     key={place.name}
                     className="rounded-2xl border border-border bg-card px-5 py-4 leading-snug"
