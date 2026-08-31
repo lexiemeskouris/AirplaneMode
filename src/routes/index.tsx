@@ -195,7 +195,13 @@ function Index() {
             />
           ))}
           {guides.map((g) => {
-            const spots = g.sections.reduce((n, s) => n + (s.places?.length ?? 0), 0);
+            const spots = g.sections.reduce(
+              (n, s) =>
+                n +
+                (s.places?.length ?? 0) +
+                (s.activities?.reduce((m, a) => m + (a.places?.length ?? 0), 0) ?? 0),
+              0,
+            );
             const tips = g.sections.reduce((n, s) => n + (s.items?.length ?? 0), 0);
             // Count whichever the page is actually made of: "2 SPOTS" would
             // undersell a guide that is sixty pieces of advice.

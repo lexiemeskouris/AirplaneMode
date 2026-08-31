@@ -55,7 +55,13 @@ function AllPage() {
       coords: it.coords,
     })),
     ...guides.map((g) => {
-      const spots = g.sections.reduce((n, s) => n + (s.places?.length ?? 0), 0);
+      const spots = g.sections.reduce(
+        (n, s) =>
+          n +
+          (s.places?.length ?? 0) +
+          (s.activities?.reduce((m, a) => m + (a.places?.length ?? 0), 0) ?? 0),
+        0,
+      );
       const tips = g.sections.reduce((n, s) => n + (s.items?.length ?? 0), 0);
       return {
         kind: "recommendation" as const,

@@ -1,4 +1,4 @@
-import type { Place } from "./itineraries";
+import type { Activity, Place } from "./itineraries";
 import vienna from "@/assets/vienna.svg";
 import kilimanjaro from "@/assets/kilimanjaro.svg";
 import barcelona from "@/assets/barcelona.svg";
@@ -9,6 +9,8 @@ import bordeaux from "@/assets/bordeaux.svg";
 import nice from "@/assets/nice.svg";
 import charleston from "@/assets/charleston.svg";
 import dover from "@/assets/dover.svg";
+import london from "@/assets/london.svg";
+import cotswolds from "@/assets/cotswolds.svg";
 
 /**
  * A city I have opinions about but no itinerary for. Same links and the same
@@ -22,6 +24,11 @@ export type GuideSection = {
   places?: Place[];
   /** Lines that are not a place you can pin on a map. */
   items?: string[];
+  /**
+   * A timed route through the city, for a place where the useful unit is a
+   * day rather than a list. Rendered exactly like an itinerary's day.
+   */
+  activities?: Activity[];
   /** Renders as a warning rather than a recommendation. */
   avoid?: boolean;
 };
@@ -604,6 +611,506 @@ export const guides: Guide[] = [
             near: "Vermont",
             note: "Cute town nearby, with a farmers' market and such.",
           },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "london",
+    title: "London Day Routes",
+    destination: "London",
+    country: "England",
+    coords: { lat: 51.5074, lon: -0.1278 },
+    cover: london,
+    label: "CITY",
+    summary:
+      "Nine routes through London, each built for someone visiting for a day or two, plus where to shop and where to get a roast.",
+    teaser:
+      "I live here, so these are the days I have actually walked people through. Take whichever fits the day you have. A few only work on a Sunday, and those say so.",
+    tags: ["#Marylebone", "#BrickLane", "#SundayRoast"],
+    notes: [
+      "Each route below is a self-contained day. They are not meant to be done in order, so pick the one that fits the day you have and the part of town you are staying in.",
+    ],
+    sections: [
+      {
+        title: "Westminster, then a night in Notting Hill",
+        activities: [
+          { time: "08:30", description: "Arrive, drop bags, grab coffee." },
+          {
+            time: "09:30",
+            description: "Easy breakfast near Westminster.",
+            places: [{ name: "Westminster" }],
+          },
+          {
+            time: "13:00",
+            description: "Churchill War Rooms, until 15:15.",
+            places: [{ name: "Churchill War Rooms" }],
+          },
+          {
+            time: "15:15",
+            description:
+              "Stroll through St James's Park, then fish and chips at The Mayfair Chippy.",
+            places: [{ name: "St James's Park" }, { name: "The Mayfair Chippy" }],
+          },
+          { time: "17:00", description: "Rest, shower, reset." },
+          {
+            time: "19:30",
+            description: "Dinner at The Pelican.",
+            places: [{ name: "The Pelican" }],
+          },
+          {
+            description:
+              "Check the queue at The Fat Badger, and drink at Frankie's or the Golborne Deli & Wine Store while you wait.",
+            places: [
+              { name: "The Fat Badger" },
+              { name: "Frankie's" },
+              { name: "Golborne Deli & Wine Store" },
+            ],
+          },
+          { description: "Night out at The Fat Badger. Live music, cute guys." },
+          {
+            description: "Alternative: The Westbourne.",
+            places: [{ name: "The Westbourne" }],
+          },
+        ],
+      },
+      {
+        title: "Marylebone, the canal, and Clerkenwell",
+        activities: [
+          {
+            description: "At leisure. Walk to Marylebone and have brunch.",
+            places: [
+              { name: "Marylebone" },
+              { name: "WatchHouse" },
+              { name: "Abuelo" },
+              { name: "Chiltern Street Deli" },
+            ],
+          },
+          {
+            description: "Shop on Marylebone High Street.",
+            places: [{ name: "Marylebone High Street" }],
+          },
+          {
+            description:
+              "An hour along Regent's Canal, entering at Little Venice and walking toward Maida Vale.",
+            places: [
+              { name: "Regent's Canal" },
+              { name: "Little Venice" },
+              { name: "Maida Vale" },
+            ],
+          },
+          { description: "Get ready for dinner." },
+          {
+            description: "Head to Clerkenwell for wine and games at Cafe Kick.",
+            places: [{ name: "Clerkenwell" }, { name: "Cafe Kick" }],
+          },
+          {
+            description: "Walk through Exmouth Market.",
+            places: [{ name: "Exmouth Market" }],
+          },
+          {
+            time: "18:45",
+            description: "Dinner at Shawarma Bar, in Clerkenwell.",
+            places: [{ name: "Shawarma Bar" }],
+          },
+          {
+            description: "Drinks and a night out nearby.",
+            places: [
+              { name: "Nightjar", note: "The Farringdon one. Live music, late." },
+              { name: "The Gibson", note: "Classy cocktails." },
+              { name: "Coin Laundry", note: "Casual, late." },
+            ],
+          },
+        ],
+      },
+      {
+        title: "A Sunday in East London",
+        note: "Columbia Road Flower Market only happens on Sundays, so this one really does have to be a Sunday.",
+        activities: [
+          {
+            time: "11:00",
+            description: "Coffee and a pastry in St John's Wood.",
+            places: [{ name: "St John's Wood" }],
+          },
+          {
+            time: "11:30",
+            description: "Head to Hackney Central, arriving around 12:15.",
+            places: [{ name: "Hackney Central" }],
+          },
+          {
+            time: "12:15",
+            description: "Hackney City Farm.",
+            places: [{ name: "Hackney City Farm" }],
+          },
+          {
+            time: "13:30",
+            description: "Walk over to Columbia Road Flower Market and wander it.",
+            places: [{ name: "Columbia Road Flower Market" }],
+          },
+          {
+            time: "14:15",
+            description: "Sunday roast at The Royal Oak.",
+            places: [{ name: "The Royal Oak" }],
+          },
+          {
+            time: "16:00",
+            description: "Browse Brick Lane Vintage Market.",
+            places: [{ name: "Brick Lane Vintage Market" }],
+          },
+          { time: "18:00", description: "Back to St John's Wood." },
+          {
+            time: "19:00",
+            description: "A cosy Sunday night in, or drinks at The Elgin with live music.",
+            places: [{ name: "The Elgin" }],
+          },
+        ],
+      },
+      {
+        title: "Little Venice to Notting Hill, then Soho",
+        activities: [
+          {
+            time: "06:45",
+            description: "Land at Heathrow.",
+            places: [{ name: "Heathrow Airport" }],
+          },
+          { time: "09:00", description: "Arrive, shower and change." },
+          {
+            description: "Walk Little Venice, along Regent's Canal and into Notting Hill.",
+            places: [
+              { name: "Little Venice" },
+              { name: "Regent's Canal" },
+              { name: "Notting Hill" },
+            ],
+          },
+          { description: "Walk through Hyde Park.", places: [{ name: "Hyde Park" }] },
+          {
+            time: "13:30",
+            description: "Afternoon tea at Candella.",
+            places: [{ name: "Candella Tea Room" }],
+          },
+          {
+            time: "16:30",
+            description:
+              "Nap and get ready for dinner. Trust me, you will need it. Every single guest crashes around 15:30.",
+          },
+          { time: "18:45", description: "Leave for drinks." },
+          {
+            time: "19:45",
+            description: "Drinks at Seed Library.",
+            places: [{ name: "Seed Library" }],
+          },
+          { time: "20:50", description: "Walk to Lagana." },
+          {
+            time: "21:00",
+            description: "Dinner at Lagana.",
+            places: [{ name: "Lagana" }],
+          },
+          {
+            time: "23:00",
+            description: "Bars if you are up for it, otherwise home. Early start tomorrow.",
+          },
+        ],
+      },
+      {
+        title: "Primrose Hill, pilates, and a tattoo",
+        activities: [
+          { time: "10:00", description: "Wake up." },
+          { time: "10:30", description: "Coffee on the high street." },
+          {
+            time: "11:00",
+            description: "Walk through Primrose Hill to get to pilates.",
+            places: [{ name: "Primrose Hill" }],
+          },
+          {
+            time: "12:00",
+            description: "Burn at Reformcore.",
+            places: [{ name: "Reformcore" }],
+          },
+          { time: "13:00", description: "Brunch at Arvo.", places: [{ name: "Arvo" }] },
+          { time: "14:30", description: "Home to get ready for the evening." },
+          {
+            time: "16:00",
+            description:
+              "Drinks at The Connaught Bar or Dukes. Two martinis maximum, we will die.",
+            places: [{ name: "The Connaught Bar" }, { name: "Dukes Bar" }],
+          },
+          { time: "19:00", description: "Tattoo, until 23:00." },
+          {
+            time: "23:00",
+            description: "Tattoo after party at Scala.",
+            places: [{ name: "Scala" }],
+          },
+        ],
+      },
+      {
+        title: "A Marylebone Sunday",
+        note: "The farmers' market is Sundays only.",
+        activities: [
+          {
+            description: "Marylebone Farmers Market, then Marylebone High Street.",
+            places: [{ name: "Marylebone Farmers Market" }, { name: "Marylebone High Street" }],
+          },
+          {
+            time: "15:00",
+            description: "Sunday roast at The George.",
+            places: [{ name: "The George" }],
+          },
+        ],
+      },
+      {
+        title: "Brick Lane and Shoreditch",
+        activities: [
+          {
+            description: "Leave St John's Wood for Brick Lane.",
+            places: [{ name: "Brick Lane" }],
+          },
+          {
+            description: "Salt beef bagels from Beigel Bake.",
+            places: [{ name: "Beigel Bake" }],
+          },
+          {
+            description:
+              "Vintage shopping at Brick Lane Vintage Market and the shops around it.",
+            places: [{ name: "Brick Lane Vintage Market" }],
+          },
+          {
+            description: "Shopping at Old Spitalfields Market.",
+            places: [{ name: "Old Spitalfields Market" }],
+          },
+          {
+            description: "Lunch at Dishoom Shoreditch.",
+            places: [{ name: "Dishoom Shoreditch" }],
+          },
+          {
+            description:
+              "Explore Shoreditch High Street, maybe with a drink at Sessions Arts Club, the rooftop at Llama Inn, or Library.",
+            places: [
+              { name: "Shoreditch High Street" },
+              { name: "Sessions Arts Club" },
+              { name: "Llama Inn" },
+              { name: "Library" },
+            ],
+          },
+          {
+            time: "19:15",
+            description: "Dinner at Bottarga, in Chelsea.",
+            places: [{ name: "Bottarga" }],
+          },
+        ],
+      },
+      {
+        title: "Notting Hill and Kensington",
+        activities: [
+          {
+            description: "Walk to brunch at Butter Bakery Bar & Cafe.",
+            places: [{ name: "Butter Bakery Bar & Cafe" }],
+          },
+          {
+            description: "Walk through Portobello Road Market on the way to the Design Museum.",
+            places: [{ name: "Portobello Road Market" }, { name: "Design Museum" }],
+          },
+          {
+            description: "Walk Kensington High Street, for the shops and the cafes.",
+            places: [{ name: "Kensington High Street" }],
+          },
+          {
+            time: "17:30",
+            description: "Sunday roast at the Hereford Arms.",
+            places: [{ name: "Hereford Arms" }],
+          },
+        ],
+      },
+      {
+        title: "Day trip: Whitstable",
+        note: "Whitstable is on the Kent coast, a bit over an hour by train from St Pancras. This is a day out of London rather than a day in it, and the evening picks back up in town.",
+        activities: [
+          { time: "09:30", description: "Leave." },
+          {
+            description: "Fortitude Bakery on the way.",
+            places: [{ name: "Fortitude Bakery" }],
+          },
+          {
+            description: "Nineteen minute walk to St Pancras.",
+            places: [{ name: "St Pancras International" }],
+          },
+          { time: "10:30", description: "Train from St Pancras." },
+          {
+            time: "12:00",
+            description: "Walk into Whitstable.",
+            places: [{ name: "Whitstable", near: "Kent, England" }],
+          },
+          {
+            time: "13:45",
+            description: "Lunch at The Sportsman, finishing around 15:30.",
+            places: [{ name: "The Sportsman", near: "Seasalter, Kent" }],
+          },
+          { time: "15:40", description: "Taxi back to the train in Whitstable." },
+          { time: "17:45", description: "Back in London to change and get ready." },
+          {
+            time: "20:00",
+            description: "Drinks at Bar Finch.",
+            places: [{ name: "Bar Finch" }],
+          },
+          {
+            time: "21:15",
+            description: "Dinner at Berenjak.",
+            places: [{ name: "Berenjak" }],
+          },
+          {
+            time: "22:45",
+            description: "Ronnie Scott's.",
+            places: [{ name: "Ronnie Scott's" }],
+          },
+        ],
+      },
+      {
+        title: "Sunday roasts",
+        places: [
+          { name: "The Portman" },
+          { name: "The Royal Oak" },
+          { name: "The George" },
+          { name: "Hereford Arms" },
+        ],
+      },
+      {
+        title: "Sandwiches",
+        places: [{ name: "Rogue Sarnies" }, { name: "Dal Fiorentino" }],
+      },
+      {
+        title: "London brands",
+        places: [
+          { name: "Barbour" },
+          { name: "ME+EM" },
+          { name: "Rixo", note: "Dresses." },
+          { name: "With Nothing Underneath", note: "Best button downs." },
+        ],
+      },
+      {
+        title: "Department stores, food and gifts",
+        places: [
+          { name: "Harrods" },
+          { name: "Selfridges" },
+          { name: "Fortnum & Mason", note: "Gift baskets." },
+          { name: "Regent Street", note: "Flagship stores." },
+          { name: "Oxford Street", note: "Flagship stores." },
+        ],
+      },
+      {
+        title: "High streets and shopping districts",
+        places: [
+          { name: "Marylebone High Street", note: "My favourite in central London." },
+          { name: "Sloane Square" },
+          { name: "King's Road" },
+          { name: "Carnaby Street", note: "Classic stores." },
+          { name: "Newburgh Street" },
+          { name: "Bond Street", note: "Luxury." },
+          { name: "Mayfair" },
+        ],
+      },
+      {
+        title: "Vintage",
+        places: [
+          { name: "Portobello Road Market", note: "Notting Hill." },
+          { name: "Brick Lane" },
+          { name: "Shoreditch" },
+        ],
+      },
+      {
+        title: "Flea markets",
+        places: [
+          { name: "Old Spitalfields Market" },
+          { name: "Camden Market" },
+          { name: "Greenwich Market" },
+          { name: "Columbia Road", note: "Sundays. The flower market." },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "cotswolds",
+    title: "The Cotswolds in a Day",
+    destination: "Cotswolds",
+    country: "England",
+    coords: { lat: 51.9319, lon: -1.7226 },
+    cover: cotswolds,
+    label: "DAY TRIP",
+    summary:
+      "Stow-on-the-Wold, both Slaughters and Bourton-on-the-Water, walked between in a single day from London.",
+    teaser:
+      "A day trip out of London. Train from Paddington in the morning, four villages with a countryside walk between them, and back in time for dinner in town.",
+    tags: ["#StowOnTheWold", "#TheSlaughters", "#Bourton"],
+    notes: [
+      "This is a day trip from London. The train from Paddington to Moreton-in-Marsh takes about an hour and a half, and you taxi between the villages at either end of the walk.",
+    ],
+    sections: [
+      {
+        title: "The day, hour by hour",
+        activities: [
+          {
+            time: "08:20",
+            description: "Walk or Uber to London Paddington.",
+            places: [{ name: "London Paddington", near: "London, England" }],
+          },
+          { time: "08:51", description: "Train from London Paddington." },
+          {
+            time: "10:18",
+            description: "Arrive at Moreton-in-Marsh.",
+            places: [{ name: "Moreton-in-Marsh" }],
+          },
+          {
+            time: "10:20",
+            description: "Coffee at Martha's Coffee House.",
+            places: [{ name: "Martha's Coffee House", near: "Moreton-in-Marsh" }],
+          },
+          { time: "10:40", description: "Taxi to Stow-on-the-Wold." },
+          {
+            time: "11:00",
+            description:
+              "Stow-on-the-Wold: Market Square, St Edward's Church, and a quick browse.",
+            places: [
+              { name: "Stow-on-the-Wold" },
+              { name: "Market Square", near: "Stow-on-the-Wold" },
+              { name: "St Edward's Church", near: "Stow-on-the-Wold" },
+            ],
+          },
+          {
+            time: "11:35",
+            description: "Lunch at The Porch House or The Old Butchers.",
+            places: [
+              { name: "The Porch House", near: "Stow-on-the-Wold" },
+              { name: "The Old Butchers", near: "Stow-on-the-Wold" },
+            ],
+          },
+          { time: "12:20", description: "Begin the countryside walk." },
+          {
+            time: "13:05",
+            description: "Lower Slaughter.",
+            places: [{ name: "Lower Slaughter" }],
+          },
+          { time: "13:20", description: "Walk to Upper Slaughter." },
+          {
+            time: "13:40",
+            description: "Upper Slaughter, for the river and the manor views.",
+            places: [{ name: "Upper Slaughter" }],
+          },
+          { time: "13:55", description: "Walk to Bourton-on-the-Water." },
+          {
+            time: "14:25",
+            description: "Bourton-on-the-Water: the bridges, a quick browse, ice cream.",
+            places: [{ name: "Bourton-on-the-Water" }],
+          },
+          { time: "15:10", description: "Taxi back to Moreton-in-Marsh." },
+          { time: "15:30", description: "At the station, with a buffer." },
+          { time: "15:54", description: "Train to London Paddington." },
+          { time: "17:25", description: "Arrive at Paddington." },
+          { time: "18:00", description: "Home." },
+          { time: "19:15", description: "Leave for dinner." },
+          {
+            time: "19:45",
+            description: "Dinner at DakaDaka.",
+            places: [{ name: "DakaDaka", near: "London, England" }],
+          },
+          { time: "21:00", description: "A pub crawl after, if there is anything on." },
         ],
       },
     ],

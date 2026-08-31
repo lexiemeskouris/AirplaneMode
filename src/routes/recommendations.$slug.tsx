@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { BMC_URL, mapsSearch } from "@/data/itineraries";
-import type { Place } from "@/data/itineraries";
+import { BMC_URL } from "@/data/itineraries";
+import { ActivityList, placeHref, placeLinkClass } from "@/lib/places";
 import { getGuide, guides } from "@/data/guides";
 
 export const Route = createFileRoute("/recommendations/$slug")({
@@ -35,8 +35,9 @@ export const Route = createFileRoute("/recommendations/$slug")({
   component: GuidePage,
 });
 
-function placeHref(place: Place, destination: string) {
-  return place.url ?? mapsSearch(place.name, place.near ?? destination);
+/** Stable anchor for a section, so a long page can have a contents list. */
+function sectionId(title: string) {
+  return title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 }
 
 function GuidePage() {
@@ -94,21 +95,47 @@ function GuidePage() {
         </ul>
       )}
 
+      {/* A city page can run to a dozen sections, so jump straight to one. */}
+      {g.sections.length > 4 && (
+        <nav aria-label="Sections" className="mt-10 flex flex-wrap gap-2">
+          {g.sections.map((section) => (
+            <a
+              key={section.title}
+              href={`#${sectionId(section.title)}`}
+              className="rounded-full border border-border bg-card px-3 py-1.5 text-xs font-bold text-foreground transition-colors hover:border-primary hover:text-primary"
+            >
+              {section.title}
+            </a>
+          ))}
+        </nav>
+      )}
+
       <div className="mt-12 space-y-6">
         {g.sections.map((section) => (
           <section
             key={section.title}
-            className="overflow-hidden rounded-2xl border border-border bg-card"
+            id={sectionId(section.title)}
+            className="scroll-mt-24 overflow-hidden rounded-2xl border border-border bg-card"
           >
             <div className="border-b border-border bg-secondary/60 px-6 py-4">
               <h2 className="font-display text-2xl font-extrabold tracking-tight text-foreground">
                 {section.title}
               </h2>
             </div>
+            {section.note && (
+              <p className="border-b border-border bg-brand-yellow/20 px-6 py-4 font-semibold leading-relaxed text-foreground">
+                {section.note}
+              </p>
+            )}
+            {section.activities && section.activities.length > 0 && (
+              <ActivityList
+                activities={section.activities}
+                destination={g.destination}
+                idPrefix={section.title}
+              />
+            )}
+            {(section.places?.length || section.items?.length) && (
             <div className="px-6 py-5">
-              {section.note && (
-                <p className="mb-4 leading-relaxed text-foreground/90">{section.note}</p>
-              )}
               {section.places && section.places.length > 0 && (
                 <ul className="space-y-3">
                   {section.places.map((place) => (
@@ -143,6 +170,7 @@ function GuidePage() {
                 </ul>
               )}
             </div>
+            )}
           </section>
         ))}
       </div>
