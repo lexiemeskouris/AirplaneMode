@@ -58,9 +58,9 @@ function Tile(props: TileProps) {
             src={cover}
             alt={title}
             width={1000}
-            height={1250}
+            height={1000}
             loading="lazy"
-            className={`aspect-[4/5] w-full bg-secondary object-cover transition-transform duration-500 group-hover:scale-[1.04] ${
+            className={`aspect-square w-full bg-secondary object-cover transition-transform duration-500 group-hover:scale-[1.04] ${
               gated ? "grayscale group-hover:grayscale-0" : ""
             }`}
           />
