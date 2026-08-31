@@ -1,0 +1,64 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Allow the workflow to publish to Pages.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let a running deploy finish rather than cancelling it mid-publish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Build static site
+        # GITHUB_PAGES switches vite.config.ts to SPA mode with the /AirplaneMood/
+        # base path. Without it the build stays exactly as Lovable produces it.
+        env:
+          GITHUB_PAGES: "true"
+        run: npm run build
+
+      - name: Assemble Pages artifact
+        run: |
+          set -euo pipefail
+          # TanStack Start SPA mode emits the app shell as _shell.html.
+          # Pages needs it as index.html, and as 404.html so that deep links
+          # (/about, /itineraries/lisbon) fall through to the client router
+          # instead of returning GitHub's own 404 page.
+          cp dist/client/_shell.html dist/client/index.html
+          cp dist/client/_shell.html dist/client/404.html
+          # Stop Pages running the output through Jekyll, which would drop
+          # files and directories whose names begin with an underscore.
+          touch dist/client/.nojekyll
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/client
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
