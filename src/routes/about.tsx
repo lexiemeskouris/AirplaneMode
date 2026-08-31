@@ -4,17 +4,17 @@ import { itineraries, BMC_URL } from "@/data/itineraries";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Wayfarer" },
+      { title: "About - AirplaneMood" },
       {
         name: "description",
         content:
-          "Wayfarer is a growing collection of high-energy travel itineraries — free guides and supporter-funded deep dives for people who keep moving and love food.",
+          "AirplaneMood is a growing collection of high-energy travel itineraries - free guides and supporter-funded deep dives for people who keep moving and love food.",
       },
-      { property: "og:title", content: "About — Wayfarer" },
+      { property: "og:title", content: "About - AirplaneMood" },
       {
         property: "og:description",
         content:
-          "Wayfarer is a growing collection of high-energy travel itineraries — free guides and supporter-funded deep dives for people who keep moving and love food.",
+          "AirplaneMood is a growing collection of high-energy travel itineraries - free guides and supporter-funded deep dives for people who keep moving and love food.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -36,20 +36,20 @@ function AboutPage() {
 
       <div className="mt-8 space-y-5 text-lg leading-relaxed text-foreground/90">
         <p>
-          Wayfarer is my collection of travel itineraries — the kind I wish I'd
+          AirplaneMood is my collection of travel itineraries - the kind I wish I'd
           had before I arrived. Each one is built for the restless traveler:
           early starts to beat the crowds, jampacked days, and a serious
           obsession with where to eat next.
         </p>
         <p>
-          Most guides here are free to read in full. A few of the deeper dives —
-          the ones that took weeks of scouting and refining — are
+          Most guides here are free to read in full. A few of the deeper dives -
+          the ones that took weeks of scouting and refining - are
           supporter-funded. If one speaks to you, buy me a coffee and the
           complete plan is yours.
         </p>
         <p>
           This is the beginning of something bigger. Over time I'd love to grow
-          Wayfarer into a small travel agency, planning real trips from these
+          AirplaneMood into a small travel agency, planning real trips from these
           notes. For now, consider these pages your starting map.
         </p>
       </div>
@@ -76,7 +76,7 @@ function AboutPage() {
               1
             </span>
             <p className="leading-relaxed text-foreground/90">
-              Browse the feed and read the free guides in full — no sign-up, no
+              Browse the feed and read the free guides in full - no sign-up, no
               paywall.
             </p>
           </li>
@@ -94,7 +94,7 @@ function AboutPage() {
               3
             </span>
             <p className="leading-relaxed text-foreground/90">
-              After your coffee, the full itinerary is delivered to you — every
+              After your coffee, the full itinerary is delivered to you - every
               day, timed stops, and the detours in between.
             </p>
           </li>

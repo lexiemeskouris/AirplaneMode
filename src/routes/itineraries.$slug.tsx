@@ -12,19 +12,19 @@ export const Route = createFileRoute("/itineraries/$slug")({
     if (!it) {
       return {
         meta: [
-          { title: "Itinerary — Wayfarer" },
+          { title: "Itinerary - AirplaneMood" },
           { name: "robots", content: "noindex" },
         ],
       };
     }
     return {
       meta: [
-        { title: `${it.title} — Wayfarer` },
+        { title: `${it.title} - AirplaneMood` },
         {
           name: "description",
           content: it.summary,
         },
-        { property: "og:title", content: `${it.title} — Wayfarer` },
+        { property: "og:title", content: `${it.title} - AirplaneMood` },
         { property: "og:description", content: it.summary },
         { property: "og:type", content: "article" },
         { property: "og:image", content: it.cover },
@@ -108,7 +108,7 @@ function ItineraryDetail() {
         </p>
       </section>
 
-      {/* Days — free shows all, gated shows only the sample day */}
+      {/* Days - free shows all, gated shows only the sample day */}
       {it.days && it.days.length > 0 && (
         <section className="mt-12">
           <h2 className="font-display text-3xl font-extrabold tracking-tight text-foreground">
@@ -153,8 +153,8 @@ function ItineraryDetail() {
             The rest of this journey
           </h2>
           <p className="mx-auto mt-4 max-w-md leading-relaxed text-background/70">
-            The complete {it.duration.toLowerCase()} plan — every day, timed
-            stops, and the detours most travellers miss — is available to
+            The complete {it.duration.toLowerCase()} plan - every day, timed
+            stops, and the detours most travellers miss - is available to
             supporters. Buy me a coffee and the full notes are yours.
           </p>
           <a

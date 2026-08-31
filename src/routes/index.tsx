@@ -4,13 +4,13 @@ import { itineraries } from "@/data/itineraries";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Wayfarer — High-Energy Travel Itineraries" },
+      { title: "AirplaneMood - High-Energy Travel Itineraries" },
       {
         name: "description",
         content:
           "High-energy travel itineraries for people who keep moving and love food. Free guides and supporter-funded deep dives.",
       },
-      { property: "og:title", content: "Wayfarer — High-Energy Travel Itineraries" },
+      { property: "og:title", content: "AirplaneMood - High-Energy Travel Itineraries" },
       {
         property: "og:description",
         content:
@@ -114,7 +114,7 @@ function Index() {
                 <div
                   className={`absolute top-6 flex gap-2 ${reversed ? "right-6" : "left-6"}`}
                 >
-                  <span className="rounded-full bg-background/95 px-4 py-2 text-xs font-extrabold tracking-tight text-foreground shadow-sm backdrop-blur-md">
+                  <span className="rounded-full bg-brand-yellow px-4 py-2 text-xs font-extrabold tracking-tight text-foreground shadow-sm">
                     {it.season.toUpperCase()}
                   </span>
                   <span className="rounded-full bg-accent px-4 py-2 text-xs font-extrabold tracking-tight text-accent-foreground shadow-sm">
@@ -146,7 +146,7 @@ function Index() {
                   {it.tags.map((t) => (
                     <span
                       key={t}
-                      className="rounded-xl bg-secondary px-3 py-1.5 text-xs font-bold text-accent"
+                      className="rounded-xl bg-brand-pink px-3 py-1.5 text-xs font-bold text-foreground"
                     >
                       {t}
                     </span>

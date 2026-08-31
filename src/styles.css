@@ -5,10 +5,16 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Wayfarer — Gen Z citrus feed design system.
+ * AirplaneMood design system.
  * Clean, relaxed, on-the-move, food-forward.
  * Headings: Sora. Body: Manrope.
- * Palette: Sunset Citrus — cream base, citrus orange, coral.
+ *
+ * Palette sampled from the striped-ski reference image: four flat bands of
+ * colour on a deep rust ground. All four are load-bearing, not decoration —
+ * red-orange leads, indigo carries contrast, pink and yellow tag content.
+ *   red-orange #E1552B   indigo #3B356E
+ *   pink       #E489AF   yellow #E5B441
+ *   deep rust  #8F2E14   (dark ground, footer and gated overlays)
  */
 
 @theme inline {
@@ -54,6 +60,13 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
+  /* The four reference bands, usable directly as bg-brand-red, text-brand-indigo, etc. */
+  --color-brand-red: var(--brand-red);
+  --color-brand-indigo: var(--brand-indigo);
+  --color-brand-pink: var(--brand-pink);
+  --color-brand-yellow: var(--brand-yellow);
+  --color-brand-rust: var(--brand-rust);
+
   /* Headings use Sora via --font-serif alias (kept for existing font-serif utility) */
   --font-serif: "Sora", "Manrope", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
@@ -63,43 +76,52 @@
 :root {
   --radius: 0.75rem;
 
-  /* Cream base — #fffaf3 */
-  --background: oklch(0.985 0.012 90);
-  /* Warm near-black ink — #2d2621 */
-  --foreground: oklch(0.26 0.012 50);
+  /* The four reference bands, plus the rust ground they sit on. */
+  --brand-red: oklch(0.630 0.183 36.7);      /* #E1552B */
+  --brand-indigo: oklch(0.366 0.095 285.5);  /* #3B356E */
+  --brand-pink: oklch(0.736 0.119 353.9);    /* #E489AF */
+  --brand-yellow: oklch(0.794 0.140 84.9);   /* #E5B441 */
+  --brand-rust: oklch(0.443 0.136 35.4);     /* #8F2E14 */
+
+  /* Warm paper — #fdf8f3 */
+  --background: oklch(0.982 0.009 67.7);
+  /* Deep rust-black ink — #241813 */
+  --foreground: oklch(0.223 0.022 43.6);
   /* Card surface — clean white */
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.26 0.012 50);
+  --card-foreground: oklch(0.223 0.022 43.6);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.26 0.012 50);
+  --popover-foreground: oklch(0.223 0.022 43.6);
 
-  /* Coral — #ff5a5f (primary accent) */
-  --primary: oklch(0.66 0.21 18);
-  --primary-foreground: oklch(0.985 0.012 90);
+  /* Red-orange — #E1552B (top band, primary) */
+  --primary: var(--brand-red);
+  --primary-foreground: oklch(0.982 0.009 67.7);
 
-  /* Soft cream — #fdf3e3 (secondary surface) */
-  --secondary: oklch(0.955 0.028 85);
-  --secondary-foreground: oklch(0.26 0.012 50);
+  /* Pale peach surface — #fbeae1 */
+  --secondary: oklch(0.948 0.022 49.9);
+  --secondary-foreground: oklch(0.223 0.022 43.6);
 
-  --muted: oklch(0.955 0.028 85);
-  --muted-foreground: oklch(0.55 0.018 285);
+  --muted: oklch(0.948 0.022 49.9);
+  /* Warm grey ink — #7a6a62 */
+  --muted-foreground: oklch(0.537 0.024 48.3);
 
-  /* Citrus orange — #ff8a3d (accent) */
-  --accent: oklch(0.74 0.165 60);
-  --accent-foreground: oklch(0.985 0.012 90);
+  /* Indigo — #3B356E (second band, the contrast colour) */
+  --accent: var(--brand-indigo);
+  --accent-foreground: oklch(0.982 0.009 67.7);
 
-  --destructive: oklch(0.66 0.21 18);
-  --destructive-foreground: oklch(0.985 0.012 90);
+  --destructive: var(--brand-red);
+  --destructive-foreground: oklch(0.982 0.009 67.7);
 
-  --border: oklch(0.91 0.02 85);
-  --input: oklch(0.91 0.02 85);
-  --ring: oklch(0.66 0.21 18);
+  /* Warm border — #efdfd5 */
+  --border: oklch(0.914 0.022 54.3);
+  --input: oklch(0.914 0.022 54.3);
+  --ring: var(--brand-red);
 
-  --chart-1: oklch(0.66 0.21 18);
-  --chart-2: oklch(0.74 0.165 60);
-  --chart-3: oklch(0.74 0.09 70);
-  --chart-4: oklch(0.6 0.09 60);
-  --chart-5: oklch(0.5 0.04 270);
+  --chart-1: var(--brand-red);
+  --chart-2: var(--brand-indigo);
+  --chart-3: var(--brand-pink);
+  --chart-4: var(--brand-yellow);
+  --chart-5: var(--brand-rust);
 
   --sidebar: oklch(1 0 0);
   --sidebar-foreground: oklch(0.26 0.012 50);
@@ -112,30 +134,34 @@
 }
 
 .dark {
-  --background: oklch(0.22 0.01 50);
-  --foreground: oklch(0.96 0.012 90);
-  --card: oklch(0.27 0.012 50);
-  --card-foreground: oklch(0.96 0.012 90);
-  --popover: oklch(0.27 0.012 50);
-  --popover-foreground: oklch(0.96 0.012 90);
-  --primary: oklch(0.7 0.2 20);
-  --primary-foreground: oklch(0.22 0.01 50);
-  --secondary: oklch(0.32 0.02 60);
-  --secondary-foreground: oklch(0.96 0.012 90);
-  --muted: oklch(0.32 0.02 60);
-  --muted-foreground: oklch(0.7 0.03 80);
-  --accent: oklch(0.74 0.165 60);
-  --accent-foreground: oklch(0.22 0.01 50);
-  --destructive: oklch(0.7 0.2 20);
-  --destructive-foreground: oklch(0.22 0.01 50);
-  --border: oklch(1 0 0 / 12%);
-  --input: oklch(1 0 0 / 16%);
-  --ring: oklch(0.7 0.2 20);
-  --chart-1: oklch(0.7 0.2 20);
-  --chart-2: oklch(0.74 0.165 60);
-  --chart-3: oklch(0.74 0.09 70);
-  --chart-4: oklch(0.6 0.09 60);
-  --chart-5: oklch(0.6 0.04 270);
+  /* Dark mode sits on the reference image's rust ground rather than a neutral
+     grey, so the four bands read the same way against it. */
+  --background: oklch(0.235 0.045 35);
+  --foreground: oklch(0.96 0.012 70);
+  --card: oklch(0.285 0.05 35);
+  --card-foreground: oklch(0.96 0.012 70);
+  --popover: oklch(0.285 0.05 35);
+  --popover-foreground: oklch(0.96 0.012 70);
+  /* Lifted a little so the red still reads as a band against rust. */
+  --primary: oklch(0.70 0.175 38);
+  --primary-foreground: oklch(0.235 0.045 35);
+  --secondary: oklch(0.34 0.05 35);
+  --secondary-foreground: oklch(0.96 0.012 70);
+  --muted: oklch(0.34 0.05 35);
+  --muted-foreground: oklch(0.76 0.03 60);
+  /* Indigo lightened — the #3B356E band is too dark to sit on rust. */
+  --accent: oklch(0.62 0.115 285);
+  --accent-foreground: oklch(0.235 0.045 35);
+  --destructive: oklch(0.70 0.175 38);
+  --destructive-foreground: oklch(0.235 0.045 35);
+  --border: oklch(1 0 0 / 14%);
+  --input: oklch(1 0 0 / 18%);
+  --ring: oklch(0.70 0.175 38);
+  --chart-1: oklch(0.70 0.175 38);
+  --chart-2: oklch(0.62 0.115 285);
+  --chart-3: var(--brand-pink);
+  --chart-4: var(--brand-yellow);
+  --chart-5: oklch(0.60 0.14 35);
   --sidebar: oklch(0.27 0.012 50);
   --sidebar-foreground: oklch(0.96 0.012 90);
   --sidebar-primary: oklch(0.7 0.2 20);

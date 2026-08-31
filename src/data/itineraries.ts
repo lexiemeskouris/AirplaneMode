@@ -48,7 +48,7 @@ export const itineraries: Itinerary[] = [
     duration: "3 days",
     season: "Spring",
     summary:
-      "A slow wander through Lisbon's tiled hills — pastel streets, fado nights, and the best pastéis de nata you'll ever eat.",
+      "A slow wander through Lisbon's tiled hills - pastel streets, fado nights, and the best pastéis de nata you'll ever eat.",
     cover: lisbon,
     gated: false,
     teaser:
@@ -76,7 +76,7 @@ export const itineraries: Itinerary[] = [
         day: "Day 2",
         title: "River & Tile",
         activities: [
-          { time: "09:00", description: "Tram 25 to Belém — monastery and riverside walk." },
+          { time: "09:00", description: "Tram 25 to Belém - monastery and riverside walk." },
           { time: "11:30", description: "Original Pastéis de Belém (worth the queue)." },
           { time: "14:00", description: "MAAT museum and the 25 de Abril bridge view." },
           { time: "19:00", description: "Time Out Market for a grazing dinner." },
@@ -89,7 +89,7 @@ export const itineraries: Itinerary[] = [
           { time: "08:00", description: "Train from Rossio to Sintra." },
           { time: "09:30", description: "Pena Palace before the crowds." },
           { time: "12:30", description: "Quinta da Regalela's mossy well spiral." },
-          { time: "15:00", description: "Cabo da Roca — westernmost point of Europe." },
+          { time: "15:00", description: "Cabo da Roca - westernmost point of Europe." },
           { time: "18:30", description: "Back to Lisbon, farewell dinner in Bairro Alto." },
         ],
       },
@@ -103,12 +103,12 @@ export const itineraries: Itinerary[] = [
     duration: "7 days",
     season: "Autumn",
     summary:
-      "Temples at dawn, tea ceremonies, and the quiet discipline of moss gardens. The full week unfolds slowly — exactly as Kyoto intends.",
+      "Temples at dawn, tea ceremonies, and the quiet discipline of moss gardens. The full week unfolds slowly - exactly as Kyoto intends.",
     cover: kyoto,
     gated: true,
     bmcUrl: BMC_URL,
     teaser:
-      "Kyoto is not a checklist. This itinerary is paced for stillness: early-morning temples before the crowds, a private tea ceremony, and a day walking the Philosopher's Path as the maples turn. Day 1 below is free to read — the full seven-day plan unlocks with a coffee.",
+      "Kyoto is not a checklist. This itinerary is paced for stillness: early-morning temples before the crowds, a private tea ceremony, and a day walking the Philosopher's Path as the maples turn. Day 1 below is free to read - the full seven-day plan unlocks with a coffee.",
     tags: ["#TempleDawn", "#TeaCeremony", "#MapleWalk"],
     highlights: [
       "Fushimi Inari at first light",
@@ -123,7 +123,7 @@ export const itineraries: Itinerary[] = [
         activities: [
           { time: "07:00", description: "Kiyomizu-dera before the gates fill." },
           { time: "10:30", description: "Wander Sannenzaka & Ninenzaka, matcha soft serve." },
-          { time: "13:00", description: "Lunch — yudofu (tofu hotpot) in a temple garden." },
+          { time: "13:00", description: "Lunch - yudofu (tofu hotpot) in a temple garden." },
           { time: "16:00", description: "Kodai-ji's bamboo grove at dusk." },
           { time: "19:00", description: "Gion lantern-lit dinner, maiko-spotting." },
         ],
@@ -142,7 +142,7 @@ export const itineraries: Itinerary[] = [
     cover: amalfi,
     gated: false,
     teaser:
-      "The SS163 is one of the world's great drives — but it punishes the rushed. This route times each stop to light and traffic, with a swim before lunch and a spritz at the right hour.",
+      "The SS163 is one of the world's great drives - but it punishes the rushed. This route times each stop to light and traffic, with a swim before lunch and a spritz at the right hour.",
     tags: ["#CliffDrive", "#PathOfGods", "#LemonSpritz"],
     highlights: [
       "Positano from the sea",
@@ -157,7 +157,7 @@ export const itineraries: Itinerary[] = [
         activities: [
           { time: "09:00", description: "Pick up the car in Salerno, drive west." },
           { time: "11:00", description: "First stop: Vietri sul Mare for ceramics." },
-          { time: "13:00", description: "Lunch in Cetara — anchovy colatura pasta." },
+          { time: "13:00", description: "Lunch in Cetara - anchovy colatura pasta." },
           { time: "16:00", description: "Arrive Positano, check in, walk to Spiaggia Grande." },
           { time: "20:00", description: "Dinner at a cliffside terrace, watch the lights climb." },
         ],
@@ -167,7 +167,7 @@ export const itineraries: Itinerary[] = [
         title: "Path of the Gods",
         activities: [
           { time: "07:30", description: "Boats to Praiano, start the Sentiero degli Dei." },
-          { time: "12:00", description: "Trail ends in Nocelle — reward lunch." },
+          { time: "12:00", description: "Trail ends in Nocelle - reward lunch." },
           { time: "15:00", description: "Afternoon swim at Fornillo beach." },
           { time: "19:30", description: "Lemon spritz and pizza in Positano." },
         ],
@@ -177,7 +177,7 @@ export const itineraries: Itinerary[] = [
         title: "Ravello & Amalfi",
         activities: [
           { time: "09:00", description: "Drive up to Ravello, Villa Cimbrone gardens." },
-          { time: "12:30", description: "Down to Amalfi — cathedral and paper museum." },
+          { time: "12:30", description: "Down to Amalfi - cathedral and paper museum." },
           { time: "15:00", description: "Emerald Grotto by boat." },
           { time: "20:00", description: "Seafood dinner in Atrani, the quiet neighbor." },
         ],
@@ -221,7 +221,7 @@ export const itineraries: Itinerary[] = [
         title: "Into the Medina",
         activities: [
           { time: "10:00", description: "Settle into the riad, mint tea on the roof." },
-          { time: "12:00", description: "First wander into the souks — get lost on purpose." },
+          { time: "12:00", description: "First wander into the souks - get lost on purpose." },
           { time: "15:00", description: "Ben Youssef Madrasa's zellige tilework." },
           { time: "17:30", description: "Jemaa el-Fnaa as the storytellers wake." },
           { time: "20:00", description: "Tagine dinner at a rooftop restaurant." },
@@ -241,7 +241,7 @@ export const itineraries: Itinerary[] = [
     cover: iceland,
     gated: false,
     teaser:
-      "Route 1 circles the island and rarely disappoints. This seven-day loop is paced to the midnight sun — early starts, long detours, and soaks in remote pools after the day-trippers leave.",
+      "Route 1 circles the island and rarely disappoints. This seven-day loop is paced to the midnight sun - early starts, long detours, and soaks in remote pools after the day-trippers leave.",
     tags: ["#RingRoad", "#WaterfallChase", "#MidnightSun"],
     highlights: [
       "Sunrise at Jökulsárlón glacier lagoon",
@@ -255,7 +255,7 @@ export const itineraries: Itinerary[] = [
         title: "Golden Circle Start",
         activities: [
           { time: "08:00", description: "Pick up the 4x4 in Reykjavík." },
-          { time: "10:00", description: "Þingvellir — walk between continents." },
+          { time: "10:00", description: "Þingvellir - walk between continents." },
           { time: "12:30", description: "Geysir and Gullfoss." },
           { time: "16:00", description: "Secret Lagoon soak in Flúðir." },
           { time: "19:00", description: "Sleep in Hella." },
@@ -265,7 +265,7 @@ export const itineraries: Itinerary[] = [
         day: "Day 2",
         title: "South Coast Falls",
         activities: [
-          { time: "09:00", description: "Seljalandsfoss — walk behind the falls." },
+          { time: "09:00", description: "Seljalandsfoss - walk behind the falls." },
           { time: "11:00", description: "Skógafoss and the nearby folk museum." },
           { time: "14:00", description: "Reynisfjara black sand beach (keep off the waves)." },
           { time: "18:00", description: "Dyrhólaey at golden hour, sleep in Vík." },
@@ -276,7 +276,7 @@ export const itineraries: Itinerary[] = [
         title: "Glacier Lagoon",
         activities: [
           { time: "08:00", description: "Drive east along the lava coast." },
-          { time: "12:00", description: "Jökulsárlón — kayak among the bergs." },
+          { time: "12:00", description: "Jökulsárlón - kayak among the bergs." },
           { time: "14:00", description: "Diamond Beach, then continue to Höfn." },
           { time: "19:00", description: "Langoustine dinner in Höfn." },
         ],
@@ -294,7 +294,7 @@ export const itineraries: Itinerary[] = [
         day: "Day 5",
         title: "North & Mývatn",
         activities: [
-          { time: "08:00", description: "Dettifoss — Europe's most powerful waterfall." },
+          { time: "08:00", description: "Dettifoss - Europe's most powerful waterfall." },
           { time: "11:00", description: "Mývatn geothermal area, Hverir mud pools." },
           { time: "15:00", description: "Mývatn Nature Baths." },
         ],
@@ -332,7 +332,7 @@ export const itineraries: Itinerary[] = [
     gated: true,
     bmcUrl: BMC_URL,
     teaser:
-      "Oaxaca is Mexico's deepest flavor. This plan threads the markets, a mezcal tasting, a cookery class, and Monte Albán above the valley. Day 1 is free to read — the full 72-hour plan opens with a coffee.",
+      "Oaxaca is Mexico's deepest flavor. This plan threads the markets, a mezcal tasting, a cookery class, and Monte Albán above the valley. Day 1 is free to read - the full 72-hour plan opens with a coffee.",
     tags: ["#MoleMarkets", "#Mezcal", "#MonteAlban"],
     highlights: [
       "Mercado 20 de Noviembre's pasillo de humo",
@@ -347,7 +347,7 @@ export const itineraries: Itinerary[] = [
         activities: [
           { time: "09:00", description: "Tlayuda breakfast in Mercado 20 de Noviembre." },
           { time: "11:00", description: "Walk the smoke alley (pasillo de humo)." },
-          { time: "14:00", description: "Mole tasting lunch — seven moles." },
+          { time: "14:00", description: "Mole tasting lunch - seven moles." },
           { time: "16:00", description: "Templo de Santo Domingo and botanical garden." },
           { time: "20:00", description: "Mezcal bar on a rooftop in the centro." },
         ],

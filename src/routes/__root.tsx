@@ -75,11 +75,11 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 
 function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 border-b border-primary/10 bg-background/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link to="/" className="flex items-center gap-2">
           <span className="font-display text-2xl font-extrabold tracking-tighter text-primary">
-            WAYFARER
+            AIRPLANEMOOD
           </span>
         </Link>
         <nav className="hidden items-center gap-8 text-sm font-bold md:flex">
@@ -107,6 +107,13 @@ function SiteHeader() {
           ☕ Support
         </a>
       </div>
+      {/* The reference image's four bands, as the header's bottom edge. */}
+      <div aria-hidden className="flex h-1 w-full">
+        <div className="flex-1 bg-brand-red" />
+        <div className="flex-1 bg-brand-indigo" />
+        <div className="flex-1 bg-brand-pink" />
+        <div className="flex-1 bg-brand-yellow" />
+      </div>
     </header>
   );
 }
@@ -118,7 +125,7 @@ function SiteFooter() {
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
           <div>
             <p className="font-display text-2xl font-extrabold tracking-tighter text-primary">
-              WAYFARER
+              AIRPLANEMOOD
             </p>
             <p className="mt-1 text-sm text-muted-foreground">
               High-energy itineraries for the restless traveler.
@@ -142,7 +149,7 @@ function SiteFooter() {
           </div>
         </div>
         <p className="mt-8 text-xs font-semibold uppercase tracking-[0.15em] text-muted-foreground/70">
-          © {new Date().getFullYear()} Wayfarer · Made on the move
+          © {new Date().getFullYear()} AirplaneMood · Made on the move
         </p>
       </div>
     </footer>
@@ -154,13 +161,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Wayfarer — High-Energy Travel Itineraries" },
+      { title: "AirplaneMood - High-Energy Travel Itineraries" },
       {
         name: "description",
         content:
           "High-energy travel itineraries for people who keep moving and love food. Free guides and supporter-funded deep dives.",
       },
-      { property: "og:title", content: "Wayfarer — High-Energy Travel Itineraries" },
+      { property: "og:title", content: "AirplaneMood - High-Energy Travel Itineraries" },
       {
         property: "og:description",
         content:

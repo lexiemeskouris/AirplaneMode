@@ -1,4 +1,4 @@
-# Wanderlust Plans
+# AirplaneMood
 
 i want to build a site to publish my travel itineraries that i can eventually grow into a travel agency. i will have some gated itineraries with a link to "buy me a coffee" for access to the itinerary
 
