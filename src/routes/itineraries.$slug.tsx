@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { getItinerary, itineraries, BMC_URL } from "@/data/itineraries";
+import { getItinerary, itineraries, BMC_URL, mapsSearch } from "@/data/itineraries";
 
 export const Route = createFileRoute("/itineraries/$slug")({
   loader: ({ params }) => {
@@ -144,18 +144,16 @@ function ItineraryDetail() {
                           <ul className="mt-3 space-y-2">
                             {a.places.map((place) => (
                               <li key={place.name} className="leading-snug">
-                                {place.url ? (
-                                  <a
-                                    href={place.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="font-bold text-accent underline decoration-accent/30 underline-offset-4 transition-colors hover:decoration-accent"
-                                  >
-                                    {place.name}
-                                  </a>
-                                ) : (
-                                  <span className="font-bold text-foreground">{place.name}</span>
-                                )}
+                                {/* Every place links: its own map link when we
+                                    have one, otherwise a search for the name. */}
+                                <a
+                                  href={place.url ?? mapsSearch(place.name, place.near ?? it.destination)}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="font-bold text-accent underline decoration-accent/30 underline-offset-4 transition-colors hover:decoration-accent"
+                                >
+                                  {place.name}
+                                </a>
                                 {place.note && (
                                   <span className="text-sm text-muted-foreground"> {place.note}</span>
                                 )}
