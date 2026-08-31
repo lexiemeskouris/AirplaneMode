@@ -91,6 +91,13 @@ function SiteHeader() {
             Feed
           </Link>
           <Link
+            to="/all"
+            activeProps={{ className: "text-accent" }}
+            className="text-foreground/80 transition-colors hover:text-accent"
+          >
+            A-Z
+          </Link>
+          <Link
             to="/about"
             activeProps={{ className: "text-accent" }}
             className="text-foreground/80 transition-colors hover:text-accent"
@@ -134,6 +141,9 @@ function SiteFooter() {
           <div className="flex items-center gap-6 text-sm font-semibold text-muted-foreground">
             <Link to="/" className="transition-colors hover:text-accent">
               Feed
+            </Link>
+            <Link to="/all" className="transition-colors hover:text-accent">
+              A-Z
             </Link>
             <Link to="/about" className="transition-colors hover:text-accent">
               About

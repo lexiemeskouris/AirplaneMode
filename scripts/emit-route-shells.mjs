@@ -12,7 +12,7 @@ const clientDir = join(root, "dist", "client");
 const shell = readFileSync(join(clientDir, "_shell.html"), "utf8");
 
 // Static routes, mirroring src/routes/*.tsx (index is already dist/client/index.html).
-const routes = ["/about"];
+const routes = ["/about", "/all"];
 
 // Dynamic routes, one page per entry. Slugs are read from the data rather than
 // listed here, so adding an itinerary or a city needs no change to this script.
