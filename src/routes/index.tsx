@@ -138,20 +138,19 @@ function Index() {
 
   return (
     <div>
-      {/* Hero intro band */}
-      <section className="mx-auto max-w-7xl px-6 pt-20 pb-16">
-        <div className="max-w-3xl">
-          <h1 className="font-display text-5xl font-extrabold leading-[1.05] tracking-tight text-foreground md:text-8xl">
-            Less planning.
-            <br />
-            <span className="text-primary">More moving.</span>
+      {/* Hero intro band. Kept short on purpose: the feed should start above the
+          fold rather than after a full screen of headline. */}
+      <section className="mx-auto max-w-7xl px-6 pt-12 pb-10">
+        <div>
+          <h1 className="font-display text-3xl font-extrabold leading-tight tracking-tight text-foreground sm:text-4xl md:text-5xl">
+            Less planning. <span className="text-primary">More moving.</span>
           </h1>
-          <p className="mt-6 max-w-xl text-lg font-medium leading-relaxed text-muted-foreground md:text-xl">
+          <p className="mt-4 text-lg font-medium leading-relaxed text-muted-foreground">
             High-energy itineraries for people who like city breaks and quick
             getaways. Non-stop, just like our generation. No filler, just the
             best food and the best sights, hour by hour, with every stop linked.
           </p>
-          <div className="mt-8 flex flex-wrap gap-x-8 gap-y-2 text-sm font-semibold text-muted-foreground">
+          <div className="mt-6 flex flex-wrap gap-x-8 gap-y-2 text-sm font-semibold text-muted-foreground">
             <span>
               <strong className="font-extrabold text-foreground">{free.length}</strong>{" "}
               {free.length === 1 ? "free itinerary" : "free itineraries"}
