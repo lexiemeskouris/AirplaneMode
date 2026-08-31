@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { itineraries } from "@/data/itineraries";
 import { guides } from "@/data/guides";
+import worldMap from "@/assets/world.svg";
 
 export const Route = createFileRoute("/all")({
   head: () => ({
@@ -29,7 +30,20 @@ type Row = {
   slug: string;
   destination: string;
   meta: string;
+  coords: { lat: number; lon: number };
 };
+
+// The same equirectangular crop world.svg was generated with, so a pin lands on
+// the coastline underneath it. Percentages, so it holds at any width.
+const LAT_TOP = 85;
+const LAT_BOTTOM = -60;
+
+function pinPosition({ lat, lon }: { lat: number; lon: number }) {
+  return {
+    left: `${((lon + 180) / 360) * 100}%`,
+    top: `${((LAT_TOP - lat) / (LAT_TOP - LAT_BOTTOM)) * 100}%`,
+  };
+}
 
 function AllPage() {
   const rows: Row[] = [
@@ -38,6 +52,7 @@ function AllPage() {
       slug: it.slug,
       destination: it.destination,
       meta: `Itinerary · ${it.duration}`,
+      coords: it.coords,
     })),
     ...guides.map((g) => {
       const spots = g.sections.reduce((n, s) => n + (s.places?.length ?? 0), 0);
@@ -48,6 +63,7 @@ function AllPage() {
         destination: g.destination,
         meta:
           spots >= tips ? `Recommendations · ${spots} spots` : `Guide · ${tips} tips`,
+        coords: g.coords,
       };
     }),
     // localeCompare so Reykjavík and San Sebastián sort by their base letters
@@ -69,7 +85,60 @@ function AllPage() {
       {/* CSS columns rather than a grid: an alphabetical index should read
           down the first column and continue in the second, the way an index
           does, not left-to-right across each row. */}
-      <ul className="mt-10 gap-x-8 sm:columns-2">
+      {/* The map is the visual index; the list below is the same thing in
+          alphabetical order. Everything on it is also reachable from the list,
+          so nothing here is the only route to a page. */}
+      <div className="relative mt-10 overflow-hidden rounded-3xl border border-border bg-secondary/40">
+        <img
+          src={worldMap}
+          alt=""
+          aria-hidden
+          className="block w-full"
+          width={360}
+          height={145}
+        />
+        <div className="absolute inset-0">
+          {rows.map((row) => {
+            const pos = pinPosition(row.coords);
+            const dot = (
+              <>
+                <span className="absolute inset-0 rounded-full bg-primary/30 transition-transform duration-300 group-hover:scale-[2.2]" />
+                <span className="absolute inset-[3px] rounded-full bg-primary ring-2 ring-background" />
+                <span className="pointer-events-none absolute left-1/2 top-full z-20 mt-1 -translate-x-1/2 whitespace-nowrap rounded-md bg-foreground px-2 py-1 text-[0.7rem] font-bold text-background opacity-0 transition-opacity group-hover:opacity-100">
+                  {row.destination}
+                </span>
+              </>
+            );
+            const className =
+              "group absolute z-10 h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 sm:h-4 sm:w-4";
+            return row.kind === "itinerary" ? (
+              <Link
+                key={`pin-${row.slug}`}
+                to="/itineraries/$slug"
+                params={{ slug: row.slug }}
+                style={pos}
+                className={className}
+                aria-label={row.destination}
+              >
+                {dot}
+              </Link>
+            ) : (
+              <Link
+                key={`pin-${row.slug}`}
+                to="/recommendations/$slug"
+                params={{ slug: row.slug }}
+                style={pos}
+                className={className}
+                aria-label={row.destination}
+              >
+                {dot}
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+
+      <ul className="mt-12 gap-x-8 sm:columns-2">
         {rows.map((row) => (
           <li
             key={`${row.kind}-${row.slug}`}

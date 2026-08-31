@@ -147,9 +147,9 @@ function Index() {
             <span className="text-primary">More moving.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg font-medium leading-relaxed text-muted-foreground md:text-xl">
-            High-energy itineraries for the generation that never stops. Street
-            food, fast moves, and zero filler. Real places, hour by hour, with
-            every stop linked.
+            High-energy itineraries for people who like city breaks and quick
+            getaways. Non-stop, just like our generation. No filler, just the
+            best food and the best sights, hour by hour, with every stop linked.
           </p>
           <div className="mt-8 flex flex-wrap gap-x-8 gap-y-2 text-sm font-semibold text-muted-foreground">
             <span>

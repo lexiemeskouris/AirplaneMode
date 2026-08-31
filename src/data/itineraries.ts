@@ -39,6 +39,8 @@ export type Itinerary = {
   destination: string;
   country: string;
   duration: string;
+  /** Where the pin goes on the A-Z map. */
+  coords: { lat: number; lon: number };
   season: string;
   summary: string;
   cover: string;
@@ -80,6 +82,7 @@ export const itineraries: Itinerary[] = [
     title: "Three Days in San Sebastián",
     destination: "San Sebastián",
     country: "Spain",
+    coords: { lat: 43.3183, lon: -1.9812 },
     duration: "3 days",
     season: "Summer",
     summary:
@@ -233,6 +236,7 @@ export const itineraries: Itinerary[] = [
     title: "Three Days in Tunisia",
     destination: "Tunisia",
     country: "Tunisia",
+    coords: { lat: 36.8065, lon: 10.1815 },
     duration: "3 days",
     season: "Autumn",
     summary:
@@ -368,6 +372,7 @@ export const itineraries: Itinerary[] = [
     title: "Three Days in Berlin",
     destination: "Berlin",
     country: "Germany",
+    coords: { lat: 52.52, lon: 13.405 },
     duration: "3 days",
     season: "Late Summer",
     summary:
@@ -496,6 +501,7 @@ export const itineraries: Itinerary[] = [
     title: "Three Days in Taipei",
     destination: "Taipei",
     country: "Taiwan",
+    coords: { lat: 25.033, lon: 121.5654 },
     duration: "3 days",
     season: "Spring",
     summary:
@@ -623,6 +629,7 @@ export const itineraries: Itinerary[] = [
     title: "Three Days in Amsterdam",
     destination: "Amsterdam",
     country: "Netherlands",
+    coords: { lat: 52.3676, lon: 4.9041 },
     duration: "3 days",
     season: "Early Summer",
     summary:
@@ -824,6 +831,7 @@ export const itineraries: Itinerary[] = [
     title: "Four Days in Nashville",
     destination: "Nashville",
     country: "United States",
+    coords: { lat: 36.1627, lon: -86.7816 },
     duration: "4 days",
     season: "Winter",
     summary:

@@ -32,6 +32,8 @@ export type Guide = {
   destination: string;
   country: string;
   cover: string;
+  /** Where the pin goes on the A-Z map. */
+  coords: { lat: number; lon: number };
   summary: string;
   teaser: string;
   tags: string[];
@@ -51,6 +53,7 @@ export const guides: Guide[] = [
     title: "Vienna Recommendations",
     destination: "Vienna",
     country: "Austria",
+    coords: { lat: 48.2082, lon: 16.3738 },
     cover: vienna,
     summary:
       "No itinerary, just the list. Where to drink, what to eat, which museums earn it and which one does not.",
@@ -116,6 +119,7 @@ export const guides: Guide[] = [
     title: "Climbing Kilimanjaro",
     destination: "Kilimanjaro",
     country: "Tanzania",
+    coords: { lat: -3.0674, lon: 37.3556 },
     cover: kilimanjaro,
     label: "GUIDE",
     summary:
@@ -217,6 +221,7 @@ export const guides: Guide[] = [
     title: "Barcelona Recommendations",
     destination: "Barcelona",
     country: "Spain",
+    coords: { lat: 41.3874, lon: 2.1686 },
     cover: barcelona,
     summary:
       "Montserrat, the Bunkers at sunset, the Gaudí worth queuing for, and two places to eat.",
@@ -253,6 +258,7 @@ export const guides: Guide[] = [
     title: "Malta Recommendations",
     destination: "Malta",
     country: "Malta",
+    coords: { lat: 35.9375, lon: 14.3754 },
     cover: malta,
     summary: "A short list of places to eat and drink, from Valletta outwards.",
     teaser:
@@ -278,6 +284,7 @@ export const guides: Guide[] = [
     title: "Miami Recommendations",
     destination: "Miami",
     country: "United States",
+    coords: { lat: 25.7617, lon: -80.1918 },
     cover: miami,
     summary:
       "Where to eat, where it turns into a club, and the order we did it in over three nights.",
@@ -316,6 +323,7 @@ export const guides: Guide[] = [
     title: "Reykjavík Restaurants",
     destination: "Reykjavík",
     country: "Iceland",
+    coords: { lat: 64.1466, lon: -21.9426 },
     cover: reykjavik,
     summary: "Six places to eat in Reykjavík, and the one that stood out.",
     teaser:
@@ -347,6 +355,7 @@ export const guides: Guide[] = [
     title: "Bordeaux Recommendations",
     destination: "Bordeaux",
     country: "France",
+    coords: { lat: 44.8378, lon: -0.5792 },
     cover: bordeaux,
     summary:
       "One vineyard hotel worth the whole trip, a tasting menu in the city, and a day out in Saint-Émilion.",
@@ -396,6 +405,7 @@ export const guides: Guide[] = [
     title: "Nice Recommendations",
     destination: "Nice",
     country: "France",
+    coords: { lat: 43.7102, lon: 7.262 },
     cover: nice,
     summary:
       "Tours worth booking, three restaurants in the old town, and the beach club to spend a day at.",
@@ -462,6 +472,7 @@ export const guides: Guide[] = [
     title: "Charleston Recommendations",
     destination: "Charleston",
     country: "United States",
+    coords: { lat: 32.7765, lon: -79.9311 },
     cover: charleston,
     summary:
       "The reservations worth chasing, the casual places I went back to, and where to drink.",
@@ -538,6 +549,7 @@ export const guides: Guide[] = [
     title: "Vermont Recommendations",
     destination: "Vermont",
     country: "United States",
+    coords: { lat: 42.96, lon: -72.89 },
     cover: vermont,
     summary:
       "Where to eat around Mount Snow, four hikes graded by effort, and the shops worth a detour.",
