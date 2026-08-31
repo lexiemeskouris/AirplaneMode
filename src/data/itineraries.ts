@@ -2168,9 +2168,11 @@ export const itineraries: Itinerary[] = [
         note: "Eat at every hot dog and kebab stand. They are so good.",
         places: [
           {
-            name: "Würstelstand",
-            url: "https://www.google.com/maps/place/W%C3%BCrstelstand/@48.2114965,16.3773391,20.86z/data=!4m19!1m12!4m11!1m6!1m2!1s0x476d07bbd806e0e5:0x5fa5f935f7f0ca57!2sSigmund+Freud+Museum,+Berggasse,+Vienna,+Austria!2m2!1d16.3630759!2d48.2186272!1m3!2m2!1d16.3771171!2d48.2113613!3m5!1s0x476d07a0510894b1:0x2b0e892b270738ec!8m2!3d48.2115422!4d16.3775781!16s%2Fg%2F11b7tvq97h?entry=ttu&g_ep=EgoyMDI2MDEwNy4wIKXMDSoASAFQAw%3D%3D",
-            note: "This one literally changed my life. I ate it three times.",
+            // Lexie's own pin, so the link is the exact coordinates rather
+            // than a search that could land on a different stand.
+            name: "The kebab stand at Schwedenplatz",
+            url: "https://www.google.com/maps/search/?api=1&query=48.21179,16.37670",
+            note: "The best one. It literally changed my life. I ate it three times.",
           },
         ],
       },
