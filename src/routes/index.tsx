@@ -196,6 +196,9 @@ function Index() {
           ))}
           {guides.map((g) => {
             const spots = g.sections.reduce((n, s) => n + (s.places?.length ?? 0), 0);
+            const tips = g.sections.reduce((n, s) => n + (s.items?.length ?? 0), 0);
+            // Count whichever the page is actually made of: "2 SPOTS" would
+            // undersell a guide that is sixty pieces of advice.
             return (
               <Tile
                 key={g.slug}
@@ -205,8 +208,8 @@ function Index() {
                 title={g.title}
                 summary={g.summary}
                 tags={g.tags}
-                chipA="RECS"
-                chipB={`${spots} SPOTS`}
+                chipA={g.label ?? "RECS"}
+                chipB={spots >= tips ? `${spots} SPOTS` : `${tips} TIPS`}
                 cta="See the list"
               />
             );
