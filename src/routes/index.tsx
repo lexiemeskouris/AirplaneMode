@@ -32,10 +32,6 @@ function Index() {
       {/* Hero intro band */}
       <section className="mx-auto max-w-7xl px-6 pt-20 pb-16">
         <div className="max-w-3xl">
-          <span className="mb-6 inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-accent">
-            <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
-            Live Travel Feed
-          </span>
           <h1 className="font-display text-5xl font-extrabold leading-[1.05] tracking-tight text-foreground md:text-8xl">
             Less planning.
             <br />
@@ -134,11 +130,6 @@ function Index() {
 
               {/* Text panel */}
               <div className="flex flex-col justify-center md:w-[400px]">
-                <p
-                  className={`mb-2 text-sm font-bold uppercase tracking-widest ${it.gated ? "text-muted-foreground/70" : "text-primary"}`}
-                >
-                  {it.destination}, {it.country}
-                </p>
                 <h2
                   className={`mb-4 font-display text-4xl font-extrabold tracking-tight text-foreground ${it.gated ? "opacity-60" : ""}`}
                 >
