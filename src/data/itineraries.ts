@@ -5,12 +5,11 @@ import taipei from "@/assets/taipei.svg";
 import amsterdam from "@/assets/amsterdam.svg";
 import nashville from "@/assets/nashville.svg";
 
-/** A named venue, with the map link and address if we have them. */
+/** A named venue, with its map link if we have a real one. */
 export type Place = {
   name: string;
   /** Map link. Rendered as the place's link when present. */
   url?: string;
-  address?: string;
   /** Short aside, e.g. why it is worth going or where it sits in the night. */
   note?: string;
   /**
@@ -104,13 +103,13 @@ export const itineraries: Itinerary[] = [
         activities: [
           {
             time: "21:00",
-            description: "Land in Bilbao.",
+            description: "Land at Bilbao Airport.",
             places: [{ name: "Bilbao Airport", near: "Bilbao, Spain" }],
           },
           { description: "Bus from Bilbao to San Sebastián." },
           {
-            description: "Check in and stay in the Old Town - everything below is walkable from there.",
-            places: [{ name: "Parte Vieja (Old Town)" }],
+            description: "Check in and stay in Parte Vieja, the Old Town - everything below is walkable from there.",
+            places: [{ name: "Parte Vieja" }],
           },
         ],
       },
@@ -121,9 +120,9 @@ export const itineraries: Itinerary[] = [
           { description: "Wake up at leisure." },
           {
             description: "Coffee at Simona, then walk the length of the La Concha promenade.",
-            places: [{ name: "Simona Cafe" }, { name: "Paseo de La Concha" }],
+            places: [{ name: "Simona" }, { name: "La Concha promenade" }],
           },
-          { description: "Beach time at La Concha.", places: [{ name: "La Concha Beach" }] },
+          { description: "Beach time at La Concha.", places: [{ name: "La Concha" }] },
           {
             description: "Pintxos lunch at La Cuchara de San Telmo.",
             places: [{ name: "La Cuchara de San Telmo" }],
@@ -142,12 +141,10 @@ export const itineraries: Itinerary[] = [
               {
                 name: "Casa Valles",
                 url: "https://goo.gl/maps/b8UnGGnGeJEm4aUEA",
-                address: "Calle Los Reyes Católicos, 10, 20006 Donostia-San Sebastian, Gipuzkoa, Spain",
               },
               {
                 name: "KATA4",
                 url: "https://goo.gl/maps/Wa4azttoVbzpSD5A6",
-                address: "Santa Catalina Plazatxoa, 4, 20004 Donostia, Gipuzkoa, Spain",
               },
               {
                 name: "Bar El Pícaro",
@@ -156,12 +153,10 @@ export const itineraries: Itinerary[] = [
               {
                 name: "Curdelón",
                 url: "https://goo.gl/maps/HSHsKqeE9XkfqY2a6",
-                address: "Kolon Pasealekua, 35, 20002 Donostia, Gipuzkoa",
               },
               {
                 name: "Casa Senra Donostia",
                 url: "https://goo.gl/maps/gryTHyA7TUjrxJJ29",
-                address: "San Francisco Kalea, 20002 Donostia, Gipuzkoa, Spain",
                 note: "Ending spot.",
               },
             ],
@@ -183,17 +178,17 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "Monte Igueldo" }],
           },
           {
-            description: "Visit the tower and the amusement park.",
+            description: "Visit the Monte Igueldo Tower and the Monte Igueldo Amusement Park.",
             places: [
-              { name: "Torreón de Monte Igueldo" },
-              { name: "Parque de Atracciones Monte Igueldo" },
+              { name: "Monte Igueldo Tower" },
+              { name: "Monte Igueldo Amusement Park" },
             ],
           },
           {
-            description: "Lunch at Ganbara.",
-            places: [{ name: "Ganbara", note: "Anthony Bourdain's favourite spot." }],
+            description: "Lunch at Ganbara, Anthony Bourdain's favourite spot.",
+            places: [{ name: "Ganbara" }],
           },
-          { description: "Beach time at Zurriola.", places: [{ name: "Zurriola Beach" }] },
+          { description: "Beach time at Zurriola.", places: [{ name: "Zurriola" }] },
           { description: "Shower and change." },
           {
             time: "20:00",
@@ -214,12 +209,12 @@ export const itineraries: Itinerary[] = [
           { description: "Check out and leave your bags at the hotel." },
           {
             description: "Coffee and a walk along the La Concha promenade.",
-            places: [{ name: "Paseo de La Concha" }],
+            places: [{ name: "La Concha promenade" }],
           },
           { description: "Lunch at Casa Urola.", places: [{ name: "Casa Urola" }] },
-          { description: "Beach time at Ondarreta.", places: [{ name: "Ondarreta Beach" }] },
+          { description: "Beach time at Ondarreta.", places: [{ name: "Ondarreta" }] },
           {
-            description: "Shopping.",
+            description: "Shopping at Zara, Calzedonia and El Ganso.",
             places: [{ name: "Zara" }, { name: "Calzedonia" }, { name: "El Ganso" }],
           },
           {
@@ -262,11 +257,11 @@ export const itineraries: Itinerary[] = [
           {
             time: "20:35",
             description: "Fly from London Gatwick.",
-            places: [{ name: "London Gatwick Airport", near: "London, UK" }],
+            places: [{ name: "London Gatwick", near: "London, UK" }],
           },
           {
             time: "23:25",
-            description: "Land in Tunis.",
+            description: "Land at Tunis-Carthage Airport.",
             places: [{ name: "Tunis-Carthage Airport", near: "Tunis, Tunisia" }],
           },
           {
@@ -282,7 +277,7 @@ export const itineraries: Itinerary[] = [
         activities: [
           {
             description: "Visit the Bardo Museum.",
-            places: [{ name: "Bardo National Museum", near: "Tunis, Tunisia" }],
+            places: [{ name: "Bardo Museum", near: "Tunis, Tunisia" }],
           },
           {
             description: "Taxi to the Medina of Tunis.",
@@ -331,7 +326,7 @@ export const itineraries: Itinerary[] = [
           },
           { description: "Back to the Airbnb to change for dinner." },
           {
-            description: "Taxi to La Marsa and walk along the beach.",
+            description: "Taxi to La Marsa and walk along La Marsa Beach.",
             places: [
               { name: "La Marsa", near: "Tunisia" },
               { name: "La Marsa Beach", near: "La Marsa, Tunisia" },
@@ -396,7 +391,7 @@ export const itineraries: Itinerary[] = [
         activities: [
           {
             time: "10:50",
-            description: "Land.",
+            description: "Land at Berlin Brandenburg Airport.",
             places: [{ name: "Berlin Brandenburg Airport" }],
           },
           { time: "12:00", description: "Drop bags at the hotel." },
@@ -405,7 +400,6 @@ export const itineraries: Itinerary[] = [
             places: [
               {
                 name: "Rüyam Gemüse Kebab",
-                address: "Hauptstraße 36, 10827 Berlin, Germany",
               },
             ],
           },
@@ -415,8 +409,8 @@ export const itineraries: Itinerary[] = [
           },
           {
             time: "14:00",
-            description: "Two-hour walking tour, meeting at the Quadriga.",
-            places: [{ name: "Quadriga", address: "Pariser Platz, 10117 Berlin, Germany" }],
+            description: "Two-hour walking tour, meeting at the Quadriga on Pariser Platz.",
+            places: [{ name: "Quadriga" }],
           },
           { time: "17:00", description: "Nap." },
           {
@@ -428,7 +422,7 @@ export const itineraries: Itinerary[] = [
           {
             time: "22:00",
             description: "Doors open at KitKat.",
-            places: [{ name: "KitKatClub" }],
+            places: [{ name: "KitKat" }],
           },
           { time: "23:30", description: "Queue." },
         ],
@@ -440,7 +434,7 @@ export const itineraries: Itinerary[] = [
           { description: "Sleep in." },
           {
             description: "Late brunch at Annelie's.",
-            places: [{ name: "Annelies" }],
+            places: [{ name: "Annelie's" }],
           },
           {
             description: "Explore the area, including the East Side Gallery.",
@@ -479,18 +473,18 @@ export const itineraries: Itinerary[] = [
               { name: "Alexanderplatz" },
               { name: "Vabali Spa" },
               { name: "Café am Neuen See" },
-              { name: "Holzmarkt", address: "Holzmarktstraße 25, Berlin, Germany" },
+              { name: "Holzmarkt" },
             ],
           },
           {
             time: "17:15",
-            description: "Climb the Reichstag building. Tickets have to be applied for in advance.",
-            places: [{ name: "Reichstag Building" }],
+            description: "Climb the Reichstag. Tickets have to be applied for in advance.",
+            places: [{ name: "Reichstag" }],
           },
           { time: "19:15", description: "Leave for the airport." },
           {
             time: "21:45",
-            description: "Flight from Berlin Brandenburg.",
+            description: "Flight from Berlin Brandenburg Airport.",
             places: [{ name: "Berlin Brandenburg Airport" }],
           },
         ],
@@ -525,7 +519,7 @@ export const itineraries: Itinerary[] = [
         activities: [
           {
             time: "09:00",
-            description: "Land at TPE.",
+            description: "Land at Taoyuan International Airport.",
             places: [{ name: "Taoyuan International Airport", near: "Taoyuan, Taiwan" }],
           },
           {
@@ -535,12 +529,12 @@ export const itineraries: Itinerary[] = [
           },
           {
             description: "Lunch at Azie on the hotel credit, then check in and rest.",
-            places: [{ name: "Azie Regent Taipei" }],
+            places: [{ name: "Azie" }],
           },
           {
             time: "14:45",
             description: "Walk to the Da'an area.",
-            places: [{ name: "Da'an District" }],
+            places: [{ name: "Da'an" }],
           },
           {
             time: "15:45",
@@ -566,7 +560,7 @@ export const itineraries: Itinerary[] = [
         activities: [
           { time: "09:00", description: "Breakfast at the hotel." },
           {
-            description: "Taipei Miniature Museum.",
+            description: "Visit the Miniatures Museum of Taiwan.",
             places: [{ name: "Miniatures Museum of Taiwan" }],
           },
           {
@@ -587,16 +581,16 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "Elephant Mountain" }],
           },
           {
-            description: "Put your name down at Din Tai Fung, then drink at UNO Taipei while you wait.",
+            description: "Put your name down at Din Tai Fung Taipei 101, then drink at UNO Taipei while you wait.",
             places: [{ name: "Din Tai Fung Taipei 101" }, { name: "UNO Taipei" }],
           },
           {
-            description: "Dinner at Din Tai Fung at Taipei 101.",
+            description: "Dinner at Din Tai Fung Taipei 101.",
             places: [{ name: "Din Tai Fung Taipei 101" }],
           },
           {
             description: "Drinks at Draft Land, or KOR, or both.",
-            places: [{ name: "Draft Land" }, { name: "KOR Taipei" }],
+            places: [{ name: "Draft Land" }, { name: "KOR" }],
           },
         ],
       },
@@ -616,7 +610,7 @@ export const itineraries: Itinerary[] = [
           { description: "Head back to the hotel." },
           {
             time: "14:00",
-            description: "Leave for TPE.",
+            description: "Leave for Taoyuan International Airport.",
             places: [{ name: "Taoyuan International Airport", near: "Taoyuan, Taiwan" }],
           },
           { time: "17:40", description: "Fly to Hong Kong." },
@@ -663,11 +657,11 @@ export const itineraries: Itinerary[] = [
           {
             time: "18:55",
             description: "Flight departs London Luton.",
-            places: [{ name: "London Luton Airport", near: "Luton, UK" }],
+            places: [{ name: "London Luton", near: "Luton, UK" }],
           },
           {
             time: "21:05",
-            description: "Land in Amsterdam.",
+            description: "Land at Schiphol Airport.",
             places: [{ name: "Schiphol Airport", near: "Amsterdam, Netherlands" }],
           },
           { time: "21:30", description: "Through the airport and on to the hotel." },
@@ -715,7 +709,7 @@ export const itineraries: Itinerary[] = [
           { time: "17:30", description: "Hotel break, shower, get ready." },
           {
             time: "18:45",
-            description: "Transfer for the cruise.",
+            description: "Transfer to Prins Hendrikkade 33A for the cruise.",
             places: [{ name: "Prins Hendrikkade 33A" }],
           },
           { time: "19:30", description: "Booze cruise on the canal until 20:30." },
@@ -727,7 +721,7 @@ export const itineraries: Itinerary[] = [
           {
             time: "22:30",
             description: "Walk through the Red Light District.",
-            places: [{ name: "De Wallen" }],
+            places: [{ name: "Red Light District" }],
           },
           { time: "00:30", description: "Bars if there is still energy, otherwise home." },
         ],
@@ -742,11 +736,11 @@ export const itineraries: Itinerary[] = [
           },
           {
             description: "Walk through the Lindengracht market. Saturdays only.",
-            places: [{ name: "Lindengracht Market" }],
+            places: [{ name: "Lindengracht market" }],
           },
           {
             description: "Apple pie at Winkel 43, or a pancake at the Pancake Bakery.",
-            places: [{ name: "Winkel 43" }, { name: "The Pancake Bakery" }],
+            places: [{ name: "Winkel 43" }, { name: "Pancake Bakery" }],
           },
           {
             description: "Walk through the Bloemenmarkt, the floating flower market.",
@@ -790,10 +784,10 @@ export const itineraries: Itinerary[] = [
           { time: "11:00", description: "Secret Food Tour until 13:00." },
           {
             time: "13:30",
-            description: "Wander the Jordaan and the Nine Streets. Boutiques, coffee, canals.",
+            description: "Wander the Jordaan and the Nine Streets. Boutiques, coffee, canals, and beers at Waterkant.",
             places: [
               { name: "Jordaan" },
-              { name: "The Nine Streets" },
+              { name: "Nine Streets" },
               { name: "Waterkant", note: "Waterfront beers." },
             ],
           },
@@ -804,13 +798,9 @@ export const itineraries: Itinerary[] = [
           },
           {
             time: "16:30",
-            description: "Harry Styles Together, Together pop-up.",
+            description: "The Harry Styles Together Together Pop-Up on Looiergracht, open 12:00 to 19:00.",
             places: [
-              {
-                name: "Together Together Pop-Up",
-                address: "Looiergracht 60, 1016 VT Amsterdam",
-                note: "Public hours 12:00 to 19:00.",
-              },
+              { name: "Together Together Pop-Up" },
             ],
           },
           {
@@ -820,7 +810,7 @@ export const itineraries: Itinerary[] = [
           { time: "19:15", description: "Back to the hotel to collect the bags." },
           {
             time: "19:30",
-            description: "Head to Schiphol.",
+            description: "Head to Schiphol Airport.",
             places: [{ name: "Schiphol Airport", near: "Amsterdam, Netherlands" }],
           },
           { time: "21:30", description: "Flight departs Amsterdam." },
@@ -857,7 +847,7 @@ export const itineraries: Itinerary[] = [
         activities: [
           {
             time: "10:00",
-            description: "Land.",
+            description: "Land at Nashville International Airport.",
             places: [{ name: "Nashville International Airport" }],
           },
           {
@@ -866,19 +856,19 @@ export const itineraries: Itinerary[] = [
           },
           { time: "12:00", description: "Early check in." },
           {
-            description: "Walk around campus.",
+            description: "Walk around the Vanderbilt University campus.",
             places: [{ name: "Vanderbilt University" }],
           },
           { description: "Back to change for dinner." },
           {
             time: "18:15",
             description: "Dinner at Rolf & Daughters.",
-            places: [{ name: "Rolf and Daughters" }],
+            places: [{ name: "Rolf & Daughters" }],
           },
           {
             time: "20:30",
             description: "The Listening Room.",
-            places: [{ name: "The Listening Room Cafe" }],
+            places: [{ name: "The Listening Room" }],
           },
         ],
       },
@@ -890,13 +880,13 @@ export const itineraries: Itinerary[] = [
           {
             time: "11:30",
             description: "Massages at Woodhouse.",
-            places: [{ name: "Woodhouse Spa" }],
+            places: [{ name: "Woodhouse" }],
           },
           { description: "Relax." },
           {
             time: "13:30",
             description: "Barbecue lunch at Edley's.",
-            places: [{ name: "Edley's Bar-B-Que" }],
+            places: [{ name: "Edley's" }],
           },
           {
             description: "Walk around 12 South, and stop at Five Daughters Bakery.",
@@ -905,7 +895,7 @@ export const itineraries: Itinerary[] = [
           {
             time: "19:30",
             description: "Dinner at Chauhan.",
-            places: [{ name: "Chauhan Ale and Masala House" }],
+            places: [{ name: "Chauhan" }],
           },
           {
             description: "Drinking on Broadway.",
@@ -928,7 +918,7 @@ export const itineraries: Itinerary[] = [
           },
           {
             description: "If hungry, snacks and live music at 5th & Broadway.",
-            places: [{ name: "Fifth + Broadway" }],
+            places: [{ name: "5th & Broadway" }],
           },
           {
             time: "20:00",
@@ -948,7 +938,7 @@ export const itineraries: Itinerary[] = [
           },
           {
             time: "16:10",
-            description: "Flight.",
+            description: "Flight out of Nashville International Airport.",
             places: [{ name: "Nashville International Airport" }],
           },
         ],
