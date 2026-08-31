@@ -27,7 +27,10 @@ jobs:
           node-version: 24
 
       - name: Install dependencies
-        run: npm install --no-audit --no-fund
+        # npm ci installs exactly what package-lock.json pins. npm install
+        # re-resolves every range on every run, which broke this workflow when
+        # a half-published upstream release appeared inside a caret range.
+        run: npm ci --no-audit --no-fund
 
       - name: Build static site
         # GITHUB_PAGES switches vite.config.ts to SPA mode with the /AirplaneMood/
