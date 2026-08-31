@@ -39,19 +39,22 @@ function Index() {
           </h1>
           <p className="mt-6 max-w-xl text-lg font-medium leading-relaxed text-muted-foreground md:text-xl">
             High-energy itineraries for the generation that never stops. Street
-            food, fast moves, and zero filler. Read the free guides or unlock the
-            deep dives with a coffee.
+            food, fast moves, and zero filler. Real places, hour by hour, with
+            every stop linked.
           </p>
           <div className="mt-8 flex flex-wrap gap-x-8 gap-y-2 text-sm font-semibold text-muted-foreground">
             <span>
               <strong className="font-extrabold text-foreground">{free.length}</strong>{" "}
-              free guides
+              {free.length === 1 ? "free itinerary" : "free itineraries"}
             </span>
-            <span>
-              <strong className="font-extrabold text-foreground">{gated.length}</strong>{" "}
-              supporter deep dives
-            </span>
-            <span>Updated each season</span>
+            {/* Only worth saying when there is something gated to say it about. */}
+            {gated.length > 0 && (
+              <span>
+                <strong className="font-extrabold text-foreground">{gated.length}</strong>{" "}
+                {gated.length === 1 ? "supporter deep dive" : "supporter deep dives"}
+              </span>
+            )}
+            <span>More on the way</span>
           </div>
         </div>
       </section>
