@@ -1,7 +1,6 @@
 import type { Activity, Place } from "./itineraries";
 import kilimanjaro from "@/assets/kilimanjaro.svg";
 import barcelona from "@/assets/barcelona.svg";
-import malta from "@/assets/malta.svg";
 import miami from "@/assets/miami.svg";
 import reykjavik from "@/assets/reykjavik.svg";
 import bordeaux from "@/assets/bordeaux.svg";
@@ -190,32 +189,6 @@ export const guides: Guide[] = [
       {
         title: "Food",
         places: [{ name: "Berbena" }, { name: "Bar Cañete" }],
-      },
-    ],
-  },
-  {
-    slug: "malta",
-    title: "Malta Recommendations",
-    destination: "Malta",
-    country: "Malta",
-    coords: { lat: 35.9375, lon: 14.3754 },
-    cover: malta,
-    summary: "A short list of places to eat and drink, from Valletta outwards.",
-    teaser:
-      "No itinerary for Malta, just the places worth booking. Cafe Society is in Valletta; the rest are spread around the island.",
-    tags: ["#Valletta", "#BeefBar", "#Paranga"],
-    sections: [
-      {
-        title: "Eat and drink",
-        places: [
-          { name: "Cafe Society", near: "Valletta, Malta" },
-          { name: "Paranga" },
-          { name: "Rafael's" },
-          { name: "Villa Bologna Restaurant" },
-          { name: "LOA" },
-          { name: "Beef Bar" },
-          { name: "Taproom" },
-        ],
       },
     ],
   },

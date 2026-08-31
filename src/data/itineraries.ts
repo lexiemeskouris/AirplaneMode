@@ -24,6 +24,15 @@ import lisbon from "@/assets/lisbon.svg";
 import ecuador from "@/assets/ecuador.svg";
 import japan from "@/assets/japan.svg";
 import mexicoCity from "@/assets/mexico-city.svg";
+import madeira from "@/assets/madeira.svg";
+import helsinki from "@/assets/helsinki.svg";
+import egypt from "@/assets/egypt.svg";
+import istanbul from "@/assets/istanbul.svg";
+import krakow from "@/assets/krakow.svg";
+import tuscany from "@/assets/tuscany.svg";
+import tromso from "@/assets/tromso.svg";
+import seoul from "@/assets/seoul.svg";
+import malta from "@/assets/malta.svg";
 
 /** A named venue, with its map link if we have a real one. */
 export type Place = {
@@ -4195,6 +4204,1251 @@ export const itineraries: Itinerary[] = [
           { time: "13:00", description: "Check out." },
           { time: "13:15", description: "Leave for the airport, about twenty minutes." },
           { time: "15:35", description: "Flight out." },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "madeira",
+    title: "Three Days in Madeira",
+    destination: "Madeira",
+    country: "Portugal",
+    coords: { lat: 32.6669, lon: -16.9241 },
+    duration: "3 days",
+    season: "Spring",
+    summary:
+      "Whale watching, a wicker toboggan down a hill, and a sunrise hike between the two highest peaks.",
+    cover: madeira,
+    gated: false,
+    teaser:
+      "Three days out of Funchal and hard-run: a boat, a cable car, a jeep tour of the north, and a 06:00 bus to catch sunrise on Pico do Arieiro before walking to Pico Ruivo.",
+    tags: ["#PicoDoArieiro", "#Toboggan", "#Levada"],
+    highlights: [
+      "Sunrise at Pico do Arieiro, then the PR1 across to Pico Ruivo",
+      "The wicker toboggan down from Monte",
+      "Whale watching out of Funchal marina",
+      "A jeep tour of Porto Moniz, Seixal and the Fanal Forest",
+      "Two dinners by the same chef, at either end of the trip",
+    ],
+    days: [
+      {
+        day: "Arrival",
+        title: "Land in Funchal",
+        activities: [{ time: "18:40", description: "Land, and get to Funchal." }],
+      },
+      {
+        day: "Day One",
+        title: "Whales, a Toboggan, and a Levada",
+        activities: [
+          {
+            time: "08:00",
+            description: "Coffee and matcha at Motya Coffee Shop.",
+            places: [{ name: "Motya Coffee Shop", near: "Funchal, Madeira" }],
+          },
+          {
+            time: "08:30",
+            description: "Be at Marina do Funchal, Gate 4.",
+            places: [{ name: "Marina do Funchal" }],
+          },
+          { time: "09:00", description: "Whale watching tour, until 12:00." },
+          {
+            time: "13:00",
+            description: "Cable car from Funchal up to Monte.",
+            places: [{ name: "Monte", near: "Funchal, Madeira" }],
+          },
+          {
+            time: "13:15",
+            description: "Queue for the toboggan, and ride it down to Livramento.",
+            places: [{ name: "Monte Toboggan Run", near: "Funchal, Madeira" }],
+          },
+          {
+            description: "Lunch at Restaurante Alta Vista, five to ten minutes away.",
+            places: [{ name: "Restaurante Alta Vista", near: "Funchal, Madeira" }],
+          },
+          {
+            description: "The Levada dos Tornos, an hour and a half out and back.",
+            places: [{ name: "Levada dos Tornos", near: "Madeira" }],
+          },
+          {
+            time: "20:45",
+            description: "Dinner at Akua.",
+            places: [{ name: "Akua", near: "Funchal, Madeira" }],
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "The North, by Jeep",
+        activities: [
+          {
+            time: "08:00",
+            description: "Coffee and sandwiches at Leque.",
+            places: [{ name: "Leque", near: "Funchal, Madeira" }],
+          },
+          {
+            time: "09:00",
+            description:
+              "Jeep tour until 17:00: Porto Moniz, Seixal, the Fanal Forest and the Cabo Girão skywalk.",
+            places: [
+              { name: "Porto Moniz", near: "Madeira" },
+              { name: "Seixal", near: "Madeira" },
+              { name: "Fanal Forest", near: "Madeira" },
+              { name: "Cabo Girão", near: "Madeira" },
+            ],
+          },
+          {
+            time: "17:30",
+            description: "Put your name down at Restaurante Informal.",
+            places: [{ name: "Restaurante Informal", near: "Funchal, Madeira" }],
+          },
+          {
+            time: "17:45",
+            description: "Wine tasting at Blandy's Wine Lodge. It closes at 18:30.",
+            places: [{ name: "Blandy's Wine Lodge", near: "Funchal, Madeira" }],
+          },
+          {
+            description: "Dinner at Restaurante Informal, then drinks at Revolucion Cocktail Bar.",
+            places: [{ name: "Revolucion Cocktail Bar", near: "Funchal, Madeira" }],
+          },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "Sunrise on Pico do Arieiro",
+        activities: [
+          { time: "06:00", description: "Bus to the Pico do Arieiro car park, arriving 06:45." },
+          {
+            time: "07:10",
+            description: "Walk to the main viewpoint, and sunrise at 07:35.",
+            places: [{ name: "Pico do Arieiro", near: "Madeira" }],
+          },
+          {
+            time: "07:50",
+            description: "Start the PR1 toward Pico Ruivo, reaching the summit around 10:45.",
+            places: [{ name: "Pico Ruivo", near: "Madeira" }],
+          },
+          {
+            time: "11:45",
+            description: "Leave the summit, finishing at Achada do Teixeira around 13:00.",
+            places: [{ name: "Achada do Teixeira", near: "Madeira" }],
+          },
+          {
+            time: "14:00",
+            description: "Late lunch at Kampo.",
+            places: [{ name: "Kampo", near: "Funchal, Madeira" }],
+          },
+          {
+            description: "The Madeira Botanical Garden, if there is anything left in you.",
+            places: [{ name: "Madeira Botanical Garden", near: "Funchal, Madeira" }],
+          },
+          { time: "16:45", description: "Leave for the airport, about twenty minutes." },
+          { time: "19:10", description: "Flight out." },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "helsinki",
+    title: "Helsinki and Tallinn",
+    destination: "Helsinki",
+    country: "Finland",
+    coords: { lat: 60.1699, lon: 24.9384 },
+    duration: "3 days",
+    season: "Winter",
+    summary:
+      "Two Christmas markets, a sauna, and a two hour ferry between two countries.",
+    cover: helsinki,
+    gated: false,
+    teaser:
+      "A day and a half in Helsinki, a ferry across, and a day and a half in Tallinn. Built around the Christmas markets, which is the only part that has to be December.",
+    tags: ["#ChristmasMarket", "#Loyly", "#Tallinn"],
+    notes: [
+      "The Christmas markets are the spine of this one, so it only really works in late November and December. Everything else holds year round.",
+    ],
+    highlights: [
+      "Löyly sauna on the Helsinki waterfront",
+      "The Helsinki Christmas market at Senate Square",
+      "A two hour ferry from Helsinki to Tallinn",
+      "The Tallinn Christmas market, eaten as dinner",
+      "Ice skating at the Harju Street rink",
+    ],
+    days: [
+      {
+        day: "Arrival",
+        title: "Land Late in Helsinki",
+        activities: [
+          { time: "21:55", description: "Land in Helsinki." },
+          { time: "22:40", description: "Into town by train." },
+          {
+            description:
+              "Bardot for wine and small plates, closing at midnight, or Liberty or Death, a speakeasy open until 02:00.",
+            places: [
+              { name: "Bardot", near: "Helsinki, Finland" },
+              { name: "Liberty or Death", near: "Helsinki, Finland" },
+            ],
+          },
+        ],
+      },
+      {
+        day: "Day One",
+        title: "Helsinki, and the Market",
+        activities: [
+          {
+            time: "10:30",
+            description: "Walk by the Oodi library.",
+            places: [{ name: "Oodi Helsinki Central Library" }],
+          },
+          {
+            time: "12:00",
+            description: "The Museum of Architecture and Design.",
+            places: [{ name: "Museum of Finnish Architecture", near: "Helsinki, Finland" }],
+          },
+          {
+            description: "Explore the Design District shops.",
+            places: [{ name: "Design District Helsinki" }],
+          },
+          {
+            time: "14:00",
+            description: "Löyly sauna, until 16:00.",
+            places: [{ name: "Löyly", near: "Helsinki, Finland" }],
+          },
+          {
+            time: "18:00",
+            description:
+              "The Helsinki Christmas market at Senate Square. It closes at 20:00, and the alcohol stops at 22:00.",
+            places: [{ name: "Senate Square", near: "Helsinki, Finland" }],
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "Ferry to Tallinn",
+        activities: [
+          {
+            time: "10:00",
+            description: "Walk to Cafe Regatta.",
+            places: [{ name: "Cafe Regatta", near: "Helsinki, Finland" }],
+          },
+          { time: "12:45", description: "Be at the ferry." },
+          { time: "13:30", description: "Ferry to Tallinn, until 15:30.", places: [{ name: "Tallinn" }] },
+          { time: "16:00", description: "Drop bags at the hotel." },
+          {
+            time: "16:30",
+            description: "The Tallinn Christmas market at Town Hall Square. This is dinner.",
+            places: [{ name: "Town Hall Square", near: "Tallinn, Estonia" }],
+          },
+          {
+            time: "20:00",
+            description: "Ice skating at the Harju Street rink.",
+            places: [{ name: "Harju Street Ice Rink", near: "Tallinn, Estonia" }],
+          },
+          { time: "21:30", description: "Walk around at night." },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "Tallinn",
+        activities: [
+          { description: "Sleep in, then sauna and steam at the hotel." },
+          {
+            description: "Coffee and pastries at Pulla Bakery.",
+            places: [{ name: "Pulla Bakery", near: "Tallinn, Estonia" }],
+          },
+          {
+            description: "St Olaf's Tower, for the panoramic view.",
+            places: [{ name: "St Olaf's Church", near: "Tallinn, Estonia" }],
+          },
+          {
+            description: "Alexander Nevsky Cathedral, and Toompea Hill if you fancy it.",
+            places: [
+              { name: "Alexander Nevsky Cathedral", near: "Tallinn, Estonia" },
+              { name: "Toompea Hill", near: "Tallinn, Estonia" },
+            ],
+          },
+          {
+            description: "Telliskivi Creative City, a bohemian quarter of boutiques and murals.",
+            places: [{ name: "Telliskivi Creative City", near: "Tallinn, Estonia" }],
+          },
+          {
+            time: "19:30",
+            description: "Dinner at Rataskaevu 16.",
+            places: [{ name: "Rataskaevu 16", near: "Tallinn, Estonia" }],
+          },
+        ],
+      },
+      {
+        day: "Departure",
+        title: "Out of Tallinn",
+        activities: [
+          { time: "09:30", description: "Twenty minute taxi to the airport." },
+          { time: "11:45", description: "Flight out." },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "egypt",
+    title: "Eight Days in Egypt",
+    destination: "Egypt",
+    country: "Egypt",
+    coords: { lat: 30.0444, lon: 31.2357 },
+    duration: "8 days",
+    season: "Spring",
+    summary:
+      "Luxor, a four night cruise up the Nile to Aswan and Abu Simbel, then Giza and Cairo with a guide.",
+    cover: egypt,
+    gated: false,
+    teaser:
+      "Four nights on a Nile cruise doing the temples, then three in Cairo for the pyramids and Old Cairo. The cruise and the guides are all booked ahead; the free morning in Zamalek is not.",
+    tags: ["#Nile", "#Giza", "#AbuSimbel"],
+    notes: [
+      "Do not drink the tap water, and do not eat anything unwashed or uncooked unless you really trust the source. Just being careful about food poisoning.",
+      "Modest dress is needed for the guided days in Cairo.",
+    ],
+    highlights: [
+      "A four night cruise from Aswan back down to Luxor",
+      "Abu Simbel",
+      "The High Dam and Philae Temple",
+      "Giza and the Grand Egyptian Museum with a full day guide",
+      "An Old Cairo walking tour with street bites",
+    ],
+    days: [
+      {
+        day: "Day One",
+        title: "Land in Luxor",
+        activities: [
+          {
+            time: "10:00",
+            description: "Flight from London, landing in Luxor at 16:25.",
+            places: [{ name: "Luxor", near: "Egypt" }],
+          },
+          { time: "18:00", description: "Relax at the hotel." },
+          {
+            time: "19:30",
+            description: "Dinner at Restaurant El-Kababgy, about seventeen minutes' walk.",
+            places: [{ name: "El-Kababgy", near: "Luxor, Egypt" }],
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "Down to Aswan, and Onto the Boat",
+        activities: [
+          { time: "07:00", description: "Picked up from the hotel to transfer to Aswan." },
+          {
+            time: "11:30",
+            description: "Pick up the Nile cruise at Aswan.",
+            places: [{ name: "Aswan", near: "Egypt" }],
+          },
+          {
+            time: "14:00",
+            description: "Tour of the High Dam and Philae Temple.",
+            places: [
+              { name: "Aswan High Dam", near: "Egypt" },
+              { name: "Philae Temple", near: "Aswan, Egypt" },
+            ],
+          },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "Abu Simbel",
+        activities: [
+          {
+            description: "Abu Simbel.",
+            places: [{ name: "Abu Simbel", near: "Egypt" }],
+          },
+        ],
+      },
+      {
+        day: "Day Four",
+        title: "Edfu",
+        activities: [
+          {
+            description: "Edfu Temple.",
+            places: [{ name: "Temple of Edfu", near: "Egypt" }],
+          },
+        ],
+      },
+      {
+        day: "Day Five",
+        title: "Off the Boat, On to Cairo",
+        activities: [
+          {
+            description: "Tombs of the Nobles.",
+            places: [{ name: "Tombs of the Nobles", near: "Luxor, Egypt" }],
+          },
+          { time: "14:00", description: "Leave the cruise." },
+          { time: "16:00", description: "Transfer to the airport." },
+          { time: "21:10", description: "Flight from Luxor to Cairo.", places: [{ name: "Cairo" }] },
+        ],
+      },
+      {
+        day: "Day Six",
+        title: "Giza, With a Guide",
+        activities: [
+          {
+            time: "07:30",
+            description:
+              "Full day guided tour until 15:30: the Pyramids of Giza, Khufu, Khafre and Menkaure, the Great Sphinx, and the Grand Egyptian Museum for the Tutankhamun treasures and the royal mummies.",
+            places: [
+              { name: "Pyramids of Giza", near: "Egypt" },
+              { name: "Great Sphinx", near: "Giza, Egypt" },
+              { name: "Grand Egyptian Museum", near: "Giza, Egypt" },
+            ],
+          },
+          {
+            description: "Dinner at Vivo.",
+            places: [{ name: "Vivo", near: "Cairo, Egypt" }],
+          },
+        ],
+      },
+      {
+        day: "Day Seven",
+        title: "Zamalek, Then Old Cairo",
+        activities: [
+          { description: "Breakfast at the hotel, served until 11:00." },
+          {
+            description:
+              "Free morning. Walk the Zamalek shops, the cafes, and the Cairo Marriott garden.",
+            places: [
+              { name: "Zamalek", near: "Cairo, Egypt" },
+              { name: "Mounaya Gallery", near: "Cairo, Egypt" },
+            ],
+          },
+          {
+            time: "14:00",
+            description: "Old Cairo guided walking tour until 17:00: history, culture and street bites.",
+            places: [{ name: "Old Cairo" }],
+          },
+          {
+            description:
+              "Coptic Cairo afterwards, fifteen to twenty-five minutes away, if you have the energy.",
+            places: [
+              { name: "Hanging Church", near: "Cairo, Egypt" },
+              { name: "Saints Sergius and Bacchus Church", near: "Cairo, Egypt" },
+              { name: "Babylon Fortress", near: "Cairo, Egypt" },
+              { name: "Coptic Museum", near: "Cairo, Egypt" },
+            ],
+          },
+          {
+            description: "Dinner at Pier 88 or Em Sherif Cafe.",
+            places: [
+              { name: "Pier 88", near: "Cairo, Egypt" },
+              { name: "Em Sherif Cafe", near: "Cairo, Egypt" },
+            ],
+          },
+        ],
+      },
+      {
+        day: "Day Eight",
+        title: "The Pool, Then Home",
+        activities: [
+          { description: "Breakfast at the hotel." },
+          { description: "Enjoy the hotel: heated pool, gym." },
+          { description: "Late lunch nearby, and any last sites." },
+          { time: "15:00", description: "Leave the hotel." },
+          { time: "17:15", description: "Flight out." },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "istanbul",
+    title: "Three Days in Istanbul",
+    destination: "Istanbul",
+    country: "Turkey",
+    coords: { lat: 41.0082, lon: 28.9784 },
+    duration: "3 days",
+    season: "Early Autumn",
+    summary:
+      "The old city in one morning, sunset up in Bebek, and a ferry over to the Asian side.",
+    cover: istanbul,
+    gated: false,
+    teaser:
+      "The famous sights are done in a single tight morning so the rest of the trip can be Bebek at sunset, the Asian side, and Balat. There are late nights built in.",
+    tags: ["#HagiaSophia", "#Bebek", "#Balat"],
+    highlights: [
+      "The Spice Bazaar, Hagia Sophia, the Cistern and the Blue Mosque before lunch",
+      "Sunset along the waterfront at Bebek",
+      "A hammam near Galata",
+      "The ferry to Üsküdar and the markets in Kadıköy",
+      "Turkish breakfast at Privato, then the top of Galata Tower",
+    ],
+    days: [
+      {
+        day: "Arrival",
+        title: "Land, Then Out",
+        activities: [
+          { time: "20:30", description: "Land in Istanbul, and get in by 21:30." },
+          { description: "Casual dinner nearby." },
+          {
+            description: "Cocktails at Biz Istanbul, then out.",
+            places: [
+              { name: "Biz Istanbul" },
+              { name: "Upperist", near: "Istanbul, Turkey" },
+              { name: "Komun Galataport", near: "Istanbul, Turkey" },
+              { name: "Sail Loft Vakkorama", near: "Istanbul, Turkey" },
+              { name: "Geyik Cihangir", near: "Istanbul, Turkey", note: "A few more bars right next to it." },
+            ],
+          },
+        ],
+      },
+      {
+        day: "Day One",
+        title: "The Old City, Then Bebek",
+        activities: [
+          {
+            time: "10:00",
+            description: "The Spice Bazaar, with breakfast pastries and coffee nearby.",
+            places: [{ name: "Spice Bazaar", near: "Istanbul, Turkey" }],
+          },
+          {
+            description:
+              "Street food along the way: maraş ice cream, simit, baklava.",
+          },
+          {
+            time: "12:30",
+            description: "Hagia Sophia.",
+            places: [{ name: "Hagia Sophia" }],
+          },
+          {
+            time: "13:00",
+            description: "The Basilica Cistern, then the Blue Mosque at 13:30.",
+            places: [
+              { name: "Basilica Cistern", near: "Istanbul, Turkey" },
+              { name: "Blue Mosque", near: "Istanbul, Turkey" },
+            ],
+          },
+          {
+            time: "14:00",
+            description: "Walk Yerebatan Street, then the Grand Bazaar at 14:30.",
+            places: [{ name: "Grand Bazaar", near: "Istanbul, Turkey" }],
+          },
+          {
+            time: "15:00",
+            description: "Topkapi Palace, if you want to go in.",
+            places: [{ name: "Topkapi Palace", near: "Istanbul, Turkey" }],
+          },
+          { time: "16:00", description: "Back to change and relax." },
+          {
+            time: "17:00",
+            description: "Up to Bebek, and a pre-dinner cocktail at Lucca. Book it.",
+            places: [
+              { name: "Bebek", near: "Istanbul, Turkey" },
+              { name: "Lucca", near: "Bebek, Istanbul" },
+            ],
+          },
+          {
+            description:
+              "Walk the waterfront to Momo for sunset. It sets at 18:53, so aim to be there by 18:15.",
+            places: [{ name: "Momo", near: "Bebek, Istanbul" }],
+          },
+          {
+            description:
+              "Carry on down the waterfront to Goose 25 if there is time, then meander through Arnavutköy.",
+            places: [
+              { name: "Goose 25", near: "Istanbul, Turkey" },
+              { name: "Arnavutköy", near: "Istanbul, Turkey" },
+              { name: "Alexandra Arnavutkoy", near: "Istanbul, Turkey", note: "Another drink option." },
+            ],
+          },
+          {
+            time: "21:00",
+            description: "Dinner at Ali Ocakbaşı Karaköy, Michelin recommended.",
+            places: [{ name: "Ali Ocakbasi Karakoy", near: "Istanbul, Turkey" }],
+          },
+          {
+            time: "01:00",
+            description: "Out. MiniMuzikhol, maybe.",
+            places: [{ name: "MiniMuzikhol", near: "Istanbul, Turkey" }],
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "Hammam, and the Asian Side",
+        activities: [
+          {
+            description:
+              "Breakfast at Cuma, before or after the baths depending on when you surface.",
+            places: [{ name: "Cuma", near: "Istanbul, Turkey" }],
+          },
+          { time: "11:00", description: "Turkish hammam and baths near Galata. Optional." },
+          {
+            description: "Ferry over to the Asian side, and explore Üsküdar, stopping at Beylerbeyi Palace.",
+            places: [
+              { name: "Üsküdar", near: "Istanbul, Turkey" },
+              { name: "Beylerbeyi Palace", near: "Istanbul, Turkey" },
+            ],
+          },
+          {
+            time: "16:00",
+            description: "Asian side street food tour in Kadıköy. Optional.",
+            places: [{ name: "Kadıköy", near: "Istanbul, Turkey" }],
+          },
+          { time: "20:00", description: "The rest of the Kadıköy markets." },
+          { time: "23:00", description: "Out again, if there is anything left." },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "Galata, Then Balat",
+        activities: [
+          {
+            time: "10:00",
+            description: "Up to Taksim Square, then walk toward Galata along İstiklal Caddesi.",
+            places: [
+              { name: "Taksim Square", near: "Istanbul, Turkey" },
+              { name: "İstiklal Caddesi", near: "Istanbul, Turkey" },
+            ],
+          },
+          {
+            time: "11:00",
+            description: "Turkish breakfast at Privato Cafe.",
+            places: [{ name: "Privato Cafe", near: "Istanbul, Turkey" }],
+          },
+          {
+            time: "12:30",
+            description: "The top of Galata Tower.",
+            places: [{ name: "Galata Tower" }],
+          },
+          {
+            time: "13:00",
+            description:
+              "Ferry across to Balat, for the coloured houses and the quirky cafes. Turkish coffee and pastries at Maison Balat.",
+            places: [
+              { name: "Balat", near: "Istanbul, Turkey" },
+              { name: "Maison Balat", near: "Istanbul, Turkey" },
+            ],
+          },
+          { time: "17:00", description: "Casual dinner in Balat or near the hotel." },
+          { time: "18:45", description: "Leave for the airport." },
+          { time: "21:10", description: "Take off." },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "krakow",
+    title: "Three Days in Kraków",
+    destination: "Kraków",
+    country: "Poland",
+    coords: { lat: 50.0647, lon: 19.945 },
+    duration: "3 days",
+    season: "Autumn",
+    summary:
+      "Auschwitz on the middle day, and the rest given over to pierogi, milk bars and the Jewish quarter.",
+    cover: krakow,
+    gated: false,
+    teaser:
+      "Three days, one of which is a seven hour tour to Auschwitz. The last day is deliberately all food: obwarzanek, zapiekanka, pączki and a traditional milk bar.",
+    tags: ["#Kazimierz", "#Pierogi", "#MilkBar"],
+    highlights: [
+      "Late night pierogi straight off the plane",
+      "A day at Auschwitz",
+      "Live jazz at The Artist Bar, then a vodka tasting",
+      "Kazimierz, the Jewish quarter, on foot",
+      "A traditional milk bar, and potato pancakes",
+    ],
+    days: [
+      {
+        day: "Day One",
+        title: "Land, and Eat Pierogi",
+        activities: [
+          { time: "10:05", description: "Land in Kraków." },
+          {
+            description:
+              "Twenty minutes by car, or 33 by train, into town. Bolt is cheaper than Uber here.",
+          },
+          {
+            description: "Late night pierogi at Przystanek Pierogarnia, on Szewska in the Old Town.",
+            places: [{ name: "Przystanek Pierogarnia", near: "Kraków, Poland" }],
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "Auschwitz",
+        activities: [
+          { description: "Early start, and walk the Old Town." },
+          {
+            time: "11:15",
+            description: "Picked up for Auschwitz. The tour runs about seven hours.",
+            places: [{ name: "Auschwitz-Birkenau Memorial and Museum", near: "Oświęcim, Poland" }],
+          },
+          {
+            time: "19:00",
+            description: "The Artist Bar, for live jazz and good cocktails.",
+            places: [{ name: "The Artist Bar", near: "Kraków, Poland" }],
+          },
+          {
+            time: "20:30",
+            description: "Dinner at Moo Moo, or back at the hotel.",
+            places: [{ name: "Moo Moo", near: "Kraków, Poland" }],
+          },
+          {
+            time: "21:30",
+            description: "Vodka tasting at Wódka Bar.",
+            places: [{ name: "Wódka Bar", near: "Kraków, Poland" }],
+          },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "Eat Your Way Out",
+        activities: [
+          {
+            description: "Coffee at Pożegnanie z Afryką.",
+            places: [{ name: "Pożegnanie z Afryką", near: "Kraków, Poland" }],
+          },
+          {
+            description: "Walk to the Barbican, then through Stary Kleparz, the farmers market.",
+            places: [
+              { name: "Kraków Barbican" },
+              { name: "Stary Kleparz", near: "Kraków, Poland" },
+            ],
+          },
+          { description: "Eat an obwarzanek krakowski, the round bread." },
+          {
+            description: "Walk Kazimierz, the Jewish quarter, and the Schindler's List passage on Józefa.",
+            places: [
+              { name: "Kazimierz", near: "Kraków, Poland" },
+              { name: "Józefa Street", near: "Kraków, Poland" },
+            ],
+          },
+          {
+            description: "Pączki donuts at Confectionery Under Arcades, on Krakowska.",
+            places: [{ name: "Cukiernia Pod Arkadami", near: "Kraków, Poland" }],
+          },
+          {
+            description: "Zapiekanka at Endzior.",
+            places: [{ name: "Endzior", near: "Kraków, Poland" }],
+          },
+          {
+            description:
+              "Eat at a traditional milk bar. Bar mleczny Pod Temidą came recommended. Get the placki ziemniaczane, potato pancakes.",
+            places: [{ name: "Bar mleczny Pod Temidą", near: "Kraków, Poland" }],
+          },
+          {
+            description: "Otherwise, a late lunch at Tbilisuri.",
+            places: [{ name: "Tbilisuri", near: "Kraków, Poland" }],
+          },
+          { time: "16:30", description: "Leave for the airport." },
+          { time: "20:40", description: "Take off." },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "tuscany",
+    title: "Three Days in Tuscany",
+    destination: "Tuscany",
+    country: "Italy",
+    coords: { lat: 43.7228, lon: 10.4017 },
+    duration: "3 days",
+    season: "Autumn",
+    summary:
+      "A villa, a wine tour, and a private chef. Pisa on the way in and out.",
+    cover: tuscany,
+    gated: false,
+    teaser:
+      "Not really a sightseeing trip. An afternoon in Pisa while the villa gets ready, then two days of a pool, a wine tour, four course dinners and a tennis tournament.",
+    tags: ["#Villa", "#WineTour", "#Pisa"],
+    highlights: [
+      "An afternoon in Pisa while the villa is being made ready",
+      "A four course dinner at i'Bacco Toscano",
+      "A wine tour and lunch",
+      "A private chef cooking four courses at the house",
+      "A tennis tournament nobody planned properly",
+    ],
+    days: [
+      {
+        day: "Day One",
+        title: "Pisa, Then the Villa",
+        activities: [
+          { description: "Cars from the airport, timed to the flights. One goes early for the grocery and alcohol run." },
+          {
+            description: "Explore Pisa until the villa is ready. Thirteen minutes to the city centre.",
+            places: [{ name: "Pisa", near: "Italy" }],
+          },
+          {
+            time: "12:30",
+            description: "Lunch at L'Ostellino.",
+            places: [{ name: "L'Ostellino", near: "Pisa, Italy" }],
+          },
+          {
+            description: "A quick photo with the leaning tower, and a walk around the piazza.",
+            places: [{ name: "Leaning Tower of Pisa" }],
+          },
+          { time: "15:00", description: "Check in. An hour's drive to the villa." },
+          {
+            time: "20:00",
+            description: "Dinner at i'Bacco Toscano. Four courses, paid at the restaurant.",
+            places: [{ name: "i'Bacco Toscano", near: "Tuscany, Italy" }],
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "Wine, Pool, Private Chef",
+        activities: [
+          { time: "12:00", description: "Wine tour and lunch, until 16:00, if you booked it." },
+          { time: "14:00", description: "The private chef arrives to prep." },
+          { time: "16:00", description: "Back to the villa to lounge by the pool." },
+          { time: "20:00", description: "Private chef at the house. Four courses." },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "Brunch, Tennis, Home",
+        activities: [
+          { time: "10:00", description: "Check out of one villa and move to the next." },
+          { description: "Brunch, cooked at the house." },
+          { description: "Tennis tournament." },
+          { time: "16:45", description: "Leave for Pisa airport." },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "tromso",
+    title: "Three Days in Tromsø",
+    destination: "Tromsø",
+    country: "Norway",
+    coords: { lat: 69.6492, lon: 18.9553 },
+    duration: "3 days",
+    season: "Winter",
+    summary:
+      "Northern lights, a fjord cruise, and dog sledding, with a sauna and cold plunge in between.",
+    cover: tromso,
+    gated: false,
+    teaser:
+      "Three days inside the Arctic Circle with one big booked thing each day. The town itself takes an afternoon, and the rest is weather.",
+    tags: ["#NorthernLights", "#DogSledding", "#Fjords"],
+    notes: [
+      "The northern lights need dark winter nights, so this only works between roughly late September and late March.",
+    ],
+    highlights: [
+      "A northern lights tour running from late afternoon to 23:00",
+      "A fjord cruise out of the pier behind Nerstranda",
+      "Dog sledding",
+      "Sauna and cold plunge at Pust",
+      "The northernmost McDonald's, Hard Rock and brewery in the world",
+    ],
+    days: [
+      {
+        day: "Arrival",
+        title: "Land, and Sleep",
+        activities: [{ description: "Land, and go straight to sleep." }],
+      },
+      {
+        day: "Day One",
+        title: "The Town, Then the Lights",
+        activities: [
+          { description: "Wake up at leisure." },
+          {
+            description: "Walk the Tromsø city centre: the harbourfront, the cafes, the shops.",
+            places: [{ name: "Tromsø Harbour" }],
+          },
+          { time: "14:30", description: "A full lunch. You will want it." },
+          { time: "16:30", description: "Northern lights tour, until 23:00." },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "Fjords",
+        activities: [
+          {
+            time: "10:40",
+            description: "Meet at the pier behind the Nerstranda shopping centre.",
+            places: [{ name: "Nerstranda", near: "Tromsø, Norway" }],
+          },
+          { time: "11:00", description: "Fjords cruise, disembarking at 14:30." },
+          {
+            description: "Then whatever fits.",
+            places: [
+              { name: "Pust", near: "Tromsø, Norway", note: "Sauna and cold plunge." },
+              { name: "Arctic Cathedral", near: "Tromsø, Norway" },
+              { name: "Ice Bar", near: "Tromsø, Norway" },
+              { name: "Mack Brewery", near: "Tromsø, Norway", note: "The northernmost brewery. There is also a northernmost McDonald's and Hard Rock." },
+            ],
+          },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "Dog Sledding, Then Out",
+        activities: [
+          { time: "11:30", description: "Dog sledding." },
+          { time: "16:30", description: "Dinner in town." },
+          { time: "18:00", description: "Head to the airport." },
+          { time: "20:00", description: "Flight out." },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "seoul",
+    title: "Seven Days in Seoul",
+    destination: "Seoul",
+    country: "South Korea",
+    coords: { lat: 37.5665, lon: 126.978 },
+    duration: "7 days",
+    season: "Early Summer",
+    summary:
+      "Palaces, a DMZ day, a mountain hike, a baseball game, and a skin analysis in Gangnam.",
+    cover: seoul,
+    gated: false,
+    teaser:
+      "Based in Hongdae. One day is entirely the DMZ, one is a four to six hour hike, and one ends with ramen on the Han River at sunset. Two things need booking well ahead.",
+    tags: ["#Hongdae", "#DMZ", "#HanRiver"],
+    highlights: [
+      "A full day DMZ tour with the world's longest suspension bridge",
+      "Gyeongbokgung Palace, free if you rent a hanbok",
+      "Hiking Bukhansan National Park",
+      "Ramen on the Han River at sunset, with blankets for sale",
+      "A baseball game at Jamsil, tickets from the kiosk on the day",
+    ],
+    days: [
+      {
+        day: "Day One",
+        title: "Hongdae",
+        activities: [
+          { description: "Land, and settle in." },
+          {
+            description:
+              "Peruse Hongdae Street: clothing stalls, vintage shops, art studios, street art.",
+            places: [{ name: "Hongdae", near: "Seoul, South Korea" }],
+          },
+          {
+            description: "Korean barbecue at Doma Hongdae. Walk in, and prepare for a line.",
+            places: [{ name: "Doma Hongdae", near: "Seoul, South Korea" }],
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "Gangnam",
+        activities: [
+          {
+            description: "Walk by the Gangnam Style sculpture.",
+            places: [{ name: "Gangnam Style Statue", near: "Seoul, South Korea" }],
+          },
+          {
+            time: "11:00",
+            description: "Colour and skeletal analysis at Mood Collect in Gangnam, until 13:50.",
+            places: [{ name: "Mood Collect", near: "Seoul, South Korea" }],
+          },
+          { time: "14:30", description: "AI skin analysis and an aqua facial, until 16:30." },
+          {
+            description: "Mini croissants at NUDAKE Haus Dosan.",
+            places: [{ name: "NUDAKE Haus Dosan", near: "Seoul, South Korea" }],
+          },
+          {
+            time: "18:00",
+            description: "Cocktails at Alice Cheongdam.",
+            places: [{ name: "Alice Cheongdam", near: "Seoul, South Korea" }],
+          },
+          {
+            time: "20:00",
+            description: "Cocktails and light bites at Zest.",
+            places: [{ name: "Zest", near: "Seoul, South Korea" }],
+          },
+          {
+            description: "Late night food.",
+            places: [
+              { name: "Kkanbu Chicken", near: "Seoul, South Korea" },
+              { name: "The Booth", near: "Seoul, South Korea" },
+            ],
+          },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "Palaces, Markets, and the Tower",
+        activities: [
+          {
+            description: "Hanbok rental, optional. Wearing traditional dress gets you into the palace free.",
+          },
+          {
+            time: "09:00",
+            description: "Gyeongbokgung Palace. Two to three hours.",
+            places: [{ name: "Gyeongbokgung Palace" }],
+          },
+          {
+            time: "12:00",
+            description: "Eat at Ikseon Chihyang when it opens.",
+            places: [{ name: "Ikseon Chihyang", near: "Seoul, South Korea" }],
+          },
+          {
+            description:
+              "Walk Ikseon-dong, a quaint street of traditional Korean homes turned into cafes, then along the Cheonggyecheon stream.",
+            places: [
+              { name: "Ikseon-dong", near: "Seoul, South Korea" },
+              { name: "Cheonggyecheon", near: "Seoul, South Korea" },
+            ],
+          },
+          {
+            description: "Explore Myeongdong, then eat at Myeongdong Kyoja. Michelin Guide, four menu items, expect a wait.",
+            places: [
+              { name: "Myeongdong", near: "Seoul, South Korea" },
+              { name: "Myeongdong Kyoja", near: "Seoul, South Korea" },
+            ],
+          },
+          {
+            description:
+              "Namdaemun Market, one of the most popular in Seoul. Trinkets, street food.",
+            places: [{ name: "Namdaemun Market", near: "Seoul, South Korea" }],
+          },
+          {
+            time: "18:30",
+            description:
+              "Cable car up to N Seoul Tower for the observatory. Sunset is at 19:54, so head up around 18:30.",
+            places: [{ name: "N Seoul Tower" }],
+          },
+          { description: "Pick up pastries or sandwiches for tomorrow." },
+        ],
+      },
+      {
+        day: "Day Four",
+        title: "The DMZ",
+        activities: [
+          {
+            time: "07:00",
+            description:
+              "Full day DMZ tour until 15:00, with the optional suspension bridge, the longest in the world. Meeting point is Myeongdong station, exit 5.",
+            places: [{ name: "DMZ", near: "South Korea" }],
+          },
+          { description: "Afternoon nap." },
+          { time: "19:00", description: "Street food tour, until 21:00." },
+        ],
+      },
+      {
+        day: "Day Five",
+        title: "Bukhansan, Then the River",
+        activities: [
+          { time: "10:00", description: "On the train, an hour out of the city." },
+          {
+            description: "Hike Bukhansan National Park. Four to six hours.",
+            places: [{ name: "Bukhansan National Park", near: "South Korea" }],
+          },
+          {
+            description: "Shopping at Dongdaemun Market: 26 malls and 30,000 shops.",
+            places: [{ name: "Dongdaemun Market", near: "Seoul, South Korea" }],
+          },
+          {
+            description:
+              "Han River ramen at sunset, from exit 3 at Yeouinaru station. They sell picnic blankets there.",
+            places: [{ name: "Yeouinaru Station", near: "Seoul, South Korea" }],
+          },
+          {
+            description: "Banpo Hangang Park, optional. The light show runs at 19:30, 20:00, 20:30 and 21:00.",
+            places: [{ name: "Banpo Hangang Park", near: "Seoul, South Korea" }],
+          },
+        ],
+      },
+      {
+        day: "Day Six",
+        title: "Seongsu, and a Baseball Game",
+        activities: [
+          {
+            description:
+              "Jayeondo Sogeumppang for the viral salt bread. You have to buy a drink with it, so go for breakfast.",
+            places: [{ name: "Jayeondo Sogeumppang", near: "Seoul, South Korea" }],
+          },
+          {
+            description: "Explore Seongsu, the Brooklyn of Korea. Pop ups and very cool cafes.",
+            places: [{ name: "Seongsu-dong", near: "Seoul, South Korea" }],
+          },
+          {
+            description: "Seoul Forest Park, one to two hours.",
+            places: [{ name: "Seoul Forest" }],
+          },
+          {
+            description: "Lunch at Solsot Pot Rice House.",
+            places: [{ name: "Solsot Pot Rice House", near: "Seoul, South Korea" }],
+          },
+          {
+            time: "16:00",
+            description:
+              "Check the ticket kiosk at the ballpark entrance. Tickets go on sale an hour before the game at weekends and can sell out, so queue before the kiosk opens at 17:30.",
+          },
+          {
+            time: "18:30",
+            description: "Baseball at Jamsil. Apparently sick fried chicken and all round good vibes.",
+            places: [{ name: "Jamsil Baseball Stadium", near: "Seoul, South Korea" }],
+          },
+        ],
+      },
+      {
+        day: "Day Seven",
+        title: "One Museum, Then Home",
+        activities: [
+          { description: "Leisure, and any last exploring." },
+          {
+            description:
+              "The War Memorial or the National Museum of Korea. Both are free entry, and the War Memorial does free hour-long tours at 10:00 and 14:00.",
+            places: [
+              { name: "War Memorial of Korea", near: "Seoul, South Korea" },
+              { name: "National Museum of Korea", near: "Seoul, South Korea" },
+            ],
+          },
+          { time: "13:00", description: "Leave for the airport." },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "malta",
+    title: "Three Days in Malta",
+    destination: "Malta",
+    country: "Malta",
+    coords: { lat: 35.8997, lon: 14.5146 },
+    duration: "3 days",
+    season: "Summer",
+    summary:
+      "Valletta in a day, a boat out to the Blue Lagoon, and the coastline path to Dingli Cliffs.",
+    cover: malta,
+    gated: false,
+    teaser:
+      "Based in St Julian's. One day of Valletta and Mdina at sunset, one whole day on a boat around Comino and Gozo, and one of cliffs and beaches before the late flight.",
+    tags: ["#Valletta", "#BlueLagoon", "#Mdina"],
+    highlights: [
+      "The midday cannon salute from the Barrakka Gardens",
+      "Mdina at sunset, and Serkin for cheesecake on the way out",
+      "A full day boat to the Blue Lagoon, the caves and the Gozo coastline",
+      "The coastline path from the Blue Grotto to Dingli Cliffs",
+      "Paceville, when you still have it in you",
+    ],
+    days: [
+      {
+        day: "Day One",
+        title: "Valletta, Then Mdina at Sunset",
+        activities: [
+          { time: "09:35", description: "Land, and twenty minutes to St Julian's to drop bags.", places: [{ name: "St Julian's", near: "Malta" }] },
+          {
+            description: "Walk to Sliema, about 25 minutes, grabbing coffee on the way, then the ten minute ferry to Valletta.",
+            places: [{ name: "Sliema", near: "Malta" }, { name: "Valletta", near: "Malta" }],
+          },
+          {
+            description: "The Valletta highlights.",
+            places: [
+              { name: "Triton Fountain", near: "Valletta, Malta" },
+              { name: "City Gate", near: "Valletta, Malta" },
+              { name: "St John's Co-Cathedral", near: "Valletta, Malta" },
+              { name: "Grandmaster's Palace", near: "Valletta, Malta" },
+              { name: "Upper Barrakka Gardens", near: "Valletta, Malta", note: "Views, and the cannon salute at noon." },
+              { name: "MUZA", near: "Valletta, Malta", note: "Art museum." },
+              { name: "Valletta Waterfront", near: "Malta" },
+            ],
+          },
+          {
+            description: "Lunch at Rubino, traditional Maltese, or Rampila, built into the bastions.",
+            places: [
+              { name: "Rubino", near: "Valletta, Malta" },
+              { name: "Rampila", near: "Valletta, Malta" },
+            ],
+          },
+          {
+            description: "Gelato and coffee at Lot Sixty One.",
+            places: [{ name: "Lot Sixty One", near: "Valletta, Malta" }],
+          },
+          {
+            description:
+              "If you skip the Valletta sights, the beach at St Paul's Bay is nearer the flat. Or ferry over to the Three Cities.",
+            places: [
+              { name: "St Paul's Bay", near: "Malta" },
+              { name: "The Three Cities", near: "Malta", note: "Birgu, Senglea and Cospicua." },
+            ],
+          },
+          {
+            description: "Taxi to Mdina for sunset.",
+            places: [{ name: "Mdina", near: "Malta" }],
+          },
+          {
+            description: "Dinner in Mdina.",
+            places: [
+              { name: "Coogi's", near: "Mdina, Malta" },
+              { name: "Scala", near: "Mdina, Malta" },
+              { name: "Golden Fork", near: "Mdina, Malta" },
+              { name: "Trattoria AD 1530", near: "Mdina, Malta" },
+            ],
+          },
+          {
+            description: "Stop at Serkin for the famous Maltese cheesecake, to go.",
+            places: [{ name: "Crystal Palace Serkin", near: "Rabat, Malta" }],
+          },
+          {
+            description: "Pregame, then the bars and clubs in Paceville.",
+            places: [
+              { name: "Paceville", near: "Malta" },
+              { name: "Havana Club", near: "Paceville, Malta" },
+              { name: "Uno", near: "Paceville, Malta" },
+              { name: "Toy Room Supper Club", near: "Paceville, Malta" },
+            ],
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "Boat Day",
+        activities: [
+          {
+            time: "10:00",
+            description:
+              "Boat day until 18:00: the Blue Lagoon at Comino, the caves, and the Gozo coastline.",
+            places: [
+              { name: "Blue Lagoon", near: "Comino, Malta" },
+              { name: "Gozo", near: "Malta" },
+            ],
+          },
+          {
+            description: "Dinner at Spinola Bay in St Julian's, then out again.",
+            places: [{ name: "Spinola Bay", near: "St Julian's, Malta" }],
+          },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "Cliffs, Beach, Then the Late Flight",
+        activities: [
+          {
+            description: "Pick up a Gambrinus ftira, the ring-shaped sourdough with fillings.",
+            places: [{ name: "Gambrinus", near: "Malta" }],
+          },
+          {
+            description: "Uber to the Blue Grotto.",
+            places: [{ name: "Blue Grotto", near: "Malta" }],
+          },
+          {
+            description: "Hike the coastline path to Dingli Cliffs.",
+            places: [{ name: "Dingli Cliffs", near: "Malta" }],
+          },
+          {
+            description:
+              "Afternoon beach at Għajn Tuffieħa, which is more natural, or Golden Bay, which is easier with sunbeds.",
+            places: [
+              { name: "Ghajn Tuffieha", near: "Malta" },
+              { name: "Golden Bay", near: "Malta" },
+            ],
+          },
+          { description: "Back to pack, and a quick dinner." },
+          { time: "22:30", description: "Leave St Julian's for the airport." },
+        ],
+      },
+    ],
+    extras: [
+      {
+        title: "Eat and drink",
+        places: [
+          { name: "Cafe Society", near: "Valletta, Malta" },
+          { name: "Paranga" },
+          { name: "Rafael's" },
+          { name: "Villa Bologna Restaurant" },
+          { name: "LOA" },
+          { name: "Beef Bar" },
+          { name: "Taproom" },
         ],
       },
     ],
