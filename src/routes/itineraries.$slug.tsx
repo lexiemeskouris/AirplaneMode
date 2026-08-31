@@ -129,14 +129,46 @@ function ItineraryDetail() {
                   </span>
                 </div>
                 <ol className="divide-y divide-border">
-                  {d.activities.map((a) => (
-                    <li key={a.time} className="flex gap-4 px-6 py-4">
+                  {d.activities.map((a, i) => (
+                    <li key={`${d.day}-${i}`} className="flex gap-4 px-6 py-4">
+                      {/* Untimed steps keep the time column's width so every
+                          description still lines up, and take a dash instead. */}
                       <span className="w-16 shrink-0 pt-0.5 font-mono text-sm font-bold text-primary">
-                        {a.time}
+                        {a.time ?? <span className="text-muted-foreground/50">-</span>}
                       </span>
-                      <span className="leading-relaxed text-foreground/90">
-                        {a.description}
-                      </span>
+                      <div className="min-w-0">
+                        <span className="leading-relaxed text-foreground/90">
+                          {a.description}
+                        </span>
+                        {a.places && a.places.length > 0 && (
+                          <ul className="mt-3 space-y-2">
+                            {a.places.map((place) => (
+                              <li key={place.name} className="leading-snug">
+                                {place.url ? (
+                                  <a
+                                    href={place.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="font-bold text-accent underline decoration-accent/30 underline-offset-4 transition-colors hover:decoration-accent"
+                                  >
+                                    {place.name}
+                                  </a>
+                                ) : (
+                                  <span className="font-bold text-foreground">{place.name}</span>
+                                )}
+                                {place.note && (
+                                  <span className="text-sm text-muted-foreground"> {place.note}</span>
+                                )}
+                                {place.address && (
+                                  <span className="block text-xs text-muted-foreground/80">
+                                    {place.address}
+                                  </span>
+                                )}
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
                     </li>
                   ))}
                 </ol>

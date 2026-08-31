@@ -4,10 +4,24 @@ import amalfi from "@/assets/amalfi.jpg";
 import marrakech from "@/assets/marrakech.jpg";
 import iceland from "@/assets/iceland.jpg";
 import oaxaca from "@/assets/oaxaca.jpg";
+import sanSebastian from "@/assets/san-sebastian.svg";
+
+/** A named venue, with the map link and address if we have them. */
+export type Place = {
+  name: string;
+  /** Map link. Rendered as the place's link when present. */
+  url?: string;
+  address?: string;
+  /** Short aside, e.g. why it is worth going or where it sits in the night. */
+  note?: string;
+};
 
 export type Activity = {
-  time: string;
+  /** 24-hour, e.g. "20:00". Omitted when the plan is deliberately loose. */
+  time?: string;
   description: string;
+  /** Venues for this activity, e.g. the stops on a pintxos crawl. */
+  places?: Place[];
 };
 
 export type ItineraryDay = {
@@ -40,6 +54,126 @@ export type Itinerary = {
 export const BMC_URL = "https://www.buymeacoffee.com/";
 
 export const itineraries: Itinerary[] = [
+  {
+    slug: "san-sebastian",
+    title: "Three Days in San Sebastián",
+    destination: "San Sebastián",
+    country: "Spain",
+    duration: "3 days",
+    season: "Summer",
+    summary:
+      "Two beaches, two hills, and as many pintxos bars as three nights allow. Basque country at full tilt.",
+    cover: sanSebastian,
+    gated: false,
+    teaser:
+      "San Sebastián is small enough to walk and dense enough that you never stop eating. This route climbs both headlands, swims both beaches, and spends every evening standing at a bar with a plate in one hand.",
+    tags: ["#Pintxos", "#LaConcha", "#BasqueCheesecake"],
+    highlights: [
+      "Pintxos hopping through the Old Town, two nights running",
+      "Monte Urgull at golden hour with a drink at the top",
+      "Monte Igueldo's funicular, tower and clifftop amusement park",
+      "Swimming at La Concha, Zurriola and Ondarreta",
+      "Tortilla at Bar Antonio, first thing",
+    ],
+    days: [
+      {
+        day: "Arrival",
+        title: "Land Late, Sleep in the Old Town",
+        activities: [
+          { time: "21:00", description: "Land in Bilbao." },
+          { description: "Bus from Bilbao to San Sebastián." },
+          { description: "Check in and stay in the Old Town - everything below is walkable from there." },
+        ],
+      },
+      {
+        day: "Day One",
+        title: "La Concha, Monte Urgull, and the First Crawl",
+        activities: [
+          { description: "Wake up at leisure." },
+          { description: "Coffee at Simona, then walk the length of the La Concha promenade." },
+          { description: "Beach time at La Concha." },
+          { description: "Pintxos lunch at La Cuchara de San Telmo." },
+          {
+            time: "14:00",
+            description:
+              "Hike up Monte Urgull, about a 1.5 hour round trip, with a drink at the top at Urgulleko Polboriña.",
+          },
+          { description: "Shower and reset at the hotel." },
+          {
+            time: "19:00",
+            description: "Pintxos hopping, in this order.",
+            places: [
+              {
+                name: "Casa Valles",
+                url: "https://goo.gl/maps/b8UnGGnGeJEm4aUEA",
+                address: "Calle Los Reyes Católicos, 10, 20006 Donostia-San Sebastian, Gipuzkoa, Spain",
+              },
+              {
+                name: "KATA4",
+                url: "https://goo.gl/maps/Wa4azttoVbzpSD5A6",
+                address: "Santa Catalina Plazatxoa, 4, 20004 Donostia, Gipuzkoa, Spain",
+              },
+              {
+                name: "Bar El Pícaro",
+                url: "https://share.google/7wJXv0hk0OUaNb865",
+              },
+              {
+                name: "Curdelón",
+                url: "https://goo.gl/maps/HSHsKqeE9XkfqY2a6",
+                address: "Kolon Pasealekua, 35, 20002 Donostia, Gipuzkoa",
+              },
+              {
+                name: "Casa Senra Donostia",
+                url: "https://goo.gl/maps/gryTHyA7TUjrxJJ29",
+                address: "San Francisco Kalea, 20002 Donostia, Gipuzkoa, Spain",
+                note: "Ending spot.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "Tortilla, Monte Igueldo, and Gros",
+        activities: [
+          { time: "08:00", description: "Get to Bar Antonio." },
+          { time: "09:00", description: "Eat tortilla at Bar Antonio." },
+          { description: "Hike to the top of Monte Igueldo." },
+          { description: "Visit the tower and the amusement park." },
+          { description: "Light lunch in Gros." },
+          { description: "Beach time at Zurriola." },
+          { description: "Shower and change." },
+          {
+            time: "20:00",
+            description: "Pintxos hopping, round two.",
+            places: [
+              { name: "Bar Sport" },
+              { name: "Ganbara", note: "Anthony Bourdain's favourite spot." },
+              { name: "Lanperna" },
+              { name: "La Viña", note: "For the Basque cheesecake." },
+            ],
+          },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "One Last Swim, Then the Airport",
+        activities: [
+          { description: "Check out and leave your bags at the hotel." },
+          { description: "Coffee and a walk along the La Concha promenade." },
+          { description: "Lunch at Casa Urola." },
+          { description: "Beach time at Ondarreta." },
+          {
+            description: "Shopping.",
+            places: [{ name: "Zara" }, { name: "Calzedonia" }, { name: "El Ganso" }],
+          },
+          { time: "18:45", description: "Leave San Sebastián for Bilbao Airport." },
+          { time: "20:00", description: "Arrive at Bilbao Airport." },
+          { time: "21:40", description: "Flight departs." },
+        ],
+      },
+    ],
+  },
   {
     slug: "lisbon-three-days",
     title: "Three Days in Lisbon",
