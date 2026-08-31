@@ -729,7 +729,6 @@ export const itineraries: Itinerary[] = [
             description: "Walk through the Red Light District.",
             places: [{ name: "De Wallen" }],
           },
-          { time: "23:30", description: "Sex show in the Red Light District." },
           { time: "00:30", description: "Bars if there is still energy, otherwise home." },
         ],
       },
@@ -750,10 +749,6 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "Winkel 43" }, { name: "The Pancake Bakery" }],
           },
           {
-            description: "Pick up shrooms at Tatanka Smartshop.",
-            places: [{ name: "Tatanka Smartshop" }],
-          },
-          {
             description: "Walk through the Bloemenmarkt, the floating flower market.",
             places: [{ name: "Bloemenmarkt" }],
           },
@@ -766,7 +761,7 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "Fiona's" }],
           },
           {
-            description: "Walk through Vondelpark, then stay in it. Shrooms, painting, sitting.",
+            description: "Walk through Vondelpark, then stay in it. Painting and sitting.",
             places: [{ name: "Vondelpark" }],
           },
           {
