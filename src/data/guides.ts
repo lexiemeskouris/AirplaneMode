@@ -8,7 +8,7 @@ import reykjavik from "@/assets/reykjavik.svg";
 import bordeaux from "@/assets/bordeaux.svg";
 import nice from "@/assets/nice.svg";
 import charleston from "@/assets/charleston.svg";
-import vermont from "@/assets/vermont.svg";
+import dover from "@/assets/dover.svg";
 
 /**
  * A city I have opinions about but no itinerary for. Same links and the same
@@ -545,17 +545,17 @@ export const guides: Guide[] = [
     ],
   },
   {
-    slug: "vermont",
-    title: "Vermont Recommendations",
-    destination: "Vermont",
+    slug: "dover",
+    title: "Dover, Vermont Recommendations",
+    destination: "Dover, Vermont",
     country: "United States",
     coords: { lat: 42.96, lon: -72.89 },
-    cover: vermont,
+    cover: dover,
     summary:
-      "Where to eat around Mount Snow, four hikes graded by effort, and the shops worth a detour.",
+      "Where to eat around Mount Snow in southern Vermont, four hikes graded by effort, and the shops worth a detour.",
     teaser:
-      "The Mount Snow and Dover end of Vermont. Dive bars and breakfast places, four hikes from beginner to moderately difficult, and a nearby town for a farmers' market.",
-    tags: ["#MountSnow", "#Dover", "#Hikes"],
+      "Dover and West Dover, at the Mount Snow end of southern Vermont. Dive bars and breakfast places, four hikes from beginner to moderately difficult, and a nearby town for a farmers' market.",
+    tags: ["#MountSnow", "#Vermont", "#Hikes"],
     sections: [
       {
         title: "Eat and drink",

@@ -181,6 +181,19 @@ function ItineraryDetail() {
       </section>
 
       {/* Days - free shows all, gated shows only the sample day */}
+      {it.notes && it.notes.length > 0 && (
+        <ul className="mt-8 space-y-2">
+          {it.notes.map((n) => (
+            <li
+              key={n}
+              className="rounded-2xl border border-brand-yellow bg-brand-yellow/25 px-5 py-4 font-bold text-foreground"
+            >
+              {n}
+            </li>
+          ))}
+        </ul>
+      )}
+
       {it.days && it.days.length > 0 && (
         <section className="mt-12">
           <h2 className="font-display text-3xl font-extrabold tracking-tight text-foreground">

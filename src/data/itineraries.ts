@@ -4,6 +4,7 @@ import berlin from "@/assets/berlin.svg";
 import taipei from "@/assets/taipei.svg";
 import amsterdam from "@/assets/amsterdam.svg";
 import nashville from "@/assets/nashville.svg";
+import paris from "@/assets/paris.svg";
 
 /** A named venue, with its map link if we have a real one. */
 export type Place = {
@@ -54,6 +55,11 @@ export type Itinerary = {
   days?: ItineraryDay[];
   /** Buy Me a Coffee link for gated itineraries. */
   bmcUrl?: string;
+  /**
+   * Things that constrain the whole trip rather than one stop, e.g. a date
+   * this only works on. Shown up front, before the day-by-day.
+   */
+  notes?: string[];
   /**
    * Places worth knowing about that are not pinned to any day: the running
    * list of recommendations that comes back from a trip.
@@ -949,6 +955,235 @@ export const itineraries: Itinerary[] = [
             description: "Flight out of Nashville International Airport.",
             places: [{ name: "Nashville International Airport" }],
           },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "paris",
+    title: "Five Days in Paris",
+    destination: "Paris",
+    country: "France",
+    coords: { lat: 48.8566, lon: 2.3522 },
+    duration: "5 days",
+    season: "Late Spring",
+    summary:
+      "Roland-Garros, a day in Champagne, and the rest of Paris covered on foot.",
+    cover: paris,
+    gated: false,
+    teaser:
+      "Five days with two anchors: a full day at Roland-Garros and a day trip to Reims for the Champagne houses. Everything between them is the Marais, Montmartre, the Left Bank and a lot of walking.",
+    tags: ["#RolandGarros", "#Champagne", "#LeMarais"],
+    notes: [
+      "This only works in May if you want Roland-Garros. Everything else here is fine any time of year, so move the tennis day out and the rest still stands.",
+    ],
+    highlights: [
+      "A full day at Roland-Garros, third-round matches and the outside courts",
+      "A day trip to Reims for Ruinart and Veuve Clicquot",
+      "Le Marais on foot, then up to Sacré-Coeur and through Montmartre",
+      "A baguette from La Parisienne with butter from La Grande Épicerie, eaten on Pont Neuf",
+      "A burlesque show at Crazy Horse",
+    ],
+    days: [
+      {
+        day: "Day One",
+        title: "Roland-Garros",
+        activities: [
+          { time: "08:00", description: "Croissants near the Airbnb." },
+          {
+            time: "09:00",
+            description: "Metro to Roland-Garros.",
+            places: [{ name: "Roland-Garros" }],
+          },
+          { time: "10:00", description: "Gates open." },
+          { time: "12:00", description: "Daytime session." },
+          {
+            description:
+              "Keep watching the third-round matches and wander the outside courts.",
+          },
+          { description: "Dinner, whenever play finishes. Leave it flexible." },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "Le Marais, Then Montmartre",
+        activities: [
+          {
+            description: "Pick up coffee at The Coffee for the walk.",
+            places: [{ name: "The Coffee" }],
+          },
+          {
+            time: "10:30",
+            description: "Sandwiches at Chez Alain Miam Miam.",
+            places: [{ name: "Chez Alain Miam Miam" }],
+          },
+          {
+            description: "Walk through the Marché des Enfants Rouges.",
+            places: [{ name: "Marché des Enfants Rouges" }],
+          },
+          {
+            description: "Shop in Le Marais, the Jewish quarter, which has great shopping.",
+            places: [
+              { name: "Le Marais" },
+              { name: "Rue des Francs-Bourgeois" },
+              { name: "Rue de Turenne" },
+              { name: "Rue Vieille du Temple" },
+              { name: "Officine Universelle Buly 1803" },
+              { name: "Merci" },
+            ],
+          },
+          {
+            time: "14:30",
+            description: "Lunch at Chez Janou.",
+            places: [{ name: "Chez Janou" }],
+          },
+          {
+            description: "Walk up to Sacré-Coeur. The views from the steps are the point.",
+            places: [{ name: "Sacré-Coeur" }],
+          },
+          {
+            description: "Stroll through Montmartre.",
+            places: [{ name: "Montmartre" }],
+          },
+          {
+            description: "Passage des Panoramas.",
+            places: [{ name: "Passage des Panoramas" }],
+          },
+          {
+            time: "19:30",
+            description: "Dinner at Le Coq & Fils.",
+            places: [{ name: "Le Coq & Fils" }],
+          },
+          {
+            time: "21:30",
+            description: "Drinks at Le Très Particulier.",
+            places: [{ name: "Le Très Particulier" }],
+          },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "Left Bank, and a Late Show",
+        activities: [
+          {
+            time: "11:30",
+            description: "Walk to L'Entrecôte. It opens at 12:00.",
+            places: [{ name: "L'Entrecôte" }],
+          },
+          {
+            description: "Walk through the Jardin du Luxembourg.",
+            places: [{ name: "Jardin du Luxembourg" }],
+          },
+          {
+            description: "Shopping.",
+            places: [
+              { name: "Le Bon Marché", note: "Best department store, and a grocery." },
+              { name: "Citypharma", note: "Biggest French pharmacy." },
+              { name: "La Grande Épicerie de Paris", note: "Gourmet grocer. Get the French butter." },
+            ],
+          },
+          {
+            description: "Stop into the Musée d'Orsay.",
+            places: [{ name: "Musée d'Orsay" }],
+          },
+          {
+            description: "Afternoon pick-me-up at Chapon et la Chocolaterie de l'Église.",
+            places: [{ name: "Chapon" }, { name: "Chocolaterie de l'Église" }],
+          },
+          { description: "Back to the hotel to get ready for dinner." },
+          {
+            description: "Drink at Bar du Marché, if you fancy it.",
+            places: [{ name: "Bar du Marché" }],
+          },
+          {
+            time: "19:00",
+            description: "Dinner at Petite Lutecia.",
+            places: [{ name: "Petite Lutecia" }],
+          },
+          {
+            time: "22:30",
+            description: "Burlesque show at Crazy Horse.",
+            places: [{ name: "Crazy Horse" }],
+          },
+        ],
+      },
+      {
+        day: "Day Four",
+        title: "Champagne Country",
+        activities: [
+          {
+            time: "07:45",
+            description: "Taxi from the Airbnb to Paris Gare de l'Est.",
+            places: [{ name: "Gare de l'Est" }],
+          },
+          {
+            time: "08:30",
+            description: "Direct TGV to Reims Centre.",
+            places: [{ name: "Reims", near: "France" }],
+          },
+          { time: "09:15", description: "Arrive in Reims." },
+          {
+            time: "09:30",
+            description: "Notre-Dame de Reims Cathedral.",
+            places: [{ name: "Notre-Dame de Reims", near: "Reims, France" }],
+          },
+          { time: "10:30", description: "Travel out to Ruinart." },
+          {
+            time: "11:00",
+            description: "Ruinart cellar tour and tasting.",
+            places: [{ name: "Ruinart", near: "Reims, France" }],
+          },
+          { time: "13:15", description: "Lunch in Reims." },
+          {
+            time: "15:30",
+            description: "Veuve Clicquot cellar tour and tasting.",
+            places: [{ name: "Veuve Clicquot", near: "Reims, France" }],
+          },
+          { time: "17:15", description: "Back to central Reims." },
+          { time: "17:30", description: "Walk the centre and shop for Champagne." },
+          { time: "18:30", description: "Direct TGV back to Paris." },
+          { time: "19:15", description: "Arrive at Paris Gare de l'Est." },
+          {
+            time: "20:30",
+            description: "Dinner at La Fontaine de Mars.",
+            places: [{ name: "La Fontaine de Mars" }],
+          },
+        ],
+      },
+      {
+        day: "Day Five",
+        title: "One Last Baguette, Then the Train",
+        activities: [
+          {
+            description:
+              "Stop at La Parisienne for the baguette that won best in Paris. Save butter from La Grande Épicerie for eating it along Pont Neuf.",
+            places: [{ name: "La Parisienne" }],
+          },
+          {
+            time: "10:00",
+            description: "Breakfast at Les Deux Magots.",
+            places: [{ name: "Les Deux Magots" }],
+          },
+          {
+            time: "11:00",
+            description: "Walk the Champs-Élysées.",
+            places: [{ name: "Champs-Élysées" }],
+          },
+          { description: "Stroll along the Seine.", places: [{ name: "Seine" }] },
+          {
+            time: "13:00",
+            description: "Walk to Pont Neuf.",
+            places: [{ name: "Pont Neuf" }],
+          },
+          { time: "14:00", description: "Pick up the luggage at the hotel." },
+          { time: "18:00", description: "Thirty minute walk to the train." },
+          {
+            time: "18:30",
+            description: "Get to Paris Gare du Nord.",
+            places: [{ name: "Gare du Nord" }],
+          },
+          { time: "19:00", description: "Check-in for the train closes." },
+          { time: "20:00", description: "Late train to London." },
         ],
       },
     ],
