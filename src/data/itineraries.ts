@@ -166,7 +166,7 @@ export const itineraries: Itinerary[] = [
       },
       {
         day: "Day Two",
-        title: "Tortilla, Monte Igueldo, and Gros",
+        title: "Tortilla, Monte Igueldo, and Zurriola",
         activities: [
           {
             time: "08:00",
@@ -185,7 +185,10 @@ export const itineraries: Itinerary[] = [
               { name: "Parque de Atracciones Monte Igueldo" },
             ],
           },
-          { description: "Light lunch in Gros.", places: [{ name: "Gros" }] },
+          {
+            description: "Lunch at Ganbara.",
+            places: [{ name: "Ganbara", note: "Anthony Bourdain's favourite spot." }],
+          },
           { description: "Beach time at Zurriola.", places: [{ name: "Zurriola Beach" }] },
           { description: "Shower and change." },
           {
@@ -193,9 +196,9 @@ export const itineraries: Itinerary[] = [
             description: "Pintxos hopping, round two.",
             places: [
               { name: "Bar Sport" },
-              { name: "Ganbara", note: "Anthony Bourdain's favourite spot." },
               { name: "Lanperna" },
               { name: "La Viña", note: "For the Basque cheesecake." },
+              { name: "Gandarias" },
             ],
           },
         ],
