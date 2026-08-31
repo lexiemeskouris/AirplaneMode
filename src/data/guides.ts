@@ -1,6 +1,14 @@
 import type { Place } from "./itineraries";
 import vienna from "@/assets/vienna.svg";
 import kilimanjaro from "@/assets/kilimanjaro.svg";
+import barcelona from "@/assets/barcelona.svg";
+import malta from "@/assets/malta.svg";
+import miami from "@/assets/miami.svg";
+import reykjavik from "@/assets/reykjavik.svg";
+import bordeaux from "@/assets/bordeaux.svg";
+import nice from "@/assets/nice.svg";
+import charleston from "@/assets/charleston.svg";
+import vermont from "@/assets/vermont.svg";
 
 /**
  * A city I have opinions about but no itinerary for. Same links and the same
@@ -161,6 +169,7 @@ export const guides: Guide[] = [
       {
         title: "Medication",
         items: [
+          "Talk to a doctor before you go. What follows is what I took and what worked for me, not medical advice.",
           "Bring anything and everything you think you might need. The guides carry oxygen, but taking care of yourself is on you.",
           "What I brought: Advil, Tylenol, a steroid pack, malaria pills, a Z-Pak, Cipro, Diamox, nausea medication, plasters, my daily medication, instant cold packs, a callous and blister cushion, itch cream, Benadryl and an ace bandage.",
           "I definitely went overboard, and almost all of it was used by me or my friends. Everything except the ace bandage. I was called a walking pharmacy.",
@@ -199,6 +208,390 @@ export const guides: Guide[] = [
           "It is very cold at night, so sleep with anything you do not want to die or freeze inside your sleeping bag.",
           "Things die at the peak, so bring something extra charged, or a disposable or film camera. It was below 0F on our summit day.",
           "The private toilet and the thicker mattress were the best money we spent. The campsite toilets are holes in the ground, so if you skip the private toilet, bring your own toilet paper.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "barcelona",
+    title: "Barcelona Recommendations",
+    destination: "Barcelona",
+    country: "Spain",
+    cover: barcelona,
+    summary:
+      "Montserrat, the Bunkers at sunset, the Gaudí worth queuing for, and two places to eat.",
+    teaser:
+      "What to see and where to eat in Barcelona, with no plan attached. Take the bits you want.",
+    tags: ["#Gaudi", "#LaBoqueria", "#Montserrat"],
+    sections: [
+      {
+        title: "Do",
+        places: [
+          { name: "Montserrat", near: "Catalonia, Spain", note: "For the monastery and the mountain hiking." },
+          { name: "Bunkers del Carmel", note: "Hike up and bring drinks for sunset." },
+          { name: "La Boqueria Market" },
+          { name: "Montjuïc", note: "Take the cable car up." },
+          { name: "Sagrada Família" },
+        ],
+      },
+      {
+        title: "Gaudí",
+        places: [
+          { name: "Park Güell" },
+          { name: "Gaudí House Museum", note: "Inside Park Güell." },
+          { name: "Casa Batlló" },
+        ],
+      },
+      {
+        title: "Food",
+        places: [{ name: "Berbena" }, { name: "Bar Cañete" }],
+      },
+    ],
+  },
+  {
+    slug: "malta",
+    title: "Malta Recommendations",
+    destination: "Malta",
+    country: "Malta",
+    cover: malta,
+    summary: "A short list of places to eat and drink, from Valletta outwards.",
+    teaser:
+      "No itinerary for Malta, just the places worth booking. Cafe Society is in Valletta; the rest are spread around the island.",
+    tags: ["#Valletta", "#BeefBar", "#Paranga"],
+    sections: [
+      {
+        title: "Eat and drink",
+        places: [
+          { name: "Cafe Society", near: "Valletta, Malta" },
+          { name: "Paranga" },
+          { name: "Rafael's" },
+          { name: "Villa Bologna Restaurant" },
+          { name: "LOA" },
+          { name: "Beef Bar" },
+          { name: "Taproom" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "miami",
+    title: "Miami Recommendations",
+    destination: "Miami",
+    country: "United States",
+    cover: miami,
+    summary:
+      "Where to eat, where it turns into a club, and the order we did it in over three nights.",
+    teaser:
+      "Miami as a set of nights rather than days. Dinners that run late and rooms that turn into clubs, plus how we actually sequenced them.",
+    tags: ["#Marion", "#LosFuegos", "#SouthBeach"],
+    sections: [
+      {
+        title: "Go out",
+        places: [
+          { name: "Marion", note: "Turns into a club, like Bagatelle or Maison Close." },
+          { name: "Baoli" },
+          { name: "Mila" },
+        ],
+      },
+      {
+        title: "Eat",
+        places: [
+          { name: "Los Fuegos", note: "Then drinks at Living Room after." },
+          { name: "Living Room" },
+          { name: "La Leggenda Pizzeria" },
+        ],
+      },
+      {
+        title: "How we sequenced it",
+        items: [
+          "La Leggenda Pizzeria on the first night, at leisure.",
+          "Marion at 22:30.",
+          "Los Fuegos at 22:30, then Living Room for drinks after.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "reykjavik",
+    title: "Reykjavík Restaurants",
+    destination: "Reykjavík",
+    country: "Iceland",
+    cover: reykjavik,
+    summary: "Six places to eat in Reykjavík, and the one that stood out.",
+    teaser:
+      "Not a plan, just where we ate. Rök is the one to book if you only get one dinner.",
+    tags: ["#Rok", "#Sandholt", "#Hlemmur"],
+    sections: [
+      {
+        title: "Where to eat",
+        places: [
+          {
+            name: "Rök",
+            note: "The standout. Wide variety of good tapas and a nice restaurant. We had duck, steak, asparagus, bruschetta, risotto and potatoes.",
+          },
+          { name: "The Laundromat", note: "Great brunch, cool coffee shop vibes." },
+          { name: "Flatey Pizza", note: "Brick oven pizza. Just don't get the meatballs." },
+          {
+            name: "Sandholt Bakery",
+            note: "We went at least three times. The only place open in the morning. Great pastries, and sandwiches we picked up for a day tour.",
+          },
+          { name: "Skál", note: "Michelin rated, inside the Hlemmur food hall." },
+          { name: "Hlemmur Mathöll" },
+          { name: "Brauð & Co", note: "A croissant pretzel for breakfast before a tour, and it was divine." },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "bordeaux",
+    title: "Bordeaux Recommendations",
+    destination: "Bordeaux",
+    country: "France",
+    cover: bordeaux,
+    summary:
+      "One vineyard hotel worth the whole trip, a tasting menu in the city, and a day out in Saint-Émilion.",
+    teaser:
+      "Wine country without a schedule. Where to stay, where to eat in the city, the town to spend a day in, and the châteaux worth tasting at.",
+    tags: ["#Caudalie", "#SaintEmilion", "#Wine"],
+    sections: [
+      {
+        title: "Stay",
+        places: [
+          {
+            name: "Les Sources de Caudalie",
+            note: "Best vineyard. Beautiful hotel, an amazing Michelin-starred restaurant, and bikes you can ride around the property.",
+          },
+        ],
+      },
+      {
+        title: "In the city",
+        places: [
+          { name: "Berthus", note: "Seasonal tasting menu in the city centre. So cute, and tasty." },
+        ],
+      },
+      {
+        title: "Day trip",
+        places: [
+          {
+            name: "Saint-Émilion",
+            near: "France",
+            note: "Adorable town outside Bordeaux with lots of vineyards and historical landmarks. We had brunch, tasted some wines and walked around.",
+          },
+        ],
+      },
+      {
+        title: "Other tastings and restaurants",
+        places: [
+          { name: "Château d'Yquem", near: "Sauternes, France" },
+          { name: "Château Smith Haut Lafitte" },
+          { name: "La Table de Vigne" },
+          { name: "Château Troplong Mondot", near: "Saint-Émilion, France" },
+          { name: "Château Haut-Bailly" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "nice",
+    title: "Nice Recommendations",
+    destination: "Nice",
+    country: "France",
+    cover: nice,
+    summary:
+      "Tours worth booking, three restaurants in the old town, and the beach club to spend a day at.",
+    teaser:
+      "Nice as a menu rather than a plan: the tours worth taking, where to eat in the old town, and the day trips along the coast.",
+    tags: ["#OldNice", "#Riviera", "#Monaco"],
+    sections: [
+      {
+        title: "Things to do",
+        places: [
+          {
+            name: "La Réserve de la Mala",
+            url: "https://www.lareservedelamala.com/",
+            note: "Beach club outside Nice. Yachts, restaurants, good vibes.",
+          },
+        ],
+        items: [
+          "Wine tour.",
+          "Lavender fields tour.",
+          "French Riviera day trip.",
+          "Walking tour of the old town.",
+          "Food tour.",
+          "Boat cruise, with or without cocktails or snorkelling.",
+          "Electric bike tour.",
+          "Train ride through the Alps.",
+        ],
+      },
+      {
+        title: "Restaurants",
+        places: [
+          {
+            name: "Carmela",
+            url: "https://www.carmela-restaurant.com/",
+            note: "Italian, in Old Nice.",
+          },
+          {
+            name: "Marinette",
+            url: "http://www.restaurantmarinette.fr/",
+            note: "Breakfast, in Old Nice.",
+          },
+          {
+            name: "La Petite Maison",
+            url: "https://www.instagram.com/lapetitemaison_nice/?hl=en",
+            note: "Mediterranean, in Old Nice. Amazing vibes, ok food.",
+          },
+        ],
+      },
+      {
+        title: "Where we stayed",
+        places: [{ name: "Le Méridien Nice" }],
+      },
+      {
+        title: "Day trips",
+        places: [
+          { name: "Monaco", near: "France" },
+          { name: "Saint-Tropez", near: "France" },
+          { name: "Cannes", near: "France" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "charleston",
+    title: "Charleston Recommendations",
+    destination: "Charleston",
+    country: "United States",
+    cover: charleston,
+    summary:
+      "The reservations worth chasing, the casual places I went back to, and where to drink.",
+    teaser:
+      "Charleston sorted by how much effort it takes to get in: the ones you queue or book for, the ones you just walk into, and the bars.",
+    tags: ["#ChubbyFish", "#LewisBarbecue", "#Vintage"],
+    sections: [
+      {
+        title: "Restaurants",
+        places: [
+          {
+            name: "Chubby Fish",
+            note: "Seafood, and literally my favourite restaurant. You cannot get a reservation, so be there at opening at 17:00 to put your name down.",
+          },
+          {
+            name: "Chez Nous",
+            note: "French. The menu changes every day, so follow their Instagram and pop in if that day looks good. They usually take walk-ins outside.",
+          },
+          { name: "Maison", note: "French food, and so amazing." },
+          {
+            name: "The Post House",
+            note: "Super cute, over in Mount Pleasant. My favourite brunch in Charleston, in a really cute neighbourhood you can walk around after.",
+          },
+          {
+            name: "The Obstinate Daughter",
+            note: "You need a reservation. Get the farro or the Old Danger. If you cannot get one they take walk-ins, so put your name down and walk along the beach.",
+          },
+          {
+            name: "Farfalle",
+            note: "Phenomenal pasta and vibes, and the outside seating is so cute. Famous for the whipped ricotta. Across the street from a dope ice cream shop.",
+          },
+        ],
+      },
+      {
+        title: "Casual",
+        places: [
+          {
+            name: "Cru Cafe",
+            note: "The best lowkey restaurant downtown. Get the Asian salad, it's insane.",
+          },
+          {
+            name: "Queen Street Grocery",
+            note: "Super casual, mostly crepes and sandwiches, but so good and in a really cute part of Charleston.",
+          },
+          { name: "Harken Cafe", note: "Coffee shop with a small breakfast menu." },
+          { name: "Brown's Court Bakery", note: "I came here almost every morning. Best bakery." },
+          { name: "Lewis Barbecue", note: "My favourite spot, though some people prefer Rodney Scott's." },
+          { name: "Rodney Scott's BBQ", note: "The other camp." },
+        ],
+      },
+      {
+        title: "Drinks",
+        places: [
+          { name: "Citrus Club", note: "Rooftop bar overlooking Charleston." },
+          { name: "The Cocktail Club", note: "Good drinks, older scene." },
+          {
+            name: "Vintage Lounge",
+            note: "Really dope vibes and drinks. Voted prettiest bar in America, I'm pretty sure.",
+          },
+          {
+            name: "The Royal American",
+            note: "Great live music usually. Quintessential Charleston bar.",
+          },
+          {
+            name: "Faculty Lounge",
+            note: "A speakeasy, kind of off the beaten path. One of my favourites.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "vermont",
+    title: "Vermont Recommendations",
+    destination: "Vermont",
+    country: "United States",
+    cover: vermont,
+    summary:
+      "Where to eat around Mount Snow, four hikes graded by effort, and the shops worth a detour.",
+    teaser:
+      "The Mount Snow and Dover end of Vermont. Dive bars and breakfast places, four hikes from beginner to moderately difficult, and a nearby town for a farmers' market.",
+    tags: ["#MountSnow", "#Dover", "#Hikes"],
+    sections: [
+      {
+        title: "Eat and drink",
+        places: [
+          { name: "Dover Bar and Grill", near: "Dover, Vermont", note: "Local dive bar." },
+          { name: "The Last Chair", near: "West Dover, Vermont" },
+          { name: "Valley View Saloon", near: "West Dover, Vermont" },
+          { name: "1846 Tavern", near: "West Dover, Vermont" },
+          { name: "TC's Family Restaurant", near: "Wilmington, Vermont" },
+          { name: "Betsey's Dots of Dover", near: "Dover, Vermont", note: "Breakfast." },
+          { name: "Sawmill Bar and Table", near: "West Dover, Vermont", note: "Breakfast." },
+          { name: "Snow Republic Brewing", near: "West Dover, Vermont", note: "Brewery." },
+        ],
+      },
+      {
+        title: "More, from someone who lived there",
+        places: [
+          { name: "Sticky Fingers Bakery", near: "Vermont" },
+          { name: "American Flatbread", near: "Vermont" },
+        ],
+      },
+      {
+        title: "Hikes",
+        places: [
+          { name: "Crystal Cascade Falls", near: "Vermont", note: "2.1 miles, beginner." },
+          { name: "Bucklin Trail", near: "Vermont", note: "7.2 miles, moderately difficult." },
+          { name: "Valley Trail", near: "West Dover, Vermont", note: "5 miles, easier." },
+          { name: "Haystack Mountain", near: "Wilmington, Vermont", note: "5 miles, medium." },
+        ],
+      },
+      {
+        title: "Shops and things",
+        places: [
+          { name: "Clothespins Consignment Boutique", near: "Vermont" },
+          { name: "King Arthur Baking", near: "Norwich, Vermont" },
+          { name: "Sheep Shed and Worn", near: "Vermont", note: "Collectible store." },
+          { name: "Snow Mountain Market", near: "West Dover, Vermont" },
+          { name: "Mount Snow", near: "West Dover, Vermont", note: "They run a summer block party." },
+        ],
+      },
+      {
+        title: "Nearby",
+        places: [
+          {
+            name: "Brattleboro",
+            near: "Vermont",
+            note: "Cute town nearby, with a farmers' market and such.",
+          },
         ],
       },
     ],
