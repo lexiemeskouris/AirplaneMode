@@ -6397,7 +6397,7 @@ export const itineraries: Itinerary[] = [
       "Bute Park, the market and the Victorian arcades",
       "Live music at The Dock in Cardiff Bay",
       "Pen y Fan, a three hour round trip at a steady pace",
-      "A rugby game to finish",
+      "A rugby game at Cardiff Arms Park to finish",
     ],
     days: [
       {
@@ -6458,7 +6458,10 @@ export const itineraries: Itinerary[] = [
           },
           { time: "15:00", description: "Back to Cardiff." },
           { time: "17:00", description: "Late pub lunch." },
-          { description: "A rugby game." },
+          {
+            description: "A rugby game at Cardiff Arms Park.",
+            places: [{ name: "Cardiff Arms Park", near: "Wales" }],
+          },
           { description: "Explore at leisure afterwards, or take an earlier train home." },
         ],
       },
