@@ -26,6 +26,7 @@ import japan from "@/assets/japan.svg";
 import mexicoCity from "@/assets/mexico-city.svg";
 import madeira from "@/assets/madeira.svg";
 import helsinki from "@/assets/helsinki.svg";
+import tallinn from "@/assets/tallinn.svg";
 import egypt from "@/assets/egypt.svg";
 import istanbul from "@/assets/istanbul.svg";
 import krakow from "@/assets/krakow.svg";
@@ -4508,33 +4509,39 @@ export const itineraries: Itinerary[] = [
   },
   {
     slug: "helsinki",
-    title: "Helsinki and Tallinn",
+    title: "Two Days in Helsinki",
     destination: "Helsinki",
     country: "Finland",
     coords: { lat: 60.1699, lon: 24.9384 },
-    duration: "3 days",
+    duration: "2 days",
     season: "Winter",
     summary:
-      "Two Christmas markets, a sauna, and a two hour ferry between two countries.",
+      "A library, a design museum, a sauna on the waterfront, and the Christmas market at Senate Square.",
     cover: helsinki,
     gated: false,
     teaser:
-      "A day and a half in Helsinki, a ferry across, and a day and a half in Tallinn. Built around the Christmas markets, which is the only part that has to be December.",
-    tags: ["#ChristmasMarket", "#Loyly", "#Tallinn"],
+      "A late landing and one full day, which is enough for the Design District and Löyly with the market in the evening. On the second morning you take the ferry across to Tallinn.",
+    tags: ["#ChristmasMarket", "#Loyly", "#DesignDistrict"],
     notes: [
-      "The Christmas markets are the spine of this one, so it only really works in late November and December. Everything else holds year round.",
+      "The Christmas market is the spine of this one, so it only really works in late November and December. Everything else holds year round.",
     ],
+    seeAlso: {
+      slug: "tallinn",
+      kind: "itinerary",
+      title: "Two Days in Tallinn",
+      note: "The ferry from Helsinki to Tallinn takes two hours, which makes the two easy to do back to back. Here is the other half.",
+    },
     highlights: [
-      "Löyly sauna on the Helsinki waterfront",
-      "The Helsinki Christmas market at Senate Square",
-      "A two hour ferry from Helsinki to Tallinn",
-      "The Tallinn Christmas market, eaten as dinner",
-      "Ice skating at the Harju Street rink",
+      "Löyly sauna on the waterfront",
+      "The Christmas market at Senate Square",
+      "The Oodi library",
+      "The Design District shops",
+      "Cafe Regatta before the ferry",
     ],
     days: [
       {
         day: "Arrival",
-        title: "Land Late in Helsinki",
+        title: "Land Late",
         activities: [
           { time: "21:55", description: "Land in Helsinki." },
           { time: "22:40", description: "Into town by train." },
@@ -4550,7 +4557,7 @@ export const itineraries: Itinerary[] = [
       },
       {
         day: "Day One",
-        title: "Helsinki, and the Market",
+        title: "Design, a Sauna, and the Market",
         activities: [
           {
             time: "10:30",
@@ -4574,14 +4581,14 @@ export const itineraries: Itinerary[] = [
           {
             time: "18:00",
             description:
-              "The Helsinki Christmas market at Senate Square. It closes at 20:00, and the alcohol stops at 22:00.",
+              "The Christmas market at Senate Square. It closes at 20:00, and the alcohol stops at 22:00.",
             places: [{ name: "Senate Square", near: "Helsinki, Finland" }],
           },
         ],
       },
       {
-        day: "Day Two",
-        title: "Ferry to Tallinn",
+        day: "Departure",
+        title: "Coffee, Then the Ferry",
         activities: [
           {
             time: "10:00",
@@ -4589,11 +4596,56 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "Cafe Regatta", near: "Helsinki, Finland" }],
           },
           { time: "12:45", description: "Be at the ferry." },
-          { time: "13:30", description: "Ferry to Tallinn, until 15:30.", places: [{ name: "Tallinn" }] },
+          {
+            time: "13:30",
+            description: "Two hour ferry to Tallinn.",
+            places: [{ name: "Tallinn", near: "Estonia" }],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "tallinn",
+    title: "Two Days in Tallinn",
+    destination: "Tallinn",
+    country: "Estonia",
+    coords: { lat: 59.437, lon: 24.7536 },
+    duration: "2 days",
+    season: "Winter",
+    summary:
+      "A Christmas market eaten as dinner, ice skating, and a medieval old town the next day.",
+    cover: tallinn,
+    gated: false,
+    teaser:
+      "Reached by a two hour ferry from Helsinki. The first evening is the market and the rink, and the full day is towers, cathedrals and a creative quarter, finishing at Rataskaevu 16.",
+    tags: ["#ChristmasMarket", "#OldTown", "#Telliskivi"],
+    notes: [
+      "The Christmas market and the rink are what make the first evening, so this works best in late November and December.",
+    ],
+    seeAlso: {
+      slug: "helsinki",
+      kind: "itinerary",
+      title: "Two Days in Helsinki",
+      note: "We came in on the ferry from Helsinki, which takes two hours. Here is the other half.",
+    },
+    highlights: [
+      "The Christmas market at Town Hall Square, eaten as dinner",
+      "Ice skating at the Harju Street rink",
+      "St Olaf's Tower for the panoramic view",
+      "Telliskivi Creative City",
+      "Dinner at Rataskaevu 16",
+    ],
+    days: [
+      {
+        day: "Arrival",
+        title: "Ferry In, Market for Dinner",
+        activities: [
+          { time: "15:30", description: "Ferry arrives from Helsinki." },
           { time: "16:00", description: "Drop bags at the hotel." },
           {
             time: "16:30",
-            description: "The Tallinn Christmas market at Town Hall Square. This is dinner.",
+            description: "The Christmas market at Town Hall Square. This is dinner.",
             places: [{ name: "Town Hall Square", near: "Tallinn, Estonia" }],
           },
           {
@@ -4605,8 +4657,8 @@ export const itineraries: Itinerary[] = [
         ],
       },
       {
-        day: "Day Three",
-        title: "Tallinn",
+        day: "Day One",
+        title: "The Old Town, and Telliskivi",
         activities: [
           { description: "Sleep in, then sauna and steam at the hotel." },
           {
