@@ -8,7 +8,7 @@ import nice from "@/assets/nice.jpg";
 import charleston from "@/assets/charleston.jpg";
 import dover from "@/assets/dover.jpg";
 import london from "@/assets/london.jpg";
-import newYork from "@/assets/new-york.svg";
+import newYork from "@/assets/new-york.jpg";
 import cotswolds from "@/assets/cotswolds.jpg";
 
 /**

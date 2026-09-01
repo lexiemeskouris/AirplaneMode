@@ -22,7 +22,7 @@ import brussels from "@/assets/brussels.jpg";
 import switzerland from "@/assets/switzerland.jpg";
 import lisbon from "@/assets/lisbon.jpg";
 import quito from "@/assets/quito.jpg";
-import galapagos from "@/assets/galapagos.svg";
+import galapagos from "@/assets/galapagos.jpg";
 import japan from "@/assets/japan.jpg";
 import mexicoCity from "@/assets/mexico-city.jpg";
 import madeira from "@/assets/madeira.jpg";
@@ -38,8 +38,8 @@ import malta from "@/assets/malta.jpg";
 import southAfrica from "@/assets/south-africa.jpg";
 import victoriaFalls from "@/assets/victoria-falls.jpg";
 import stockholm from "@/assets/stockholm.jpg";
-import morocco from "@/assets/morocco.svg";
-import cardiff from "@/assets/cardiff.svg";
+import morocco from "@/assets/morocco.jpg";
+import cardiff from "@/assets/cardiff.jpg";
 
 /** A named venue, with its map link if we have a real one. */
 export type Place = {
