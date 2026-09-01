@@ -1,14 +1,14 @@
 import type { Activity, Place } from "./itineraries";
-import kilimanjaro from "@/assets/kilimanjaro.svg";
-import barcelona from "@/assets/barcelona.svg";
+import kilimanjaro from "@/assets/kilimanjaro.jpg";
+import barcelona from "@/assets/barcelona.jpg";
 import miami from "@/assets/miami.svg";
 import reykjavik from "@/assets/reykjavik.svg";
-import bordeaux from "@/assets/bordeaux.svg";
+import bordeaux from "@/assets/bordeaux.jpg";
 import nice from "@/assets/nice.svg";
-import charleston from "@/assets/charleston.svg";
-import dover from "@/assets/dover.svg";
-import london from "@/assets/london.svg";
-import cotswolds from "@/assets/cotswolds.svg";
+import charleston from "@/assets/charleston.jpg";
+import dover from "@/assets/dover.jpg";
+import london from "@/assets/london.jpg";
+import cotswolds from "@/assets/cotswolds.jpg";
 
 /**
  * A city I have opinions about but no itinerary for. Same links and the same
