@@ -33,6 +33,7 @@ import tuscany from "@/assets/tuscany.svg";
 import tromso from "@/assets/tromso.svg";
 import seoul from "@/assets/seoul.svg";
 import malta from "@/assets/malta.svg";
+import southAfrica from "@/assets/south-africa.svg";
 
 /** A named venue, with its map link if we have a real one. */
 export type Place = {
@@ -5451,6 +5452,300 @@ export const itineraries: Itinerary[] = [
           { name: "LOA" },
           { name: "Beef Bar" },
           { name: "Taproom" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "south-africa",
+    title: "South Africa and Victoria Falls",
+    destination: "South Africa",
+    country: "South Africa",
+    coords: { lat: -33.9249, lon: 18.4241 },
+    duration: "13 days",
+    season: "May",
+    summary:
+      "Cape Town for six days, a safari, a day in Johannesburg, then over the border to Victoria Falls.",
+    cover: southAfrica,
+    gated: false,
+    teaser:
+      "Two countries. Six days in Cape Town with a hike or a tour every morning and a booked dinner every night, three on safari, one in Johannesburg for Soweto, then four at Victoria Falls in Zimbabwe.",
+    tags: ["#TableMountain", "#Soweto", "#VictoriaFalls"],
+    notes: [
+      "Victoria Falls is in Zimbabwe, so this needs a second visa. The US is category B, which means a visa on arrival, but check the current rules and prices before you go.",
+      "May is autumn in South Africa, not spring.",
+    ],
+    highlights: [
+      "Shark diving, then a hike up Lion's Head the same day",
+      "Platteklip Gorge up Table Mountain, cable car down",
+      "Robben Island, by ferry from the V&A Waterfront",
+      "A Soweto tour, then a street food and art walk in Johannesburg",
+      "White water rafting below Victoria Falls",
+    ],
+    days: [
+      {
+        day: "Arrival",
+        title: "Land in Cape Town",
+        activities: [
+          { time: "17:10", description: "Land in Cape Town.", places: [{ name: "Cape Town" }] },
+        ],
+      },
+      {
+        day: "Day One",
+        title: "Sharks, Then Lion's Head",
+        activities: [
+          { time: "08:00", description: "Shark diving." },
+          {
+            time: "12:00",
+            description:
+              "Neighbourgoods Market for lunch. Walk around, eat, and pick up food for the hike.",
+            places: [{ name: "Neighbourgoods Market", near: "Cape Town, South Africa" }],
+          },
+          {
+            time: "14:00",
+            description:
+              "Lion's Head. Three miles, no guide needed. Reckon on an hour and a half up, an hour at the top, and 45 minutes down.",
+            places: [{ name: "Lion's Head", near: "Cape Town, South Africa" }],
+          },
+          {
+            time: "19:00",
+            description:
+              "Dinner at The Dog's Bullocks at YARD. Casual, several restaurants on one front, near the hotel. No reservation needed.",
+            places: [{ name: "YARD", near: "Cape Town, South Africa" }],
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "Table Mountain",
+        activities: [
+          {
+            time: "08:00",
+            description: "Breakfast at Arnolds. Omelettes, pancakes, near the hotel.",
+            places: [{ name: "Arnolds", near: "Cape Town, South Africa" }],
+          },
+          {
+            time: "10:00",
+            description:
+              "Table Mountain. Hike up the Platteklip Gorge trail and take the cable car down. The cable car can close at any moment without notice in heavy winds, so leave enough time to walk down instead.",
+            places: [
+              { name: "Table Mountain", near: "Cape Town, South Africa" },
+              { name: "Platteklip Gorge", near: "Cape Town, South Africa" },
+            ],
+          },
+          {
+            time: "16:00",
+            description: "Kirstenbosch Botanical Gardens. They close at 17:30.",
+            places: [{ name: "Kirstenbosch Botanical Garden", near: "Cape Town, South Africa" }],
+          },
+          {
+            time: "19:30",
+            description: "Dinner at Kloof Street House.",
+            places: [{ name: "Kloof Street House", near: "Cape Town, South Africa" }],
+          },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "Wine Tour",
+        activities: [
+          {
+            time: "07:30",
+            description: "Pastries at Oswalds Bakery, known for the range of loaves.",
+            places: [{ name: "Oswalds Bakery", near: "Cape Town, South Africa" }],
+          },
+          { time: "08:30", description: "Picked up for the wine tour." },
+          { time: "17:00", description: "Rest and change." },
+          {
+            time: "19:30",
+            description: "Dinner at Aubergine.",
+            places: [{ name: "Aubergine", near: "Cape Town, South Africa" }],
+          },
+        ],
+      },
+      {
+        day: "Day Four",
+        title: "Cape of Good Hope and the Penguins",
+        activities: [
+          {
+            time: "08:00",
+            description:
+              "Breakfast at Liquorice & Lime if you are up early enough, which opens at 07:00. Otherwise back to Oswalds.",
+            places: [{ name: "Liquorice & Lime", near: "Cape Town, South Africa" }],
+          },
+          {
+            time: "09:00",
+            description: "Picked up for the Cape of Good Hope and penguins tour.",
+            places: [
+              { name: "Cape of Good Hope", near: "South Africa" },
+              { name: "Boulders Beach", near: "Simon's Town, South Africa" },
+            ],
+          },
+          { time: "18:00", description: "Rest and change." },
+          {
+            time: "19:30",
+            description: "Dinner at Bouchon Bistro.",
+            places: [{ name: "Bouchon Bistro", near: "Cape Town, South Africa" }],
+          },
+        ],
+      },
+      {
+        day: "Day Five",
+        title: "Robben Island and Bo-Kaap",
+        activities: [
+          {
+            time: "08:00",
+            description: "Breakfast at Egghead Diner.",
+            places: [{ name: "Egghead Diner", near: "Cape Town, South Africa" }],
+          },
+          {
+            time: "11:00",
+            description:
+              "Robben Island tour, about four hours. The ferry leaves the Nelson Mandela Gateway at the V&A Waterfront at 11:00 daily, so arrive ten to fifteen minutes early.",
+            places: [
+              { name: "Robben Island", near: "Cape Town, South Africa" },
+              { name: "Nelson Mandela Gateway", near: "Cape Town, South Africa" },
+            ],
+          },
+          {
+            time: "16:00",
+            description:
+              "Walk Bo-Kaap, known for its narrow cobbled streets and coloured houses. The Bo-Kaap Museum is worth a stop.",
+            places: [
+              { name: "Bo-Kaap", near: "Cape Town, South Africa" },
+              { name: "Bo-Kaap Museum", near: "Cape Town, South Africa" },
+            ],
+          },
+          {
+            time: "20:30",
+            description: "Dinner at FYN.",
+            places: [{ name: "FYN Restaurant", near: "Cape Town, South Africa" }],
+          },
+        ],
+      },
+      {
+        day: "Days Six to Eight",
+        title: "Safari",
+        activities: [
+          {
+            description:
+              "Three days on safari. The itinerary does not record where, only that it ran across these three days, with a night at an airport hotel in Cape Town at the end of it.",
+          },
+        ],
+      },
+      {
+        day: "Day Nine",
+        title: "Johannesburg and Soweto",
+        activities: [
+          {
+            time: "08:55",
+            description: "Land in Johannesburg.",
+            places: [{ name: "Johannesburg" }],
+          },
+          { time: "09:00", description: "Eat at the airport or nearby, and check in." },
+          {
+            time: "11:00",
+            description: "Try to make the 11:00 guided tour at Constitution Hill. It runs an hour.",
+            places: [{ name: "Constitution Hill", near: "Johannesburg, South Africa" }],
+          },
+          {
+            time: "13:00",
+            description:
+              "Meet in Orlando West, Soweto, about 24 minutes' drive, for the Soweto tour.",
+            places: [{ name: "Orlando West", near: "Soweto, South Africa" }],
+          },
+          {
+            time: "17:00",
+            description:
+              "A quick bite at Sakhumzi, traditional Soweto food, eight minutes' walk from the end of the tour.",
+            places: [{ name: "Sakhumzi Restaurant", near: "Soweto, South Africa" }],
+          },
+          {
+            time: "19:00",
+            description:
+              "Street food and art walking tour, meeting at the City Lodge in Newtown, about twenty minutes' drive.",
+            places: [{ name: "Newtown", near: "Johannesburg, South Africa" }],
+          },
+        ],
+      },
+      {
+        day: "Day Ten",
+        title: "Over to Victoria Falls",
+        activities: [
+          { time: "08:00", description: "Check out and head to the airport." },
+          {
+            time: "11:35",
+            description: "Flight to Victoria Falls, landing at 13:20.",
+            places: [{ name: "Victoria Falls", near: "Zimbabwe" }],
+          },
+          { time: "14:00", description: "Settle in." },
+          {
+            time: "16:00",
+            description: "Late lunch or early dinner at The Three Monkeys.",
+            places: [{ name: "The Three Monkeys", near: "Victoria Falls, Zimbabwe" }],
+          },
+          {
+            time: "18:00",
+            description:
+              "Walk around Victoria Falls town and the Elephant's Walk Shopping Village.",
+            places: [{ name: "Elephant's Walk Shopping Village", near: "Victoria Falls, Zimbabwe" }],
+          },
+        ],
+      },
+      {
+        day: "Day Eleven",
+        title: "The Falls, Then Massages",
+        activities: [
+          {
+            time: "10:30",
+            description: "Check in for the tour of the falls. The entrance fee is not included.",
+          },
+          { time: "13:00", description: "Move on to the massages." },
+          {
+            time: "15:00",
+            description: "Ninety minute massages at the Victoria Falls Safari Hotel.",
+            places: [{ name: "Victoria Falls Safari Lodge", near: "Zimbabwe" }],
+          },
+          {
+            time: "19:00",
+            description: "Dinner at MaKuwa Kuwa, at the same hotel.",
+            places: [{ name: "MaKuwa Kuwa Restaurant", near: "Victoria Falls, Zimbabwe" }],
+          },
+        ],
+      },
+      {
+        day: "Day Twelve",
+        title: "Rafting, Then High Tea",
+        activities: [
+          { time: "11:00", description: "White water rafting. Fingers crossed." },
+          {
+            time: "16:00",
+            description:
+              "High tea at the Victoria Falls Hotel. Iconic place, and you can watch the sunset. It runs 15:00 to 18:00.",
+            places: [{ name: "Victoria Falls Hotel", near: "Zimbabwe" }],
+          },
+          { time: "19:00", description: "Walk the hotel grounds, and eat again if you are still hungry." },
+        ],
+      },
+      {
+        day: "Departure",
+        title: "Out of Victoria Falls",
+        activities: [
+          { time: "08:00", description: "Airport transfer." },
+          { time: "13:30", description: "Flight out." },
+        ],
+      },
+    ],
+    extras: [
+      {
+        title: "Before you go",
+        items: [
+          "The Apartheid Museum is closed on Mondays and Tuesdays. We were in Johannesburg on a Tuesday and missed it, so plan that day around it.",
+          "Zimbabwe issues a visa on arrival for US passports, which are category B. Check the current category, price and rules before you travel, since these change.",
+          "Botswana charges its own visa fee if you cross the border for the day.",
+          "Skip the sunset cruise at Victoria Falls. The sun goes down about thirty minutes after you embark, and then you are sitting on a boat in the dark.",
+          "Park and site entrance fees are separate from most tour prices, and they go up. Budget for them on top.",
+          "The Table Mountain cable car closes without warning in high wind, so always have the time to walk down.",
         ],
       },
     ],
