@@ -202,7 +202,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       // BASE_URL is "/" in Lovable and "/AirplaneMode/" in the GitHub Pages build,
       // so this resolves correctly in both.
-      { rel: "icon", href: `${import.meta.env.BASE_URL}favicon.svg`, type: "image/svg+xml" },
+      { rel: "icon", href: `${import.meta.env.BASE_URL}favicon.png`, type: "image/png" },
+      { rel: "apple-touch-icon", href: `${import.meta.env.BASE_URL}apple-touch-icon.png` },
     ],
   }),
   shellComponent: RootShell,
