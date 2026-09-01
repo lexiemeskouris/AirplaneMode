@@ -36,6 +36,7 @@ import malta from "@/assets/malta.svg";
 import southAfrica from "@/assets/south-africa.svg";
 import victoriaFalls from "@/assets/victoria-falls.svg";
 import stockholm from "@/assets/stockholm.svg";
+import morocco from "@/assets/morocco.svg";
 
 /** A named venue, with its map link if we have a real one. */
 export type Place = {
@@ -6140,6 +6141,186 @@ export const itineraries: Itinerary[] = [
               "The rest of the Sunday was deliberately left unplanned, and stayed that way.",
           },
         ],
+      },
+    ],
+  },
+  {
+    slug: "morocco",
+    title: "Ten Days in Morocco",
+    destination: "Morocco",
+    country: "Morocco",
+    coords: { lat: 31.6295, lon: -7.9811 },
+    duration: "10 days",
+    season: "June",
+    summary:
+      "Marrakech at full tilt, three days in the desert, then Fes, with a day trip up to Chefchaouen.",
+    cover: morocco,
+    gated: false,
+    teaser:
+      "Two riads and a tent. Marrakech is guided and packed, the desert is three days off the schedule entirely, and Fes is medina tours, a cooking class and bread making in a garden.",
+    tags: ["#Marrakech", "#Chefchaouen", "#Fes"],
+    highlights: [
+      "A hot air balloon over the Atlas Mountains at 05:00",
+      "Massages at La Mamounia, then afternoon tea at the Royal Mansour",
+      "The Jardin Majorelle and the Yves Saint Laurent museum",
+      "A twelve hour day trip up to Chefchaouen",
+      "Bread making and lunch in the garden of the riad",
+    ],
+    days: [
+      {
+        day: "Arrival",
+        title: "Land, and Sleep",
+        activities: [
+          { description: "Land, check in to the riad, sleep.", places: [{ name: "Marrakech" }] },
+        ],
+      },
+      {
+        day: "Day One",
+        title: "Guided Marrakech",
+        activities: [
+          {
+            time: "08:30",
+            description: "Breakfast and coffee at Bacha Coffee.",
+            places: [{ name: "Bacha Coffee", near: "Marrakech, Morocco" }],
+          },
+          {
+            time: "09:30",
+            description:
+              "Guided tour of Marrakech until 13:30, meeting at the Koutoubia Mosque. It takes in the Jewish Quarter, the souks and the craft workshops, Ben Youssef, a herboriste for the Berber medicines, and Jemaa el-Fnaa.",
+            places: [
+              { name: "Koutoubia Mosque", near: "Marrakech, Morocco" },
+              { name: "Mellah", near: "Marrakech, Morocco" },
+              { name: "Ben Youssef Madrasa", near: "Marrakech, Morocco" },
+              { name: "Jemaa el-Fnaa", near: "Marrakech, Morocco" },
+            ],
+          },
+          {
+            time: "13:30",
+            description: "Lunch at Nomad. Try to sit on the rooftop.",
+            places: [{ name: "Nomad", near: "Marrakech, Morocco" }],
+          },
+          {
+            time: "15:30",
+            description:
+              "The Jardin Majorelle and the Yves Saint Laurent museum until 18:00. One to two hours is usual for the garden and the museum together. Buy tickets ahead.",
+            places: [
+              { name: "Jardin Majorelle", near: "Marrakech, Morocco" },
+              { name: "Musée Yves Saint Laurent", near: "Marrakech, Morocco" },
+            ],
+          },
+          {
+            time: "19:00",
+            description: "Dinner at L'Mida. Rooftop again.",
+            places: [{ name: "L'Mida", near: "Marrakech, Morocco" }],
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "A Balloon, a Hammam, and a Show",
+        activities: [
+          {
+            time: "05:00",
+            description:
+              "Hot air balloon over the Atlas Mountains until 10:00, picked up from the hotel. Breakfast is included.",
+            places: [{ name: "Atlas Mountains", near: "Morocco" }],
+          },
+          { time: "10:00", description: "Nap, and eat if you are hungry." },
+          {
+            time: "13:00",
+            description: "Massages at La Mamounia until 15:00.",
+            places: [{ name: "La Mamounia", near: "Marrakech, Morocco" }],
+          },
+          {
+            time: "15:30",
+            description: "Afternoon tea at the Royal Mansour until 17:00.",
+            places: [{ name: "Royal Mansour", near: "Marrakech, Morocco" }],
+          },
+          {
+            time: "18:30",
+            description: "Cocktails at DarDar. Sit on the rooftop.",
+            places: [{ name: "DarDar Rooftop", near: "Marrakech, Morocco" }],
+          },
+          {
+            time: "20:00",
+            description: "Dinner and a show at Dar Essalam, until 23:00.",
+            places: [{ name: "Dar Essalam", near: "Marrakech, Morocco" }],
+          },
+        ],
+      },
+      {
+        day: "Days Three to Five",
+        title: "The Desert",
+        activities: [
+          {
+            description:
+              "Three days in the desert: camping, ATVs, and whatever else. The itinerary records only that much, which is rather the point of it.",
+            places: [{ name: "Sahara Desert", near: "Morocco" }],
+          },
+        ],
+      },
+      {
+        day: "Day Six",
+        title: "Into Fes",
+        activities: [
+          {
+            time: "10:00",
+            description:
+              "Guided tour of the medina until 13:00, meeting on Rue Talaa Kebira.",
+            places: [
+              { name: "Fes el Bali", near: "Fes, Morocco" },
+              { name: "Talaa Kebira", near: "Fes, Morocco" },
+            ],
+          },
+          { time: "13:00", description: "Brunch near the medina, or a food tour." },
+          {
+            time: "17:00",
+            description: "Cooking class and market tour, also starting on Talaa Kebira.",
+          },
+        ],
+      },
+      {
+        day: "Day Seven",
+        title: "Chefchaouen",
+        activities: [
+          {
+            time: "08:00",
+            description:
+              "Day trip to Chefchaouen. Twelve hours all in, with about three hours' driving each way and stops on the route.",
+            places: [{ name: "Chefchaouen", near: "Morocco" }],
+          },
+        ],
+      },
+      {
+        day: "Day Eight",
+        title: "Bread, Tanneries, and a Rooftop",
+        activities: [
+          {
+            time: "10:00",
+            description:
+              "Bread making and a two course lunch in the garden, at the Ruined Garden in the riad.",
+            places: [{ name: "The Ruined Garden", near: "Fes, Morocco" }],
+          },
+          {
+            time: "13:30",
+            description: "Explore and lounge until 17:00.",
+            places: [
+              { name: "Dar el Makhzen", near: "Fes, Morocco", note: "The doors of the Royal Palace." },
+              { name: "Chouara Tannery", near: "Fes, Morocco", note: "Leather goods, and a horrid smell." },
+              { name: "Art Naji", near: "Fes, Morocco", note: "Thirty minute free tour of the ceramics studio." },
+            ],
+          },
+          {
+            time: "17:00",
+            description: "Sunset cocktails at the Jungle Bar at Hotel Sahrai, then a nice dinner.",
+            places: [{ name: "Hotel Sahrai", near: "Fes, Morocco" }],
+          },
+        ],
+      },
+      {
+        day: "Departure",
+        title: "Fly Out",
+        activities: [{ description: "Pack up, say goodbye to Morocco, and fly to London." }],
       },
     ],
   },
