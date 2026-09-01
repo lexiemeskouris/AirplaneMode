@@ -1,10 +1,10 @@
 import type { Activity, Place } from "./itineraries";
 import kilimanjaro from "@/assets/kilimanjaro.jpg";
 import barcelona from "@/assets/barcelona.jpg";
-import miami from "@/assets/miami.svg";
-import reykjavik from "@/assets/reykjavik.svg";
+import miami from "@/assets/miami.jpg";
+import reykjavik from "@/assets/reykjavik.jpg";
 import bordeaux from "@/assets/bordeaux.jpg";
-import nice from "@/assets/nice.svg";
+import nice from "@/assets/nice.jpg";
 import charleston from "@/assets/charleston.jpg";
 import dover from "@/assets/dover.jpg";
 import london from "@/assets/london.jpg";
