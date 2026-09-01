@@ -4,7 +4,7 @@ import berlin from "@/assets/berlin.svg";
 import taipei from "@/assets/taipei.svg";
 import amsterdam from "@/assets/amsterdam.svg";
 import nashville from "@/assets/nashville.svg";
-import paris from "@/assets/paris.svg";
+import paris from "@/assets/paris.jpg";
 import copenhagen from "@/assets/copenhagen.svg";
 import budapest from "@/assets/budapest.svg";
 import thailand from "@/assets/thailand.svg";
