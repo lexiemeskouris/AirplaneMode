@@ -441,7 +441,7 @@ export const itineraries: Itinerary[] = [
     tags: ["#Doner", "#Berghain", "#StreetFoodThursday"],
     highlights: [
       "Rüyam Gemüse Kebab within an hour of landing",
-      "A two-hour walking tour from the Quadriga at Pariser Platz",
+      "The Third Reich and Cold War combo tour, two hours from the Quadriga",
       "Doors at KitKat, and joining the queue at 23:30",
       "Street Food Thursday at Markthalle Neun",
       "Säule at Berghain, then ://about blank",
@@ -471,8 +471,15 @@ export const itineraries: Itinerary[] = [
           },
           {
             time: "14:00",
-            description: "Two-hour walking tour, meeting at the Quadriga on Pariser Platz.",
-            places: [{ name: "Quadriga" }],
+            description:
+              "Berlin 2-hour Third Reich and Cold War Combo Tour, booked through Viator. Meet at the Quadriga on Pariser Platz.",
+            places: [
+              {
+                name: "Berlin 2-hour Third Reich and Cold War Combo Tour",
+                url: "https://www.viator.com/en-GB/tours/Berlin/Berlin-2-hour-Third-Reich-Cold-War-Combo-Tour/d488-5560P48",
+              },
+              { name: "Quadriga" },
+            ],
           },
           { time: "17:00", description: "Nap." },
           {
@@ -528,14 +535,32 @@ export const itineraries: Itinerary[] = [
         activities: [
           { time: "11:00", description: "Check out of the hotel." },
           {
-            description: "Time to fill before the airport. Any of these.",
+            description: "Time to fill before the airport. Any of these, depending on what you want out of the last few hours.",
             places: [
-              { name: "LIU Nudelhaus" },
-              { name: "Museum Island" },
-              { name: "Alexanderplatz" },
-              { name: "Vabali Spa" },
-              { name: "Café am Neuen See" },
-              { name: "Holzmarkt" },
+              {
+                name: "Vabali Spa",
+                note: "A whole day if you want one. Pools, saunas and a massage, and the most relaxing way to spend the last hours before a flight.",
+              },
+              {
+                name: "Museum Island",
+                note: "Five museums on one island. For anyone who loves art and history and wants to actually learn something. You can do just one of them.",
+              },
+              {
+                name: "Café am Neuen See",
+                note: "A beer garden on the lake in the Tiergarten. Somewhere to sit with a drink, and you can take a rowing boat out.",
+              },
+              {
+                name: "Holzmarkt",
+                note: "A riverside village of bars, workshops and studios on the Spree. Somewhere to drift about for an hour without a plan.",
+              },
+              {
+                name: "Alexanderplatz",
+                note: "The TV tower, the world clock and the big shops. The place to go if you still have things to buy.",
+              },
+              {
+                name: "LIU Nudelhaus",
+                note: "A fast bowl of hand-pulled noodles, if all you actually need is feeding before the airport.",
+              },
             ],
           },
           {
