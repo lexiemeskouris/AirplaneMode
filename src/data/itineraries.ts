@@ -1,5 +1,5 @@
 import sanSebastian from "@/assets/san-sebastian.jpg";
-import tunisia from "@/assets/tunisia.svg";
+import tunisia from "@/assets/tunisia.jpg";
 import berlin from "@/assets/berlin.jpg";
 import taipei from "@/assets/taipei.jpg";
 import amsterdam from "@/assets/amsterdam.jpg";
