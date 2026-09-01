@@ -5465,11 +5465,11 @@ export const itineraries: Itinerary[] = [
     duration: "13 days",
     season: "May",
     summary:
-      "Cape Town for six days, a safari, a day in Johannesburg, then over the border to Victoria Falls.",
+      "Cape Town for six days, the Garden Route with a 4x4 safari, a day in Johannesburg, then over the border to Victoria Falls.",
     cover: southAfrica,
     gated: false,
     teaser:
-      "Two countries. Six days in Cape Town with a hike or a tour every morning and a booked dinner every night, three on safari, one in Johannesburg for Soweto, then four at Victoria Falls in Zimbabwe.",
+      "Two countries. Six days in Cape Town with a hike or a tour every morning and a booked dinner every night, three on the Garden Route with a 4x4 safari, one in Johannesburg for Soweto, then four at Victoria Falls in Zimbabwe.",
     tags: ["#TableMountain", "#Soweto", "#VictoriaFalls"],
     notes: [
       "Victoria Falls is in Zimbabwe, so this needs a second visa. The US is category B, which means a visa on arrival, but check the current rules and prices before you go.",
@@ -5479,6 +5479,7 @@ export const itineraries: Itinerary[] = [
       "Shark diving, then a hike up Lion's Head the same day",
       "Platteklip Gorge up Table Mountain, cable car down",
       "Robben Island, by ferry from the V&A Waterfront",
+      "Three days along the Garden Route, with a 4x4 safari",
       "A Soweto tour, then a street food and art walk in Johannesburg",
       "White water rafting below Victoria Falls",
     ],
@@ -5625,11 +5626,16 @@ export const itineraries: Itinerary[] = [
       },
       {
         day: "Days Six to Eight",
-        title: "Safari",
+        title: "The Garden Route",
         activities: [
           {
             description:
-              "Three days on safari. The itinerary does not record where, only that it ran across these three days, with a night at an airport hotel in Cape Town at the end of it.",
+              "Three Day Garden Route Highlights with 4x4 Safari, a small group tour booked through TripAdvisor.",
+            places: [{ name: "Garden Route", near: "South Africa" }],
+          },
+          {
+            description:
+              "It runs out of Cape Town and comes back to it, which is why the last night of it is at an airport hotel rather than back in town.",
           },
         ],
       },
