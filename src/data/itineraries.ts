@@ -38,6 +38,7 @@ import southAfrica from "@/assets/south-africa.svg";
 import victoriaFalls from "@/assets/victoria-falls.svg";
 import stockholm from "@/assets/stockholm.svg";
 import morocco from "@/assets/morocco.svg";
+import cardiff from "@/assets/cardiff.svg";
 
 /** A named venue, with its map link if we have a real one. */
 export type Place = {
@@ -6373,6 +6374,93 @@ export const itineraries: Itinerary[] = [
         day: "Departure",
         title: "Fly Out",
         activities: [{ description: "Pack up, say goodbye to Morocco, and fly to London." }],
+      },
+    ],
+  },
+  {
+    slug: "cardiff",
+    title: "Two Days in Cardiff",
+    destination: "Cardiff",
+    country: "Wales",
+    coords: { lat: 51.4816, lon: -3.1791 },
+    duration: "2 days",
+    season: "Early Autumn",
+    summary:
+      "The castle, the arcades and Cardiff Bay on the first day, then Pen y Fan and a rugby game on the second.",
+    cover: cardiff,
+    gated: false,
+    teaser:
+      "Reached from London in under three hours by train, which makes it a weekend rather than a trip. The first day is all central Cardiff on foot, and the second gets out to the Brecon Beacons and back in time for the rugby.",
+    tags: ["#PenYFan", "#CardiffBay", "#Rugby"],
+    highlights: [
+      "Cardiff Castle, with a tour",
+      "Bute Park, the market and the Victorian arcades",
+      "Live music at The Dock in Cardiff Bay",
+      "Pen y Fan, a three hour round trip at a steady pace",
+      "A rugby game to finish",
+    ],
+    days: [
+      {
+        day: "Day One",
+        title: "The Castle, the Arcades, and the Bay",
+        activities: [
+          { time: "08:18", description: "Leave London." },
+          { time: "11:07", description: "Arrive in Cardiff." },
+          {
+            description: "Store the luggage in the hotel lobby.",
+            places: [{ name: "Hotel Indigo Cardiff", near: "Wales" }],
+          },
+          {
+            time: "12:30",
+            description: "Lunch at Fresh the Baguette Bar.",
+            places: [{ name: "Fresh the Baguette Bar", near: "Cardiff, Wales" }],
+          },
+          {
+            time: "13:30",
+            description: "Cardiff Castle tour.",
+            places: [{ name: "Cardiff Castle" }],
+          },
+          {
+            time: "15:00",
+            description: "Walk through central Cardiff.",
+            places: [
+              { name: "Bute Park", near: "Cardiff, Wales" },
+              { name: "Cardiff Market", near: "Wales" },
+              { name: "Cardiff Victorian Arcades", near: "Wales" },
+            ],
+          },
+          { time: "18:00", description: "Check into the hotel properly." },
+          {
+            time: "19:00",
+            description:
+              "The Dock, for live music in Cardiff Bay. The Millennium Centre is right there, and so are a lot of restaurants and shops.",
+            places: [
+              { name: "The Dock", near: "Cardiff Bay, Wales" },
+              { name: "Wales Millennium Centre", near: "Cardiff, Wales" },
+              { name: "Cardiff Bay", near: "Wales" },
+            ],
+          },
+          { time: "20:00", description: "Dinner somewhere in Cardiff Bay." },
+          { description: "Drinks, and out, at leisure." },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "Pen y Fan, Then the Rugby",
+        activities: [
+          { time: "09:00", description: "Quick coffee and breakfast." },
+          { time: "10:00", description: "Uber or train out towards the hike." },
+          {
+            time: "11:00",
+            description:
+              "Pen y Fan. About a three hour round trip at a steady pace.",
+            places: [{ name: "Pen y Fan", near: "Brecon Beacons, Wales" }],
+          },
+          { time: "15:00", description: "Back to Cardiff." },
+          { time: "17:00", description: "Late pub lunch." },
+          { description: "A rugby game." },
+          { description: "Explore at leisure afterwards, or take an earlier train home." },
+        ],
       },
     ],
   },
