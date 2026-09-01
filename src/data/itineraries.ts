@@ -4794,9 +4794,9 @@ export const itineraries: Itinerary[] = [
       "Modest dress is needed for the guided days in Cairo.",
     ],
     highlights: [
-      "A four night cruise from Aswan back down to Luxor",
+      "A four day cruise from Aswan down to Luxor, with a guide the whole way",
       "Abu Simbel",
-      "The High Dam and Philae Temple",
+      "A balloon over the West Bank at dawn, then the Valley of the Kings",
       "Giza and the Grand Egyptian Museum with a full day guide",
       "An Old Cairo walking tour with street bites",
     ],
@@ -4825,46 +4825,93 @@ export const itineraries: Itinerary[] = [
           { time: "07:00", description: "Picked up from the hotel to transfer to Aswan." },
           {
             time: "11:30",
-            description: "Pick up the Nile cruise at Aswan.",
+            description:
+              "Board the Nile cruise at Aswan. Ours was the four day, three night Aswan to Luxor cruise with ImperialEgypt, with an Egyptology guide the whole way.",
             places: [{ name: "Aswan", near: "Egypt" }],
           },
           {
             time: "14:00",
-            description: "Tour of the High Dam and Philae Temple.",
+            description:
+              "The Aswan High Dam, then out by motor boat to Philae Temple.",
             places: [
               { name: "Aswan High Dam", near: "Egypt" },
               { name: "Philae Temple", near: "Aswan, Egypt" },
             ],
           },
+          {
+            description:
+              "Lunch, afternoon tea and dinner on board, then a disco in the evening. You stay moored at Aswan overnight, so you can get off if you want to.",
+          },
         ],
       },
       {
         day: "Day Three",
-        title: "Abu Simbel",
+        title: "Abu Simbel, Then Kom Ombo",
         activities: [
           {
-            description: "Abu Simbel.",
+            time: "04:30",
+            description:
+              "Picked up for Abu Simbel in a small group, arriving around 08:00. The rock-cut temples Ramesses II built for himself and for Nefertari.",
             places: [{ name: "Abu Simbel", near: "Egypt" }],
           },
+          { time: "12:00", description: "Back on board for lunch, then sail for Kom Ombo." },
+          {
+            description:
+              "Kom Ombo, the double temple shared between Sobek the crocodile god and Horus the falcon god.",
+            places: [{ name: "Temple of Kom Ombo", near: "Egypt" }],
+          },
+          { description: "Dinner on board, then sail on to Edfu overnight." },
         ],
       },
       {
         day: "Day Four",
-        title: "Edfu",
+        title: "Edfu, Then Luxor Temple",
         activities: [
           {
-            description: "Edfu Temple.",
+            description:
+              "Early morning horse and carriage with the guide to the Temple of Horus at Edfu, the most complete and best preserved temple in Egypt. About two hours.",
             places: [{ name: "Temple of Edfu", near: "Egypt" }],
           },
+          {
+            description:
+              "Late afternoon, dock at Luxor and cross to Luxor Temple on the East Bank, where the ancient Egyptian, Christian and Islamic layers all sit on top of each other.",
+            places: [{ name: "Luxor Temple", near: "Egypt" }],
+          },
+          {
+            description:
+              "If you dock by 15:00 or 15:30 there is time for Karnak as well as Luxor Temple.",
+          },
+          { description: "Dinner on board with a belly dancing show. Overnight at Luxor." },
         ],
       },
       {
         day: "Day Five",
-        title: "Off the Boat, On to Cairo",
+        title: "A Balloon, the West Bank, Then Cairo",
         activities: [
+          { description: "Early morning balloon over the West Bank." },
+          { description: "Breakfast, then check out of the cruise." },
+          {
+            description: "The Colossi of Memnon.",
+            places: [{ name: "Colossi of Memnon", near: "Luxor, Egypt" }],
+          },
+          {
+            description:
+              "The Valley of the Kings, where the New Kingdom pharaohs cut their tombs into the mountain.",
+            places: [{ name: "Valley of the Kings", near: "Luxor, Egypt" }],
+          },
+          {
+            description:
+              "The mortuary temple of Hatshepsut at Deir el-Bahari.",
+            places: [{ name: "Temple of Hatshepsut", near: "Luxor, Egypt" }],
+          },
           {
             description: "Tombs of the Nobles.",
             places: [{ name: "Tombs of the Nobles", near: "Luxor, Egypt" }],
+          },
+          {
+            description:
+              "Back to the East Bank for Karnak, the largest temple ever built, put up over 2,000 years and covering about 63 acres.",
+            places: [{ name: "Karnak Temple", near: "Luxor, Egypt" }],
           },
           { time: "14:00", description: "Leave the cruise." },
           { time: "16:00", description: "Transfer to the airport." },
@@ -5730,7 +5777,7 @@ export const itineraries: Itinerary[] = [
       {
         title: "Eat and drink",
         places: [
-          { name: "Cafe Society", near: "Valletta, Malta" },
+          { name: "Cafe Society", near: "Triq San Gwann, Valletta, Malta" },
           { name: "Paranga" },
           { name: "Rafael's" },
           { name: "Villa Bologna Restaurant" },
@@ -5976,6 +6023,19 @@ export const itineraries: Itinerary[] = [
       },
     ],
     extras: [
+      {
+        title: "What the cruise covered",
+        note: "Booked through ImperialEgypt. Useful to know what is and is not in the price, because the entrance fees are not.",
+        items: [
+          "Three nights on a five-star Nile cruise from Aswan to Luxor, with a qualified Egyptology guide throughout.",
+          "Every meal from lunch on the first day to breakfast on the last: three lunches, three dinners, three breakfasts.",
+          "Abu Simbel with an English-speaking guide, both banks at Luxor, and the horse and carriage at Edfu.",
+          "Transfers in air-conditioned vehicles, local taxes and porterage.",
+          "NOT included: entrance fees to the sites, which came to roughly $110 per person for all of them.",
+          "NOT included: tips for the guide, the drivers and the cruise crew.",
+          "NOT included: water and drinks on the cruise.",
+        ],
+      },
       {
         title: "Before you go",
         items: [

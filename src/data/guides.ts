@@ -949,6 +949,23 @@ export const guides: Guide[] = [
         ],
       },
       {
+        title: "Day trip: Stonehenge and Bath",
+        note: "You can do both in one day, which is what makes this one worth it. Stonehenge on its own is about two hours of your life; Bath fills the rest.",
+        places: [
+          {
+            name: "Stonehenge",
+            near: "Wiltshire, England",
+            note: "I took a day trip here and thought it was cool and mysterious. Go with expectations set: it is a field with stones in it, and it is still worth seeing.",
+          },
+          {
+            name: "Roman Baths",
+            near: "Bath, England",
+            note: "The Baths themselves, and a cute town around them. Something to do if you have the extra time in the day.",
+          },
+          { name: "Bath", near: "England" },
+        ],
+      },
+      {
         title: "Day trip: Whitstable",
         note: "Whitstable is on the Kent coast, a bit over an hour by train from St Pancras. This is a day out of London rather than a day in it, and the evening picks back up in town.",
         activities: [
@@ -988,6 +1005,32 @@ export const guides: Guide[] = [
             time: "22:45",
             description: "Ronnie Scott's.",
             places: [{ name: "Ronnie Scott's" }],
+          },
+        ],
+      },
+      {
+        title: "Museums",
+        note: "All four are free, which is the quiet superpower of London museums. Pick one, not four.",
+        places: [
+          {
+            name: "British Museum",
+            near: "London, England",
+            note: "The big one, and far too large to do in a single visit. Pick a wing and accept you will not see the rest.",
+          },
+          {
+            name: "Tate Modern",
+            near: "London, England",
+            note: "Modern and contemporary art in the old power station on the South Bank. Go up for the view as well as the art.",
+          },
+          {
+            name: "National Gallery",
+            near: "London, England",
+            note: "Western painting from the 1200s to 1900, right on Trafalgar Square. The easiest one to drop into for an hour.",
+          },
+          {
+            name: "Victoria and Albert Museum",
+            near: "London, England",
+            note: "Art and design: fashion, furniture, ceramics, all of it. The courtyard is a good place to sit when you have had enough.",
           },
         ],
       },
