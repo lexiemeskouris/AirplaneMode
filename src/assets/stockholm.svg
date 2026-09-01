@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" role="img" aria-label="STOCKHOLM">
+  <!-- Stand-in cover until there is a real photo. Square, with the name on a
+       centred plate, so any crop the card applies still shows it. -->
+  <rect width="1000" height="1000" fill="#8F2E14"/>
+  <rect x="0" y="0" width="1000" height="250" fill="#3B356E"/>
+  <rect x="0" y="250" width="1000" height="250" fill="#E5B441"/>
+  <rect x="0" y="500" width="1000" height="250" fill="#E1552B"/>
+  <rect x="0" y="750" width="1000" height="250" fill="#E489AF"/>
+  <rect x="0" y="415" width="1000" height="170" fill="#FDF8F3"/>
+  <text x="500" y="518" text-anchor="middle"
+        font-family="Sora, Manrope, ui-sans-serif, system-ui, sans-serif"
+        font-size="76" font-weight="800" letter-spacing="-3" fill="#241813">STOCKHOLM</text>
+</svg>

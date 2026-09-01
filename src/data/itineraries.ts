@@ -35,6 +35,7 @@ import seoul from "@/assets/seoul.svg";
 import malta from "@/assets/malta.svg";
 import southAfrica from "@/assets/south-africa.svg";
 import victoriaFalls from "@/assets/victoria-falls.svg";
+import stockholm from "@/assets/stockholm.svg";
 
 /** A named venue, with its map link if we have a real one. */
 export type Place = {
@@ -5968,6 +5969,176 @@ export const itineraries: Itinerary[] = [
           "Skip the sunset cruise. The sun goes down about thirty minutes after you embark, and then you are sitting on a boat in the dark.",
           "Botswana charges its own visa fee if you add a day trip across that border too.",
           "Park and site entrance fees are separate from most tour prices, and they go up. Budget for them on top.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "stockholm",
+    title: "Three Days in Stockholm",
+    destination: "Stockholm",
+    country: "Sweden",
+    coords: { lat: 59.3293, lon: 18.0686 },
+    duration: "3 days",
+    season: "Summer",
+    summary:
+      "Gamla Stan on foot, ABBA and a food hall, and a park at ten at night while the sun is still going down.",
+    cover: stockholm,
+    gated: false,
+    teaser:
+      "Two tightly planned days and a Sunday left open. Almost all of it is walkable, and the evenings run late because in summer the light does too.",
+    tags: ["#GamlaStan", "#ABBA", "#Fika"],
+    notes: [
+      "The late evenings only work in summer. At 22:00 the sun is still going down, which is the whole reason for the park at the end of the first night.",
+    ],
+    highlights: [
+      "Gamla Stan's alleyways, and fika overlooking Stortorget",
+      "Cocktails at the Cadier Bar, then dinner aboard a WWII steamboat",
+      "Ivar Los park at 22:00, with wine from a corner shop",
+      "Breakfast at Östermalms Saluhall",
+      "The ABBA Museum, pre-booked",
+    ],
+    days: [
+      {
+        day: "Day One",
+        title: "Gamla Stan, and a Park at Ten",
+        activities: [
+          {
+            time: "10:00",
+            description:
+              "Land at Arlanda, then the Arlanda Express into Stockholm Central, about twenty minutes.",
+            places: [{ name: "Stockholm Arlanda Airport", near: "Sweden" }],
+          },
+          {
+            description: "Seven minute walk to the Downtown Camper to drop bags.",
+            places: [{ name: "Downtown Camper by Scandic", near: "Stockholm, Sweden" }],
+          },
+          {
+            time: "13:00",
+            description:
+              "Lunch and drinks at Glashuset, about twelve minutes away. Waterfront, and a gentle way in.",
+            places: [{ name: "Glashuset", near: "Stockholm, Sweden" }],
+          },
+          {
+            time: "14:30",
+            description:
+              "Walk to Gamla Stan through Kungsträdgården, past the Royal Swedish Opera, and over Norrbro with the Royal Palace and Parliament on either side.",
+            places: [
+              { name: "Kungsträdgården", near: "Stockholm, Sweden" },
+              { name: "Royal Swedish Opera", near: "Stockholm, Sweden" },
+              { name: "Norrbro", near: "Stockholm, Sweden" },
+            ],
+          },
+          {
+            time: "15:00",
+            description:
+              "Explore Gamla Stan. The cobbled streets and hidden alleys, Stortorget, the Royal Palace.",
+            places: [
+              { name: "Gamla Stan", near: "Stockholm, Sweden" },
+              { name: "Stortorget", near: "Stockholm, Sweden" },
+              { name: "Royal Palace", near: "Stockholm, Sweden" },
+            ],
+          },
+          {
+            description: "Shops worth going into.",
+            places: [
+              { name: "HildaHilda", near: "Stockholm, Sweden", note: "Swedish-made textiles and gifts." },
+              { name: "Made in Stockholm", near: "Sweden" },
+            ],
+          },
+          {
+            description: "Fika.",
+            places: [
+              { name: "Sundbergs Konditori", near: "Stockholm, Sweden" },
+              { name: "Fabrique", near: "Stockholm, Sweden" },
+              { name: "Kaffekoppen", near: "Stockholm, Sweden", note: "Overlooking Stortorget." },
+            ],
+          },
+          { time: "17:00", description: "Back to the hotel to freshen up." },
+          {
+            time: "18:45",
+            description: "Cocktails at the Cadier Bar in the Grand Hotel, overlooking the harbour.",
+            places: [{ name: "Cadier Bar", near: "Stockholm, Sweden" }],
+          },
+          {
+            time: "20:00",
+            description:
+              "Dinner at Ångbåtsbryggan, two minutes away. Waterfront, aboard a WWII-era steamboat.",
+            places: [{ name: "Ångbåtsbryggan", near: "Stockholm, Sweden" }],
+          },
+          {
+            time: "22:00",
+            description:
+              "Grab wine, beers or snacks from a convenience store, then walk up to Ivar Los park. Stay half an hour or an hour. The sun will still be going down.",
+            places: [{ name: "Ivar Los Park", near: "Stockholm, Sweden" }],
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "A Food Hall, ABBA, and the Match",
+        activities: [
+          {
+            time: "09:45",
+            description:
+              "Breakfast and coffee at Östermalms Saluhall, one of Stockholm's most iconic food halls. About fifteen minutes' walk.",
+            places: [{ name: "Östermalms Saluhall", near: "Stockholm, Sweden" }],
+          },
+          {
+            time: "10:45",
+            description: "Free time until the museum. Any of these.",
+            places: [
+              { name: "Gamla Stan", near: "Stockholm, Sweden", note: "Old Town again: Stortorget, shops, coffee." },
+              { name: "Norrmalm", near: "Stockholm, Sweden", note: "Shopping. ARKIVET, Zara, H&M, Gina Tricot, Nelly." },
+              { name: "Vasa Museum", near: "Stockholm, Sweden", note: "The 17th century warship raised after 333 years underwater. Two minutes from ABBA." },
+              { name: "Strandvägen", near: "Stockholm, Sweden", note: "Waterfront walk." },
+              { name: "Djurgården", near: "Stockholm, Sweden", note: "Waterfront walk." },
+            ],
+          },
+          {
+            time: "12:30",
+            description: "ABBA Museum. Book the tickets in advance.",
+            places: [{ name: "ABBA The Museum", near: "Stockholm, Sweden" }],
+          },
+          {
+            time: "14:30",
+            description: "Lunch and drinks at Strandbryggan, on the water.",
+            places: [{ name: "Strandbryggan", near: "Stockholm, Sweden" }],
+          },
+          { time: "17:00", description: "Back to the hotel to freshen up." },
+          {
+            time: "19:00",
+            description:
+              "Rooftop screening of the football at Stockholm Under Stjärnorna, on top of Hotel At Six, two minutes from the hotel. Free entry, and national team shirts are fine but club shirts are not.",
+            places: [{ name: "Stockholm Under Stjärnorna", near: "Stockholm, Sweden" }],
+          },
+          {
+            time: "21:30",
+            description:
+              "Dinner at Pelikan, about twenty minutes by metro. One of Stockholm's most historic restaurants, serving traditional Swedish food since the early 1900s, and widely reckoned to do the best meatballs in the city.",
+            places: [{ name: "Pelikan", near: "Stockholm, Sweden" }],
+          },
+          {
+            description: "Out afterwards, if you are still going.",
+            places: [
+              { name: "SPY Bar", near: "Stockholm, Sweden" },
+              { name: "Spesso", near: "Stockholm, Sweden", note: "Rooftop, cocktails, views over the skyline." },
+            ],
+          },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "Sunday, Left Open",
+        activities: [
+          {
+            description: "Stora Bageriet.",
+            places: [{ name: "Stora Bageriet", near: "Stockholm, Sweden" }],
+          },
+          {
+            description:
+              "The rest of the Sunday was deliberately left unplanned, and stayed that way.",
+          },
         ],
       },
     ],
