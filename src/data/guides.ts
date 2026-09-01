@@ -9,7 +9,6 @@ import charleston from "@/assets/charleston.jpg";
 import dover from "@/assets/dover.jpg";
 import london from "@/assets/london.jpg";
 import newYork from "@/assets/new-york.jpg";
-import cotswolds from "@/assets/cotswolds.jpg";
 
 /**
  * A city I have opinions about but no itinerary for. Same links and the same
@@ -523,18 +522,18 @@ export const guides: Guide[] = [
     ],
   },
   {
-    slug: "london",
-    title: "London Day Routes",
-    destination: "London",
+    slug: "united-kingdom",
+    title: "United Kingdom: London and Day Trips",
+    destination: "United Kingdom",
     country: "England",
     coords: { lat: 51.5074, lon: -0.1278 },
     cover: london,
     label: "CITY",
     summary:
-      "Nine routes through London, each built for someone visiting for a day or two, plus where to shop and where to get a roast.",
+      "Eight routes through London, three day trips out of it, and 28 Sunday roasts ranked worst to best.",
     teaser:
-      "I live here, so these are the days I have actually walked people through. Take whichever fits the day you have. A few only work on a Sunday, and those say so.",
-    tags: ["#Marylebone", "#BrickLane", "#SundayRoast"],
+      "I live here, so these are the days I have actually walked people through, plus the day trips worth taking out of the city. Take whichever fits the day you have. A few only work on a Sunday, and those say so.",
+    tags: ["#SundayRoast", "#Marylebone", "#DayTrips"],
     notes: [
       "Each route below is a self-contained day. They are not meant to be done in order, so pick the one that fits the day you have and the part of town you are staying in.",
     ],
@@ -828,130 +827,55 @@ export const guides: Guide[] = [
         ],
       },
       {
-        title: "Day trip: Whitstable",
-        note: "Whitstable is on the Kent coast, a bit over an hour by train from St Pancras. This is a day out of London rather than a day in it, and the evening picks back up in town.",
+        title: "Day trip: Cambridge",
+        note: "About an hour by train from King's Cross, so an easy day out and back. Punting is the one thing worth haggling over: negotiate the price, or take a self-guided boat, which is much cheaper than a chauffeured tour.",
         activities: [
-          { time: "09:30", description: "Leave." },
           {
-            description: "Fortitude Bakery on the way.",
-            places: [{ name: "Fortitude Bakery" }],
+            description: "Train from London King's Cross to Cambridge.",
+            places: [
+              { name: "London King's Cross", near: "London, England" },
+              { name: "Cambridge", near: "England" },
+            ],
           },
           {
-            description: "Nineteen minute walk to St Pancras.",
-            places: [{ name: "St Pancras International" }],
-          },
-          { time: "10:30", description: "Train from St Pancras." },
-          {
-            time: "12:00",
-            description: "Walk into Whitstable.",
-            places: [{ name: "Whitstable", near: "Kent, England" }],
+            description: "Coffee at Pages Coffee to start.",
+            places: [{ name: "Pages Coffee", near: "Cambridge, England" }],
           },
           {
-            time: "13:45",
-            description: "Lunch at The Sportsman, finishing around 15:30.",
-            places: [{ name: "The Sportsman", near: "Seasalter, Kent" }],
-          },
-          { time: "15:40", description: "Taxi back to the train in Whitstable." },
-          { time: "17:45", description: "Back in London to change and get ready." },
-          {
-            time: "20:00",
-            description: "Drinks at Bar Finch.",
-            places: [{ name: "Bar Finch" }],
+            description: "King's College, for the chapel.",
+            places: [
+              { name: "King's College", near: "Cambridge, England" },
+              { name: "King's College Chapel", near: "Cambridge, England" },
+            ],
           },
           {
-            time: "21:15",
-            description: "Dinner at Berenjak.",
-            places: [{ name: "Berenjak" }],
+            description:
+              "Trinity College, and the apple tree by the Great Gate. It is grown from the Woolsthorpe tree, the one Newton was sitting under when gravity occurred to him.",
+            places: [{ name: "Trinity College", near: "Cambridge, England" }],
           },
           {
-            time: "22:45",
-            description: "Ronnie Scott's.",
-            places: [{ name: "Ronnie Scott's" }],
+            description: "St John's College.",
+            places: [{ name: "St John's College", near: "Cambridge, England" }],
           },
+          {
+            description: "Walk through the market in the centre of town.",
+            places: [{ name: "Cambridge Market Square", near: "England" }],
+          },
+          {
+            description:
+              "The Eagle, the pub where Crick and Watson walked in and announced they had worked out the structure of DNA.",
+            places: [{ name: "The Eagle", near: "Cambridge, England" }],
+          },
+          {
+            description: "Punting on the Cam. Read the note above before you pay for anything.",
+            places: [{ name: "River Cam", near: "Cambridge, England" }],
+          },
+          { description: "Train back to London." },
         ],
       },
       {
-        title: "Sunday roasts",
-        places: [
-          { name: "The Portman" },
-          { name: "The Royal Oak" },
-          { name: "The George" },
-          { name: "Hereford Arms" },
-        ],
-      },
-      {
-        title: "Sandwiches",
-        places: [{ name: "Rogue Sarnies" }, { name: "Dal Fiorentino" }],
-      },
-      {
-        title: "London brands",
-        places: [
-          { name: "Barbour" },
-          { name: "ME+EM" },
-          { name: "Rixo", note: "Dresses." },
-          { name: "With Nothing Underneath", note: "Best button downs." },
-        ],
-      },
-      {
-        title: "Department stores, food and gifts",
-        places: [
-          { name: "Harrods" },
-          { name: "Selfridges" },
-          { name: "Fortnum & Mason", note: "Gift baskets." },
-          { name: "Regent Street", note: "Flagship stores." },
-          { name: "Oxford Street", note: "Flagship stores." },
-        ],
-      },
-      {
-        title: "High streets and shopping districts",
-        places: [
-          { name: "Marylebone High Street", note: "My favourite in central London." },
-          { name: "Sloane Square" },
-          { name: "King's Road" },
-          { name: "Carnaby Street", note: "Classic stores." },
-          { name: "Newburgh Street" },
-          { name: "Bond Street", note: "Luxury." },
-          { name: "Mayfair" },
-        ],
-      },
-      {
-        title: "Vintage",
-        places: [
-          { name: "Portobello Road Market", note: "Notting Hill." },
-          { name: "Brick Lane" },
-          { name: "Shoreditch" },
-        ],
-      },
-      {
-        title: "Flea markets",
-        places: [
-          { name: "Old Spitalfields Market" },
-          { name: "Camden Market" },
-          { name: "Greenwich Market" },
-          { name: "Columbia Road", note: "Sundays. The flower market." },
-        ],
-      },
-    ],
-  },
-  {
-    slug: "cotswolds",
-    title: "The Cotswolds in a Day",
-    destination: "Cotswolds",
-    country: "England",
-    coords: { lat: 51.9319, lon: -1.7226 },
-    cover: cotswolds,
-    label: "DAY TRIP",
-    summary:
-      "Stow-on-the-Wold, both Slaughters and Bourton-on-the-Water, walked between in a single day from London.",
-    teaser:
-      "A day trip out of London. Train from Paddington in the morning, four villages with a countryside walk between them, and back in time for dinner in town.",
-    tags: ["#StowOnTheWold", "#TheSlaughters", "#Bourton"],
-    notes: [
-      "This is a day trip from London. The train from Paddington to Moreton-in-Marsh takes about an hour and a half, and you taxi between the villages at either end of the walk.",
-    ],
-    sections: [
-      {
-        title: "The day, hour by hour",
+        title: "Day trip: the Cotswolds",
+        note: "A day trip out of London. The train from Paddington to Moreton-in-Marsh takes about an hour and a half, and you taxi between the villages at either end of the walk.",
         activities: [
           {
             time: "08:20",
@@ -1018,6 +942,135 @@ export const guides: Guide[] = [
             places: [{ name: "DakaDaka", near: "London, England" }],
           },
           { time: "21:00", description: "A pub crawl after, if there is anything on." },
+        ],
+      },
+      {
+        title: "Day trip: Whitstable",
+        note: "Whitstable is on the Kent coast, a bit over an hour by train from St Pancras. This is a day out of London rather than a day in it, and the evening picks back up in town.",
+        activities: [
+          { time: "09:30", description: "Leave." },
+          {
+            description: "Fortitude Bakery on the way.",
+            places: [{ name: "Fortitude Bakery" }],
+          },
+          {
+            description: "Nineteen minute walk to St Pancras.",
+            places: [{ name: "St Pancras International" }],
+          },
+          { time: "10:30", description: "Train from St Pancras." },
+          {
+            time: "12:00",
+            description: "Walk into Whitstable.",
+            places: [{ name: "Whitstable", near: "Kent, England" }],
+          },
+          {
+            time: "13:45",
+            description: "Lunch at The Sportsman, finishing around 15:30.",
+            places: [{ name: "The Sportsman", near: "Seasalter, Kent" }],
+          },
+          { time: "15:40", description: "Taxi back to the train in Whitstable." },
+          { time: "17:45", description: "Back in London to change and get ready." },
+          {
+            time: "20:00",
+            description: "Drinks at Bar Finch.",
+            places: [{ name: "Bar Finch" }],
+          },
+          {
+            time: "21:15",
+            description: "Dinner at Berenjak.",
+            places: [{ name: "Berenjak" }],
+          },
+          {
+            time: "22:45",
+            description: "Ronnie Scott's.",
+            places: [{ name: "Ronnie Scott's" }],
+          },
+        ],
+      },
+      {
+        title: "Sunday roasts, ranked",
+        note: "Scored out of 5 on the meat, greens, potatoes, roast veg, Yorkshire, gravy, sides, pudding, portion and vibe, then weighted. Best first. 28 roasts and counting.",
+        places: [
+          { name: "Mall Tavern", near: "Notting Hill Gate, London", note: "5.00. Epic vibes, live music in the basement, and brisket croquettes. Nothing has beaten it." },
+          { name: "Blacklock", near: "Carnaby, London", note: "4.92. No sticky toffee pudding, but the bread pudding and the white chocolate cheesecake were insane." },
+          { name: "Ladbroke Arms", near: "Kensington, London", note: "4.58. The sweet potato puree was insane." },
+          { name: "The Pig & Butcher", near: "Islington, London", note: "4.50. Incredibly solid from the meat to the sides to the pudding, and the horseradish was amazing. Shocked at how bad the potatoes were." },
+          { name: "The George", near: "Fitzrovia, London", note: "4.42. Meat cooked to perfection. Only lost points because the sticky toffee pudding came with cream rather than ice cream, and the vibes were not life-altering." },
+          { name: "The Devonshire", near: "Soho, London", note: "4.42. Incredibly loud, but impeccable food, unique sides, and free bread to start." },
+          { name: "The Surprise", near: "Chelsea, London", note: "4.42. Amazing vibes and the best beef and chicken, and my favourite Yorkshire ever. Very small protein portion though, and a large veggie one." },
+          { name: "Larrick", near: "Lisson Grove, London", note: "4.30. Very good across the board. Kale, sadly." },
+          { name: "The Cleveland Arms", near: "Paddington, London", note: "4.29. The broccoli and cauliflower soup was bomb, and one of the best cauliflower cheeses. No sticky toffee pudding." },
+          { name: "Walmer Castle", near: "Notting Hill, London", note: "4.20. Tomahawk. I wish I had had more meat." },
+          { name: "The Parakeet", near: "Kentish Town, London", note: "4.15. Beautiful pub, very solid roast." },
+          { name: "Hereford Arms", near: "South Kensington, London", note: "3.90. Large variety of sides, and the roast itself came with cauliflower cheese." },
+          { name: "The Royal Oak", near: "Bethnal Green, London", note: "3.88. Meat cooked to perfection, and the sticky toffee pudding was gluten free, which was a bonus, though very sweet. Very loud." },
+          { name: "Cadogan Arms", near: "Chelsea, London", note: "3.82. Truffle mayo and creamed spinach." },
+          { name: "No. Fifty Cheyne", near: "Chelsea, London", note: "3.61. Famous for the beef wellington, but it was mid. Gorgeous interior and clientele though." },
+          { name: "Prince Alfred", near: "Maida Vale, London", note: "3.60. Meat overdone, gravy a little salty, and the sticky toffee pudding was like a loaf of banana bread. The Yorkshire was mid and they would not give extra gravy to soak it up." },
+          { name: "Camberwell Arms", near: "Camberwell, London", note: "3.59. The meat was perfect, but it is not a traditional roast: no Yorkshire, no gravy, everything family style. The vibe was cold." },
+          { name: "Hollywood Arms", near: "Chelsea, London", note: "3.56. Came together well but nothing stood out. The cauliflower cheese was watery and tasted of no truffle oil, and the meat was thin, overdone and hard to cut." },
+          { name: "The Holland", near: "Notting Hill, London", note: "3.46. Not a traditional roast, and an absolutely killer dessert, though not a sticky toffee pudding." },
+          { name: "Duke of Wellington", near: "Marylebone, London", note: "3.36. Some weird cabbage." },
+          { name: "The Mitre", near: "Notting Hill, London", note: "3.30. The little piece of stuffing on the side was great." },
+          { name: "The Portman", near: "Marylebone, London", note: "3.30. Solid, and the place for an emergency roast nearby, with outside seating. Overall average, and everything needed salt." },
+          { name: "The Cavendish", near: "Marylebone, London", note: "3.29. The cauliflower cheese was tiny but delicious, and the horseradish was incredible." },
+          { name: "The Elgin", near: "Maida Vale, London", note: "3.18. Order the chicken, the beef was bad. Live music lifts the vibe, and without it there is none. Kale instead of cabbage." },
+          { name: "Coachmaker's Arms", near: "Marylebone, London", note: "3.02. They were out of most options and nothing was spectacular." },
+          { name: "The Duke of Clarence", near: "South Kensington, London", note: "3.00. Out of sticky toffee pudding, deafening because of the giant screens with the game on, not enough gravy, and the roasts were not consistent: one came out perfect and one overcooked." },
+          { name: "Bridge House", near: "Little Venice, London", note: "3.00. The knife was so dull I could not cut anything, including the overcooked meat. Vibes nothing special, but they gave about ten potatoes and a lot of veg." },
+          { name: "Crown & Anchor", near: "Eastbourne, England", note: "2.62. Not London, and the bottom of the list. The variety of potatoes was good." },
+        ],
+      },
+      {
+        title: "Sandwiches",
+        places: [{ name: "Rogue Sarnies" }, { name: "Dal Fiorentino" }],
+      },
+      {
+        title: "London brands",
+        places: [
+          { name: "Barbour" },
+          { name: "ME+EM" },
+          { name: "Rixo", note: "Dresses." },
+          { name: "With Nothing Underneath", note: "Best button downs." },
+        ],
+      },
+      {
+        title: "Department stores, food and gifts",
+        places: [
+          { name: "Harrods" },
+          { name: "Selfridges" },
+          { name: "Fortnum & Mason", note: "Gift baskets." },
+          { name: "Regent Street", note: "Flagship stores." },
+          { name: "Oxford Street", note: "Flagship stores." },
+        ],
+      },
+      {
+        title: "High streets and shopping districts",
+        places: [
+          { name: "Marylebone High Street", note: "My favourite in central London." },
+          { name: "Sloane Square" },
+          { name: "King's Road" },
+          { name: "Carnaby Street", note: "Classic stores." },
+          { name: "Newburgh Street" },
+          { name: "Bond Street", note: "Luxury." },
+          { name: "Mayfair" },
+        ],
+      },
+      {
+        title: "Vintage",
+        places: [
+          { name: "Portobello Road Market", note: "Notting Hill." },
+          { name: "Brick Lane" },
+          { name: "Shoreditch" },
+        ],
+      },
+      {
+        title: "Flea markets",
+        places: [
+          { name: "Old Spitalfields Market" },
+          { name: "Camden Market" },
+          { name: "Greenwich Market" },
+          { name: "Columbia Road", note: "Sundays. The flower market." },
         ],
       },
     ],

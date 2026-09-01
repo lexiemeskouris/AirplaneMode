@@ -27,7 +27,7 @@ import japan from "@/assets/japan.jpg";
 import mexicoCity from "@/assets/mexico-city.jpg";
 import madeira from "@/assets/madeira.jpg";
 import helsinki from "@/assets/helsinki.jpg";
-import tallinn from "@/assets/tallinn.svg";
+import tallinn from "@/assets/tallinn.jpg";
 import egypt from "@/assets/egypt.jpg";
 import istanbul from "@/assets/istanbul.jpg";
 import krakow from "@/assets/krakow.jpg";
