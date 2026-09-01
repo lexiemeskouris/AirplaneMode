@@ -21,7 +21,8 @@ import edinburgh from "@/assets/edinburgh.jpg";
 import brussels from "@/assets/brussels.jpg";
 import switzerland from "@/assets/switzerland.svg";
 import lisbon from "@/assets/lisbon.svg";
-import ecuador from "@/assets/ecuador.jpg";
+import quito from "@/assets/quito.jpg";
+import galapagos from "@/assets/galapagos.svg";
 import japan from "@/assets/japan.jpg";
 import mexicoCity from "@/assets/mexico-city.svg";
 import madeira from "@/assets/madeira.svg";
@@ -3516,34 +3517,40 @@ export const itineraries: Itinerary[] = [
     ],
   },
   {
-    slug: "ecuador",
-    title: "Ten Days in Ecuador and the Galápagos",
-    destination: "Ecuador",
+    slug: "quito",
+    title: "A Day in Quito",
+    destination: "Quito",
     country: "Ecuador",
-    coords: { lat: -0.7437, lon: -90.3139 },
-    duration: "10 days",
+    coords: { lat: -0.1807, lon: -78.4678 },
+    duration: "1 day",
     season: "March",
     summary:
-      "A day in Quito, then island-hopping between Santa Cruz and San Cristóbal by ferry, snorkelling everything.",
-    cover: ecuador,
+      "One day at altitude before the Galápagos: the equator, the cable car and the old town.",
+    cover: quito,
     gated: false,
     teaser:
-      "One day at altitude in Quito, then eight in the Galápagos across three stays and two ferries. The tips at the bottom are the part worth reading twice.",
-    tags: ["#Galapagos", "#Snorkelling", "#SeaLions"],
+      "Quito is where you land and where you leave from, and one day is enough to do the things worth doing. Almost everyone here is on their way to the islands.",
+    tags: ["#MitadDelMundo", "#Teleferico", "#OldTown"],
     notes: [
-      "Costs here are what we paid on this trip, so treat them as a rough shape rather than current prices.",
+      "Go to the TelefériQo first thing in the morning. Quito is known for afternoon fog, and by lunchtime the view has gone.",
     ],
+    seeAlso: {
+      slug: "galapagos",
+      kind: "itinerary",
+      title: "Eight Days in the Galápagos",
+      note: "This was the front end of a longer trip. The other eight days, and all the practical stuff about getting to the islands, are here.",
+    },
     highlights: [
       "Standing on the equator at Mitad del Mundo",
-      "Biking 13 miles to the giant tortoises at La Ruta de la Tortuga",
-      "Tortuga Bay, reached on foot along a mile and a half of paved trail",
-      "The Cerro Tijeretas and Playa Baquerizo hike, given a whole day",
-      "Snorkelling with sea lions at La Lobería",
+      "The TelefériQo cable car, done early",
+      "Ceviche at Pezbela",
+      "Old Town Quito, a UNESCO world heritage site",
+      "Dinner at Somos",
     ],
     days: [
       {
         day: "Day One",
-        title: "Quito, and the Equator",
+        title: "The Equator, and the Cable Car",
         activities: [
           {
             description: "Pastries and coffee at FANKØR.",
@@ -3574,7 +3581,51 @@ export const itineraries: Itinerary[] = [
         ],
       },
       {
-        day: "Day Two",
+        day: "Departure",
+        title: "On to the Islands",
+        activities: [
+          {
+            description:
+              "An hour to the airport, and two hours for the forms. There is paperwork and security at Quito airport just to enter the Galápagos.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "galapagos",
+    title: "Eight Days in the Galápagos",
+    destination: "Galápagos",
+    country: "Ecuador",
+    coords: { lat: -0.7437, lon: -90.3139 },
+    duration: "8 days",
+    season: "March",
+    summary:
+      "Island-hopping between Santa Cruz and San Cristóbal by ferry, snorkelling everything in between.",
+    cover: galapagos,
+    gated: false,
+    teaser:
+      "Three stays and two ferries across two islands. Tortoises by bike, a whole day on one hike, and sea lions at La Lobería. The tips at the bottom are the part worth reading twice.",
+    tags: ["#Galapagos", "#Snorkelling", "#SeaLions"],
+    notes: [
+      "Costs here are what we paid on this trip, so treat them as a rough shape rather than current prices.",
+    ],
+    seeAlso: {
+      slug: "quito",
+      kind: "itinerary",
+      title: "A Day in Quito",
+      note: "You fly in and out through Quito, and a day there is worth building in. Here is what to do with it.",
+    },
+    highlights: [
+      "Biking 13 miles to the giant tortoises at La Ruta de la Tortuga",
+      "Tortuga Bay, reached on foot along a mile and a half of paved trail",
+      "The Cerro Tijeretas and Playa Baquerizo hike, given a whole day",
+      "Snorkelling with sea lions at La Lobería",
+      "Sharks off the Santa Cruz pier at night",
+    ],
+    days: [
+      {
+        day: "Day One",
         title: "Fly to Santa Cruz",
         activities: [
           { description: "An hour to the airport, and two hours for the forms." },
@@ -3596,7 +3647,7 @@ export const itineraries: Itinerary[] = [
         ],
       },
       {
-        day: "Day Three",
+        day: "Day Two",
         title: "Tortoises by Bike",
         activities: [
           {
@@ -3623,7 +3674,7 @@ export const itineraries: Itinerary[] = [
         ],
       },
       {
-        day: "Day Four",
+        day: "Day Three",
         title: "Tortuga Bay, Then the Ferry",
         activities: [
           {
@@ -3647,7 +3698,7 @@ export const itineraries: Itinerary[] = [
         ],
       },
       {
-        day: "Day Five",
+        day: "Day Four",
         title: "Cerro Tijeretas, All Day",
         activities: [
           {
@@ -3677,7 +3728,7 @@ export const itineraries: Itinerary[] = [
         ],
       },
       {
-        day: "Day Six",
+        day: "Day Five",
         title: "The 360 Tour",
         activities: [
           { description: "360 tour of San Cristóbal." },
@@ -3688,7 +3739,7 @@ export const itineraries: Itinerary[] = [
         ],
       },
       {
-        day: "Day Seven",
+        day: "Day Six",
         title: "Sea Lions, Then Back to Santa Cruz",
         activities: [
           {
@@ -3712,7 +3763,7 @@ export const itineraries: Itinerary[] = [
         ],
       },
       {
-        day: "Day Eight",
+        day: "Day Seven",
         title: "Kayaks and One Last Swim",
         activities: [
           {
@@ -3742,7 +3793,7 @@ export const itineraries: Itinerary[] = [
         ],
       },
       {
-        day: "Day Nine",
+        day: "Day Eight",
         title: "Fly Out",
         activities: [{ description: "Fly out." }],
       },
