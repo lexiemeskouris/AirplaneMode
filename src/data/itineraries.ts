@@ -2409,7 +2409,8 @@ export const itineraries: Itinerary[] = [
           { time: "08:45", description: "Arrive and check in." },
           {
             time: "13:00",
-            description: "Guinness Storehouse tour, until 15:00.",
+            description:
+              "Guinness Storehouse tour, until 15:00. The tour ends at the Gravity Bar on the top floor, which is where the views are, so do not rush the last part.",
             places: [{ name: "Guinness Storehouse", near: "Dublin, Ireland" }],
           },
           {
@@ -2440,7 +2441,8 @@ export const itineraries: Itinerary[] = [
           },
           { description: "St Patrick's Day festivities." },
           {
-            description: "Walk into Leo Burdock's for the famous fish and chips.",
+            description:
+              "Walk into Leo Burdock's for the famous fish and chips. Open since 1913, and the portions are enormous, so one order between two is not unreasonable.",
             places: [{ name: "Leo Burdock", near: "Dublin, Ireland" }],
           },
         ],
@@ -2538,6 +2540,175 @@ export const itineraries: Itinerary[] = [
         activities: [
           { description: "Airport shuttle from the hotel, around 08:00." },
           { time: "10:25", description: "Fly out." },
+        ],
+      },
+    ],
+    extras: [
+      {
+        title: "Getting around",
+        items: [
+          "The Leap Visitor Card is the one to buy: unlimited buses, trams and local trains for a set number of days, so you stop counting fares and just get on things.",
+        ],
+      },
+      {
+        title: "Dublin, beyond these three days",
+        note: "None of this made it into the itinerary above, and all of it is walkable from the centre.",
+        places: [
+          {
+            name: "Trinity College Dublin",
+            near: "Dublin, Ireland",
+            note: "The old library and the Book of Kells, plus a cobbled campus you can walk through for free if you do not want to queue for the book.",
+          },
+          {
+            name: "Dublin Castle",
+            near: "Dublin, Ireland",
+            note: "State rooms and the medieval undercroft. The Dubh Linn Gardens on day three are round the back of it, so pair the two.",
+          },
+          {
+            name: "Christ Church Cathedral",
+            near: "Dublin, Ireland",
+            note: "The older of the two cathedrals, with a crypt underneath that is the largest in Ireland.",
+          },
+          {
+            name: "St Patrick's Cathedral",
+            near: "Dublin, Ireland",
+            note: "The bigger one, ten minutes' walk from Christ Church. Worth doing both only if you like cathedrals; otherwise pick one.",
+          },
+          {
+            name: "St Stephen's Green",
+            near: "Dublin, Ireland",
+            note: "The park at the bottom of Grafton Street. Where to sit down when you have walked too far.",
+          },
+          {
+            name: "Kilmainham Gaol",
+            near: "Dublin, Ireland",
+            note: "The prison where the 1916 leaders were executed. Guided tour only and it sells out, so book ahead rather than turning up.",
+          },
+        ],
+      },
+      {
+        title: "Streets to walk",
+        places: [
+          {
+            name: "Grafton Street",
+            near: "Dublin, Ireland",
+            note: "The pedestrian shopping street, and where the buskers are. Duck into Anne's Lane off it for the umbrella ceiling.",
+          },
+          {
+            name: "George's Street Arcade",
+            near: "Dublin, Ireland",
+            note: "A Victorian covered market: vintage, records, jewellery and a few food stalls, indoors when it rains.",
+          },
+          {
+            name: "Pearse Street",
+            near: "Dublin, Ireland",
+            note: "Runs east from Trinity College down towards the docklands.",
+          },
+          {
+            name: "Sheriff Street",
+            near: "Dublin, Ireland",
+            note: "North of the Liffey behind the docks, well off the tourist route.",
+          },
+        ],
+      },
+      {
+        title: "Museums",
+        places: [
+          {
+            name: "The Little Museum of Dublin",
+            near: "Dublin, Ireland",
+            note: "Twentieth-century Dublin in a Georgian townhouse on St Stephen's Green, told by a guide rather than by labels. Small and quick.",
+          },
+          {
+            name: "EPIC The Irish Emigration Museum",
+            near: "Dublin, Ireland",
+            note: "The story of who left Ireland and where they ended up. Fully interactive, no artefacts, and better than that description makes it sound.",
+          },
+        ],
+      },
+      {
+        title: "Live music and shows",
+        note: "Temple Bar is the obvious one and it is on day two. These are the rest.",
+        places: [
+          {
+            name: "Bad Bobs",
+            near: "Temple Bar, Dublin, Ireland",
+            note: "Live bands most nights over several floors. A night out rather than a sit-down listen.",
+          },
+          {
+            name: "Celtic Nights",
+            near: "Dublin, Ireland",
+            note: "Dinner plus a full Irish music and dance show. The straightforward way to see step dancing if you want it in one booking.",
+          },
+          {
+            name: "The Sound House",
+            near: "Dublin, Ireland",
+            note: "Their secret sessions put on an artist you only find out about when you turn up. Good if you want the night to surprise you.",
+          },
+        ],
+      },
+      {
+        title: "Eat and drink",
+        note: "Bread41 and Leo Burdock are already in the itinerary. These are the ones that are not.",
+        items: [
+          "A spice bag, from a Chinese takeaway rather than a restaurant. Chips, shredded chicken and spice mix tipped into a bag together. It is the Dublin thing to eat at the end of a night and it is not optional.",
+        ],
+        places: [
+          {
+            name: "L Mulligan Grocer",
+            near: "Stoneybatter, Dublin, Ireland",
+            note: "An upscale pub doing proper dinner rather than pub food. Where to go when you want one real meal.",
+          },
+          {
+            name: "Brother Hubbard",
+            near: "Dublin, Ireland",
+            note: "Middle Eastern and Mediterranean brunch. The alternative to another full Irish.",
+          },
+          {
+            name: "Bunsen",
+            near: "Dublin, Ireland",
+            note: "A small chain doing burgers and nothing else. The menu fits on a business card. Reliable and fast.",
+          },
+          {
+            name: "The Oar House",
+            near: "Howth, Dublin, Ireland",
+            note: "Seafood by the harbour, for lunch. A reason to take the DART out to Howth for the afternoon.",
+          },
+          {
+            name: "Daddy's",
+            near: "Dublin, Ireland",
+            note: "A cafe near the Irish Museum of Modern Art, so pair it with a walk round the museum and the grounds at Kilmainham.",
+          },
+        ],
+      },
+      {
+        title: "Something different",
+        places: [
+          {
+            name: "Eyemazy",
+            near: "Dublin, Ireland",
+            note: "Macro photography of your own iris, printed. Takes about half an hour and you leave with something nobody else has.",
+          },
+        ],
+      },
+      {
+        title: "Day trip: Glendalough",
+        places: [
+          {
+            name: "Glendalough",
+            near: "County Wicklow, Ireland",
+            note: "A monastic settlement with a round tower in a glacial valley about an hour south of Dublin, with marked hikes from the car park ranging from a flat lakeside walk to a four-hour climb.",
+          },
+        ],
+      },
+      {
+        title: "On the drive",
+        places: [
+          {
+            name: "The Good House",
+            near: "Ireland",
+            note: "Over on the west coast near the cliffs, not in Dublin. A good stop to break up the drive.",
+          },
         ],
       },
     ],
