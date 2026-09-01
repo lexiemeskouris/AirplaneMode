@@ -84,7 +84,9 @@ function ItineraryDetail() {
         />
       </div>
 
-      {/* Highlights */}
+      {/* Highlights. Guarded: an itinerary added without them should lose the
+          section, not take the whole page down. */}
+      {it.highlights && it.highlights.length > 0 && (
       <section className="mt-12">
         <h2 className="font-display text-3xl font-extrabold tracking-tight text-foreground">
           Highlights
@@ -101,6 +103,7 @@ function ItineraryDetail() {
           ))}
         </ul>
       </section>
+      )}
 
       {/* Teaser */}
       <section className="mt-10 rounded-2xl border-l-4 border-accent bg-secondary p-6">

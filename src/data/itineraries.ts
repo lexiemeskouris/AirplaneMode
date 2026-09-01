@@ -40,6 +40,7 @@ import victoriaFalls from "@/assets/victoria-falls.jpg";
 import stockholm from "@/assets/stockholm.jpg";
 import morocco from "@/assets/morocco.jpg";
 import cardiff from "@/assets/cardiff.jpg";
+import peru from "@/assets/peru.jpg";
 
 /** A named venue, with its map link if we have a real one. */
 export type Place = {
@@ -1569,6 +1570,13 @@ export const itineraries: Itinerary[] = [
     cover: budapest,
     gated: false,
     tags: ["#RuinBars", "#TheBaths", "#CastleHill"],
+    highlights: [
+      "Fisherman's Bastion and the walk along Castle Hill",
+      "The House of Terror, and ninety minutes is enough",
+      "Shoes on the Danube Bank",
+      "A long afternoon in the baths, with tickets bought on the door",
+      "The ruin bars, starting early at Szimpla Kert",
+    ],
     days: [
       {
         day: "Arrival",
@@ -6770,6 +6778,213 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "Cardiff Arms Park", near: "Wales" }],
           },
           { description: "Explore at leisure afterwards, or take an earlier train home." },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "peru",
+    title: "Seven Days in Peru",
+    destination: "Peru",
+    country: "Peru",
+    coords: { lat: -13.5319, lon: -71.9675 },
+    duration: "7 days",
+    season: "Late November",
+    summary:
+      "Rainbow Mountain at dawn, the two day Inca Trail into Machu Picchu, then Lima for the food.",
+    cover: peru,
+    gated: false,
+    teaser:
+      "Straight from the plane to 3,400 metres, up Rainbow Mountain the next morning, then the short Inca Trail with a night in camp and Machu Picchu on foot. Lima at the end, entirely for the eating.",
+    tags: ["#MachuPicchu", "#IncaTrail", "#RainbowMountain"],
+    notes: [
+      "Cusco sits at about 3,400 metres and Rainbow Mountain tops out above 5,000. This itinerary goes up on the second morning, which is fast. If you have the days, put a spare one in Cusco before the mountain, drink the coca tea, and see a doctor at home about altitude tablets before you fly.",
+      "Two of the three big things here were booked in advance and both sell out: the Inca Trail permits are released months ahead and the Huayna Picchu slots go with them.",
+    ],
+    highlights: [
+      "Rainbow Mountain, on a 4:30 start",
+      "The two day Inca Trail, with a night under canvas on the trail",
+      "Walking into Machu Picchu rather than arriving by bus",
+      "Climbing Huayna Picchu, the peak behind the ruins",
+      "A last day in Lima built entirely around lunch and dinner",
+    ],
+    days: [
+      {
+        day: "Day One",
+        title: "Fly to Lima",
+        activities: [
+          {
+            description:
+              "New York to Lima with a connection in Miami. It is a long day and the second leg ran late.",
+          },
+          {
+            description:
+              "Night near Jorge Chávez airport rather than going into the city, because the Cusco flight leaves early. The airport hotels run a shuttle from door four of the terminal.",
+            places: [{ name: "Jorge Chávez International Airport", near: "Lima, Peru" }],
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "Up to Cusco",
+        activities: [
+          {
+            time: "08:35",
+            description:
+              "Early flight from Lima to Cusco. Carry-on only is worth it here: the trek company gives you a duffel and you leave the rest in Cusco anyway.",
+            places: [{ name: "Cusco", near: "Peru" }],
+          },
+          {
+            description:
+              "Check in near the Plaza de Armas, then do nothing strenuous. The altitude arrives about an hour after you do.",
+            places: [{ name: "Plaza de Armas", near: "Cusco, Peru" }],
+          },
+          {
+            description:
+              "Free afternoon to walk the centre slowly: the cathedral, the Jesuit church on the far side of the square, and the Inca stonework in the streets behind it.",
+            places: [
+              { name: "Cusco Cathedral", near: "Cusco, Peru" },
+              { name: "Iglesia de la Compañía de Jesús", near: "Cusco, Peru" },
+              { name: "Hatun Rumiyoc", near: "Cusco, Peru" },
+            ],
+          },
+          {
+            description:
+              "Early night. The Rainbow Mountain pickup is between 04:35 and 04:55 and they collect you from your hotel.",
+          },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "Rainbow Mountain",
+        activities: [
+          {
+            time: "04:30",
+            description:
+              "Picked up from the hotel for the full day trip to Rainbow Mountain, which is Vinicunca, at 5,036 metres. The colours are real minerals in the rock and the walk up is short but brutal on no acclimatisation. Round trip transport and the drop back at your hotel are in the price. Booked through Viator and run by Chullos Travel Peru, so search Viator for the full day Rainbow Mountain excursion to Vinicunca.",
+            places: [
+              {
+                name: "Rainbow Mountain",
+                url: "https://www.viator.com/searchResults/all?text=Rainbow+Mountain+Vinicunca+full+day",
+              },
+            ],
+          },
+          {
+            description:
+              "Back in Cusco by evening. Second night in the same hotel, and pack the duffel for the trail.",
+          },
+        ],
+      },
+      {
+        day: "Day Four",
+        title: "The Inca Trail, Day One",
+        activities: [
+          {
+            description:
+              "Collected from the hotel for the two day Short Inca Trail with camping, run by Alpaca Expeditions as a group departure. Two days and one night in tents, rather than the version of the same trek that puts you in a hotel in Aguas Calientes. Their office is on Heladeros Street in Cusco if you need to find them in person.",
+            places: [
+              {
+                name: "Short Inca Trail",
+                url: "https://www.alpacaexpeditions.com/inca-trail-with-camping-2d1n/",
+              },
+            ],
+          },
+          {
+            description:
+              "Worth adding when you book: an air mattress, walking sticks and a sleeping bag rental, plus the Huayna Picchu permit. The permit is a separate ticket with its own limited slots, so add it at the time or you will not get it later.",
+          },
+          { description: "Night in camp on the trail." },
+        ],
+      },
+      {
+        day: "Day Five",
+        title: "Machu Picchu, and Huayna Picchu",
+        activities: [
+          {
+            description:
+              "The second day finishes at Machu Picchu on foot, coming in over the last stretch of trail rather than up the switchback road on a bus.",
+            places: [{ name: "Machu Picchu", near: "Cusco Region, Peru" }],
+          },
+          {
+            description:
+              "The Huayna Picchu climb, on the permit added to the trek booking. It is the steep green peak in every photograph of the ruins, and it looks back down on them.",
+            places: [{ name: "Huayna Picchu", near: "Machu Picchu, Peru" }],
+          },
+          {
+            description:
+              "Back to Cusco that evening. Somewhere with a proper bath is worth the money on this particular night.",
+          },
+        ],
+      },
+      {
+        day: "Day Six",
+        title: "Cusco to Lima",
+        activities: [
+          { description: "Taxi out to Cusco airport in the morning." },
+          { time: "13:55", description: "Flight down to Lima." },
+          {
+            description:
+              "Into Miraflores, which is where you want to be based: walkable, on the cliffs, and ten minutes from most of the eating.",
+            places: [{ name: "Miraflores", near: "Lima, Peru" }],
+          },
+          {
+            time: "18:00",
+            description: "A table at Carnaval in San Isidro to start.",
+            places: [
+              {
+                name: "Carnaval",
+                near: "San Isidro, Lima, Peru",
+                note: "One of the best known cocktail bars in the city, and it takes reservations, which is the only sane way to get in.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        day: "Day Seven",
+        title: "Lima, for Lunch and Dinner",
+        activities: [
+          {
+            description:
+              "Lunch at La Mar Cebichería. It is a cevichería, it does not open in the evening, and it does not take bookings, so lunch is the whole plan.",
+            places: [{ name: "La Mar Cebichería", near: "Miraflores, Lima, Peru" }],
+          },
+          {
+            description:
+              "Dinner at Maido, the Nikkei restaurant that put Japanese-Peruvian cooking on the map. Book this one weeks out, not days.",
+            places: [{ name: "Maido", near: "Miraflores, Lima, Peru" }],
+          },
+          {
+            description:
+              "A night flight home. Uber is cheap and everywhere in Lima, and the airport run takes longer than the map says.",
+          },
+        ],
+      },
+    ],
+    extras: [
+      {
+        title: "Booking the two big days",
+        note: "Both of these were locked in long before the trip, and neither is something you can turn up and buy.",
+        items: [
+          "Rainbow Mountain went through Viator, with Chullos Travel Peru operating it. Hotel pickup and drop-off are included, which matters at 04:35.",
+          "The Short Inca Trail went direct with Alpaca Expeditions, on their two day camping departure, as a group service rather than private.",
+          "The Huayna Picchu permit was added to the trek booking. Machu Picchu entry and the train came through the same booking rather than being bought separately.",
+        ],
+      },
+      {
+        title: "Altitude",
+        items: [
+          "Cusco is around 3,400 metres and Rainbow Mountain is above 5,000. Going up the mountain on your second morning in the country is doable but not comfortable.",
+          "Coca tea is everywhere and free in most hotel lobbies. It helps a little.",
+          "Talk to a doctor at home about altitude sickness tablets before you fly, rather than buying something over a counter in Cusco.",
+        ],
+      },
+      {
+        title: "Flying out of Lima",
+        avoid: true,
+        items: [
+          "The budget overnight flight to Fort Lauderdale was delayed five separate times through the night, pushed back to 05:11, and then cancelled outright. The refund came through in full, but the night was gone.",
+          "The rebooking that actually worked was an overnight to Houston and a connection on from there. If you are flying home from Lima on a red-eye, be honest with yourself about which carrier you are trusting with it.",
         ],
       },
     ],
