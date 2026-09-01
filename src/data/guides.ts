@@ -8,6 +8,7 @@ import nice from "@/assets/nice.svg";
 import charleston from "@/assets/charleston.jpg";
 import dover from "@/assets/dover.jpg";
 import london from "@/assets/london.jpg";
+import newYork from "@/assets/new-york.svg";
 import cotswolds from "@/assets/cotswolds.jpg";
 
 /**
@@ -1017,6 +1018,370 @@ export const guides: Guide[] = [
             places: [{ name: "DakaDaka", near: "London, England" }],
           },
           { time: "21:00", description: "A pub crawl after, if there is anything on." },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "new-york",
+    title: "New York Day Routes",
+    destination: "New York",
+    country: "United States",
+    coords: { lat: 40.7128, lon: -74.006 },
+    cover: newYork,
+    label: "CITY",
+    summary:
+      "Five routes through the city, built for people visiting, plus a very long list of everything else.",
+    teaser:
+      "These are days I have actually walked people through, one neighbourhood at a time. They are not meant to be done in order, so take whichever fits where you are staying.",
+    tags: ["#Pizza", "#RedHook", "#ComedyCellar"],
+    notes: [
+      "Each route below is a self-contained day. Pick the one that suits the part of town you are in rather than doing them in sequence.",
+    ],
+    sections: [
+      {
+        title: "The High Line, then a pizza crawl",
+        activities: [
+          {
+            description: "Subway up to the Vessel, and grab a coffee for the walk.",
+            places: [{ name: "Vessel", near: "New York, NY" }],
+          },
+          {
+            description: "Walk down the High Line, the old elevated railway turned park.",
+            places: [{ name: "The High Line", near: "New York, NY" }],
+          },
+          {
+            description: "Through Chelsea Market for nibbles, then Little Island.",
+            places: [
+              { name: "Chelsea Market", near: "New York, NY" },
+              { name: "Little Island", near: "New York, NY" },
+            ],
+          },
+          {
+            description: "Shop the Meatpacking District.",
+            places: [{ name: "Meatpacking District", near: "New York, NY" }],
+          },
+          {
+            description: "Self-guided pizza tour. Walk in everywhere.",
+            places: [
+              { name: "Mama's TOO!", near: "New York, NY" },
+              { name: "Joe's Pizza", near: "New York, NY" },
+              { name: "Bleecker Street Pizza", near: "New York, NY" },
+              { name: "L'Industrie Pizzeria", near: "Brooklyn, NY" },
+              { name: "Made in New York Pizza", near: "New York, NY" },
+            ],
+          },
+          {
+            description:
+              "Ten minutes to Pier 45, the Christopher Street pier, and eat the pizza on the West Side Highway.",
+            places: [{ name: "Pier 45", near: "New York, NY" }],
+          },
+          {
+            description:
+              "Head to the East Village and put your name down at Thursday Kitchen, Soothr or Cafe Mogador.",
+            places: [
+              { name: "Thursday Kitchen", near: "New York, NY" },
+              { name: "Soothr", near: "New York, NY" },
+              { name: "Cafe Mogador", near: "New York, NY" },
+            ],
+          },
+          {
+            description: "Bar crawl around St Mark's Place, in this order.",
+            places: [
+              { name: "Superbueno", near: "New York, NY" },
+              { name: "Lovers of Today", near: "New York, NY" },
+              { name: "Please Don't Tell", near: "New York, NY" },
+              { name: "Holiday Cocktail Lounge", near: "New York, NY" },
+              { name: "Dead & Co", near: "New York, NY" },
+            ],
+          },
+          {
+            description:
+              "If you want to go out out, Dream Baby and Joyface are the dancey ones.",
+            places: [
+              { name: "Dream Baby", near: "New York, NY" },
+              { name: "Joyface", near: "New York, NY" },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Lower East Side and Chinatown",
+        note: "Bring cash for the Chinatown places.",
+        activities: [
+          {
+            description: "Coffee, a pastry and a shop around Essex Market.",
+            places: [{ name: "Essex Market", near: "New York, NY" }],
+          },
+          {
+            description: "Self-guided Chinatown food tour. All walk-ins.",
+            places: [
+              { name: "Vanessa's Dumpling House", near: "New York, NY" },
+              { name: "Tasty Dumpling", near: "New York, NY" },
+              { name: "Shu Jiao Fu Zhou", near: "New York, NY" },
+              { name: "Golden Steamer", near: "New York, NY" },
+              { name: "Jin Mei Dumpling", near: "New York, NY" },
+              { name: "Super Taste", near: "New York, NY" },
+            ],
+          },
+          {
+            time: "14:30",
+            description: "Tenement Museum tour. Book a time slot.",
+            places: [{ name: "Tenement Museum", near: "New York, NY" }],
+          },
+          {
+            description: "Mimi's Frozen Yogurt.",
+            places: [{ name: "Mimi's Frozen Yogurt", near: "New York, NY" }],
+          },
+          {
+            time: "16:30",
+            description:
+              "Double Chicken Please. Reservations are limited, so if you have not got one, queue from 16:30.",
+            places: [{ name: "Double Chicken Please", near: "New York, NY" }],
+          },
+          { description: "Change and get ready for dinner." },
+          {
+            time: "20:00",
+            description: "Dinner at Anton's.",
+            places: [{ name: "Anton's", near: "New York, NY" }],
+          },
+          {
+            time: "22:30",
+            description: "Comedy Cellar.",
+            places: [{ name: "Comedy Cellar", near: "New York, NY" }],
+          },
+          { time: "00:00", description: "A late drink in the West Village, if anyone is still going." },
+        ],
+      },
+      {
+        title: "FiDi, then the ferry to Red Hook",
+        activities: [
+          {
+            description:
+              "Early tennis at the Hudson River Park courts, just south of Pier 40 in Greenwich Village, around West Houston and the Greenway.",
+            places: [{ name: "Hudson River Park Tennis Courts", near: "New York, NY" }],
+          },
+          { description: "Long walk down to FiDi." },
+          {
+            description: "Pick up bagels at Liberty Bagels and eat them at the Battery.",
+            places: [
+              { name: "Liberty Bagels", near: "New York, NY" },
+              { name: "The Battery", near: "New York, NY" },
+            ],
+          },
+          {
+            description:
+              "The 9/11 Museum and Memorial, or a Tribeca tour. The museum needs timed tickets bought ahead.",
+            places: [
+              { name: "9/11 Memorial & Museum", near: "New York, NY" },
+              { name: "Tribeca", near: "New York, NY" },
+            ],
+          },
+          {
+            description: "Meet at the Oculus and walk around the World Trade Center.",
+            places: [{ name: "Oculus", near: "New York, NY" }],
+          },
+          {
+            description:
+              "Ferry from Pier 11 at Wall Street over to Red Hook. Download the NYC Ferry app for tickets.",
+            places: [
+              { name: "Pier 11 Wall Street", near: "New York, NY" },
+              { name: "Red Hook", near: "Brooklyn, NY" },
+            ],
+          },
+          {
+            description: "Pre-dinner drinks.",
+            places: [
+              { name: "Brooklyn Crab", near: "Brooklyn, NY" },
+              { name: "Strong Rope Brewery", near: "Brooklyn, NY" },
+              { name: "Red Hook Winery", near: "Brooklyn, NY" },
+            ],
+          },
+          {
+            time: "19:00",
+            description: "Dinner at Red Hook Tavern.",
+            places: [{ name: "Red Hook Tavern", near: "Brooklyn, NY" }],
+          },
+          { time: "21:00", description: "Ferry back to Wall Street, then to Greenwich Village." },
+          {
+            time: "22:30",
+            description: "Cafe Wha?",
+            places: [{ name: "Cafe Wha?", near: "New York, NY" }],
+          },
+          {
+            time: "00:00",
+            description: "A late drink in the West Village.",
+            places: [
+              { name: "Dante West Village", near: "New York, NY" },
+              { name: "Katana Kitten", near: "New York, NY" },
+              { name: "Sip & Guzzle", near: "New York, NY" },
+              { name: "Employees Only", near: "New York, NY" },
+              { name: "The Happiest Hour", near: "New York, NY" },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Central Park, then Greenpoint",
+        note: "Pick one museum. All three would be insane.",
+        activities: [
+          {
+            description: "Pick up chicken Caesar wraps from Milano Market.",
+            places: [{ name: "Milano Market", near: "New York, NY" }],
+          },
+          {
+            description:
+              "Picnic in Central Park. Walk the reservoir, eat on the Great Lawn, see Bethesda Terrace and Bow Bridge, lounge in Sheep Meadow.",
+            places: [
+              { name: "Central Park", near: "New York, NY" },
+              { name: "Bethesda Terrace", near: "New York, NY" },
+              { name: "Bow Bridge", near: "New York, NY" },
+              { name: "Sheep Meadow", near: "New York, NY" },
+            ],
+          },
+          {
+            description: "The one museum, done while you are up here.",
+            places: [
+              { name: "The Met", near: "New York, NY" },
+              { name: "American Museum of Natural History", near: "New York, NY" },
+              { name: "MoMA", near: "New York, NY" },
+            ],
+          },
+          {
+            description: "Optional drink at Tavern on the Green.",
+            places: [{ name: "Tavern on the Green", near: "New York, NY" }],
+          },
+          { description: "Go home and change for Greenpoint." },
+          {
+            description:
+              "If you fancy it, walk the Williamsburg Bridge, then Bedford, Berry, Wythe and the side streets.",
+            places: [
+              { name: "Williamsburg Bridge", near: "New York, NY" },
+              { name: "Bedford Avenue", near: "Brooklyn, NY" },
+            ],
+          },
+          {
+            description: "Pre-dinner drinks at Bar Americano. You must go, the drinks are so good.",
+            places: [{ name: "Bar Americano", near: "Brooklyn, NY" }],
+          },
+          {
+            description: "Dinner at Oxomoco.",
+            places: [{ name: "Oxomoco", near: "Brooklyn, NY" }],
+          },
+          {
+            description:
+              "If everyone else goes home, the jazz rooms are great vibes.",
+            places: [
+              { name: "Village Vanguard", near: "New York, NY" },
+              { name: "Smalls Jazz Club", near: "New York, NY" },
+              { name: "Mezzrow", near: "New York, NY" },
+              { name: "Blue Note", near: "New York, NY" },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Dimes Square, at leisure",
+        activities: [
+          { description: "Day at your leisure." },
+          { description: "Go home and change." },
+          {
+            description: "Put your name down at Kiki's, then drink around Dimes Square.",
+            places: [
+              { name: "Kiki's", near: "New York, NY" },
+              { name: "Dimes Square", near: "New York, NY" },
+            ],
+          },
+          { description: "Dinner at Kiki's." },
+          {
+            description: "Out afterwards.",
+            places: [
+              { name: "Le Dive", near: "New York, NY" },
+              { name: "Outer Heaven", near: "New York, NY" },
+              { name: "169 Bar", near: "New York, NY" },
+              { name: "The Flower Shop", near: "New York, NY" },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Done, and worth doing",
+        note: "The bucket list items I have actually ticked off.",
+        places: [
+          { name: "Aunt Jake's", near: "New York, NY", note: "The pasta class." },
+          { name: "Queens Night Market", near: "New York, NY" },
+          { name: "Blue Hill at Stone Barns", near: "Tarrytown, NY", note: "A Tarrytown day, and the lunch trays." },
+          { name: "Batsu", near: "New York, NY", note: "Japanese comedy." },
+          { name: "Tenement Museum", near: "New York, NY" },
+          { name: "Arthur Avenue", near: "Bronx, NY" },
+        ],
+        items: [
+          "Walk the whole of Manhattan, top to bottom.",
+          "A Korean scalp spa.",
+        ],
+      },
+      {
+        title: "Still on the bucket list",
+        note: "Not done yet, in no particular order.",
+        places: [
+          { name: "American Museum of Natural History", near: "New York, NY", note: "A night at the museum." },
+          { name: "Roosevelt Island Tramway", near: "New York, NY", note: "The cable car." },
+          { name: "The Met", near: "New York, NY" },
+          { name: "The Cloisters", near: "New York, NY" },
+          { name: "Empire State Building", near: "New York, NY", note: "The stair climb." },
+          { name: "New York Botanical Garden", near: "Bronx, NY" },
+        ],
+        items: [
+          "The $30 under-30 ballet tickets.",
+          "A candlelight concert for an artist I actually like.",
+        ],
+      },
+      {
+        title: "Nights out and odd things",
+        places: [
+          { name: "Django", near: "New York, NY" },
+          { name: "The Slipper Room", near: "New York, NY" },
+          { name: "The Cauldron", near: "New York, NY", note: "Alcohol potions." },
+          { name: "Liquor Lab", near: "New York, NY" },
+          { name: "Syndicated", near: "Brooklyn, NY", note: "Dinner and a film." },
+          { name: "Cellar Dog", near: "New York, NY" },
+          { name: "Bedroom 6", near: "New York, NY", note: "Absinthe." },
+          { name: "Tokyo Record Bar", near: "New York, NY" },
+          { name: "Casa La Femme", near: "New York, NY", note: "Belly dancers." },
+          { name: "Bathtub Gin", near: "New York, NY", note: "Every other Wednesday." },
+          { name: "Cafe Wha?", near: "New York, NY" },
+          { name: "Comedy Cellar", near: "New York, NY" },
+          { name: "Music Inn", near: "New York, NY", note: "Thursdays." },
+          { name: "Madison Square Garden", near: "New York, NY", note: "For the rodeo." },
+        ],
+        items: [
+          "Paint and pour.",
+          "A night skate in Brooklyn.",
+          "Swingers or Spin, for crazy golf and ping pong.",
+          "A bottomless sake omakase.",
+        ],
+      },
+      {
+        title: "Eat",
+        places: [
+          { name: "Puglia", near: "New York, NY" },
+          { name: "Patrizia's", near: "New York, NY" },
+        ],
+        items: ["A Red Hook day, which is worth giving a whole one to."],
+      },
+      {
+        title: "Classes and making things",
+        places: [
+          {
+            name: "Happy Medium",
+            url: "https://happy-medium.co/events/build-a-chair",
+            note: "Build a chair.",
+          },
+          {
+            name: "Miss American Pie",
+            url: "https://missamericanpienyc.getbento.com/store/event/none/",
+            note: "Pie class.",
+          },
         ],
       },
     ],
