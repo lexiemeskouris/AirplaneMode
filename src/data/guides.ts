@@ -202,16 +202,12 @@ export const guides: Guide[] = [
     summary:
       "Where to eat, where it turns into a club, and the order we did it in over three nights.",
     teaser:
-      "Miami as a set of nights rather than days. Dinners that run late, rooms that turn into clubs, and a Sunday that starts in the afternoon and does not stop.",
-    tags: ["#SundayFunDay", "#Marion", "#LosFuegos"],
+      "Miami as a set of nights rather than days, plus one long Sunday lunch. Dinners that run late, rooms that turn into clubs, and how we actually sequenced them.",
+    tags: ["#SundayFunDay", "#LosFuegos", "#SouthBeach"],
     sections: [
       {
         title: "Go out",
         places: [
-          {
-            name: "Kiki on the River",
-            note: "Sunday Fun Day. A Greek place on the Miami River that turns into a party in the afternoon and stays one. Book it, and go for the Sunday.",
-          },
           { name: "Marion", note: "Turns into a club, like Bagatelle or Maison Close." },
           { name: "Baoli" },
           { name: "Mila" },
@@ -220,6 +216,10 @@ export const guides: Guide[] = [
       {
         title: "Eat",
         places: [
+          {
+            name: "Kiki on the River",
+            note: "Greek, on the Miami River. Go for Sunday Fun Day, and book it.",
+          },
           { name: "Los Fuegos", note: "Then drinks at Living Room after." },
           { name: "Living Room" },
           { name: "La Leggenda Pizzeria" },
