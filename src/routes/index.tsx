@@ -5,13 +5,13 @@ import { guides } from "@/data/guides";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "AirplaneMood - High-Energy Travel Itineraries" },
+      { title: "AirplaneMode - High-Energy Travel Itineraries" },
       {
         name: "description",
         content:
           "Travel itineraries I build for myself and post as I used them. Real places, hour by hour. Free to read.",
       },
-      { property: "og:title", content: "AirplaneMood - High-Energy Travel Itineraries" },
+      { property: "og:title", content: "AirplaneMode - High-Energy Travel Itineraries" },
       {
         property: "og:description",
         content:

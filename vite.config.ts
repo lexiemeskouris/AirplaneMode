@@ -13,7 +13,7 @@ const isGitHubPages = process.env.GITHUB_PAGES === "true";
 
 // Project Pages are served from https://<user>.github.io/<repo>/, so every asset
 // and route URL needs the repo name prefix. A user/org site would use "/".
-const basePath = process.env.PAGES_BASE ?? "/AirplaneMood/";
+const basePath = process.env.PAGES_BASE ?? "/AirplaneMode/";
 
 export default defineConfig({
   tanstackStart: {

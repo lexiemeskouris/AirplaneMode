@@ -14,16 +14,16 @@ export const Route = createFileRoute("/recommendations/$slug")({
     if (!g) {
       return {
         meta: [
-          { title: "Recommendations - AirplaneMood" },
+          { title: "Recommendations - AirplaneMode" },
           { name: "robots", content: "noindex" },
         ],
       };
     }
     return {
       meta: [
-        { title: `${g.title} - AirplaneMood` },
+        { title: `${g.title} - AirplaneMode` },
         { name: "description", content: g.summary },
-        { property: "og:title", content: `${g.title} - AirplaneMood` },
+        { property: "og:title", content: `${g.title} - AirplaneMode` },
         { property: "og:description", content: g.summary },
         { property: "og:image", content: g.cover },
         { property: "og:type", content: "article" },

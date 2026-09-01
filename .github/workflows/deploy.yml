@@ -33,7 +33,7 @@ jobs:
         run: npm ci --no-audit --no-fund
 
       - name: Build static site
-        # GITHUB_PAGES switches vite.config.ts to SPA mode with the /AirplaneMood/
+        # GITHUB_PAGES switches vite.config.ts to SPA mode with the /AirplaneMode/
         # base path. Without it the build stays exactly as Lovable produces it.
         env:
           GITHUB_PAGES: "true"

@@ -79,7 +79,7 @@ function SiteHeader() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link to="/" className="flex items-center gap-2">
           <span className="font-display text-2xl font-extrabold tracking-tighter text-primary">
-            AIRPLANEMOOD
+            AIRPLANEMODE
           </span>
         </Link>
         <nav className="hidden items-center gap-8 text-sm font-bold md:flex">
@@ -132,7 +132,7 @@ function SiteFooter() {
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
           <div>
             <p className="font-display text-2xl font-extrabold tracking-tighter text-primary">
-              AIRPLANEMOOD
+              AIRPLANEMODE
             </p>
             <p className="mt-1 text-sm text-muted-foreground">
               High-energy itineraries for the restless traveler.
@@ -159,7 +159,7 @@ function SiteFooter() {
           </div>
         </div>
         <p className="mt-8 text-xs font-semibold uppercase tracking-[0.15em] text-muted-foreground/70">
-          © {new Date().getFullYear()} AirplaneMood · Made on the move
+          © {new Date().getFullYear()} AirplaneMode · Made on the move
         </p>
       </div>
     </footer>
@@ -171,13 +171,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "AirplaneMood - High-Energy Travel Itineraries" },
+      { title: "AirplaneMode - High-Energy Travel Itineraries" },
       {
         name: "description",
         content:
           "High-energy travel itineraries for people who keep moving and love food. Free guides and supporter-funded deep dives.",
       },
-      { property: "og:title", content: "AirplaneMood - High-Energy Travel Itineraries" },
+      { property: "og:title", content: "AirplaneMode - High-Energy Travel Itineraries" },
       {
         property: "og:description",
         content:
@@ -200,7 +200,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      // BASE_URL is "/" in Lovable and "/AirplaneMood/" in the GitHub Pages build,
+      // BASE_URL is "/" in Lovable and "/AirplaneMode/" in the GitHub Pages build,
       // so this resolves correctly in both.
       { rel: "icon", href: `${import.meta.env.BASE_URL}favicon.svg`, type: "image/svg+xml" },
     ],

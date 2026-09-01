@@ -13,19 +13,19 @@ export const Route = createFileRoute("/itineraries/$slug")({
     if (!it) {
       return {
         meta: [
-          { title: "Itinerary - AirplaneMood" },
+          { title: "Itinerary - AirplaneMode" },
           { name: "robots", content: "noindex" },
         ],
       };
     }
     return {
       meta: [
-        { title: `${it.title} - AirplaneMood` },
+        { title: `${it.title} - AirplaneMode` },
         {
           name: "description",
           content: it.summary,
         },
-        { property: "og:title", content: `${it.title} - AirplaneMood` },
+        { property: "og:title", content: `${it.title} - AirplaneMode` },
         { property: "og:description", content: it.summary },
         { property: "og:type", content: "article" },
         { property: "og:image", content: it.cover },

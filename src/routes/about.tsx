@@ -4,13 +4,13 @@ import { itineraries, BMC_URL } from "@/data/itineraries";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About - AirplaneMood" },
+      { title: "About - AirplaneMode" },
       {
         name: "description",
         content:
           "Travel itineraries I build for myself and post as I used them. Real places, hour by hour. Free to read.",
       },
-      { property: "og:title", content: "About - AirplaneMood" },
+      { property: "og:title", content: "About - AirplaneMode" },
       {
         property: "og:description",
         content:

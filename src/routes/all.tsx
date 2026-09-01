@@ -6,17 +6,17 @@ import worldMap from "@/assets/world.svg";
 export const Route = createFileRoute("/all")({
   head: () => ({
     meta: [
-      { title: "Everywhere, A to Z - AirplaneMood" },
+      { title: "Everywhere, A to Z - AirplaneMode" },
       {
         name: "description",
         content:
-          "Every itinerary and every list of recommendations on AirplaneMood, in alphabetical order.",
+          "Every itinerary and every list of recommendations on AirplaneMode, in alphabetical order.",
       },
-      { property: "og:title", content: "Everywhere, A to Z - AirplaneMood" },
+      { property: "og:title", content: "Everywhere, A to Z - AirplaneMode" },
       {
         property: "og:description",
         content:
-          "Every itinerary and every list of recommendations on AirplaneMood, in alphabetical order.",
+          "Every itinerary and every list of recommendations on AirplaneMode, in alphabetical order.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
