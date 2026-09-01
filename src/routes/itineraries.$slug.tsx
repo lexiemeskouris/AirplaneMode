@@ -205,6 +205,35 @@ function ItineraryDetail() {
         </div>
       )}
 
+      {it.seeAlso && (
+        <section className="mt-12 rounded-2xl border border-accent/40 bg-accent/10 px-6 py-6">
+          <p className="leading-relaxed text-foreground/90">{it.seeAlso.note}</p>
+          {it.seeAlso.kind === "itinerary" ? (
+            <Link
+              to="/itineraries/$slug"
+              params={{ slug: it.seeAlso.slug }}
+              className="mt-3 inline-flex items-center font-bold text-primary transition-transform hover:translate-x-1"
+            >
+              {it.seeAlso.title}
+              <span aria-hidden className="ml-2">
+                &rarr;
+              </span>
+            </Link>
+          ) : (
+            <Link
+              to="/recommendations/$slug"
+              params={{ slug: it.seeAlso.slug }}
+              className="mt-3 inline-flex items-center font-bold text-primary transition-transform hover:translate-x-1"
+            >
+              {it.seeAlso.title}
+              <span aria-hidden className="ml-2">
+                &rarr;
+              </span>
+            </Link>
+          )}
+        </section>
+      )}
+
       {/* Gated CTA */}
       {it.gated && (
         <section className="mt-12 overflow-hidden rounded-[2rem] bg-foreground p-8 text-center text-background md:p-12">

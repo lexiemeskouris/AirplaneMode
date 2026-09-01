@@ -34,6 +34,7 @@ import tromso from "@/assets/tromso.svg";
 import seoul from "@/assets/seoul.svg";
 import malta from "@/assets/malta.svg";
 import southAfrica from "@/assets/south-africa.svg";
+import victoriaFalls from "@/assets/victoria-falls.svg";
 
 /** A named venue, with its map link if we have a real one. */
 export type Place = {
@@ -89,6 +90,13 @@ export type Itinerary = {
    * this only works on. Shown up front, before the day-by-day.
    */
   notes?: string[];
+  /** Another page on the site that bolts onto this trip. */
+  seeAlso?: {
+    slug: string;
+    kind: "itinerary" | "recommendation";
+    title: string;
+    note: string;
+  };
   /**
    * Places worth knowing about that are not pinned to any day: the running
    * list of recommendations that comes back from a trip. Grouped, because a
@@ -893,6 +901,152 @@ export const itineraries: Itinerary[] = [
       "Edley's barbecue and a walk around 12 South",
       "Brunch at Monell's",
       "Kayne Prime, booked well in advance",
+    ],
+    extras: [
+      {
+        title: "BBQ",
+        places: [
+          { name: "Edley's" },
+          { name: "Peg Leg Porker" },
+          { name: "Martin's Bar-B-Que Joint" },
+          { name: "Jack's Bar-B-Que", note: "The Broadway one." },
+        ],
+      },
+      {
+        title: "Fried chicken",
+        places: [
+          { name: "Hattie B's" },
+          { name: "Prince's Hot Chicken", note: "There is a branch at 6th & Peabody." },
+        ],
+      },
+      {
+        title: "Coffee, breakfast and brunch",
+        places: [
+          { name: "Dozen Bakery", note: "Favourite bakery." },
+          { name: "Fido", note: "Sit down, fast casual breakfast." },
+          { name: "Monell's", note: "Sit-down southern style brunch." },
+          { name: "Big Al's Deli", note: "Hidden gem in Germantown." },
+          { name: "Sky Blue Cafe", note: "East Nashville." },
+          { name: "Adele's", note: "Nicer brunch, all you can eat buffet." },
+          { name: "H&S Bagels" },
+          { name: "Proper Bagel" },
+          { name: "Marsh House", note: "In the Gulch." },
+          { name: "Lady Bird Taco", note: "Breakfast tacos." },
+          { name: "Frothy Monkey" },
+          { name: "Biscuit Love", note: "The classic touristy one." },
+        ],
+      },
+      {
+        title: "Lunch",
+        places: [
+          { name: "Grekko", note: "Casual Greek." },
+          { name: "The Greenery", note: "Make your own salad." },
+          { name: "51st Deli", note: "Sandwiches." },
+          { name: "Mitchell Delicatessen", note: "Sandwiches." },
+          { name: "Burger Up", note: "Burgers and salads." },
+          { name: "Taco Mama" },
+          { name: "Assembly Food Hall", note: "Food court on Broadway." },
+          { name: "Little Hats Market", note: "Italian deli in Germantown." },
+          { name: "Cava" },
+        ],
+      },
+      {
+        title: "Dinner",
+        places: [
+          { name: "Rolf & Daughters", note: "Favourite restaurant." },
+          { name: "Twelve Thirty Club", note: "On Broadway. Both a bar and a sit-down restaurant, with live music." },
+          { name: "Luogo", note: "Italian in the Gulch." },
+          { name: "Butchertown Hall", note: "Nicer tacos, in Germantown." },
+          { name: "5th & Taylor" },
+          { name: "Butcher & Bee", note: "Mediterranean." },
+          { name: "Noko", note: "So good. Asian." },
+          { name: "Urban Cowboy", note: "Drinks and pizza." },
+          { name: "Kayne Prime", note: "Steakhouse." },
+          { name: "Pinewood Social" },
+          { name: "The Pharmacy Burger Parlor", note: "Cute burger place." },
+          { name: "Sunda", note: "Asian, in the Gulch." },
+          { name: "Ernest Bar & Hideaway" },
+          { name: "Pastaria" },
+          { name: "Barcelona Wine Bar", note: "Tapas." },
+          { name: "Sadie's", note: "Mediterranean." },
+          { name: "The Optimist" },
+          { name: "Saint Añejo" },
+          { name: "Oku" },
+          { name: "Two Ten Jack" },
+          { name: "Moto" },
+          { name: "Yolan" },
+          { name: "Bourbon Steak" },
+        ],
+      },
+      {
+        title: "Drinks",
+        places: [
+          { name: "6th & Peabody", note: "Outdoor moonshine distillery and brewery, with a hot dog stand and a taco shop." },
+          { name: "Tennessee Brew Works", note: "Brewery with a rooftop." },
+          { name: "L.A. Jackson", note: "Rooftop on the Thompson." },
+          { name: "Attaboy", note: "Speakeasy." },
+          { name: "Old Glory", note: "Speakeasy." },
+          { name: "Rare Bird", note: "Rooftop." },
+          { name: "Von Elrod's", note: "Beer garden." },
+          { name: "Golden Pony", note: "East Nashville, and it does food." },
+          { name: "Rosemary", note: "Bar in East Nashville." },
+          { name: "Mother's Ruin" },
+          { name: "The Patterson House", note: "Speakeasy." },
+          { name: "TailGate Brewery" },
+          { name: "Neighbors", note: "Sports bar." },
+          { name: "Sonny's", note: "Sports bar." },
+        ],
+      },
+      {
+        title: "Dessert",
+        places: [
+          { name: "Baked Bear" },
+          { name: "Koko's", note: "Vegan ice cream that is actually good." },
+          { name: "Jeni's" },
+          { name: "Five Daughters Bakery", note: "Donuts." },
+          { name: "NoBaked Cookie Dough" },
+        ],
+      },
+      {
+        title: "Live music, and somewhere to eat while you listen",
+        places: [
+          { name: "The Listening Room Cafe", note: "Dinner and a show. The food is fair, the show is so fun." },
+          { name: "3rd and Lindsley" },
+          { name: "City Winery" },
+          { name: "The Row Kitchen & Pub", note: "Live music and good lunch food." },
+          { name: "Broadway", note: "Anywhere along it." },
+        ],
+      },
+      {
+        title: "Neighbourhoods to walk and shop",
+        places: [
+          { name: "Hillsboro Village" },
+          { name: "12 South" },
+          { name: "The Gulch" },
+          { name: "Germantown" },
+          { name: "Wedgewood-Houston" },
+        ],
+      },
+      {
+        title: "Parks and markets",
+        places: [
+          { name: "Bicentennial Capitol Mall State Park" },
+          { name: "Centennial Park" },
+          { name: "Sevier Park" },
+          { name: "Richland Park Farmers Market", note: "Saturdays until noon." },
+        ],
+      },
+      {
+        title: "Games and other things",
+        places: [
+          { name: "First Horizon Park", note: "Sounds games. Minor league baseball." },
+          { name: "Geodis Park", note: "Soccer." },
+          { name: "Bridgestone Arena", note: "Preds games. Hockey." },
+          { name: "Nissan Stadium", note: "Titans games. Football." },
+          { name: "Pins Mechanical", note: "Bowling, with an outdoor bar." },
+          { name: "Fifth + Broadway", note: "Food court, shopping and a lot of the Nashville staples in one complex." },
+        ],
+      },
     ],
     days: [
       {
@@ -5458,30 +5612,32 @@ export const itineraries: Itinerary[] = [
   },
   {
     slug: "south-africa",
-    title: "South Africa and Victoria Falls",
+    title: "Ten Days in South Africa",
     destination: "South Africa",
     country: "South Africa",
     coords: { lat: -33.9249, lon: 18.4241 },
-    duration: "13 days",
+    duration: "10 days",
     season: "May",
     summary:
-      "Cape Town for six days, the Garden Route with a 4x4 safari, a day in Johannesburg, then over the border to Victoria Falls.",
+      "Cape Town for six days, the Garden Route with a 4x4 safari, and a day in Johannesburg for Soweto.",
     cover: southAfrica,
     gated: false,
     teaser:
-      "Two countries. Six days in Cape Town with a hike or a tour every morning and a booked dinner every night, three on the Garden Route with a 4x4 safari, one in Johannesburg for Soweto, then four at Victoria Falls in Zimbabwe.",
+      "Six days in Cape Town with a hike or a tour every morning and a booked dinner every night, three along the Garden Route with a 4x4 safari, and one in Johannesburg for Soweto before flying on to Victoria Falls.",
     tags: ["#TableMountain", "#Soweto", "#VictoriaFalls"],
-    notes: [
-      "Victoria Falls is in Zimbabwe, so this needs a second visa. The US is category B, which means a visa on arrival, but check the current rules and prices before you go.",
-      "May is autumn in South Africa, not spring.",
-    ],
+    notes: ["May is autumn in South Africa, not spring."],
+    seeAlso: {
+      slug: "victoria-falls",
+      kind: "itinerary",
+      title: "Victoria Falls, Zambia and Zimbabwe",
+      note: "A good little add-on if you have two or three days at the end. It is a short flight from Johannesburg, and it uses both sides of the border.",
+    },
     highlights: [
       "Shark diving, then a hike up Lion's Head the same day",
       "Platteklip Gorge up Table Mountain, cable car down",
       "Robben Island, by ferry from the V&A Waterfront",
       "Three days along the Garden Route, with a 4x4 safari",
       "A Soweto tour, then a street food and art walk in Johannesburg",
-      "White water rafting below Victoria Falls",
     ],
     days: [
       {
@@ -5676,12 +5832,62 @@ export const itineraries: Itinerary[] = [
       },
       {
         day: "Day Ten",
-        title: "Over to Victoria Falls",
+        title: "On to Victoria Falls",
         activities: [
           { time: "08:00", description: "Check out and head to the airport." },
           {
             time: "11:35",
-            description: "Flight to Victoria Falls, landing at 13:20.",
+            description:
+              "Flight to Victoria Falls, landing at 13:20. The rest of this one is its own page, linked below.",
+            places: [{ name: "Victoria Falls", near: "Zimbabwe" }],
+          },
+        ],
+      },
+    ],
+    extras: [
+      {
+        title: "Before you go",
+        items: [
+          "The Apartheid Museum is closed on Mondays and Tuesdays. We were in Johannesburg on a Tuesday and missed it, so plan that day around it.",
+          "The Table Mountain cable car closes without warning in high wind, so always have the time to walk down.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "victoria-falls",
+    title: "Victoria Falls, Zambia and Zimbabwe",
+    destination: "Victoria Falls",
+    country: "Zimbabwe and Zambia",
+    coords: { lat: -17.9243, lon: 25.8572 },
+    duration: "4 days",
+    season: "May",
+    summary:
+      "The falls from the Zimbabwe side, rafting from the Zambian side, and high tea in between.",
+    cover: victoriaFalls,
+    gated: false,
+    teaser:
+      "Victoria Falls sits on the border, so this uses both countries: the falls, the massages and the high tea are Zimbabwe, and the white water rafting is Zambia. It bolts neatly onto a South Africa trip.",
+    tags: ["#VictoriaFalls", "#Rafting", "#Zambezi"],
+    notes: [
+      "You cross the border for the rafting, so get a double entry visa for Zimbabwe rather than a single. The US is category B, which is a visa on arrival, but check the current rules and prices before you go.",
+      "The entrance fee for the falls is separate from the tour price.",
+    ],
+    highlights: [
+      "The falls from the Zimbabwe side",
+      "White water rafting on the Zambezi, from Zambia",
+      "Ninety minute massages at the Victoria Falls Safari Lodge",
+      "High tea at the Victoria Falls Hotel, watching the sunset",
+      "The Elephant's Walk Shopping Village in town",
+    ],
+    days: [
+      {
+        day: "Day One",
+        title: "Fly In",
+        activities: [
+          {
+            time: "11:35",
+            description: "Flight from Johannesburg, landing at 13:20.",
             places: [{ name: "Victoria Falls", near: "Zimbabwe" }],
           },
           { time: "14:00", description: "Settle in." },
@@ -5699,43 +5905,56 @@ export const itineraries: Itinerary[] = [
         ],
       },
       {
-        day: "Day Eleven",
+        day: "Day Two",
         title: "The Falls, Then Massages",
         activities: [
           {
             time: "10:30",
-            description: "Check in for the tour of the falls. The entrance fee is not included.",
+            description:
+              "Check in for the tour of the falls, on the Zimbabwe side. The entrance fee is not included in the tour.",
           },
           { time: "13:00", description: "Move on to the massages." },
           {
             time: "15:00",
-            description: "Ninety minute massages at the Victoria Falls Safari Hotel.",
+            description: "Ninety minute massages at the Victoria Falls Safari Lodge.",
             places: [{ name: "Victoria Falls Safari Lodge", near: "Zimbabwe" }],
           },
           {
             time: "19:00",
-            description: "Dinner at MaKuwa Kuwa, at the same hotel.",
+            description: "Dinner at MaKuwa Kuwa, at the same lodge.",
             places: [{ name: "MaKuwa Kuwa Restaurant", near: "Victoria Falls, Zimbabwe" }],
           },
         ],
       },
       {
-        day: "Day Twelve",
-        title: "Rafting, Then High Tea",
+        day: "Day Three",
+        title: "Cross to Zambia, Then Back for Tea",
         activities: [
-          { time: "11:00", description: "White water rafting. Fingers crossed." },
+          {
+            description:
+              "Cross into Zambia. This is the day the double entry visa pays for itself.",
+            places: [{ name: "Livingstone", near: "Zambia" }],
+          },
+          {
+            time: "11:00",
+            description: "White water rafting on the Zambezi, from the Zambian side.",
+            places: [{ name: "Zambezi River", near: "Livingstone, Zambia" }],
+          },
           {
             time: "16:00",
             description:
-              "High tea at the Victoria Falls Hotel. Iconic place, and you can watch the sunset. It runs 15:00 to 18:00.",
+              "Back over to Zimbabwe for high tea at the Victoria Falls Hotel. Iconic place, and you can watch the sunset. It runs 15:00 to 18:00.",
             places: [{ name: "Victoria Falls Hotel", near: "Zimbabwe" }],
           },
-          { time: "19:00", description: "Walk the hotel grounds, and eat again if you are still hungry." },
+          {
+            time: "19:00",
+            description: "Walk the hotel grounds, and eat again if you are still hungry.",
+          },
         ],
       },
       {
         day: "Departure",
-        title: "Out of Victoria Falls",
+        title: "Fly Out",
         activities: [
           { time: "08:00", description: "Airport transfer." },
           { time: "13:30", description: "Flight out." },
@@ -5744,14 +5963,11 @@ export const itineraries: Itinerary[] = [
     ],
     extras: [
       {
-        title: "Before you go",
+        title: "Worth knowing",
         items: [
-          "The Apartheid Museum is closed on Mondays and Tuesdays. We were in Johannesburg on a Tuesday and missed it, so plan that day around it.",
-          "Zimbabwe issues a visa on arrival for US passports, which are category B. Check the current category, price and rules before you travel, since these change.",
-          "Botswana charges its own visa fee if you cross the border for the day.",
-          "Skip the sunset cruise at Victoria Falls. The sun goes down about thirty minutes after you embark, and then you are sitting on a boat in the dark.",
+          "Skip the sunset cruise. The sun goes down about thirty minutes after you embark, and then you are sitting on a boat in the dark.",
+          "Botswana charges its own visa fee if you add a day trip across that border too.",
           "Park and site entrance fees are separate from most tour prices, and they go up. Budget for them on top.",
-          "The Table Mountain cable car closes without warning in high wind, so always have the time to walk down.",
         ],
       },
     ],
