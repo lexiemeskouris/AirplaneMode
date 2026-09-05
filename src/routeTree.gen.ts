@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as AllRouteImport } from './routes/all'
+import { Route as SuggestRouteImport } from './routes/suggest'
 import { Route as ItinerariesSlugRouteImport } from './routes/itineraries.$slug'
 import { Route as RecommendationsSlugRouteImport } from './routes/recommendations.$slug'
 
@@ -30,6 +31,11 @@ const AllRoute = AllRouteImport.update({
   path: '/all',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SuggestRoute = SuggestRouteImport.update({
+  id: '/suggest',
+  path: '/suggest',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ItinerariesSlugRoute = ItinerariesSlugRouteImport.update({
   id: '/itineraries/$slug',
   path: '/itineraries/$slug',
@@ -45,6 +51,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/all': typeof AllRoute
+  '/suggest': typeof SuggestRoute
   '/itineraries/$slug': typeof ItinerariesSlugRoute
   '/recommendations/$slug': typeof RecommendationsSlugRoute
 }
@@ -52,6 +59,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/all': typeof AllRoute
+  '/suggest': typeof SuggestRoute
   '/itineraries/$slug': typeof ItinerariesSlugRoute
   '/recommendations/$slug': typeof RecommendationsSlugRoute
 }
@@ -60,20 +68,33 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/all': typeof AllRoute
+  '/suggest': typeof SuggestRoute
   '/itineraries/$slug': typeof ItinerariesSlugRoute
   '/recommendations/$slug': typeof RecommendationsSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/about' | '/all' | '/itineraries/$slug' | '/recommendations/$slug'
+    | '/'
+    | '/about'
+    | '/all'
+    | '/suggest'
+    | '/itineraries/$slug'
+    | '/recommendations/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/all' | '/itineraries/$slug' | '/recommendations/$slug'
+  to:
+    | '/'
+    | '/about'
+    | '/all'
+    | '/suggest'
+    | '/itineraries/$slug'
+    | '/recommendations/$slug'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/all'
+    | '/suggest'
     | '/itineraries/$slug'
     | '/recommendations/$slug'
   fileRoutesById: FileRoutesById
@@ -82,6 +103,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   AllRoute: typeof AllRoute
+  SuggestRoute: typeof SuggestRoute
   ItinerariesSlugRoute: typeof ItinerariesSlugRoute
   RecommendationsSlugRoute: typeof RecommendationsSlugRoute
 }
@@ -109,6 +131,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AllRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/suggest': {
+      id: '/suggest'
+      path: '/suggest'
+      fullPath: '/suggest'
+      preLoaderRoute: typeof SuggestRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/itineraries/$slug': {
       id: '/itineraries/$slug'
       path: '/itineraries/$slug'
@@ -130,6 +159,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   AllRoute: AllRoute,
+  SuggestRoute: SuggestRoute,
   ItinerariesSlugRoute: ItinerariesSlugRoute,
   RecommendationsSlugRoute: RecommendationsSlugRoute,
 }

@@ -12,6 +12,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { BMC_URL } from "@/data/itineraries";
+import { SUGGESTIONS_ENABLED } from "@/data/site";
 
 function NotFoundComponent() {
   return (
@@ -104,6 +105,15 @@ function SiteHeader() {
           >
             About
           </Link>
+          {SUGGESTIONS_ENABLED && (
+            <Link
+              to="/suggest"
+              activeProps={{ className: "text-accent" }}
+              className="text-foreground/80 transition-colors hover:text-accent"
+            >
+              Suggest
+            </Link>
+          )}
         </nav>
         <a
           href={BMC_URL}
@@ -148,6 +158,11 @@ function SiteFooter() {
             <Link to="/about" className="transition-colors hover:text-accent">
               About
             </Link>
+            {SUGGESTIONS_ENABLED && (
+              <Link to="/suggest" className="transition-colors hover:text-accent">
+                Suggest a destination
+              </Link>
+            )}
             <a
               href={BMC_URL}
               target="_blank"

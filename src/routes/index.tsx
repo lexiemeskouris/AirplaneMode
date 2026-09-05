@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { itineraries, BMC_URL } from "@/data/itineraries";
 import { guides } from "@/data/guides";
+import { SUGGESTIONS_ENABLED } from "@/data/site";
+import { SpinWheel, useSpinWheel } from "@/components/SpinWheel";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -37,7 +39,9 @@ type TileProps = {
   chipB: string;
   cta: string;
   gated?: boolean;
-  bmcUrl?: string;
+  // Explicitly undefined-able: an itinerary with no link passes undefined
+  // through, and exactOptionalPropertyTypes rejects a bare optional.
+  bmcUrl?: string | undefined;
 };
 
 /**
@@ -135,9 +139,11 @@ function Tile(props: TileProps) {
 function Index() {
   const free = itineraries.filter((i) => !i.gated);
   const gated = itineraries.filter((i) => i.gated);
+  const wheel = useSpinWheel();
 
   return (
     <div>
+      <SpinWheel open={wheel.open} onClose={wheel.close} />
       {/* Hero intro band. Kept short on purpose: the feed should start above the
           fold rather than after a full screen of headline. */}
       <section className="mx-auto max-w-7xl px-6 pt-12 pb-10">
@@ -169,6 +175,23 @@ function Index() {
               </span>
             )}
             <span>More on the way</span>
+          </div>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <button
+              type="button"
+              onClick={wheel.reopen}
+              className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-transform hover:scale-105 active:scale-95"
+            >
+              Spin the wheel
+            </button>
+            {SUGGESTIONS_ENABLED && (
+              <Link
+                to="/suggest"
+                className="inline-flex items-center rounded-full border border-border px-6 py-3 text-sm font-bold text-foreground transition-colors hover:bg-secondary"
+              >
+                Suggest a destination
+              </Link>
+            )}
           </div>
         </div>
       </section>
@@ -220,6 +243,32 @@ function Index() {
             );
           })}
         </div>
+
+        {SUGGESTIONS_ENABLED && (
+          <div className="mt-16 overflow-hidden rounded-3xl border border-border bg-card">
+            <div aria-hidden className="flex h-1.5 w-full">
+              <div className="flex-1 bg-brand-red" />
+              <div className="flex-1 bg-brand-indigo" />
+              <div className="flex-1 bg-brand-pink" />
+              <div className="flex-1 bg-brand-yellow" />
+            </div>
+            <div className="px-8 py-10 text-center">
+              <h2 className="font-display text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
+                Somewhere missing?
+              </h2>
+              <p className="mx-auto mt-3 max-w-lg leading-relaxed text-muted-foreground">
+                Tell me where you want to go and I will plan it properly. The
+                places that keep coming up get written first.
+              </p>
+              <Link
+                to="/suggest"
+                className="mt-6 inline-flex items-center rounded-full bg-primary px-8 py-3.5 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-transform hover:scale-105 active:scale-95"
+              >
+                Suggest a destination
+              </Link>
+            </div>
+          </div>
+        )}
       </section>
     </div>
   );
