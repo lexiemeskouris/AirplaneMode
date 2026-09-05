@@ -290,7 +290,8 @@ export function SpinWheel({
 
 /**
  * Opens the wheel on a visitor's first arrival and remembers that it did.
- * Returns a way to open it again from a button on the page.
+ * There is deliberately no second way in: it greets you when the site opens
+ * and then leaves you alone.
  */
 export function useSpinWheel() {
   const [open, setOpen] = useState(false);
@@ -318,5 +319,5 @@ export function useSpinWheel() {
     }
   }, []);
 
-  return { open, close, reopen: () => setOpen(true) };
+  return { open, close };
 }

@@ -176,23 +176,6 @@ function Index() {
             )}
             <span>More on the way</span>
           </div>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <button
-              type="button"
-              onClick={wheel.reopen}
-              className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-transform hover:scale-105 active:scale-95"
-            >
-              Spin the wheel
-            </button>
-            {SUGGESTIONS_ENABLED && (
-              <Link
-                to="/suggest"
-                className="inline-flex items-center rounded-full border border-border px-6 py-3 text-sm font-bold text-foreground transition-colors hover:bg-secondary"
-              >
-                Suggest a destination
-              </Link>
-            )}
-          </div>
         </div>
       </section>
 
