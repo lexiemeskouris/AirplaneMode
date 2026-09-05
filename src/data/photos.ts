@@ -49,6 +49,18 @@ const CAPTIONS: Record<string, string> = {
   "japan/13-w.jpg": "Go-karting through Shibuya, 19:30 start.",
   "japan/14.jpg": "Baseball at the Tokyo Dome.",
   "japan/15.jpg": "Carbonara udon, under all that foam.",
+
+  // Peru.
+  "peru/01.jpg": "Cusco, from the hills above the centre.",
+  "peru/02.jpg": "Udon, maki and karaage, a long way from Japan.",
+  "peru/03.jpg": "Feeding an alpaca at a weaving demonstration.",
+  "peru/04.jpg": "Horses waiting on the Rainbow Mountain trail, for anyone who has had enough.",
+  "peru/05.jpg": "The trailhead at Chachabamba, where the short Inca Trail starts.",
+  "peru/06-w.jpg": "Machu Picchu, with Huayna Picchu behind.",
+  "peru/07-w.jpg": "The top of Rainbow Mountain, and an alpaca in sunglasses.",
+  "peru/08-w.jpg": "Somewhere on the Inca Trail.",
+  "peru/09-w.jpg": "A sit-down on the trail steps.",
+  "peru/10-w.jpg": "Machu Picchu, and one of the alpacas that keeps the terraces down.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
