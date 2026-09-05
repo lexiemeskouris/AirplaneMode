@@ -229,7 +229,7 @@ export const itineraries: Itinerary[] = [
       },
       {
         day: "Day Two",
-        title: "Tortilla, Monte Igueldo, and Zurriola",
+        title: "Tortilla, Monte Igueldo, and a Long Lunch",
         activities: [
           {
             time: "08:00",
@@ -252,17 +252,22 @@ export const itineraries: Itinerary[] = [
             description: "Lunch at Ganbara, Anthony Bourdain's favourite spot.",
             places: [{ name: "Ganbara" }],
           },
-          { description: "Beach time at Zurriola.", places: [{ name: "Zurriola" }] },
-          { description: "Shower and change." },
           {
-            time: "20:00",
-            description: "Pintxos hopping, round two.",
+            description: "Pintxos hopping, round two, carrying straight on from lunch.",
             places: [
               { name: "Bar Sport" },
               { name: "Lanperna" },
               { name: "La Viña", note: "For the Basque cheesecake." },
               { name: "Gandarias" },
             ],
+          },
+          { description: "Beach time at Zurriola.", places: [{ name: "Zurriola" }] },
+          { description: "Shower and change." },
+          {
+            time: "20:00",
+            description:
+              "Dinner at Bar Néstor. There is a queue, so get there before you are hungry.",
+            places: [{ name: "Bar Néstor" }],
           },
         ],
       },

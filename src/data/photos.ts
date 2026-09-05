@@ -23,7 +23,7 @@ const CAPTIONS: Record<string, string> = {
   // San Sebastian. These describe what is in the frame and are waiting to be
   // replaced with what Lexie actually remembers about each one.
   "san-sebastian/01.jpg": "Tortilla and a coffee, standing at the bar.",
-  "san-sebastian/02.jpg": "Outside Bar Nestor, in the queue.",
+  "san-sebastian/02.jpg": "Outside Bar Néstor, in the queue.",
   "san-sebastian/03.jpg": "Outside Ganbara.",
   "san-sebastian/04.jpg": "Tomato salad, one pintxo and two glasses of white.",
   "san-sebastian/05.jpg": "Golden hour on the waterfront.",
