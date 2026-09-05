@@ -19,7 +19,17 @@ const files = import.meta.glob("../assets/photos/*/*.{jpg,jpeg,JPG,png}", {
  * What was happening in the shot, keyed by "<folder>/<filename>". A photo with
  * nothing here still shows; it just runs without a line under it.
  */
-const CAPTIONS: Record<string, string> = {};
+const CAPTIONS: Record<string, string> = {
+  // San Sebastian. These describe what is in the frame and are waiting to be
+  // replaced with what Lexie actually remembers about each one.
+  "san-sebastian/01.jpg": "Tortilla and a coffee, standing at the bar.",
+  "san-sebastian/02.jpg": "Outside Bar Nestor, in the queue.",
+  "san-sebastian/03.jpg": "Outside Ganbara.",
+  "san-sebastian/04.jpg": "Tomato salad, one pintxo and two glasses of white.",
+  "san-sebastian/05.jpg": "Golden hour on the waterfront.",
+  "san-sebastian/06.jpg": "Beef cheek and potato puree.",
+  "san-sebastian/07.jpg": "The Buen Pastor cathedral.",
+};
 
 export type Photo = { src: string; alt: string; caption?: string };
 

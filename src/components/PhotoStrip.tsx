@@ -1,8 +1,9 @@
 import type { Photo } from "@/data/photos";
 
 /**
- * The camera roll for a page. CSS columns rather than a grid, so portrait and
- * landscape shots sit together without being cropped square or leaving gaps.
+ * The camera roll for a page. A grid rather than CSS columns: columns read top
+ * to bottom, which quietly reorders the shots, and these are in the order they
+ * happened. Uniform 3:4 tiles, which is what a phone shoots anyway.
  */
 export function PhotoStrip({
   photos,
@@ -27,17 +28,21 @@ export function PhotoStrip({
       >
         {title}
       </h2>
-      <div className={`gap-4 sm:columns-2 ${compact ? "mt-4" : "mt-6 lg:columns-3"}`}>
+      <div
+        className={`grid grid-cols-2 gap-4 ${
+          compact ? "mt-4 sm:grid-cols-3" : "mt-6 sm:grid-cols-3 lg:grid-cols-4"
+        }`}
+      >
         {photos.map((photo) => (
           <figure
             key={photo.src}
-            className="mb-4 break-inside-avoid overflow-hidden rounded-2xl border border-border bg-card"
+            className="flex flex-col overflow-hidden rounded-2xl border border-border bg-card"
           >
             <img
               src={photo.src}
               alt={photo.alt}
               loading="lazy"
-              className="block w-full"
+              className="aspect-[3/4] w-full object-cover"
             />
             {photo.caption && (
               <figcaption className="px-4 py-3 text-sm leading-snug text-muted-foreground">
