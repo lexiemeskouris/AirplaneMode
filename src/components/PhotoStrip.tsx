@@ -36,13 +36,17 @@ export function PhotoStrip({
         {photos.map((photo) => (
           <figure
             key={photo.src}
-            className="flex flex-col overflow-hidden rounded-2xl border border-border bg-card"
+            className={`flex flex-col overflow-hidden rounded-2xl border border-border bg-card ${
+              photo.wide ? "col-span-2" : ""
+            }`}
           >
             <img
               src={photo.src}
               alt={photo.alt}
               loading="lazy"
-              className="aspect-[3/4] w-full object-cover"
+              className={`w-full object-cover ${
+                photo.wide ? "aspect-[3/2]" : "aspect-[3/4]"
+              }`}
             />
             {photo.caption && (
               <figcaption className="px-4 py-3 text-sm leading-snug text-muted-foreground">

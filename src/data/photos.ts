@@ -8,7 +8,9 @@
  *
  * Files are picked up automatically, so adding a photo is a file copy plus a
  * caption below. Name them 01.jpg, 02.jpg and so on: they show in filename
- * order, which is the only ordering the folder can carry.
+ * order, which is the only ordering the folder can carry. Suffix a landscape
+ * shot with -w (11-w.jpg) and it takes a double-width tile instead of being
+ * cropped to a portrait one.
  */
 const files = import.meta.glob("../assets/photos/*/*.{jpg,jpeg,JPG,png}", {
   eager: true,
@@ -29,9 +31,27 @@ const CAPTIONS: Record<string, string> = {
   "san-sebastian/05.jpg": "Golden hour on the waterfront.",
   "san-sebastian/06.jpg": "Beef cheek and potato puree.",
   "san-sebastian/07.jpg": "The Buen Pastor cathedral.",
+
+  // Japan. Where the shot clearly matches a stop in the itinerary it is named;
+  // the rest describe the frame until Lexie says what was going on.
+  "japan/01.jpg": "Strawberry daifuku, one red bean and one custard.",
+  "japan/02.jpg": "Wagyu skewers going onto the griddle.",
+  "japan/03.jpg": "Fatty tuna at Maguroya Kurogin.",
+  "japan/04.jpg": "The 3D cat billboard in Shinjuku.",
+  "japan/05.jpg": "A 3D latte at Hat Coffee in Asakusa.",
+  "japan/06.jpg": "A margherita, twelve days deep.",
+  "japan/07.jpg": "Harry's hedgehog cafe, off Nakamise.",
+  "japan/08.jpg": "The truffle shoyu ramen at Ginza Kagari.",
+  "japan/09.jpg": "A deer at Nara Park.",
+  "japan/10.jpg": "Picking patches, Harajuku denim shopping.",
+  "japan/11-w.jpg": "Dotonbori in the middle of the day.",
+  "japan/12.jpg": "A plate of one-bite gyoza.",
+  "japan/13-w.jpg": "Go-karting through Shibuya, 19:30 start.",
+  "japan/14.jpg": "Baseball at the Tokyo Dome.",
+  "japan/15.jpg": "Carbonara udon, under all that foam.",
 };
 
-export type Photo = { src: string; alt: string; caption?: string };
+export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
 
 const byKey = (() => {
   const map = new Map<string, Photo[]>();
@@ -44,6 +64,7 @@ const byKey = (() => {
       src: files[path]!,
       alt: caption ?? "",
       ...(caption ? { caption } : {}),
+      ...(/-w\.[a-z]+$/i.test(file) ? { wide: true } : {}),
     };
     const list = map.get(key);
     if (list) list.push(photo);
