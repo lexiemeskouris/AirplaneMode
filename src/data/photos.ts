@@ -61,6 +61,26 @@ const CAPTIONS: Record<string, string> = {
   "peru/08-w.jpg": "Somewhere on the Inca Trail.",
   "peru/09-w.jpg": "A sit-down on the trail steps.",
   "peru/10-w.jpg": "Machu Picchu, and one of the alpacas that keeps the terraces down.",
+
+  // Morocco.
+  "morocco/01.jpg": "Zellij and carved plaster, in the Marrakech medina.",
+  "morocco/02.jpg": "The cactus garden at Jardin Majorelle.",
+  "morocco/03-w.jpg": "Before lift-off, the balloon over the Atlas.",
+  "morocco/04.jpg": "Mint tea in the Berber tent afterwards.",
+  "morocco/05.jpg": "The hat, and something cold.",
+  "morocco/06.jpg": "A salon with the hills out of the window.",
+  "morocco/07-w.jpg": "Sitting out with the camels in the Sahara.",
+  "morocco/08.jpg": "Riding out into the dunes.",
+  "morocco/09.jpg": "A blue door in the medina.",
+  "morocco/10.jpg": "Wrapped up against the sand.",
+  "morocco/11.jpg": "Looking out over the dunes.",
+  "morocco/12.jpg": "The pool, and nowhere in particular to be.",
+  "morocco/13.jpg": "The riad courtyard, from the floor above.",
+  "morocco/14.jpg": "A courtyard in Fes, through the door.",
+  "morocco/15.jpg": "A tile and plaster workshop, above the city.",
+  "morocco/16.jpg": "A drink on a Chefchaouen rooftop.",
+  "morocco/17.jpg": "The blue steps of Chefchaouen.",
+  "morocco/18.jpg": "Sunset cocktails, looking out over the city.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
