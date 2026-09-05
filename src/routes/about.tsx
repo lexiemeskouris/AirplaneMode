@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { itineraries, BMC_URL } from "@/data/itineraries";
 import lexie from "@/assets/lexie.jpg";
 
-const TIKTOK_URL = "https://www.tiktok.com/@lexiemeskou";
+const TIKTOK_URL = "https://www.tiktok.com/@lexiemesko";
 
 /** Countries visited. Counted by me, not derivable from the pages here. */
 const COUNTRIES = 47;
@@ -38,49 +38,49 @@ function AboutPage() {
       <div className="mt-10 grid gap-10 md:grid-cols-[1.35fr_1fr] md:items-start">
         <div className="order-last space-y-5 text-lg leading-relaxed text-foreground/90 md:order-first">
           <p>
-            I am an American living in London, here to do my MBA at London
-            Business School. I have always loved to travel, and ever since I
-            started working I have made it a point to spend my days off seeing
-            as many of the incredible places this world has to offer as I can.
+            I am an American living in London, here for my MBA at London
+            Business School. I have always loved to travel, and since I started
+            working I have spent pretty much every day off going somewhere.
           </p>
           <p>
-            It started properly in 2020. I studied abroad in London and fell in
-            love with the city, and then two months into the year COVID hit and
-            I was sent home. I never got to finish that, and the itch never went
-            away, so I came back and did my degree abroad instead.
+            It started properly in 2020. I studied abroad in London, fell in
+            love with the city, and two months in COVID hit and I was sent home.
+            I never got to finish it, and the itch never went away, so I came
+            back and did my degree here instead.
           </p>
           <p>
-            I am at {COUNTRIES} countries now, with a few more trips already
-            booked, and the goal is every country in the world. Business school
-            has given me a flexible enough schedule to actually chase it.
+            That puts me at {COUNTRIES} countries, with a few more trips already
+            booked. The goal is every country in the world. Business school has
+            given me a schedule flexible enough to actually go after it.
           </p>
           <p>
-            These are the itineraries I build for myself, posted the way I
-            actually used them: real places, hour by hour, in the order I did
-            them. Take them, use them, change them. Every bar, beach and
-            trailhead is named and linked, so you can pull up the map and decide
-            for yourself what to keep.
+            The itineraries here are the ones I build for myself, posted the way
+            I used them. Real places, hour by hour, in the order I did them.
+            Take them and change them. Every bar, beach and trailhead is named
+            and linked, so you can pull the map up and decide for yourself what
+            is worth keeping.
           </p>
           <p>
-            Everything here is free to read in full. No sign-up, no email gate,
-            no paywall. If one of them helps, buy me a coffee.
+            All of it is free to read in full. There is no paywall, nothing to
+            sign up to, and I will never ask for your email. If one of them
+            helps, buy me a coffee.
           </p>
           <p>
-            Eventually I would like to grow this into a proper travel agency,
-            planning real trips rather than only publishing the plans. For now,
-            these pages are the starting point.
+            Eventually I want this to be a proper travel agency, planning real
+            trips instead of only publishing the plans. This site is where that
+            starts.
           </p>
           <p>
-            Follow the rest of it on TikTok at{" "}
+            The rest of it is on TikTok,{" "}
             <a
               href={TIKTOK_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="font-bold text-accent underline decoration-accent/30 underline-offset-4 transition-colors hover:decoration-accent"
             >
-              @lexiemeskou
+              @lexiemesko
             </a>
-            , and here for the plans behind it.
+            . The plans are here.
           </p>
         </div>
 
