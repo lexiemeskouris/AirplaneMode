@@ -29,6 +29,13 @@ export type GuideSection = {
   activities?: Activity[];
   /** Renders as a warning rather than a recommendation. */
   avoid?: boolean;
+  /** A TikTok of this particular thing, linked under the section's heading. */
+  tiktok?: string;
+  /**
+   * Folder in src/assets/photos to pull this section's own photos from. Only
+   * for a section that is really its own place, like a day trip.
+   */
+  photoKey?: string;
 };
 
 export type Guide = {
@@ -49,6 +56,8 @@ export type Guide = {
   label?: string;
   /** Practical things to know before you go, e.g. cash only. */
   notes?: string[];
+  /** A TikTok for the city as a whole, linked from the top of the page. */
+  tiktok?: string;
   sections: GuideSection[];
 };
 
@@ -967,6 +976,8 @@ export const guides: Guide[] = [
       },
       {
         title: "Day trip: Whitstable",
+        tiktok: "https://www.tiktok.com/@lexiemesko/video/7679983128546479374",
+        photoKey: "whitstable",
         note: "Whitstable is on the Kent coast, a bit over an hour by train from St Pancras. This is a day out of London rather than a day in it, and the evening picks back up in town.",
         activities: [
           { time: "09:30", description: "Leave." },

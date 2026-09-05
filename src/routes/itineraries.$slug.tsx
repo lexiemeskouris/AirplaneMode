@@ -1,4 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { PhotoStrip, TikTokLink } from "@/components/PhotoStrip";
+import { photosFor } from "@/data/photos";
 import { getItinerary, itineraries, BMC_URL } from "@/data/itineraries";
 import { ActivityList, placeHref, placeLinkClass } from "@/lib/places";
 
@@ -84,6 +86,12 @@ function ItineraryDetail() {
         />
       </div>
 
+      {it.tiktok && (
+        <div className="mt-6">
+          <TikTokLink url={it.tiktok} />
+        </div>
+      )}
+
       {/* Highlights. Guarded: an itinerary added without them should lose the
           section, not take the whole page down. */}
       {it.highlights && it.highlights.length > 0 && (
@@ -155,6 +163,8 @@ function ItineraryDetail() {
           </div>
         </section>
       )}
+
+      <PhotoStrip photos={photosFor(it.slug)} />
 
       {it.extras && it.extras.length > 0 && (
         <div className="mt-12 space-y-8">

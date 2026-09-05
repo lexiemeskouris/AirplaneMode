@@ -97,6 +97,8 @@ export type Itinerary = {
    */
   notes?: string[];
   /** Another page on the site that bolts onto this trip. */
+  /** A TikTok of the trip, linked from the top of the page. */
+  tiktok?: string;
   seeAlso?: {
     slug: string;
     kind: "itinerary" | "recommendation";
@@ -149,6 +151,7 @@ export const itineraries: Itinerary[] = [
     gated: false,
     teaser:
       "San Sebastián is small enough to walk and dense enough that you never stop eating. This route climbs both headlands, swims both beaches, and spends every evening standing at a bar with a plate in one hand.",
+    tiktok: "https://www.tiktok.com/@lexiemesko/video/7682108674856242445",
     tags: ["#Pintxos", "#LaConcha", "#BasqueCheesecake"],
     highlights: [
       "Pintxos hopping through the Old Town, two nights running",

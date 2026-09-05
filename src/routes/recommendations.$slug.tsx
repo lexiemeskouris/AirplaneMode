@@ -1,4 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { PhotoStrip, TikTokLink } from "@/components/PhotoStrip";
+import { photosFor } from "@/data/photos";
 import { BMC_URL } from "@/data/itineraries";
 import { ActivityList, placeHref, placeLinkClass } from "@/lib/places";
 import { getGuide, guides } from "@/data/guides";
@@ -78,6 +80,12 @@ function GuidePage() {
         className="mt-8 aspect-[16/10] w-full rounded-3xl bg-secondary object-cover"
       />
 
+      {g.tiktok && (
+        <div className="mt-6">
+          <TikTokLink url={g.tiktok} />
+        </div>
+      )}
+
       <p className="mt-8 rounded-2xl border-l-4 border-accent bg-secondary/70 px-6 py-5 text-lg leading-relaxed text-foreground/90">
         {g.teaser}
       </p>
@@ -127,6 +135,11 @@ function GuidePage() {
                 {section.note}
               </p>
             )}
+            {section.tiktok && (
+              <div className="border-b border-border px-6 py-4">
+                <TikTokLink url={section.tiktok} />
+              </div>
+            )}
             {section.activities && section.activities.length > 0 && (
               <ActivityList
                 activities={section.activities}
@@ -171,9 +184,16 @@ function GuidePage() {
               )}
             </div>
             )}
+            {photosFor(section.photoKey).length > 0 && (
+              <div className="border-t border-border px-6 pb-6 pt-2">
+                <PhotoStrip photos={photosFor(section.photoKey)} compact />
+              </div>
+            )}
           </section>
         ))}
       </div>
+
+      <PhotoStrip photos={photosFor(g.slug)} />
 
       <section className="mt-16 rounded-3xl bg-brand-rust px-8 py-10 text-center">
         <h2 className="font-display text-2xl font-extrabold tracking-tight text-background">
