@@ -81,6 +81,21 @@ const CAPTIONS: Record<string, string> = {
   "morocco/16.jpg": "A drink on a Chefchaouen rooftop.",
   "morocco/17.jpg": "The blue steps of Chefchaouen.",
   "morocco/18.jpg": "Sunset cocktails, looking out over the city.",
+
+  // South Africa.
+  "south-africa/01-w.jpg": "A seal colony, and what looks like every gull in the Cape.",
+  "south-africa/02.jpg": "Looking down on Dias Beach from Cape Point.",
+  "south-africa/03-w.jpg": "Two of the Boulders Beach penguins, and their shadows.",
+  "south-africa/04.jpg": "The painted houses of Bo-Kaap.",
+  "south-africa/05.jpg": "The top of Table Mountain, after Platteklip Gorge.",
+  "south-africa/06.jpg": "Out in the vines, on the wine tour.",
+  "south-africa/07.jpg": "Kitted up for the shark dive.",
+  "south-africa/08.jpg": "Inside the Cango Caves, on the Garden Route.",
+  "south-africa/09-w.jpg": "The lodge on the Garden Route, and the view off the deck.",
+  "south-africa/10-w.jpg": "Going off the platform.",
+  "south-africa/11-w.jpg": "Two elephants, on the 4x4 safari.",
+  "south-africa/12-w.jpg": "The bridge over the gorge, at sunset.",
+  "south-africa/13-w.jpg": "A lion and a lioness, from the truck.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
