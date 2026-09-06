@@ -96,6 +96,14 @@ const CAPTIONS: Record<string, string> = {
   "south-africa/11-w.jpg": "Two elephants, on the 4x4 safari.",
   "south-africa/12-w.jpg": "The bridge over the gorge, at sunset.",
   "south-africa/13-w.jpg": "A lion and a lioness, from the truck.",
+
+  // Egypt.
+  "egypt/01.jpg": "The Sphinx at Giza.",
+  "egypt/02.jpg": "On camels at Giza.",
+  "egypt/03-w.jpg": "In a temple courtyard, somewhere along the cruise.",
+  "egypt/04.jpg": "The pylon at the Temple of Horus in Edfu.",
+  "egypt/05.jpg": "Henna, done at the temple.",
+  "egypt/06.jpg": "Kom Ombo at dusk, with everyone else off the boats.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
