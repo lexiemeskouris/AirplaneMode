@@ -104,6 +104,17 @@ const CAPTIONS: Record<string, string> = {
   "egypt/04.jpg": "The pylon at the Temple of Horus in Edfu.",
   "egypt/05.jpg": "Henna, done at the temple.",
   "egypt/06.jpg": "Kom Ombo at dusk, with everyone else off the boats.",
+
+  // Galapagos.
+  "galapagos/01-w.jpg": "The trail down to the beach, with the surf already in earshot.",
+  "galapagos/02.jpg": "The coast, from up on the lava rocks.",
+  "galapagos/03-w.jpg": "A cove on the walk, and the water you end up in.",
+  "galapagos/04.jpg": "Tuna ceviche.",
+  "galapagos/05.jpg": "Kicker Rock, from the boat.",
+  "galapagos/06-w.jpg": "White sand, and nobody else on it.",
+  "galapagos/07-w.jpg": "Under a tortoise shell, which is bigger than it sounds.",
+  "galapagos/08.jpg": "A giant tortoise, getting on with its day.",
+  "galapagos/09.jpg": "Tacos, soup and croquettes.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
