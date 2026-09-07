@@ -84,7 +84,7 @@ function AllPage() {
       meta: `Itinerary · ${it.duration}`,
       coords: it.coords,
     })),
-    ...guides.map((g) => {
+    ...guides.filter((g) => !g.hideFromIndex).map((g) => {
       const spots = g.sections.reduce(
         (n, s) =>
           n +

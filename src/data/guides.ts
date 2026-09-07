@@ -43,7 +43,8 @@ export type Guide = {
   title: string;
   destination: string;
   country: string;
-  cover: string;
+  /** Optional: a page can go up before a photo for it exists. */
+  cover?: string;
   /** Where the pin goes on the A-Z map. */
   coords: { lat: number; lon: number };
   summary: string;
@@ -58,6 +59,15 @@ export type Guide = {
   notes?: string[];
   /** A TikTok for the city as a whole, linked from the top of the page. */
   tiktok?: string;
+  /**
+   * Slug of the page this sits under. A child is reached from its parent's
+   * tiles rather than from the feed, which keeps one trip to one tile.
+   */
+  parent?: string;
+  /** Keep out of the A-Z as well, for a page that is not a destination. */
+  hideFromIndex?: boolean;
+  /** Render the Sunday roast spreadsheet on this page. */
+  roastTable?: boolean;
   sections: GuideSection[];
 };
 
@@ -536,19 +546,56 @@ export const guides: Guide[] = [
   },
   {
     slug: "united-kingdom",
-    title: "United Kingdom: London and Day Trips",
+    title: "United Kingdom",
     destination: "United Kingdom",
     country: "England",
     coords: { lat: 51.5074, lon: -0.1278 },
     cover: london,
     label: "CITY",
     summary:
-      "Eight routes through London, three day trips out of it, and 28 Sunday roasts ranked worst to best.",
+      "London itself, three day trips out of it, and 29 Sunday roasts scored on every category.",
     teaser:
-      "I live here, so these are the days I have actually walked people through, plus the day trips worth taking out of the city. Take whichever fits the day you have. A few only work on a Sunday, and those say so.",
-    tags: ["#SundayRoast", "#Marylebone", "#DayTrips"],
+      "I live here, so this is the one I keep adding to. London has its own page with eight full days on it. The day trips have their own, and so do the roasts, because that spreadsheet got out of hand.",
+    tags: ["#SundayRoast", "#London", "#DayTrips"],
     notes: [
-      "Each route below is a self-contained day. They are not meant to be done in order, so pick the one that fits the day you have and the part of town you are staying in.",
+      "Pick a page below. Everything on the London page is a self-contained day, so nothing needs doing in order.",
+    ],
+    sections: [
+      {
+        title: "Day trip: Stonehenge and Bath",
+        note: "You can do both in one day, which is what makes this one worth it. Stonehenge on its own is about two hours of your life; Bath fills the rest.",
+        places: [
+          {
+            name: "Stonehenge",
+            near: "Wiltshire, England",
+            note: "I took a day trip here and thought it was cool and mysterious. Go with expectations set: it is a field with stones in it, and it is still worth seeing.",
+          },
+          {
+            name: "Roman Baths",
+            near: "Bath, England",
+            note: "The Baths themselves, and a cute town around them. Something to do if you have the extra time in the day.",
+          },
+          { name: "Bath", near: "England" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "london",
+    parent: "united-kingdom",
+    title: "London",
+    destination: "London",
+    country: "England",
+    coords: { lat: 51.5074, lon: -0.1278 },
+    cover: london,
+    label: "CITY",
+    summary:
+      "Eight full days through London, plus the museums, the sandwiches and where to shop.",
+    teaser:
+      "Eight routes I have actually walked people through, each one a self-contained day. Take whichever fits the day you have and the part of town you are staying in. A few only work on a Sunday, and those say so.",
+    tags: ["#London", "#Marylebone", "#NottingHill"],
+    notes: [
+      "These are not meant to be done in order. Pick the one that matches where you are staying.",
     ],
     sections: [
       {
@@ -840,7 +887,100 @@ export const guides: Guide[] = [
         ],
       },
       {
-        title: "Day trip: Cambridge",
+        title: "Museums",
+        note: "All four are free, which is the quiet superpower of London museums. Pick one, not four.",
+        places: [
+          {
+            name: "British Museum",
+            near: "London, England",
+            note: "The big one, and far too large to do in a single visit. Pick a wing and accept you will not see the rest.",
+          },
+          {
+            name: "Tate Modern",
+            near: "London, England",
+            note: "Modern and contemporary art in the old power station on the South Bank. Go up for the view as well as the art.",
+          },
+          {
+            name: "National Gallery",
+            near: "London, England",
+            note: "Western painting from the 1200s to 1900, right on Trafalgar Square. The easiest one to drop into for an hour.",
+          },
+          {
+            name: "Victoria and Albert Museum",
+            near: "London, England",
+            note: "Art and design: fashion, furniture, ceramics, all of it. The courtyard is a good place to sit when you have had enough.",
+          },
+        ],
+      },
+      {
+        title: "Sandwiches",
+        places: [{ name: "Rogue Sarnies" }, { name: "Dal Fiorentino" }],
+      },
+      {
+        title: "London brands",
+        places: [
+          { name: "Barbour" },
+          { name: "ME+EM" },
+          { name: "Rixo", note: "Dresses." },
+          { name: "With Nothing Underneath", note: "Best button downs." },
+        ],
+      },
+      {
+        title: "Department stores, food and gifts",
+        places: [
+          { name: "Harrods" },
+          { name: "Selfridges" },
+          { name: "Fortnum & Mason", note: "Gift baskets." },
+          { name: "Regent Street", note: "Flagship stores." },
+          { name: "Oxford Street", note: "Flagship stores." },
+        ],
+      },
+      {
+        title: "High streets and shopping districts",
+        places: [
+          { name: "Marylebone High Street", note: "My favourite in central London." },
+          { name: "Sloane Square" },
+          { name: "King's Road" },
+          { name: "Carnaby Street", note: "Classic stores." },
+          { name: "Newburgh Street" },
+          { name: "Bond Street", note: "Luxury." },
+          { name: "Mayfair" },
+        ],
+      },
+      {
+        title: "Vintage",
+        places: [
+          { name: "Portobello Road Market", note: "Notting Hill." },
+          { name: "Brick Lane" },
+          { name: "Shoreditch" },
+        ],
+      },
+      {
+        title: "Flea markets",
+        places: [
+          { name: "Old Spitalfields Market" },
+          { name: "Camden Market" },
+          { name: "Greenwich Market" },
+          { name: "Columbia Road", note: "Sundays. The flower market." },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "cambridge",
+    parent: "united-kingdom",
+    title: "Cambridge",
+    destination: "Cambridge",
+    country: "England",
+    coords: { lat: 52.2053, lon: 0.1218 },
+    label: "DAY TRIP",
+    summary: "An hour from London, and a full day once you are there.",
+    teaser:
+      "Close enough to do on a whim and pretty enough that you will wish you had booked a night. Punting, the colleges, and a long lunch.",
+    tags: ["#DayTrip", "#Punting", "#Colleges"],
+    sections: [
+      {
+        title: "A perfect day in Cambridge",
         note: "About an hour by train from King's Cross, so an easy day out and back. Punting is the one thing worth haggling over: negotiate the price, or take a self-guided boat, which is much cheaper than a chauffeured tour.",
         activities: [
           {
@@ -886,8 +1026,23 @@ export const guides: Guide[] = [
           { description: "Train back to London." },
         ],
       },
+    ],
+  },
+  {
+    slug: "cotswolds",
+    parent: "united-kingdom",
+    title: "The Cotswolds",
+    destination: "Cotswolds",
+    country: "England",
+    coords: { lat: 51.8330, lon: -1.8433 },
+    label: "DAY TRIP",
+    summary: "Honey-coloured villages, and which ones are worth the drive.",
+    teaser:
+      "Doable in a day from London if you start early, better over a weekend. The villages are close together and each one takes about an hour.",
+    tags: ["#DayTrip", "#Villages", "#Countryside"],
+    sections: [
       {
-        title: "Day trip: the Cotswolds",
+        title: "The Cotswolds, village by village",
         note: "A day trip out of London. The train from Paddington to Moreton-in-Marsh takes about an hour and a half, and you taxi between the villages at either end of the walk.",
         activities: [
           {
@@ -957,25 +1112,24 @@ export const guides: Guide[] = [
           { time: "21:00", description: "A pub crawl after, if there is anything on." },
         ],
       },
+    ],
+  },
+  {
+    slug: "whitstable",
+    parent: "united-kingdom",
+    title: "Whitstable",
+    destination: "Whitstable",
+    country: "England",
+    coords: { lat: 51.3610, lon: 1.0257 },
+    label: "DAY TRIP",
+    tiktok: "https://www.tiktok.com/@lexiemesko/video/7679983128546479374",
+    summary: "Oysters on the Kent coast, about ninety minutes out of London.",
+    teaser:
+      "A seaside day trip that is genuinely about the food. Oysters, the harbour, and the beach huts along the shingle.",
+    tags: ["#DayTrip", "#Oysters", "#Seaside"],
+    sections: [
       {
-        title: "Day trip: Stonehenge and Bath",
-        note: "You can do both in one day, which is what makes this one worth it. Stonehenge on its own is about two hours of your life; Bath fills the rest.",
-        places: [
-          {
-            name: "Stonehenge",
-            near: "Wiltshire, England",
-            note: "I took a day trip here and thought it was cool and mysterious. Go with expectations set: it is a field with stones in it, and it is still worth seeing.",
-          },
-          {
-            name: "Roman Baths",
-            near: "Bath, England",
-            note: "The Baths themselves, and a cute town around them. Something to do if you have the extra time in the day.",
-          },
-          { name: "Bath", near: "England" },
-        ],
-      },
-      {
-        title: "Day trip: Whitstable",
+        title: "A day in Whitstable",
         tiktok: "https://www.tiktok.com/@lexiemesko/video/7679983128546479374",
         photoKey: "whitstable",
         note: "Whitstable is on the Kent coast, a bit over an hour by train from St Pancras. This is a day out of London rather than a day in it, and the evening picks back up in town.",
@@ -1019,119 +1173,28 @@ export const guides: Guide[] = [
           },
         ],
       },
-      {
-        title: "Museums",
-        note: "All four are free, which is the quiet superpower of London museums. Pick one, not four.",
-        places: [
-          {
-            name: "British Museum",
-            near: "London, England",
-            note: "The big one, and far too large to do in a single visit. Pick a wing and accept you will not see the rest.",
-          },
-          {
-            name: "Tate Modern",
-            near: "London, England",
-            note: "Modern and contemporary art in the old power station on the South Bank. Go up for the view as well as the art.",
-          },
-          {
-            name: "National Gallery",
-            near: "London, England",
-            note: "Western painting from the 1200s to 1900, right on Trafalgar Square. The easiest one to drop into for an hour.",
-          },
-          {
-            name: "Victoria and Albert Museum",
-            near: "London, England",
-            note: "Art and design: fashion, furniture, ceramics, all of it. The courtyard is a good place to sit when you have had enough.",
-          },
-        ],
-      },
-      {
-        title: "Sunday roasts, ranked",
-        note: "Scored out of 5 on the meat, greens, potatoes, roast veg, Yorkshire, gravy, sides, pudding, portion and vibe, then weighted. Best first. 28 roasts and counting.",
-        places: [
-          { name: "Mall Tavern", near: "Notting Hill Gate, London", note: "5.00. Epic vibes, live music in the basement, and brisket croquettes. Nothing has beaten it." },
-          { name: "Blacklock", near: "Carnaby, London", note: "4.92. No sticky toffee pudding, but the bread pudding and the white chocolate cheesecake were insane." },
-          { name: "Ladbroke Arms", near: "Kensington, London", note: "4.58. The sweet potato puree was insane." },
-          { name: "The Pig & Butcher", near: "Islington, London", note: "4.50. Incredibly solid from the meat to the sides to the pudding, and the horseradish was amazing. Shocked at how bad the potatoes were." },
-          { name: "The George", near: "Fitzrovia, London", note: "4.42. Meat cooked to perfection. Only lost points because the sticky toffee pudding came with cream rather than ice cream, and the vibes were not life-altering." },
-          { name: "The Devonshire", near: "Soho, London", note: "4.42. Incredibly loud, but impeccable food, unique sides, and free bread to start." },
-          { name: "The Surprise", near: "Chelsea, London", note: "4.42. Amazing vibes and the best beef and chicken, and my favourite Yorkshire ever. Very small protein portion though, and a large veggie one." },
-          { name: "Larrick", near: "Lisson Grove, London", note: "4.30. Very good across the board. Kale, sadly." },
-          { name: "The Cleveland Arms", near: "Paddington, London", note: "4.29. The broccoli and cauliflower soup was bomb, and one of the best cauliflower cheeses. No sticky toffee pudding." },
-          { name: "Walmer Castle", near: "Notting Hill, London", note: "4.20. Tomahawk. I wish I had had more meat." },
-          { name: "The Parakeet", near: "Kentish Town, London", note: "4.15. Beautiful pub, very solid roast." },
-          { name: "Hereford Arms", near: "South Kensington, London", note: "3.90. Large variety of sides, and the roast itself came with cauliflower cheese." },
-          { name: "The Royal Oak", near: "Bethnal Green, London", note: "3.88. Meat cooked to perfection, and the sticky toffee pudding was gluten free, which was a bonus, though very sweet. Very loud." },
-          { name: "Cadogan Arms", near: "Chelsea, London", note: "3.82. Truffle mayo and creamed spinach." },
-          { name: "No. Fifty Cheyne", near: "Chelsea, London", note: "3.61. Famous for the beef wellington, but it was mid. Gorgeous interior and clientele though." },
-          { name: "Prince Alfred", near: "Maida Vale, London", note: "3.60. Meat overdone, gravy a little salty, and the sticky toffee pudding was like a loaf of banana bread. The Yorkshire was mid and they would not give extra gravy to soak it up." },
-          { name: "Camberwell Arms", near: "Camberwell, London", note: "3.59. The meat was perfect, but it is not a traditional roast: no Yorkshire, no gravy, everything family style. The vibe was cold." },
-          { name: "Hollywood Arms", near: "Chelsea, London", note: "3.56. Came together well but nothing stood out. The cauliflower cheese was watery and tasted of no truffle oil, and the meat was thin, overdone and hard to cut." },
-          { name: "The Holland", near: "Notting Hill, London", note: "3.46. Not a traditional roast, and an absolutely killer dessert, though not a sticky toffee pudding." },
-          { name: "Duke of Wellington", near: "Marylebone, London", note: "3.36. Some weird cabbage." },
-          { name: "The Mitre", near: "Notting Hill, London", note: "3.30. The little piece of stuffing on the side was great." },
-          { name: "The Portman", near: "Marylebone, London", note: "3.30. Solid, and the place for an emergency roast nearby, with outside seating. Overall average, and everything needed salt." },
-          { name: "The Cavendish", near: "Marylebone, London", note: "3.29. The cauliflower cheese was tiny but delicious, and the horseradish was incredible." },
-          { name: "The Elgin", near: "Maida Vale, London", note: "3.18. Order the chicken, the beef was bad. Live music lifts the vibe, and without it there is none. Kale instead of cabbage." },
-          { name: "Coachmaker's Arms", near: "Marylebone, London", note: "3.02. They were out of most options and nothing was spectacular." },
-          { name: "The Duke of Clarence", near: "South Kensington, London", note: "3.00. Out of sticky toffee pudding, deafening because of the giant screens with the game on, not enough gravy, and the roasts were not consistent: one came out perfect and one overcooked." },
-          { name: "Bridge House", near: "Little Venice, London", note: "3.00. The knife was so dull I could not cut anything, including the overcooked meat. Vibes nothing special, but they gave about ten potatoes and a lot of veg." },
-          { name: "Crown & Anchor", near: "Eastbourne, England", note: "2.62. Not London, and the bottom of the list. The variety of potatoes was good." },
-        ],
-      },
-      {
-        title: "Sandwiches",
-        places: [{ name: "Rogue Sarnies" }, { name: "Dal Fiorentino" }],
-      },
-      {
-        title: "London brands",
-        places: [
-          { name: "Barbour" },
-          { name: "ME+EM" },
-          { name: "Rixo", note: "Dresses." },
-          { name: "With Nothing Underneath", note: "Best button downs." },
-        ],
-      },
-      {
-        title: "Department stores, food and gifts",
-        places: [
-          { name: "Harrods" },
-          { name: "Selfridges" },
-          { name: "Fortnum & Mason", note: "Gift baskets." },
-          { name: "Regent Street", note: "Flagship stores." },
-          { name: "Oxford Street", note: "Flagship stores." },
-        ],
-      },
-      {
-        title: "High streets and shopping districts",
-        places: [
-          { name: "Marylebone High Street", note: "My favourite in central London." },
-          { name: "Sloane Square" },
-          { name: "King's Road" },
-          { name: "Carnaby Street", note: "Classic stores." },
-          { name: "Newburgh Street" },
-          { name: "Bond Street", note: "Luxury." },
-          { name: "Mayfair" },
-        ],
-      },
-      {
-        title: "Vintage",
-        places: [
-          { name: "Portobello Road Market", note: "Notting Hill." },
-          { name: "Brick Lane" },
-          { name: "Shoreditch" },
-        ],
-      },
-      {
-        title: "Flea markets",
-        places: [
-          { name: "Old Spitalfields Market" },
-          { name: "Camden Market" },
-          { name: "Greenwich Market" },
-          { name: "Columbia Road", note: "Sundays. The flower market." },
-        ],
-      },
     ],
+  },
+  {
+    slug: "sunday-roasts",
+    parent: "united-kingdom",
+    hideFromIndex: true,
+    roastTable: true,
+    title: "Sunday Roasts, Ranked",
+    destination: "Sunday Roasts",
+    country: "England",
+    coords: { lat: 51.5074, lon: -0.1278 },
+    label: "RANKED",
+    summary:
+      "29 roasts, scored across ten categories and weighted. The whole spreadsheet.",
+    teaser:
+      "I have been keeping a spreadsheet. Every roast is scored out of five on ten separate things, weighted, and averaged. Here it is in full, best first, with what I actually thought of each one.",
+    tags: ["#SundayRoast", "#London", "#Spreadsheet"],
+    notes: [
+      "A category marked n/a means the pub did not offer it at all, so it is dropped from that pub's average rather than scored as a zero. Nobody loses points for not having a pudding they never claimed to have.",
+      "The weighting is mine and it is not neutral: the meat is a fifth of the score on its own, and gravy, pudding, portion and vibe are worth a tenth each.",
+    ],
+    sections: [],
   },
   {
     slug: "new-york",

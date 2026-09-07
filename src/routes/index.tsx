@@ -208,7 +208,7 @@ function Index() {
               bmcUrl={it.bmcUrl}
             />
           ))}
-          {guides.map((g) => {
+          {guides.filter((g) => !g.parent).map((g) => {
             const spots = g.sections.reduce(
               (n, s) =>
                 n +

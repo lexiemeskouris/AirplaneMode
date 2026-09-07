@@ -1,4 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { RoastTable } from "@/components/RoastTable";
 import { PhotoStrip, TikTokLink } from "@/components/PhotoStrip";
 import { photosFor } from "@/data/photos";
 import { BMC_URL } from "@/data/itineraries";
@@ -27,10 +28,14 @@ export const Route = createFileRoute("/recommendations/$slug")({
         { name: "description", content: g.summary },
         { property: "og:title", content: `${g.title} - AirplaneMode` },
         { property: "og:description", content: g.summary },
-        { property: "og:image", content: g.cover },
         { property: "og:type", content: "article" },
         { name: "twitter:card", content: "summary_large_image" },
-        { name: "twitter:image", content: g.cover },
+        ...(g.cover
+          ? [
+              { property: "og:image", content: g.cover },
+              { name: "twitter:image", content: g.cover },
+            ]
+          : []),
       ],
     };
   },
@@ -72,13 +77,21 @@ function GuidePage() {
         ))}
       </div>
 
-      <img
-        src={g.cover}
-        alt={g.title}
-        width={1000}
-        height={1000}
-        className="mt-8 aspect-[16/10] w-full rounded-3xl bg-secondary object-cover"
-      />
+      {g.cover ? (
+        <img
+          src={g.cover}
+          alt={g.title}
+          width={1000}
+          height={1000}
+          className="mt-8 aspect-[16/10] w-full rounded-3xl bg-secondary object-cover"
+        />
+      ) : (
+        <div className="mt-8 flex aspect-[16/10] w-full items-center justify-center rounded-3xl bg-brand-indigo px-8">
+          <span className="text-center font-display text-3xl font-extrabold tracking-tight text-background md:text-5xl">
+            {g.destination}
+          </span>
+        </div>
+      )}
 
       {g.tiktok && (
         <div className="mt-6">
@@ -102,6 +115,8 @@ function GuidePage() {
           ))}
         </ul>
       )}
+
+      <ChildTiles parent={g.slug} />
 
       {/* A city page can run to a dozen sections, so jump straight to one. */}
       {g.sections.length > 4 && (
@@ -193,6 +208,12 @@ function GuidePage() {
         ))}
       </div>
 
+      {g.roastTable && (
+        <div className="mt-10">
+          <RoastTable />
+        </div>
+      )}
+
       <PhotoStrip photos={photosFor(g.slug)} />
 
       <section className="mt-16 rounded-3xl bg-brand-rust px-8 py-10 text-center">
@@ -234,5 +255,49 @@ function GuidePage() {
         </section>
       )}
     </article>
+  );
+}
+
+/** The pages that sit under this one, as tiles. */
+function ChildTiles({ parent }: { parent: string }) {
+  const children = guides.filter((g) => g.parent === parent);
+  if (children.length === 0) return null;
+
+  return (
+    <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+      {children.map((child) => (
+        <Link
+          key={child.slug}
+          to="/recommendations/$slug"
+          params={{ slug: child.slug }}
+          className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-shadow hover:shadow-lg"
+        >
+          {child.cover ? (
+            <img
+              src={child.cover}
+              alt={child.title}
+              className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+              loading="lazy"
+            />
+          ) : (
+            <div className="flex aspect-[4/3] w-full items-center justify-center bg-brand-indigo px-3">
+              <span className="text-center font-display text-base font-extrabold leading-tight text-background">
+                {child.destination}
+              </span>
+            </div>
+          )}
+          <div className="flex flex-1 flex-col px-4 py-3">
+            <span className="font-display text-lg font-extrabold leading-tight tracking-tight text-foreground transition-colors group-hover:text-primary">
+              {child.destination}
+            </span>
+            {child.label && (
+              <span className="mt-1 text-[0.65rem] font-extrabold tracking-wide text-muted-foreground">
+                {child.label}
+              </span>
+            )}
+          </div>
+        </Link>
+      ))}
+    </div>
   );
 }
