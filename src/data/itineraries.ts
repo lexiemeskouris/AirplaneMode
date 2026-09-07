@@ -80,7 +80,8 @@ export type Itinerary = {
   coords: { lat: number; lon: number };
   season: string;
   summary: string;
-  cover: string;
+  /** Optional: an itinerary can go up before a photo for it exists. */
+  cover?: string;
   gated: boolean;
   /** A short intro shown for both free and gated itineraries. */
   teaser: string;
@@ -6993,6 +6994,329 @@ export const itineraries: Itinerary[] = [
         items: [
           "The budget overnight flight to Fort Lauderdale was delayed five separate times through the night, pushed back to 05:11, and then cancelled outright. The refund came through in full, but the night was gone.",
           "The rebooking that actually worked was an overnight to Houston and a connection on from there. If you are flying home from Lima on a red-eye, be honest with yourself about which carrier you are trusting with it.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "saudi-arabia",
+    title: "Six Days in Saudi Arabia",
+    destination: "Saudi Arabia",
+    country: "Saudi Arabia",
+    coords: { lat: 24.7136, lon: 46.6753 },
+    duration: "6 days",
+    season: "February",
+    summary:
+      "Riyadh and Diriyah, a night in the desert, then AlUla for Hegra, Maraya and the stars.",
+    gated: false,
+    teaser:
+      "Three days in Riyadh and three in AlUla, run as a London Business School trek. Some of it you can copy exactly. One day of it you cannot, and I have said so where it comes up.",
+    tags: ["#Hegra", "#AlUla", "#EmptyQuarter"],
+    notes: [
+      "This ran as a student trek through London Business School, arranged with the Saudi government. That matters for one day in particular: the visit to Shaybah in the Empty Quarter is not something you can book yourself, at any price. Everything else here is open to anyone.",
+      "Tipping is not customary, though nobody minds it. Digital payments are the norm and Apple Pay works essentially everywhere. Plugs are type G, the same as the UK.",
+      "February is the right time to go. Riyadh ran from about 25C down to 12C, AlUla from 22C down to 7C, so bring a jacket for the evenings and the desert.",
+    ],
+    highlights: [
+      "At-Turaif in Diriyah, the UNESCO site where the country started",
+      "A full day at a desert camp: dune bashing, buggies, archery, clay shooting and camels",
+      "Hegra, Saudi Arabia's first UNESCO World Heritage Site",
+      "Dinner at Elephant Rock, and a private stargazing night in AlUla",
+      "Shaybah in the Empty Quarter, which you cannot book yourself",
+    ],
+    days: [
+      {
+        day: "Day One",
+        title: "Diriyah and Riyadh",
+        activities: [
+          { time: "09:00", description: "Breakfast, if you want it." },
+          {
+            time: "10:00",
+            description:
+              "Masmak Fort, then Souq Al Zal. The fort is the one on the story of the country's unification, and the souq behind it has been trading for a very long time.",
+            places: [
+              { name: "Masmak Fort", near: "Riyadh, Saudi Arabia" },
+              { name: "Souq Al Zal", near: "Riyadh, Saudi Arabia" },
+            ],
+          },
+          {
+            time: "15:00",
+            description: "Lunch at Najdi Village.",
+            places: [{ name: "Najdi Village", near: "Riyadh, Saudi Arabia" }],
+          },
+          {
+            time: "17:30",
+            description:
+              "A tour of Diriyah, finishing at At-Turaif, the mud-brick UNESCO quarter where Saudi Arabia begins.",
+            places: [
+              { name: "Diriyah", near: "Riyadh, Saudi Arabia" },
+              { name: "At-Turaif", near: "Riyadh, Saudi Arabia" },
+            ],
+          },
+          {
+            time: "21:30",
+            description: "Dinner on Bujairi Terrace, looking across at At-Turaif lit up.",
+            places: [{ name: "Bujairi Terrace", near: "Riyadh, Saudi Arabia" }],
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "A Full Day in the Desert",
+        activities: [
+          { time: "09:00", description: "Breakfast, if you want it." },
+          {
+            time: "13:30",
+            description:
+              "A formal visit with a former Saudi ambassador to the United Kingdom and the United States. Arranged through the school, so treat this as context rather than something to copy.",
+          },
+          { time: "15:00", description: "Out to the desert camp." },
+          {
+            time: "17:00",
+            description:
+              "Dune bashing on the way in, then the camp itself: buggy rides, archery, clay shooting and camel rides.",
+          },
+          {
+            description:
+              "Stargazing once it is properly dark, and a Saudi dinner at the camp. Back in the city around 23:00.",
+          },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "Shaybah, in the Empty Quarter",
+        activities: [
+          {
+            description:
+              "The one day on this page you cannot arrange yourself. Shaybah is Aramco's oil hub deep in the Empty Quarter, and the visit was set up with the Saudi government through London Business School. There is no public tour, no operator, and no ticket. It was the best day of the trip and I am sorry to say you cannot buy it.",
+          },
+          { time: "06:30", description: "Early breakfast." },
+          { time: "09:00", description: "Transfer to the airport, and fly out at 11:00." },
+          {
+            description:
+              "The Shaybah visitor centre, then the wildlife sanctuary, which has Arabian oryx and sand gazelles living in the dunes.",
+            places: [{ name: "Shaybah", near: "Empty Quarter, Saudi Arabia" }],
+          },
+          {
+            description:
+              "Sunset on the dunes, the heritage village, dinner, then the flight straight on to AlUla.",
+            places: [{ name: "Rub' al Khali", near: "Saudi Arabia" }],
+          },
+        ],
+      },
+      {
+        day: "Day Four",
+        title: "Hegra, and AlUla Old Town",
+        activities: [
+          { time: "09:00", description: "Breakfast at the resort." },
+          {
+            time: "12:00",
+            description:
+              "Hegra, the country's first UNESCO World Heritage Site: Nabataean tombs cut straight into the sandstone, by the same people who built Petra.",
+            places: [{ name: "Hegra", near: "AlUla, Saudi Arabia" }],
+          },
+          { time: "14:00", description: "Lunch locally." },
+          {
+            time: "16:00",
+            description: "AlUla Old Town.",
+            places: [{ name: "AlUla Old Town", near: "AlUla, Saudi Arabia" }],
+          },
+          {
+            time: "19:00",
+            description: "Dinner at Elephant Rock, and no rush to leave.",
+            places: [{ name: "Elephant Rock", near: "AlUla, Saudi Arabia" }],
+          },
+        ],
+      },
+      {
+        day: "Day Five",
+        title: "Maraya, Joud Farm, and the Stars",
+        activities: [
+          {
+            description:
+              "The morning is free, and there are two things worth booking into it: a sunrise hot air balloon over the rock formations, or a guided UTV buggy run into the desert. Both go through experiencealula.com and both need booking separately.",
+            places: [
+              {
+                name: "Experience AlUla",
+                url: "https://www.experiencealula.com/",
+              },
+            ],
+          },
+          { time: "09:00", description: "Breakfast at the resort, then the pool." },
+          {
+            time: "12:30",
+            description:
+              "Maraya, the mirrored concert hall that disappears into the canyon around it. Go for the photographs, stay for how strange it is in person.",
+            places: [{ name: "Maraya", near: "AlUla, Saudi Arabia" }],
+          },
+          {
+            time: "13:00",
+            description: "A tour and lunch at Joud Farm, eaten under the palms.",
+            places: [{ name: "Joud Farm", near: "AlUla, Saudi Arabia" }],
+          },
+          {
+            time: "19:00",
+            description:
+              "Private stargazing with astronomers, and dinner out there. The desert here is about as dark as skies get.",
+          },
+        ],
+      },
+      {
+        day: "Day Six",
+        title: "Back to Riyadh",
+        activities: [
+          { description: "One more breakfast, then the flight from AlUla back to Riyadh." },
+          { description: "Ma'a salama." },
+        ],
+      },
+    ],
+    extras: [
+      {
+        title: "How this trip was put together",
+        note: "Worth being clear about, because a lot of it is repeatable and one day of it is not.",
+        items: [
+          "It ran as a student trek through London Business School: fifty students, seven days, two internal flights, three nights in Riyadh and three in AlUla.",
+          "Accommodation, internal flights, transport, airport transfers and all meals were included. Flights into and out of Saudi Arabia, the visa and insurance were not.",
+          "The Shaybah day in the Empty Quarter was arranged with the Saudi government through the school. It cannot be booked by the public, through any operator, so plan the rest of your trip without it.",
+          "Everything else on this page is open to anyone: Diriyah, the desert camp, Hegra, Maraya, Joud Farm and the stargazing.",
+        ],
+      },
+      {
+        title: "Getting around",
+        items: [
+          "Uber, Careem and the Riyadh metro all work in the city, and are the easiest way to move around on your own time.",
+          "AlUla is spread out and you will want transport arranged rather than assuming you can hail something.",
+        ],
+      },
+      {
+        title: "Riyadh, if you have extra days",
+        note: "Some of these need tickets in advance, and WeBook.com is where most of them are sold.",
+        places: [
+          {
+            name: "Edge of the World",
+            near: "Riyadh, Saudi Arabia",
+            note: "A cliff escarpment out of the city with panoramic desert views and a walk along the top. The one to do if you only do one.",
+          },
+          {
+            name: "Sky Bridge, Kingdom Centre",
+            near: "Riyadh, Saudi Arabia",
+            note: "The observation deck slung between the towers, with 360 degree views over the skyline.",
+          },
+          {
+            name: "Diplomatic Quarter",
+            near: "Riyadh, Saudi Arabia",
+            note: "Embassies, green space, walking trails and some genuinely good architecture. Quiet, which is the point.",
+          },
+          {
+            name: "VIA Riyadh",
+            near: "Riyadh, Saudi Arabia",
+            note: "High-end lifestyle destination: boutiques, fine dining, cinemas.",
+          },
+          {
+            name: "KAFD",
+            near: "Riyadh, Saudi Arabia",
+            note: "The financial district, and worth seeing for the architecture alone.",
+          },
+          {
+            name: "Boulevard World",
+            near: "Riyadh, Saudi Arabia",
+            note: "A themed entertainment zone built around different countries, with the food and performances to match.",
+          },
+          {
+            name: "Boulevard Riyadh City",
+            near: "Riyadh, Saudi Arabia",
+            note: "The entertainment hub: restaurants, cafes, live shows and events.",
+          },
+          {
+            name: "Sports Boulevard",
+            near: "Riyadh, Saudi Arabia",
+            note: "Cycling and walking trails running across the city, for a morning that is not indoors.",
+          },
+          {
+            name: "Six Flags Qiddiya",
+            near: "Riyadh, Saudi Arabia",
+            note: "The theme park, with several record-breaking coasters.",
+          },
+          {
+            name: "The Groves",
+            near: "Riyadh, Saudi Arabia",
+            note: "Outdoor dining and greenery, on the upscale end.",
+          },
+        ],
+      },
+      {
+        title: "Riyadh restaurants, sit down",
+        note: "From the trek's own list. Grouped the way it grouped them.",
+        places: [
+          { name: "Aseeb", near: "Riyadh, Saudi Arabia", note: "Modern Saudi, traditional flavours done contemporarily." },
+          { name: "Takya", near: "Riyadh, Saudi Arabia", note: "Upscale Saudi, built on regional heritage recipes." },
+          { name: "Taleed", near: "Riyadh, Saudi Arabia", note: "Fine dining Saudi, modern takes on local cooking." },
+          { name: "Villa Mamas", near: "Riyadh, Saudi Arabia", note: "Middle Eastern, Bahraini home-style cooking done properly." },
+          { name: "Signor Sassi", near: "Riyadh, Saudi Arabia", note: "Luxury Italian, classic dishes, elegant room." },
+          { name: "Agio", near: "Riyadh, Saudi Arabia", note: "Italian, traditional cooking in a modern setting." },
+          { name: "MAMO Michelangelo", near: "Riyadh, Saudi Arabia", note: "High-end Italian, Mediterranean end of it." },
+          { name: "Myazu", near: "Riyadh, Saudi Arabia", note: "Premium Japanese, traditional with contemporary presentation." },
+          { name: "Kuruu", near: "Riyadh, Saudi Arabia", note: "Modern Japanese, refined and minimalist." },
+          { name: "Kayzo", near: "Riyadh, Saudi Arabia", note: "Contemporary Japanese, creative with the classics." },
+          { name: "Sasani", near: "Riyadh, Saudi Arabia", note: "Persian, traditional Iranian cooking, rich and aromatic." },
+          { name: "Koojah", near: "Riyadh, Saudi Arabia", note: "Modern Persian, built on regional Iranian recipes." },
+          { name: "LPM", near: "Riyadh, Saudi Arabia", note: "French Riviera, elegant Mediterranean." },
+          { name: "Le Maschou", near: "Riyadh, Saudi Arabia", note: "A classic French bistro, rich and cosy." },
+        ],
+      },
+      {
+        title: "Riyadh, faster and cheaper",
+        places: [
+          { name: "PrimeCut", near: "Riyadh, Saudi Arabia", note: "Premium Angus beef burgers." },
+          { name: "Section-B", near: "Riyadh, Saudi Arabia", note: "Homegrown burgers, made to order, never frozen." },
+          { name: "Marble", near: "Riyadh, Saudi Arabia", note: "Chef-driven farm-to-table grill, steak over open fire." },
+          { name: "Nora Smashed Burgers", near: "Riyadh, Saudi Arabia", note: "No frills takeaway, crispy-edged Wagyu-blend patties." },
+          { name: "Jon & Vinny's", near: "Riyadh, Saudi Arabia", note: "Wood-fired pizza and fresh pasta." },
+          { name: "911 Pizza", near: "Riyadh, Saudi Arabia", note: "Thin crust, Chicago style, toppings edge to edge." },
+          { name: "Mama Noura", near: "Riyadh, Saudi Arabia", note: "Chicken shawarma, broasted chicken and fresh juice. The everyday one." },
+          { name: "Shiro", near: "Riyadh, Saudi Arabia", note: "Sushi, sashimi, noodles and tempura, in a quiet room." },
+          { name: "The Boiling Crab", near: "Riyadh, Saudi Arabia", note: "Seafood boiled in a bag with a lot of sauce." },
+          { name: "Twina", near: "Riyadh, Saudi Arabia", note: "Daily fresh seafood: calamari, shrimp, salted hamour." },
+          { name: "Pao", near: "Riyadh, Saudi Arabia", note: "Acai bowls, juices and sandwiches, for a lighter hour." },
+        ],
+      },
+      {
+        title: "Riyadh coffee and bakeries",
+        note: "Names from the trek's own list, no ranking implied.",
+        items: [
+          "Coffee: Camel Step, Wacafe, Peaks, Good Neighbor, Veni, Green Bottle, Archi, Infuse, Pick, IOTA.",
+          "Bakeries and brunch: Flour & Firewood, Mama's Bagel, Lunchroom, Easy Bakery, Croi Bakehouse, Brunch and Cake, Urth Caffe, Secret Pot Bakery, Lazy Cat, Beit Al Mounah.",
+        ],
+      },
+      {
+        title: "Riyadh dining hubs",
+        note: "Useful when you cannot decide, or when the group cannot.",
+        places: [
+          {
+            name: "Al Mamlaka Social Dining",
+            near: "Riyadh, Saudi Arabia",
+            note: "A food hall in the Kingdom Centre with 21 kitchens across 13 cuisines.",
+          },
+          {
+            name: "Laysen Valley",
+            near: "Riyadh, Saudi Arabia",
+            note: "Mixed-use development with high-end international restaurants and cafes.",
+          },
+          {
+            name: "The Zone",
+            near: "Riyadh, Saudi Arabia",
+            note: "Outdoor shopping and dining on Al Takhassousi Street, half indoors and half out.",
+          },
+          { name: "U Walk", near: "Riyadh, Saudi Arabia" },
+          { name: "Roshn Front", near: "Riyadh, Saudi Arabia" },
+        ],
+      },
+      {
+        title: "A few words that go a long way",
+        items: [
+          "Ahlan, hello. Al salam alykum, peace be upon you, and w alykum al salam back.",
+          "Shukran, thank you. Law samaht or law samahti, please. Ma'a salama, goodbye.",
+          "Yalla, let's go, which you will hear constantly and start saying yourself.",
         ],
       },
     ],

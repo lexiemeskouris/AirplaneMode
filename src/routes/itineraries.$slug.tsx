@@ -30,9 +30,14 @@ export const Route = createFileRoute("/itineraries/$slug")({
         { property: "og:title", content: `${it.title} - AirplaneMode` },
         { property: "og:description", content: it.summary },
         { property: "og:type", content: "article" },
-        { property: "og:image", content: it.cover },
         { name: "twitter:card", content: "summary_large_image" },
-        { name: "twitter:image", content: it.cover },
+        // Only claim a share image when there is one to share.
+        ...(it.cover
+          ? [
+              { property: "og:image", content: it.cover },
+              { name: "twitter:image", content: it.cover },
+            ]
+          : []),
       ],
     };
   },
@@ -74,16 +79,24 @@ function ItineraryDetail() {
         </div>
       </header>
 
-      {/* Cover */}
+      {/* Cover, when there is one. An itinerary can go up before its photos do. */}
       <div className="mt-8 overflow-hidden rounded-[2rem] shadow-2xl">
-        <img
-          src={it.cover}
-          alt={it.title}
-          width={1200}
-          height={750}
-          className="aspect-[16/10] w-full object-cover"
-          loading="lazy"
-        />
+        {it.cover ? (
+          <img
+            src={it.cover}
+            alt={it.title}
+            width={1200}
+            height={750}
+            className="aspect-[16/10] w-full object-cover"
+            loading="lazy"
+          />
+        ) : (
+          <div className="flex aspect-[16/10] w-full items-center justify-center bg-brand-indigo px-8">
+            <span className="text-center font-display text-3xl font-extrabold tracking-tight text-background md:text-5xl">
+              {it.destination}
+            </span>
+          </div>
+        )}
       </div>
 
       {it.tiktok && (

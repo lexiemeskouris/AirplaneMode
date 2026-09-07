@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
 type TileProps = {
   kind: "itinerary" | "recommendation";
   slug: string;
-  cover: string;
+  cover?: string | undefined;
   title: string;
   summary: string;
   tags: string[];
@@ -58,6 +58,14 @@ function Tile(props: TileProps) {
     <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-shadow duration-300 hover:shadow-xl">
       <div className="relative overflow-hidden">
         <Link {...linkProps} className="block">
+          {!cover ? (
+            // No photo yet: a brand panel rather than a broken tile.
+            <div className="flex aspect-square w-full items-center justify-center bg-brand-indigo px-4">
+              <span className="text-center font-display text-xl font-extrabold leading-tight tracking-tight text-background">
+                {title}
+              </span>
+            </div>
+          ) : (
           <img
             src={cover}
             alt={title}
@@ -68,6 +76,7 @@ function Tile(props: TileProps) {
               gated ? "grayscale group-hover:grayscale-0" : ""
             }`}
           />
+          )}
         </Link>
 
         <div className="pointer-events-none absolute inset-x-3 top-3 z-10 flex flex-wrap gap-1.5">
