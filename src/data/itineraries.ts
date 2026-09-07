@@ -41,6 +41,7 @@ import stockholm from "@/assets/stockholm.jpg";
 import morocco from "@/assets/morocco.jpg";
 import cardiff from "@/assets/cardiff.jpg";
 import peru from "@/assets/peru.jpg";
+import saudiArabia from "@/assets/saudi-arabia.jpg";
 
 /** A named venue, with its map link if we have a real one. */
 export type Place = {
@@ -7008,6 +7009,7 @@ export const itineraries: Itinerary[] = [
     season: "February",
     summary:
       "Riyadh and Diriyah, a night in the desert, then AlUla for Hegra, Maraya and the stars.",
+    cover: saudiArabia,
     gated: false,
     teaser:
       "Three days in Riyadh and three in AlUla, run as a London Business School trek. Some of it you can copy exactly. One day of it you cannot, and I have said so where it comes up.",
