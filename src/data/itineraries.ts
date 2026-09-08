@@ -2792,6 +2792,8 @@ export const itineraries: Itinerary[] = [
               { name: "Blanche + Mimi", near: "Portland, Maine" },
               { name: "Holy Donut", near: "Portland, Maine" },
               { name: "Tandem Bakery", near: "Portland, Maine" },
+              { name: "Local Press", near: "Portland, Maine" },
+              { name: "Indy's", near: "Portland, Maine" },
               { name: "Duckfat", near: "Portland, Maine" },
             ],
           },
@@ -2804,6 +2806,11 @@ export const itineraries: Itinerary[] = [
             ],
           },
           {
+            description:
+              "Base yourself in Trenton rather than in Bar Harbor. It is on the mainland just before the bridge onto Mount Desert Island, so everything in the park is a short drive and you are not paying Bar Harbor prices to sleep.",
+            places: [{ name: "Trenton", near: "Maine" }],
+          },
+          {
             description: "Dinner at Peekytoe Provisions in Bar Harbor.",
             places: [{ name: "Peekytoe Provisions", near: "Bar Harbor, Maine" }],
           },
@@ -2813,6 +2820,7 @@ export const itineraries: Itinerary[] = [
         day: "Day Three",
         title: "Jordan Pond and the Bubbles",
         activities: [
+          { time: "09:00", description: "Wake up. A late one, by the standards of this trip." },
           {
             time: "10:00",
             description: "Brunch at Jordan Pond House.",
@@ -2850,6 +2858,11 @@ export const itineraries: Itinerary[] = [
         title: "Sunrise on Cadillac, Then Everything Else",
         activities: [
           { time: "03:00", description: "Wake up." },
+          {
+            time: "03:20",
+            description:
+              "Leave for the mountain. The drive up takes most of the hour, which is why the alarm is that early.",
+          },
           {
             time: "04:15",
             description: "Sunrise at Cadillac Mountain.",
