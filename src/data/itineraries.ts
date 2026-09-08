@@ -968,7 +968,10 @@ export const itineraries: Itinerary[] = [
           { name: "Monell's", note: "Sit-down southern style brunch." },
           { name: "Big Al's Deli", note: "Hidden gem in Germantown." },
           { name: "Sky Blue Cafe", note: "East Nashville." },
-          { name: "Adele's", note: "Nicer brunch, all you can eat buffet." },
+          {
+            name: "Adele's",
+            note: "The nicer brunch. The all-you-can-eat buffet runs on Sundays only, so time it for a Sunday if you want that. It is also a genuinely good dinner restaurant the rest of the week, which most brunch places are not.",
+          },
           { name: "H&S Bagels" },
           { name: "Proper Bagel" },
           { name: "Marsh House", note: "In the Gulch." },
@@ -1182,7 +1185,8 @@ export const itineraries: Itinerary[] = [
         activities: [
           {
             time: "11:45",
-            description: "Adele's.",
+            description:
+              "Brunch at Adele's. Worth knowing before you book: the all-you-can-eat buffet is a Sunday-only thing, and any other day you are ordering off the menu instead. Still the nicest brunch on this list either way, and it doubles as a proper dinner restaurant if you would rather go in the evening.",
             places: [{ name: "Adele's" }],
           },
           {
