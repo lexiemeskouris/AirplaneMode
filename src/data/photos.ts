@@ -115,6 +115,13 @@ const CAPTIONS: Record<string, string> = {
   "galapagos/07-w.jpg": "Under a tortoise shell, which is bigger than it sounds.",
   "galapagos/08.jpg": "A giant tortoise, getting on with its day.",
   "galapagos/09.jpg": "Tacos, soup and croquettes.",
+
+  // Thailand.
+  "thailand/01.jpg": "Longtails pulled up in the shallows, on the Phi Phi boat day.",
+  "thailand/02-w.jpg": "Masks on, in the water under the Phi Phi cliffs.",
+  "thailand/03.jpg": "A macaque on the beach, posing better than either of us.",
+  "thailand/04.jpg": "Matching hearts, at the village on the Chiang Rai day.",
+  "thailand/05-w.jpg": "Between two elephants at Patara, on caregiver day.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
