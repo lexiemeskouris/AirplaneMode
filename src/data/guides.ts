@@ -1492,6 +1492,7 @@ export const guides: Guide[] = [
         items: [
           "Walk the whole of Manhattan, top to bottom.",
           "A Korean scalp spa.",
+          "A Red Hook day, which is worth giving a whole one to.",
         ],
       },
       {
@@ -1536,12 +1537,14 @@ export const guides: Guide[] = [
         ],
       },
       {
-        title: "Eat",
+        title: "Party restaurants, where the food is fine but the party never stops",
+        note: "You are not going to any of these for the cooking. You are going because the music is loud, the room is up on its feet, and dinner turns into a night out without anyone deciding that it should.",
         places: [
+          { name: "Le Baratin", near: "New York, NY" },
+          { name: "HaSalon", near: "New York, NY" },
           { name: "Puglia", near: "New York, NY" },
           { name: "Patrizia's", near: "New York, NY" },
         ],
-        items: ["A Red Hook day, which is worth giving a whole one to."],
       },
       {
         title: "Classes and making things",
