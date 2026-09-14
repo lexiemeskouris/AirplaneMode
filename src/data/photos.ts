@@ -122,6 +122,18 @@ const CAPTIONS: Record<string, string> = {
   "thailand/03.jpg": "A macaque on the beach, posing better than either of us.",
   "thailand/04.jpg": "Matching hearts, at the village on the Chiang Rai day.",
   "thailand/05-w.jpg": "Between two elephants at Patara, on caregiver day.",
+
+  // Kilimanjaro.
+  "kilimanjaro/01-w.jpg": "The group and some of the crew, before the off in Moshi.",
+  "kilimanjaro/02-w.jpg": "Shira Camp, day two, still with the legs to jump.",
+  "kilimanjaro/03-w.jpg": "Single file, with Mawenzi in the cloud behind.",
+  "kilimanjaro/04.jpg": "Breakfast in the mess tent, almost always the highlight.",
+  "kilimanjaro/05-w.jpg": "Camp pitched above the cloud line.",
+  "kilimanjaro/06.jpg": "Up before the sun, with the tents still frozen.",
+  "kilimanjaro/07.jpg": "Sunrise on the ridge, on a summit day that never got above 0F.",
+  "kilimanjaro/08.jpg": "A hug near the top, which was most of what got anyone there.",
+  "kilimanjaro/09-w.jpg": "The mountain throwing its own shadow across the cloud, and one of the last glaciers.",
+  "kilimanjaro/10.jpg": "Uhuru Peak, 5,895m, and the sign the whole thing is for.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
