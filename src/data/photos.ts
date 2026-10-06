@@ -488,6 +488,11 @@ const CAPTIONS: Record<string, string> = {
   "charleston/01.jpg": "On the porch above the dunes, before going out.",
   "charleston/02.jpg": "Two scoops in a charcoal cone.",
   "charleston/03-w.jpg": "On the party bus, tiara on.",
+
+  // Berkshires.
+  "berkshires/01.jpg": "On a blue velvet sofa in the inn's sitting room.",
+  "berkshires/02.jpg": "Frankie says: don't be upsetti, eat some spaghetti.",
+  "berkshires/03-w.jpg": "A cider and wine flight, with the cans lined up behind.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
