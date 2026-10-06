@@ -206,6 +206,17 @@ const CAPTIONS: Record<string, string> = {
   "singapore/04-w.jpg": "All four of us under the waterfall in the Cloud Forest.",
   "singapore/05.jpg": "A stream through the ferns, inside the Cloud Forest.",
   "singapore/06-w.jpg": "Marina Bay Sands and the Supertrees, through the Cloud Forest glass.",
+
+  // Saudi Arabia.
+  "saudi-arabia/01.jpg": "Sunset on the dunes, barefoot and turning round for the photo.",
+  "saudi-arabia/02-w.jpg": "On top of a dune, with nothing else for miles.",
+  "saudi-arabia/03.jpg": "Footprints in red sand, everyone in white trousers for some reason.",
+  "saudi-arabia/04.jpg": "Archery at the desert camp, after dark.",
+  "saudi-arabia/05.jpg": "A white falcon, perched on the glove.",
+  "saudi-arabia/06.jpg": "Qasr al-Farid at Hegra, the lone tomb cut from one rock.",
+  "saudi-arabia/07.jpg": "In a tomb doorway at Hegra, under the eagle the Nabataeans carved there.",
+  "saudi-arabia/08.jpg": "Sandstone and a mackerel sky, around Hegra.",
+  "saudi-arabia/09.jpg": "The pool at the resort, under the cliffs.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
