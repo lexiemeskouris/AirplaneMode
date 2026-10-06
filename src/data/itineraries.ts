@@ -3345,15 +3345,15 @@ export const itineraries: Itinerary[] = [
     duration: "3 days",
     season: "Any",
     summary:
-      "A night out in Glasgow, a full day tour, and the castle before the flight home.",
+      "A night out in Glasgow, a day in the Highlands, and the castle before the flight home.",
     cover: edinburgh,
     gated: false,
     teaser:
       "Based in Edinburgh, with the first night spent over in Glasgow. The bars below are almost all student bars, which is the point.",
-    tags: ["#Glasgow", "#EdinburghCastle", "#StudentBars"],
+    tags: ["#Glasgow", "#Glencoe", "#EdinburghCastle", "#StudentBars"],
     highlights: [
       "Dinner in Merchant City, Glasgow",
-      "A full day tour, eight until eight",
+      "A full day in the Highlands: Glencoe and Loch Ness",
       "Edinburgh Castle at eleven",
       "Lunch at I.J. Mellis Cheesemonger",
       "A very long list of student bars",
@@ -3378,9 +3378,21 @@ export const itineraries: Itinerary[] = [
       },
       {
         day: "Day Two",
-        title: "A Full Day Tour",
+        title: "A Full Day in the Highlands",
         activities: [
-          { time: "08:00", description: "Tour, until 20:00." },
+          { time: "08:00", description: "Highlands day tour from Edinburgh, until 20:00." },
+          {
+            description: "Past Loch Tulla on the edge of Rannoch Moor, with snow on the hills.",
+            places: [{ name: "Loch Tulla", near: "Scotland" }],
+          },
+          {
+            description: "Glencoe, and a stop under the Three Sisters.",
+            places: [{ name: "Three Sisters", near: "Glencoe, Scotland" }],
+          },
+          {
+            description: "Fort Augustus, at the bottom of Loch Ness, and the bridge over the River Oich.",
+            places: [{ name: "Fort Augustus", near: "Loch Ness, Scotland" }],
+          },
           { description: "Out afterwards. The Edinburgh bars are listed below." },
         ],
       },

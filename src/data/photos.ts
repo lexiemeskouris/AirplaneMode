@@ -392,7 +392,7 @@ const CAPTIONS: Record<string, string> = {
   "lisbon/09.jpg": "Two of us in a window, framed by blue and white tiles.",
   "lisbon/10-w.jpg": "Azulejos up close.",
 
-  // Edinburgh, though these are from a Highlands trip rather than the city.
+  // Edinburgh. These are from the day-two Highlands tour.
   "edinburgh/01.jpg": "Snow on the hills above Loch Tulla, as the light went.",
   "edinburgh/02.jpg": "Under the Three Sisters in Glencoe.",
   "edinburgh/03.jpg": "On the bridge at Fort Augustus, at the bottom of Loch Ness.",
