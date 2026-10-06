@@ -516,6 +516,7 @@ const CAPTIONS: Record<string, string> = {
   "london/19-w.jpg": "A gig at the Tottenham Hotspur Stadium.",
   "london/20.jpg": "Rugby in the park, on an autumn Saturday.",
   "london/21.jpg": "By the big grass letters at London Business School.",
+  "london/22.jpg": "The Italian Gardens in Kensington Gardens, in full sun.",
 
   // Cambridge.
   "cambridge/01.jpg": "Punting on the Cam, coffee in hand.",
@@ -524,6 +525,13 @@ const CAPTIONS: Record<string, string> = {
 
   // United Kingdom.
   "united-kingdom/01.jpg": "Walking the shingle under the Seven Sisters.",
+
+  // Cardiff.
+  "cardiff/01.jpg": "Castle Arcade, under the glass roof.",
+  "cardiff/02-w.jpg": "The big wheel at Cardiff Bay, under a grey sky.",
+  "cardiff/03-w.jpg": "A round of shots, limes at the ready.",
+  "cardiff/04-w.jpg": "Cardiff Arms Park, with the teams warming up.",
+  "cardiff/05-w.jpg": "Pints at the rail at Cardiff Arms Park.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
