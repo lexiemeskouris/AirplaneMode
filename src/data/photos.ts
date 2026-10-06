@@ -442,6 +442,20 @@ const CAPTIONS: Record<string, string> = {
   "tromso/09.jpg": "Saying hello at the husky kennels.",
   "tromso/10.jpg": "Two of the team, before the run.",
   "tromso/11.jpg": "On the sled, mid-run.",
+
+  // Maine.
+  "maine/01.jpg": "An iced matcha from Matcha Mood, on the brick pavements of Portland.",
+  "maine/02.jpg": "Three lobster rolls, fried clams, fries and Cape Cod chips.",
+  "maine/03.jpg": "Pink granite and pines along the Acadia shore.",
+  "maine/04.jpg": "Popovers and strawberry jam at Jordan Pond House.",
+  "maine/05.jpg": "Up the Beehive Trail, with the forest and the fog below.",
+  "maine/06-w.jpg": "Above Sand Beach, on a grey day.",
+  "maine/07-w.jpg": "Ice cream on the Bar Harbor village green.",
+  "maine/08.jpg": "A whole blueberry pie, in the box.",
+  "maine/09-w.jpg": "The L.L.Bean Bootmobile, in Freeport.",
+  "maine/10-w.jpg": "The rocks at Ogunquit, in the evening.",
+  "maine/11-w.jpg": "Round the cove, as the light went gold.",
+  "maine/12.jpg": "One more lobster roll and fries, before home.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
