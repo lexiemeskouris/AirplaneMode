@@ -278,6 +278,15 @@ const CAPTIONS: Record<string, string> = {
   "switzerland/01.jpg": "Coffee in an old red gondola, number 48.",
   "switzerland/02.jpg": "A bowl of momos, with the chilli on the side.",
   "switzerland/03-w.jpg": "Across the Rhône in Geneva, on a grey day.",
+
+  // Vienna.
+  "vienna/01.jpg": "St Stephen's Cathedral, and its tiled roof.",
+  "vienna/02.jpg": "Three of us under the spire of St Stephen's.",
+  "vienna/03-w.jpg": "In front of the Hofburg, on the walk through the grounds.",
+  "vienna/04.jpg": "Sat in front of a Lichtenstein bedroom.",
+  "vienna/05-w.jpg": "The sausage stop at Leo's Würstelstand.",
+  "vienna/06.jpg": "Strudel and a coffee with ice cream in it, at Café Hawelka.",
+  "vienna/07.jpg": "A kebab for the road, with the whole counter smiling.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
