@@ -532,6 +532,17 @@ const CAPTIONS: Record<string, string> = {
   "cardiff/03-w.jpg": "A round of shots, limes at the ready.",
   "cardiff/04-w.jpg": "Cardiff Arms Park, with the teams warming up.",
   "cardiff/05-w.jpg": "Pints at the rail at Cardiff Arms Park.",
+
+  // Dover, Vermont.
+  "dover/01.jpg": "The road past the house, with Mount Snow behind.",
+  "dover/02.jpg": "Lunch out on the deck, in full sun.",
+  "dover/03.jpg": "Everyone in pink, on the lawn.",
+  "dover/04.jpg": "A conga line along the deck.",
+  "dover/05-w.jpg": "Setting up the cups on the deck.",
+  "dover/06.jpg": "Burgers, corn, and every salad going.",
+  "dover/07.jpg": "A plate of heirloom tomato, kale salad and pasta.",
+  "dover/08-w.jpg": "Dinner on the deck as the sun went behind the hills.",
+  "dover/09.jpg": "A s'more to finish.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
