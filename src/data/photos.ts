@@ -234,6 +234,17 @@ const CAPTIONS: Record<string, string> = {
   "quito/06-w.jpg": "A llama, unimpressed by the selfie.",
   "quito/07.jpg": "A beer with a monk who had already started.",
   "quito/08.jpg": "Crudo in a yellow chilli sauce.",
+
+  // Seoul.
+  "seoul/01.jpg": "The Gangnam Style sculpture, two giant gold fists.",
+  "seoul/02-w.jpg": "Under the shelves at Starfield Library in COEX.",
+  "seoul/03.jpg": "A machine matching foundation shade, 19C1 it decided.",
+  "seoul/04.jpg": "Every angle of the face, measured to the decimal.",
+  "seoul/05.jpg": "The aqua facial, from inside the bubble.",
+  "seoul/06.jpg": "In hanbok at Gyeongbokgung, which gets you in free.",
+  "seoul/07.jpg": "Duck on a chilli cream pasta, and beef on the bone.",
+  "seoul/08.jpg": "Dumplings, kalguksu and cold spicy noodles at Myeongdong Kyoja.",
+  "seoul/09.jpg": "Next to a Stanley cup taller than me.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
