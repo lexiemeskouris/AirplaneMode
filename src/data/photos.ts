@@ -456,6 +456,14 @@ const CAPTIONS: Record<string, string> = {
   "maine/10-w.jpg": "The rocks at Ogunquit, in the evening.",
   "maine/11-w.jpg": "Round the cove, as the light went gold.",
   "maine/12.jpg": "One more lobster roll and fries, before home.",
+
+  // Nashville.
+  "nashville/01-w.jpg": "Jumping on the lawn in front of the library at Vanderbilt.",
+  "nashville/02-w.jpg": "Wings, brisket, ribs and pulled pork at Edley's.",
+  "nashville/03.jpg": "Cowboy hats on, out on Broadway.",
+  "nashville/04.jpg": "Lower Broadway at night, in the middle of the road.",
+  "nashville/05-w.jpg": "White hats and boots, piling out of the party bus.",
+  "nashville/06-w.jpg": "Pontoons tied up together, out on the lake.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
