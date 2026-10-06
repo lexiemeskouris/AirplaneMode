@@ -273,6 +273,11 @@ const CAPTIONS: Record<string, string> = {
   "madeira/04.jpg": "The town hall on Praça do Município, in Funchal.",
   "madeira/05.jpg": "Sunrise on Pico do Arieiro, above the cloud.",
   "madeira/06.jpg": "The Botanical Garden, with Funchal and the sea below.",
+
+  // Switzerland.
+  "switzerland/01.jpg": "Coffee in an old red gondola, number 48.",
+  "switzerland/02.jpg": "A bowl of momos, with the chilli on the side.",
+  "switzerland/03-w.jpg": "Across the Rhône in Geneva, on a grey day.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
