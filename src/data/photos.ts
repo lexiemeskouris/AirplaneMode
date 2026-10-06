@@ -169,6 +169,19 @@ const CAPTIONS: Record<string, string> = {
   "mexico-city/14-w.jpg": "One churro at El Moro, shared the only fair way.",
   "mexico-city/15-w.jpg": "Outside the Palacio de Bellas Artes.",
   "mexico-city/16.jpg": "Last drinks in the red light, with View-Masters on the table.",
+
+  // Istanbul.
+  "istanbul/01-w.jpg": "Dressed and ready on the balcony, the first night.",
+  "istanbul/02.jpg": "On a rooftop over the Golden Horn, with the New Mosque lit up behind.",
+  "istanbul/03.jpg": "A round of shots, which was how the night went on.",
+  "istanbul/04.jpg": "Outside Hagia Sophia.",
+  "istanbul/05.jpg": "Inside Hagia Sophia, from the upper gallery.",
+  "istanbul/06.jpg": "Iznik tiles and stained glass at Topkapi Palace.",
+  "istanbul/07.jpg": "A mixed grill, with bulgur and every sauce.",
+  "istanbul/08-w.jpg": "On the Galata Bridge, with Galata Tower on the hill behind.",
+  "istanbul/09.jpg": "Turkish breakfast, near Galata Tower.",
+  "istanbul/10.jpg": "The coloured houses of Balat.",
+  "istanbul/11.jpg": "A ceramics shop in Balat.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
