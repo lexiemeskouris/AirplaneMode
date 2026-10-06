@@ -464,6 +464,14 @@ const CAPTIONS: Record<string, string> = {
   "nashville/04.jpg": "Lower Broadway at night, in the middle of the road.",
   "nashville/05-w.jpg": "White hats and boots, piling out of the party bus.",
   "nashville/06-w.jpg": "Pontoons tied up together, out on the lake.",
+
+  // New York.
+  "new-york/01.jpg": "Two slices in a box, a red and a white with ricotta.",
+  "new-york/02.jpg": "Tennis at the Hudson River Park courts, with One World Trade behind.",
+  "new-york/03.jpg": "Everything bagels, with cream cheese, avocado and a lot of melted cheese.",
+  "new-york/04.jpg": "A cheeseburger with pickles on the side.",
+  "new-york/05.jpg": "Lower Manhattan from a rooftop, as the lights came on.",
+  "new-york/06.jpg": "The Rockefeller Center tree, presents in hand.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
