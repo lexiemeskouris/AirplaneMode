@@ -245,6 +245,15 @@ const CAPTIONS: Record<string, string> = {
   "seoul/07.jpg": "Duck on a chilli cream pasta, and beef on the bone.",
   "seoul/08.jpg": "Dumplings, kalguksu and cold spicy noodles at Myeongdong Kyoja.",
   "seoul/09.jpg": "Next to a Stanley cup taller than me.",
+
+  // Reykjavik.
+  "reykjavik/01.jpg": "Hallgrímskirkja at blue hour, with snow still on the ground.",
+  "reykjavik/02.jpg": "In the Blue Lagoon, with the steam coming off the lava field.",
+  "reykjavik/03.jpg": "Gullfoss, mostly frozen.",
+  "reykjavik/04.jpg": "Arms out at the bottom of Skógafoss, in the spray.",
+  "reykjavik/05.jpg": "Quad bikes out across the black sand.",
+  "reykjavik/06.jpg": "Stepping out of the plane wreck at Sólheimasandur.",
+  "reykjavik/07-w.jpg": "Both of us in the orange suits, on the black beach.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
