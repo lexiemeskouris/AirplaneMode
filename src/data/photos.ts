@@ -543,6 +543,15 @@ const CAPTIONS: Record<string, string> = {
   "dover/07.jpg": "A plate of heirloom tomato, kale salad and pasta.",
   "dover/08-w.jpg": "Dinner on the deck as the sun went behind the hills.",
   "dover/09.jpg": "A s'more to finish.",
+
+  // Cotswolds.
+  "cotswolds/01.jpg": "Sunglasses on, on the train out of Paddington.",
+  "cotswolds/02.jpg": "Breakfast on arrival, iced coffee and a croissant.",
+  "cotswolds/03.jpg": "Croissant, scones and a teapot.",
+  "cotswolds/04.jpg": "Men to Avoid in Art and Life, read in a shop window.",
+  "cotswolds/05.jpg": "Under the bunting, in a courtyard of shops.",
+  "cotswolds/06.jpg": "The Cotswold Shop, in Bourton-on-the-Water.",
+  "cotswolds/07.jpg": "The model village, a Cotswold village in miniature.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
