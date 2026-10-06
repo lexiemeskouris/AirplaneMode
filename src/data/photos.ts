@@ -330,6 +330,15 @@ const CAPTIONS: Record<string, string> = {
   "berlin/07-w.jpg": "A kebab on the way home, bunny ears still on.",
   "berlin/08.jpg": "The Fraternal Kiss, at the East Side Gallery.",
   "berlin/09.jpg": "Two pizzas and two espresso martinis.",
+
+  // Krakow.
+  "krakow/01.jpg": "Pierogi with fried onions, under the notes on the wall.",
+  "krakow/02.jpg": "Make pierogi, not war.",
+  "krakow/03.jpg": "The memorial plaque at Auschwitz-Birkenau.",
+  "krakow/04.jpg": "The Barbican, the old gate into the city.",
+  "krakow/05.jpg": "Pijarska Street, under the bridge to the Czartoryski Museum.",
+  "krakow/06.jpg": "By the old city walls.",
+  "krakow/07.jpg": "Kielbasa, skewers and pork knuckle on the grill.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
