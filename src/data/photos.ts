@@ -287,6 +287,14 @@ const CAPTIONS: Record<string, string> = {
   "vienna/05-w.jpg": "The sausage stop at Leo's Würstelstand.",
   "vienna/06.jpg": "Strudel and a coffee with ice cream in it, at Café Hawelka.",
   "vienna/07.jpg": "A kebab for the road, with the whole counter smiling.",
+
+  // Budapest.
+  "budapest/01-w.jpg": "At Fisherman's Bastion, with a paper cutout along for the trip.",
+  "budapest/02.jpg": "Up on Castle Hill, with Pest and the Danube behind.",
+  "budapest/03.jpg": "Prosecco on the cruise, past the Parliament lit up.",
+  "budapest/04.jpg": "Arms out in the outdoor pool at Széchenyi.",
+  "budapest/05-w.jpg": "In the water at the baths.",
+  "budapest/06.jpg": "A drink at For Sale Pub, under the notes on every wall.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
