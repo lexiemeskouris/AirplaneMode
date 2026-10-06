@@ -224,6 +224,16 @@ const CAPTIONS: Record<string, string> = {
   "victoria-falls/03-w.jpg": "Sunset over the waterhole from the Victoria Falls Safari Lodge.",
   "victoria-falls/04.jpg": "High tea at the Victoria Falls Hotel: scones, sandwiches and red macarons.",
   "victoria-falls/05.jpg": "The hotel lawn, with the spray and the bridge out past the trees.",
+
+  // Quito.
+  "quito/01.jpg": "Holding up the globe at Mitad del Mundo, one foot either side of the line.",
+  "quito/02.jpg": "In the heart at the foot of the monument.",
+  "quito/03-w.jpg": "0° 0' 0\", pointed at for the avoidance of doubt.",
+  "quito/04-w.jpg": "At the big letters, with half of Quito's teenagers.",
+  "quito/05.jpg": "Standing on the cacao map of Ecuador.",
+  "quito/06-w.jpg": "A llama, unimpressed by the selfie.",
+  "quito/07.jpg": "A beer with a monk who had already started.",
+  "quito/08.jpg": "Crudo in a yellow chilli sauce.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
