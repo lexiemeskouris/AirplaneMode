@@ -295,6 +295,19 @@ const CAPTIONS: Record<string, string> = {
   "budapest/04.jpg": "Arms out in the outdoor pool at Széchenyi.",
   "budapest/05-w.jpg": "In the water at the baths.",
   "budapest/06.jpg": "A drink at For Sale Pub, under the notes on every wall.",
+
+  // Copenhagen.
+  "copenhagen/01-w.jpg": "Nyhavn, with the coloured houses behind.",
+  "copenhagen/02-w.jpg": "Mid-air on the trampolines set into the pavement.",
+  "copenhagen/03.jpg": "A tray of cinnamon pastries.",
+  "copenhagen/04.jpg": "The spire of the Church of Our Saviour, the one you climb from outside.",
+  "copenhagen/05-w.jpg": "From the top of Our Saviour, over the red roofs.",
+  "copenhagen/06-w.jpg": "Christiania, where the houses are painted top to bottom.",
+  "copenhagen/07.jpg": "Brisket, sausage, ribs, slaw and mac and cheese, with cheesecake after.",
+  "copenhagen/08.jpg": "Sat on the white lines at Superkilen.",
+  "copenhagen/09.jpg": "Standing in the stripes at Superkilen.",
+  "copenhagen/10.jpg": "Both of us at Superkilen, on a grey day.",
+  "copenhagen/11.jpg": "The burger at Gasoline Grill.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
