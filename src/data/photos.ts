@@ -150,6 +150,25 @@ const CAPTIONS: Record<string, string> = {
   "cambodia/05-w.jpg": "Hats on for the Khmer gourmet cooking class.",
   "cambodia/06.jpg": "Fresh spring rolls with a peanut dipping sauce, made in class.",
   "cambodia/07-w.jpg": "Certified in basic Khmer cooking, officially.",
+
+  // Mexico City. Named where the shot clearly matches a stop in the itinerary;
+  // the rest describe the frame until Lexie says where it was.
+  "mexico-city/01.jpg": "A box of pastries to start, almond croissant and a pecan roll.",
+  "mexico-city/02.jpg": "The European rooms at Museo Soumaya.",
+  "mexico-city/03.jpg": "Tuna in a pool of soy and jalapeño, at lunch.",
+  "mexico-city/04.jpg": "Stirring a drink at the bar, under the watercolours.",
+  "mexico-city/05.jpg": "A tostada buried under radish, peas and dill.",
+  "mexico-city/06.jpg": "A box from Odette, carried out to the car.",
+  "mexico-city/07.jpg": "On the steps of the Maya facade at the Anthropology Museum in Chapultepec.",
+  "mexico-city/08.jpg": "Through the cactus garden in Chapultepec.",
+  "mexico-city/09.jpg": "Blue corn quesadillas off the comal, the taco crawl's first stop.",
+  "mexico-city/10.jpg": "Six trays and every salsa on the table.",
+  "mexico-city/11.jpg": "El Pescadito, famous for the shrimp tacos.",
+  "mexico-city/12.jpg": "Which is why the shrimp taco got a Corona.",
+  "mexico-city/13.jpg": "A margarita with a blue sugared rim.",
+  "mexico-city/14-w.jpg": "One churro at El Moro, shared the only fair way.",
+  "mexico-city/15-w.jpg": "Outside the Palacio de Bellas Artes.",
+  "mexico-city/16.jpg": "Last drinks in the red light, with View-Masters on the table.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
