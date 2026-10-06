@@ -493,6 +493,37 @@ const CAPTIONS: Record<string, string> = {
   "berkshires/01.jpg": "On a blue velvet sofa in the inn's sitting room.",
   "berkshires/02.jpg": "Frankie says: don't be upsetti, eat some spaghetti.",
   "berkshires/03-w.jpg": "A cider and wine flight, with the cans lined up behind.",
+
+  // London.
+  "london/01.jpg": "St Pancras, in full sun.",
+  "london/02-w.jpg": "Outside the British Museum, hats on.",
+  "london/03.jpg": "The Swing, at the Wallace Collection.",
+  "london/04.jpg": "Lined up by a phone box, under the Edith Cavell memorial.",
+  "london/05.jpg": "The Devil Wears Prada, at the Dominion.",
+  "london/06-w.jpg": "Against the graffiti in the Leake Street tunnel.",
+  "london/07.jpg": "Tower Bridge, from the river walk by City Hall.",
+  "london/08.jpg": "A boat party passing Tower Bridge.",
+  "london/09-w.jpg": "The Shard and the City over the chimney pots.",
+  "london/10.jpg": "The pastel houses of Notting Hill.",
+  "london/11.jpg": "Walking down Primrose Hill, with the skyline behind.",
+  "london/12.jpg": "Crossing Abbey Road, the way everyone does.",
+  "london/13.jpg": "On the pavement, can in hand, on a hot day.",
+  "london/14-w.jpg": "A pedalo on the Serpentine, as the sun went down.",
+  "london/15.jpg": "A wine bar, every wall lined with bottles.",
+  "london/16.jpg": "A candlelit table, and crayons on the tablecloth.",
+  "london/17.jpg": "A day at the cricket.",
+  "london/18.jpg": "Above the crowds at Wimbledon.",
+  "london/19-w.jpg": "A gig at the Tottenham Hotspur Stadium.",
+  "london/20.jpg": "Rugby in the park, on an autumn Saturday.",
+  "london/21.jpg": "By the big grass letters at London Business School.",
+
+  // Cambridge.
+  "cambridge/01.jpg": "Punting on the Cam, coffee in hand.",
+  "cambridge/02.jpg": "On a college lawn in gowns, at sunset.",
+  "cambridge/03-w.jpg": "A selfie in the college court, before dinner.",
+
+  // United Kingdom.
+  "united-kingdom/01.jpg": "Walking the shingle under the Seven Sisters.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
