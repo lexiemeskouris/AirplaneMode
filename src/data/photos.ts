@@ -410,6 +410,14 @@ const CAPTIONS: Record<string, string> = {
   "helsinki/03.jpg": "On the cathedral steps above the Christmas market in Senate Square.",
   "helsinki/04.jpg": "A pie from the market, with sour cream and pomegranate.",
   "helsinki/05.jpg": "Sausages over the fire at Cafe Regatta.",
+
+  // Tallinn.
+  "tallinn/01.jpg": "Under the Christmas tree in Town Hall Square.",
+  "tallinn/02.jpg": "Choosing at a glögi stall, below the Town Hall.",
+  "tallinn/03-w.jpg": "Two cups of hot glögi.",
+  "tallinn/04.jpg": "Buns and a black coffee.",
+  "tallinn/05.jpg": "Craning up at St Olaf's Church.",
+  "tallinn/06.jpg": "A very large beer.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
