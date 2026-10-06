@@ -319,6 +319,17 @@ const CAPTIONS: Record<string, string> = {
   "paris/07.jpg": "Rigatoni with morels in a cream sauce.",
   "paris/08.jpg": "A baguette, a croissant and a flan, for the train.",
   "paris/09.jpg": "The Eiffel Tower from the Trocadéro.",
+
+  // Berlin.
+  "berlin/01.jpg": "A vegetable kebab with feta and roast potatoes.",
+  "berlin/02.jpg": "Between the stelae at the Memorial to the Murdered Jews of Europe.",
+  "berlin/03.jpg": "The Brandenburg Gate, with the Quadriga on top.",
+  "berlin/04.jpg": "Curry at the Wall, and the Welt balloon behind it.",
+  "berlin/05.jpg": "All in black in the lift, before going out.",
+  "berlin/06.jpg": "Outside, late, against a tagged-up window.",
+  "berlin/07-w.jpg": "A kebab on the way home, bunny ears still on.",
+  "berlin/08.jpg": "The Fraternal Kiss, at the East Side Gallery.",
+  "berlin/09.jpg": "Two pizzas and two espresso martinis.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
