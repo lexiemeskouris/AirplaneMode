@@ -182,6 +182,22 @@ const CAPTIONS: Record<string, string> = {
   "istanbul/09.jpg": "Turkish breakfast, near Galata Tower.",
   "istanbul/10.jpg": "The coloured houses of Balat.",
   "istanbul/11.jpg": "A ceramics shop in Balat.",
+
+  // Tunisia.
+  "tunisia/01.jpg": "Over the ruins at Carthage to the Gulf of Tunis.",
+  "tunisia/02.jpg": "Under the arches of the Antonine Baths.",
+  "tunisia/03.jpg": "Black tacos and tuna in a yellow sauce, at Cult Bistro.",
+  "tunisia/04.jpg": "The chef bringing the card machine over himself.",
+  "tunisia/05.jpg": "Jellyfish in the shallows, which kept the swimming brief.",
+  "tunisia/06.jpg": "A white horse along the water's edge.",
+  "tunisia/07.jpg": "Picked up on the beach, mid-laugh.",
+  "tunisia/08.jpg": "Two on a jet ski, one hand off.",
+  "tunisia/09.jpg": "Octopus carpaccio with pink peppercorns, for lunch.",
+  "tunisia/10.jpg": "The pool going still as the light dropped.",
+  "tunisia/11.jpg": "Straw umbrellas on the dunes, at dusk.",
+  "tunisia/12.jpg": "Bougainvillea over a white wall in Sidi Bou Said.",
+  "tunisia/13.jpg": "The marina below Sidi Bou Said.",
+  "tunisia/14.jpg": "On the wall above the bay, with a mint tea.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
