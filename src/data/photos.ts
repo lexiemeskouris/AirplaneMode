@@ -141,6 +141,15 @@ const CAPTIONS: Record<string, string> = {
   "vietnam/03.jpg": "Kayaking between the karsts in Ha Long Bay.",
   "vietnam/04.jpg": "The Café Apartments on Nguyen Hue, a cafe or shop on every balcony.",
   "vietnam/05.jpg": "The firing range at the Cu Chi Tunnels, ear defenders on.",
+
+  // Cambodia.
+  "cambodia/01.jpg": "A fish pedicure in Siem Reap, which tickles more than it should.",
+  "cambodia/02.jpg": "Macaques holding court on the fallen stones at Angkor.",
+  "cambodia/03.jpg": "Wat Bo, on the walk to the pottery class.",
+  "cambodia/04.jpg": "A cow and her calf by the lotus pond, on the countryside bike ride.",
+  "cambodia/05-w.jpg": "Hats on for the Khmer gourmet cooking class.",
+  "cambodia/06.jpg": "Fresh spring rolls with a peanut dipping sauce, made in class.",
+  "cambodia/07-w.jpg": "Certified in basic Khmer cooking, officially.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
