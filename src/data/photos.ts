@@ -308,6 +308,17 @@ const CAPTIONS: Record<string, string> = {
   "copenhagen/09.jpg": "Standing in the stripes at Superkilen.",
   "copenhagen/10.jpg": "Both of us at Superkilen, on a grey day.",
   "copenhagen/11.jpg": "The burger at Gasoline Grill.",
+
+  // Paris.
+  "paris/01.jpg": "The chocolate mousse at Chez Janou, served by the scoop.",
+  "paris/02.jpg": "On the grass below Sacré-Coeur.",
+  "paris/03.jpg": "In the Jardin du Luxembourg, with the palace behind.",
+  "paris/04-w.jpg": "In front of Starry Night Over the Rhône, at the Musée d'Orsay.",
+  "paris/05.jpg": "A glass of white at Bar du Marché.",
+  "paris/06.jpg": "Roast chicken, gratin, mash and a green salad.",
+  "paris/07.jpg": "Rigatoni with morels in a cream sauce.",
+  "paris/08.jpg": "A baguette, a croissant and a flan, for the train.",
+  "paris/09.jpg": "The Eiffel Tower from the Trocadéro.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
