@@ -429,6 +429,19 @@ const CAPTIONS: Record<string, string> = {
   "stockholm/07.jpg": "Out in Södermalm, the four of us.",
   "stockholm/08.jpg": "In a 1907 doorway, on the way home.",
   "stockholm/09.jpg": "The late-night Max burger stop.",
+
+  // Tromsø.
+  "tromso/01.jpg": "A cinnamon bun and two flat whites.",
+  "tromso/02.jpg": "Under the northern lights, out in the snow.",
+  "tromso/03.jpg": "The aurora right overhead, with the tour bus parked up.",
+  "tromso/04.jpg": "A faint green glow over the fjord.",
+  "tromso/05-w.jpg": "The lights over the water and the snowy hills.",
+  "tromso/06.jpg": "Inside the boat on the fjord trip.",
+  "tromso/07.jpg": "On deck under the Norwegian flag.",
+  "tromso/08.jpg": "Arms out in front of the Arctic Cathedral.",
+  "tromso/09.jpg": "Saying hello at the husky kennels.",
+  "tromso/10.jpg": "Two of the team, before the run.",
+  "tromso/11.jpg": "On the sled, mid-run.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
