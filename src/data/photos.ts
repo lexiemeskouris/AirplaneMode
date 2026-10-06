@@ -360,6 +360,20 @@ const CAPTIONS: Record<string, string> = {
   "amsterdam/06.jpg": "Boats tied up along a canal, under the trees.",
   "amsterdam/07.jpg": "Poffertjes under a pile of icing sugar, at the Pancake Bakery.",
   "amsterdam/08.jpg": "A stroopwafel outside Hans Egstorf, est. 1898.",
+
+  // Ireland.
+  "ireland/01.jpg": "Pints at the window, looking out over Dublin from the Guinness Storehouse.",
+  "ireland/02.jpg": "Four pints and four faces painted for the weekend.",
+  "ireland/03-w.jpg": "Shamrocks on our faces, under the green lights.",
+  "ireland/04-w.jpg": "Two sours in a dark old bar.",
+  "ireland/05.jpg": "The Temple Bar on St Patrick's Day, shamrocks up and the street full.",
+  "ireland/06-w.jpg": "Four of us outside the Temple Bar, in the thick of it.",
+  "ireland/07-w.jpg": "The Cliffs of Moher, in a wind that did not let up.",
+  "ireland/08.jpg": "Upside down, kissing the Blarney Stone.",
+  "ireland/09-w.jpg": "The grounds at Blarney, in the sun.",
+  "ireland/10.jpg": "Blarney House, across the lawn.",
+  "ireland/11-w.jpg": "In front of Blarney House.",
+  "ireland/12.jpg": "A pie with mash and slaw, in a box.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
