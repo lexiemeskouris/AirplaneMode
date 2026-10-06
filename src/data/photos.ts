@@ -379,6 +379,18 @@ const CAPTIONS: Record<string, string> = {
   // Mallorca.
   "mallorca/01.jpg": "The pool, with the Tramuntana behind the palms.",
   "mallorca/02-w.jpg": "Late sun on the beach at Port de Sóller.",
+
+  // Lisbon.
+  "lisbon/01-w.jpg": "Dom João I on horseback in Praça da Figueira, with a gull on his helmet.",
+  "lisbon/02-w.jpg": "The wave paving in Rossio, in front of the National Theatre.",
+  "lisbon/03-w.jpg": "A red tram under the Rua Augusta Arch, in Praça do Comércio.",
+  "lisbon/04.jpg": "Bairro Alto at night, under the streamers.",
+  "lisbon/05-w.jpg": "At the gate of Pena Palace, in the Sintra fog.",
+  "lisbon/06.jpg": "Walking up to the yellow towers at Pena.",
+  "lisbon/07.jpg": "The striped spire and the red clock tower at Pena.",
+  "lisbon/08.jpg": "Tiles, yellow walls and the dome, from the ramparts.",
+  "lisbon/09.jpg": "Two of us in a window, framed by blue and white tiles.",
+  "lisbon/10-w.jpg": "Azulejos up close.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
