@@ -134,6 +134,13 @@ const CAPTIONS: Record<string, string> = {
   "kilimanjaro/08.jpg": "A hug near the top, which was most of what got anyone there.",
   "kilimanjaro/09-w.jpg": "The mountain throwing its own shadow across the cloud, and one of the last glaciers.",
   "kilimanjaro/10.jpg": "Uhuru Peak, 5,895m, and the sign the whole thing is for.",
+
+  // Vietnam.
+  "vietnam/01.jpg": "Pho at Pho Thin in Hanoi, eaten at a steel table.",
+  "vietnam/02.jpg": "A drink at Cloud Sky Bar, looking out over Hanoi's rooftops.",
+  "vietnam/03.jpg": "Kayaking between the karsts in Ha Long Bay.",
+  "vietnam/04.jpg": "The Café Apartments on Nguyen Hue, a cafe or shop on every balcony.",
+  "vietnam/05.jpg": "The firing range at the Cu Chi Tunnels, ear defenders on.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
