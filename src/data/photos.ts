@@ -198,6 +198,14 @@ const CAPTIONS: Record<string, string> = {
   "tunisia/12.jpg": "Bougainvillea over a white wall in Sidi Bou Said.",
   "tunisia/13.jpg": "The marina below Sidi Bou Said.",
   "tunisia/14.jpg": "On the wall above the bay, with a mint tea.",
+
+  // Singapore.
+  "singapore/01.jpg": "The Rain Vortex at Jewel, the first thing off the plane.",
+  "singapore/02.jpg": "New Year's Eve at the top of Marina Bay Sands, tiara on.",
+  "singapore/03-w.jpg": "The bay from the top of Marina Bay Sands, waiting on midnight.",
+  "singapore/04-w.jpg": "All four of us under the waterfall in the Cloud Forest.",
+  "singapore/05.jpg": "A stream through the ferns, inside the Cloud Forest.",
+  "singapore/06-w.jpg": "Marina Bay Sands and the Supertrees, through the Cloud Forest glass.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
