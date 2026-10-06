@@ -339,6 +339,17 @@ const CAPTIONS: Record<string, string> = {
   "krakow/05.jpg": "Pijarska Street, under the bridge to the Czartoryski Museum.",
   "krakow/06.jpg": "By the old city walls.",
   "krakow/07.jpg": "Kielbasa, skewers and pork knuckle on the grill.",
+
+  // Tuscany.
+  "tuscany/01.jpg": "Holding up the Leaning Tower, as required.",
+  "tuscany/02-w.jpg": "Coffee in hand by the Baptistery and the Duomo in Pisa.",
+  "tuscany/03.jpg": "The terrace at the villa, with the cypresses and the hills.",
+  "tuscany/04.jpg": "Two trays of cheese, salami, prosciutto and fruit.",
+  "tuscany/05.jpg": "A walk between the vineyards.",
+  "tuscany/06.jpg": "A hill town above the vines and olive groves.",
+  "tuscany/07.jpg": "Dressed in white for dinner, under the arches.",
+  "tuscany/08.jpg": "Three of us at the end of dinner, glasses still full.",
+  "tuscany/09.jpg": "The Principe di Piemonte in Viareggio, lit up at dusk.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
