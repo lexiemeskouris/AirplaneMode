@@ -254,6 +254,17 @@ const CAPTIONS: Record<string, string> = {
   "reykjavik/05.jpg": "Quad bikes out across the black sand.",
   "reykjavik/06.jpg": "Stepping out of the plane wreck at Sólheimasandur.",
   "reykjavik/07-w.jpg": "Both of us in the orange suits, on the black beach.",
+
+  // Malta.
+  "malta/01.jpg": "Valletta's closed balconies, all the way down the hill.",
+  "malta/02.jpg": "By the palm and the monument, next to the church portico in Valletta.",
+  "malta/03.jpg": "Calamari, burrata and white wine with ice in it, for lunch.",
+  "malta/04.jpg": "The plate at Villa Bologna.",
+  "malta/05.jpg": "Under the cliffs on the boat day, with the water going green.",
+  "malta/06.jpg": "Off the boat and into the deep blue.",
+  "malta/07.jpg": "Outside Andrew's Bar, est. 1909.",
+  "malta/08.jpg": "Three pizzas and a bowl of potatoes.",
+  "malta/09.jpg": "Sunset over the bay.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
