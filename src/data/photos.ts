@@ -546,8 +546,8 @@ const CAPTIONS: Record<string, string> = {
 
   // Cotswolds.
   "cotswolds/01.jpg": "Sunglasses on, on the train out of Paddington.",
-  "cotswolds/02.jpg": "Breakfast on arrival, iced coffee and a croissant.",
-  "cotswolds/03.jpg": "Croissant, scones and a teapot.",
+  "cotswolds/02.jpg": "Breakfast at Martha's Coffee House in Moreton-in-Marsh.",
+  "cotswolds/03.jpg": "Croissant, scones and a teapot at Martha's.",
   "cotswolds/04.jpg": "Men to Avoid in Art and Life, read in a shop window.",
   "cotswolds/05.jpg": "Under the bunting, in a courtyard of shops.",
   "cotswolds/06.jpg": "The Cotswold Shop, in Bourton-on-the-Water.",
