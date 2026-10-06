@@ -8,7 +8,7 @@ const TIKTOK_URL = "https://www.tiktok.com/@lexiemesko";
 const COUNTRIES = 47;
 
 const DESCRIPTION =
-  "An American in London doing an MBA at London Business School, 47 countries in and aiming for all of them. The itineraries are free to read.";
+  "An American in London doing an MBA at London Business School, 47 countries in and aiming for all of them. Most of the itineraries are free to read.";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/about")({
 });
 
 function AboutPage() {
-  const free = itineraries.filter((i) => !i.gated).length;
+  const free = itineraries.filter((i) => !i.gated && !i.comingSoon).length;
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-16">
@@ -61,9 +61,10 @@ function AboutPage() {
             is worth keeping.
           </p>
           <p>
-            All of it is free to read in full. There is no paywall, nothing to
-            sign up to, and I will never ask for your email. If one of them
-            helps, buy me a coffee.
+            Almost all of it is free to read in full. A handful of the longer
+            trips are supporter deep dives: one day is free to read, and a
+            coffee gets you the whole plan. There is nothing to sign up to, and
+            I will never ask for your email.
           </p>
           <p>
             Eventually I want this to be a proper travel agency, planning real

@@ -62,7 +62,7 @@ export function SpinWheel({
   const pool = useMemo<Pick[]>(
     () =>
       itineraries
-        .filter((it) => !it.gated)
+        .filter((it) => !it.gated && !it.comingSoon)
         .map((it) => ({ slug: it.slug, destination: it.destination })),
     [],
   );
@@ -175,8 +175,8 @@ export function SpinWheel({
             Spin the wheel.
           </h2>
           <p className="mx-auto mt-2 max-w-xs text-sm leading-relaxed text-muted-foreground">
-            Every itinerary here is free, so there is nothing to win except a
-            decision. Let the wheel make it.
+            Every itinerary on the wheel is free, so there is nothing to win
+            except a decision. Let the wheel make it.
           </p>
 
           <div className="relative mx-auto mt-6 w-56 sm:w-64">

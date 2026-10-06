@@ -147,7 +147,16 @@ function ItineraryDetail() {
         </ul>
       )}
 
-      {it.days && it.days.length > 0 && (
+      {it.comingSoon && (
+        <section className="mt-12 rounded-[2rem] bg-foreground p-8 text-center text-background md:p-12">
+          <h2 className="font-display text-4xl font-extrabold tracking-tight">Coming soon</h2>
+          <p className="mx-auto mt-4 max-w-md leading-relaxed text-background/70">
+            The full plan is still being written up. Check back soon.
+          </p>
+        </section>
+      )}
+
+      {!it.comingSoon && it.days && it.days.length > 0 && (
         <section className="mt-12">
           <h2 className="font-display text-3xl font-extrabold tracking-tight text-foreground">
             {it.gated ? "A free sample day" : "The plan, day by day"}

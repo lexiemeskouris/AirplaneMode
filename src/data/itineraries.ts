@@ -84,6 +84,11 @@ export type Itinerary = {
   /** Optional: an itinerary can go up before a photo for it exists. */
   cover?: string;
   gated: boolean;
+  /**
+   * Listed on the site but not open yet: the card says so and the page shows
+   * the intro without the plan. Kept out of the spin wheel and the free count.
+   */
+  comingSoon?: boolean;
   /** A short intro shown for both free and gated itineraries. */
   teaser: string;
   /** Short food/activity hashtags shown as chips on feed cards. */
@@ -310,7 +315,7 @@ export const itineraries: Itinerary[] = [
     summary:
       "Mosaics in the morning, Carthage in the afternoon, and a beach club an hour down the coast.",
     cover: tunisia,
-    gated: false,
+    gated: true,
     teaser:
       "Based in Sidi Bou Said, with everything else reached by taxi: the Bardo and the Medina one day, Hammamet the next, and the blue-and-white streets saved for the walk to the airport.",
     tags: ["#Carthage", "#SidiBouSaid", "#Bambalouni"],
@@ -322,27 +327,6 @@ export const itineraries: Itinerary[] = [
       "A bambalouni in Sidi Bou Said before the flight",
     ],
     days: [
-      {
-        day: "Arrival",
-        title: "Land Late, Sleep in Sidi Bou Said",
-        activities: [
-          {
-            time: "20:35",
-            description: "Fly from London Gatwick.",
-            places: [{ name: "London Gatwick", near: "London, UK" }],
-          },
-          {
-            time: "23:25",
-            description: "Land at Tunis-Carthage Airport.",
-            places: [{ name: "Tunis-Carthage Airport", near: "Tunis, Tunisia" }],
-          },
-          {
-            time: "00:00",
-            description: "Taxi to Sidi Bou Said and check in.",
-            places: [{ name: "Sidi Bou Said" }],
-          },
-        ],
-      },
       {
         day: "Day One",
         title: "The Bardo, the Medina, and Carthage",
@@ -380,57 +364,6 @@ export const itineraries: Itinerary[] = [
             description: "Dinner at Cult Bistro.",
             places: [{ name: "Cult Bistro", near: "Tunis, Tunisia" }],
           },
-        ],
-      },
-      {
-        day: "Day Two",
-        title: "Hammamet, Then La Marsa",
-        activities: [
-          { description: "Wake up at leisure." },
-          { description: "Breakfast at a cafe near the Airbnb." },
-          {
-            description: "Taxi to Hammamet, about an hour.",
-            places: [{ name: "Hammamet", near: "Tunisia" }],
-          },
-          {
-            description: "Lounge at Barberousse Beach Club, and eat lunch there too.",
-            places: [{ name: "Barberousse Beach Club", near: "Hammamet, Tunisia" }],
-          },
-          { description: "Back to the Airbnb to change for dinner." },
-          {
-            description: "Taxi to La Marsa and walk along La Marsa Beach.",
-            places: [
-              { name: "La Marsa", near: "Tunisia" },
-              { name: "La Marsa Beach", near: "La Marsa, Tunisia" },
-            ],
-          },
-          {
-            description: "Dinner at Le Golfe.",
-            places: [{ name: "Le Golfe", near: "La Marsa, Tunisia" }],
-          },
-        ],
-      },
-      {
-        day: "Day Three",
-        title: "Sidi Bou Said, Then the Airport",
-        activities: [
-          { description: "Check out and leave the luggage at the Airbnb." },
-          {
-            description: "Explore Sidi Bou Said.",
-            places: [{ name: "Sidi Bou Said" }],
-          },
-          {
-            description: "Visit Dar El Annabi.",
-            places: [{ name: "Dar El Annabi", near: "Sidi Bou Said, Tunisia" }],
-          },
-          { description: "Eat a bambalouni." },
-          {
-            time: "13:00",
-            description: "Taxi to Tunis-Carthage Airport.",
-            places: [{ name: "Tunis-Carthage Airport", near: "Tunis, Tunisia" }],
-          },
-          { time: "16:15", description: "Fly to London Gatwick." },
-          { time: "19:20", description: "Land in London." },
         ],
       },
     ],
@@ -601,6 +534,7 @@ export const itineraries: Itinerary[] = [
       "A night market food tour, a sunset hike, and dumplings at Taipei 101. Mostly done on foot.",
     cover: taipei,
     gated: false,
+    comingSoon: true,
     teaser:
       "Three days walked rather than ridden: Yongkang Street and Shida on the first, Songshan and Elephant Mountain on the second, Longshan Temple squeezed in before the airport on the third.",
     tags: ["#NightMarket", "#ElephantMountain", "#DinTaiFung"],
@@ -3846,7 +3780,7 @@ export const itineraries: Itinerary[] = [
     summary:
       "Island-hopping between Santa Cruz and San Cristóbal by ferry, snorkelling everything in between.",
     cover: galapagos,
-    gated: false,
+    gated: true,
     teaser:
       "Three stays and two ferries across two islands. Tortoises by bike, a whole day on one hike, and sea lions at La Lobería. The tips at the bottom are the part worth reading twice.",
     tags: ["#Galapagos", "#Snorkelling", "#SeaLions"],
@@ -3867,28 +3801,6 @@ export const itineraries: Itinerary[] = [
       "Sharks off the Santa Cruz pier at night",
     ],
     days: [
-      {
-        day: "Day One",
-        title: "Fly to Santa Cruz",
-        activities: [
-          { description: "An hour to the airport, and two hours for the forms." },
-          {
-            description: "Land and settle in. Get to the hotel at least two hours after landing.",
-            places: [{ name: "Santa Cruz Island", near: "Galápagos" }],
-          },
-          {
-            description: "Drinks at Finch Bay, dinner at Ayora.",
-            places: [
-              { name: "Finch Bay", near: "Puerto Ayora, Galápagos" },
-              { name: "Ayora", near: "Puerto Ayora, Galápagos" },
-            ],
-          },
-          {
-            description: "Santa Cruz pier at night, to see the sharks.",
-            places: [{ name: "Santa Cruz Pier", near: "Puerto Ayora, Galápagos" }],
-          },
-        ],
-      },
       {
         day: "Day Two",
         title: "Tortoises by Bike",
@@ -3915,130 +3827,6 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "The Rock", near: "Puerto Ayora, Galápagos" }],
           },
         ],
-      },
-      {
-        day: "Day Three",
-        title: "Tortuga Bay, Then the Ferry",
-        activities: [
-          {
-            description:
-              "Tortuga Bay in the morning. Head to the western end of Charles Binford Avenue in Puerto Ayora and follow the flat paved trail about a mile and a half to the entrance. A 45 minute hike, then lounging and snorkelling.",
-            places: [{ name: "Tortuga Bay", near: "Santa Cruz Island, Galápagos" }],
-          },
-          {
-            description: "Lunch at 1835.",
-            places: [{ name: "1835 Coffee Lab", near: "Puerto Ayora, Galápagos" }],
-          },
-          {
-            time: "15:00",
-            description: "Ferry to San Cristóbal, until 18:00. Be at the dock an hour early.",
-            places: [{ name: "San Cristóbal Island", near: "Galápagos" }],
-          },
-          {
-            description: "Happy hour drinks in town, then dinner at Umami.",
-            places: [{ name: "Umami", near: "Puerto Baquerizo Moreno, Galápagos" }],
-          },
-        ],
-      },
-      {
-        day: "Day Four",
-        title: "Cerro Tijeretas, All Day",
-        activities: [
-          {
-            description: "Pastries, coffee and lunch from Kachi Tanta.",
-            places: [{ name: "Kachi Tanta", near: "Puerto Baquerizo Moreno, Galápagos" }],
-          },
-          {
-            description:
-              "The Cerro Tijeretas and Playa Baquerizo hike. Read a map and plan to spend most of the day: there are watering holes, snorkel spots and observation decks, and it is worth exploring every offshoot.",
-            places: [
-              { name: "Cerro Tijeretas", near: "San Cristóbal, Galápagos" },
-              { name: "Playa Baquerizo", near: "San Cristóbal, Galápagos" },
-            ],
-          },
-          {
-            description: "Sunset at Playa Mann as you walk back into town.",
-            places: [{ name: "Playa Mann", near: "Puerto Baquerizo Moreno, Galápagos" }],
-          },
-          {
-            description: "Dinner at Iska Pizza.",
-            places: [{ name: "Iska Pizza", near: "Puerto Baquerizo Moreno, Galápagos" }],
-          },
-          {
-            description:
-              "Go to Galapagos Eco Fishing to pay the rest of the tour deposit and try on wetsuits.",
-          },
-        ],
-      },
-      {
-        day: "Day Five",
-        title: "The 360 Tour",
-        activities: [
-          { description: "360 tour of San Cristóbal." },
-          {
-            description: "Dinner at Giuseppe's.",
-            places: [{ name: "Giuseppe's", near: "Puerto Baquerizo Moreno, Galápagos" }],
-          },
-        ],
-      },
-      {
-        day: "Day Six",
-        title: "Sea Lions, Then Back to Santa Cruz",
-        activities: [
-          {
-            description:
-              "Coffee and croissants at Ranti Kamak. Locally sourced, absolutely delicious, and you choose how the coffee is brewed.",
-            places: [{ name: "Ranti Kamak", near: "Puerto Baquerizo Moreno, Galápagos" }],
-          },
-          {
-            description: "Taxi to La Lobería, to snorkel and swim with sea lions.",
-            places: [{ name: "La Lobería", near: "San Cristóbal, Galápagos" }],
-          },
-          {
-            description: "Lunch and cheap cocktails at La Pescadería.",
-            places: [{ name: "La Pescadería", near: "Puerto Baquerizo Moreno, Galápagos" }],
-          },
-          { time: "15:00", description: "Ferry back, until 18:00." },
-          {
-            description: "Dinner at The Point, where you can see rays and sharks from the pier.",
-            places: [{ name: "The Point", near: "Puerto Ayora, Galápagos" }],
-          },
-        ],
-      },
-      {
-        day: "Day Seven",
-        title: "Kayaks and One Last Swim",
-        activities: [
-          {
-            description: "Coffee and breakfast at Island Coffee.",
-            places: [{ name: "Island Coffee", near: "Puerto Ayora, Galápagos" }],
-          },
-          {
-            description: "Playa Los Alemanes, for a swim and a snorkel.",
-            places: [{ name: "Playa Los Alemanes", near: "Santa Cruz Island, Galápagos" }],
-          },
-          { description: "Rent kayaks next to Finch Bay." },
-          {
-            description: "Las Grietas. You can skip this one, honestly.",
-            places: [{ name: "Las Grietas", near: "Santa Cruz Island, Galápagos" }],
-          },
-          {
-            description: "Lunch at Oy. Highly recommend.",
-            places: [{ name: "Oy", near: "Puerto Ayora, Galápagos" }],
-          },
-          {
-            description: "Drinks at Bahia Mar, dinner at Midori.",
-            places: [
-              { name: "Bahia Mar", near: "Puerto Ayora, Galápagos" },
-              { name: "Midori", near: "Puerto Ayora, Galápagos" },
-            ],
-          },
-        ],
-      },
-      {
-        day: "Day Eight",
-        title: "Fly Out",
-        activities: [{ description: "Fly out." }],
       },
     ],
     extras: [
@@ -4674,7 +4462,7 @@ export const itineraries: Itinerary[] = [
     summary:
       "Whale watching, a wicker toboggan down a hill, and a sunrise hike between the two highest peaks.",
     cover: madeira,
-    gated: false,
+    gated: true,
     teaser:
       "Three days out of Funchal and hard-run: a boat, a cable car, a jeep tour of the north, and a 06:00 bus to catch sunrise on Pico do Arieiro before walking to Pico Ruivo.",
     tags: ["#PicoDoArieiro", "#Toboggan", "#Levada"],
@@ -4686,11 +4474,6 @@ export const itineraries: Itinerary[] = [
       "Two dinners by the same chef, at either end of the trip",
     ],
     days: [
-      {
-        day: "Arrival",
-        title: "Land in Funchal",
-        activities: [{ time: "18:40", description: "Land, and get to Funchal." }],
-      },
       {
         day: "Day One",
         title: "Whales, a Toboggan, and a Levada",
@@ -4729,75 +4512,6 @@ export const itineraries: Itinerary[] = [
             description: "Dinner at Akua.",
             places: [{ name: "Akua", near: "Funchal, Madeira" }],
           },
-        ],
-      },
-      {
-        day: "Day Two",
-        title: "The North, by Jeep",
-        activities: [
-          {
-            time: "08:00",
-            description: "Coffee and sandwiches at Leque.",
-            places: [{ name: "Leque", near: "Funchal, Madeira" }],
-          },
-          {
-            time: "09:00",
-            description:
-              "Jeep tour until 17:00: Porto Moniz, Seixal, the Fanal Forest and the Cabo Girão skywalk.",
-            places: [
-              { name: "Porto Moniz", near: "Madeira" },
-              { name: "Seixal", near: "Madeira" },
-              { name: "Fanal Forest", near: "Madeira" },
-              { name: "Cabo Girão", near: "Madeira" },
-            ],
-          },
-          {
-            time: "17:30",
-            description: "Put your name down at Restaurante Informal.",
-            places: [{ name: "Restaurante Informal", near: "Funchal, Madeira" }],
-          },
-          {
-            time: "17:45",
-            description: "Wine tasting at Blandy's Wine Lodge. It closes at 18:30.",
-            places: [{ name: "Blandy's Wine Lodge", near: "Funchal, Madeira" }],
-          },
-          {
-            description: "Dinner at Restaurante Informal, then drinks at Revolucion Cocktail Bar.",
-            places: [{ name: "Revolucion Cocktail Bar", near: "Funchal, Madeira" }],
-          },
-        ],
-      },
-      {
-        day: "Day Three",
-        title: "Sunrise on Pico do Arieiro",
-        activities: [
-          { time: "06:00", description: "Bus to the Pico do Arieiro car park, arriving 06:45." },
-          {
-            time: "07:10",
-            description: "Walk to the main viewpoint, and sunrise at 07:35.",
-            places: [{ name: "Pico do Arieiro", near: "Madeira" }],
-          },
-          {
-            time: "07:50",
-            description: "Start the PR1 toward Pico Ruivo, reaching the summit around 10:45.",
-            places: [{ name: "Pico Ruivo", near: "Madeira" }],
-          },
-          {
-            time: "11:45",
-            description: "Leave the summit, finishing at Achada do Teixeira around 13:00.",
-            places: [{ name: "Achada do Teixeira", near: "Madeira" }],
-          },
-          {
-            time: "14:00",
-            description: "Late lunch at Kampo.",
-            places: [{ name: "Kampo", near: "Funchal, Madeira" }],
-          },
-          {
-            description: "The Madeira Botanical Garden, if there is anything left in you.",
-            places: [{ name: "Madeira Botanical Garden", near: "Funchal, Madeira" }],
-          },
-          { time: "16:45", description: "Leave for the airport, about twenty minutes." },
-          { time: "19:10", description: "Flight out." },
         ],
       },
     ],
@@ -5575,7 +5289,7 @@ export const itineraries: Itinerary[] = [
     summary:
       "Northern lights, a fjord cruise, and dog sledding, with a sauna and cold plunge in between.",
     cover: tromso,
-    gated: false,
+    gated: true,
     teaser:
       "Three days inside the Arctic Circle with one big booked thing each day. The town itself takes an afternoon, and the rest is weather.",
     tags: ["#NorthernLights", "#DogSledding", "#Fjords"],
@@ -5591,11 +5305,6 @@ export const itineraries: Itinerary[] = [
     ],
     days: [
       {
-        day: "Arrival",
-        title: "Land, and Sleep",
-        activities: [{ description: "Land, and go straight to sleep." }],
-      },
-      {
         day: "Day One",
         title: "The Town, Then the Lights",
         activities: [
@@ -5606,37 +5315,6 @@ export const itineraries: Itinerary[] = [
           },
           { time: "14:30", description: "A full lunch. You will want it." },
           { time: "16:30", description: "Northern lights tour, until 23:00." },
-        ],
-      },
-      {
-        day: "Day Two",
-        title: "Fjords",
-        activities: [
-          {
-            time: "10:40",
-            description: "Meet at the pier behind the Nerstranda shopping centre.",
-            places: [{ name: "Nerstranda", near: "Tromsø, Norway" }],
-          },
-          { time: "11:00", description: "Fjords cruise, disembarking at 14:30." },
-          {
-            description: "Then whatever fits.",
-            places: [
-              { name: "Pust", near: "Tromsø, Norway", note: "Sauna and cold plunge." },
-              { name: "Arctic Cathedral", near: "Tromsø, Norway" },
-              { name: "Ice Bar", near: "Tromsø, Norway" },
-              { name: "Mack Brewery", near: "Tromsø, Norway", note: "The northernmost brewery. There is also a northernmost McDonald's and Hard Rock." },
-            ],
-          },
-        ],
-      },
-      {
-        day: "Day Three",
-        title: "Dog Sledding, Then Out",
-        activities: [
-          { time: "11:30", description: "Dog sledding." },
-          { time: "16:30", description: "Dinner in town." },
-          { time: "18:00", description: "Head to the airport." },
-          { time: "20:00", description: "Flight out." },
         ],
       },
     ],
@@ -7039,7 +6717,7 @@ export const itineraries: Itinerary[] = [
     summary:
       "Riyadh and Diriyah, a night in the desert, then AlUla for Hegra, Maraya and the stars.",
     cover: saudiArabia,
-    gated: false,
+    gated: true,
     teaser:
       "Three days in Riyadh and three in AlUla, run as a London Business School trek. Some of it you can copy exactly. One day of it you cannot, and I have said so where it comes up.",
     tags: ["#Hegra", "#AlUla", "#EmptyQuarter"],
@@ -7089,115 +6767,6 @@ export const itineraries: Itinerary[] = [
             description: "Dinner on Bujairi Terrace, looking across at At-Turaif lit up.",
             places: [{ name: "Bujairi Terrace", near: "Riyadh, Saudi Arabia" }],
           },
-        ],
-      },
-      {
-        day: "Day Two",
-        title: "A Full Day in the Desert",
-        activities: [
-          { time: "09:00", description: "Breakfast, if you want it." },
-          {
-            time: "13:30",
-            description:
-              "A formal visit with a former Saudi ambassador to the United Kingdom and the United States. Arranged through the school, so treat this as context rather than something to copy.",
-          },
-          { time: "15:00", description: "Out to the desert camp." },
-          {
-            time: "17:00",
-            description:
-              "Dune bashing on the way in, then the camp itself: buggy rides, archery, clay shooting and camel rides.",
-          },
-          {
-            description:
-              "Stargazing once it is properly dark, and a Saudi dinner at the camp. Back in the city around 23:00.",
-          },
-        ],
-      },
-      {
-        day: "Day Three",
-        title: "Shaybah, in the Empty Quarter",
-        activities: [
-          {
-            description:
-              "The one day on this page you cannot arrange yourself. Shaybah is Aramco's oil hub deep in the Empty Quarter, and the visit was set up with the Saudi government through London Business School. There is no public tour, no operator, and no ticket. It was the best day of the trip and I am sorry to say you cannot buy it.",
-          },
-          { time: "06:30", description: "Early breakfast." },
-          { time: "09:00", description: "Transfer to the airport, and fly out at 11:00." },
-          {
-            description:
-              "The Shaybah visitor centre, then the wildlife sanctuary, which has Arabian oryx and sand gazelles living in the dunes.",
-            places: [{ name: "Shaybah", near: "Empty Quarter, Saudi Arabia" }],
-          },
-          {
-            description:
-              "Sunset on the dunes, the heritage village, dinner, then the flight straight on to AlUla.",
-            places: [{ name: "Rub' al Khali", near: "Saudi Arabia" }],
-          },
-        ],
-      },
-      {
-        day: "Day Four",
-        title: "Hegra, and AlUla Old Town",
-        activities: [
-          { time: "09:00", description: "Breakfast at the resort." },
-          {
-            time: "12:00",
-            description:
-              "Hegra, the country's first UNESCO World Heritage Site: Nabataean tombs cut straight into the sandstone, by the same people who built Petra.",
-            places: [{ name: "Hegra", near: "AlUla, Saudi Arabia" }],
-          },
-          { time: "14:00", description: "Lunch locally." },
-          {
-            time: "16:00",
-            description: "AlUla Old Town.",
-            places: [{ name: "AlUla Old Town", near: "AlUla, Saudi Arabia" }],
-          },
-          {
-            time: "19:00",
-            description: "Dinner at Elephant Rock, and no rush to leave.",
-            places: [{ name: "Elephant Rock", near: "AlUla, Saudi Arabia" }],
-          },
-        ],
-      },
-      {
-        day: "Day Five",
-        title: "Maraya, Joud Farm, and the Stars",
-        activities: [
-          {
-            description:
-              "The morning is free, and there are two things worth booking into it: a sunrise hot air balloon over the rock formations, or a guided UTV buggy run into the desert. Both go through experiencealula.com and both need booking separately.",
-            places: [
-              {
-                name: "Experience AlUla",
-                url: "https://www.experiencealula.com/",
-              },
-            ],
-          },
-          { time: "09:00", description: "Breakfast at the resort, then the pool." },
-          {
-            time: "12:30",
-            description:
-              "Maraya, the mirrored concert hall that disappears into the canyon around it. Go for the photographs, stay for how strange it is in person.",
-            places: [{ name: "Maraya", near: "AlUla, Saudi Arabia" }],
-          },
-          {
-            time: "13:00",
-            description: "A tour and lunch at Joud Farm, eaten under the palms.",
-            places: [{ name: "Joud Farm", near: "AlUla, Saudi Arabia" }],
-          },
-          {
-            time: "19:00",
-            description:
-              "Private stargazing with astronomers, and dinner out there. The desert here is about as dark as skies get.",
-          },
-        ],
-      },
-      {
-        day: "Day Six",
-        title: "Back to Riyadh",
-        activities: [
-          { description: "One more breakfast, then the flight from AlUla back to Riyadh." },
-          { description: "Ma'a salama." },
         ],
       },
     ],

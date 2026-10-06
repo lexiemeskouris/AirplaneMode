@@ -39,6 +39,7 @@ type TileProps = {
   chipB: string;
   cta: string;
   gated?: boolean;
+  comingSoon?: boolean | undefined;
   // Explicitly undefined-able: an itinerary with no link passes undefined
   // through, and exactOptionalPropertyTypes rejects a bare optional.
   bmcUrl?: string | undefined;
@@ -49,7 +50,8 @@ type TileProps = {
  * lines up: fixed 4:5 cover, clamped summary, and the link pinned to the bottom.
  */
 function Tile(props: TileProps) {
-  const { kind, slug, cover, title, summary, tags, chipA, chipB, cta, gated, bmcUrl } = props;
+  const { kind, slug, cover, title, summary, tags, chipA, chipB, cta, gated, comingSoon, bmcUrl } =
+    props;
 
   const to = kind === "itinerary" ? "/itineraries/$slug" : "/recommendations/$slug";
   const linkProps = { to, params: { slug } } as const;
@@ -73,7 +75,7 @@ function Tile(props: TileProps) {
             height={1000}
             loading="lazy"
             className={`aspect-square w-full bg-secondary object-cover transition-transform duration-500 group-hover:scale-[1.04] ${
-              gated ? "grayscale group-hover:grayscale-0" : ""
+              gated || comingSoon ? "grayscale group-hover:grayscale-0" : ""
             }`}
           />
           )}
@@ -89,6 +91,11 @@ function Tile(props: TileProps) {
           {gated && (
             <span className="rounded-full bg-primary px-2.5 py-1 text-[0.65rem] font-extrabold tracking-tight text-primary-foreground shadow-sm">
               SUPPORTER
+            </span>
+          )}
+          {comingSoon && (
+            <span className="rounded-full bg-foreground px-2.5 py-1 text-[0.65rem] font-extrabold tracking-tight text-background shadow-sm">
+              COMING SOON
             </span>
           )}
         </div>
@@ -127,7 +134,7 @@ function Tile(props: TileProps) {
         <Link
           {...linkProps}
           className={`mt-auto inline-flex w-fit items-center pt-5 text-sm font-bold transition-transform hover:translate-x-1 ${
-            gated ? "text-muted-foreground" : "text-primary"
+            gated || comingSoon ? "text-muted-foreground" : "text-primary"
           }`}
         >
           {cta}
@@ -146,7 +153,7 @@ function Tile(props: TileProps) {
 }
 
 function Index() {
-  const free = itineraries.filter((i) => !i.gated);
+  const free = itineraries.filter((i) => !i.gated && !i.comingSoon);
   const gated = itineraries.filter((i) => i.gated);
   const wheel = useSpinWheel();
 
@@ -203,8 +210,15 @@ function Index() {
               tags={it.tags}
               chipA={it.season.toUpperCase()}
               chipB={it.duration.toUpperCase()}
-              cta={it.gated ? "Read the free sample" : "View full sprint"}
+              cta={
+                it.comingSoon
+                  ? "Coming soon"
+                  : it.gated
+                    ? "Read the free sample"
+                    : "View full sprint"
+              }
               gated={it.gated}
+              comingSoon={it.comingSoon}
               bmcUrl={it.bmcUrl}
             />
           ))}
