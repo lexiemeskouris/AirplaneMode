@@ -418,6 +418,17 @@ const CAPTIONS: Record<string, string> = {
   "tallinn/04.jpg": "Buns and a black coffee.",
   "tallinn/05.jpg": "Craning up at St Olaf's Church.",
   "tallinn/06.jpg": "A very large beer.",
+
+  // Stockholm.
+  "stockholm/01-w.jpg": "The Riksdag and Riddarholmen, from the water by Norrbro.",
+  "stockholm/02.jpg": "Down a Gamla Stan street to the water.",
+  "stockholm/03.jpg": "The Frithiof steamboat, flags up in the evening sun.",
+  "stockholm/04.jpg": "Three of us by the steamboats on the quay.",
+  "stockholm/05.jpg": "Four faces in the cutout at ABBA The Museum.",
+  "stockholm/06.jpg": "Ring Ring, and the red phone only ABBA can call.",
+  "stockholm/07.jpg": "Out in Södermalm, the four of us.",
+  "stockholm/08.jpg": "In a 1907 doorway, on the way home.",
+  "stockholm/09.jpg": "The late-night Max burger stop.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
