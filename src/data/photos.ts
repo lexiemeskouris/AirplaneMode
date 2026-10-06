@@ -403,6 +403,13 @@ const CAPTIONS: Record<string, string> = {
   "brussels/03.jpg": "A Liège waffle, warm and in a napkin.",
   "brussels/04.jpg": "Two cones of frites, sauce on top.",
   "brussels/05.jpg": "On St Michael's Bridge in Ghent, with the church behind.",
+
+  // Helsinki.
+  "helsinki/01.jpg": "Warming up by the fire at Löyly, between saunas.",
+  "helsinki/02.jpg": "Climbing out of the Baltic, still smiling somehow.",
+  "helsinki/03.jpg": "On the cathedral steps above the Christmas market in Senate Square.",
+  "helsinki/04.jpg": "A pie from the market, with sour cream and pomegranate.",
+  "helsinki/05.jpg": "Sausages over the fire at Cafe Regatta.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
