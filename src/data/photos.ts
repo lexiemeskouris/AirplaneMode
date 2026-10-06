@@ -483,6 +483,11 @@ const CAPTIONS: Record<string, string> = {
   "miami/07.jpg": "Flames and smoke over the dance floor.",
   "miami/08.jpg": "Blue lasers over the crowd, from the balcony.",
   "miami/09.jpg": "Dressed up by the pool, at the end of the night.",
+
+  // Charleston.
+  "charleston/01.jpg": "On the porch above the dunes, before going out.",
+  "charleston/02.jpg": "Two scoops in a charcoal cone.",
+  "charleston/03-w.jpg": "On the party bus, tiara on.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
