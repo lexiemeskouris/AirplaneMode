@@ -217,6 +217,13 @@ const CAPTIONS: Record<string, string> = {
   "saudi-arabia/07.jpg": "In a tomb doorway at Hegra, under the eagle the Nabataeans carved there.",
   "saudi-arabia/08.jpg": "Sandstone and a mackerel sky, around Hegra.",
   "saudi-arabia/09.jpg": "The pool at the resort, under the cliffs.",
+
+  // Victoria Falls.
+  "victoria-falls/01-w.jpg": "Loretta's Coffee and Smoothie Caravan, in town.",
+  "victoria-falls/02.jpg": "The falls from the Zimbabwe side, with the spray coming off the gorge.",
+  "victoria-falls/03-w.jpg": "Sunset over the waterhole from the Victoria Falls Safari Lodge.",
+  "victoria-falls/04.jpg": "High tea at the Victoria Falls Hotel: scones, sandwiches and red macarons.",
+  "victoria-falls/05.jpg": "The hotel lawn, with the spray and the bridge out past the trees.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
