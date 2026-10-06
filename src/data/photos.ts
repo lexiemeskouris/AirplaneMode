@@ -396,6 +396,13 @@ const CAPTIONS: Record<string, string> = {
   "edinburgh/01.jpg": "Snow on the hills above Loch Tulla, as the light went.",
   "edinburgh/02.jpg": "Under the Three Sisters in Glencoe.",
   "edinburgh/03.jpg": "On the bridge at Fort Augustus, at the bottom of Loch Ness.",
+
+  // Brussels.
+  "brussels/01.jpg": "Manneken Pis, dressed as a customs officer that day.",
+  "brussels/02.jpg": "The Church of Sainte-Catherine, on a grey morning.",
+  "brussels/03.jpg": "A Liège waffle, warm and in a napkin.",
+  "brussels/04.jpg": "Two cones of frites, sauce on top.",
+  "brussels/05.jpg": "On St Michael's Bridge in Ghent, with the church behind.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
