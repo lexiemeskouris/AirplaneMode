@@ -472,6 +472,17 @@ const CAPTIONS: Record<string, string> = {
   "new-york/04.jpg": "A cheeseburger with pickles on the side.",
   "new-york/05.jpg": "Lower Manhattan from a rooftop, as the lights came on.",
   "new-york/06.jpg": "The Rockefeller Center tree, presents in hand.",
+
+  // Miami.
+  "miami/01-w.jpg": "Pink clouds over the beach, as the sun went.",
+  "miami/02.jpg": "Barefoot on the sand at dusk.",
+  "miami/03-w.jpg": "Six of us piled onto a beach cabana.",
+  "miami/04.jpg": "Neapolitan pizzas, a margherita and a truffle.",
+  "miami/05.jpg": "Dinner round one table, espresso martinis first.",
+  "miami/06.jpg": "Brickell lit up below, from a window high above it.",
+  "miami/07.jpg": "Flames and smoke over the dance floor.",
+  "miami/08.jpg": "Blue lasers over the crowd, from the balcony.",
+  "miami/09.jpg": "Dressed up by the pool, at the end of the night.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
