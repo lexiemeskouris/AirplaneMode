@@ -375,6 +375,10 @@ const CAPTIONS: Record<string, string> = {
   "ireland/11.jpg": "Blarney House, across the lawn.",
   "ireland/12-w.jpg": "In front of Blarney House.",
   "ireland/13.jpg": "A pie with mash and slaw, in a box.",
+
+  // Mallorca.
+  "mallorca/01.jpg": "The pool, with the Tramuntana behind the palms.",
+  "mallorca/02-w.jpg": "Late sun on the beach at Port de Sóller.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
