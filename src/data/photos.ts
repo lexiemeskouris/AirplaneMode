@@ -265,6 +265,14 @@ const CAPTIONS: Record<string, string> = {
   "malta/07.jpg": "Outside Andrew's Bar, est. 1909.",
   "malta/08.jpg": "Three pizzas and a bowl of potatoes.",
   "malta/09.jpg": "Sunset over the bay.",
+
+  // Madeira.
+  "madeira/01.jpg": "The toboggan run down from Monte, with the photos to prove it.",
+  "madeira/02.jpg": "Chicken, rice, chips and a fried egg.",
+  "madeira/03.jpg": "In the back of the jeep, on the day out to the north.",
+  "madeira/04.jpg": "The town hall on Praça do Município, in Funchal.",
+  "madeira/05.jpg": "Sunrise on Pico do Arieiro, above the cloud.",
+  "madeira/06.jpg": "The Botanical Garden, with Funchal and the sea below.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };
