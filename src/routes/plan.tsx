@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { PLAN_EMAIL, PLAN_ENDPOINT, TESTIMONIALS } from "@/data/site";
+import { PLAN_ENDPOINT, TESTIMONIALS } from "@/data/site";
 
 const TITLE = "Plan My Trip - AirplaneMode";
 const DESCRIPTION =
@@ -215,13 +215,6 @@ function PlanPage() {
         <h2 className="font-display text-3xl font-extrabold tracking-tight text-foreground">
           Tell me about the trip
         </h2>
-        <p className="mt-2 text-muted-foreground">
-          Or just email me at{" "}
-          <a href={`mailto:${PLAN_EMAIL}`} className="font-bold text-primary hover:underline">
-            {PLAN_EMAIL}
-          </a>
-          .
-        </p>
 
         {status === "sent" ? (
           <div className="mt-8 rounded-3xl border border-border bg-card p-8">
@@ -366,7 +359,7 @@ function PlanPage() {
               </button>
               {status === "error" && (
                 <p className="text-sm font-semibold text-primary">
-                  That did not go through. Email me instead at {PLAN_EMAIL}.
+                  That did not go through. Try again in a moment.
                 </p>
               )}
             </div>

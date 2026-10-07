@@ -16,10 +16,10 @@ export const SUGGEST_ENDPOINT: string = "";
 export const SUGGESTIONS_ENABLED = SUGGEST_ENDPOINT.length > 0;
 
 /**
- * Where bespoke trip-planning requests go. The plan page shows this address
- * and posts its form to it through FormSubmit, which needs no account: the
- * first submission sends a one-time activation email to this address, and
- * every request after that lands in the inbox.
+ * Where bespoke trip-planning requests go. The plan page posts its form here
+ * through FormSubmit, which needs no account: the first submission sends a
+ * one-time activation email to this address, and every request after that
+ * lands in the inbox. The address is not shown on the page.
  */
 export const PLAN_EMAIL = "lexie.meskouris@gmail.com";
 export const PLAN_ENDPOINT = `https://formsubmit.co/ajax/${PLAN_EMAIL}`;
