@@ -38,4 +38,22 @@ export const TESTIMONIALS: Testimonial[] = [
     name: "Zoe B",
     location: "New York",
   },
+  {
+    quote:
+      "Lexie helped stretch my budget further than I could have for a month-long vacation in Europe. Highly recommend.",
+    name: "Sabrina S",
+    location: "New York",
+  },
+  {
+    quote:
+      "Lexie took me off the beaten path. I was apprehensive to repeat destinations because I thought I'd done everything the city had to offer, and she showed me a whole new side to London.",
+    name: "Kassidy M",
+    location: "New York",
+  },
+  {
+    quote:
+      "Lexie curated a vibe on our trip that no other travel agent could have executed. She just got exactly what I was looking for in terms of restaurants and cocktail bars.",
+    name: "Jess H",
+    location: "New York",
+  },
 ];
