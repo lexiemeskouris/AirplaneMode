@@ -23,7 +23,14 @@ export const Route = createFileRoute("/plan")({
 type Budget = "$" | "$$" | "$$$" | "$$$$";
 
 /** Per person, in US dollars. $$ is how the itineraries on this site are pitched. */
-const BUDGETS: { tier: Budget; name: string; lines: string[]; mine?: boolean }[] = [
+const BUDGETS: {
+  tier: Budget;
+  name: string;
+  lines: string[];
+  /** A London restaurant at this price, so the tier means something concrete. */
+  example: string;
+  mine?: boolean;
+}[] = [
   {
     tier: "$",
     name: "Shoestring",
@@ -32,6 +39,7 @@ const BUDGETS: { tier: Budget; name: string; lines: string[]; mine?: boolean }[]
       "Meals under $50 per person, most well under",
       "Free sights, walking and public transport",
     ],
+    example: "Slayer Pizza",
   },
   {
     tier: "$$",
@@ -40,27 +48,30 @@ const BUDGETS: { tier: Budget; name: string; lines: string[]; mine?: boolean }[]
     lines: [
       "Under $100 a night per person to stay",
       "Most meals under $50 per person",
-      "One or two nice dinners at $100 or more, depending on the wine",
+      "One or two nice dinners at $100 or more per person",
       "A few paid tours, and maybe one splurge day",
     ],
+    example: "Briciole in Marylebone, or a nicer night at Canteen",
   },
   {
     tier: "$$$",
     name: "Comfortable",
     lines: [
       "$100 to $250 a night per person to stay",
-      "A good dinner most nights, around $100 per person",
+      "A nice sit-down dinner every night, including but not limited to tasting menus and Michelin stars",
       "Private or small-group tours, and taxis over buses",
     ],
+    example: "Bottarga",
   },
   {
     tier: "$$$$",
     name: "Splurge",
     lines: [
       "$250 or more a night per person to stay",
-      "Tasting menus and the hard-to-book tables",
+      "High-end menus and luxury experiences, like private chefs and private rooms at restaurants",
       "Private guides and drivers, and the experiences worth flying for",
     ],
+    example: "Lita",
   },
 ];
 
@@ -153,6 +164,9 @@ function PlanPage() {
                   <li key={l}>{l}</li>
                 ))}
               </ul>
+              <p className="mt-4 border-t border-border pt-3 text-sm text-foreground">
+                <span className="font-bold">In London:</span> {b.example}
+              </p>
             </div>
           ))}
         </div>
