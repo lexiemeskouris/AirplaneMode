@@ -316,6 +316,7 @@ export const itineraries: Itinerary[] = [
       "Mosaics in the morning, Carthage in the afternoon, and a beach club an hour down the coast.",
     cover: tunisia,
     gated: true,
+    bmcUrl: "https://buymeacoffee.com/lexiemeskouris/e/584146",
     teaser:
       "Based in Sidi Bou Said, with everything else reached by taxi: the Bardo and the Medina one day, Hammamet the next, and the blue-and-white streets saved for the walk to the airport.",
     tags: ["#Carthage", "#SidiBouSaid", "#Bambalouni"],
@@ -4464,6 +4465,7 @@ export const itineraries: Itinerary[] = [
       "Whale watching, a wicker toboggan down a hill, and a sunrise hike between the two highest peaks.",
     cover: madeira,
     gated: true,
+    bmcUrl: "https://buymeacoffee.com/lexiemeskouris/e/584147",
     teaser:
       "Three days out of Funchal and hard-run: a boat, a cable car, a jeep tour of the north, and a 06:00 bus to catch sunrise on Pico do Arieiro before walking to Pico Ruivo.",
     tags: ["#PicoDoArieiro", "#Toboggan", "#Levada"],
@@ -5291,6 +5293,7 @@ export const itineraries: Itinerary[] = [
       "Northern lights, a fjord cruise, and dog sledding, with a sauna and cold plunge in between.",
     cover: tromso,
     gated: true,
+    bmcUrl: "https://buymeacoffee.com/lexiemeskouris/e/584148",
     teaser:
       "Three days inside the Arctic Circle with one big booked thing each day. The town itself takes an afternoon, and the rest is weather.",
     tags: ["#NorthernLights", "#DogSledding", "#Fjords"],
@@ -6719,6 +6722,7 @@ export const itineraries: Itinerary[] = [
       "Riyadh and Diriyah, a night in the desert, then AlUla for Hegra, Maraya and the stars.",
     cover: saudiArabia,
     gated: true,
+    bmcUrl: "https://buymeacoffee.com/lexiemeskouris/e/584145",
     teaser:
       "Three days in Riyadh and three in AlUla, run as a London Business School trek. Some of it you can copy exactly. One day of it you cannot, and I have said so where it comes up.",
     tags: ["#Hegra", "#AlUla", "#EmptyQuarter"],
