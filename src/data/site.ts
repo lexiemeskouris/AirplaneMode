@@ -24,11 +24,18 @@ export const SUGGESTIONS_ENABLED = SUGGEST_ENDPOINT.length > 0;
 export const PLAN_EMAIL = "lexie.meskouris@gmail.com";
 export const PLAN_ENDPOINT = `https://formsubmit.co/ajax/${PLAN_EMAIL}`;
 
-export type Testimonial = { quote: string; name: string; trip?: string };
+export type Testimonial = { quote: string; name: string; location?: string };
 
 /**
  * Client testimonials for the plan page. Real quotes only, from people who
  * have actually had a trip planned; the section stays hidden while this is
  * empty rather than shipping invented ones.
  */
-export const TESTIMONIALS: Testimonial[] = [];
+export const TESTIMONIALS: Testimonial[] = [
+  {
+    quote:
+      "Lexie was super communicative and happy to talk through all the nitty-gritty details. She made me feel really supported the whole way through, and kept checking in while I was away.",
+    name: "Zoe B",
+    location: "New York",
+  },
+];

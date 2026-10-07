@@ -27,8 +27,11 @@ const BUDGETS: {
   tier: Budget;
   name: string;
   lines: string[];
-  /** A London restaurant at this price, so the tier means something concrete. */
-  example: string;
+  /** A London restaurant and hotel at this price, so the tier means something concrete. */
+  eat: string;
+  stay: string;
+  /** An optional step up within the tier. */
+  beyond?: string;
   mine?: boolean;
 }[] = [
   {
@@ -39,7 +42,8 @@ const BUDGETS: {
       "Meals under $50 per person, most well under",
       "Free sights, walking and public transport",
     ],
-    example: "Slayer Pizza",
+    eat: "Slayer Pizza",
+    stay: "An Airbnb or a hostel, depending on the size of the group",
   },
   {
     tier: "$$",
@@ -51,7 +55,8 @@ const BUDGETS: {
       "One or two nice dinners at $100 or more per person",
       "A few paid tours, and maybe one splurge day",
     ],
-    example: "Briciole in Marylebone, or a nicer night at Canteen",
+    eat: "Briciole or Canteen",
+    stay: "An aparthotel",
   },
   {
     tier: "$$$",
@@ -61,7 +66,8 @@ const BUDGETS: {
       "A nice sit-down dinner every night, including but not limited to tasting menus and Michelin stars",
       "Private or small-group tours, and taxis over buses",
     ],
-    example: "Bottarga",
+    eat: "Bottarga",
+    stay: "A Hilton, or a hotel of that standard",
   },
   {
     tier: "$$$$",
@@ -71,7 +77,9 @@ const BUDGETS: {
       "High-end menus and luxury experiences, like private chefs and private rooms at restaurants",
       "Private guides and drivers, and the experiences worth flying for",
     ],
-    example: "Lita",
+    eat: "Lita",
+    stay: "The Londoner, or the JW Marriott",
+    beyond: "Ultra-luxury: Claridge's or The Connaught",
   },
 ];
 
@@ -164,9 +172,16 @@ function PlanPage() {
                   <li key={l}>{l}</li>
                 ))}
               </ul>
-              <p className="mt-4 border-t border-border pt-3 text-sm text-foreground">
-                <span className="font-bold">In London:</span> {b.example}
-              </p>
+              <div className="mt-4 space-y-1.5 border-t border-border pt-3 text-sm text-foreground">
+                <p className="font-bold">For example, in London:</p>
+                <p>
+                  <span className="font-bold">Eat:</span> {b.eat}
+                </p>
+                <p>
+                  <span className="font-bold">Stay:</span> {b.stay}
+                </p>
+                {b.beyond && <p className="text-muted-foreground">{b.beyond}</p>}
+              </div>
             </div>
           ))}
         </div>
@@ -185,7 +200,9 @@ function PlanPage() {
                 </blockquote>
                 <figcaption className="mt-4 text-sm font-bold text-foreground">
                   {t.name}
-                  {t.trip && <span className="font-normal text-muted-foreground">, {t.trip}</span>}
+                  {t.location && (
+                    <span className="font-normal text-muted-foreground">, {t.location}</span>
+                  )}
                 </figcaption>
               </figure>
             ))}
