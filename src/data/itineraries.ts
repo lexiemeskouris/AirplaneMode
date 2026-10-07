@@ -43,6 +43,7 @@ import cardiff from "@/assets/cardiff.jpg";
 import peru from "@/assets/peru.jpg";
 import saudiArabia from "@/assets/saudi-arabia.jpg";
 import slovenia from "@/assets/slovenia.jpg";
+import romania from "@/assets/romania.jpg";
 
 /** A named venue, with its map link if we have a real one. */
 export type Place = {
@@ -7056,6 +7057,22 @@ export const itineraries: Itinerary[] = [
         places: [{ name: "Burek Olimpija", near: "Ljubljana, Slovenia" }],
       },
     ],
+  },
+  {
+    slug: "romania",
+    title: "Romania",
+    destination: "Romania",
+    country: "Romania",
+    coords: { lat: 45.5152, lon: 25.3672 },
+    duration: "TBC",
+    season: "TBC",
+    summary: "The plan for Romania is still being written up.",
+    teaser: "This one is still being written up. Check back soon.",
+    cover: romania,
+    gated: false,
+    comingSoon: true,
+    tags: ["#Romania"],
+    highlights: [],
   },
 ];
 
