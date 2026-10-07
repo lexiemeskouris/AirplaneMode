@@ -105,6 +105,13 @@ function SiteHeader() {
           >
             About
           </Link>
+          <Link
+            to="/plan"
+            activeProps={{ className: "text-accent" }}
+            className="text-foreground/80 transition-colors hover:text-accent"
+          >
+            Plan my trip
+          </Link>
           {SUGGESTIONS_ENABLED && (
             <Link
               to="/suggest"
@@ -157,6 +164,9 @@ function SiteFooter() {
             </Link>
             <Link to="/about" className="transition-colors hover:text-accent">
               About
+            </Link>
+            <Link to="/plan" className="transition-colors hover:text-accent">
+              Plan my trip
             </Link>
             {SUGGESTIONS_ENABLED && (
               <Link to="/suggest" className="transition-colors hover:text-accent">

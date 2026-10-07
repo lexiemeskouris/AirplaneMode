@@ -14,3 +14,21 @@
 export const SUGGEST_ENDPOINT: string = "";
 
 export const SUGGESTIONS_ENABLED = SUGGEST_ENDPOINT.length > 0;
+
+/**
+ * Where bespoke trip-planning requests go. The plan page shows this address
+ * and posts its form to it through FormSubmit, which needs no account: the
+ * first submission sends a one-time activation email to this address, and
+ * every request after that lands in the inbox.
+ */
+export const PLAN_EMAIL = "lexie.meskouris@gmail.com";
+export const PLAN_ENDPOINT = `https://formsubmit.co/ajax/${PLAN_EMAIL}`;
+
+export type Testimonial = { quote: string; name: string; trip?: string };
+
+/**
+ * Client testimonials for the plan page. Real quotes only, from people who
+ * have actually had a trip planned; the section stays hidden while this is
+ * empty rather than shipping invented ones.
+ */
+export const TESTIMONIALS: Testimonial[] = [];
