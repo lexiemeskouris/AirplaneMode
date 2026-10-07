@@ -42,6 +42,7 @@ import morocco from "@/assets/morocco.jpg";
 import cardiff from "@/assets/cardiff.jpg";
 import peru from "@/assets/peru.jpg";
 import saudiArabia from "@/assets/saudi-arabia.jpg";
+import slovenia from "@/assets/slovenia.jpg";
 
 /** A named venue, with its map link if we have a real one. */
 export type Place = {
@@ -6923,6 +6924,136 @@ export const itineraries: Itinerary[] = [
           "Shukran, thank you. Law samaht or law samahti, please. Ma'a salama, goodbye.",
           "Yalla, let's go, which you will hear constantly and start saying yourself.",
         ],
+      },
+    ],
+  },
+  {
+    slug: "slovenia",
+    title: "Three Days in Ljubljana and Lake Bled",
+    destination: "Ljubljana",
+    country: "Slovenia",
+    coords: { lat: 46.0569, lon: 14.5058 },
+    duration: "3 days",
+    season: "Autumn",
+    summary:
+      "Two evenings in Ljubljana either side of a day trip to Lake Bled, with cream cake and the view over the island.",
+    teaser:
+      "Based in Ljubljana, landing on an evening and flying out on one. The middle day is Lake Bled by bus: the walk round the lake, the short steep climb for the postcard view, then wine and cake before heading back for dinner.",
+    cover: slovenia,
+    gated: false,
+    tags: ["#LakeBled", "#Ljubljana", "#BledCake"],
+    highlights: [
+      "The full walk around Lake Bled, about 6 km",
+      "The climb up Ojstrica for the classic view over the island",
+      "Wine and cheese at Čarman, then Bled cake at Zima",
+      "The Old Town, the Triple Bridge and the Dragon Bridge",
+      "Snacks at the Central Market before the flight",
+    ],
+    days: [
+      {
+        day: "Arrival",
+        title: "Land, Then Dinner at Julija",
+        activities: [
+          {
+            time: "17:15",
+            description: "Land at Ljubljana Airport.",
+            places: [{ name: "Ljubljana Airport", near: "Slovenia" }],
+          },
+          {
+            description:
+              "Public bus or a shuttle into Ljubljana, and check in. The public bus runs from the airport to the central bus station.",
+            places: [{ name: "Ljubljana Bus Station", near: "Ljubljana, Slovenia" }],
+          },
+          {
+            time: "20:00",
+            description: "Dinner at Julija.",
+            places: [{ name: "Julija", near: "Ljubljana, Slovenia" }],
+          },
+        ],
+      },
+      {
+        day: "Day One",
+        title: "Lake Bled",
+        activities: [
+          { description: "Wake up at leisure." },
+          {
+            description: "Brunch at Lana's Corner.",
+            places: [{ name: "Lana's Corner", near: "Ljubljana, Slovenia" }],
+          },
+          {
+            description: "Bus to Lake Bled, an hour to an hour and a half.",
+            places: [{ name: "Lake Bled", near: "Slovenia" }],
+          },
+          { description: "Walk around the lake at an easy pace. The full circuit is 6 km." },
+          {
+            description:
+              "Climb Ojstrica for the classic view over the island. It is short but steep, about twenty minutes uphill through the forest.",
+            places: [{ name: "Ojstrica", near: "Bled, Slovenia" }],
+          },
+          {
+            time: "16:00",
+            description: "Wine and cheese at Čarman.",
+            places: [{ name: "Wine Bar & Restaurant Čarman", near: "Bled, Slovenia" }],
+          },
+          {
+            description: "Traditional Bled cream cake at Zima.",
+            places: [{ name: "Slaščičarna Zima", near: "Bled, Slovenia" }],
+          },
+          { description: "Bus back to Ljubljana, an hour to an hour and a half." },
+          {
+            description: "Dinner at Breg.",
+            places: [{ name: "Breg", near: "Ljubljana, Slovenia" }],
+          },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "The Old Town, Then Home",
+        activities: [
+          { description: "Wake up at leisure." },
+          { time: "11:00", description: "Check out." },
+          {
+            description: "Matcha at Munchies, or coffee at Stow 2 Go, or both.",
+            places: [
+              { name: "Munchies", near: "Ljubljana, Slovenia" },
+              { name: "Stow 2 Go", near: "Ljubljana, Slovenia" },
+            ],
+          },
+          {
+            description: "Brunch at Le Petit Café.",
+            places: [{ name: "Le Petit Café", near: "Ljubljana, Slovenia" }],
+          },
+          {
+            description: "Explore the Old Town, starting at the Franciscan Church, then the Triple Bridge.",
+            places: [
+              { name: "Franciscan Church of the Annunciation", near: "Ljubljana, Slovenia" },
+              { name: "Triple Bridge", near: "Ljubljana, Slovenia" },
+            ],
+          },
+          {
+            description: "Snacks at the Central Market.",
+            places: [{ name: "Central Market", near: "Ljubljana, Slovenia" }],
+          },
+          {
+            description: "The Dragon Bridge.",
+            places: [{ name: "Dragon Bridge", near: "Ljubljana, Slovenia" }],
+          },
+          { time: "18:30", description: "Leave for the airport, about 47 minutes." },
+          { time: "21:15", description: "Flight, landing at Heathrow at 22:35." },
+        ],
+      },
+    ],
+    extras: [
+      {
+        title: "Other dinners",
+        places: [
+          { name: "Landerik", near: "Ljubljana, Slovenia" },
+          { name: "Aftr", near: "Ljubljana, Slovenia" },
+        ],
+      },
+      {
+        title: "Late night food",
+        places: [{ name: "Burek Olimpija", near: "Ljubljana, Slovenia" }],
       },
     ],
   },
