@@ -3781,6 +3781,7 @@ export const itineraries: Itinerary[] = [
       "Island-hopping between Santa Cruz and San Cristóbal by ferry, snorkelling everything in between.",
     cover: galapagos,
     gated: true,
+    bmcUrl: "https://buymeacoffee.com/lexiemeskouris/e/584143",
     teaser:
       "Three stays and two ferries across two islands. Tortoises by bike, a whole day on one hike, and sea lions at La Lobería. The tips at the bottom are the part worth reading twice.",
     tags: ["#Galapagos", "#Snorkelling", "#SeaLions"],
