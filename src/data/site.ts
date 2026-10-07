@@ -36,7 +36,7 @@ export const TESTIMONIALS: Testimonial[] = [
     quote:
       "Lexie was super communicative and happy to talk through all the nitty-gritty details. She made me feel really supported the whole way through, and kept checking in while I was away.",
     name: "Zoe B",
-    location: "New York",
+    location: "Los Angeles",
   },
   {
     quote:
@@ -48,7 +48,7 @@ export const TESTIMONIALS: Testimonial[] = [
     quote:
       "Lexie took me off the beaten path. I was apprehensive to repeat destinations because I thought I'd done everything the city had to offer, and she showed me a whole new side to London.",
     name: "Kassidy M",
-    location: "New York",
+    location: "Phoenix",
   },
   {
     quote:
