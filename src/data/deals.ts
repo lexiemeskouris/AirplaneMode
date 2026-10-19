@@ -93,6 +93,14 @@ export const deals: Deal[] = [
     url: secretFoodTours(citySlug),
     page,
   })),
+  {
+    city: "Tromsø",
+    country: "Norway",
+    operator: "Panion",
+    tour: "Northern Lights safari",
+    url: "https://www.panion.travel/p/lexiemesko",
+    page: it("tromso"),
+  },
 ];
 
 /** Deals to show on one itinerary or guide page. */
