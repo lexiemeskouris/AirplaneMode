@@ -12,7 +12,9 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as AllRouteImport } from './routes/all'
+import { Route as DealsRouteImport } from './routes/deals'
 import { Route as PlanRouteImport } from './routes/plan'
+import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as SuggestRouteImport } from './routes/suggest'
 import { Route as ItinerariesSlugRouteImport } from './routes/itineraries.$slug'
 import { Route as RecommendationsSlugRouteImport } from './routes/recommendations.$slug'
@@ -32,9 +34,19 @@ const AllRoute = AllRouteImport.update({
   path: '/all',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DealsRoute = DealsRouteImport.update({
+  id: '/deals',
+  path: '/deals',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PlanRoute = PlanRouteImport.update({
   id: '/plan',
   path: '/plan',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReviewsRoute = ReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SuggestRoute = SuggestRouteImport.update({
@@ -57,7 +69,9 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/all': typeof AllRoute
+  '/deals': typeof DealsRoute
   '/plan': typeof PlanRoute
+  '/reviews': typeof ReviewsRoute
   '/suggest': typeof SuggestRoute
   '/itineraries/$slug': typeof ItinerariesSlugRoute
   '/recommendations/$slug': typeof RecommendationsSlugRoute
@@ -66,7 +80,9 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/all': typeof AllRoute
+  '/deals': typeof DealsRoute
   '/plan': typeof PlanRoute
+  '/reviews': typeof ReviewsRoute
   '/suggest': typeof SuggestRoute
   '/itineraries/$slug': typeof ItinerariesSlugRoute
   '/recommendations/$slug': typeof RecommendationsSlugRoute
@@ -76,7 +92,9 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/all': typeof AllRoute
+  '/deals': typeof DealsRoute
   '/plan': typeof PlanRoute
+  '/reviews': typeof ReviewsRoute
   '/suggest': typeof SuggestRoute
   '/itineraries/$slug': typeof ItinerariesSlugRoute
   '/recommendations/$slug': typeof RecommendationsSlugRoute
@@ -87,7 +105,9 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/all'
+    | '/deals'
     | '/plan'
+    | '/reviews'
     | '/suggest'
     | '/itineraries/$slug'
     | '/recommendations/$slug'
@@ -96,7 +116,9 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/all'
+    | '/deals'
     | '/plan'
+    | '/reviews'
     | '/suggest'
     | '/itineraries/$slug'
     | '/recommendations/$slug'
@@ -105,7 +127,9 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/all'
+    | '/deals'
     | '/plan'
+    | '/reviews'
     | '/suggest'
     | '/itineraries/$slug'
     | '/recommendations/$slug'
@@ -115,7 +139,9 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   AllRoute: typeof AllRoute
+  DealsRoute: typeof DealsRoute
   PlanRoute: typeof PlanRoute
+  ReviewsRoute: typeof ReviewsRoute
   SuggestRoute: typeof SuggestRoute
   ItinerariesSlugRoute: typeof ItinerariesSlugRoute
   RecommendationsSlugRoute: typeof RecommendationsSlugRoute
@@ -144,11 +170,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AllRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/deals': {
+      id: '/deals'
+      path: '/deals'
+      fullPath: '/deals'
+      preLoaderRoute: typeof DealsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/plan': {
       id: '/plan'
       path: '/plan'
       fullPath: '/plan'
       preLoaderRoute: typeof PlanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reviews': {
+      id: '/reviews'
+      path: '/reviews'
+      fullPath: '/reviews'
+      preLoaderRoute: typeof ReviewsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/suggest': {
@@ -179,7 +219,9 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   AllRoute: AllRoute,
+  DealsRoute: DealsRoute,
   PlanRoute: PlanRoute,
+  ReviewsRoute: ReviewsRoute,
   SuggestRoute: SuggestRoute,
   ItinerariesSlugRoute: ItinerariesSlugRoute,
   RecommendationsSlugRoute: RecommendationsSlugRoute,

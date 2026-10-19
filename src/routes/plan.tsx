@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PLAN_ENDPOINT, TESTIMONIALS } from "@/data/site";
+import { TestimonialCard } from "@/components/Testimonials";
 
 const TITLE = "Plan My Trip - AirplaneMode";
 const DESCRIPTION =
@@ -194,17 +195,7 @@ function PlanPage() {
           </h2>
           <div className="mt-6 grid gap-4 md:grid-cols-2">
             {TESTIMONIALS.map((t) => (
-              <figure key={t.quote} className="rounded-2xl border border-border bg-card p-6">
-                <blockquote className="text-lg leading-relaxed text-foreground/90">
-                  "{t.quote}"
-                </blockquote>
-                <figcaption className="mt-4 text-sm font-bold text-foreground">
-                  {t.name}
-                  {t.location && (
-                    <span className="font-normal text-muted-foreground">, {t.location}</span>
-                  )}
-                </figcaption>
-              </figure>
+              <TestimonialCard key={t.name} t={t} />
             ))}
           </div>
         </section>

@@ -5,6 +5,8 @@ import { photosFor } from "@/data/photos";
 import { BMC_URL } from "@/data/itineraries";
 import { ActivityList, placeHref, placeLinkClass } from "@/lib/places";
 import { getGuide, guides } from "@/data/guides";
+import { DealsBlock } from "@/components/Deals";
+import { dealsFor } from "@/data/deals";
 
 export const Route = createFileRoute("/recommendations/$slug")({
   loader: ({ params }) => {
@@ -115,6 +117,8 @@ function GuidePage() {
           ))}
         </ul>
       )}
+
+      <DealsBlock deals={dealsFor("recommendation", g.slug)} />
 
       <ChildTiles parent={g.slug} />
 

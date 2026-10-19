@@ -74,63 +74,64 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
+function navLinks() {
+  return [
+    { to: "/", label: "Feed" },
+    { to: "/all", label: "A-Z" },
+    { to: "/plan", label: "Plan my trip" },
+    { to: "/deals", label: "Tour deals" },
+    { to: "/reviews", label: "Reviews" },
+    { to: "/about", label: "About" },
+    ...(SUGGESTIONS_ENABLED ? [{ to: "/suggest", label: "Suggest" }] : []),
+  ] as const;
+}
+
 function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6 md:py-4">
         <Link to="/" className="flex items-center gap-2">
           <span className="font-display text-2xl font-extrabold tracking-tighter text-primary">
             AIRPLANEMODE
           </span>
         </Link>
         <nav className="hidden items-center gap-8 text-sm font-bold md:flex">
-          <Link
-            to="/"
-            activeProps={{ className: "text-accent" }}
-            className="text-foreground/80 transition-colors hover:text-accent"
-          >
-            Feed
-          </Link>
-          <Link
-            to="/all"
-            activeProps={{ className: "text-accent" }}
-            className="text-foreground/80 transition-colors hover:text-accent"
-          >
-            A-Z
-          </Link>
-          <Link
-            to="/about"
-            activeProps={{ className: "text-accent" }}
-            className="text-foreground/80 transition-colors hover:text-accent"
-          >
-            About
-          </Link>
-          <Link
-            to="/plan"
-            activeProps={{ className: "text-accent" }}
-            className="text-foreground/80 transition-colors hover:text-accent"
-          >
-            Plan my trip
-          </Link>
-          {SUGGESTIONS_ENABLED && (
+          {navLinks().map((l) => (
             <Link
-              to="/suggest"
+              key={l.to}
+              to={l.to}
+              activeOptions={{ exact: l.to === "/" }}
               activeProps={{ className: "text-accent" }}
               className="text-foreground/80 transition-colors hover:text-accent"
             >
-              Suggest
+              {l.label}
             </Link>
-          )}
+          ))}
         </nav>
         <a
           href={BMC_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:scale-105 active:scale-95"
+          className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:scale-105 active:scale-95 md:px-5 md:py-2.5"
         >
           ☕ Support
         </a>
       </div>
+      {/* Phones get the same links as a swipeable row of tabs, so nothing
+          sits behind a scroll to the footer. */}
+      <nav className="flex gap-2 overflow-x-auto px-4 pb-3 text-sm font-bold [scrollbar-width:none] md:hidden [&::-webkit-scrollbar]:hidden">
+        {navLinks().map((l) => (
+          <Link
+            key={l.to}
+            to={l.to}
+            activeOptions={{ exact: l.to === "/" }}
+            activeProps={{ className: "!bg-primary !text-primary-foreground" }}
+            className="shrink-0 whitespace-nowrap rounded-full bg-secondary px-4 py-2 text-foreground/80"
+          >
+            {l.label}
+          </Link>
+        ))}
+      </nav>
       {/* The reference image's four bands, as the header's bottom edge. */}
       <div aria-hidden className="flex h-1 w-full">
         <div className="flex-1 bg-brand-red" />
@@ -164,6 +165,12 @@ function SiteFooter() {
             </Link>
             <Link to="/about" className="transition-colors hover:text-accent">
               About
+            </Link>
+            <Link to="/deals" className="transition-colors hover:text-accent">
+              Tour deals
+            </Link>
+            <Link to="/reviews" className="transition-colors hover:text-accent">
+              Reviews
             </Link>
             <Link to="/plan" className="transition-colors hover:text-accent">
               Plan my trip

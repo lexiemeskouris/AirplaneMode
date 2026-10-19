@@ -3,6 +3,8 @@ import { PhotoStrip, TikTokLink } from "@/components/PhotoStrip";
 import { photosFor } from "@/data/photos";
 import { getItinerary, itineraries, BMC_URL } from "@/data/itineraries";
 import { ActivityList, placeHref, placeLinkClass } from "@/lib/places";
+import { DealsBlock } from "@/components/Deals";
+import { dealsFor } from "@/data/deals";
 
 export const Route = createFileRoute("/itineraries/$slug")({
   loader: ({ params }) => {
@@ -146,6 +148,8 @@ function ItineraryDetail() {
           ))}
         </ul>
       )}
+
+      <DealsBlock deals={dealsFor("itinerary", it.slug)} />
 
       {it.comingSoon && (
         <section className="mt-12 rounded-[2rem] bg-foreground p-8 text-center text-background md:p-12">
