@@ -419,7 +419,7 @@ export const itineraries: Itinerary[] = [
           {
             time: "14:00",
             description:
-              "Berlin 2-hour Third Reich and Cold War Combo Tour, booked through Viator. Meet at the Quadriga on Pariser Platz.",
+              "Berlin 2-hour Third Reich and Cold War Combo Tour, booked through Viator. Meet at the Quadriga on Pariser Platz. Insider Tour runs it, and code LEXIE10 gets 10% off any tour booked on their own site.",
             places: [
               {
                 name: "Berlin 2-hour Third Reich and Cold War Combo Tour",

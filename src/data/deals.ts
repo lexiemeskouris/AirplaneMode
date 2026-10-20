@@ -94,6 +94,15 @@ export const deals: Deal[] = [
     page,
   })),
   {
+    city: "Berlin",
+    country: "Germany",
+    operator: "Insider Tour",
+    tour: "Third Reich, Cold War, Potsdam and Sachsenhausen walking tours",
+    url: "https://www.insidertour.com/",
+    discount: "10% off with code LEXIE10, on any public or private tour except shore excursions",
+    page: it("berlin"),
+  },
+  {
     city: "Tromsø",
     country: "Norway",
     operator: "Panion",
