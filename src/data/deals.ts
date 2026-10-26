@@ -103,6 +103,14 @@ export const deals: Deal[] = [
     page: it("berlin"),
   },
   {
+    city: "Cape Town",
+    country: "South Africa",
+    operator: "Hotspots2c",
+    tour: "Cape day tours, Winelands, Garden Route trips and safaris",
+    url: "https://t.ly/airplanemode",
+    page: it("south-africa"),
+  },
+  {
     city: "Tromsø",
     country: "Norway",
     operator: "Panion",
