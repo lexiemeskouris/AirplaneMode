@@ -5,6 +5,7 @@ import { getItinerary, itineraries, BMC_URL } from "@/data/itineraries";
 import { ActivityList, placeHref, placeLinkClass } from "@/lib/places";
 import { DealsBlock } from "@/components/Deals";
 import { dealsFor } from "@/data/deals";
+import { ZoomableImage } from "@/components/Lightbox";
 
 export const Route = createFileRoute("/itineraries/$slug")({
   loader: ({ params }) => {
@@ -84,7 +85,7 @@ function ItineraryDetail() {
       {/* Cover, when there is one. An itinerary can go up before its photos do. */}
       <div className="mt-8 overflow-hidden rounded-[2rem] shadow-2xl">
         {it.cover ? (
-          <img
+          <ZoomableImage
             src={it.cover}
             alt={it.title}
             width={1200}

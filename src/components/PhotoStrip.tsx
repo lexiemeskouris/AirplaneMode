@@ -1,4 +1,6 @@
+import { useState } from "react";
 import type { Photo } from "@/data/photos";
+import { Lightbox } from "@/components/Lightbox";
 
 /**
  * The camera roll for a page. A grid rather than CSS columns: columns read top
@@ -15,6 +17,7 @@ export function PhotoStrip({
   title?: string;
   compact?: boolean;
 }) {
+  const [opened, setOpened] = useState<number | null>(null);
   if (photos.length === 0) return null;
 
   return (
@@ -33,21 +36,21 @@ export function PhotoStrip({
           compact ? "mt-4 sm:grid-cols-3" : "mt-6 sm:grid-cols-3 lg:grid-cols-4"
         }`}
       >
-        {photos.map((photo) => (
+        {photos.map((photo, i) => (
           <figure
             key={photo.src}
             className={`flex flex-col overflow-hidden rounded-2xl border border-border bg-card ${
               photo.wide ? "col-span-2" : ""
             }`}
           >
-            <img
-              src={photo.src}
-              alt={photo.alt}
-              loading="lazy"
-              className={`w-full object-cover ${
-                photo.wide ? "aspect-[3/2]" : "aspect-[3/4]"
-              }`}
-            />
+            <button type="button" onClick={() => setOpened(i)} className="cursor-zoom-in">
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                loading="lazy"
+                className={`w-full object-cover ${photo.wide ? "aspect-[3/2]" : "aspect-[3/4]"}`}
+              />
+            </button>
             {photo.caption && (
               <figcaption className="px-4 py-3 text-sm leading-snug text-muted-foreground">
                 {photo.caption}
@@ -56,6 +59,7 @@ export function PhotoStrip({
           </figure>
         ))}
       </div>
+      <Lightbox photos={photos} index={opened} onClose={() => setOpened(null)} />
     </section>
   );
 }

@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { itineraries, BMC_URL } from "@/data/itineraries";
 import lexie from "@/assets/lexie.jpg";
+import { ZoomableImage } from "@/components/Lightbox";
 
 const TIKTOK_URL = "https://www.tiktok.com/@lexiemesko";
 
@@ -86,7 +87,7 @@ function AboutPage() {
         </div>
 
         <figure className="order-first md:order-last md:sticky md:top-28">
-          <img
+          <ZoomableImage
             src={lexie}
             alt="Lexie, in a yellow dress and a straw hat, on a porch in the hills"
             width={768}

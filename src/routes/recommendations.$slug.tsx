@@ -7,6 +7,7 @@ import { ActivityList, placeHref, placeLinkClass } from "@/lib/places";
 import { getGuide, guides } from "@/data/guides";
 import { DealsBlock } from "@/components/Deals";
 import { dealsFor } from "@/data/deals";
+import { ZoomableImage } from "@/components/Lightbox";
 
 export const Route = createFileRoute("/recommendations/$slug")({
   loader: ({ params }) => {
@@ -80,7 +81,7 @@ function GuidePage() {
       </div>
 
       {g.cover ? (
-        <img
+        <ZoomableImage
           src={g.cover}
           alt={g.title}
           width={1000}
