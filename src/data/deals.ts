@@ -111,6 +111,16 @@ export const deals: Deal[] = [
     page: it("south-africa"),
   },
   {
+    city: "Cusco",
+    country: "Peru",
+    operator: "Alpaca Expeditions",
+    tour: "Inca Trail and Machu Picchu treks",
+    url: "https://www.alpacaexpeditions.com/",
+    discount:
+      "Free equipment rentals: write Lexie - Free rentals in Special Requests or Additional Comments when you book",
+    page: it("peru"),
+  },
+  {
     city: "Tromsø",
     country: "Norway",
     operator: "Panion",

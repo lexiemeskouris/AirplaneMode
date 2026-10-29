@@ -6614,7 +6614,7 @@ export const itineraries: Itinerary[] = [
           },
           {
             description:
-              "Worth adding when you book: an air mattress, walking sticks and a sleeping bag rental, plus the Huayna Picchu permit. The permit is a separate ticket with its own limited slots, so add it at the time or you will not get it later.",
+              "Worth adding when you book: an air mattress, walking sticks and a sleeping bag rental, plus the Huayna Picchu permit. Write Lexie - Free rentals in Special Requests or Additional Comments and Alpaca adds the rental equipment free. The permit is a separate ticket with its own limited slots, so add it at the time or you will not get it later.",
           },
           { description: "Night in camp on the trail." },
         ],
