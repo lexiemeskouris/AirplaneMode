@@ -6,10 +6,10 @@ import { ZoomableImage } from "@/components/Lightbox";
 const TIKTOK_URL = "https://www.tiktok.com/@lexiemesko";
 
 /** Countries visited. Counted by me, not derivable from the pages here. */
-const COUNTRIES = 47;
+const COUNTRIES = 50;
 
 const DESCRIPTION =
-  "An American in London doing an MBA at London Business School, 47 countries in and aiming for all of them. Most of the itineraries are free to read.";
+  "An ex-consultant turned MBA candidate in London, 50 countries in and aiming for all of them. Most of the itineraries are free to read.";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -39,41 +39,39 @@ function AboutPage() {
       <div className="mt-10 grid gap-10 md:grid-cols-[1.35fr_1fr] md:items-start">
         <div className="order-last space-y-5 text-lg leading-relaxed text-foreground/90 md:order-first">
           <p>
-            I am an American living in London, here for my MBA at London
-            Business School. I have always loved to travel, and since I started
-            working I have spent pretty much every day off going somewhere.
+            Hi, and welcome to my site! I’m Lexie, an ex-consultant turned MBA
+            candidate, and I’ve been living in London for almost two years. I
+            have always loved to travel, and since I started working, I have
+            spent every PTO day out of town.
           </p>
           <p>
-            It started properly in 2020. I studied abroad in London, fell in
-            love with the city, and two months in COVID hit and I was sent home.
-            I never got to finish it, and the itch never went away, so I came
-            back and did my degree here instead.
+            In 2020, I studied abroad in London and fell in love with the city,
+            but two months in, COVID hit and I was sent home. The itch to live
+            abroad and travel every weekend never went away, so I came back and
+            started my degree here instead.
           </p>
           <p>
-            That puts me at {COUNTRIES} countries, with a few more trips already
-            booked. The goal is every country in the world. Business school has
-            given me a schedule flexible enough to actually go after it.
+            I just hit {COUNTRIES} countries and have quite a few more in the
+            works. My ultimate goal is to travel to every country in the world
+            and share my experiences with others who love travel as much as I
+            do.
           </p>
           <p>
-            The itineraries here are the ones I build for myself, posted the way
-            I used them. Real places, hour by hour, in the order I did them.
-            Take them and change them. Every bar, beach and trailhead is named
-            and linked, so you can pull the map up and decide for yourself what
-            is worth keeping.
+            I built every itinerary on my site for my own travel. I like to keep
+            my days jam-packed with activities, food, sightseeing and so on, so
+            feel free to slice and dice them however you please. I’m also more
+            than happy to connect and offer tailored support as you plan your
+            own travels (or to drive the bus and plan for you, taking into
+            account who you’re traveling with, when you’re going, and what you
+            like to do most).
           </p>
           <p>
-            Almost all of it is free to read in full. A handful of the longer
-            trips are supporter deep dives: one day is free to read, and a
-            coffee gets you the whole plan. There is nothing to sign up to, and
-            I will never ask for your email.
+            If you like an itinerary, please consider supporting me through the
+            button in the top-right corner, so I can keep offering these for
+            free.
           </p>
           <p>
-            Eventually I want this to be a proper travel agency, planning real
-            trips instead of only publishing the plans. This site is where that
-            starts.
-          </p>
-          <p>
-            The rest of it is on TikTok,{" "}
+            The plans are here; the rest is on TikTok,{" "}
             <a
               href={TIKTOK_URL}
               target="_blank"
@@ -82,7 +80,7 @@ function AboutPage() {
             >
               @lexiemesko
             </a>
-            . The plans are here.
+            .
           </p>
         </div>
 
