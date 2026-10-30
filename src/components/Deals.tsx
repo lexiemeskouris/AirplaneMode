@@ -30,6 +30,9 @@ export function DealsBlock({ deals }: { deals: Deal[] }) {
             {d.discount && (
               <span className="mt-1 block text-sm font-bold text-accent">{d.discount}</span>
             )}
+            {d.mention && (
+              <span className="mt-1 block text-sm font-semibold text-foreground/80">{d.mention}</span>
+            )}
           </li>
         ))}
       </ul>

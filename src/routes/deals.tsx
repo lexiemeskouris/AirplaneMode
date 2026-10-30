@@ -27,6 +27,7 @@ function byCountry(list: Deal[]): [string, Deal[]][] {
 }
 
 function TripLink({ deal }: { deal: Deal }) {
+  if (!deal.page) return null;
   const className =
     "text-sm font-semibold text-muted-foreground underline decoration-muted-foreground/30 underline-offset-4 transition-colors hover:text-accent";
   return deal.page.kind === "itinerary" ? (
@@ -80,6 +81,9 @@ function DealsPage() {
                   </a>
                   {d.discount && (
                     <span className="text-sm font-bold text-accent">{d.discount}</span>
+                  )}
+                  {d.mention && (
+                    <span className="text-sm font-semibold text-foreground/80">{d.mention}</span>
                   )}
                   <TripLink deal={d} />
                 </li>

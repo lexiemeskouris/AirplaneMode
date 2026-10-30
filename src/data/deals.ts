@@ -3,6 +3,8 @@
  * and on the itinerary or guide it belongs to, so the link sits next to the
  * trip that used it.
  */
+export type DealPage = { kind: "itinerary" | "recommendation"; slug: string };
+
 export type Deal = {
   /** Where the tour runs, as the reader would search for it. */
   city: string;
@@ -16,8 +18,17 @@ export type Deal = {
    * discount, rather than claiming one that is not there.
    */
   discount?: string;
-  /** The itinerary (or guide) page this deal is shown on. */
-  page: { kind: "itinerary" | "recommendation"; slug: string };
+  /**
+   * What to quote when enquiring, for partners that attribute bookings by
+   * code rather than by link.
+   */
+  mention?: string;
+  /**
+   * The itinerary (or guide) page this deal is shown on. Left out for a
+   * partner in a place with no trip page yet; it then shows on the deals page
+   * only.
+   */
+  page?: DealPage;
 };
 
 /**
@@ -31,10 +42,10 @@ function secretFoodTours(citySlug: string): string {
   );
 }
 
-type SftCity = [city: string, country: string, citySlug: string, page: Deal["page"]];
+type SftCity = [city: string, country: string, citySlug: string, page: DealPage];
 
-const it = (slug: string): Deal["page"] => ({ kind: "itinerary", slug });
-const rec = (slug: string): Deal["page"] => ({ kind: "recommendation", slug });
+const it = (slug: string): DealPage => ({ kind: "itinerary", slug });
+const rec = (slug: string): DealPage => ({ kind: "recommendation", slug });
 
 /** Every city I have been to that Secret Food Tours runs a tour in. */
 const SFT_CITIES: SftCity[] = [
@@ -121,6 +132,14 @@ export const deals: Deal[] = [
     page: it("peru"),
   },
   {
+    city: "Kilimanjaro",
+    country: "Tanzania",
+    operator: "Monkey Adventures",
+    tour: "Kilimanjaro treks",
+    url: "https://monkey.travel/en/usd/",
+    mention: "Quote referral code 21731580 when you enquire or book",
+  },
+  {
     city: "Tromsø",
     country: "Norway",
     operator: "Panion",
@@ -131,6 +150,6 @@ export const deals: Deal[] = [
 ];
 
 /** Deals to show on one itinerary or guide page. */
-export function dealsFor(kind: Deal["page"]["kind"], slug: string): Deal[] {
-  return deals.filter((d) => d.page.kind === kind && d.page.slug === slug);
+export function dealsFor(kind: DealPage["kind"], slug: string): Deal[] {
+  return deals.filter((d) => d.page?.kind === kind && d.page.slug === slug);
 }
