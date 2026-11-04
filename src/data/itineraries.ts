@@ -7282,6 +7282,16 @@ export const itineraries: Itinerary[] = [
   },
 ];
 
+/**
+ * The place an itinerary covers, from its title: "Six Days in Tuscany and
+ * Cinque Terre" becomes "Tuscany and Cinque Terre". Home page cards show this,
+ * since the length is already in the duration chip.
+ */
+export function placeName(title: string): string {
+  const place = title.replace(/^\S+ (Days?|Nights?) in /, "");
+  return place.charAt(0).toUpperCase() + place.slice(1);
+}
+
 export function getItinerary(slug: string): Itinerary | undefined {
   return itineraries.find((i) => i.slug === slug);
 }

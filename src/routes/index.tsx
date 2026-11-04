@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { itineraries, BMC_URL } from "@/data/itineraries";
+import { itineraries, BMC_URL, placeName } from "@/data/itineraries";
 import { guides } from "@/data/guides";
 import { SUGGESTIONS_ENABLED } from "@/data/site";
 import { SpinWheel, useSpinWheel } from "@/components/SpinWheel";
@@ -205,7 +205,7 @@ function Index() {
               kind="itinerary"
               slug={it.slug}
               cover={it.cover}
-              title={it.title}
+              title={placeName(it.title)}
               summary={it.summary}
               tags={it.tags}
               chipA={it.season.toUpperCase()}
