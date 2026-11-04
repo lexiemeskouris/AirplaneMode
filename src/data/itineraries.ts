@@ -5232,7 +5232,8 @@ export const itineraries: Itinerary[] = [
       "A private chef cooking four courses at the villa",
       "The breakfast buffet at the Principe di Piemonte, the best breakfast in Italy",
       "Cannoli at Il Pirata delle Cinque Terre in Vernazza",
-      "Making pesto and tasting wine at Cinque Sensi",
+      "A pesto-making class at Nessun Dorma in Manarola",
+      "A wine tasting at Cinque Sensi in Vernazza",
       "Gelato at Alberto in Corniglia",
     ],
     days: [
@@ -5315,16 +5316,20 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "Il Pirata delle Cinque Terre", near: "Vernazza, Italy" }],
           },
           {
-            description: "A pesto-making class and a wine tasting at Cinque Sensi.",
+            description: "A wine tasting at Cinque Sensi.",
             places: [{ name: "Cinque Sensi", near: "Vernazza, Italy" }],
           },
         ],
       },
       {
         day: "Day Six",
-        title: "Corniglia",
+        title: "Manarola and Corniglia",
         activities: [
           { description: "More hiking from the La Spezia base." },
+          {
+            description: "A pesto-making class at Nessun Dorma, looking out over Manarola.",
+            places: [{ name: "Nessun Dorma", near: "Manarola, Italy" }],
+          },
           {
             description: "Gelato at Alberto, there since 1999.",
             places: [{ name: "Alberto Gelateria", near: "Corniglia, Italy" }],
