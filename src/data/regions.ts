@@ -7,8 +7,7 @@ export const REGIONS = [
   "Europe",
   "The Americas",
   "Asia",
-  "Middle East and North Africa",
-  "Africa",
+  "Middle East and Africa",
   "Elsewhere",
 ] as const;
 
@@ -55,15 +54,14 @@ const BY_COUNTRY: Record<string, Region> = {
   Taiwan: "Asia",
   Thailand: "Asia",
   Vietnam: "Asia",
-  // Middle East and North Africa
-  Egypt: "Middle East and North Africa",
-  Morocco: "Middle East and North Africa",
-  "Saudi Arabia": "Middle East and North Africa",
-  Tunisia: "Middle East and North Africa",
-  // Africa
-  "South Africa": "Africa",
-  Tanzania: "Africa",
-  "Zimbabwe and Zambia": "Africa",
+  // Middle East and Africa
+  Egypt: "Middle East and Africa",
+  Morocco: "Middle East and Africa",
+  "Saudi Arabia": "Middle East and Africa",
+  Tunisia: "Middle East and Africa",
+  "South Africa": "Middle East and Africa",
+  Tanzania: "Middle East and Africa",
+  "Zimbabwe and Zambia": "Middle East and Africa",
 };
 
 export function regionOf(country: string): Region {

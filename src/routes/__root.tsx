@@ -156,7 +156,7 @@ function SiteFooter() {
               High-energy itineraries for the restless traveler.
             </p>
           </div>
-          <div className="flex items-center gap-6 text-sm font-semibold text-muted-foreground">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-semibold text-muted-foreground">
             <Link to="/" className="transition-colors hover:text-accent">
               Feed
             </Link>

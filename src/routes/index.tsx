@@ -3,7 +3,8 @@ import { itineraries, BMC_URL, placeName } from "@/data/itineraries";
 import { guides } from "@/data/guides";
 import { SUGGESTIONS_ENABLED } from "@/data/site";
 import { SpinWheel, useSpinWheel } from "@/components/SpinWheel";
-import { REGIONS, regionId, regionOf } from "@/data/regions";
+import { REGIONS, regionId, regionOf, type Region } from "@/data/regions";
+import { useEffect, useState } from "react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -58,12 +59,12 @@ function Tile(props: TileProps) {
   const linkProps = { to, params: { slug } } as const;
 
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-shadow duration-300 hover:shadow-xl">
+    <article className="group flex h-full min-w-0 flex-col overflow-hidden rounded-2xl sm:rounded-3xl border border-border bg-card shadow-sm transition-shadow duration-300 hover:shadow-xl">
       <div className="relative overflow-hidden">
         <Link {...linkProps} className="block">
           {!cover ? (
             // No photo yet: a brand panel rather than a broken tile.
-            <div className="flex aspect-square w-full items-center justify-center bg-brand-indigo px-4">
+            <div className="flex aspect-[4/3] w-full items-center justify-center bg-brand-indigo px-4 sm:aspect-square">
               <span className="text-center font-display text-xl font-extrabold leading-tight tracking-tight text-background">
                 {title}
               </span>
@@ -75,14 +76,14 @@ function Tile(props: TileProps) {
             width={1000}
             height={1000}
             loading="lazy"
-            className={`aspect-square w-full bg-secondary object-cover transition-transform duration-500 group-hover:scale-[1.04] ${
+            className={`aspect-[4/3] w-full bg-secondary sm:aspect-square object-cover transition-transform duration-500 group-hover:scale-[1.04] ${
               gated || comingSoon ? "grayscale group-hover:grayscale-0" : ""
             }`}
           />
           )}
         </Link>
 
-        <div className="pointer-events-none absolute inset-x-3 top-3 z-10 flex flex-wrap gap-1.5">
+        <div className="pointer-events-none absolute inset-x-2 top-2 z-10 flex flex-wrap gap-1 sm:inset-x-3 sm:top-3 sm:gap-1.5">
           <span className="rounded-full bg-brand-yellow px-2.5 py-1 text-[0.65rem] font-extrabold tracking-tight text-foreground shadow-sm">
             {chipA}
           </span>
@@ -107,7 +108,7 @@ function Tile(props: TileProps) {
               href={bmcUrl ?? BMC_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full rounded-xl bg-accent px-3 py-2.5 text-center text-xs font-bold text-accent-foreground shadow-lg transition-transform hover:scale-[1.03]"
+              className="w-full rounded-xl bg-accent px-2 py-2 text-center text-[0.65rem] sm:px-3 sm:py-2.5 sm:text-xs font-bold text-accent-foreground shadow-lg transition-transform hover:scale-[1.03]"
             >
               Buy a coffee to unlock
             </a>
@@ -115,17 +116,19 @@ function Tile(props: TileProps) {
         )}
       </div>
 
-      <div className="flex flex-1 flex-col p-5">
-        <h2 className="font-display text-xl font-extrabold leading-tight tracking-tight text-foreground">
+      <div className="flex flex-1 flex-col p-3 sm:p-5">
+        <h2 className="hyphens-auto font-display text-base font-extrabold leading-tight tracking-tight text-foreground [overflow-wrap:anywhere] sm:text-xl sm:[overflow-wrap:normal]">
           <Link {...linkProps}>{title}</Link>
         </h2>
         {/* Clamped so a long summary cannot make one tile taller than its row. */}
-        <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-muted-foreground">{summary}</p>
-        <div className="mt-4 flex flex-wrap gap-1.5">
-          {tags.slice(0, 3).map((t) => (
+        <p className="mt-2 hidden text-sm sm:line-clamp-3 leading-relaxed text-muted-foreground">{summary}</p>
+        <div className="mt-2 flex flex-wrap gap-1 sm:mt-4 sm:gap-1.5">
+          {tags.slice(0, 3).map((t, i) => (
             <span
               key={t}
-              className="rounded-lg bg-brand-pink px-2 py-1 text-[0.65rem] font-bold text-foreground"
+              className={`rounded-lg bg-brand-pink px-2 py-1 text-[0.65rem] font-bold text-foreground ${
+                i >= 2 ? "hidden sm:inline-block" : ""
+              }`}
             >
               {t}
             </span>
@@ -134,7 +137,7 @@ function Tile(props: TileProps) {
         {/* mt-auto pins the link to the bottom so it lines up across the row. */}
         <Link
           {...linkProps}
-          className={`mt-auto inline-flex w-fit items-center pt-5 text-sm font-bold transition-transform hover:translate-x-1 ${
+          className={`mt-auto hidden w-fit items-center pt-5 sm:inline-flex text-sm font-bold transition-transform hover:translate-x-1 ${
             gated || comingSoon ? "text-muted-foreground" : "text-primary"
           }`}
         >
@@ -151,6 +154,69 @@ function Tile(props: TileProps) {
       </div>
     </article>
   );
+}
+
+/**
+ * The continent buttons. Pinned just under the site header so they stay
+ * reachable halfway down Europe, with the section in view highlighted.
+ */
+function ContinentNav({ regions }: { regions: Region[] }) {
+  const [top, setTop] = useState(0);
+  const [active, setActive] = useState<Region | null>(null);
+
+  useEffect(() => {
+    const header = document.querySelector("header");
+    if (!header) return;
+    const measure = () => setTop(header.getBoundingClientRect().height);
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(header);
+    return () => ro.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const onScroll = () => {
+      // The last section whose heading has passed the line under the bars.
+      const line = top + 120;
+      let current: Region | null = null;
+      for (const r of regions) {
+        const el = document.getElementById(regionId(r));
+        if (el && el.getBoundingClientRect().top <= line) current = r;
+      }
+      setActive(current);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [regions, top]);
+
+  return (
+    <nav
+      aria-label="Jump to a continent"
+      style={{ top }}
+      className="sticky z-40 -mx-6 mb-10 flex gap-2 overflow-x-auto bg-background/90 px-6 py-3 backdrop-blur-xl"
+    >
+      {regions.map((region) => (
+        <a
+          key={region}
+          href={`#${regionId(region)}`}
+          aria-current={active === region ? "true" : undefined}
+          className={`shrink-0 rounded-full border px-4 py-1.5 text-sm font-bold transition-colors ${
+            active === region
+              ? "border-primary bg-primary text-primary-foreground"
+              : "border-border text-foreground hover:border-primary hover:text-primary"
+          }`}
+        >
+          {region}
+        </a>
+      ))}
+    </nav>
+  );
+}
+
+/** A guide's card name: just the place, since the RECS chip says the rest. */
+function cardTitle(title: string): string {
+  return title.replace(/ Recommendations$/, "");
 }
 
 function Index() {
@@ -201,14 +267,14 @@ function Index() {
         // undersell a guide that is sixty pieces of advice.
         return {
           region: regionOf(g.country),
-          sortKey: g.title,
+          sortKey: cardTitle(g.title),
           node: (
             <Tile
               key={g.slug}
               kind="recommendation"
               slug={g.slug}
               cover={g.cover}
-              title={g.title}
+              title={cardTitle(g.title)}
               summary={g.summary}
               tags={g.tags}
               chipA={g.label ?? "RECS"}
@@ -268,28 +334,15 @@ function Index() {
           section, A to Z by place within it, so everything for one part of
           the world sits together. */}
       <section className="mx-auto max-w-7xl px-6 pb-32">
-        <nav
-          aria-label="Jump to a continent"
-          className="-mx-6 mb-10 flex gap-2 overflow-x-auto px-6 py-1"
-        >
-          {sections.map(({ region }) => (
-            <a
-              key={region}
-              href={`#${regionId(region)}`}
-              className="shrink-0 rounded-full border border-border px-4 py-1.5 text-sm font-bold text-foreground transition-colors hover:border-primary hover:text-primary"
-            >
-              {region}
-            </a>
-          ))}
-        </nav>
+        <ContinentNav regions={sections.map((x) => x.region)} />
 
         <div className="space-y-16">
           {sections.map(({ region, tiles }) => (
-            <section key={region} id={regionId(region)} className="scroll-mt-28">
+            <section key={region} id={regionId(region)} className="scroll-mt-40">
               <h2 className="mb-6 font-display text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
                 {region}
               </h2>
-              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="grid grid-cols-2 gap-3 sm:gap-8 lg:grid-cols-4">
                 {tiles.map((t) => t.node)}
               </div>
             </section>
