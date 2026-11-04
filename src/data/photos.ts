@@ -379,6 +379,10 @@ const CAPTIONS: Record<string, string> = {
   // Mallorca.
   "mallorca/01.jpg": "The pool, with the Tramuntana behind the palms.",
   "mallorca/02-w.jpg": "Late sun on the beach at Port de Sóller.",
+  "mallorca/03.jpg": "Off the little plane from Mallorca.",
+  "mallorca/04.jpg": "The giant rabbit outside Tantra Ibiza.",
+  "mallorca/05.jpg": "In crochet, at lunch by the sea.",
+  "mallorca/06.jpg": "If lost, return to Emma. If lost, return to Lexie.",
 
   // Lisbon.
   "lisbon/01-w.jpg": "Dom João I on horseback in Praça da Figueira, with a gull on his helmet.",
