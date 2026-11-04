@@ -7136,6 +7136,8 @@ export const itineraries: Itinerary[] = [
     highlights: [
       "The Halloween party at Bran Castle, with incredible DJs and everyone dressed all out",
       "The neighbourhood at the base of the castle, full of food and drink stands",
+      "Smash burgers from the food truck outside the party tent",
+      "A super social crowd of every age, from Americans in Europe to Bulgarians",
       "A morning wandering Brașov's old town",
       "Dinner at Hanu' lui Manuc in Bucharest",
     ],
@@ -7202,7 +7204,15 @@ export const itineraries: Itinerary[] = [
           {
             time: "21:00",
             description:
-              "The party in the tent. The DJs are incredible, and the music only stops for the costume contest. It is not an open bar, but drinks are really inexpensive: a couple of dollars for a shot, and under $10 for a double vodka soda.",
+              "The party in the tent. It is heated and there is a free coat check, and it wasn't super cold out anyway, with a few drinks keeping us warm. The DJs are incredible, and the music only stops for the costume contest. It is not an open bar, but drinks are really inexpensive: a couple of dollars for a shot, and under $10 for a double vodka soda.",
+          },
+          {
+            description:
+              "There is one food truck outside the party, and the rest of the food is down in the neighbourhood. That truck does smash burgers and they were delicious. We indulged so we'd have the fuel to keep going.",
+          },
+          {
+            description:
+              "The crowd is a mixed bag, all ages and all backgrounds, and everyone is super social. Lots of Americans: the ones in their 20s mostly live somewhere in Europe and fly in for it, and the ones around 50 come over from the States out of a pure passion for Halloween. We met Bulgarians too.",
           },
           {
             time: "02:30",
