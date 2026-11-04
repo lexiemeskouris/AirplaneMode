@@ -7115,19 +7115,160 @@ export const itineraries: Itinerary[] = [
   },
   {
     slug: "romania",
-    title: "Romania",
-    destination: "Romania",
+    title: "Four Days in Brașov and Bucharest",
+    destination: "Brașov",
     country: "Romania",
     coords: { lat: 45.5152, lon: 25.3672 },
-    duration: "TBC",
-    season: "TBC",
-    summary: "The plan for Romania is still being written up.",
-    teaser: "This one is still being written up. Check back soon.",
+    duration: "4 days",
+    season: "Autumn",
+    summary:
+      "Halloween at Bran Castle, with a day in Brașov before it and a day in Bucharest after.",
+    teaser:
+      "Built around the Halloween party at Bran Castle, which was obviously the main attraction. Brașov was adorable. Bucharest was not my favourite city.",
     cover: romania,
     gated: false,
-    comingSoon: true,
-    tags: ["#Romania"],
-    highlights: [],
+    tags: ["#Halloween", "#BranCastle", "#Brasov"],
+    notes: [
+      "The party only happens on Halloween, so the whole trip hangs off 31 October.",
+      "I only needed two nights here. The third was excessive.",
+      "Pre-book your transport to and from the party. Taxis out at Bran are very hard to come by.",
+    ],
+    highlights: [
+      "The Halloween party at Bran Castle, with incredible DJs and everyone dressed all out",
+      "The neighbourhood at the base of the castle, full of food and drink stands",
+      "A morning wandering Brașov's old town",
+      "Dinner at Hanu' lui Manuc in Bucharest",
+    ],
+    days: [
+      {
+        day: "Day One",
+        title: "Fly In, Straight to Brașov",
+        activities: [
+          { time: "14:10", description: "Fly London Luton to Bucharest Otopeni, Wizz Air W4 3006." },
+          { time: "19:25", description: "Land in Bucharest." },
+          { description: "Transfer to Brașov." },
+        ],
+      },
+      {
+        day: "Day Two",
+        title: "Brașov, Then Halloween at Bran Castle",
+        activities: [
+          { description: "Wake up at leisure." },
+          {
+            description: "Breakfast at Brunch House on Piața Sfatului.",
+            places: [{ name: "Brunch House", near: "Brașov, Romania" }],
+          },
+          {
+            description: "Walk the old town.",
+            places: [
+              { name: "Piața Sfatului", near: "Brașov, Romania" },
+              { name: "Black Church", near: "Brașov, Romania" },
+              { name: "Strada Sforii", near: "Brașov, Romania" },
+              { name: "Catherine's Gate", near: "Brașov, Romania" },
+              { name: "White Tower", near: "Brașov, Romania", note: "Walk up for the view." },
+              { name: "Black Tower", near: "Brașov, Romania", note: "Another viewpoint over the old town." },
+            ],
+          },
+          { time: "15:00", description: "Back to the Airbnb to rest and get ready for Halloween." },
+          {
+            time: "18:00",
+            description:
+              "Adrian picks you up in his minivan in Brașov and drives you to Bran. 20 euro each, round trip.",
+            places: [
+              {
+                name: "Adrian, Taxi Brașov",
+                url: "https://wa.me/40747928060",
+                note: "WhatsApp +40 747 928 060. Book him ahead for both directions.",
+              },
+            ],
+          },
+          {
+            time: "19:00",
+            description:
+              "The castle tour. The Blood Moon ticket lets you pick a 18:00 or 19:00 slot. We took 19:00 to leave enough time to get ready. The tour is really lame and kitschy, but don't let that deter you.",
+            places: [{ name: "Bran Castle", near: "Bran, Romania" }],
+          },
+          {
+            description:
+              "The neighbourhood at the base of the castle: stands to eat and drink, DJs, and last-minute Halloween costumes. Everyone goes all out on their costumes.",
+            places: [
+              {
+                name: "Restaurant Panoramic",
+                near: "Bran, Romania",
+                note: "Or a drink anywhere near the castle.",
+              },
+            ],
+          },
+          {
+            time: "21:00",
+            description:
+              "The party in the tent. The DJs are incredible, and the music only stops for the costume contest. It is not an open bar, but drinks are really inexpensive: a couple of dollars for a shot, and under $10 for a double vodka soda.",
+          },
+          {
+            time: "02:30",
+            description: "Adrian picks you up. He gives an hour's flexibility either way. We easily could have stayed longer.",
+          },
+        ],
+      },
+      {
+        day: "Day Three",
+        title: "Train to Bucharest",
+        activities: [
+          { description: "Check out of the Airbnb." },
+          { description: "Train to Bucharest." },
+          {
+            description: "Drop bags at the InterContinental Athénée Palace.",
+            places: [{ name: "InterContinental Athénée Palace Bucharest", near: "Bucharest, Romania" }],
+          },
+          {
+            description: "Walk the city, ending in the Old Town.",
+            places: [
+              { name: "Romanian Athenaeum", near: "Bucharest, Romania" },
+              { name: "Calea Victoriei", near: "Bucharest, Romania" },
+              { name: "Revolution Square", near: "Bucharest, Romania" },
+              { name: "Macca-Villacrosse Passage", near: "Bucharest, Romania" },
+              { name: "Stavropoleos Monastery", near: "Bucharest, Romania" },
+              { name: "Cărturești Carusel", near: "Bucharest, Romania" },
+              { name: "Cișmigiu Gardens", near: "Bucharest, Romania" },
+            ],
+          },
+          { description: "Back to the hotel to check in and get ready for dinner." },
+          {
+            description: "Drinks first, if you want them.",
+            places: [
+              { name: "Linea / Closer to the Moon", near: "Bucharest, Romania" },
+            ],
+          },
+          {
+            time: "20:00",
+            description: "Dinner at Hanu' lui Manuc.",
+            places: [{ name: "Hanu' lui Manuc", near: "Bucharest, Romania" }],
+          },
+          { time: "22:00", description: "Drinks around Calea Victoriei or the Old Town, if you're still going." },
+        ],
+      },
+      {
+        day: "Day Four",
+        title: "Fly Home",
+        activities: [
+          { time: "08:30", description: "Breakfast at the hotel." },
+          { time: "09:30", description: "Check out and leave for Bucharest Otopeni." },
+          { time: "11:55", description: "Fly Bucharest Otopeni to London Luton, Wizz Air W4 3005, landing 13:30." },
+        ],
+      },
+    ],
+    extras: [
+      {
+        title: "Also in Bucharest",
+        places: [
+          {
+            name: "Sharkia",
+            near: "Park Inn by Radisson, Bucharest, Romania",
+            note: "Another dinner option, in the Park Inn by Radisson.",
+          },
+        ],
+      },
+    ],
   },
 ];
 
