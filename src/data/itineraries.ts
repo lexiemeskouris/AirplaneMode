@@ -5214,25 +5214,26 @@ export const itineraries: Itinerary[] = [
   },
   {
     slug: "tuscany",
-    title: "Three Days in Tuscany",
+    title: "Six Days in Tuscany and Cinque Terre",
     destination: "Tuscany",
     country: "Italy",
     coords: { lat: 43.7228, lon: 10.4017 },
-    duration: "3 days",
+    duration: "6 days",
     season: "Autumn",
     summary:
-      "A villa, a wine tour, and a private chef. Pisa on the way in and out.",
+      "A villa, vineyards and a private chef, then the train up the coast to Viareggio and La Spezia for the Cinque Terre.",
     cover: tuscany,
     gated: false,
     teaser:
-      "Not really a sightseeing trip. An afternoon in Pisa while the villa gets ready, then two days of a pool, a wine tour, four course dinners and a tennis tournament.",
-    tags: ["#Villa", "#WineTour", "#Pisa"],
+      "Three days at a villa in the Tuscan hills, one night in Viareggio for the best breakfast in Italy, then La Spezia as a base for hiking the Cinque Terre. Trains do all the work after the villa.",
+    tags: ["#Villa", "#Viareggio", "#CinqueTerre"],
     highlights: [
-      "An afternoon in Pisa while the villa is being made ready",
-      "A four course dinner at i'Bacco Toscano",
-      "A wine tour and lunch",
-      "A private chef cooking four courses at the house",
-      "A tennis tournament nobody planned properly",
+      "A wine tour and lunch in the vineyards",
+      "A private chef cooking four courses at the villa",
+      "The breakfast buffet at the Principe di Piemonte, the best breakfast in Italy",
+      "Cannoli at Il Pirata delle Cinque Terre in Vernazza",
+      "Making pesto and tasting wine at Cinque Sensi",
+      "Gelato at Alberto in Corniglia",
     ],
     days: [
       {
@@ -5273,12 +5274,61 @@ export const itineraries: Itinerary[] = [
       },
       {
         day: "Day Three",
-        title: "Brunch, Tennis, Home",
+        title: "Brunch, Tennis, Viareggio",
         activities: [
           { time: "10:00", description: "Check out of one villa and move to the next." },
           { description: "Brunch, cooked at the house." },
           { description: "Tennis tournament." },
-          { time: "16:45", description: "Leave for Pisa airport." },
+          {
+            description: "Back to Pisa and the train up the coast to Viareggio.",
+            places: [{ name: "Viareggio", near: "Italy" }],
+          },
+          {
+            description: "One night at the Grand Hotel Principe di Piemonte.",
+            places: [{ name: "Grand Hotel Principe di Piemonte", near: "Viareggio, Italy" }],
+          },
+        ],
+      },
+      {
+        day: "Day Four",
+        title: "Breakfast, Then La Spezia",
+        activities: [
+          {
+            description:
+              "The breakfast buffet at the hotel. The best breakfast in Italy, and worth the night on its own.",
+            places: [{ name: "Grand Hotel Principe di Piemonte", near: "Viareggio, Italy" }],
+          },
+          {
+            description: "Train to La Spezia, the base for the Cinque Terre.",
+            places: [{ name: "La Spezia", near: "Italy" }],
+          },
+        ],
+      },
+      {
+        day: "Day Five",
+        title: "Vernazza",
+        activities: [
+          { description: "Train out from La Spezia and hike." },
+          {
+            description:
+              "Cannoli at Il Pirata delle Cinque Terre, up the steps on the path out of Vernazza towards Corniglia. Literally unbelievable.",
+            places: [{ name: "Il Pirata delle Cinque Terre", near: "Vernazza, Italy" }],
+          },
+          {
+            description: "A pesto-making class and a wine tasting at Cinque Sensi.",
+            places: [{ name: "Cinque Sensi", near: "Vernazza, Italy" }],
+          },
+        ],
+      },
+      {
+        day: "Day Six",
+        title: "Corniglia",
+        activities: [
+          { description: "More hiking from the La Spezia base." },
+          {
+            description: "Gelato at Alberto, there since 1999.",
+            places: [{ name: "Alberto Gelateria", near: "Corniglia, Italy" }],
+          },
         ],
       },
     ],
