@@ -7185,7 +7185,7 @@ export const itineraries: Itinerary[] = [
           {
             time: "19:00",
             description:
-              "The castle tour. The Blood Moon ticket lets you pick a 18:00 or 19:00 slot. We took 19:00 to leave enough time to get ready. The tour is really lame and kitschy, but don't let that deter you.",
+              "The castle tour. The Blood Moon ticket lets you pick an 18:00 or 19:00 slot. We took 19:00 to leave enough time to get ready. The tour is really lame and kitschy, but don't let that deter you.",
             places: [{ name: "Bran Castle", near: "Bran, Romania" }],
           },
           {
