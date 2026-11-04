@@ -3,6 +3,7 @@ import { itineraries, BMC_URL, placeName } from "@/data/itineraries";
 import { guides } from "@/data/guides";
 import { SUGGESTIONS_ENABLED } from "@/data/site";
 import { SpinWheel, useSpinWheel } from "@/components/SpinWheel";
+import { REGIONS, regionId, regionOf } from "@/data/regions";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -157,6 +158,74 @@ function Index() {
   const gated = itineraries.filter((i) => i.gated);
   const wheel = useSpinWheel();
 
+  const tiles: { region: (typeof REGIONS)[number]; sortKey: string; node: React.ReactNode }[] = [
+    ...itineraries.map((it) => ({
+      region: regionOf(it.country),
+      sortKey: placeName(it.title),
+      node: (
+        <Tile
+          key={it.slug}
+          kind="itinerary"
+          slug={it.slug}
+          cover={it.cover}
+          title={placeName(it.title)}
+          summary={it.summary}
+          tags={it.tags}
+          chipA={it.season.toUpperCase()}
+          chipB={it.duration.toUpperCase()}
+          cta={
+            it.comingSoon
+              ? "Coming soon"
+              : it.gated
+                ? "Read the free sample"
+                : "View full sprint"
+          }
+          gated={it.gated}
+          comingSoon={it.comingSoon}
+          bmcUrl={it.bmcUrl}
+        />
+      ),
+    })),
+    ...guides
+      .filter((g) => !g.parent)
+      .map((g) => {
+        const spots = g.sections.reduce(
+          (n, s) =>
+            n +
+            (s.places?.length ?? 0) +
+            (s.activities?.reduce((m, a) => m + (a.places?.length ?? 0), 0) ?? 0),
+          0,
+        );
+        const tips = g.sections.reduce((n, s) => n + (s.items?.length ?? 0), 0);
+        // Count whichever the page is actually made of: "2 SPOTS" would
+        // undersell a guide that is sixty pieces of advice.
+        return {
+          region: regionOf(g.country),
+          sortKey: g.title,
+          node: (
+            <Tile
+              key={g.slug}
+              kind="recommendation"
+              slug={g.slug}
+              cover={g.cover}
+              title={g.title}
+              summary={g.summary}
+              tags={g.tags}
+              chipA={g.label ?? "RECS"}
+              chipB={spots >= tips ? `${spots} SPOTS` : `${tips} TIPS`}
+              cta="See the list"
+            />
+          ),
+        };
+      }),
+  ];
+  const sections = REGIONS.map((region) => ({
+    region,
+    tiles: tiles
+      .filter((t) => t.region === region)
+      .sort((a, b) => a.sortKey.localeCompare(b.sortKey)),
+  })).filter((s) => s.tiles.length > 0);
+
   return (
     <div>
       <SpinWheel open={wheel.open} onClose={wheel.close} />
@@ -195,59 +264,36 @@ function Index() {
         </div>
       </section>
 
-      {/* Feed - uniform tiles, four to a row on desktop. Itineraries first, then
-          the cities that only have a list of recommendations. */}
+      {/* Feed, by continent. Itineraries and recommendations lists share a
+          section, A to Z by place within it, so everything for one part of
+          the world sits together. */}
       <section className="mx-auto max-w-7xl px-6 pb-32">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {itineraries.map((it) => (
-            <Tile
-              key={it.slug}
-              kind="itinerary"
-              slug={it.slug}
-              cover={it.cover}
-              title={placeName(it.title)}
-              summary={it.summary}
-              tags={it.tags}
-              chipA={it.season.toUpperCase()}
-              chipB={it.duration.toUpperCase()}
-              cta={
-                it.comingSoon
-                  ? "Coming soon"
-                  : it.gated
-                    ? "Read the free sample"
-                    : "View full sprint"
-              }
-              gated={it.gated}
-              comingSoon={it.comingSoon}
-              bmcUrl={it.bmcUrl}
-            />
+        <nav
+          aria-label="Jump to a continent"
+          className="-mx-6 mb-10 flex gap-2 overflow-x-auto px-6 py-1"
+        >
+          {sections.map(({ region }) => (
+            <a
+              key={region}
+              href={`#${regionId(region)}`}
+              className="shrink-0 rounded-full border border-border px-4 py-1.5 text-sm font-bold text-foreground transition-colors hover:border-primary hover:text-primary"
+            >
+              {region}
+            </a>
           ))}
-          {guides.filter((g) => !g.parent).map((g) => {
-            const spots = g.sections.reduce(
-              (n, s) =>
-                n +
-                (s.places?.length ?? 0) +
-                (s.activities?.reduce((m, a) => m + (a.places?.length ?? 0), 0) ?? 0),
-              0,
-            );
-            const tips = g.sections.reduce((n, s) => n + (s.items?.length ?? 0), 0);
-            // Count whichever the page is actually made of: "2 SPOTS" would
-            // undersell a guide that is sixty pieces of advice.
-            return (
-              <Tile
-                key={g.slug}
-                kind="recommendation"
-                slug={g.slug}
-                cover={g.cover}
-                title={g.title}
-                summary={g.summary}
-                tags={g.tags}
-                chipA={g.label ?? "RECS"}
-                chipB={spots >= tips ? `${spots} SPOTS` : `${tips} TIPS`}
-                cta="See the list"
-              />
-            );
-          })}
+        </nav>
+
+        <div className="space-y-16">
+          {sections.map(({ region, tiles }) => (
+            <section key={region} id={regionId(region)} className="scroll-mt-28">
+              <h2 className="mb-6 font-display text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
+                {region}
+              </h2>
+              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                {tiles.map((t) => t.node)}
+              </div>
+            </section>
+          ))}
         </div>
 
         {SUGGESTIONS_ENABLED && (
