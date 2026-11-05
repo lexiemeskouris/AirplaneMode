@@ -134,7 +134,7 @@ function ItineraryDetail() {
 
       {/* The intro, and anything to know before you start, as plain text. */}
       <div className="mt-6 max-w-3xl space-y-3 leading-relaxed text-foreground/90">
-        <p className="text-lg">{it.teaser}</p>
+        {it.teaser && <p>{it.teaser}</p>}
         {(it.notes ?? []).map((n) => (
           <p key={n}>{n}</p>
         ))}
@@ -153,7 +153,7 @@ function ItineraryDetail() {
                 className="rounded-full border border-border bg-card px-3 py-1.5 text-xs font-bold text-foreground"
                 linkClassName="transition-colors hover:border-primary hover:text-primary"
               >
-                {d.day}: {d.title}
+                {d.day}
               </JumpLink>
             ))}
           {(it.extras ?? []).map((g) => (
