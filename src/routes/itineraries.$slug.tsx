@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { PhotoStrip, TikTokLink } from "@/components/PhotoStrip";
+import { PhotoStrip, TikTokLinks } from "@/components/PhotoStrip";
 import { photosFor } from "@/data/photos";
 import { getItinerary, itineraries, BMC_URL } from "@/data/itineraries";
 import { ActivityList, bullet, placeHref, placeLinkClass } from "@/lib/places";
@@ -128,7 +128,7 @@ function ItineraryDetail() {
 
       {it.tiktok && (
         <div className="mt-6">
-          <TikTokLink url={it.tiktok} />
+          <TikTokLinks value={it.tiktok} />
         </div>
       )}
 

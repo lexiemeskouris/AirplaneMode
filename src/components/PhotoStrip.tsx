@@ -69,6 +69,20 @@ export function PhotoStrip({
  * A link out to the TikTok for this trip. A link rather than an embed: the
  * embed script is heavy, and it breaks whenever TikTok changes it.
  */
+/** One or more TikToks; with several, each says what it is. */
+export type TikTok = { url: string; label: string };
+
+export function TikTokLinks({ value }: { value: string | TikTok[] }) {
+  const list = typeof value === "string" ? [{ url: value, label: "Watch it on TikTok" }] : value;
+  return (
+    <div className="flex flex-wrap gap-2">
+      {list.map((t) => (
+        <TikTokLink key={t.url} url={t.url} label={t.label} />
+      ))}
+    </div>
+  );
+}
+
 export function TikTokLink({ url, label }: { url: string; label?: string }) {
   return (
     <a

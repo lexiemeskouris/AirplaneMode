@@ -2,7 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { BackToTop, JumpLink } from "@/components/JumpLink";
 import { findTarget, guideTargets, placeId, sectionId } from "@/lib/anchors";
 import { RoastTable } from "@/components/RoastTable";
-import { PhotoStrip, TikTokLink } from "@/components/PhotoStrip";
+import { PhotoStrip, TikTokLinks } from "@/components/PhotoStrip";
 import { photosFor } from "@/data/photos";
 import { BMC_URL } from "@/data/itineraries";
 import { ActivityList, placeHref, placeLinkClass, bullet } from "@/lib/places";
@@ -112,7 +112,7 @@ function GuidePage() {
 
       {g.tiktok && (
         <div className="mt-6">
-          <TikTokLink url={g.tiktok} />
+          <TikTokLinks value={g.tiktok} />
         </div>
       )}
 
@@ -161,7 +161,7 @@ function GuidePage() {
             )}
             {section.tiktok && (
               <div className="border-b border-border px-5 py-3">
-                <TikTokLink url={section.tiktok} />
+                <TikTokLinks value={section.tiktok} />
               </div>
             )}
             {section.activities && section.activities.length > 0 && (

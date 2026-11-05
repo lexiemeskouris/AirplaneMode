@@ -112,7 +112,7 @@ export type Itinerary = {
   notes?: string[];
   /** Another page on the site that bolts onto this trip. */
   /** A TikTok of the trip, linked from the top of the page. */
-  tiktok?: string;
+  tiktok?: string | import("@/components/PhotoStrip").TikTok[];
   seeAlso?: {
     slug: string;
     kind: "itinerary" | "recommendation";
@@ -285,6 +285,7 @@ export const itineraries: Itinerary[] = [
     coords: { lat: 36.8065, lon: 10.1815 },
     duration: "3 days",
     season: "Autumn",
+    tiktok: "https://www.tiktok.com/@lexiemesko/video/7693668918862384397",
     summary:
       "Mosaics in the morning, Carthage in the afternoon, and a beach club an hour down the coast.",
     cover: tunisia,
@@ -344,6 +345,16 @@ export const itineraries: Itinerary[] = [
     coords: { lat: 52.52, lon: 13.405 },
     duration: "3 days",
     season: "Late Summer",
+    tiktok: [
+      {
+        url: "https://www.tiktok.com/@lexiemesko/video/7693188499339627789",
+        label: "48 hours in Berlin on TikTok",
+      },
+      {
+        url: "https://www.tiktok.com/@lexiemesko/video/7694621358025723150",
+        label: "Getting into Berghain on TikTok",
+      },
+    ],
     summary: "Two nights out, with light days in between.",
     cover: berlin,
     gated: false,
@@ -1233,6 +1244,7 @@ export const itineraries: Itinerary[] = [
     coords: { lat: 55.6761, lon: 12.5683 },
     duration: "3 days",
     season: "Early Spring",
+    tiktok: "https://www.tiktok.com/@lexiemesko/video/7703690095769029902",
     summary: "The whole city on foot, and one very good burger.",
     cover: copenhagen,
     gated: false,
@@ -4098,6 +4110,16 @@ export const itineraries: Itinerary[] = [
     coords: { lat: 32.6669, lon: -16.9241 },
     duration: "3 days",
     season: "Spring",
+    tiktok: [
+      {
+        url: "https://www.tiktok.com/@lexiemesko/photo/7697657242669108493",
+        label: "The Madeira itinerary on TikTok",
+      },
+      {
+        url: "https://www.tiktok.com/@lexiemesko/video/7699502642627677454",
+        label: "Restaurante Informal in Funchal on TikTok",
+      },
+    ],
     summary:
       "Whale watching, a wicker toboggan down a hill, and a sunrise hike between the two highest peaks.",
     cover: madeira,
@@ -4924,6 +4946,7 @@ export const itineraries: Itinerary[] = [
     coords: { lat: 69.6492, lon: 18.9553 },
     duration: "3 days",
     season: "Winter",
+    tiktok: "https://www.tiktok.com/@lexiemesko/video/7700411977352367373",
     summary:
       "Northern lights, a fjord cruise, and dog sledding, with a sauna and cold plunge in between.",
     cover: tromso,
@@ -5165,6 +5188,7 @@ export const itineraries: Itinerary[] = [
     coords: { lat: 35.8997, lon: 14.5146 },
     duration: "3 days",
     season: "Summer",
+    tiktok: "https://www.tiktok.com/@lexiemesko/photo/7697221905467723022",
     summary: "Valletta in a day, big nights in Paceville, and a boat into the Blue Grotto.",
     cover: malta,
     gated: false,
@@ -5314,6 +5338,7 @@ export const itineraries: Itinerary[] = [
     coords: { lat: -33.9249, lon: 18.4241 },
     duration: "10 days",
     season: "May",
+    tiktok: "https://www.tiktok.com/@lexiemesko/video/7700609283372666125",
     summary:
       "Cape Town for six days, the Garden Route with a 4x4 safari, and a day in Johannesburg for Soweto.",
     cover: southAfrica,
@@ -6531,6 +6556,7 @@ export const itineraries: Itinerary[] = [
     coords: { lat: 46.0569, lon: 14.5058 },
     duration: "3 days",
     season: "Autumn",
+    tiktok: "https://www.tiktok.com/@lexiemesko/video/7699872648536280333",
     summary:
       "Two evenings in Ljubljana either side of a day trip to Lake Bled, with cream cake and the view over the island.",
     teaser: "Based in Ljubljana.",
@@ -6648,6 +6674,7 @@ export const itineraries: Itinerary[] = [
     coords: { lat: 45.5152, lon: 25.3672 },
     duration: "4 days",
     season: "Autumn",
+    tiktok: "https://www.tiktok.com/@lexiemesko/video/7702860780349230349",
     summary:
       "Halloween at Bran Castle, with a day in Brașov before it and a day in Bucharest after.",
     teaser:

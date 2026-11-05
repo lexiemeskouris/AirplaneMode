@@ -30,7 +30,7 @@ export type GuideSection = {
   /** Renders as a warning rather than a recommendation. */
   avoid?: boolean;
   /** A TikTok of this particular thing, linked under the section's heading. */
-  tiktok?: string;
+  tiktok?: string | import("@/components/PhotoStrip").TikTok[];
   /**
    * Folder in src/assets/photos to pull this section's own photos from. Only
    * for a section that is really its own place, like a day trip.
@@ -58,7 +58,7 @@ export type Guide = {
   /** Practical things to know before you go, e.g. cash only. */
   notes?: string[];
   /** A TikTok for the city as a whole, linked from the top of the page. */
-  tiktok?: string;
+  tiktok?: string | import("@/components/PhotoStrip").TikTok[];
   /**
    * Slug of the page this sits under. A child is reached from its parent's
    * tiles rather than from the feed, which keeps one trip to one tile.
@@ -190,7 +190,11 @@ export const guides: Guide[] = [
       {
         title: "Do",
         places: [
-          { name: "Montserrat", near: "Catalonia, Spain", note: "For the monastery and the mountain hiking." },
+          {
+            name: "Montserrat",
+            near: "Catalonia, Spain",
+            note: "For the monastery and the mountain hiking.",
+          },
           { name: "Bunkers del Carmel", note: "Hike up and bring drinks for sunset." },
           { name: "La Boqueria Market" },
           { name: "Montjuïc", note: "Take the cable car up." },
@@ -256,7 +260,13 @@ export const guides: Guide[] = [
       {
         title: "Skip",
         avoid: true,
-        places: [{ name: "Versace Mansion", near: "Miami Beach, FL", note: "We went for dinner. You can skip it completely" }],
+        places: [
+          {
+            name: "Versace Mansion",
+            near: "Miami Beach, FL",
+            note: "We went for dinner. You can skip it completely",
+          },
+        ],
       },
     ],
   },
@@ -289,7 +299,13 @@ export const guides: Guide[] = [
           },
           {
             description: "Breakfast at The Laundromat.",
-            places: [{ name: "The Laundromat Cafe", near: "Reykjavík, Iceland", note: "Great brunch, cool coffee shop vibes." }],
+            places: [
+              {
+                name: "The Laundromat Cafe",
+                near: "Reykjavík, Iceland",
+                note: "Great brunch, cool coffee shop vibes.",
+              },
+            ],
           },
           {
             description: "Explore Reykjavík on foot, up to Hallgrímskirkja.",
@@ -352,7 +368,8 @@ export const guides: Guide[] = [
             ],
           },
           {
-            description: "Icelandic horses by the road, tomato soup at a greenhouse farm, and an ice cream farm.",
+            description:
+              "Icelandic horses by the road, tomato soup at a greenhouse farm, and an ice cream farm.",
             places: [{ name: "Friðheimar", near: "Iceland" }],
           },
           {
@@ -395,7 +412,10 @@ export const guides: Guide[] = [
           },
           { name: "Skál", note: "Michelin rated, inside the Hlemmur food hall." },
           { name: "Hlemmur Mathöll" },
-          { name: "Brauð & Co", note: "A croissant pretzel for breakfast before a tour, and it was divine." },
+          {
+            name: "Brauð & Co",
+            note: "A croissant pretzel for breakfast before a tour, and it was divine.",
+          },
         ],
       },
     ],
@@ -425,7 +445,10 @@ export const guides: Guide[] = [
       {
         title: "In the city",
         places: [
-          { name: "Berthus", note: "Seasonal tasting menu in the city centre. So cute, and tasty." },
+          {
+            name: "Berthus",
+            note: "Seasonal tasting menu in the city centre. So cute, and tasty.",
+          },
         ],
       },
       {
@@ -569,7 +592,10 @@ export const guides: Guide[] = [
           },
           { name: "Harken Cafe", note: "Coffee shop with a small breakfast menu." },
           { name: "Brown's Court Bakery", note: "I came here almost every morning. Best bakery." },
-          { name: "Lewis Barbecue", note: "My favourite spot, though some people prefer Rodney Scott's." },
+          {
+            name: "Lewis Barbecue",
+            note: "My favourite spot, though some people prefer Rodney Scott's.",
+          },
           { name: "Rodney Scott's BBQ", note: "The other camp." },
         ],
       },
@@ -643,7 +669,11 @@ export const guides: Guide[] = [
           { name: "King Arthur Baking", near: "Norwich, Vermont" },
           { name: "Sheep Shed and Worn", near: "Vermont", note: "Collectible store." },
           { name: "Snow Mountain Market", near: "West Dover, Vermont" },
-          { name: "Mount Snow", near: "West Dover, Vermont", note: "They run a summer block party." },
+          {
+            name: "Mount Snow",
+            near: "West Dover, Vermont",
+            note: "They run a summer block party.",
+          },
         ],
       },
       {
@@ -703,8 +733,7 @@ export const guides: Guide[] = [
     coords: { lat: 51.5074, lon: -0.1278 },
     cover: london,
     label: "CITY",
-    summary:
-      "Eight full days through London, plus the museums, the sandwiches and where to shop.",
+    summary: "Eight full days through London, plus the museums, the sandwiches and where to shop.",
     teaser:
       "Eight routes I have actually walked people through, each one a self-contained day. Take whichever fits the day you have and the part of town you are staying in. A few only work on a Sunday, and those say so.",
     tags: ["#London", "#Marylebone", "#NottingHill"],
@@ -750,7 +779,12 @@ export const guides: Guide[] = [
           { description: "Night out at The Fat Badger. Live music, cute guys." },
           {
             description: "Alternative: The Westbourne.",
-            places: [{ name: "The Westbourne", note: "Great pub for casual, lively drinks. Lots of Americans and really cute guys" }],
+            places: [
+              {
+                name: "The Westbourne",
+                note: "Great pub for casual, lively drinks. Lots of Americans and really cute guys",
+              },
+            ],
           },
         ],
       },
@@ -759,11 +793,7 @@ export const guides: Guide[] = [
         activities: [
           {
             description: "At leisure. Brunch at WatchHouse, Abuelo or Chiltern Street Deli.",
-            places: [
-              { name: "WatchHouse" },
-              { name: "Abuelo" },
-              { name: "Chiltern Street Deli" },
-            ],
+            places: [{ name: "WatchHouse" }, { name: "Abuelo" }, { name: "Chiltern Street Deli" }],
           },
           {
             description: "Shop on Marylebone High Street.",
@@ -772,11 +802,7 @@ export const guides: Guide[] = [
           {
             description:
               "An hour along Regent's Canal, entering at Little Venice and walking toward Maida Vale.",
-            places: [
-              { name: "Regent's Canal" },
-              { name: "Little Venice" },
-              { name: "Maida Vale" },
-            ],
+            places: [{ name: "Regent's Canal" }, { name: "Little Venice" }, { name: "Maida Vale" }],
           },
           { description: "Get ready for dinner." },
           {
@@ -789,7 +815,8 @@ export const guides: Guide[] = [
           },
           {
             time: "18:45",
-            description: "Dinner at Shawarma Bar, in Clerkenwell. Incredible food, and very easy to get a reservation.",
+            description:
+              "Dinner at Shawarma Bar, in Clerkenwell. Incredible food, and very easy to get a reservation.",
             places: [{ name: "Shawarma Bar" }],
           },
           {
@@ -808,7 +835,8 @@ export const guides: Guide[] = [
         activities: [
           {
             time: "11:00",
-            description: "Coffee and a pastry in St John's Wood, at places like No. 49, Johnny Green or England's Grace.",
+            description:
+              "Coffee and a pastry in St John's Wood, at places like No. 49, Johnny Green or England's Grace.",
             places: [
               { name: "No. 49", near: "St John's Wood, London" },
               { name: "Johnny Green", near: "St John's Wood, London" },
@@ -950,8 +978,7 @@ export const guides: Guide[] = [
             places: [{ name: "Beigel Bake" }],
           },
           {
-            description:
-              "Vintage shopping at Brick Lane Vintage Market and the shops around it.",
+            description: "Vintage shopping at Brick Lane Vintage Market and the shops around it.",
             places: [{ name: "Brick Lane Vintage Market" }],
           },
           {
@@ -980,11 +1007,21 @@ export const guides: Guide[] = [
       },
       {
         title: "Notting Hill and Kensington",
+        tiktok: [
+          {
+            url: "https://www.tiktok.com/@lexiemesko/video/7699105047107423502",
+            label: "Birthday dinner at Fan on TikTok",
+          },
+        ],
         activities: [
           {
             description:
               "Walk through Portobello Road Market on the way to the Design Museum. Stop at Clobber in the market for vintage Burberry at great prices.",
-            places: [{ name: "Portobello Road Market" }, { name: "Clobber", near: "Portobello Road, London" }, { name: "Design Museum" }],
+            places: [
+              { name: "Portobello Road Market" },
+              { name: "Clobber", near: "Portobello Road, London" },
+              { name: "Design Museum" },
+            ],
           },
           {
             description: "Walk Kensington High Street, for the shops and the cafes.",
@@ -1059,10 +1096,7 @@ export const guides: Guide[] = [
       },
       {
         title: "Flea markets",
-        places: [
-          { name: "Camden Market" },
-          { name: "Greenwich Market" },
-        ],
+        places: [{ name: "Camden Market" }, { name: "Greenwich Market" }],
       },
     ],
   },
@@ -1134,8 +1168,9 @@ export const guides: Guide[] = [
     title: "The Cotswolds",
     destination: "Cotswolds",
     country: "England",
-    coords: { lat: 51.8330, lon: -1.8433 },
+    coords: { lat: 51.833, lon: -1.8433 },
     label: "DAY TRIP",
+    tiktok: "https://www.tiktok.com/@lexiemesko/video/7702449645280185614",
     summary: "Honey-coloured villages, and which ones are worth the drive.",
     teaser:
       "Doable in a day from London if you start early, better over a weekend. The villages are close together and each one takes about an hour.",
@@ -1164,8 +1199,7 @@ export const guides: Guide[] = [
           { time: "10:40", description: "Taxi to Stow-on-the-Wold." },
           {
             time: "11:00",
-            description:
-              "Stow-on-the-Wold: Market Square, St Edward's Church, and a quick browse.",
+            description: "Stow-on-the-Wold: Market Square, St Edward's Church, and a quick browse.",
             places: [
               { name: "Stow-on-the-Wold" },
               { name: "Market Square", near: "Stow-on-the-Wold" },
@@ -1220,7 +1254,7 @@ export const guides: Guide[] = [
     title: "Whitstable",
     destination: "Whitstable",
     country: "England",
-    coords: { lat: 51.3610, lon: 1.0257 },
+    coords: { lat: 51.361, lon: 1.0257 },
     label: "DAY TRIP",
     tiktok: "https://www.tiktok.com/@lexiemesko/video/7679983128546479374",
     summary: "Oysters on the Kent coast, about ninety minutes out of London.",
@@ -1285,8 +1319,17 @@ export const guides: Guide[] = [
     country: "England",
     coords: { lat: 51.5074, lon: -0.1278 },
     label: "RANKED",
-    summary:
-      "29 roasts, scored across ten categories and weighted. The whole spreadsheet.",
+    tiktok: [
+      {
+        url: "https://www.tiktok.com/@lexiemesko/video/7694253171199200526",
+        label: "The roast ranking on TikTok",
+      },
+      {
+        url: "https://www.tiktok.com/@lexiemesko/video/7698342564390374670",
+        label: "The Fat Badger roast on TikTok",
+      },
+    ],
+    summary: "29 roasts, scored across ten categories and weighted. The whole spreadsheet.",
     teaser:
       "I have been keeping a spreadsheet. Every roast is scored out of five on ten separate things, weighted, and averaged. Here it is in full, best first, with what I actually thought of each one.",
     tags: ["#SundayRoast", "#London", "#Spreadsheet"],
@@ -1370,8 +1413,7 @@ export const guides: Guide[] = [
             ],
           },
           {
-            description:
-              "If you want to go out out, Dream Baby and Joyface are the dancey ones.",
+            description: "If you want to go out out, Dream Baby and Joyface are the dancey ones.",
             places: [
               { name: "Dream Baby", near: "New York, NY" },
               { name: "Joyface", near: "New York, NY" },
@@ -1424,7 +1466,10 @@ export const guides: Guide[] = [
             description: "Comedy Cellar.",
             places: [{ name: "Comedy Cellar", near: "New York, NY" }],
           },
-          { time: "00:00", description: "A late drink in the West Village, if anyone is still going." },
+          {
+            time: "00:00",
+            description: "A late drink in the West Village, if anyone is still going.",
+          },
         ],
       },
       {
@@ -1543,8 +1588,7 @@ export const guides: Guide[] = [
             places: [{ name: "Oxomoco", near: "Brooklyn, NY" }],
           },
           {
-            description:
-              "If everyone else goes home, the jazz rooms are great vibes.",
+            description: "If everyone else goes home, the jazz rooms are great vibes.",
             places: [
               { name: "Village Vanguard", near: "New York, NY" },
               { name: "Smalls Jazz Club", near: "New York, NY" },
@@ -1584,7 +1628,11 @@ export const guides: Guide[] = [
           { name: "Aunt Jake's", near: "New York, NY", note: "The pasta class." },
           { name: "Queens Night Market", near: "New York, NY" },
           { name: "The Cloisters", near: "New York, NY" },
-          { name: "Blue Hill at Stone Barns", near: "Tarrytown, NY", note: "A Tarrytown day, and the lunch trays." },
+          {
+            name: "Blue Hill at Stone Barns",
+            near: "Tarrytown, NY",
+            note: "A Tarrytown day, and the lunch trays.",
+          },
           { name: "Roosevelt Island Tramway", near: "New York, NY", note: "The cable car." },
           { name: "Batsu", near: "New York, NY", note: "Japanese comedy." },
           { name: "Empire State Building", near: "New York, NY", note: "The stair climb." },
