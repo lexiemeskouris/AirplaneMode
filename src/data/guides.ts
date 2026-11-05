@@ -283,7 +283,7 @@ export const guides: Guide[] = [
           },
           {
             description: "Breakfast at The Laundromat.",
-            places: [{ name: "The Laundromat Cafe", near: "Reykjavík, Iceland" }],
+            places: [{ name: "The Laundromat Cafe", near: "Reykjavík, Iceland", note: "Great brunch, cool coffee shop vibes." }],
           },
           {
             description: "Explore Reykjavík on foot, up to Hallgrímskirkja.",
@@ -382,7 +382,6 @@ export const guides: Guide[] = [
             name: "Rök",
             note: "The standout. Wide variety of good tapas and a nice restaurant. We had duck, steak, asparagus, bruschetta, risotto and potatoes.",
           },
-          { name: "The Laundromat", note: "Great brunch, cool coffee shop vibes." },
           { name: "Flatey Pizza", note: "Brick oven pizza. Just don't get the meatballs." },
           {
             name: "Sandholt Bakery",
@@ -763,7 +762,7 @@ export const guides: Guide[] = [
           },
           {
             description: "Shop on Marylebone High Street.",
-            places: [{ name: "Marylebone High Street" }],
+            places: [{ name: "Marylebone High Street", note: "My favourite in central London." }],
           },
           {
             description:
@@ -1047,7 +1046,6 @@ export const guides: Guide[] = [
       {
         title: "High streets and shopping districts",
         places: [
-          { name: "Marylebone High Street", note: "My favourite in central London." },
           { name: "Sloane Square" },
           { name: "King's Road" },
           { name: "Carnaby Street", note: "Classic stores." },
@@ -1057,20 +1055,10 @@ export const guides: Guide[] = [
         ],
       },
       {
-        title: "Vintage",
-        places: [
-          { name: "Portobello Road Market", note: "Notting Hill." },
-          { name: "Brick Lane" },
-          { name: "Shoreditch" },
-        ],
-      },
-      {
         title: "Flea markets",
         places: [
-          { name: "Old Spitalfields Market" },
           { name: "Camden Market" },
           { name: "Greenwich Market" },
-          { name: "Columbia Road", note: "Sundays. The flower market." },
         ],
       },
     ],
@@ -1591,16 +1579,13 @@ export const guides: Guide[] = [
         title: "The bucket list",
         places: [
           { name: "Aunt Jake's", near: "New York, NY", note: "The pasta class." },
-          { name: "American Museum of Natural History", near: "New York, NY", note: "A night at the museum." },
           { name: "Queens Night Market", near: "New York, NY" },
           { name: "The Cloisters", near: "New York, NY" },
           { name: "Blue Hill at Stone Barns", near: "Tarrytown, NY", note: "A Tarrytown day, and the lunch trays." },
           { name: "Roosevelt Island Tramway", near: "New York, NY", note: "The cable car." },
           { name: "Batsu", near: "New York, NY", note: "Japanese comedy." },
           { name: "Empire State Building", near: "New York, NY", note: "The stair climb." },
-          { name: "Tenement Museum", near: "New York, NY" },
           { name: "New York Botanical Garden", near: "Bronx, NY" },
-          { name: "The Met", near: "New York, NY" },
           { name: "Arthur Avenue", near: "Bronx, NY" },
         ],
         items: [
@@ -1608,7 +1593,6 @@ export const guides: Guide[] = [
           "The $30 under-30 ballet tickets.",
           "A Korean scalp spa.",
           "A candlelight concert for an artist I actually like.",
-          "A Red Hook day, which is worth giving a whole one to.",
         ],
       },
       {
@@ -1624,8 +1608,6 @@ export const guides: Guide[] = [
           { name: "Tokyo Record Bar", near: "New York, NY" },
           { name: "Casa La Femme", near: "New York, NY", note: "Belly dancers." },
           { name: "Bathtub Gin", near: "New York, NY", note: "Every other Wednesday." },
-          { name: "Cafe Wha?", near: "New York, NY" },
-          { name: "Comedy Cellar", near: "New York, NY" },
           { name: "Music Inn", near: "New York, NY", note: "Thursdays." },
           { name: "Madison Square Garden", near: "New York, NY", note: "For the rodeo." },
         ],

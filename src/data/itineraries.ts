@@ -987,7 +987,6 @@ export const itineraries: Itinerary[] = [
       {
         title: "Live music, and somewhere to eat while you listen",
         places: [
-          { name: "The Listening Room Cafe", note: "Dinner and a show. The food is fair, the show is so fun." },
           { name: "3rd and Lindsley" },
           { name: "City Winery" },
           { name: "The Row Kitchen & Pub", note: "Live music and good lunch food." },
@@ -1019,7 +1018,6 @@ export const itineraries: Itinerary[] = [
           { name: "Bridgestone Arena", note: "Preds games. Hockey." },
           { name: "Nissan Stadium", note: "Titans games. Football." },
           { name: "Pins Mechanical", note: "Bowling, with an outdoor bar." },
-          { name: "Fifth + Broadway", note: "Food court, shopping and a lot of the Nashville staples in one complex." },
         ],
       },
     ],
@@ -1051,7 +1049,7 @@ export const itineraries: Itinerary[] = [
           {
             time: "20:30",
             description: "The Listening Room.",
-            places: [{ name: "The Listening Room" }],
+            places: [{ name: "The Listening Room", note: "Dinner and a show. The food is fair, the show is so fun." }],
           },
         ],
       },
@@ -1101,7 +1099,7 @@ export const itineraries: Itinerary[] = [
           },
           {
             description: "If hungry, snacks and live music at 5th & Broadway.",
-            places: [{ name: "5th & Broadway" }],
+            places: [{ name: "5th & Broadway", note: "Food court, shopping and a lot of the Nashville staples in one complex." }],
           },
           {
             time: "20:00",
