@@ -66,9 +66,7 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     quote:
       "Lexie planned my trip to Tunisia, and it was genuinely one of the best trips I've ever taken. She thought of absolutely everything - from restaurant reservations and transportation to telling us how much we should be paying taxi drivers and even how to bargain like a local.\n\n" +
-      "She found places I never would have discovered on my own, including a restaurant by a Top Chef finalist that ended up being one of the best meals I've had in the last three years. We loved it so much that we went back the next night.\n\n" +
-      "The entire itinerary felt incredibly thoughtful and local. We explored the ancient ruins, spent time in Tunis, and even managed to sneak into the Four Seasons. She also planned a day trip to Hammamet, a beach town about an hour away, and figured out exactly how we should get there. We had lunch, rode horses along the beach, went jet skiing, and finished the day at one of the best - and hardest-to-book - restaurants in Tunisia.\n\n" +
-      "What made the trip so special was that Lexie didn't just give us a list of places to go. She planned all the little details that made everything seamless while still making the trip feel spontaneous and adventurous. I would absolutely have her plan another trip for me.",
+      "She found places I never would have discovered on my own, including a restaurant by a Top Chef finalist that ended up being one of the best meals I've had in the last three years. I would absolutely have her plan another trip for me.",
     name: "Heather B",
     location: "Connecticut",
     itinerary: "tunisia",
