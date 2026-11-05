@@ -8,6 +8,8 @@ import { SpotsMap } from "@/components/SpotsMap";
 import { spotsFor } from "@/data/savedSpots";
 import { dealsFor } from "@/data/deals";
 import { ZoomableImage } from "@/components/Lightbox";
+import { BackToTop, JumpLink } from "@/components/JumpLink";
+import { dayId, findTarget, groupId, itineraryTargets, placeId } from "@/lib/anchors";
 
 export const Route = createFileRoute("/itineraries/$slug")({
   loader: ({ params }) => {
@@ -52,9 +54,12 @@ export const Route = createFileRoute("/itineraries/$slug")({
 function ItineraryDetail() {
   const { itinerary: it } = Route.useLoaderData();
   const more = itineraries.filter((i) => i.slug !== it.slug).slice(0, 3);
+  const targets = itineraryTargets(it);
+  const showDays = !it.comingSoon && (it.days?.length ?? 0) > 0;
 
   return (
     <article className="mx-auto max-w-5xl px-6 py-12">
+      <BackToTop />
       {/* Breadcrumb */}
       <nav className="mb-8 text-sm font-bold text-muted-foreground">
         <Link to="/" className="transition-colors hover:text-accent">
@@ -74,12 +79,14 @@ function ItineraryDetail() {
         </p>
         <div className="mt-6 flex flex-wrap gap-2">
           {it.tags.map((t) => (
-            <span
+            <JumpLink
               key={t}
+              to={findTarget(t, targets)}
               className="rounded-xl bg-secondary px-3 py-1.5 text-xs font-bold text-accent"
+              linkClassName="transition-colors hover:bg-accent hover:text-background"
             >
               {t}
-            </span>
+            </JumpLink>
           ))}
         </div>
       </header>
@@ -119,12 +126,18 @@ function ItineraryDetail() {
         </h2>
         <ul className="mt-5 grid gap-3 sm:grid-cols-2">
           {it.highlights.map((h) => (
-            <li
-              key={h}
-              className="flex items-start gap-3 rounded-2xl border border-border bg-card p-4 text-foreground/90"
-            >
-              <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary" />
-              <span className="leading-relaxed">{h}</span>
+            <li key={h}>
+              <JumpLink
+                to={findTarget(h, targets)}
+                className="flex h-full items-start gap-3 rounded-2xl border border-border bg-card p-4 text-foreground/90"
+                linkClassName="group transition-colors hover:border-primary"
+              >
+                <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary" />
+                <span className="flex-1 leading-relaxed">{h}</span>
+                <span aria-hidden className="jump-arrow mt-0.5 shrink-0 font-bold text-primary opacity-60 transition-transform group-hover:translate-y-0.5 group-hover:opacity-100">
+                  &darr;
+                </span>
+              </JumpLink>
             </li>
           ))}
         </ul>
@@ -154,6 +167,33 @@ function ItineraryDetail() {
 
       <DealsBlock deals={dealsFor("itinerary", it.slug)} />
 
+      {/* Straight to a day, or to one of the lists under the plan. */}
+      {(showDays ? it.days!.length : 0) + (it.extras?.length ?? 0) > 1 && (
+        <nav aria-label="Jump to" className="mt-10 flex flex-wrap gap-2">
+          {showDays &&
+            it.days!.map((d, di) => (
+              <JumpLink
+                key={d.day}
+                to={dayId(di)}
+                className="rounded-full border border-border bg-card px-3 py-1.5 text-xs font-bold text-foreground"
+                linkClassName="transition-colors hover:border-primary hover:text-primary"
+              >
+                {d.day}: {d.title}
+              </JumpLink>
+            ))}
+          {(it.extras ?? []).map((g) => (
+            <JumpLink
+              key={g.title}
+              to={groupId(g.title)}
+              className="rounded-full border border-border bg-secondary px-3 py-1.5 text-xs font-bold text-foreground"
+              linkClassName="transition-colors hover:border-primary hover:text-primary"
+            >
+              {g.title}
+            </JumpLink>
+          ))}
+        </nav>
+      )}
+
       {it.comingSoon && (
         <section className="mt-12 rounded-[2rem] bg-foreground p-8 text-center text-background md:p-12">
           <h2 className="font-display text-4xl font-extrabold tracking-tight">Coming soon</h2>
@@ -169,10 +209,11 @@ function ItineraryDetail() {
             {it.gated ? "A free sample day" : "The plan, day by day"}
           </h2>
           <div className="mt-6 space-y-6">
-            {it.days.map((d) => (
+            {it.days.map((d, di) => (
               <div
                 key={d.day}
-                className="overflow-hidden rounded-2xl border border-border bg-card"
+                id={dayId(di)}
+                className="scroll-mt-24 overflow-hidden rounded-2xl border border-border bg-card"
               >
                 <div className="flex items-baseline justify-between border-b border-border bg-secondary/60 px-6 py-4">
                   <h3 className="font-display text-2xl font-extrabold tracking-tight text-foreground">
@@ -186,6 +227,7 @@ function ItineraryDetail() {
                   activities={d.activities}
                   destination={it.destination}
                   idPrefix={d.day}
+                  anchorPrefix={dayId(di)}
                 />
               </div>
             ))}
@@ -198,7 +240,7 @@ function ItineraryDetail() {
       {it.extras && it.extras.length > 0 && (
         <div className="mt-12 space-y-8">
           {it.extras.map((group) => (
-            <section key={group.title}>
+            <section key={group.title} id={groupId(group.title)} className="scroll-mt-24">
               <h2 className="font-display text-3xl font-extrabold tracking-tight text-foreground">
                 {group.title}
               </h2>
@@ -219,10 +261,11 @@ function ItineraryDetail() {
                 </ul>
               )}
               <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-                {(group.places ?? []).map((place) => (
+                {(group.places ?? []).map((place, pi) => (
                   <li
                     key={place.name}
-                    className="rounded-2xl border border-border bg-card px-5 py-4 leading-snug"
+                    id={placeId(groupId(group.title), pi)}
+                    className="scroll-mt-24 rounded-2xl border border-border bg-card px-5 py-4 leading-snug"
                   >
                     <a
                       href={placeHref(place, it.destination)}

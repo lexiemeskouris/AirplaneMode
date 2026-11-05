@@ -85,17 +85,24 @@ export function ActivityList({
   activities,
   destination,
   idPrefix,
+  anchorPrefix,
 }: {
   activities: Activity[];
   destination: string;
   idPrefix: string;
+  /** When set, each step gets the id `${anchorPrefix}-${n}`, so tags and highlights can link to it. */
+  anchorPrefix?: string;
 }) {
   return (
     <ol className="divide-y divide-border">
       {activities.map((a, i) => {
         const { nodes, trailing } = linkifyDescription(a.description, a.places, destination);
         return (
-          <li key={`${idPrefix}-${i}`} className="flex gap-4 px-6 py-4">
+          <li
+            key={`${idPrefix}-${i}`}
+            id={anchorPrefix ? `${anchorPrefix}-${i + 1}` : undefined}
+            className="flex scroll-mt-24 gap-4 px-6 py-4"
+          >
             {/* Untimed steps keep the time column's width so every
                 description still lines up, and take a dash. */}
             <span className="w-16 shrink-0 pt-0.5 font-mono text-sm font-bold text-primary">

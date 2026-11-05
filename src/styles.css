@@ -230,3 +230,18 @@
   margin-top: 6px;
   font-weight: 600;
 }
+
+/* A section reached from a tag, highlight or contents chip flashes once so
+   the eye lands on it. */
+@keyframes anchor-flash {
+  0%, 30% { box-shadow: 0 0 0 3px var(--color-primary, #d9542b); background-color: color-mix(in oklab, var(--color-primary, #d9542b) 12%, transparent); }
+  100% { box-shadow: 0 0 0 3px transparent; background-color: transparent; }
+}
+.anchor-flash {
+  animation: anchor-flash 2.2s ease-out;
+  border-radius: 1rem;
+}
+html { scroll-padding-top: 6rem; }
+
+/* A highlight with nothing to jump to keeps its text but loses the arrow. */
+span > .jump-arrow { display: none; }

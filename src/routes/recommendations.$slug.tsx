@@ -1,4 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { BackToTop, JumpLink } from "@/components/JumpLink";
+import { findTarget, guideTargets, placeId, sectionId } from "@/lib/anchors";
 import { RoastTable } from "@/components/RoastTable";
 import { PhotoStrip, TikTokLink } from "@/components/PhotoStrip";
 import { photosFor } from "@/data/photos";
@@ -47,17 +49,15 @@ export const Route = createFileRoute("/recommendations/$slug")({
   component: GuidePage,
 });
 
-/** Stable anchor for a section, so a long page can have a contents list. */
-function sectionId(title: string) {
-  return title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-}
 
 function GuidePage() {
   const { guide: g } = Route.useLoaderData();
   const others = guides.filter((x) => x.slug !== g.slug);
+  const targets = guideTargets(g);
 
   return (
     <article className="mx-auto max-w-3xl px-6 py-12">
+      <BackToTop />
       <nav className="mb-6 text-sm font-semibold text-muted-foreground">
         <Link to="/" className="transition-colors hover:text-primary">
           Feed
@@ -73,12 +73,14 @@ function GuidePage() {
 
       <div className="mt-5 flex flex-wrap gap-2">
         {g.tags.map((t) => (
-          <span
+          <JumpLink
             key={t}
+            to={findTarget(t, targets)}
             className="rounded-xl bg-brand-pink px-3 py-1.5 text-xs font-bold text-foreground"
+            linkClassName="transition-colors hover:bg-foreground hover:text-background"
           >
             {t}
-          </span>
+          </JumpLink>
         ))}
       </div>
 
@@ -126,16 +128,17 @@ function GuidePage() {
       <ChildTiles parent={g.slug} />
 
       {/* A city page can run to a dozen sections, so jump straight to one. */}
-      {g.sections.length > 4 && (
+      {g.sections.length > 2 && (
         <nav aria-label="Sections" className="mt-10 flex flex-wrap gap-2">
           {g.sections.map((section) => (
-            <a
+            <JumpLink
               key={section.title}
-              href={`#${sectionId(section.title)}`}
-              className="rounded-full border border-border bg-card px-3 py-1.5 text-xs font-bold text-foreground transition-colors hover:border-primary hover:text-primary"
+              to={sectionId(section.title)}
+              className="rounded-full border border-border bg-card px-3 py-1.5 text-xs font-bold text-foreground"
+              linkClassName="transition-colors hover:border-primary hover:text-primary"
             >
               {section.title}
-            </a>
+            </JumpLink>
           ))}
         </nav>
       )}
@@ -167,14 +170,15 @@ function GuidePage() {
                 activities={section.activities}
                 destination={g.destination}
                 idPrefix={section.title}
+                anchorPrefix={sectionId(section.title)}
               />
             )}
             {(section.places?.length || section.items?.length) && (
             <div className="px-6 py-5">
               {section.places && section.places.length > 0 && (
                 <ul className="space-y-3">
-                  {section.places.map((place) => (
-                    <li key={place.name} className="leading-snug">
+                  {section.places.map((place, pi) => (
+                    <li key={place.name} id={placeId(sectionId(section.title), pi)} className="scroll-mt-24 leading-snug">
                       <a
                         href={placeHref(place, g.destination)}
                         target="_blank"
