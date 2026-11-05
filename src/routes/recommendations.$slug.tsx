@@ -6,6 +6,8 @@ import { BMC_URL } from "@/data/itineraries";
 import { ActivityList, placeHref, placeLinkClass } from "@/lib/places";
 import { getGuide, guides } from "@/data/guides";
 import { DealsBlock } from "@/components/Deals";
+import { SpotsMap } from "@/components/SpotsMap";
+import { spotsFor } from "@/data/savedSpots";
 import { dealsFor } from "@/data/deals";
 import { ZoomableImage } from "@/components/Lightbox";
 
@@ -218,6 +220,8 @@ function GuidePage() {
           <RoastTable />
         </div>
       )}
+
+      <SpotsMap spots={spotsFor(g.slug)} onGuide />
 
       <PhotoStrip photos={photosFor(g.slug)} />
 

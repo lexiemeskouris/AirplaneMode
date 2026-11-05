@@ -4,6 +4,8 @@ import { photosFor } from "@/data/photos";
 import { getItinerary, itineraries, BMC_URL } from "@/data/itineraries";
 import { ActivityList, placeHref, placeLinkClass } from "@/lib/places";
 import { DealsBlock } from "@/components/Deals";
+import { SpotsMap } from "@/components/SpotsMap";
+import { spotsFor } from "@/data/savedSpots";
 import { dealsFor } from "@/data/deals";
 import { ZoomableImage } from "@/components/Lightbox";
 
@@ -244,6 +246,8 @@ function ItineraryDetail() {
           ))}
         </div>
       )}
+
+      {!it.comingSoon && <SpotsMap spots={spotsFor(it.slug)} />}
 
       {it.seeAlso && (
         <section className="mt-12 rounded-2xl border border-accent/40 bg-accent/10 px-6 py-6">
