@@ -141,8 +141,8 @@ function PlanPage() {
       </h1>
       <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">
         Tell me where you are going, who is coming and roughly what you want to
-        spend. I will build the trip around you, day by day, in the same style
-        as everything on this site: timed, linked, and with no filler.
+        spend. I will build the trip around you, day by day, the same way I
+        write everything on this site, with times and links for each stop and no filler.
       </p>
 
       {/* Budget guide */}

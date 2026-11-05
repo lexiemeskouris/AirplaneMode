@@ -83,7 +83,7 @@ export const guides: Guide[] = [
     summary:
       "Eight days on the Northern Lemosho route, and everything worth knowing before you book it.",
     teaser:
-      "Not an itinerary. This is the practical half: which route and why, what to buy before you go, what goes in the medical kit, and the small decisions that made the biggest difference on the mountain.",
+      "No day-by-day plan here, just the practical stuff. Which route we picked and why, what to buy before you go, what goes in the medical kit, and the small decisions that made the biggest difference on the mountain.",
     tags: ["#NorthernLemosho", "#Goretex", "#Diamox"],
     notes: [
       "Bring more cash than you normally would, in USD, and enough for the whole trip. Service and bank access are patchy, and card machines often will not connect.",
@@ -221,7 +221,7 @@ export const guides: Guide[] = [
     summary:
       "Where to eat, where it turns into a club, and the order we did it in over three nights.",
     teaser:
-      "Miami as a set of nights rather than days, plus one long Sunday lunch. Dinners that run late, rooms that turn into clubs, and how we actually sequenced them.",
+      "Miami was mostly about the nights, plus one long Sunday lunch. Late dinners, restaurants that turn into clubs, and the order we actually did them in.",
     tags: ["#SundayFunDay", "#LosFuegos", "#SouthBeach"],
     sections: [
       {
@@ -296,7 +296,7 @@ export const guides: Guide[] = [
     summary:
       "One vineyard hotel worth the whole trip, a tasting menu in the city, and a day out in Saint-Émilion.",
     teaser:
-      "Wine country without a schedule. Where to stay, where to eat in the city, the town to spend a day in, and the châteaux worth tasting at.",
+      "No schedule for this one, just where to stay, where to eat in the city, the town to spend a day in, and the châteaux worth tasting at.",
     tags: ["#Caudalie", "#SaintEmilion", "#Wine"],
     sections: [
       {
@@ -346,7 +346,7 @@ export const guides: Guide[] = [
     summary:
       "Tours worth booking, three restaurants in the old town, and the beach club to spend a day at.",
     teaser:
-      "Nice as a menu rather than a plan: the tours worth taking, where to eat in the old town, and the day trips along the coast.",
+      "No plan for Nice, just the tours worth taking, where to eat in the old town, and the day trips along the coast.",
     tags: ["#OldNice", "#Riviera", "#Monaco"],
     sections: [
       {
@@ -563,12 +563,12 @@ export const guides: Guide[] = [
     sections: [
       {
         title: "Day trip: Stonehenge and Bath",
-        note: "You can do both in one day, which is what makes this one worth it. Stonehenge on its own is about two hours of your life; Bath fills the rest.",
+        note: "You can do both in one day, which is what makes this one worth it. Stonehenge on its own is about two hours of your life, and Bath fills the rest.",
         places: [
           {
             name: "Stonehenge",
             near: "Wiltshire, England",
-            note: "I took a day trip here and thought it was cool and mysterious. Go with expectations set: it is a field with stones in it, and it is still worth seeing.",
+            note: "I took a day trip here and thought it was cool and mysterious. Set your expectations. It is a field with stones in it, but it is still worth seeing.",
           },
           {
             name: "Roman Baths",
@@ -888,7 +888,7 @@ export const guides: Guide[] = [
       },
       {
         title: "Museums",
-        note: "All four are free, which is the quiet superpower of London museums. Pick one, not four.",
+        note: "All four are free, which is the best thing about London museums. Pick one, not four.",
         places: [
           {
             name: "British Museum",
@@ -1125,14 +1125,14 @@ export const guides: Guide[] = [
     tiktok: "https://www.tiktok.com/@lexiemesko/video/7679983128546479374",
     summary: "Oysters on the Kent coast, about ninety minutes out of London.",
     teaser:
-      "A seaside day trip that is genuinely about the food. Oysters, the harbour, and the beach huts along the shingle.",
+      "A seaside day trip that is really about the food. Oysters, the harbour, and the beach huts along the shingle.",
     tags: ["#DayTrip", "#Oysters", "#Seaside"],
     sections: [
       {
         title: "A day in Whitstable",
         tiktok: "https://www.tiktok.com/@lexiemesko/video/7679983128546479374",
         photoKey: "whitstable",
-        note: "Whitstable is on the Kent coast, a bit over an hour by train from St Pancras. This is a day out of London rather than a day in it, and the evening picks back up in town.",
+        note: "Whitstable is on the Kent coast, a bit over an hour by train from St Pancras. You spend the day out of London and pick the evening back up in town.",
         activities: [
           { time: "09:30", description: "Leave." },
           {
@@ -1529,7 +1529,7 @@ export const guides: Guide[] = [
       },
       {
         title: "Party restaurants, where the food is fine but the party never stops",
-        note: "You are not going to any of these for the cooking. You are going because the music is loud, the room is up on its feet, and dinner turns into a night out without anyone deciding that it should.",
+        note: "Nobody goes to these for the cooking. The music is loud, everyone ends up on their feet, and dinner turns into a night out without anyone planning it.",
         places: [
           { name: "Le Baratin", near: "New York, NY" },
           { name: "HaSalon", near: "New York, NY" },

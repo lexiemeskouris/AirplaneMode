@@ -155,11 +155,11 @@ export const itineraries: Itinerary[] = [
     duration: "3 days",
     season: "Summer",
     summary:
-      "Two beaches, two hills, and as many pintxos bars as three nights allow. Basque country at full tilt.",
+      "Two beaches, two hills, and as many Basque pintxos bars as you can fit into three nights.",
     cover: sanSebastian,
     gated: false,
     teaser:
-      "San Sebastián is small enough to walk and dense enough that you never stop eating. This route climbs both headlands, swims both beaches, and spends every evening standing at a bar with a plate in one hand.",
+      "San Sebastián is small enough to walk and dense enough that you never stop eating. You climb both headlands and swim both beaches, and every evening ends up standing at a bar with a plate in one hand.",
     tiktok: "https://www.tiktok.com/@lexiemesko/video/7682108674856242445",
     tags: ["#Pintxos", "#LaConcha", "#BasqueCheesecake"],
     highlights: [
@@ -384,7 +384,7 @@ export const itineraries: Itinerary[] = [
     cover: berlin,
     gated: false,
     teaser:
-      "Three days built around the nightlife rather than the museums. The days are deliberately light because the nights are not: KitKat on the first, Berghain and an after party on the second.",
+      "Three days planned around the nightlife, so the days are kept light. KitKat on the first night, Berghain and an after party on the second.",
     tags: ["#Doner", "#Berghain", "#StreetFoodThursday"],
     highlights: [
       "Rüyam Gemüse Kebab within an hour of landing",
@@ -486,7 +486,7 @@ export const itineraries: Itinerary[] = [
             places: [
               {
                 name: "Vabali Spa",
-                note: "A whole day if you want one. Pools, saunas and a massage, and the most relaxing way to spend the last hours before a flight.",
+                note: "A whole day if you want one. Pools, saunas and a massage. Honestly the most relaxing way to spend your last hours before a flight.",
               },
               {
                 name: "Museum Island",
@@ -539,7 +539,7 @@ export const itineraries: Itinerary[] = [
     gated: false,
     comingSoon: true,
     teaser:
-      "Three days walked rather than ridden: Yongkang Street and Shida on the first, Songshan and Elephant Mountain on the second, Longshan Temple squeezed in before the airport on the third.",
+      "Three days, almost all on foot. Yongkang Street and Shida on the first, Songshan and Elephant Mountain on the second, Longshan Temple squeezed in before the airport on the third.",
     tags: ["#NightMarket", "#ElephantMountain", "#DinTaiFung"],
     highlights: [
       "A three and a half hour food tour through Shida Night Market",
@@ -667,7 +667,7 @@ export const itineraries: Itinerary[] = [
     cover: amsterdam,
     gated: false,
     teaser:
-      "Two tightly timed days either side of one left deliberately open. Museums and a booze cruise on the first, drift on the second, a food tour and the Anne Frank House before the flight home.",
+      "Two tightly timed days with a totally open one in the middle. Museums and a booze cruise on the first, wandering on the second, then a food tour and the Anne Frank House before the flight home.",
     tags: ["#VanGogh", "#DePijp", "#Vondelpark"],
     highlights: [
       "The Van Gogh Museum first thing, then De Pijp on foot",
@@ -798,7 +798,7 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "Vondelpark" }],
           },
           {
-            description: "See where the day takes it. Drinks, dinner and going out, at leisure.",
+            description: "See where the day goes. Drinks, dinner and going out, at leisure.",
             places: [
               { name: "Buurtcafé De Tros", note: "Dinner." },
               { name: "Jazz Café Alto", note: "Jazz bar." },
@@ -903,11 +903,11 @@ export const itineraries: Itinerary[] = [
           { name: "Dozen Bakery", note: "Favourite bakery." },
           { name: "Fido", note: "Sit down, fast casual breakfast." },
           { name: "Monell's", note: "Sit-down southern style brunch." },
-          { name: "Big Al's Deli", note: "Hidden gem in Germantown." },
+          { name: "Big Al's Deli", note: "Underrated spot in Germantown." },
           { name: "Sky Blue Cafe", note: "East Nashville." },
           {
             name: "Adele's",
-            note: "The nicer brunch. The all-you-can-eat buffet runs on Sundays only, so time it for a Sunday if you want that. It is also a genuinely good dinner restaurant the rest of the week, which most brunch places are not.",
+            note: "The nicer brunch. The all-you-can-eat buffet runs on Sundays only, so time it for a Sunday if you want that. It is also a really good dinner spot the rest of the week, which most brunch places are not.",
           },
           { name: "H&S Bagels" },
           { name: "Proper Bagel" },
@@ -1123,7 +1123,7 @@ export const itineraries: Itinerary[] = [
           {
             time: "11:45",
             description:
-              "Brunch at Adele's. Worth knowing before you book: the all-you-can-eat buffet is a Sunday-only thing, and any other day you are ordering off the menu instead. Still the nicest brunch on this list either way, and it doubles as a proper dinner restaurant if you would rather go in the evening.",
+              "Brunch at Adele's. The all-you-can-eat buffet is Sunday only, and any other day you order off the menu. It is still the nicest brunch on this list, and it is a proper dinner restaurant too if you would rather go in the evening.",
             places: [{ name: "Adele's" }],
           },
           {
@@ -1148,7 +1148,7 @@ export const itineraries: Itinerary[] = [
     cover: paris,
     gated: false,
     teaser:
-      "Five days with two anchors: a full day at Roland-Garros and a day trip to Reims for the Champagne houses. Everything between them is the Marais, Montmartre, the Left Bank and a lot of walking.",
+      "Five days planned around a full day at Roland-Garros and a day trip to Reims for the Champagne houses. The rest is the Marais, Montmartre, the Left Bank and a lot of walking.",
     tags: ["#RolandGarros", "#Champagne", "#LeMarais"],
     notes: [
       "This only works in May if you want Roland-Garros. Everything else here is fine any time of year, so move the tennis day out and the rest still stands.",
@@ -1214,7 +1214,7 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "Chez Janou" }],
           },
           {
-            description: "Walk up to Sacré-Coeur. The views from the steps are the point.",
+            description: "Walk up to Sacré-Coeur. Go for the views from the steps.",
             places: [{ name: "Sacré-Coeur" }],
           },
           {
@@ -1940,7 +1940,7 @@ export const itineraries: Itinerary[] = [
         activities: [
           {
             description:
-              "Coffee, then walk the Old Quarter. It is the heart of Hanoi, 36 streets each once dedicated to a single trade: haberdashery, hardware, porcelain.",
+              "Coffee, then walk the Old Quarter, right in the middle of Hanoi. It's 36 streets that each used to belong to a single trade: haberdashery, hardware, porcelain.",
             places: [{ name: "Old Quarter", near: "Hanoi, Vietnam" }],
           },
           {
@@ -1976,7 +1976,7 @@ export const itineraries: Itinerary[] = [
           {
             time: "12:00",
             description:
-              "The Ha Long Bay overnight cruise starts. Thousands of individual islands, and one of the most famous stretches of water in Asia.",
+              "The Ha Long Bay overnight cruise starts. There are thousands of islands out there, and it's one of the most famous stretches of water in Asia.",
             places: [{ name: "Ha Long Bay", near: "Vietnam" }],
           },
           {
@@ -2541,7 +2541,7 @@ export const itineraries: Itinerary[] = [
           {
             name: "Kilmainham Gaol",
             near: "Dublin, Ireland",
-            note: "The prison where the 1916 leaders were executed. Guided tour only and it sells out, so book ahead rather than turning up.",
+            note: "The prison where the 1916 leaders were executed. Guided tour only and it sells out, so book ahead, don't just turn up.",
           },
         ],
       },
@@ -2592,17 +2592,17 @@ export const itineraries: Itinerary[] = [
           {
             name: "Bad Bobs",
             near: "Temple Bar, Dublin, Ireland",
-            note: "Live bands most nights over several floors. A night out rather than a sit-down listen.",
+            note: "Live bands most nights over several floors. More of a night out than a sit-down listen.",
           },
           {
             name: "Celtic Nights",
             near: "Dublin, Ireland",
-            note: "Dinner plus a full Irish music and dance show. The straightforward way to see step dancing if you want it in one booking.",
+            note: "Dinner plus a full Irish music and dance show. The easy way to see step dancing if you want it all in one booking.",
           },
           {
             name: "The Sound House",
             near: "Dublin, Ireland",
-            note: "Their secret sessions put on an artist you only find out about when you turn up. Good if you want the night to surprise you.",
+            note: "Their secret sessions put on an artist you only find out about when you turn up. Good if you like not knowing who you're going to see.",
           },
         ],
       },
@@ -2616,12 +2616,12 @@ export const itineraries: Itinerary[] = [
           {
             name: "L Mulligan Grocer",
             near: "Stoneybatter, Dublin, Ireland",
-            note: "An upscale pub doing proper dinner rather than pub food. Where to go when you want one real meal.",
+            note: "An upscale pub that does a proper dinner, not pub food. Go here when you want one real meal.",
           },
           {
             name: "Brother Hubbard",
             near: "Dublin, Ireland",
-            note: "Middle Eastern and Mediterranean brunch. The alternative to another full Irish.",
+            note: "Middle Eastern and Mediterranean brunch, for when you can't face another full Irish.",
           },
           {
             name: "Bunsen",
@@ -2646,7 +2646,7 @@ export const itineraries: Itinerary[] = [
           {
             name: "Eyemazy",
             near: "Dublin, Ireland",
-            note: "Macro photography of your own iris, printed. Takes about half an hour and you leave with something nobody else has.",
+            note: "Macro photography of your own iris, printed. Takes about half an hour and you walk out with the print.",
           },
         ],
       },
@@ -2897,7 +2897,7 @@ export const itineraries: Itinerary[] = [
       "A boat day in the south, and the beaches after it",
       "Sóller, Deià and Valldemossa in the north",
       "The Calvari steps in Pollença",
-      "Ibiza, planned around the line-ups rather than the days",
+      "Ibiza, planned around the line-ups instead of the days",
     ],
     days: [
       {
@@ -3003,7 +3003,7 @@ export const itineraries: Itinerary[] = [
     extras: [
       {
         title: "Ibiza clubs",
-        note: "Which night you go where depends on the line-up, so these are the rooms rather than a plan.",
+        note: "Which night you go where depends on the line-up, so these are just the clubs, not a plan.",
         places: [
           { name: "Hï Ibiza" },
           { name: "Pacha Ibiza" },
@@ -3013,7 +3013,7 @@ export const itineraries: Itinerary[] = [
       },
       {
         title: "Around Pollença",
-        note: "Wine is a booming industry in Mallorca, so look for a tour and tasting. Pa amb oli is the local thing to eat: toast with tomato, cheese and toppings.",
+        note: "Wine is a big deal in Mallorca, so look for a tour and tasting. Pa amb oli is the local thing to eat: toast with tomato, cheese and toppings.",
         places: [
           { name: "La Trobada", near: "Pollença, Mallorca", note: "Very authentic Mallorcan food." },
           { name: "Bar Gorreta", near: "Pollença, Mallorca", note: "Casual, cheap, drinks come with tapas." },
@@ -3681,7 +3681,7 @@ export const itineraries: Itinerary[] = [
           },
           {
             description:
-              "Red Frog speakeasy afterwards, about 25 minutes' walk. A get-a-drink-and-chill place rather than a night out.",
+              "Red Frog speakeasy afterwards, about 25 minutes' walk. More of a get-a-drink-and-chill place than a night out.",
             places: [{ name: "Red Frog Speakeasy", near: "Lisbon, Portugal" }],
           },
         ],
@@ -3709,7 +3709,7 @@ export const itineraries: Itinerary[] = [
     cover: quito,
     gated: false,
     teaser:
-      "Quito is where you land and where you leave from, and one day is enough to do the things worth doing. Almost everyone here is on their way to the islands.",
+      "Quito is where you land and where you leave from, and one day is enough to see the main things. Almost everyone here is on their way to the islands.",
     tags: ["#MitadDelMundo", "#Teleferico", "#OldTown"],
     notes: [
       "Go to the TelefériQo first thing in the morning. Quito is known for afternoon fog, and by lunchtime the view has gone.",
@@ -3786,10 +3786,10 @@ export const itineraries: Itinerary[] = [
     gated: true,
     bmcUrl: "https://buymeacoffee.com/lexiemeskouris/e/584143",
     teaser:
-      "Three stays and two ferries across two islands. Tortoises by bike, a whole day on one hike, and sea lions at La Lobería. The tips at the bottom are the part worth reading twice.",
+      "Three stays and two ferries across two islands. Tortoises by bike, a whole day on one hike, and sea lions at La Lobería. Read the tips at the bottom before you go.",
     tags: ["#Galapagos", "#Snorkelling", "#SeaLions"],
     notes: [
-      "Costs here are what we paid on this trip, so treat them as a rough shape rather than current prices.",
+      "Costs here are what we paid on this trip, so treat them as a rough guide, not current prices.",
     ],
     seeAlso: {
       slug: "quito",
@@ -4469,7 +4469,7 @@ export const itineraries: Itinerary[] = [
     gated: true,
     bmcUrl: "https://buymeacoffee.com/lexiemeskouris/e/584147",
     teaser:
-      "Three days out of Funchal and hard-run: a boat, a cable car, a jeep tour of the north, and a 06:00 bus to catch sunrise on Pico do Arieiro before walking to Pico Ruivo.",
+      "Three busy days out of Funchal, with a boat, a cable car, a jeep tour of the north, and a 06:00 bus to catch sunrise on Pico do Arieiro before walking to Pico Ruivo.",
     tags: ["#PicoDoArieiro", "#Toboggan", "#Levada"],
     highlights: [
       "Sunrise at Pico do Arieiro, then the PR1 across to Pico Ruivo",
@@ -4537,7 +4537,7 @@ export const itineraries: Itinerary[] = [
       "A late landing and one full day, which is enough for the Design District and Löyly with the market in the evening. On the second morning you take the ferry across to Tallinn.",
     tags: ["#ChristmasMarket", "#Loyly", "#DesignDistrict"],
     notes: [
-      "The Christmas market is the spine of this one, so it only really works in late November and December. Everything else holds year round.",
+      "This one is planned around the Christmas market, so it only really works in late November and December. Everything else is fine year round.",
     ],
     seeAlso: {
       slug: "tallinn",
@@ -4635,7 +4635,7 @@ export const itineraries: Itinerary[] = [
       "Reached by a two hour ferry from Helsinki. The first evening is the market and the rink, and the full day is towers, cathedrals and a creative quarter, finishing at Rataskaevu 16.",
     tags: ["#ChristmasMarket", "#OldTown", "#Telliskivi"],
     notes: [
-      "The Christmas market and the rink are what make the first evening, so this works best in late November and December.",
+      "The first evening needs the Christmas market and the rink, so this works best in late November and December.",
     ],
     seeAlso: {
       slug: "helsinki",
@@ -5225,7 +5225,7 @@ export const itineraries: Itinerary[] = [
     cover: tuscany,
     gated: false,
     teaser:
-      "Three days at a villa in the Tuscan hills, one night in Viareggio for the best breakfast in Italy, then La Spezia as a base for hiking the Cinque Terre. Trains do all the work after the villa.",
+      "Three days at a villa in the Tuscan hills, one night in Viareggio for the best breakfast in Italy, then La Spezia as a base for hiking the Cinque Terre. After the villa, it's trains the rest of the way.",
     tags: ["#Villa", "#Viareggio", "#CinqueTerre"],
     highlights: [
       "A wine tour and lunch in the vineyards",
@@ -5352,7 +5352,7 @@ export const itineraries: Itinerary[] = [
     gated: true,
     bmcUrl: "https://buymeacoffee.com/lexiemeskouris/e/584148",
     teaser:
-      "Three days inside the Arctic Circle with one big booked thing each day. The town itself takes an afternoon, and the rest is weather.",
+      "Three days inside the Arctic Circle with one big booked thing each day. The town itself takes an afternoon, and the rest depends on the weather.",
     tags: ["#NorthernLights", "#DogSledding", "#Fjords"],
     notes: [
       "The northern lights need dark winter nights, so this only works between roughly late September and late March.",
@@ -5843,7 +5843,7 @@ export const itineraries: Itinerary[] = [
         activities: [
           {
             time: "07:30",
-            description: "Pastries at Oswalds Bakery, known for the range of loaves.",
+            description: "Pastries at Oswalds Bakery, which has a huge range of loaves.",
             places: [{ name: "Oswalds Bakery", near: "Cape Town, South Africa" }],
           },
           { time: "08:30", description: "Picked up for the wine tour." },
@@ -5902,7 +5902,7 @@ export const itineraries: Itinerary[] = [
           {
             time: "16:00",
             description:
-              "Walk Bo-Kaap, known for its narrow cobbled streets and coloured houses. The Bo-Kaap Museum is worth a stop.",
+              "Walk Bo-Kaap, all narrow cobbled streets and coloured houses. The Bo-Kaap Museum is worth a stop.",
             places: [
               { name: "Bo-Kaap", near: "Cape Town, South Africa" },
               { name: "Bo-Kaap Museum", near: "Cape Town, South Africa" },
@@ -6091,7 +6091,7 @@ export const itineraries: Itinerary[] = [
           {
             time: "16:00",
             description:
-              "Back over to Zimbabwe for high tea at the Victoria Falls Hotel. Iconic place, and you can watch the sunset. It runs 15:00 to 18:00.",
+              "Back over to Zimbabwe for high tea at the Victoria Falls Hotel. It's a famous hotel, and you can watch the sunset. It runs 15:00 to 18:00.",
             places: [{ name: "Victoria Falls Hotel", near: "Zimbabwe" }],
           },
           {
@@ -6133,7 +6133,7 @@ export const itineraries: Itinerary[] = [
     cover: stockholm,
     gated: false,
     teaser:
-      "Two tightly planned days and a Sunday left open. Almost all of it is walkable, and the evenings run late because in summer the light does too.",
+      "Two tightly planned days and a Sunday left open. Almost all of it is walkable, and the evenings run late because it stays light so late in summer.",
     tags: ["#GamlaStan", "#ABBA", "#Fika"],
     notes: [
       "The late evenings only work in summer. At 22:00 the sun is still going down, which is the whole reason for the park at the end of the first night.",
@@ -6163,7 +6163,7 @@ export const itineraries: Itinerary[] = [
           {
             time: "13:00",
             description:
-              "Lunch and drinks at Glashuset, about twelve minutes away. Waterfront, and a gentle way in.",
+              "Lunch and drinks at Glashuset, about twelve minutes away. On the waterfront, and an easy first stop.",
             places: [{ name: "Glashuset", near: "Stockholm, Sweden" }],
           },
           {
@@ -6228,7 +6228,7 @@ export const itineraries: Itinerary[] = [
           {
             time: "09:45",
             description:
-              "Breakfast and coffee at Östermalms Saluhall, one of Stockholm's most iconic food halls. About fifteen minutes' walk.",
+              "Breakfast and coffee at Östermalms Saluhall, one of Stockholm's best-known food halls. About fifteen minutes' walk.",
             places: [{ name: "Östermalms Saluhall", near: "Stockholm, Sweden" }],
           },
           {
@@ -6262,7 +6262,7 @@ export const itineraries: Itinerary[] = [
           {
             time: "21:30",
             description:
-              "Dinner at Pelikan, about twenty minutes by metro. One of Stockholm's most historic restaurants, serving traditional Swedish food since the early 1900s, and widely reckoned to do the best meatballs in the city.",
+              "Dinner at Pelikan, about twenty minutes by metro. It's a Stockholm institution, doing traditional Swedish food since the early 1900s, and people say it has the best meatballs in the city.",
             places: [{ name: "Pelikan", near: "Stockholm, Sweden" }],
           },
           {
@@ -6400,7 +6400,7 @@ export const itineraries: Itinerary[] = [
         activities: [
           {
             description:
-              "Three days in the desert: camping, ATVs, and whatever else. The itinerary records only that much, which is rather the point of it.",
+              "Three days in the desert: camping, ATVs, and whatever else. There was no real schedule beyond that, on purpose.",
             places: [{ name: "Sahara Desert", near: "Morocco" }],
           },
         ],
@@ -6483,7 +6483,7 @@ export const itineraries: Itinerary[] = [
     cover: cardiff,
     gated: false,
     teaser:
-      "Reached from London in under three hours by train, which makes it a weekend rather than a trip. The first day is all central Cardiff on foot, and the second gets out to the Brecon Beacons and back in time for the rugby.",
+      "Under three hours from London by train, so it's an easy weekend away. The first day is all central Cardiff on foot, and the second gets out to the Brecon Beacons and back in time for the rugby.",
     tags: ["#PenYFan", "#CardiffBay", "#Rugby"],
     highlights: [
       "Cardiff Castle, with a tour",
@@ -6614,7 +6614,7 @@ export const itineraries: Itinerary[] = [
           },
           {
             description:
-              "Check in near the Plaza de Armas, then do nothing strenuous. The altitude arrives about an hour after you do.",
+              "Check in near the Plaza de Armas, then do nothing strenuous. The altitude usually hits about an hour after you land.",
             places: [{ name: "Plaza de Armas", near: "Cusco, Peru" }],
           },
           {
@@ -6762,7 +6762,7 @@ export const itineraries: Itinerary[] = [
         avoid: true,
         items: [
           "The budget overnight flight to Fort Lauderdale was delayed five separate times through the night, pushed back to 05:11, and then cancelled outright. The refund came through in full, but the night was gone.",
-          "The rebooking that actually worked was an overnight to Houston and a connection on from there. If you are flying home from Lima on a red-eye, be honest with yourself about which carrier you are trusting with it.",
+          "The rebooking that actually worked was an overnight to Houston and a connection on from there. If you are flying home from Lima on a red-eye, think hard about which airline you book it with.",
         ],
       },
     ],
@@ -6804,7 +6804,7 @@ export const itineraries: Itinerary[] = [
           {
             time: "10:00",
             description:
-              "Masmak Fort, then Souq Al Zal. The fort is the one on the story of the country's unification, and the souq behind it has been trading for a very long time.",
+              "Masmak Fort, then Souq Al Zal. The fort is tied to the story of the country's unification, and the souq behind it has been trading for a very long time.",
             places: [
               { name: "Masmak Fort", near: "Riyadh, Saudi Arabia" },
               { name: "Souq Al Zal", near: "Riyadh, Saudi Arabia" },
@@ -6867,12 +6867,12 @@ export const itineraries: Itinerary[] = [
           {
             name: "Diplomatic Quarter",
             near: "Riyadh, Saudi Arabia",
-            note: "Embassies, green space, walking trails and some genuinely good architecture. Quiet, which is the point.",
+            note: "Embassies, green space, walking trails and some really good architecture. It's quiet, and that's the appeal.",
           },
           {
             name: "VIA Riyadh",
             near: "Riyadh, Saudi Arabia",
-            note: "High-end lifestyle destination: boutiques, fine dining, cinemas.",
+            note: "Upscale complex with boutiques, fine dining and cinemas.",
           },
           {
             name: "KAFD",
@@ -6882,12 +6882,12 @@ export const itineraries: Itinerary[] = [
           {
             name: "Boulevard World",
             near: "Riyadh, Saudi Arabia",
-            note: "A themed entertainment zone built around different countries, with the food and performances to match.",
+            note: "A themed entertainment area split up by country, each with its own food and shows.",
           },
           {
             name: "Boulevard Riyadh City",
             near: "Riyadh, Saudi Arabia",
-            note: "The entertainment hub: restaurants, cafes, live shows and events.",
+            note: "The big entertainment area, with restaurants, cafes, live shows and events.",
           },
           {
             name: "Sports Boulevard",
@@ -6910,19 +6910,19 @@ export const itineraries: Itinerary[] = [
         title: "Riyadh restaurants, sit down",
         note: "From the trek's own list. Grouped the way it grouped them.",
         places: [
-          { name: "Aseeb", near: "Riyadh, Saudi Arabia", note: "Modern Saudi, traditional flavours done contemporarily." },
-          { name: "Takya", near: "Riyadh, Saudi Arabia", note: "Upscale Saudi, built on regional heritage recipes." },
+          { name: "Aseeb", near: "Riyadh, Saudi Arabia", note: "Modern Saudi, traditional flavours with a modern spin." },
+          { name: "Takya", near: "Riyadh, Saudi Arabia", note: "Upscale Saudi, cooking from old regional recipes." },
           { name: "Taleed", near: "Riyadh, Saudi Arabia", note: "Fine dining Saudi, modern takes on local cooking." },
           { name: "Villa Mamas", near: "Riyadh, Saudi Arabia", note: "Middle Eastern, Bahraini home-style cooking done properly." },
-          { name: "Signor Sassi", near: "Riyadh, Saudi Arabia", note: "Luxury Italian, classic dishes, elegant room." },
+          { name: "Signor Sassi", near: "Riyadh, Saudi Arabia", note: "Fancy Italian, classic dishes, a nice dining room." },
           { name: "Agio", near: "Riyadh, Saudi Arabia", note: "Italian, traditional cooking in a modern setting." },
           { name: "MAMO Michelangelo", near: "Riyadh, Saudi Arabia", note: "High-end Italian, Mediterranean end of it." },
-          { name: "Myazu", near: "Riyadh, Saudi Arabia", note: "Premium Japanese, traditional with contemporary presentation." },
-          { name: "Kuruu", near: "Riyadh, Saudi Arabia", note: "Modern Japanese, refined and minimalist." },
+          { name: "Myazu", near: "Riyadh, Saudi Arabia", note: "High-end Japanese, traditional food plated in a modern way." },
+          { name: "Kuruu", near: "Riyadh, Saudi Arabia", note: "Modern Japanese, clean and minimal." },
           { name: "Kayzo", near: "Riyadh, Saudi Arabia", note: "Contemporary Japanese, creative with the classics." },
           { name: "Sasani", near: "Riyadh, Saudi Arabia", note: "Persian, traditional Iranian cooking, rich and aromatic." },
           { name: "Koojah", near: "Riyadh, Saudi Arabia", note: "Modern Persian, built on regional Iranian recipes." },
-          { name: "LPM", near: "Riyadh, Saudi Arabia", note: "French Riviera, elegant Mediterranean." },
+          { name: "LPM", near: "Riyadh, Saudi Arabia", note: "French Riviera style Mediterranean, on the dressy side." },
           { name: "Le Maschou", near: "Riyadh, Saudi Arabia", note: "A classic French bistro, rich and cosy." },
         ],
       },
@@ -6931,7 +6931,7 @@ export const itineraries: Itinerary[] = [
         places: [
           { name: "PrimeCut", near: "Riyadh, Saudi Arabia", note: "Premium Angus beef burgers." },
           { name: "Section-B", near: "Riyadh, Saudi Arabia", note: "Homegrown burgers, made to order, never frozen." },
-          { name: "Marble", near: "Riyadh, Saudi Arabia", note: "Chef-driven farm-to-table grill, steak over open fire." },
+          { name: "Marble", near: "Riyadh, Saudi Arabia", note: "Farm-to-table grill, steak cooked over an open fire." },
           { name: "Nora Smashed Burgers", near: "Riyadh, Saudi Arabia", note: "No frills takeaway, crispy-edged Wagyu-blend patties." },
           { name: "Jon & Vinny's", near: "Riyadh, Saudi Arabia", note: "Wood-fired pizza and fresh pasta." },
           { name: "911 Pizza", near: "Riyadh, Saudi Arabia", note: "Thin crust, Chicago style, toppings edge to edge." },
@@ -6939,7 +6939,7 @@ export const itineraries: Itinerary[] = [
           { name: "Shiro", near: "Riyadh, Saudi Arabia", note: "Sushi, sashimi, noodles and tempura, in a quiet room." },
           { name: "The Boiling Crab", near: "Riyadh, Saudi Arabia", note: "Seafood boiled in a bag with a lot of sauce." },
           { name: "Twina", near: "Riyadh, Saudi Arabia", note: "Daily fresh seafood: calamari, shrimp, salted hamour." },
-          { name: "Pao", near: "Riyadh, Saudi Arabia", note: "Acai bowls, juices and sandwiches, for a lighter hour." },
+          { name: "Pao", near: "Riyadh, Saudi Arabia", note: "Acai bowls, juices and sandwiches, for when you want something lighter." },
         ],
       },
       {

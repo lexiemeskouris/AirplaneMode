@@ -278,12 +278,12 @@ function ItineraryDetail() {
       {it.gated && (
         <section className="mt-12 overflow-hidden rounded-[2rem] bg-foreground p-8 text-center text-background md:p-12">
           <h2 className="font-display text-4xl font-extrabold tracking-tight">
-            The rest of this journey
+            The rest of this trip
           </h2>
           <p className="mx-auto mt-4 max-w-md leading-relaxed text-background/70">
-            The complete {it.duration.toLowerCase()} plan - every day, timed
-            stops, and the detours most travellers miss - is available to
-            supporters. Buy me a coffee and the full notes are yours.
+            The full {it.duration.toLowerCase()} plan, with every day, every
+            timed stop and the detours, is for supporters. Buy me a coffee to
+            get the full notes.
           </p>
           <a
             href={it.bmcUrl ?? BMC_URL}

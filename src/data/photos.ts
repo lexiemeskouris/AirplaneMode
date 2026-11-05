@@ -39,7 +39,7 @@ const CAPTIONS: Record<string, string> = {
   "japan/03.jpg": "Fatty tuna at Maguroya Kurogin.",
   "japan/04.jpg": "The 3D cat billboard in Shinjuku.",
   "japan/05.jpg": "A 3D latte at Hat Coffee in Asakusa.",
-  "japan/06.jpg": "A margherita, twelve days deep.",
+  "japan/06.jpg": "A margherita, twelve days into the trip.",
   "japan/07.jpg": "Harry's hedgehog cafe, off Nakamise.",
   "japan/08.jpg": "The truffle shoyu ramen at Ginza Kagari.",
   "japan/09.jpg": "A deer at Nara Park.",
@@ -74,7 +74,7 @@ const CAPTIONS: Record<string, string> = {
   "morocco/09.jpg": "A blue door in the medina.",
   "morocco/10.jpg": "Wrapped up against the sand.",
   "morocco/11.jpg": "Looking out over the dunes.",
-  "morocco/12.jpg": "The pool, and nowhere in particular to be.",
+  "morocco/12.jpg": "The pool, with nothing else planned.",
   "morocco/13.jpg": "The riad courtyard, from the floor above.",
   "morocco/14.jpg": "A courtyard in Fes, through the door.",
   "morocco/15.jpg": "A tile and plaster workshop, above the city.",
@@ -106,34 +106,34 @@ const CAPTIONS: Record<string, string> = {
   "egypt/06.jpg": "Kom Ombo at dusk, with everyone else off the boats.",
 
   // Galapagos.
-  "galapagos/01-w.jpg": "The trail down to the beach, with the surf already in earshot.",
+  "galapagos/01-w.jpg": "The trail down to the beach, where you can already hear the surf.",
   "galapagos/02.jpg": "The coast, from up on the lava rocks.",
-  "galapagos/03-w.jpg": "A cove on the walk, and the water you end up in.",
+  "galapagos/03-w.jpg": "A cove on the walk, and the water we swam in.",
   "galapagos/04.jpg": "Tuna ceviche.",
   "galapagos/05.jpg": "Kicker Rock, from the boat.",
   "galapagos/06-w.jpg": "White sand, and nobody else on it.",
-  "galapagos/07-w.jpg": "Under a tortoise shell, which is bigger than it sounds.",
-  "galapagos/08.jpg": "A giant tortoise, getting on with its day.",
+  "galapagos/07-w.jpg": "Under a giant tortoise shell.",
+  "galapagos/08.jpg": "A giant tortoise, just walking around.",
   "galapagos/09.jpg": "Tacos, soup and croquettes.",
 
   // Thailand.
   "thailand/01.jpg": "Longtails pulled up in the shallows, on the Phi Phi boat day.",
   "thailand/02-w.jpg": "Masks on, in the water under the Phi Phi cliffs.",
-  "thailand/03.jpg": "A macaque on the beach, posing better than either of us.",
+  "thailand/03.jpg": "A macaque posing on the beach.",
   "thailand/04.jpg": "Matching hearts, at the village on the Chiang Rai day.",
   "thailand/05-w.jpg": "Between two elephants at Patara, on caregiver day.",
 
   // Kilimanjaro.
-  "kilimanjaro/01-w.jpg": "The group and some of the crew, before the off in Moshi.",
-  "kilimanjaro/02-w.jpg": "Shira Camp, day two, still with the legs to jump.",
+  "kilimanjaro/01-w.jpg": "The group and some of the crew in Moshi, before we set off.",
+  "kilimanjaro/02-w.jpg": "Shira Camp, day two, when we still had the energy to jump.",
   "kilimanjaro/03-w.jpg": "Single file, with Mawenzi in the cloud behind.",
   "kilimanjaro/04.jpg": "Breakfast in the mess tent, almost always the highlight.",
   "kilimanjaro/05-w.jpg": "Camp pitched above the cloud line.",
   "kilimanjaro/06.jpg": "Up before the sun, with the tents still frozen.",
   "kilimanjaro/07.jpg": "Sunrise on the ridge, on a summit day that never got above 0F.",
-  "kilimanjaro/08.jpg": "A hug near the top, which was most of what got anyone there.",
+  "kilimanjaro/08.jpg": "A hug near the top.",
   "kilimanjaro/09-w.jpg": "The mountain throwing its own shadow across the cloud, and one of the last glaciers.",
-  "kilimanjaro/10.jpg": "Uhuru Peak, 5,895m, and the sign the whole thing is for.",
+  "kilimanjaro/10.jpg": "Uhuru Peak, 5,895m, at the summit sign.",
 
   // Vietnam.
   "vietnam/01.jpg": "Pho at Pho Thin in Hanoi, eaten at a steel table.",
@@ -143,8 +143,8 @@ const CAPTIONS: Record<string, string> = {
   "vietnam/05.jpg": "The firing range at the Cu Chi Tunnels, ear defenders on.",
 
   // Cambodia.
-  "cambodia/01.jpg": "A fish pedicure in Siem Reap, which tickles more than it should.",
-  "cambodia/02.jpg": "Macaques holding court on the fallen stones at Angkor.",
+  "cambodia/01.jpg": "A fish pedicure in Siem Reap, which tickles a lot.",
+  "cambodia/02.jpg": "Macaques sitting on the fallen stones at Angkor.",
   "cambodia/03.jpg": "Wat Bo, on the walk to the pottery class.",
   "cambodia/04.jpg": "A cow and her calf by the lotus pond, on the countryside bike ride.",
   "cambodia/05-w.jpg": "Hats on for the Khmer gourmet cooking class.",
@@ -166,7 +166,7 @@ const CAPTIONS: Record<string, string> = {
   "mexico-city/11.jpg": "El Pescadito, famous for the shrimp tacos.",
   "mexico-city/12.jpg": "Which is why the shrimp taco got a Corona.",
   "mexico-city/13.jpg": "A margarita with a blue sugared rim.",
-  "mexico-city/14-w.jpg": "One churro at El Moro, shared the only fair way.",
+  "mexico-city/14-w.jpg": "One churro at El Moro, shared.",
   "mexico-city/15-w.jpg": "Outside the Palacio de Bellas Artes.",
   "mexico-city/16.jpg": "Last drinks in the red light, with View-Masters on the table.",
 
@@ -193,7 +193,7 @@ const CAPTIONS: Record<string, string> = {
   "tunisia/07.jpg": "Picked up on the beach, mid-laugh.",
   "tunisia/08.jpg": "Two on a jet ski, one hand off.",
   "tunisia/09.jpg": "Octopus carpaccio with pink peppercorns, for lunch.",
-  "tunisia/10.jpg": "The pool going still as the light dropped.",
+  "tunisia/10.jpg": "The pool at dusk.",
   "tunisia/11.jpg": "Straw umbrellas on the dunes, at dusk.",
   "tunisia/12.jpg": "Bougainvillea over a white wall in Sidi Bou Said.",
   "tunisia/13.jpg": "The marina below Sidi Bou Said.",
@@ -228,7 +228,7 @@ const CAPTIONS: Record<string, string> = {
   // Quito.
   "quito/01.jpg": "Holding up the globe at Mitad del Mundo, one foot either side of the line.",
   "quito/02.jpg": "In the heart at the foot of the monument.",
-  "quito/03-w.jpg": "0° 0' 0\", pointed at for the avoidance of doubt.",
+  "quito/03-w.jpg": "0° 0' 0\", pointing right at it.",
   "quito/04-w.jpg": "At the big letters, with half of Quito's teenagers.",
   "quito/05.jpg": "Standing on the cacao map of Ecuador.",
   "quito/06-w.jpg": "A llama, unimpressed by the selfie.",
@@ -238,7 +238,7 @@ const CAPTIONS: Record<string, string> = {
   // Seoul.
   "seoul/01.jpg": "The Gangnam Style sculpture, two giant gold fists.",
   "seoul/02-w.jpg": "Under the shelves at Starfield Library in COEX.",
-  "seoul/03.jpg": "A machine matching foundation shade, 19C1 it decided.",
+  "seoul/03.jpg": "A machine matching my foundation shade. It went with 19C1.",
   "seoul/04.jpg": "Every angle of the face, measured to the decimal.",
   "seoul/05.jpg": "The aqua facial, from inside the bubble.",
   "seoul/06.jpg": "In hanbok at Gyeongbokgung, which gets you in free.",

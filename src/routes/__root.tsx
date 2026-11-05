@@ -21,7 +21,7 @@ function NotFoundComponent() {
         <h1 className="font-display text-7xl font-extrabold tracking-tighter text-primary">404</h1>
         <h2 className="mt-4 text-xl font-bold text-foreground">Off the map</h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          This page wandered off the route. Let's get you back on track.
+          I can't find this page. It may have moved, or the link is wrong.
         </p>
         <div className="mt-6">
           <Link
@@ -50,7 +50,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
           This page didn't load
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          Something went wrong on our end. You can try refreshing or head back home.
+          Something broke on my end. Try refreshing, or head back home.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button

@@ -175,8 +175,8 @@ export function SpinWheel({
             Spin the wheel.
           </h2>
           <p className="mx-auto mt-2 max-w-xs text-sm leading-relaxed text-muted-foreground">
-            Every itinerary on the wheel is free, so there is nothing to win
-            except a decision. Let the wheel make it.
+            Every itinerary on the wheel is free. Can't decide where to go
+            next? Let the wheel pick for you.
           </p>
 
           <div className="relative mx-auto mt-6 w-56 sm:w-64">
