@@ -9,13 +9,13 @@ import { useEffect, useState } from "react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "AirplaneMode - High-Energy Travel Itineraries" },
+      { title: "AirplaneMode - Fast-Paced Travel Itineraries" },
       {
         name: "description",
         content:
           "Travel itineraries I build for myself and post as I used them. Real places, hour by hour. Free to read.",
       },
-      { property: "og:title", content: "AirplaneMode - High-Energy Travel Itineraries" },
+      { property: "og:title", content: "AirplaneMode - Fast-Paced Travel Itineraries" },
       {
         property: "og:description",
         content:

@@ -203,13 +203,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "AirplaneMode - High-Energy Travel Itineraries" },
+      { title: "AirplaneMode - Fast-Paced Travel Itineraries" },
       {
         name: "description",
         content:
           "Fast-paced itineraries for quick getaways. The best cities, food, and sights, hour by hour, with every stop linked.",
       },
-      { property: "og:title", content: "AirplaneMode - High-Energy Travel Itineraries" },
+      { property: "og:title", content: "AirplaneMode - Fast-Paced Travel Itineraries" },
       {
         property: "og:description",
         content:
