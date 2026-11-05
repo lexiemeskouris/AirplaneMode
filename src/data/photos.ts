@@ -352,7 +352,7 @@ const CAPTIONS: Record<string, string> = {
   // Amsterdam.
   "amsterdam/01.jpg": "Self-Portrait with Grey Felt Hat, at the Van Gogh Museum.",
   "amsterdam/02.jpg": "A drink in the sun on Eerste Sweelinckstraat, in De Pijp.",
-  "amsterdam/03.jpg": "Salmon, steak with béarnaise, a burger and orange wine at Buurtcafé De Tros.",
+  "amsterdam/03.jpg": "Lasagna, steak and a burger at Buurtcafé De Tros.",
   "amsterdam/04.jpg": "On the canal boat, drinks in hand.",
   "amsterdam/05-w.jpg": "Gabled houses and houseboats, from the water.",
   "amsterdam/06.jpg": "Boats tied up along a canal, under the trees.",
