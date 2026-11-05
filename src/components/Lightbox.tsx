@@ -2,6 +2,7 @@ import * as React from "react";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import useEmblaCarousel from "embla-carousel-react";
 import { ArrowLeft, ArrowRight, X } from "lucide-react";
+import { bullet } from "@/lib/places";
 
 export type LightboxPhoto = { src: string; alt: string; caption?: string | undefined };
 
@@ -110,7 +111,7 @@ export function Lightbox({
           )}
 
           <p className="min-h-12 px-6 py-4 text-center text-sm leading-snug text-white/80">
-            {caption}
+            {caption && bullet(caption)}
           </p>
         </DialogPrimitive.Content>
       </DialogPrimitive.Portal>

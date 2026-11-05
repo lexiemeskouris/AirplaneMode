@@ -106,7 +106,7 @@ export function ActivityList({
   return (
     <ol className="divide-y divide-border">
       {activities.map((a, i) => {
-        const { nodes, trailing } = linkifyDescription(a.description, a.places, destination);
+        const { nodes, trailing } = linkifyDescription(bullet(a.description), a.places, destination);
         return (
           <li
             key={`${idPrefix}-${i}`}

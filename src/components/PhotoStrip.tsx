@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { Photo } from "@/data/photos";
 import { Lightbox } from "@/components/Lightbox";
+import { bullet } from "@/lib/places";
 
 /**
  * The camera roll for a page. A grid rather than CSS columns: columns read top
@@ -53,7 +54,7 @@ export function PhotoStrip({
             </button>
             {photo.caption && (
               <figcaption className="px-3 py-2 text-xs leading-snug text-muted-foreground">
-                {photo.caption}
+                {bullet(photo.caption)}
               </figcaption>
             )}
           </figure>
