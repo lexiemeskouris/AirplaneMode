@@ -65,6 +65,24 @@ function AboutPage() {
             account who you’re traveling with, when you’re going, and what you
             like to do most).
           </p>
+          <h2 className="pt-4 font-display text-2xl font-extrabold tracking-tight text-foreground">
+            How this started
+          </h2>
+          <p>
+            I made this site because I hated reading travel blogs that were
+            paragraphs upon paragraphs, where you had to dig through all of it
+            just to work out where to go and when.
+          </p>
+          <p>
+            So every plan here is logical and location-based. You spend each
+            day exploring one area, and everything in it is within walking
+            distance, because I would much rather walk than spend my trip on
+            public transport.
+          </p>
+          <p>
+            I also tell you what to skip: the places that are touristy, or only
+            famous because they’re on Instagram.
+          </p>
           <p>
             If you like an itinerary, please consider supporting me through the
             button in the top-right corner, so I can keep offering these for
