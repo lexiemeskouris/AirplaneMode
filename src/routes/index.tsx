@@ -236,7 +236,7 @@ function Index() {
           cover={it.cover}
           title={placeName(it.title)}
           summary={it.summary}
-          tags={it.tags}
+          tags={it.highlights?.length ? it.highlights : it.tags}
           chipA={it.season.toUpperCase()}
           chipB={it.duration.toUpperCase()}
           cta={
