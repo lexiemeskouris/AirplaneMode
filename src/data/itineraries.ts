@@ -166,7 +166,7 @@ export const itineraries: Itinerary[] = [
       "Pintxos hopping through the Old Town, two nights running",
       "Monte Urgull at golden hour with a drink at the top",
       "Monte Igueldo's funicular, tower and clifftop amusement park",
-      "Swimming at La Concha, Zurriola and Ondarreta",
+      "Swimming at La Concha and Ondarreta",
       "Tortilla at Bar Antonio, first thing",
     ],
     days: [
@@ -197,8 +197,9 @@ export const itineraries: Itinerary[] = [
           },
           { description: "Beach time at La Concha.", places: [{ name: "La Concha" }] },
           {
-            description: "Pintxos lunch at La Cuchara de San Telmo.",
-            places: [{ name: "La Cuchara de San Telmo" }],
+            description:
+              "Pintxos lunch at La Cuchara de San Telmo. It was closed when we went, so we ended up at Bar Sport and bopping around pintxos bars that were not on our list.",
+            places: [{ name: "La Cuchara de San Telmo" }, { name: "Bar Sport" }],
           },
           {
             time: "14:00",
@@ -264,18 +265,17 @@ export const itineraries: Itinerary[] = [
           {
             description: "Pintxos hopping, round two, carrying straight on from lunch.",
             places: [
-              { name: "Bar Sport" },
               { name: "Lanperna" },
               { name: "La Viña", note: "For the Basque cheesecake." },
               { name: "Gandarias" },
             ],
           },
-          { description: "Beach time at Zurriola.", places: [{ name: "Zurriola" }] },
+          { description: "Beach time at La Concha again, the main beach closest to the Old Town." },
           { description: "Shower and change." },
           {
             time: "20:00",
             description:
-              "Dinner at Bar Néstor. There is a queue, so get there before you are hungry.",
+              "Dinner at Bar Néstor. We queued about two hours before to make sure we were one of the 16 people who get tortilla.",
             places: [{ name: "Bar Néstor" }],
           },
         ],
@@ -4484,15 +4484,17 @@ export const itineraries: Itinerary[] = [
           },
           {
             time: "13:15",
-            description: "Queue for the toboggan, and ride it down to Livramento.",
+            description: "Queue for the toboggan, and ride it down to Livramento. Cash only.",
             places: [{ name: "Monte Toboggan Run", near: "Funchal, Madeira" }],
           },
           {
-            description: "Lunch at Restaurante Alta Vista, five to ten minutes away.",
+            description:
+              "Lunch at Restaurante Alta Vista, five to ten minutes away. The chicken was dry, but she gave us amazing sangria and the views were great. Very local, and I'm glad we went.",
             places: [{ name: "Restaurante Alta Vista", near: "Funchal, Madeira" }],
           },
           {
-            description: "The Levada dos Tornos, an hour and a half out and back.",
+            description:
+              "The Levada dos Tornos, an hour and a half out and back. Levadas are really hard to find: we used ChatGPT to pin down the exact coordinates of the start. They are also quite easy, so I would only do one if the PR hikes are too much for you.",
             places: [{ name: "Levada dos Tornos", near: "Madeira" }],
           },
           {
@@ -5589,18 +5591,18 @@ export const itineraries: Itinerary[] = [
     duration: "3 days",
     season: "Summer",
     summary:
-      "Valletta in a day, a boat out to the Blue Lagoon, and the coastline path to Dingli Cliffs.",
+      "Valletta in a day, big nights in Paceville, and a boat into the Blue Grotto.",
     cover: malta,
     gated: false,
     teaser:
-      "Based in St Julian's. One day of Valletta and Mdina at sunset, one whole day on a boat around Comino and Gozo, and one of cliffs and beaches before the late flight.",
-    tags: ["#Valletta", "#BlueLagoon", "#Mdina"],
+      "Based at the InterContinental in St George's Bay, St Julian's. One day of Valletta, two big nights out, and the Blue Grotto and Dingli Cliffs before the late flight. Our boat day got rained off, so it and everything else we did not get to is at the bottom for if you have another day.",
+    tags: ["#Valletta", "#Paceville", "#BlueGrotto"],
     highlights: [
       "The midday cannon salute from the Barrakka Gardens",
-      "Mdina at sunset, and Serkin for cheesecake on the way out",
-      "A full day boat to the Blue Lagoon, the caves and the Gozo coastline",
+      "Dinner at Villa Bologna on the first night",
+      "Paceville, where we probably hit every club on the list",
+      "A boat into the Blue Grotto for 10 euros each",
       "The coastline path from the Blue Grotto to Dingli Cliffs",
-      "Paceville, when you still have it in you",
     ],
     days: [
       {
@@ -5625,43 +5627,11 @@ export const itineraries: Itinerary[] = [
             ],
           },
           {
-            description: "Lunch at Rubino, traditional Maltese, or Rampila, built into the bastions.",
-            places: [
-              { name: "Rubino", near: "Valletta, Malta" },
-              { name: "Rampila", near: "Valletta, Malta" },
-            ],
+            description: "Dinner at Villa Bologna Restaurant.",
+            places: [{ name: "Villa Bologna Restaurant", near: "Malta" }],
           },
           {
-            description: "Gelato and coffee at Lot Sixty One.",
-            places: [{ name: "Lot Sixty One", near: "Valletta, Malta" }],
-          },
-          {
-            description:
-              "If you skip the Valletta sights, the beach at St Paul's Bay is nearer the flat. Or ferry over to the Three Cities.",
-            places: [
-              { name: "St Paul's Bay", near: "Malta" },
-              { name: "The Three Cities", near: "Malta", note: "Birgu, Senglea and Cospicua." },
-            ],
-          },
-          {
-            description: "Taxi to Mdina for sunset.",
-            places: [{ name: "Mdina", near: "Malta" }],
-          },
-          {
-            description: "Dinner in Mdina.",
-            places: [
-              { name: "Coogi's", near: "Mdina, Malta" },
-              { name: "Scala", near: "Mdina, Malta" },
-              { name: "Golden Fork", near: "Mdina, Malta" },
-              { name: "Trattoria AD 1530", near: "Mdina, Malta" },
-            ],
-          },
-          {
-            description: "Stop at Serkin for the famous Maltese cheesecake, to go.",
-            places: [{ name: "Crystal Palace Serkin", near: "Rabat, Malta" }],
-          },
-          {
-            description: "Pregame, then the bars and clubs in Paceville.",
+            description: "Pregame, then the bars and clubs in Paceville. We went out big time and probably hit all of these.",
             places: [
               { name: "Paceville", near: "Malta" },
               { name: "Havana Club", near: "Paceville, Malta" },
@@ -5673,21 +5643,13 @@ export const itineraries: Itinerary[] = [
       },
       {
         day: "Day Two",
-        title: "Boat Day",
+        title: "Rained Off, Then Out Again",
         activities: [
           {
-            time: "10:00",
             description:
-              "Boat day until 18:00: the Blue Lagoon at Comino, the caves, and the Gozo coastline.",
-            places: [
-              { name: "Blue Lagoon", near: "Comino, Malta" },
-              { name: "Gozo", near: "Malta" },
-            ],
+              "This was meant to be the boat day, but it rained and the boat was cancelled. It is in the list at the bottom.",
           },
-          {
-            description: "Dinner at Spinola Bay in St Julian's, then out again.",
-            places: [{ name: "Spinola Bay", near: "St Julian's, Malta" }],
-          },
+          { description: "Dinner at a Georgian restaurant, then out again." },
         ],
       },
       {
@@ -5695,11 +5657,8 @@ export const itineraries: Itinerary[] = [
         title: "Cliffs, Beach, Then the Late Flight",
         activities: [
           {
-            description: "Pick up a Gambrinus ftira, the ring-shaped sourdough with fillings.",
-            places: [{ name: "Gambrinus", near: "Malta" }],
-          },
-          {
-            description: "Uber to the Blue Grotto.",
+            description:
+              "Uber to the Blue Grotto. You can pay 10 euros each to take a boat in, and it is well worth it. There is an ice cream shop and some food nearby.",
             places: [{ name: "Blue Grotto", near: "Malta" }],
           },
           {
@@ -5721,12 +5680,27 @@ export const itineraries: Itinerary[] = [
     ],
     extras: [
       {
+        title: "If you have another day",
+        note: "We did not get to these. The boat day got rained off.",
+        places: [
+          { name: "Boat day", url: "https://www.google.com/maps/search/?api=1&query=Blue+Lagoon+Comino+Malta", note: "The Blue Lagoon at Comino, the caves and the Gozo coastline, 10:00 to 18:00" },
+          { name: "Rubino", near: "Valletta, Malta", note: "Traditional Maltese, for lunch in Valletta" },
+          { name: "Rampila", near: "Valletta, Malta", note: "Built into the bastions" },
+          { name: "Lot Sixty One", near: "Valletta, Malta", note: "Gelato and coffee" },
+          { name: "St Paul's Bay", near: "Malta", note: "The beach" },
+          { name: "The Three Cities", near: "Malta", note: "Birgu, Senglea and Cospicua, a ferry from Valletta" },
+          { name: "Mdina", near: "Malta", note: "Get a taxi there for sunset" },
+          { name: "Coogi's", near: "Mdina, Malta", note: "Dinner in Mdina, like Scala, Golden Fork or Trattoria AD 1530" },
+          { name: "Crystal Palace Serkin", near: "Rabat, Malta", note: "The famous Maltese cheesecake, to go, on the way back from Mdina" },
+          { name: "Gambrinus", near: "Malta", note: "A ftira, the ring-shaped sourdough with fillings" },
+        ],
+      },
+      {
         title: "Eat and drink",
         places: [
           { name: "Cafe Society", near: "Triq San Gwann, Valletta, Malta" },
           { name: "Paranga" },
           { name: "Rafael's" },
-          { name: "Villa Bologna Restaurant" },
           { name: "LOA" },
           { name: "Beef Bar" },
           { name: "Taproom" },

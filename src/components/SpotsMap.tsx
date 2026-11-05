@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { bullet } from "@/lib/places";
 import "leaflet/dist/leaflet.css";
 import { spotHref, type SavedSpot, type SpotKind } from "@/data/savedSpots";
 
@@ -51,7 +52,7 @@ export function SpotsMap({ spots, onGuide = false }: { spots: SavedSpot[]; onGui
         });
         const popup =
           `<a href="${spotHref(s)}" target="_blank" rel="noopener noreferrer" class="spot-popup-link">${escapeHtml(s.name)}</a>` +
-          (s.note ? `<div class="spot-popup-note">${escapeHtml(s.note)}</div>` : "") +
+          (s.note ? `<div class="spot-popup-note">${escapeHtml(bullet(s.note))}</div>` : "") +
           (s.tried ? "" : `<div class="spot-popup-note">Still on my list</div>`) +
           `<a href="${spotHref(s)}" target="_blank" rel="noopener noreferrer" class="spot-popup-open">Open in Google Maps &rarr;</a>`;
         L.marker([s.lat, s.lon], { icon, title: s.name }).bindPopup(popup).addTo(map);
@@ -118,7 +119,7 @@ export function SpotsMap({ spots, onGuide = false }: { spots: SavedSpot[]; onGui
                       </a>
                       {(s.note || !s.tried) && (
                         <span className="block text-sm text-muted-foreground">
-                          {[s.note, s.tried ? "" : "Still on my list"].filter(Boolean).join(". ")}
+                          {[s.note && bullet(s.note), s.tried ? "" : "Still on my list"].filter(Boolean).join(". ")}
                         </span>
                       )}
                     </li>

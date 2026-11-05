@@ -230,6 +230,7 @@ export const guides: Guide[] = [
           { name: "Marion", note: "Turns into a club, like Bagatelle or Maison Close." },
           { name: "Baoli" },
           { name: "Mila" },
+          { name: "LIV", near: "Miami Beach, FL" },
         ],
       },
       {
@@ -251,6 +252,11 @@ export const guides: Guide[] = [
           "Marion at 22:30.",
           "Los Fuegos at 22:30, then Living Room for drinks after.",
         ],
+      },
+      {
+        title: "Skip",
+        avoid: true,
+        places: [{ name: "Versace Mansion", near: "Miami Beach, FL", note: "We went for dinner. You can skip it completely" }],
       },
     ],
   },
@@ -744,7 +750,7 @@ export const guides: Guide[] = [
           { description: "Night out at The Fat Badger. Live music, cute guys." },
           {
             description: "Alternative: The Westbourne.",
-            places: [{ name: "The Westbourne" }],
+            places: [{ name: "The Westbourne", note: "Great pub for casual, lively drinks. Lots of Americans and really cute guys" }],
           },
         ],
       },
@@ -752,9 +758,8 @@ export const guides: Guide[] = [
         title: "Marylebone, the canal, and Clerkenwell",
         activities: [
           {
-            description: "At leisure. Walk to Marylebone and have brunch.",
+            description: "At leisure. Brunch at WatchHouse, Abuelo or Chiltern Street Deli.",
             places: [
-              { name: "Marylebone" },
               { name: "WatchHouse" },
               { name: "Abuelo" },
               { name: "Chiltern Street Deli" },
@@ -784,7 +789,7 @@ export const guides: Guide[] = [
           },
           {
             time: "18:45",
-            description: "Dinner at Shawarma Bar, in Clerkenwell.",
+            description: "Dinner at Shawarma Bar, in Clerkenwell. Incredible food, and very easy to get a reservation.",
             places: [{ name: "Shawarma Bar" }],
           },
           {
@@ -803,8 +808,12 @@ export const guides: Guide[] = [
         activities: [
           {
             time: "11:00",
-            description: "Coffee and a pastry in St John's Wood.",
-            places: [{ name: "St John's Wood" }],
+            description: "Coffee and a pastry in St John's Wood, at places like No. 49, Johnny Green or England's Grace.",
+            places: [
+              { name: "No. 49", near: "St John's Wood, London" },
+              { name: "Johnny Green", near: "St John's Wood, London" },
+              { name: "England's Grace", near: "St John's Wood, London" },
+            ],
           },
           {
             time: "11:30",
@@ -886,7 +895,7 @@ export const guides: Guide[] = [
         ],
       },
       {
-        title: "Primrose Hill, pilates, and a tattoo",
+        title: "Primrose Hill, pilates, and martinis",
         activities: [
           { time: "10:00", description: "Wake up." },
           { time: "10:30", description: "Coffee on the high street." },
@@ -900,29 +909,27 @@ export const guides: Guide[] = [
             description: "Burn at Reformcore.",
             places: [{ name: "Reformcore" }],
           },
-          { time: "13:00", description: "Brunch at Arvo.", places: [{ name: "Arvo" }] },
+          {
+            time: "13:00",
+            description: "Brunch at Arvo. The schnitzel and Turkish eggs are to die for.",
+            places: [{ name: "Arvo" }],
+          },
           { time: "14:30", description: "Home to get ready for the evening." },
           {
             time: "16:00",
             description:
-              "Drinks at The Connaught Bar or Dukes. Two martinis maximum, we will die.",
+              "Drinks at The Connaught Bar or Dukes. Two martinis maximum, we will die. Walk in and be prepared to wait: have a drink at one of their other bars in the meantime.",
             places: [{ name: "The Connaught Bar" }, { name: "Dukes Bar" }],
-          },
-          { time: "19:00", description: "Tattoo, until 23:00." },
-          {
-            time: "23:00",
-            description: "Tattoo after party at Scala.",
-            places: [{ name: "Scala" }],
           },
         ],
       },
       {
         title: "A Marylebone Sunday",
-        note: "The farmers' market is Sundays only.",
+        note: "The farmers' market is Sundays only, and open until 14:00.",
         activities: [
           {
-            description: "Marylebone Farmers Market, then Marylebone High Street.",
-            places: [{ name: "Marylebone Farmers Market" }, { name: "Marylebone High Street" }],
+            description: "Marylebone Farmers Market. Get the Turkish gözleme.",
+            places: [{ name: "Marylebone Farmers Market" }],
           },
           {
             time: "15:00",
@@ -957,11 +964,10 @@ export const guides: Guide[] = [
           },
           {
             description:
-              "Explore Shoreditch High Street, maybe with a drink at Sessions Arts Club, the rooftop at Llama Inn, or Library.",
+              "Explore Shoreditch High Street, maybe with a drink at Sessions Arts Club or Library.",
             places: [
               { name: "Shoreditch High Street" },
               { name: "Sessions Arts Club" },
-              { name: "Llama Inn" },
               { name: "Library" },
             ],
           },
@@ -976,12 +982,9 @@ export const guides: Guide[] = [
         title: "Notting Hill and Kensington",
         activities: [
           {
-            description: "Walk to brunch at Butter Bakery Bar & Cafe.",
-            places: [{ name: "Butter Bakery Bar & Cafe" }],
-          },
-          {
-            description: "Walk through Portobello Road Market on the way to the Design Museum.",
-            places: [{ name: "Portobello Road Market" }, { name: "Design Museum" }],
+            description:
+              "Walk through Portobello Road Market on the way to the Design Museum. Stop at Clobber in the market for vintage Burberry at great prices.",
+            places: [{ name: "Portobello Road Market" }, { name: "Clobber", near: "Portobello Road, London" }, { name: "Design Museum" }],
           },
           {
             description: "Walk Kensington High Street, for the shops and the cafes.",
@@ -996,27 +999,27 @@ export const guides: Guide[] = [
       },
       {
         title: "Museums",
-        note: "All four are free, which is the best thing about London museums. Pick one, not four.",
+        note: "All four are free. Pick one, not four.",
         places: [
           {
             name: "British Museum",
             near: "London, England",
-            note: "The big one, and far too large to do in a single visit. Pick a wing and accept you will not see the rest.",
+            note: "Way too big for one visit. Pick a wing",
           },
           {
             name: "Tate Modern",
             near: "London, England",
-            note: "Modern and contemporary art in the old power station on the South Bank. Go up for the view as well as the art.",
+            note: "Modern art in the old power station on the South Bank. Go up for the view",
           },
           {
             name: "National Gallery",
             near: "London, England",
-            note: "Western painting from the 1200s to 1900, right on Trafalgar Square. The easiest one to drop into for an hour.",
+            note: "Right on Trafalgar Square, and the easiest one to pop into for an hour",
           },
           {
             name: "Victoria and Albert Museum",
             near: "London, England",
-            note: "Art and design: fashion, furniture, ceramics, all of it. The courtyard is a good place to sit when you have had enough.",
+            note: "Fashion, furniture and design. Sit in the courtyard when you're done",
           },
         ],
       },

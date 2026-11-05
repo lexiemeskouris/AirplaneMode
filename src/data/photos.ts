@@ -24,12 +24,12 @@ const files = import.meta.glob("../assets/photos/*/*.{jpg,jpeg,JPG,png}", {
 const CAPTIONS: Record<string, string> = {
   // San Sebastian. These describe what is in the frame and are waiting to be
   // replaced with what Lexie actually remembers about each one.
-  "san-sebastian/01.jpg": "Tortilla and a coffee, standing at the bar.",
+  "san-sebastian/01.jpg": "Tortilla and a coffee at Bar Antonio.",
   "san-sebastian/02.jpg": "Outside Bar Néstor, in the queue.",
   "san-sebastian/03.jpg": "Outside Ganbara.",
-  "san-sebastian/04.jpg": "Tomato salad, one pintxo and two glasses of white.",
-  "san-sebastian/05.jpg": "Golden hour on the waterfront.",
-  "san-sebastian/06.jpg": "Beef cheek and potato puree.",
+  "san-sebastian/04.jpg": "Tomato salad, one pintxo and two glasses of white at Ganbara.",
+  "san-sebastian/05.jpg": "A quick photo stop on the Secret Food Tour.",
+  "san-sebastian/06.jpg": "Carrilleras de ternera at Casa Senra: veal cheeks glazed in red wine, with mashed potato.",
   "san-sebastian/07.jpg": "The Buen Pastor cathedral.",
 
   // Japan. Where the shot clearly matches a stop in the itinerary it is named;
@@ -258,12 +258,12 @@ const CAPTIONS: Record<string, string> = {
   // Malta.
   "malta/01.jpg": "Valletta's closed balconies, all the way down the hill.",
   "malta/02.jpg": "By the palm and the monument, next to the church portico in Valletta.",
-  "malta/03.jpg": "Calamari, burrata and white wine with ice in it, for lunch.",
+  "malta/03.jpg": "Calamari, burrata and white wine with ice in it, for lunch at Taste in Valletta.",
   "malta/04.jpg": "The plate at Villa Bologna.",
   "malta/05.jpg": "Under the cliffs on the boat day, with the water going green.",
   "malta/06.jpg": "Off the boat and into the deep blue.",
   "malta/07.jpg": "Outside Andrew's Bar, est. 1909.",
-  "malta/08.jpg": "Three pizzas and a bowl of potatoes.",
+  "malta/08.jpg": "Three pizzas and a bowl of potatoes at Lubelli in St George's Bay, near the InterContinental where we stayed.",
   "malta/09.jpg": "Sunset over the bay.",
 
   // Madeira.
@@ -497,11 +497,11 @@ const CAPTIONS: Record<string, string> = {
   "miami/01-w.jpg": "Pink clouds over the beach, as the sun went.",
   "miami/02.jpg": "Barefoot on the sand at dusk.",
   "miami/03-w.jpg": "Six of us piled onto a beach cabana.",
-  "miami/04.jpg": "Neapolitan pizzas, a margherita and a truffle.",
-  "miami/05.jpg": "Dinner round one table, espresso martinis first.",
+  "miami/04.jpg": "Pizza at La Leggenda Pizzeria.",
+  "miami/05.jpg": "Dinner at the Versace Mansion. You can skip it completely.",
   "miami/06.jpg": "Brickell lit up below, from a window high above it.",
   "miami/07.jpg": "Flames and smoke over the dance floor.",
-  "miami/08.jpg": "Blue lasers over the crowd, from the balcony.",
+  "miami/08.jpg": "LIV Miami.",
   "miami/09.jpg": "Dressed up by the pool, at the end of the night.",
 
   // Charleston.
@@ -515,32 +515,32 @@ const CAPTIONS: Record<string, string> = {
   "berkshires/03-w.jpg": "A cider and wine flight, with the cans lined up behind.",
 
   // London.
-  "london/01.jpg": "St Pancras, in full sun.",
-  "london/02-w.jpg": "Outside the British Museum, hats on.",
+  "london/01.jpg": "St Pancras.",
+  "london/02-w.jpg": "Outside the British Museum.",
   "london/03.jpg": "The Swing, at the Wallace Collection.",
   "london/04.jpg": "Lined up by a phone box, under the Edith Cavell memorial.",
   "london/05.jpg": "The Devil Wears Prada, at the Dominion.",
-  "london/06-w.jpg": "Against the graffiti in the Leake Street tunnel.",
+  "london/06-w.jpg": "The Leake Street graffiti tunnel.",
   "london/07.jpg": "Tower Bridge, from the river walk by City Hall.",
   "london/08.jpg": "A boat party passing Tower Bridge.",
-  "london/09-w.jpg": "The Shard and the City over the chimney pots.",
+  "london/09-w.jpg": "The Shard and the City.",
   "london/10.jpg": "The pastel houses of Notting Hill.",
-  "london/11.jpg": "Walking down Primrose Hill, with the skyline behind.",
-  "london/12.jpg": "Crossing Abbey Road, the way everyone does.",
-  "london/13.jpg": "On the pavement, can in hand, on a hot day.",
-  "london/14-w.jpg": "A pedalo on the Serpentine, as the sun went down.",
-  "london/15.jpg": "A wine bar, every wall lined with bottles.",
-  "london/16.jpg": "A candlelit table, and crayons on the tablecloth.",
+  "london/11.jpg": "Walking down Primrose Hill.",
+  "london/12.jpg": "Crossing Abbey Road.",
+  "london/13.jpg": "On the way to Lord's for a cricket match.",
+  "london/14-w.jpg": "A pedalo on the Serpentine.",
+  "london/15.jpg": "10 Cases, an incredible wine bar with even better steak frites.",
+  "london/16.jpg": "Dinner at Lagana.",
   "london/17.jpg": "A day at the cricket.",
   "london/18.jpg": "Above the crowds at Wimbledon.",
-  "london/19-w.jpg": "A gig at the Tottenham Hotspur Stadium.",
-  "london/20.jpg": "Rugby in the park, on an autumn Saturday.",
+  "london/19-w.jpg": "Zach Bryan at the Tottenham Hotspur Stadium.",
+  "london/20.jpg": "An LBS rugby match in Regent's Park.",
   "london/21.jpg": "By the big grass letters at London Business School.",
-  "london/22.jpg": "The Italian Gardens in Kensington Gardens, in full sun.",
+  "london/22.jpg": "The Italian Gardens in Kensington Gardens.",
 
   // Cambridge.
   "cambridge/01.jpg": "Punting on the Cam, coffee in hand.",
-  "cambridge/02.jpg": "On a college lawn in gowns, at sunset.",
+  "cambridge/02.jpg": "At a Cambridge formal.",
   "cambridge/03-w.jpg": "A selfie in the college court, before dinner.",
 
   // United Kingdom.
@@ -565,13 +565,13 @@ const CAPTIONS: Record<string, string> = {
   "dover/09.jpg": "A s'more to finish.",
 
   // Cotswolds.
-  "cotswolds/01.jpg": "Sunglasses on, on the train out of Paddington.",
-  "cotswolds/02.jpg": "Breakfast at Martha's Coffee House in Moreton-in-Marsh.",
+  "cotswolds/01.jpg": "Napping on the train out of Paddington.",
+  "cotswolds/02.jpg": "Martha's Coffee House in Moreton-in-Marsh. Amazing, with a different scone flavour every day. This one was funfetti.",
   "cotswolds/03.jpg": "Croissant, scones and a teapot at Martha's.",
-  "cotswolds/04.jpg": "Men to Avoid in Art and Life, read in a shop window.",
+  "cotswolds/04.jpg": "Cute vintage shopping, with a light read.",
   "cotswolds/05.jpg": "Under the bunting, in a courtyard of shops.",
   "cotswolds/06.jpg": "The Cotswold Shop, in Bourton-on-the-Water.",
-  "cotswolds/07.jpg": "The model village, a Cotswold village in miniature.",
+  "cotswolds/07.jpg": "The model village. I love miniatures so I got a kick out of it, but honestly it's not worth it.",
 };
 
 export type Photo = { src: string; alt: string; caption?: string; wide?: boolean };

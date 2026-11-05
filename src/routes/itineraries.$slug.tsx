@@ -2,7 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { PhotoStrip, TikTokLink } from "@/components/PhotoStrip";
 import { photosFor } from "@/data/photos";
 import { getItinerary, itineraries, BMC_URL } from "@/data/itineraries";
-import { ActivityList, placeHref, placeLinkClass } from "@/lib/places";
+import { ActivityList, bullet, placeHref, placeLinkClass } from "@/lib/places";
 import { DealsBlock } from "@/components/Deals";
 import { SpotsMap } from "@/components/SpotsMap";
 import { spotsFor } from "@/data/savedSpots";
@@ -255,7 +255,7 @@ function ItineraryDetail() {
                         aria-hidden
                         className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary"
                       />
-                      {item}
+                      {bullet(item)}
                     </li>
                   ))}
                 </ul>
@@ -280,7 +280,7 @@ function ItineraryDetail() {
                       {place.name}
                     </a>
                     {place.note && (
-                      <span className="block text-sm text-muted-foreground">{place.note}</span>
+                      <span className="block text-sm text-muted-foreground">{bullet(place.note)}</span>
                     )}
                   </li>
                 ))}

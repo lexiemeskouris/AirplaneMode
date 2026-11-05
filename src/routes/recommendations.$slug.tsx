@@ -5,7 +5,7 @@ import { RoastTable } from "@/components/RoastTable";
 import { PhotoStrip, TikTokLink } from "@/components/PhotoStrip";
 import { photosFor } from "@/data/photos";
 import { BMC_URL } from "@/data/itineraries";
-import { ActivityList, placeHref, placeLinkClass } from "@/lib/places";
+import { ActivityList, placeHref, placeLinkClass, bullet } from "@/lib/places";
 import { getGuide, guides } from "@/data/guides";
 import { DealsBlock } from "@/components/Deals";
 import { SpotsMap } from "@/components/SpotsMap";
@@ -192,7 +192,7 @@ function GuidePage() {
                         {place.name}
                       </a>
                       {place.note && (
-                        <span className="block text-sm text-muted-foreground">{place.note}</span>
+                        <span className="block text-sm text-muted-foreground">{bullet(place.note)}</span>
                       )}
                     </li>
                   ))}
@@ -203,7 +203,7 @@ function GuidePage() {
                   {section.items.map((item) => (
                     <li key={item} className="flex gap-3 leading-relaxed text-foreground/90">
                       <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                      {item}
+                      {bullet(item)}
                     </li>
                   ))}
                 </ul>

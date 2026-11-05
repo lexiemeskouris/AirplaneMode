@@ -5,6 +5,11 @@ import type { Activity, Place } from "@/data/itineraries";
 export const placeLinkClass =
   "font-bold text-accent underline decoration-accent/30 underline-offset-4 transition-colors hover:decoration-accent";
 
+/** Bullets and place notes read as notes, not sentences: no full stop at the end. */
+export function bullet(s: string) {
+  return s.replace(/(?<!\.)\.\s*$/, "");
+}
+
 export function placeHref(place: Place, destination: string) {
   return place.url ?? mapsSearch(place.name, place.near ?? destination);
 }
@@ -124,7 +129,7 @@ export function ActivityList({
                         {place.name}
                       </a>
                       {place.note && (
-                        <span className="text-sm text-muted-foreground"> {place.note}</span>
+                        <span className="text-sm text-muted-foreground"> {bullet(place.note)}</span>
                       )}
                     </li>
                   ))}
