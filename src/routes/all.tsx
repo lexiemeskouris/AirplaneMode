@@ -117,9 +117,6 @@ function AllPage() {
         Everywhere,
         <span className="text-primary"> A to Z.</span>
       </h1>
-      <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted-foreground">
-        Every itinerary and every list, in one place. {rows.length} in total.
-      </p>
 
       {/* CSS columns rather than a grid: an alphabetical index should read
           down the first column and continue in the second, the way an index
