@@ -256,16 +256,124 @@ export const guides: Guide[] = [
   },
   {
     slug: "reykjavik",
-    title: "Reykjavík Restaurants",
+    title: "Four Days in Iceland",
     destination: "Reykjavík",
     country: "Iceland",
     coords: { lat: 64.1466, lon: -21.9426 },
     cover: reykjavik,
-    summary: "Six places to eat in Reykjavík, and the one that stood out.",
+    label: "4 DAYS",
+    summary:
+      "A long weekend in March out of Reykjavík: the South Coast, the Golden Circle and the Blue Lagoon on the way to the airport.",
     teaser:
-      "Not a plan, just where we ate. Rök is the one to book if you only get one dinner.",
-    tags: ["#Rok", "#Sandholt", "#Hlemmur"],
+      "Overnight from New York, land at dawn, and base yourself in Reykjavík. One day on the South Coast, one on the Golden Circle, and the Blue Lagoon on the last morning so you go straight from it to your flight. Then everywhere we ate, with Rök the one to book if you only get one dinner.",
+    tags: ["#GoldenCircle", "#BlueLagoon", "#Rok"],
+    notes: [
+      "Northern Lights tours get cancelled for weather a lot. Ours was cancelled three nights in a row. Book one with free cancellation for your first night, so it can roll to the next night if it is called off. GetYourGuide refunded ours in full.",
+      "We stayed in an Airbnb on Einholt, right across the street from Hotel Klettur. Most day tours will collect you from a hotel, so staying near one makes pickups easy.",
+    ],
     sections: [
+      {
+        title: "Arrival: Land at Dawn, Then Reykjavík",
+        activities: [
+          {
+            time: "06:15",
+            description:
+              "Land at Keflavík on the overnight Icelandair flight from JFK. A friend flew in the night before and picked up the rental car, which made the morning easy.",
+            places: [{ name: "Keflavík International Airport", near: "Iceland" }],
+          },
+          {
+            description: "Breakfast at The Laundromat.",
+            places: [{ name: "The Laundromat Cafe", near: "Reykjavík, Iceland" }],
+          },
+          {
+            description: "Explore Reykjavík on foot, up to Hallgrímskirkja.",
+            places: [{ name: "Hallgrímskirkja", near: "Reykjavík, Iceland" }],
+          },
+          {
+            description: "Soup at Svarta Kaffið.",
+            places: [{ name: "Svarta Kaffið", near: "Reykjavík, Iceland" }],
+          },
+          {
+            time: "22:00",
+            description: "Northern Lights tour. Ours was cancelled for weather.",
+          },
+        ],
+      },
+      {
+        title: "Day One: The South Coast",
+        activities: [
+          {
+            time: "08:45",
+            description: "Meet at Reykjavík Terminal for a South Coast day tour.",
+            places: [{ name: "BSÍ Bus Terminal", near: "Reykjavík, Iceland" }],
+          },
+          {
+            description: "Skógafoss. Walk right up to the bottom and get soaked in the spray.",
+            places: [{ name: "Skógafoss", near: "Iceland" }],
+          },
+          {
+            description: "Quad bikes out across the black sand to the Sólheimasandur plane wreck.",
+            places: [{ name: "Sólheimasandur Plane Wreck", near: "Iceland" }],
+          },
+          {
+            description: "Dinner at CooCoo's Nest.",
+            places: [{ name: "CooCoo's Nest", near: "Reykjavík, Iceland" }],
+          },
+        ],
+      },
+      {
+        title: "Day Two: The Golden Circle",
+        activities: [
+          {
+            time: "09:00",
+            description:
+              "Small-group Golden Circle tour with Troll Expeditions, back at 17:00. We were picked up from Hotel Klettur, across the street from our Airbnb.",
+            places: [
+              { name: "Troll Expeditions", near: "Reykjavík, Iceland" },
+              { name: "Hotel Klettur", near: "Reykjavík, Iceland" },
+            ],
+          },
+          {
+            description: "Þingvellir, where you walk between two tectonic plates.",
+            places: [{ name: "Þingvellir National Park", near: "Iceland" }],
+          },
+          {
+            description: "Geysir, then Gullfoss, which was mostly frozen in March.",
+            places: [
+              { name: "Geysir", near: "Iceland" },
+              { name: "Gullfoss", near: "Iceland" },
+            ],
+          },
+          {
+            description: "Icelandic horses by the road, tomato soup at a greenhouse farm, and an ice cream farm.",
+            places: [{ name: "Friðheimar", near: "Iceland" }],
+          },
+          {
+            time: "22:00",
+            description: "Northern Lights tour, cancelled again for weather.",
+          },
+        ],
+      },
+      {
+        title: "Departure: The Blue Lagoon, Then Home",
+        activities: [
+          {
+            time: "12:00",
+            description:
+              "The Blue Lagoon, on the Comfort ticket. It sits between Reykjavík and the airport, so do it on the way out.",
+            places: [{ name: "Blue Lagoon", near: "Grindavík, Iceland" }],
+          },
+          {
+            time: "14:30",
+            description: "Transfer from the Blue Lagoon straight to Keflavík. Book it ahead.",
+          },
+          {
+            time: "17:00",
+            description: "Icelandair back to JFK, landing at 19:10.",
+            places: [{ name: "Keflavík International Airport", near: "Iceland" }],
+          },
+        ],
+      },
       {
         title: "Where to eat",
         places: [
