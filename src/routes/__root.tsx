@@ -153,7 +153,7 @@ function SiteFooter() {
               AIRPLANEMODE
             </p>
             <p className="mt-1 text-sm text-muted-foreground">
-              High-energy itineraries for the restless traveler.
+              Fast-paced itineraries for quick getaways.
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-semibold text-muted-foreground">
@@ -207,13 +207,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "High-energy travel itineraries for people who keep moving and love food. Free guides and supporter-funded deep dives.",
+          "Fast-paced itineraries for quick getaways. The best cities, food, and sights, hour by hour, with every stop linked.",
       },
       { property: "og:title", content: "AirplaneMode - High-Energy Travel Itineraries" },
       {
         property: "og:description",
         content:
-          "High-energy travel itineraries for people who keep moving and love food. Free guides and supporter-funded deep dives.",
+          "Fast-paced itineraries for quick getaways. The best cities, food, and sights, hour by hour, with every stop linked.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
