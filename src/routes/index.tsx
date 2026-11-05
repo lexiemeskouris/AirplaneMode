@@ -303,9 +303,9 @@ function Index() {
             Less planning. <span className="text-primary">More moving.</span>
           </h1>
           <p className="mt-4 text-lg font-medium leading-relaxed text-muted-foreground">
-            High-energy itineraries for people who like city breaks and quick
-            getaways. Non-stop, just like our generation. No filler, just the
-            best food and the best sights, hour by hour, with every stop linked.
+            Every trip I&apos;ve planned and actually taken, written up so you
+            can steal it. I like my days packed with food and sightseeing, so
+            take the whole plan or just the parts you like.
           </p>
           <div className="mt-6 flex flex-wrap gap-x-8 gap-y-2 text-sm font-semibold text-muted-foreground">
             <span>
