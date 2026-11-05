@@ -312,7 +312,8 @@ export const guides: Guide[] = [
             places: [{ name: "Skógafoss", near: "Iceland" }],
           },
           {
-            description: "Quad bikes out across the black sand to the Sólheimasandur plane wreck.",
+            description:
+              "We were booked on a glacier snowmobile, but it was cancelled for conditions, so we did ATVs instead: out across the black sand to the Sólheimasandur plane wreck.",
             places: [{ name: "Sólheimasandur Plane Wreck", near: "Iceland" }],
           },
           {
