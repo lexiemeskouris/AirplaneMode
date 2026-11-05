@@ -34,6 +34,7 @@ function words(s: string) {
 function stemMatch(a: string, b: string) {
   const [short, long] = a.length <= b.length ? [a, b] : [b, a];
   const diff = long.length - short.length;
+  if (short.length >= 4 && long.startsWith(short)) return true; // "shop" finds "shopping"
   return (diff <= 2 || (diff <= 4 && short.length >= 7)) && long.startsWith(short.slice(0, -1));
 }
 
@@ -42,7 +43,8 @@ const spacedWords = (q: string) =>
   words(q.replace(/^#/, "").replace(/([a-z])([A-Z0-9])/g, "$1 $2").replace(/([0-9])([A-Za-z])/g, "$1 $2"));
 
 function queryWords(q: string) {
-  const joined = q.startsWith("#") ? words(q.slice(1).toLowerCase()) : [];
+  // As written too, lower-cased, so "MacRitchie" also finds "macritchie".
+  const joined = words(q.replace(/^#/, "").toLowerCase());
   return [...new Set([...spacedWords(q), ...joined])];
 }
 

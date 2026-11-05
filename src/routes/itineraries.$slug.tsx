@@ -92,7 +92,8 @@ function ItineraryDetail() {
           {it.summary}
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
-          {it.tags.map((t) => (
+          {/* The highlights, as short labels that jump to their part of the plan. */}
+          {(it.highlights?.length ? it.highlights : it.tags).map((t) => (
             <JumpLink
               key={t}
               to={findTarget(t, targets)}
@@ -139,32 +140,6 @@ function ItineraryDetail() {
         ))}
       </div>
 
-      {/* Highlights. Guarded: an itinerary added without them should lose the
-          section, not take the whole page down. */}
-      {it.highlights && it.highlights.length > 0 && (
-      <section className="mt-8">
-        <h2 className="font-display text-2xl font-extrabold tracking-tight text-foreground">
-          Highlights
-        </h2>
-        <ul className="mt-2 grid gap-x-6 gap-y-1 sm:grid-cols-2">
-          {it.highlights.map((h) => (
-            <li key={h}>
-              <JumpLink
-                to={findTarget(h, targets)}
-                className="flex items-start gap-2.5 py-0.5 text-foreground/90"
-                linkClassName="group transition-colors hover:text-primary"
-              >
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                <span className="flex-1 leading-relaxed">{h}</span>
-                <span aria-hidden className="jump-arrow mt-0.5 shrink-0 font-bold text-primary opacity-60 transition-transform group-hover:translate-y-0.5 group-hover:opacity-100">
-                  &darr;
-                </span>
-              </JumpLink>
-            </li>
-          ))}
-        </ul>
-      </section>
-      )}
 
 
       {/* Straight to a day, or to one of the lists under the plan. */}

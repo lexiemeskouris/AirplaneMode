@@ -95,6 +95,11 @@ export type Itinerary = {
   teaser: string;
   /** Short food/activity hashtags shown as chips on feed cards. */
   tags: string[];
+  /**
+   * What the place is about, in a word or two each ("Barbecue", "Live
+   * music"). Shown as chips under the title, each linking to its part of the
+   * plan. General to the area, not commentary: that lives in the plan.
+   */
   highlights: string[];
   /** Full day-by-day plan. Omitted/abbreviated for gated itineraries. */
   days?: ItineraryDay[];
@@ -162,13 +167,7 @@ export const itineraries: Itinerary[] = [
       "San Sebastián is small enough to walk and dense enough that you never stop eating. You climb both headlands and swim both beaches, and every evening ends up standing at a bar with a plate in one hand.",
     tiktok: "https://www.tiktok.com/@lexiemesko/video/7682108674856242445",
     tags: ["#Pintxos", "#LaConcha", "#BasqueCheesecake"],
-    highlights: [
-      "Pintxos hopping through the Old Town, two nights running",
-      "Monte Urgull at golden hour with a drink at the top",
-      "Monte Igueldo's funicular, tower and clifftop amusement park",
-      "Swimming at La Concha and Ondarreta",
-      "Tortilla at Bar Antonio, first thing",
-    ],
+    highlights: ["Pintxos", "Basque cheesecake", "La Concha", "Monte Urgull", "Monte Igueldo"],
     days: [
       {
         day: "Arrival",
@@ -322,13 +321,7 @@ export const itineraries: Itinerary[] = [
     teaser:
       "Based in Sidi Bou Said, with everything else reached by taxi: the Bardo and the Medina one day, Hammamet the next, and the blue-and-white streets saved for the walk to the airport.",
     tags: ["#Carthage", "#SidiBouSaid", "#Bambalouni"],
-    highlights: [
-      "The Bardo Museum's mosaics, first thing",
-      "Souk El Attarine and the lanes around the Zitouna Mosque",
-      "The Antonine Baths and Byrsa Hill at Carthage",
-      "A whole day at Barberousse Beach Club in Hammamet",
-      "A bambalouni in Sidi Bou Said before the flight",
-    ],
+    highlights: ["Carthage", "Sidi Bou Said", "The medina", "Beach clubs", "Bambalouni"],
     days: [
       {
         day: "Day One",
@@ -386,13 +379,7 @@ export const itineraries: Itinerary[] = [
     teaser:
       "Three days planned around the nightlife, so the days are kept light. KitKat on the first night, Berghain and an after party on the second.",
     tags: ["#Doner", "#Berghain", "#StreetFoodThursday"],
-    highlights: [
-      "Rüyam Gemüse Kebab within an hour of landing",
-      "The Third Reich and Cold War combo tour, two hours from the Quadriga",
-      "Doors at KitKat, and joining the queue at 23:30",
-      "Street Food Thursday at Markthalle Neun",
-      "Säule at Berghain, then ://about blank",
-    ],
+    highlights: ["Kebab", "Clubs", "Cold War history", "Street food", "Berghain"],
     extras: [
       {
         title: "Skip these",
@@ -550,13 +537,7 @@ export const itineraries: Itinerary[] = [
     teaser:
       "Three days, almost all on foot. Yongkang Street and Shida on the first, Songshan and Elephant Mountain on the second, Longshan Temple squeezed in before the airport on the third.",
     tags: ["#NightMarket", "#ElephantMountain", "#DinTaiFung"],
-    highlights: [
-      "A three and a half hour food tour through Shida Night Market",
-      "Yongkang Street and the Da'an lanes",
-      "Elephant Mountain timed for sunset",
-      "Din Tai Fung at Taipei 101, with drinks while you wait for the table",
-      "Longshan Temple and Bopiliao on the way out",
-    ],
+    highlights: ["Night markets", "Elephant Mountain", "Dumplings", "Temples"],
     days: [
       {
         day: "Day One",
@@ -678,13 +659,7 @@ export const itineraries: Itinerary[] = [
     teaser:
       "Two tightly timed days with a totally open one in the middle. Museums and a booze cruise on the first, wandering on the second, then a food tour and the Anne Frank House before the flight home.",
     tags: ["#VanGogh", "#DePijp", "#Vondelpark"],
-    highlights: [
-      "The Van Gogh Museum first thing, then De Pijp on foot",
-      "A booze cruise on the canal from Prins Hendrikkade",
-      "The Lindengracht market, Saturdays only",
-      "An afternoon in Vondelpark with nothing planned",
-      "A Secret Food Tour, then the Anne Frank House",
-    ],
+    highlights: ["Van Gogh", "Canals", "De Pijp", "Vondelpark", "Anne Frank House"],
     extras: [
       {
         title: "Not on the plan, but worth knowing",
@@ -878,13 +853,7 @@ export const itineraries: Itinerary[] = [
     teaser:
       "Based near campus, with the eating planned tightly and the drinking not planned at all. Two things need booking ahead: Kayne Prime, and the massages at Woodhouse.",
     tags: ["#Broadway", "#12South", "#ListeningRoom"],
-    highlights: [
-      "Rolf & Daughters, then the Listening Room the same night",
-      "Massages at Woodhouse and a slow morning after",
-      "Edley's barbecue and a walk around 12 South",
-      "Brunch at Monell's",
-      "Kayne Prime, booked well in advance",
-    ],
+    highlights: ["Barbecue", "Broadway", "Live music", "12 South", "Brunch"],
     extras: [
       {
         title: "BBQ",
@@ -1145,13 +1114,7 @@ export const itineraries: Itinerary[] = [
     notes: [
       "This only works in May if you want Roland-Garros. Everything else here is fine any time of year, so move the tennis day out and the rest still stands.",
     ],
-    highlights: [
-      "A full day at Roland-Garros, third-round matches and the outside courts",
-      "A day trip to Reims for Ruinart and Veuve Clicquot",
-      "Le Marais on foot, then up to Sacré-Coeur and through Montmartre",
-      "A baguette from La Parisienne with butter from La Grande Épicerie, eaten on Pont Neuf",
-      "A burlesque show at Crazy Horse",
-    ],
+    highlights: ["Roland-Garros", "Champagne", "Le Marais", "Montmartre", "Baguettes"],
     days: [
       {
         day: "Day One",
@@ -1382,13 +1345,7 @@ export const itineraries: Itinerary[] = [
         ],
       },
     ],
-    highlights: [
-      "The Round Tower, fifteen minutes up and worth it",
-      "Slurp Ramen after a walk through the Glass Market",
-      "Hot tubs at La Banchina and Hot Tub Copenhagen",
-      "Five hours in Tivoli Gardens",
-      "Gasoline Grill, then pastries at Buka",
-    ],
+    highlights: ["Tivoli", "Street food", "Hot tubs", "The Round Tower", "Pastries"],
     days: [
       {
         day: "Day One",
@@ -1516,13 +1473,7 @@ export const itineraries: Itinerary[] = [
     cover: budapest,
     gated: false,
     tags: ["#RuinBars", "#TheBaths", "#CastleHill"],
-    highlights: [
-      "Fisherman's Bastion and the walk along Castle Hill",
-      "The House of Terror, and ninety minutes is enough",
-      "Shoes on the Danube Bank",
-      "A long afternoon in the baths, with tickets bought on the door",
-      "The ruin bars, starting early at Szimpla Kert",
-    ],
+    highlights: ["Thermal baths", "Ruin bars", "Castle Hill", "The Danube"],
     days: [
       {
         day: "Arrival",
@@ -1630,13 +1581,7 @@ export const itineraries: Itinerary[] = [
     teaser:
       "Six days on Phuket, four in Chiang Mai, three in Bangkok. Most of the big days are booked tours, so this one needs planning well ahead rather than deciding on the morning.",
     tags: ["#PhiPhi", "#ChiangMai", "#Ayutthaya"],
-    highlights: [
-      "Phi Phi and Bamboo Islands on a small group boat",
-      "A half-day Thai cooking class with the local market tour",
-      "A day as an elephant caregiver at Patara Elephant Farm",
-      "The Monk's Trail up to Wat Phra That Doi Suthep",
-      "Ayutthaya and the floating market as a day trip from Bangkok",
-    ],
+    highlights: ["Islands", "Cooking class", "Elephants", "Temples", "Floating markets"],
     days: [
       {
         day: "Day One",
@@ -1827,13 +1772,7 @@ export const itineraries: Itinerary[] = [
     notes: [
       "The first night here happened to be New Year's Eve, which is the only reason there are fireworks on it. Any other time of year that is just dinner.",
     ],
-    highlights: [
-      "The Botanic Gardens, open until midnight",
-      "MacRitchie, a three to four hour hike with monkeys",
-      "Lunch on Haji Lane, Arab Street and Little India",
-      "The free Spectra light show at Marina Bay",
-      "Walking the Henderson Waves before the flight",
-    ],
+    highlights: ["Gardens by the Bay", "Haji Lane", "MacRitchie", "Light shows"],
     days: [
       {
         day: "Day One",
@@ -1913,13 +1852,7 @@ export const itineraries: Itinerary[] = [
     teaser:
       "Split between Hanoi and Ho Chi Minh City, with an overnight boat in the middle. The two best things on it were both booked: the Ha Long Bay cruise and the motorbike street food tour.",
     tags: ["#HaLongBay", "#OldQuarter", "#StreetFood"],
-    highlights: [
-      "The Old Quarter's 36 streets, each once dedicated to one trade",
-      "An overnight cruise on Ha Long Bay",
-      "Bun cha at the place Bourdain and Obama ate at",
-      "A motorbike street food tour with ten tastings",
-      "Dinner in complete darkness at NOIR",
-    ],
+    highlights: ["Ha Long Bay", "Street food", "The Old Quarter", "Bun cha", "Coffee"],
     days: [
       {
         day: "Arrival",
@@ -2091,13 +2024,7 @@ export const itineraries: Itinerary[] = [
     teaser:
       "Three days in Siem Reap, with the two big ones booked well ahead: sunrise at Angkor Wat, and a morning bike tour out through the rice fields.",
     tags: ["#AngkorWat", "#SiemReap", "#PubStreet"],
-    highlights: [
-      "A 04:30 pickup to reach Angkor Wat for sunrise",
-      "A pottery class at the Khmer Fine Art Center",
-      "A countryside bike tour past a mushroom field and a rice wine distillery",
-      "A Khmer cooking class in the evening",
-      "Old Market for dinner and Pub Street after",
-    ],
+    highlights: ["Angkor Wat", "Pottery", "Cooking class", "Countryside by bike", "Pub Street"],
     days: [
       {
         day: "Day One",
@@ -2177,13 +2104,7 @@ export const itineraries: Itinerary[] = [
       "Three days: churches and cheap opera tickets on the first, Salzburg on the second, and the big museums, the Naschmarkt and the oldest sausage stand in the city on the third.",
     tags: ["#StateOpera", "#Salzburg", "#Wurstelstand"],
     notes: ["Bring cash. Most places are cash only."],
-    highlights: [
-      "State Opera tickets from 16 euros, with two intervals if you want to slip out",
-      "A day trip to Salzburg, and the cable car up to the castle",
-      "One to three hours in the Kunsthistorisches Museum",
-      "Leo's Würstelstand, the oldest sausage stand in Vienna",
-      "The Austrian National Library, on the way to breakfast",
-    ],
+    highlights: ["The opera", "Salzburg", "Museums", "Sausage stands"],
     days: [
       {
         day: "Day One",
@@ -2335,13 +2256,7 @@ export const itineraries: Itinerary[] = [
     notes: [
       "The Dublin days are timed for St Patrick's Day. Everything else here works any time of year.",
     ],
-    highlights: [
-      "St Patrick's Day in Dublin",
-      "The Guinness Storehouse tour",
-      "A full day tour out to the Cliffs of Moher",
-      "Blarney Castle, and two to three hours to kiss the stone",
-      "Climbing St Anne's for the panorama over Cork",
-    ],
+    highlights: ["St Patrick's Day", "Guinness", "Cliffs of Moher", "Blarney Castle", "Cork"],
     days: [
       {
         day: "Day One",
@@ -2672,13 +2587,7 @@ export const itineraries: Itinerary[] = [
     notes: [
       "Cadillac Mountain sunrise tickets are released well in advance and go fast. Set an alarm for the morning they drop.",
     ],
-    highlights: [
-      "Sunrise from Cadillac Mountain, after a 03:00 alarm",
-      "The Beehive Trail straight afterwards",
-      "The land bridge over to Bar Island, at low tide",
-      "Jordan Pond Path and the Bubbles",
-      "A long afternoon of eating your way through Portland",
-    ],
+    highlights: ["Acadia", "Sunrise", "Hiking", "Lobster", "Portland"],
     days: [
       {
         day: "Day One",
@@ -2874,13 +2783,7 @@ export const itineraries: Itinerary[] = [
     notes: [
       "The Ibiza nights depend entirely on who is playing that week, so this lists the clubs rather than a schedule. Check the line-ups before you book anything.",
     ],
-    highlights: [
-      "The Sunday market at Santa Maria for ensaimadas and cheese",
-      "A boat day in the south, and the beaches after it",
-      "Sóller, Deià and Valldemossa in the north",
-      "The Calvari steps in Pollença",
-      "Ibiza, planned around the line-ups instead of the days",
-    ],
+    highlights: ["Pollença", "Boat day", "Markets", "Sóller and Deià", "Ibiza clubs"],
     days: [
       {
         day: "Day One",
@@ -3035,13 +2938,7 @@ export const itineraries: Itinerary[] = [
     teaser:
       "Two and a half hours from New York, and deliberately unambitious. Brunch, a spa appointment, and a run of small cafes, with hikes and a lake on hand if the mood changes.",
     tags: ["#Lenox", "#Spa", "#Hikes"],
-    highlights: [
-      "Brunch at Haven Cafe in Lenox on the way in",
-      "A spa afternoon at Seven Salon Spa",
-      "The Berkshire Grown winter farmers market",
-      "Free bike rentals at the inn",
-      "Five hikes within easy reach, if you want them",
-    ],
+    highlights: ["Lenox", "Spa", "Farmers market", "Hikes"],
     days: [
       {
         day: "Day One",
@@ -3149,13 +3046,7 @@ export const itineraries: Itinerary[] = [
     teaser:
       "A weekend split across two cities. Milan is the Duomo and an afternoon of shopping; Venice is timed almost to the minute because everything is a five minute walk from everything else.",
     tags: ["#Duomo", "#Venice", "#Navigli"],
-    highlights: [
-      "Turning three times on the bull's mosaic in the Galleria",
-      "The Duomo, with the afternoon free afterwards",
-      "Going out in Navigli and Colonne di San Lorenzo",
-      "Doge's Palace and the Bridge of Sighs",
-      "Pasta to go from Dal Moro's on the way to the airport",
-    ],
+    highlights: ["The Duomo", "Navigli", "Shopping", "Venice"],
     days: [
       {
         day: "Day One",
@@ -3270,13 +3161,7 @@ export const itineraries: Itinerary[] = [
     teaser:
       "Based in Edinburgh, with the first night spent over in Glasgow. The bars below are almost all student bars, which is the point.",
     tags: ["#Glasgow", "#Glencoe", "#EdinburghCastle", "#StudentBars"],
-    highlights: [
-      "Dinner in Merchant City, Glasgow",
-      "A full day in the Highlands: Glencoe and Loch Ness",
-      "Edinburgh Castle at eleven",
-      "Lunch at I.J. Mellis Cheesemonger",
-      "A very long list of student bars",
-    ],
+    highlights: ["Edinburgh Castle", "The Highlands", "Glasgow", "Student bars"],
     days: [
       {
         day: "Day One",
@@ -3372,13 +3257,7 @@ export const itineraries: Itinerary[] = [
     teaser:
       "Two nights, reached by train from London. The first day is the Grand Place and chocolate, the second is entirely Ghent and Bruges, and the waffles are non-negotiable.",
     tags: ["#GrandPlace", "#Bruges", "#Waffles"],
-    highlights: [
-      "A two hour walking tour from the Grand Place",
-      "A chocolate tasting straight afterwards",
-      "A full day tour of Ghent and Bruges",
-      "Waffles at Chez Albert in Bruges",
-      "The nightlife is all within a few minutes of the centre",
-    ],
+    highlights: ["Grand Place", "Chocolate", "Waffles", "Bruges", "Ghent"],
     days: [
       {
         day: "Day One",
@@ -3469,13 +3348,7 @@ export const itineraries: Itinerary[] = [
       "Sunday counts as a public holiday in Zurich and a lot of the shops close. The Zurich day below is built around that.",
       "The middle day in Interlaken was never written down, so this covers the travel day out and the day in Zurich.",
     ],
-    highlights: [
-      "The train from Zurich down to Interlaken",
-      "Uetliberg, reached on tram line 13",
-      "Sprüngli on Bahnhofstrasse",
-      "A cruise on Lake Zurich",
-      "Fondue at Raclette Stube before the flight",
-    ],
+    highlights: ["Interlaken", "Zurich", "Lake Zurich", "Chocolate", "Fondue"],
     days: [
       {
         day: "Day One",
@@ -3577,13 +3450,7 @@ export const itineraries: Itinerary[] = [
     notes: [
       "The Alfama walking tour is very hilly. Wear comfortable shoes.",
     ],
-    highlights: [
-      "A free 90 minute walking tour of Alfama",
-      "Saint George's Castle for the best views of the city",
-      "Landeau for the best chocolate cake",
-      "Pena Palace, Cabo da Roca and Belém in one day",
-      "Dinner at the Time Out Market",
-    ],
+    highlights: ["Alfama", "Sintra", "Belém", "Views", "Time Out Market"],
     days: [
       {
         day: "Day One",
@@ -3702,13 +3569,7 @@ export const itineraries: Itinerary[] = [
       title: "Eight Days in the Galápagos",
       note: "This was the front end of a longer trip. The other eight days, and all the practical stuff about getting to the islands, are here.",
     },
-    highlights: [
-      "Standing on the equator at Mitad del Mundo",
-      "The TelefériQo cable car, done early",
-      "Ceviche at Pezbela",
-      "Old Town Quito, a UNESCO world heritage site",
-      "Dinner at Somos",
-    ],
+    highlights: ["The equator", "Cable car", "Old Town", "Ceviche"],
     days: [
       {
         day: "Day One",
@@ -3779,13 +3640,7 @@ export const itineraries: Itinerary[] = [
       title: "A Day in Quito",
       note: "You fly in and out through Quito, and a day there is worth building in. Here is what to do with it.",
     },
-    highlights: [
-      "Biking 13 miles to the giant tortoises at La Ruta de la Tortuga",
-      "Tortuga Bay, reached on foot along a mile and a half of paved trail",
-      "The Cerro Tijeretas and Playa Baquerizo hike, given a whole day",
-      "Snorkelling with sea lions at La Lobería",
-      "Sharks off the Santa Cruz pier at night",
-    ],
+    highlights: ["Giant tortoises", "Sea lions", "Snorkelling", "Beaches", "Hiking"],
     days: [
       {
         day: "Day Two",
@@ -3860,13 +3715,7 @@ export const itineraries: Itinerary[] = [
     teaser:
       "Four days in Tokyo, three in Kyoto, two in Osaka, then back to Tokyo. Standing sushi bars, a 5am tuna auction, Golden Gai, and a lot of walking between meals.",
     tags: ["#GoldenGai", "#Kyoto", "#Tsukiji"],
-    highlights: [
-      "The Toyosu and Tsukiji tuna auction, starting at 05:00",
-      "Golden Gai and Omoide Yokocho on the first night",
-      "The Arashiyama monkey park and bamboo grove",
-      "Feeding the deer at Nara on the way to Osaka",
-      "Go-karting through Shibuya",
-    ],
+    highlights: ["Tokyo nightlife", "Fish market", "Kyoto", "Nara", "Go-karting"],
     days: [
       {
         day: "Day One",
@@ -4277,13 +4126,7 @@ export const itineraries: Itinerary[] = [
     notes: [
       "Mid 60s to low 70s during the day and high 50s to low 60s at night, so bring layers.",
     ],
-    highlights: [
-      "A taco crawl with a must-eat list and an if-still-hungry list",
-      "Dinner at Rosetta, and pastries from its bakery the night before",
-      "Chapultepec, twice the size of Central Park",
-      "A free walking tour of the historic centre",
-      "A mezcal mixology class to finish",
-    ],
+    highlights: ["Tacos", "Rosetta", "Chapultepec", "The historic centre", "Mezcal"],
     days: [
       {
         day: "Arrival",
@@ -4453,13 +4296,7 @@ export const itineraries: Itinerary[] = [
     teaser:
       "Three busy days out of Funchal, with a boat, a cable car, a jeep tour of the north, and a 06:00 bus to catch sunrise on Pico do Arieiro before walking to Pico Ruivo.",
     tags: ["#PicoDoArieiro", "#Toboggan", "#Levada"],
-    highlights: [
-      "Sunrise at Pico do Arieiro, then the PR1 across to Pico Ruivo",
-      "The wicker toboggan down from Monte",
-      "Whale watching out of Funchal marina",
-      "A jeep tour of Porto Moniz, Seixal and the Fanal Forest",
-      "Two dinners by the same chef, at either end of the trip",
-    ],
+    highlights: ["Sunrise hike", "Toboggan", "Whale watching", "Levadas"],
     days: [
       {
         day: "Day One",
@@ -4530,13 +4367,7 @@ export const itineraries: Itinerary[] = [
       title: "Two Days in Tallinn",
       note: "The ferry from Helsinki to Tallinn takes two hours, which makes the two easy to do back to back. Here is the other half.",
     },
-    highlights: [
-      "Löyly sauna on the waterfront",
-      "The Christmas market at Senate Square",
-      "The Oodi library",
-      "The Design District shops",
-      "Cafe Regatta before the ferry",
-    ],
+    highlights: ["Sauna", "Christmas market", "Design District", "Oodi library"],
     days: [
       {
         day: "Arrival",
@@ -4634,13 +4465,7 @@ export const itineraries: Itinerary[] = [
       title: "Two Days in Helsinki",
       note: "We came in on the ferry from Helsinki, which takes two hours. Here is the other half.",
     },
-    highlights: [
-      "The Christmas market at Town Hall Square, eaten as dinner",
-      "Ice skating at the Harju Street rink",
-      "St Olaf's Tower for the panoramic view",
-      "Telliskivi Creative City",
-      "Dinner at Rataskaevu 16",
-    ],
+    highlights: ["Christmas market", "Old Town", "Ice skating", "Telliskivi"],
     days: [
       {
         day: "Arrival",
@@ -4721,13 +4546,7 @@ export const itineraries: Itinerary[] = [
       "Do not drink the tap water, and do not eat anything unwashed or uncooked unless you really trust the source. Just being careful about food poisoning.",
       "Modest dress is needed for the guided days in Cairo.",
     ],
-    highlights: [
-      "A four day cruise from Aswan down to Luxor, with a guide the whole way",
-      "Abu Simbel",
-      "A balloon over the West Bank at dawn, then the Valley of the Kings",
-      "Giza and the Grand Egyptian Museum with a full day guide",
-      "An Old Cairo walking tour with street bites",
-    ],
+    highlights: ["Nile cruise", "The pyramids", "Abu Simbel", "Valley of the Kings", "Hot air balloon"],
     days: [
       {
         day: "Day One",
@@ -4931,13 +4750,7 @@ export const itineraries: Itinerary[] = [
     teaser:
       "The famous sights are done in a single tight morning so the rest of the trip can be Bebek at sunset, the Asian side, and Balat. There are late nights built in.",
     tags: ["#HagiaSophia", "#Bebek", "#Balat"],
-    highlights: [
-      "The Spice Bazaar, Hagia Sophia, the Cistern and the Blue Mosque before lunch",
-      "Sunset along the waterfront at Bebek",
-      "A hammam near Galata",
-      "The ferry to Üsküdar and the markets in Kadıköy",
-      "Turkish breakfast at Privato, then the top of Galata Tower",
-    ],
+    highlights: ["Hagia Sophia", "Bazaars", "Hammam", "The Asian side", "Turkish breakfast"],
     days: [
       {
         day: "Arrival",
@@ -5107,13 +4920,7 @@ export const itineraries: Itinerary[] = [
     teaser:
       "Three days, one of which is a seven hour tour to Auschwitz. The last day is deliberately all food: obwarzanek, zapiekanka, pączki and a traditional milk bar.",
     tags: ["#Kazimierz", "#Pierogi", "#MilkBar"],
-    highlights: [
-      "Late night pierogi straight off the plane",
-      "A day at Auschwitz",
-      "Live jazz at The Artist Bar, then a vodka tasting",
-      "Kazimierz, the Jewish quarter, on foot",
-      "A traditional milk bar, and potato pancakes",
-    ],
+    highlights: ["Pierogi", "Kazimierz", "Auschwitz", "Jazz", "Milk bars"],
     days: [
       {
         day: "Day One",
@@ -5218,15 +5025,7 @@ export const itineraries: Itinerary[] = [
     teaser:
       "Three days at a villa in the Tuscan hills, one night in Viareggio for the best breakfast in Italy, then La Spezia as a base for hiking the Cinque Terre. After the villa, it's trains the rest of the way.",
     tags: ["#Villa", "#Viareggio", "#CinqueTerre"],
-    highlights: [
-      "A wine tour and lunch in the vineyards",
-      "A private chef cooking four courses at the villa",
-      "The breakfast buffet at the Principe di Piemonte, the best breakfast in Italy",
-      "Cannoli at Il Pirata delle Cinque Terre in Vernazza",
-      "A pesto-making class at Nessun Dorma in Manarola",
-      "A wine tasting at Cinque Sensi in Vernazza",
-      "Gelato at Alberto in Corniglia",
-    ],
+    highlights: ["Wine tours", "Villa life", "Cinque Terre", "Private chef", "Gelato"],
     days: [
       {
         day: "Day One",
@@ -5348,13 +5147,7 @@ export const itineraries: Itinerary[] = [
     notes: [
       "The northern lights need dark winter nights, so this only works between roughly late September and late March.",
     ],
-    highlights: [
-      "A northern lights tour running from late afternoon to 23:00",
-      "A fjord cruise out of the pier behind Nerstranda",
-      "Dog sledding",
-      "Sauna and cold plunge at Pust",
-      "The northernmost McDonald's, Hard Rock and brewery in the world",
-    ],
+    highlights: ["Northern Lights", "Dog sledding", "Fjords", "Sauna"],
     days: [
       {
         day: "Day One",
@@ -5386,13 +5179,7 @@ export const itineraries: Itinerary[] = [
     teaser:
       "Based in Hongdae. One day is entirely the DMZ, one is a four to six hour hike, and one ends with ramen on the Han River at sunset. Two things need booking well ahead.",
     tags: ["#Hongdae", "#DMZ", "#HanRiver"],
-    highlights: [
-      "A full day DMZ tour with the world's longest suspension bridge",
-      "Gyeongbokgung Palace, free if you rent a hanbok",
-      "Hiking Bukhansan National Park",
-      "Ramen on the Han River at sunset, with blankets for sale",
-      "A baseball game at Jamsil, tickets from the kiosk on the day",
-    ],
+    highlights: ["The DMZ", "Palaces", "Bukhansan", "Han River", "Baseball"],
     days: [
       {
         day: "Day One",
@@ -5597,13 +5384,7 @@ export const itineraries: Itinerary[] = [
     teaser:
       "Based at the InterContinental in St George's Bay, St Julian's. One day of Valletta, two big nights out, and the Blue Grotto and Dingli Cliffs before the late flight. Our boat day got rained off, so it and everything else we did not get to is at the bottom for if you have another day.",
     tags: ["#Valletta", "#Paceville", "#BlueGrotto"],
-    highlights: [
-      "The midday cannon salute from the Barrakka Gardens",
-      "Dinner at Villa Bologna on the first night",
-      "Paceville, where we probably hit every club on the list",
-      "A boat into the Blue Grotto for 10 euros each",
-      "The coastline path from the Blue Grotto to Dingli Cliffs",
-    ],
+    highlights: ["Valletta", "Paceville", "Blue Grotto", "Dingli Cliffs"],
     days: [
       {
         day: "Day One",
@@ -5730,13 +5511,7 @@ export const itineraries: Itinerary[] = [
       title: "Victoria Falls, Zambia and Zimbabwe",
       note: "A good little add-on if you have two or three days at the end. It is a short flight from Johannesburg, and it uses both sides of the border.",
     },
-    highlights: [
-      "Shark diving, then a hike up Lion's Head the same day",
-      "Platteklip Gorge up Table Mountain, cable car down",
-      "Robben Island, by ferry from the V&A Waterfront",
-      "Three days along the Garden Route, with a 4x4 safari",
-      "A Soweto tour, then a street food and art walk in Johannesburg",
-    ],
+    highlights: ["Table Mountain", "Shark diving", "Garden Route", "Safari", "Soweto"],
     days: [
       {
         day: "Arrival",
@@ -5984,13 +5759,7 @@ export const itineraries: Itinerary[] = [
       "You cross the border for the rafting, so get a double entry visa for Zimbabwe rather than a single. The US is category B, which is a visa on arrival, but check the current rules and prices before you go.",
       "The entrance fee for the falls is separate from the tour price.",
     ],
-    highlights: [
-      "The falls from the Zimbabwe side",
-      "White water rafting on the Zambezi, from Zambia",
-      "Ninety minute massages at the Victoria Falls Safari Lodge",
-      "High tea at the Victoria Falls Hotel, watching the sunset",
-      "The Elephant's Walk Shopping Village in town",
-    ],
+    highlights: ["The falls", "Rafting", "Massages", "High tea"],
     days: [
       {
         day: "Day One",
@@ -6101,13 +5870,7 @@ export const itineraries: Itinerary[] = [
     notes: [
       "The late evenings only work in summer. At 22:00 the sun is still going down, which is the whole reason for the park at the end of the first night.",
     ],
-    highlights: [
-      "Gamla Stan's alleyways, and fika overlooking Stortorget",
-      "Cocktails at the Cadier Bar, then dinner aboard a WWII steamboat",
-      "Ivar Los park at 22:00, with wine from a corner shop",
-      "Breakfast at Östermalms Saluhall",
-      "The ABBA Museum, pre-booked",
-    ],
+    highlights: ["Gamla Stan", "Fika", "ABBA", "Food halls"],
     days: [
       {
         day: "Day One",
@@ -6268,13 +6031,7 @@ export const itineraries: Itinerary[] = [
     teaser:
       "Two riads and a tent. Marrakech is guided and packed, the desert is three days off the schedule entirely, and Fes is medina tours, a cooking class and bread making in a garden.",
     tags: ["#Marrakech", "#Chefchaouen", "#Fes"],
-    highlights: [
-      "A hot air balloon over the Atlas Mountains at 05:00",
-      "Massages at La Mamounia, then afternoon tea at the Royal Mansour",
-      "The Jardin Majorelle and the Yves Saint Laurent museum",
-      "A twelve hour day trip up to Chefchaouen",
-      "Bread making and lunch in the garden of the riad",
-    ],
+    highlights: ["Hot air balloon", "Medinas", "Hammam", "Jardin Majorelle", "Chefchaouen"],
     days: [
       {
         day: "Arrival",
@@ -6448,13 +6205,7 @@ export const itineraries: Itinerary[] = [
     teaser:
       "Under three hours from London by train, so it's an easy weekend away. The first day is all central Cardiff on foot, and the second gets out to the Brecon Beacons and back in time for the rugby.",
     tags: ["#PenYFan", "#CardiffBay", "#Rugby"],
-    highlights: [
-      "Cardiff Castle, with a tour",
-      "Bute Park, the market and the Victorian arcades",
-      "Live music at The Dock in Cardiff Bay",
-      "Pen y Fan, a three hour round trip at a steady pace",
-      "A rugby game at Cardiff Arms Park to finish",
-    ],
+    highlights: ["Rugby", "Cardiff Castle", "Pen y Fan", "Live music"],
     days: [
       {
         day: "Day One",
@@ -6542,13 +6293,7 @@ export const itineraries: Itinerary[] = [
       "Cusco sits at about 3,400 metres and Rainbow Mountain tops out above 5,000. This itinerary goes up on the second morning, which is fast. If you have the days, put a spare one in Cusco before the mountain, drink the coca tea, and see a doctor at home about altitude tablets before you fly.",
       "Two of the three big things here were booked in advance and both sell out: the Inca Trail permits are released months ahead and the Huayna Picchu slots go with them.",
     ],
-    highlights: [
-      "Rainbow Mountain, on a 4:30 start",
-      "The two day Inca Trail, with a night under canvas on the trail",
-      "Walking into Machu Picchu rather than arriving by bus",
-      "Climbing Huayna Picchu, the peak behind the ruins",
-      "A last day in Lima built entirely around lunch and dinner",
-    ],
+    highlights: ["Machu Picchu", "Inca Trail", "Rainbow Mountain", "Lima food"],
     days: [
       {
         day: "Day One",
@@ -6751,13 +6496,7 @@ export const itineraries: Itinerary[] = [
       "Tipping is not customary, though nobody minds it. Digital payments are the norm and Apple Pay works essentially everywhere. Plugs are type G, the same as the UK.",
       "February is the right time to go. Riyadh ran from about 25C down to 12C, AlUla from 22C down to 7C, so bring a jacket for the evenings and the desert.",
     ],
-    highlights: [
-      "At-Turaif in Diriyah, the UNESCO site where the country started",
-      "A full day at a desert camp: dune bashing, buggies, archery, clay shooting and camels",
-      "Hegra, Saudi Arabia's first UNESCO World Heritage Site",
-      "Dinner at Elephant Rock, and a private stargazing night in AlUla",
-      "Shaybah in the Empty Quarter, which you cannot book yourself",
-    ],
+    highlights: ["AlUla", "Desert camp", "Hegra", "Diriyah", "Stargazing"],
     days: [
       {
         day: "Day One",
@@ -6961,13 +6700,7 @@ export const itineraries: Itinerary[] = [
     cover: slovenia,
     gated: false,
     tags: ["#LakeBled", "#Ljubljana", "#BledCake"],
-    highlights: [
-      "The full walk around Lake Bled, about 6 km",
-      "The climb up Ojstrica for the classic view over the island",
-      "Wine and cheese at Čarman, then Bled cake at Zima",
-      "The Old Town, the Triple Bridge and the Dragon Bridge",
-      "Snacks at the Central Market before the flight",
-    ],
+    highlights: ["Lake Bled", "Bled cake", "Ljubljana", "Hiking"],
     days: [
       {
         day: "Arrival",
@@ -7102,14 +6835,7 @@ export const itineraries: Itinerary[] = [
       "I only needed two nights here. The third was excessive.",
       "Pre-book your transport to and from the party. Taxis out at Bran are very hard to come by.",
     ],
-    highlights: [
-      "The Halloween party at Bran Castle, with incredible DJs and everyone dressed all out",
-      "The neighbourhood at the base of the castle, full of food and drink stands",
-      "Smash burgers from the food truck outside the party tent",
-      "A super social crowd of every age, from Americans in Europe to Bulgarians",
-      "A morning wandering Brașov's old town",
-      "Dinner at Hanu' lui Manuc in Bucharest",
-    ],
+    highlights: ["Halloween", "Bran Castle", "Brașov", "Bucharest"],
     days: [
       {
         day: "Day One",
