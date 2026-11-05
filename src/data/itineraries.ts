@@ -393,6 +393,15 @@ export const itineraries: Itinerary[] = [
       "Street Food Thursday at Markthalle Neun",
       "Säule at Berghain, then ://about blank",
     ],
+    extras: [
+      {
+        title: "Skip these",
+        avoid: true,
+        places: [
+          { name: "Annelie's", note: "Terrible. Cold food and flies everywhere. Instagrammable, but the food is mid." },
+        ],
+      },
+    ],
     days: [
       {
         day: "Day One",
@@ -431,8 +440,8 @@ export const itineraries: Itinerary[] = [
           { time: "17:00", description: "Nap." },
           {
             time: "19:00",
-            description: "Dinner at Schwarzwaldstuben.",
-            places: [{ name: "Schwarzwaldstuben" }],
+            description: "Dinner at 60 Seconds to Napoli. Highly recommend.",
+            places: [{ name: "60 Seconds to Napoli" }],
           },
           { description: "Change into club fits." },
           {
@@ -448,10 +457,6 @@ export const itineraries: Itinerary[] = [
         title: "East Side, Day Drinks, and Berghain",
         activities: [
           { description: "Sleep in." },
-          {
-            description: "Late brunch at Annelie's.",
-            places: [{ name: "Annelie's" }],
-          },
           {
             description: "Explore the area, including the East Side Gallery.",
             places: [{ name: "East Side Gallery" }],
@@ -506,14 +511,18 @@ export const itineraries: Itinerary[] = [
               },
               {
                 name: "LIU Nudelhaus",
-                note: "A fast bowl of hand-pulled noodles, if all you actually need is feeding before the airport.",
+                note: "Hand-pulled noodles. This is what we did, and it cured our hangover.",
+              },
+              {
+                name: "ACID Mitte",
+                note: "A good bun. The coffee and matcha were horrible, so just get the pastry, then walk round Mitte and shop.",
               },
             ],
           },
           {
             time: "17:15",
-            description: "Climb the Reichstag. Tickets have to be applied for in advance.",
-            places: [{ name: "Reichstag" }],
+            description: "Climb the Reichstag. Tickets have to be applied for in advance, and they are free.",
+            places: [{ name: "Reichstag", url: "https://www.bundestag.de/en/visittheBundestag" }],
           },
           { time: "19:15", description: "Leave for the airport." },
           {
@@ -687,6 +696,14 @@ export const itineraries: Itinerary[] = [
           { name: "Oeuf", note: "Brunch." },
         ],
       },
+      {
+        title: "Skip these",
+        avoid: true,
+        places: [
+          { name: "Chun Spuistraat", note: "Horrible. Super touristy, a long line and cold food." },
+          { name: "Hans Egstorf", note: "The stroopwafel was messy and not that tasty." },
+        ],
+      },
     ],
     days: [
       {
@@ -732,7 +749,7 @@ export const itineraries: Itinerary[] = [
           },
           {
             time: "13:15",
-            description: "Sit-down brunch at Little Collins.",
+            description: "Sit-down brunch at Little Collins. Get the short rib.",
             places: [{ name: "Little Collins" }],
           },
           {
@@ -754,7 +771,8 @@ export const itineraries: Itinerary[] = [
           { time: "19:30", description: "Booze cruise on the canal until 20:30." },
           {
             time: "21:00",
-            description: "Dinner at Kikkie van de Prinsensluis.",
+            description:
+              "Dinner at Kikkie van de Prinsensluis. The burger was unbelievable. Sit outside with a drink while you wait for your table.",
             places: [{ name: "Kikkie van de Prinsensluis" }],
           },
           {
@@ -770,10 +788,6 @@ export const itineraries: Itinerary[] = [
         title: "At Leisure",
         activities: [
           {
-            description: "Sandwich and a matcha at Chun Spuistraat.",
-            places: [{ name: "Chun Spuistraat" }],
-          },
-          {
             description: "Walk through the Lindengracht market. Saturdays only.",
             places: [{ name: "Lindengracht market" }],
           },
@@ -786,12 +800,8 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "Bloemenmarkt" }],
           },
           {
-            description: "Make custom bars at Tony's Chocolonely.",
+            description: "Make custom bars at Tony's Chocolonely. Quick, fun, and worth it for the souvenir.",
             places: [{ name: "Tony's Chocolonely" }],
-          },
-          {
-            description: "Fiona's for lunch if hungry, snacks and a drink if not.",
-            places: [{ name: "Fiona's" }],
           },
           {
             description: "Walk through Vondelpark, then stay in it. Painting and sitting.",
@@ -832,18 +842,13 @@ export const itineraries: Itinerary[] = [
           },
           {
             time: "14:45",
-            description: "Head to the Anne Frank House, and go in at 15:15.",
+            description:
+              "Head to the Anne Frank House, and go in at 15:15. Tickets drop six weeks ahead and sell out within minutes, so plan for it.",
             places: [{ name: "Anne Frank House" }],
           },
           {
-            time: "16:30",
-            description: "The Harry Styles Together Together Pop-Up on Looiergracht, open 12:00 to 19:00.",
-            places: [
-              { name: "Together Together Pop-Up" },
-            ],
-          },
-          {
-            description: "Quick dinner or drinks in the Jordaan, or up at A'DAM Lookout.",
+            description:
+              "Optional: a quick dinner or drinks in the Jordaan, or A'DAM Lookout if that is your thing. It is across the water by ferry. We skipped the lookout and had a drink at the pub at the bottom of it.",
             places: [{ name: "A'DAM Lookout" }],
           },
           { time: "19:15", description: "Back to the hotel to collect the bags." },
@@ -884,7 +889,6 @@ export const itineraries: Itinerary[] = [
       {
         title: "BBQ",
         places: [
-          { name: "Edley's" },
           { name: "Peg Leg Porker" },
           { name: "Martin's Bar-B-Que Joint" },
           { name: "Jack's Bar-B-Que", note: "The Broadway one." },
@@ -902,13 +906,8 @@ export const itineraries: Itinerary[] = [
         places: [
           { name: "Dozen Bakery", note: "Favourite bakery." },
           { name: "Fido", note: "Sit down, fast casual breakfast." },
-          { name: "Monell's", note: "Sit-down southern style brunch." },
           { name: "Big Al's Deli", note: "Underrated spot in Germantown." },
           { name: "Sky Blue Cafe", note: "East Nashville." },
-          {
-            name: "Adele's",
-            note: "The nicer brunch. The all-you-can-eat buffet runs on Sundays only, so time it for a Sunday if you want that. It is also a really good dinner spot the rest of the week, which most brunch places are not.",
-          },
           { name: "H&S Bagels" },
           { name: "Proper Bagel" },
           { name: "Marsh House", note: "In the Gulch." },
@@ -934,7 +933,6 @@ export const itineraries: Itinerary[] = [
       {
         title: "Dinner",
         places: [
-          { name: "Rolf & Daughters", note: "Favourite restaurant." },
           { name: "Twelve Thirty Club", note: "On Broadway. Both a bar and a sit-down restaurant, with live music." },
           { name: "Luogo", note: "Italian in the Gulch." },
           { name: "Butchertown Hall", note: "Nicer tacos, in Germantown." },
@@ -942,7 +940,6 @@ export const itineraries: Itinerary[] = [
           { name: "Butcher & Bee", note: "Mediterranean." },
           { name: "Noko", note: "So good. Asian." },
           { name: "Urban Cowboy", note: "Drinks and pizza." },
-          { name: "Kayne Prime", note: "Steakhouse." },
           { name: "Pinewood Social" },
           { name: "The Pharmacy Burger Parlor", note: "Cute burger place." },
           { name: "Sunda", note: "Asian, in the Gulch." },
@@ -984,7 +981,6 @@ export const itineraries: Itinerary[] = [
           { name: "Baked Bear" },
           { name: "Koko's", note: "Vegan ice cream that is actually good." },
           { name: "Jeni's" },
-          { name: "Five Daughters Bakery", note: "Donuts." },
           { name: "NoBaked Cookie Dough" },
         ],
       },
@@ -995,14 +991,12 @@ export const itineraries: Itinerary[] = [
           { name: "3rd and Lindsley" },
           { name: "City Winery" },
           { name: "The Row Kitchen & Pub", note: "Live music and good lunch food." },
-          { name: "Broadway", note: "Anywhere along it." },
         ],
       },
       {
         title: "Neighbourhoods to walk and shop",
         places: [
           { name: "Hillsboro Village" },
-          { name: "12 South" },
           { name: "The Gulch" },
           { name: "Germantown" },
           { name: "Wedgewood-Houston" },
@@ -1052,7 +1046,7 @@ export const itineraries: Itinerary[] = [
           {
             time: "18:15",
             description: "Dinner at Rolf & Daughters.",
-            places: [{ name: "Rolf & Daughters" }],
+            places: [{ name: "Rolf & Daughters", note: "Favourite restaurant." }],
           },
           {
             time: "20:30",
@@ -1079,7 +1073,7 @@ export const itineraries: Itinerary[] = [
           },
           {
             description: "Walk around 12 South, and stop at Five Daughters Bakery.",
-            places: [{ name: "12 South" }, { name: "Five Daughters Bakery" }],
+            places: [{ name: "12 South" }, { name: "Five Daughters Bakery", note: "Donuts." }],
           },
           {
             time: "19:30",
@@ -1088,7 +1082,7 @@ export const itineraries: Itinerary[] = [
           },
           {
             description: "Drinking on Broadway.",
-            places: [{ name: "Broadway" }],
+            places: [{ name: "Broadway", note: "Anywhere along it." }],
           },
         ],
       },
@@ -1099,7 +1093,7 @@ export const itineraries: Itinerary[] = [
           {
             time: "10:00",
             description: "Brunch at Monell's.",
-            places: [{ name: "Monell's" }],
+            places: [{ name: "Monell's", note: "Sit-down southern style brunch." }],
           },
           {
             description: "Drinking on Broadway.",
@@ -1112,7 +1106,7 @@ export const itineraries: Itinerary[] = [
           {
             time: "20:00",
             description: "Dinner at Kayne Prime. Needs booking.",
-            places: [{ name: "Kayne Prime" }],
+            places: [{ name: "Kayne Prime", note: "Steakhouse." }],
           },
         ],
       },
@@ -1124,7 +1118,7 @@ export const itineraries: Itinerary[] = [
             time: "11:45",
             description:
               "Brunch at Adele's. The all-you-can-eat buffet is Sunday only, and any other day you order off the menu. It is still the nicest brunch on this list, and it is a proper dinner restaurant too if you would rather go in the evening.",
-            places: [{ name: "Adele's" }],
+            places: [{ name: "Adele's", note: "The nicer brunch. The all-you-can-eat buffet runs on Sundays only, so time it for a Sunday if you want that. It is also a really good dinner spot the rest of the week, which most brunch places are not." }],
           },
           {
             time: "16:10",
@@ -1373,7 +1367,7 @@ export const itineraries: Itinerary[] = [
     duration: "3 days",
     season: "Early Spring",
     summary:
-      "A packed first day on foot, a boat and Tivoli on the second, and a burger queue on the third.",
+      "A packed first day on foot, a boat and Tivoli on the second, and one very good burger on the third.",
     cover: copenhagen,
     gated: false,
     teaser:
@@ -1385,7 +1379,6 @@ export const itineraries: Itinerary[] = [
         places: [
           { name: "Nyhavn" },
           { name: "The Little Mermaid", note: "Just walk by." },
-          { name: "Superkilen" },
           { name: "Hørsholm" },
           { name: "Sidecar", note: "Brunch." },
         ],
@@ -1393,10 +1386,10 @@ export const itineraries: Itinerary[] = [
     ],
     highlights: [
       "The Round Tower, fifteen minutes up and worth it",
-      "A picnic from the Glass Market on the castle grounds",
+      "Slurp Ramen after a walk through the Glass Market",
       "Hot tubs at La Banchina and Hot Tub Copenhagen",
       "Five hours in Tivoli Gardens",
-      "Queueing for Gasoline Grill from half ten",
+      "Gasoline Grill, then pastries at Buka",
     ],
     days: [
       {
@@ -1405,7 +1398,7 @@ export const itineraries: Itinerary[] = [
         activities: [
           { time: "09:00", description: "Land, drop the suitcases at the hotel and change." },
           {
-            description: "Coffee at Union Kitchen.",
+            description: "Coffee at Union Kitchen. Get the one with a saying printed on top.",
             places: [{ name: "Union Kitchen" }],
           },
           {
@@ -1422,12 +1415,12 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "Sankt Peders Bageri" }],
           },
           {
-            description: "The Round Tower. Fifteen minutes to climb.",
+            description: "The Round Tower. Fifteen minutes to climb, and worth it for the views.",
             places: [{ name: "Round Tower" }],
           },
           {
             description:
-              "Walk through the Glass Market, pick up wine and a snack, and picnic on the grounds. Or sit and eat at Slurp Ramen instead.",
+              "Walk through the Glass Market and grab a drink, then queue for Slurp Ramen. The line moves fast and it is well worth it.",
             places: [{ name: "Glass Market" }, { name: "Slurp Ramen" }],
           },
           {
@@ -1435,11 +1428,8 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "Botanical Garden" }],
           },
           {
-            description: "Rosenborg Castle.",
-            places: [{ name: "Rosenborg Castle" }],
-          },
-          {
-            description: "Drinks at La Banchina, and the sauna if you want it.",
+            description:
+              "La Banchina, my favourite part of the trip. The pastries are to die for, it is cute and peaceful, and it turns into a wine bar at night, so it works at any time of day or year. The sauna is there if you want it.",
             places: [{ name: "La Banchina" }],
           },
           {
@@ -1447,7 +1437,7 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "Hot Tub Copenhagen" }],
           },
           {
-            description: "Dinner at the Reffen stalls.",
+            description: "Dinner at Reffen. So fun: a whole yard of food stalls, with fire pits in the winter.",
             places: [{ name: "Reffen" }],
           },
         ],
@@ -1456,18 +1446,25 @@ export const itineraries: Itinerary[] = [
         day: "Day Two",
         title: "Boat, Bikes, and Tivoli",
         activities: [
-          { time: "10:00", description: "Boat, until 11:00." },
+          {
+            time: "10:00",
+            description: "The Classic Canal Tour with Stromma, until 11:00.",
+            places: [{ name: "Classic Canal Tour by Stromma" }],
+          },
           {
             time: "11:30",
-            description: "Six minute Uber to Wulff & Konstali for brunch. Book it.",
+            description:
+              "Six minute Uber to Wulff & Konstali for brunch. Book it. It is the classic Copenhagen brunch, where you pick a few small plates and build your ideal meal.",
             places: [{ name: "Wulff & Konstali" }],
           },
           {
-            description: "Superkilen, on bikes.",
+            description:
+              "Superkilen, on bikes. Honestly not worth it unless you want the pictures: it is out of the way and felt a bit sketchy.",
             places: [{ name: "Superkilen" }],
           },
           {
-            description: "Designmuseum Danmark. Most people spend about two hours.",
+            description:
+              "Designmuseum Danmark. Smaller than I imagined, but very up my alley. Most people spend about two hours, and I wish I had had longer.",
             places: [{ name: "Designmuseum Danmark" }],
           },
           {
@@ -1477,7 +1474,7 @@ export const itineraries: Itinerary[] = [
           },
           {
             description:
-              "Tivoli Gardens. People spend around five hours, and there is a food hall inside.",
+              "Tivoli Gardens. Great food, wine, rides and atmosphere. People spend around five hours, and there is a food hall inside.",
             places: [{ name: "Tivoli Gardens" }],
           },
         ],
@@ -1488,16 +1485,16 @@ export const itineraries: Itinerary[] = [
         activities: [
           {
             time: "11:00",
-            description: "Gasoline Grill. Start queueing at about 10:30.",
+            description: "Gasoline Grill. No need to queue now: there are loads of them and it is easy to get in.",
             places: [{ name: "Gasoline Grill" }],
           },
           {
-            description: "Buka Bakery, if a burger is not the move.",
+            description: "Buka Bakery as well. It was delicious, so get both the burger and the bakery.",
             places: [{ name: "Buka Bakery" }],
           },
           {
             description:
-              "If there is time, Christiania and the Church of Our Saviour. Good view, but it is the other side of town.",
+              "Christiania and the Church of Our Saviour. So worth it. Talking to people in Christiania was fascinating, and we spent much longer walking round than we planned.",
             places: [{ name: "Christiania" }, { name: "Church of Our Saviour" }],
           },
           { description: "Leave thirty minutes to reach the airport by train." },
@@ -2246,7 +2243,7 @@ export const itineraries: Itinerary[] = [
           },
           {
             description: "Out at one of the clubs afterwards.",
-            places: [{ name: "Volksgarten" }, { name: "Prater Dome" }],
+            places: [{ name: "Volksgarten", note: "21+, and the best music ever." }, { name: "Prater Dome" }],
           },
         ],
       },
@@ -2301,13 +2298,6 @@ export const itineraries: Itinerary[] = [
         ],
       },
       {
-        title: "Clubs",
-        places: [
-          { name: "Volksgarten", note: "21+, and the best music ever." },
-          { name: "Prater Dome" },
-        ],
-      },
-      {
         title: "Eat",
         note: "Eat at every hot dog and kebab stand. They are so good.",
         places: [
@@ -2325,13 +2315,7 @@ export const itineraries: Itinerary[] = [
         places: [
           { name: "Albertina" },
           { name: "Leopold Museum" },
-          { name: "Kunsthistorisches Museum Wien" },
         ],
-      },
-      {
-        title: "Skip",
-        avoid: true,
-        places: [{ name: "Sigmund Freud Museum" }],
       },
     ],
   },
@@ -4485,7 +4469,8 @@ export const itineraries: Itinerary[] = [
         activities: [
           {
             time: "08:00",
-            description: "Coffee and matcha at Motya Coffee Shop.",
+            description:
+              "Coffee and matcha at Motya Coffee Shop. Unbelievable. We went back three days in a row.",
             places: [{ name: "Motya Coffee Shop", near: "Funchal, Madeira" }],
           },
           {
@@ -4584,8 +4569,12 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "Museum of Finnish Architecture", near: "Helsinki, Finland" }],
           },
           {
-            description: "Explore the Design District shops.",
-            places: [{ name: "Design District Helsinki" }],
+            description:
+              "Explore the Design District shops, and do not miss the Moomin exhibit. It sparked my Moomin obsession.",
+            places: [
+              { name: "Design District Helsinki" },
+              { name: "Moomin exhibition", near: "Helsinki, Finland" },
+            ],
           },
           {
             time: "14:00",
@@ -4606,13 +4595,15 @@ export const itineraries: Itinerary[] = [
         activities: [
           {
             time: "10:00",
-            description: "Walk to Cafe Regatta.",
+            description:
+              "Walk to Cafe Regatta. So worth it: sausage, fresh cinnamon rolls and hot chocolate by the water.",
             places: [{ name: "Cafe Regatta", near: "Helsinki, Finland" }],
           },
           { time: "12:45", description: "Be at the ferry." },
           {
             time: "13:30",
-            description: "Two hour ferry to Tallinn.",
+            description:
+              "Two hour ferry to Tallinn. It is basically a cruise. We spent the whole time exploring the boat, drinking champagne and shopping.",
             places: [{ name: "Tallinn", near: "Estonia" }],
           },
         ],
@@ -7022,7 +7013,8 @@ export const itineraries: Itinerary[] = [
           },
           {
             time: "20:00",
-            description: "Dinner at Julija.",
+            description:
+              "Dinner at Julija. Unbelievable. Get the soup of the day, any of the beef dishes and the shrimp risotto.",
             places: [{ name: "Julija", near: "Ljubljana, Slovenia" }],
           },
         ],
@@ -7033,7 +7025,8 @@ export const itineraries: Itinerary[] = [
         activities: [
           { description: "Wake up at leisure." },
           {
-            description: "Brunch at Lana's Corner.",
+            description:
+              "Brunch at Lana's Corner. Nothing to write home about, and the matcha was the worst I have ever had. You could do better.",
             places: [{ name: "Lana's Corner", near: "Ljubljana, Slovenia" }],
           },
           {
@@ -7057,8 +7050,8 @@ export const itineraries: Itinerary[] = [
           },
           { description: "Bus back to Ljubljana, an hour to an hour and a half." },
           {
-            description: "Dinner at Breg.",
-            places: [{ name: "Breg", near: "Ljubljana, Slovenia" }],
+            description: "Dinner at Aftr.",
+            places: [{ name: "Aftr", near: "Ljubljana, Slovenia" }],
           },
         ],
       },
@@ -7069,18 +7062,16 @@ export const itineraries: Itinerary[] = [
           { description: "Wake up at leisure." },
           { time: "11:00", description: "Check out." },
           {
-            description: "Matcha at Munchies, or coffee at Stow 2 Go, or both.",
-            places: [
-              { name: "Munchies", near: "Ljubljana, Slovenia" },
-              { name: "Stow 2 Go", near: "Ljubljana, Slovenia" },
-            ],
+            description: "Matcha at Munchies. Skip Stow 2 Go: my latte there was atrocious.",
+            places: [{ name: "Munchies", near: "Ljubljana, Slovenia" }],
           },
           {
-            description: "Brunch at Le Petit Café.",
+            description:
+              "Brunch at Le Petit Café. Cute, a little out of the way, and the croque monsieur was a let-down, but it did the trick hungover. Afterwards we walked the canals nearby and found £5 drinks.",
             places: [{ name: "Le Petit Café", near: "Ljubljana, Slovenia" }],
           },
           {
-            description: "Explore the Old Town, starting at the Franciscan Church, then the Triple Bridge.",
+            description: "Walk through the Old Town, past the Franciscan Church and over the Triple Bridge.",
             places: [
               { name: "Franciscan Church of the Annunciation", near: "Ljubljana, Slovenia" },
               { name: "Triple Bridge", near: "Ljubljana, Slovenia" },
@@ -7104,12 +7095,18 @@ export const itineraries: Itinerary[] = [
         title: "Other dinners",
         places: [
           { name: "Landerik", near: "Ljubljana, Slovenia" },
-          { name: "Aftr", near: "Ljubljana, Slovenia" },
+          { name: "Breg", near: "Ljubljana, Slovenia" },
         ],
       },
       {
         title: "Late night food",
-        places: [{ name: "Burek Olimpija", near: "Ljubljana, Slovenia" }],
+        places: [
+          {
+            name: "Burek Olimpija",
+            near: "Ljubljana, Slovenia",
+            note: "Delicious. Open 24 hours, very cheap, and a million flavours.",
+          },
+        ],
       },
     ],
   },

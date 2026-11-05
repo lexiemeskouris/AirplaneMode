@@ -268,7 +268,7 @@ const CAPTIONS: Record<string, string> = {
 
   // Madeira.
   "madeira/01.jpg": "The toboggan run down from Monte, with the photos to prove it.",
-  "madeira/02.jpg": "Chicken, rice, chips and a fried egg.",
+  "madeira/02.jpg": "Chicken, rice, chips and a fried egg at Restaurante Alta Vista. The chicken was dry, but the sangria and the views were amazing, and it was very local. Glad we went.",
   "madeira/03.jpg": "In the back of the jeep, on the day out to the north.",
   "madeira/04.jpg": "The town hall on Praça do Município, in Funchal.",
   "madeira/05.jpg": "Sunrise on Pico do Arieiro, above the cloud.",
@@ -303,10 +303,8 @@ const CAPTIONS: Record<string, string> = {
   "copenhagen/04.jpg": "The spire of the Church of Our Saviour, the one you climb from outside.",
   "copenhagen/05-w.jpg": "From the top of Our Saviour, over the red roofs.",
   "copenhagen/06-w.jpg": "Christiania, where the houses are painted top to bottom.",
-  "copenhagen/07.jpg": "Brisket, sausage, ribs, slaw and mac and cheese, with cheesecake after.",
+  "copenhagen/07.jpg": "Brisket, sausage, ribs, slaw and mac and cheese at WarPigs, with cheesecake after.",
   "copenhagen/08.jpg": "Sat on the white lines at Superkilen.",
-  "copenhagen/09.jpg": "Standing in the stripes at Superkilen.",
-  "copenhagen/10.jpg": "Both of us at Superkilen, on a grey day.",
   "copenhagen/11.jpg": "The burger at Gasoline Grill.",
 
   // Paris.
@@ -321,15 +319,15 @@ const CAPTIONS: Record<string, string> = {
   "paris/09.jpg": "The Eiffel Tower from the Trocadéro.",
 
   // Berlin.
-  "berlin/01.jpg": "A vegetable kebab with feta and roast potatoes.",
+  "berlin/01.jpg": "A vegetable kebab with feta and roast potatoes at Rüyam Gemüse Kebab.",
   "berlin/02.jpg": "Between the stelae at the Memorial to the Murdered Jews of Europe.",
   "berlin/03.jpg": "The Brandenburg Gate, with the Quadriga on top.",
   "berlin/04.jpg": "Curry at the Wall, and the Welt balloon behind it.",
   "berlin/05.jpg": "All in black in the lift, before going out.",
-  "berlin/06.jpg": "Outside, late, against a tagged-up window.",
-  "berlin/07-w.jpg": "A kebab on the way home, bunny ears still on.",
+  "berlin/06.jpg": "The walk home from the club.",
+  "berlin/07-w.jpg": "A kebab outside KitKat, bunny ears still on.",
   "berlin/08.jpg": "The Fraternal Kiss, at the East Side Gallery.",
-  "berlin/09.jpg": "Two pizzas and two espresso martinis.",
+  "berlin/09.jpg": "Two pizzas and two espresso martinis at 60 Seconds to Napoli.",
 
   // Krakow.
   "krakow/01.jpg": "Pierogi with fried onions, under the notes on the wall.",
@@ -354,12 +352,12 @@ const CAPTIONS: Record<string, string> = {
   // Amsterdam.
   "amsterdam/01.jpg": "Self-Portrait with Grey Felt Hat, at the Van Gogh Museum.",
   "amsterdam/02.jpg": "A drink in the sun on Eerste Sweelinckstraat, in De Pijp.",
-  "amsterdam/03.jpg": "Salmon, steak with béarnaise, a burger and a glass of orange wine.",
+  "amsterdam/03.jpg": "Salmon, steak with béarnaise, a burger and orange wine at Buurtcafé De Tros.",
   "amsterdam/04.jpg": "On the canal boat, drinks in hand.",
   "amsterdam/05-w.jpg": "Gabled houses and houseboats, from the water.",
   "amsterdam/06.jpg": "Boats tied up along a canal, under the trees.",
   "amsterdam/07.jpg": "Poffertjes under a pile of icing sugar, at the Pancake Bakery.",
-  "amsterdam/08.jpg": "A stroopwafel outside Hans Egstorf, est. 1898.",
+  "amsterdam/08.jpg": "A stroopwafel outside Hans Egstorf. Messy and not that tasty, so skip it.",
 
   // Ireland.
   "ireland/01.jpg": "Pints at the window, looking out over Dublin from the Guinness Storehouse.",
