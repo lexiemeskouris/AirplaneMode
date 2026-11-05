@@ -56,9 +56,9 @@ function GuidePage() {
   const targets = guideTargets(g);
 
   return (
-    <article className="mx-auto max-w-3xl px-6 py-12">
+    <article className="mx-auto max-w-3xl px-6 py-8">
       <BackToTop />
-      <nav className="mb-6 text-sm font-semibold text-muted-foreground">
+      <nav className="mb-4 text-sm font-semibold text-muted-foreground">
         <Link to="/" className="transition-colors hover:text-primary">
           Feed
         </Link>
@@ -66,12 +66,12 @@ function GuidePage() {
         <span className="text-foreground">{g.destination}</span>
       </nav>
 
-      <h1 className="font-display text-4xl font-extrabold leading-tight tracking-tight text-foreground md:text-6xl">
+      <h1 className="font-display text-4xl font-extrabold leading-tight tracking-tight text-foreground md:text-5xl">
         {g.title}
       </h1>
-      <p className="mt-4 text-lg leading-relaxed text-muted-foreground">{g.summary}</p>
+      <p className="mt-2 text-lg leading-relaxed text-muted-foreground">{g.summary}</p>
 
-      <div className="mt-5 flex flex-wrap gap-2">
+      <div className="mt-4 flex flex-wrap gap-2">
         {g.tags.map((t) => (
           <JumpLink
             key={t}
@@ -90,10 +90,10 @@ function GuidePage() {
           alt={g.title}
           width={1000}
           height={1000}
-          className="mt-8 aspect-[16/10] w-full rounded-3xl bg-secondary object-cover"
+          className="mt-6 aspect-[5/2] w-full rounded-3xl bg-secondary object-cover"
         />
       ) : (
-        <div className="mt-8 flex aspect-[16/10] w-full items-center justify-center rounded-3xl bg-brand-indigo px-8">
+        <div className="mt-6 flex aspect-[5/2] w-full items-center justify-center rounded-3xl bg-brand-indigo px-8">
           <span className="text-center font-display text-3xl font-extrabold tracking-tight text-background md:text-5xl">
             {g.destination}
           </span>
@@ -106,7 +106,7 @@ function GuidePage() {
         </div>
       )}
 
-      <p className="mt-8 rounded-2xl border-l-4 border-accent bg-secondary/70 px-6 py-5 text-lg leading-relaxed text-foreground/90">
+      <p className="mt-6 rounded-2xl border-l-4 border-accent bg-secondary/70 px-5 py-4 font-medium leading-relaxed text-foreground/90">
         {g.teaser}
       </p>
 
@@ -129,7 +129,7 @@ function GuidePage() {
 
       {/* A city page can run to a dozen sections, so jump straight to one. */}
       {g.sections.length > 2 && (
-        <nav aria-label="Sections" className="mt-10 flex flex-wrap gap-2">
+        <nav aria-label="Sections" className="mt-6 flex flex-wrap gap-2">
           {g.sections.map((section) => (
             <JumpLink
               key={section.title}
@@ -143,25 +143,25 @@ function GuidePage() {
         </nav>
       )}
 
-      <div className="mt-12 space-y-6">
+      <div className="mt-8 space-y-4">
         {g.sections.map((section) => (
           <section
             key={section.title}
             id={sectionId(section.title)}
             className="scroll-mt-24 overflow-hidden rounded-2xl border border-border bg-card"
           >
-            <div className="border-b border-border bg-secondary/60 px-6 py-4">
-              <h2 className="font-display text-2xl font-extrabold tracking-tight text-foreground">
+            <div className="border-b border-border bg-secondary/60 px-5 py-3">
+              <h2 className="font-display text-xl font-extrabold tracking-tight text-foreground">
                 {section.title}
               </h2>
             </div>
             {section.note && (
-              <p className="border-b border-border bg-brand-yellow/20 px-6 py-4 font-semibold leading-relaxed text-foreground">
+              <p className="border-b border-border bg-brand-yellow/20 px-5 py-3 font-semibold leading-relaxed text-foreground">
                 {section.note}
               </p>
             )}
             {section.tiktok && (
-              <div className="border-b border-border px-6 py-4">
+              <div className="border-b border-border px-5 py-3">
                 <TikTokLink url={section.tiktok} />
               </div>
             )}
@@ -174,9 +174,9 @@ function GuidePage() {
               />
             )}
             {(section.places?.length || section.items?.length) && (
-            <div className="px-6 py-5">
+            <div className="px-5 py-4">
               {section.places && section.places.length > 0 && (
-                <ul className="space-y-3">
+                <ul className="grid gap-x-6 gap-y-2 sm:grid-cols-2">
                   {section.places.map((place, pi) => (
                     <li key={place.name} id={placeId(sectionId(section.title), pi)} className="scroll-mt-24 leading-snug">
                       <a
@@ -229,7 +229,7 @@ function GuidePage() {
 
       <PhotoStrip photos={photosFor(g.slug)} />
 
-      <section className="mt-16 rounded-3xl bg-brand-rust px-8 py-10 text-center">
+      <section className="mt-10 rounded-3xl bg-brand-rust px-6 py-8 text-center">
         <h2 className="font-display text-2xl font-extrabold tracking-tight text-background">
           Useful?
         </h2>
@@ -248,7 +248,7 @@ function GuidePage() {
       </section>
 
       {others.length > 0 && (
-        <section className="mt-16">
+        <section className="mt-10">
           <h2 className="font-display text-2xl font-extrabold tracking-tight text-foreground">
             More recommendations
           </h2>

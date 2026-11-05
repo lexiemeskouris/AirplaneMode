@@ -58,10 +58,10 @@ function ItineraryDetail() {
   const showDays = !it.comingSoon && (it.days?.length ?? 0) > 0;
 
   return (
-    <article className="mx-auto max-w-5xl px-6 py-12">
+    <article className="mx-auto max-w-5xl px-6 py-8">
       <BackToTop />
       {/* Breadcrumb */}
-      <nav className="mb-8 text-sm font-bold text-muted-foreground">
+      <nav className="mb-4 text-sm font-bold text-muted-foreground">
         <Link to="/" className="transition-colors hover:text-accent">
           Feed
         </Link>
@@ -71,13 +71,13 @@ function ItineraryDetail() {
 
       {/* Header */}
       <header className="max-w-3xl">
-        <h1 className="font-display text-5xl font-extrabold leading-tight tracking-tight text-foreground md:text-6xl">
+        <h1 className="font-display text-4xl font-extrabold leading-tight tracking-tight text-foreground md:text-5xl">
           {it.title}
         </h1>
-        <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+        <p className="mt-2 text-lg leading-relaxed text-muted-foreground">
           {it.summary}
         </p>
-        <div className="mt-6 flex flex-wrap gap-2">
+        <div className="mt-4 flex flex-wrap gap-2">
           {it.tags.map((t) => (
             <JumpLink
               key={t}
@@ -92,18 +92,18 @@ function ItineraryDetail() {
       </header>
 
       {/* Cover, when there is one. An itinerary can go up before its photos do. */}
-      <div className="mt-8 overflow-hidden rounded-[2rem] shadow-2xl">
+      <div className="mt-6 overflow-hidden rounded-3xl shadow-xl">
         {it.cover ? (
           <ZoomableImage
             src={it.cover}
             alt={it.title}
             width={1200}
             height={750}
-            className="aspect-[16/10] w-full object-cover"
+            className="aspect-[5/2] w-full object-cover"
             loading="lazy"
           />
         ) : (
-          <div className="flex aspect-[16/10] w-full items-center justify-center bg-brand-indigo px-8">
+          <div className="flex aspect-[5/2] w-full items-center justify-center bg-brand-indigo px-8">
             <span className="text-center font-display text-3xl font-extrabold tracking-tight text-background md:text-5xl">
               {it.destination}
             </span>
@@ -120,16 +120,16 @@ function ItineraryDetail() {
       {/* Highlights. Guarded: an itinerary added without them should lose the
           section, not take the whole page down. */}
       {it.highlights && it.highlights.length > 0 && (
-      <section className="mt-12">
-        <h2 className="font-display text-3xl font-extrabold tracking-tight text-foreground">
+      <section className="mt-8">
+        <h2 className="font-display text-2xl font-extrabold tracking-tight text-foreground">
           Highlights
         </h2>
-        <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+        <ul className="mt-3 grid gap-2 sm:grid-cols-2">
           {it.highlights.map((h) => (
             <li key={h}>
               <JumpLink
                 to={findTarget(h, targets)}
-                className="flex h-full items-start gap-3 rounded-2xl border border-border bg-card p-4 text-foreground/90"
+                className="flex h-full items-start gap-3 rounded-xl border border-border bg-card px-4 py-2.5 text-foreground/90"
                 linkClassName="group transition-colors hover:border-primary"
               >
                 <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary" />
@@ -145,19 +145,19 @@ function ItineraryDetail() {
       )}
 
       {/* Teaser */}
-      <section className="mt-10 rounded-2xl border-l-4 border-accent bg-secondary p-6">
-        <p className="text-lg font-medium leading-relaxed text-foreground/90">
+      <section className="mt-6 rounded-2xl border-l-4 border-accent bg-secondary px-5 py-4">
+        <p className="font-medium leading-relaxed text-foreground/90">
           {it.teaser}
         </p>
       </section>
 
       {/* Days - free shows all, gated shows only the sample day */}
       {it.notes && it.notes.length > 0 && (
-        <ul className="mt-8 space-y-2">
+        <ul className="mt-4 space-y-2">
           {it.notes.map((n) => (
             <li
               key={n}
-              className="rounded-2xl border border-brand-yellow bg-brand-yellow/25 px-5 py-4 font-bold text-foreground"
+              className="rounded-2xl border border-brand-yellow bg-brand-yellow/25 px-5 py-3 font-bold text-foreground"
             >
               {n}
             </li>
@@ -169,7 +169,7 @@ function ItineraryDetail() {
 
       {/* Straight to a day, or to one of the lists under the plan. */}
       {(showDays ? it.days!.length : 0) + (it.extras?.length ?? 0) > 1 && (
-        <nav aria-label="Jump to" className="mt-10 flex flex-wrap gap-2">
+        <nav aria-label="Jump to" className="mt-6 flex flex-wrap gap-2">
           {showDays &&
             it.days!.map((d, di) => (
               <JumpLink
@@ -204,19 +204,19 @@ function ItineraryDetail() {
       )}
 
       {!it.comingSoon && it.days && it.days.length > 0 && (
-        <section className="mt-12">
-          <h2 className="font-display text-3xl font-extrabold tracking-tight text-foreground">
+        <section className="mt-8">
+          <h2 className="font-display text-2xl font-extrabold tracking-tight text-foreground">
             {it.gated ? "A free sample day" : "The plan, day by day"}
           </h2>
-          <div className="mt-6 space-y-6">
+          <div className="mt-4 space-y-4">
             {it.days.map((d, di) => (
               <div
                 key={d.day}
                 id={dayId(di)}
                 className="scroll-mt-24 overflow-hidden rounded-2xl border border-border bg-card"
               >
-                <div className="flex items-baseline justify-between border-b border-border bg-secondary/60 px-6 py-4">
-                  <h3 className="font-display text-2xl font-extrabold tracking-tight text-foreground">
+                <div className="flex items-baseline justify-between gap-4 border-b border-border bg-secondary/60 px-5 py-3">
+                  <h3 className="font-display text-xl font-extrabold tracking-tight text-foreground">
                     {d.title}
                   </h3>
                   <span className="text-xs font-bold uppercase tracking-widest text-accent">
@@ -238,17 +238,17 @@ function ItineraryDetail() {
       <PhotoStrip photos={photosFor(it.slug)} />
 
       {it.extras && it.extras.length > 0 && (
-        <div className="mt-12 space-y-8">
+        <div className="mt-10 space-y-6">
           {it.extras.map((group) => (
             <section key={group.title} id={groupId(group.title)} className="scroll-mt-24">
-              <h2 className="font-display text-3xl font-extrabold tracking-tight text-foreground">
+              <h2 className="font-display text-2xl font-extrabold tracking-tight text-foreground">
                 {group.title}
               </h2>
               {group.note && (
-                <p className="mt-3 leading-relaxed text-foreground/90">{group.note}</p>
+                <p className="mt-1.5 leading-relaxed text-foreground/90">{group.note}</p>
               )}
               {group.items && group.items.length > 0 && (
-                <ul className="mt-6 space-y-3">
+                <ul className="mt-3 space-y-1.5">
                   {group.items.map((item) => (
                     <li key={item} className="flex gap-3 leading-relaxed text-foreground/90">
                       <span
@@ -260,12 +260,12 @@ function ItineraryDetail() {
                   ))}
                 </ul>
               )}
-              <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+              <ul className="mt-3 grid gap-x-6 gap-y-2 sm:grid-cols-2">
                 {(group.places ?? []).map((place, pi) => (
                   <li
                     key={place.name}
                     id={placeId(groupId(group.title), pi)}
-                    className="scroll-mt-24 rounded-2xl border border-border bg-card px-5 py-4 leading-snug"
+                    className="scroll-mt-24 leading-snug"
                   >
                     <a
                       href={placeHref(place, it.destination)}
@@ -293,7 +293,7 @@ function ItineraryDetail() {
       {!it.comingSoon && <SpotsMap spots={spotsFor(it.slug)} />}
 
       {it.seeAlso && (
-        <section className="mt-12 rounded-2xl border border-accent/40 bg-accent/10 px-6 py-6">
+        <section className="mt-10 rounded-2xl border border-accent/40 bg-accent/10 px-5 py-4">
           <p className="leading-relaxed text-foreground/90">{it.seeAlso.note}</p>
           {it.seeAlso.kind === "itinerary" ? (
             <Link
@@ -347,7 +347,7 @@ function ItineraryDetail() {
       )}
 
       {/* More journeys */}
-      <section className="mt-16 border-t border-border pt-10">
+      <section className="mt-10 border-t border-border pt-8">
         <h2 className="font-display text-2xl font-extrabold tracking-tight text-foreground">
           Keep moving
         </h2>

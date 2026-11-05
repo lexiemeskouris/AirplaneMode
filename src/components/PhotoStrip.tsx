@@ -21,19 +21,19 @@ export function PhotoStrip({
   if (photos.length === 0) return null;
 
   return (
-    <section className={compact ? "mt-4" : "mt-16"}>
+    <section className={compact ? "mt-4" : "mt-10"}>
       <h2
         className={
           compact
             ? "text-sm font-bold uppercase tracking-wide text-muted-foreground"
-            : "font-display text-3xl font-extrabold tracking-tight text-foreground"
+            : "font-display text-2xl font-extrabold tracking-tight text-foreground"
         }
       >
         {title}
       </h2>
       <div
-        className={`grid grid-cols-2 gap-4 ${
-          compact ? "mt-4 sm:grid-cols-3" : "mt-6 sm:grid-cols-3 lg:grid-cols-4"
+        className={`grid grid-cols-2 gap-3 ${
+          compact ? "mt-3 sm:grid-cols-3" : "mt-3 sm:grid-cols-4 lg:grid-cols-5"
         }`}
       >
         {photos.map((photo, i) => (
@@ -48,11 +48,11 @@ export function PhotoStrip({
                 src={photo.src}
                 alt={photo.alt}
                 loading="lazy"
-                className={`w-full object-cover ${photo.wide ? "aspect-[3/2]" : "aspect-[3/4]"}`}
+                className={`w-full object-cover ${photo.wide ? "aspect-[8/5]" : "aspect-[4/5]"}`}
               />
             </button>
             {photo.caption && (
-              <figcaption className="px-4 py-3 text-sm leading-snug text-muted-foreground">
+              <figcaption className="px-3 py-2 text-xs leading-snug text-muted-foreground">
                 {photo.caption}
               </figcaption>
             )}

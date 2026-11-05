@@ -72,11 +72,11 @@ export function SpotsMap({ spots, onGuide = false }: { spots: SavedSpot[]; onGui
   const kinds = ORDER.filter((k) => spots.some((s) => s.kind === k));
 
   return (
-    <section className="mt-12">
+    <section className="mt-10">
       <h2 className="font-display text-3xl font-extrabold tracking-tight text-foreground">
         More from my map
       </h2>
-      <p className="mt-3 leading-relaxed text-foreground/90">
+      <p className="mt-1.5 leading-relaxed text-foreground/90">
         Places I've saved that aren't {onGuide ? "on this page" : "in the plan above"}. Tap a pin to open it in Google Maps.
       </p>
       <div className="mt-4 flex flex-wrap gap-2">
@@ -91,7 +91,7 @@ export function SpotsMap({ spots, onGuide = false }: { spots: SavedSpot[]; onGui
       </div>
       <div
         ref={el}
-        className="relative z-0 mt-6 h-[420px] w-full overflow-hidden rounded-2xl border border-border bg-secondary"
+        className="relative z-0 mt-4 h-[360px] w-full overflow-hidden rounded-2xl border border-border bg-secondary"
         aria-label="Map of saved places"
       />
       <details className="mt-4 rounded-2xl border border-border bg-card px-5 py-4">

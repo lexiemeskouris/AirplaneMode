@@ -5607,7 +5607,7 @@ export const itineraries: Itinerary[] = [
     days: [
       {
         day: "Day One",
-        title: "Valletta, Then Mdina at Sunset",
+        title: "Valletta, Then Paceville",
         activities: [
           { time: "09:35", description: "Land, and twenty minutes to St Julian's to drop bags.", places: [{ name: "St Julian's", near: "Malta" }] },
           {

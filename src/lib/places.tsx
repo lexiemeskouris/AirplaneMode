@@ -106,18 +106,18 @@ export function ActivityList({
           <li
             key={`${idPrefix}-${i}`}
             id={anchorPrefix ? `${anchorPrefix}-${i + 1}` : undefined}
-            className="flex scroll-mt-24 gap-4 px-6 py-4"
+            className="flex scroll-mt-24 gap-3 px-5 py-2.5"
           >
             {/* Untimed steps keep the time column's width so every
                 description still lines up, and take a dash. */}
-            <span className="w-16 shrink-0 pt-0.5 font-mono text-sm font-bold text-primary">
+            <span className="w-12 shrink-0 pt-0.5 font-mono text-sm font-bold text-primary">
               {a.time ?? <span className="text-muted-foreground/50">-</span>}
             </span>
             <div className="min-w-0">
               <span className="leading-relaxed text-foreground/90">{nodes}</span>
               {/* Only places the sentence does not already name. */}
               {trailing.length > 0 && (
-                <ul className="mt-3 space-y-2">
+                <ul className="mt-1 flex flex-wrap gap-x-4 gap-y-1">
                   {trailing.map((place) => (
                     <li key={place.name} className="leading-snug">
                       <a
