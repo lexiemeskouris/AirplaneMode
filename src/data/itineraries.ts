@@ -164,27 +164,11 @@ export const itineraries: Itinerary[] = [
     cover: sanSebastian,
     gated: false,
     teaser:
-      "San Sebastián is small enough to walk and dense enough that you never stop eating. You climb both headlands and swim both beaches, and every evening ends up standing at a bar with a plate in one hand.",
+      "San Sebastián is small enough to walk and dense enough that you never stop eating. Stay in Parte Vieja, the Old Town, climb both headlands, swim both beaches, and end every evening standing at a bar with a plate in one hand.",
     tiktok: "https://www.tiktok.com/@lexiemesko/video/7682108674856242445",
     tags: ["#Pintxos", "#LaConcha", "#BasqueCheesecake"],
     highlights: ["Pintxos", "Basque cheesecake", "La Concha", "Monte Urgull", "Monte Igueldo"],
     days: [
-      {
-        day: "Arrival",
-        title: "Land Late, Sleep in the Old Town",
-        activities: [
-          {
-            time: "21:00",
-            description: "Land at Bilbao Airport.",
-            places: [{ name: "Bilbao Airport", near: "Bilbao, Spain" }],
-          },
-          { description: "Bus from Bilbao to San Sebastián." },
-          {
-            description: "Check in and stay in Parte Vieja, the Old Town - everything below is walkable from there.",
-            places: [{ name: "Parte Vieja" }],
-          },
-        ],
-      },
       {
         day: "Day One",
         title: "La Concha, Monte Urgull, and the First Crawl",
@@ -252,10 +236,7 @@ export const itineraries: Itinerary[] = [
           },
           {
             description: "Visit the Monte Igueldo Tower and the Monte Igueldo Amusement Park.",
-            places: [
-              { name: "Monte Igueldo Tower" },
-              { name: "Monte Igueldo Amusement Park" },
-            ],
+            places: [{ name: "Monte Igueldo Tower" }, { name: "Monte Igueldo Amusement Park" }],
           },
           {
             description: "Lunch at Ganbara, Anthony Bourdain's favourite spot.",
@@ -281,9 +262,8 @@ export const itineraries: Itinerary[] = [
       },
       {
         day: "Day Three",
-        title: "One Last Swim, Then the Airport",
+        title: "One Last Swim",
         activities: [
-          { description: "Check out and leave your bags at the hotel." },
           {
             description: "Coffee and a walk along the La Concha promenade.",
             places: [{ name: "La Concha promenade" }],
@@ -294,13 +274,6 @@ export const itineraries: Itinerary[] = [
             description: "Shopping at Zara, Calzedonia and El Ganso.",
             places: [{ name: "Zara" }, { name: "Calzedonia" }, { name: "El Ganso" }],
           },
-          {
-            time: "18:45",
-            description: "Leave San Sebastián for Bilbao Airport.",
-            places: [{ name: "Bilbao Airport", near: "Bilbao, Spain" }],
-          },
-          { time: "20:00", description: "Arrive at Bilbao Airport." },
-          { time: "21:40", description: "Flight departs." },
         ],
       },
     ],
@@ -319,7 +292,7 @@ export const itineraries: Itinerary[] = [
     gated: true,
     bmcUrl: "https://buymeacoffee.com/lexiemeskouris/e/584146",
     teaser:
-      "Based in Sidi Bou Said, with everything else reached by taxi: the Bardo and the Medina one day, Hammamet the next, and the blue-and-white streets saved for the walk to the airport.",
+      "Based in Sidi Bou Said, with the Bardo, the Medina of Tunis, Carthage and a beach club in Hammamet all a taxi ride away.",
     tags: ["#Carthage", "#SidiBouSaid", "#Bambalouni"],
     highlights: ["Carthage", "Sidi Bou Said", "The medina", "Beach clubs", "Bambalouni"],
     days: [
@@ -336,7 +309,8 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "Medina of Tunis", near: "Tunis, Tunisia" }],
           },
           {
-            description: "Explore the Zitouna Mosque area, Souk El Attarine and the lanes around them.",
+            description:
+              "Explore the Zitouna Mosque area, Souk El Attarine and the lanes around them.",
             places: [
               { name: "Zitouna Mosque", near: "Tunis, Tunisia" },
               { name: "Souk El Attarine", near: "Tunis, Tunisia" },
@@ -373,11 +347,11 @@ export const itineraries: Itinerary[] = [
     duration: "3 days",
     season: "Late Summer",
     summary:
-      "A kebab straight off the plane, a nap before dinner, and two nights out on consecutive days.",
+      "Kebabs, a Cold War walking tour, the Reichstag, and two nights out: KitKat and Berghain.",
     cover: berlin,
     gated: false,
     teaser:
-      "Three days planned around the nightlife, so the days are kept light. KitKat on the first night, Berghain and an after party on the second.",
+      "Planned around the nightlife, so the days are kept light: kebabs, a Third Reich and Cold War walking tour, the Reichstag, and nights at KitKat and Berghain.",
     tags: ["#Doner", "#Berghain", "#StreetFoodThursday"],
     highlights: ["Kebab", "Clubs", "Cold War history", "Street food", "Berghain"],
     extras: [
@@ -385,7 +359,10 @@ export const itineraries: Itinerary[] = [
         title: "Skip these",
         avoid: true,
         places: [
-          { name: "Annelie's", note: "Terrible. Cold food and flies everywhere. Instagrammable, but the food is mid." },
+          {
+            name: "Annelie's",
+            note: "Terrible. Cold food and flies everywhere. Instagrammable, but the food is mid.",
+          },
         ],
       },
     ],
@@ -394,12 +371,6 @@ export const itineraries: Itinerary[] = [
         day: "Day One",
         title: "Kebab, a Walking Tour, and KitKat",
         activities: [
-          {
-            time: "10:50",
-            description: "Land at Berlin Brandenburg Airport.",
-            places: [{ name: "Berlin Brandenburg Airport" }],
-          },
-          { time: "12:00", description: "Drop bags at the hotel." },
           {
             description: "Kebab at Rüyam Gemüse Kebab.",
             places: [
@@ -472,13 +443,12 @@ export const itineraries: Itinerary[] = [
         day: "Day Three",
         title: "Fill the Day, Then the Reichstag",
         activities: [
-          { time: "11:00", description: "Check out of the hotel." },
           {
-            description: "Time to fill before the airport. Any of these, depending on what you want out of the last few hours.",
+            description: "Any of these, depending on what you want.",
             places: [
               {
                 name: "Vabali Spa",
-                note: "A whole day if you want one. Pools, saunas and a massage. Honestly the most relaxing way to spend your last hours before a flight.",
+                note: "A whole day if you want one. Pools, saunas and a massage. Honestly the most relaxing option.",
               },
               {
                 name: "Museum Island",
@@ -508,14 +478,9 @@ export const itineraries: Itinerary[] = [
           },
           {
             time: "17:15",
-            description: "Climb the Reichstag. Tickets have to be applied for in advance, and they are free.",
+            description:
+              "Climb the Reichstag. Tickets have to be applied for in advance, and they are free.",
             places: [{ name: "Reichstag", url: "https://www.bundestag.de/en/visittheBundestag" }],
-          },
-          { time: "19:15", description: "Leave for the airport." },
-          {
-            time: "21:45",
-            description: "Flight from Berlin Brandenburg Airport.",
-            places: [{ name: "Berlin Brandenburg Airport" }],
           },
         ],
       },
@@ -535,26 +500,16 @@ export const itineraries: Itinerary[] = [
     gated: false,
     comingSoon: true,
     teaser:
-      "Three days, almost all on foot. Yongkang Street and Shida on the first, Songshan and Elephant Mountain on the second, Longshan Temple squeezed in before the airport on the third.",
+      "Almost all on foot: Yongkang Street, Shida Night Market, Elephant Mountain at sunset, dumplings at Taipei 101, and Longshan Temple.",
     tags: ["#NightMarket", "#ElephantMountain", "#DinTaiFung"],
     highlights: ["Night markets", "Elephant Mountain", "Dumplings", "Temples"],
     days: [
       {
         day: "Day One",
-        title: "Land, Da'an, and Shida Night Market",
+        title: "Da'an and Shida Night Market",
         activities: [
           {
-            time: "09:00",
-            description: "Land at Taoyuan International Airport.",
-            places: [{ name: "Taoyuan International Airport", near: "Taoyuan, Taiwan" }],
-          },
-          {
-            time: "11:30",
-            description: "Arrive at the Regent Taipei.",
-            places: [{ name: "Regent Taipei" }],
-          },
-          {
-            description: "Lunch at Azie on the hotel credit, then check in and rest.",
+            description: "Lunch at Azie, in the Regent Taipei.",
             places: [{ name: "Azie" }],
           },
           {
@@ -607,7 +562,8 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "Elephant Mountain" }],
           },
           {
-            description: "Put your name down at Din Tai Fung Taipei 101, then drink at UNO Taipei while you wait.",
+            description:
+              "Put your name down at Din Tai Fung Taipei 101, then drink at UNO Taipei while you wait.",
             places: [{ name: "Din Tai Fung Taipei 101" }, { name: "UNO Taipei" }],
           },
           {
@@ -622,7 +578,7 @@ export const itineraries: Itinerary[] = [
       },
       {
         day: "Day Three",
-        title: "Longshan Temple, Then Hong Kong",
+        title: "Longshan Temple and Bopiliao",
         activities: [
           { description: "Breakfast at the hotel." },
           {
@@ -633,13 +589,6 @@ export const itineraries: Itinerary[] = [
             description: "Walk through Bopiliao Historical Block.",
             places: [{ name: "Bopiliao Historical Block" }],
           },
-          { description: "Head back to the hotel." },
-          {
-            time: "14:00",
-            description: "Leave for Taoyuan International Airport.",
-            places: [{ name: "Taoyuan International Airport", near: "Taoyuan, Taiwan" }],
-          },
-          { time: "17:40", description: "Fly to Hong Kong." },
         ],
       },
     ],
@@ -652,12 +601,11 @@ export const itineraries: Itinerary[] = [
     coords: { lat: 52.3676, lon: 4.9041 },
     duration: "3 days",
     season: "Early Summer",
-    summary:
-      "Van Gogh in the morning, a canal cruise at dusk, and a Saturday with nothing scheduled at all.",
+    summary: "The Van Gogh Museum, a canal cruise, De Pijp, Vondelpark and the Anne Frank House.",
     cover: amsterdam,
     gated: false,
     teaser:
-      "Two tightly timed days with a totally open one in the middle. Museums and a booze cruise on the first, wandering on the second, then a food tour and the Anne Frank House before the flight home.",
+      "The Van Gogh Museum, De Pijp, a booze cruise on the canals, the Jordaan, a Secret Food Tour and the Anne Frank House, with a whole day left for wandering and Vondelpark.",
     tags: ["#VanGogh", "#DePijp", "#Vondelpark"],
     highlights: ["Van Gogh", "Canals", "De Pijp", "Vondelpark", "Anne Frank House"],
     extras: [
@@ -681,28 +629,6 @@ export const itineraries: Itinerary[] = [
       },
     ],
     days: [
-      {
-        day: "Arrival",
-        title: "Land Late, Snack if You Survive It",
-        activities: [
-          {
-            time: "18:55",
-            description: "Flight departs London Luton.",
-            places: [{ name: "London Luton", near: "Luton, UK" }],
-          },
-          {
-            time: "21:05",
-            description: "Land at Schiphol Airport.",
-            places: [{ name: "Schiphol Airport", near: "Amsterdam, Netherlands" }],
-          },
-          { time: "21:30", description: "Through the airport and on to the hotel." },
-          {
-            description:
-              "Arrive at The Alfred Hotel. A quick snack or drink nearby if there is anything left in the tank, otherwise sleep.",
-            places: [{ name: "The Alfred Hotel" }],
-          },
-        ],
-      },
       {
         day: "Day One",
         title: "Van Gogh, De Pijp, and the Canal",
@@ -775,7 +701,8 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "Bloemenmarkt" }],
           },
           {
-            description: "Make custom bars at Tony's Chocolonely. Quick, fun, and worth it for the souvenir.",
+            description:
+              "Make custom bars at Tony's Chocolonely. Quick, fun, and worth it for the souvenir.",
             places: [{ name: "Tony's Chocolonely" }],
           },
           {
@@ -798,17 +725,14 @@ export const itineraries: Itinerary[] = [
       },
       {
         day: "Day Three",
-        title: "Food Tour, Anne Frank, Then Home",
+        title: "Food Tour and the Anne Frank House",
         activities: [
-          {
-            description: "Check out and leave the bags at The Alfred Hotel.",
-            places: [{ name: "The Alfred Hotel" }],
-          },
-          { description: "If time allows, coffee and a long walk to the food tour." },
+          { description: "Coffee and a long walk to the food tour." },
           { time: "11:00", description: "Secret Food Tour until 13:00." },
           {
             time: "13:30",
-            description: "Wander the Jordaan and the Nine Streets. Boutiques, coffee, canals, and beers at Waterkant.",
+            description:
+              "Wander the Jordaan and the Nine Streets. Boutiques, coffee, canals, and beers at Waterkant.",
             places: [
               { name: "Jordaan" },
               { name: "Nine Streets" },
@@ -826,14 +750,6 @@ export const itineraries: Itinerary[] = [
               "Optional: a quick dinner or drinks in the Jordaan, or A'DAM Lookout if that is your thing. It is across the water by ferry. We skipped the lookout and had a drink at the pub at the bottom of it.",
             places: [{ name: "A'DAM Lookout" }],
           },
-          { time: "19:15", description: "Back to the hotel to collect the bags." },
-          {
-            time: "19:30",
-            description: "Head to Schiphol Airport.",
-            places: [{ name: "Schiphol Airport", near: "Amsterdam, Netherlands" }],
-          },
-          { time: "21:30", description: "Flight departs Amsterdam." },
-          { time: "21:50", description: "Land at London Luton." },
         ],
       },
     ],
@@ -851,7 +767,7 @@ export const itineraries: Itinerary[] = [
     cover: nashville,
     gated: false,
     teaser:
-      "Based near campus, with the eating planned tightly and the drinking not planned at all. Two things need booking ahead: Kayne Prime, and the massages at Woodhouse.",
+      "Barbecue, brunch, live music at the Listening Room and a night on Broadway. Book Kayne Prime and the massages at Woodhouse ahead.",
     tags: ["#Broadway", "#12South", "#ListeningRoom"],
     highlights: ["Barbecue", "Broadway", "Live music", "12 South", "Brunch"],
     extras: [
@@ -902,7 +818,10 @@ export const itineraries: Itinerary[] = [
       {
         title: "Dinner",
         places: [
-          { name: "Twelve Thirty Club", note: "On Broadway. Both a bar and a sit-down restaurant, with live music." },
+          {
+            name: "Twelve Thirty Club",
+            note: "On Broadway. Both a bar and a sit-down restaurant, with live music.",
+          },
           { name: "Luogo", note: "Italian in the Gulch." },
           { name: "Butchertown Hall", note: "Nicer tacos, in Germantown." },
           { name: "5th & Taylor" },
@@ -928,7 +847,10 @@ export const itineraries: Itinerary[] = [
       {
         title: "Drinks",
         places: [
-          { name: "6th & Peabody", note: "Outdoor moonshine distillery and brewery, with a hot dog stand and a taco shop." },
+          {
+            name: "6th & Peabody",
+            note: "Outdoor moonshine distillery and brewery, with a hot dog stand and a taco shop.",
+          },
           { name: "Tennessee Brew Works", note: "Brewery with a rooftop." },
           { name: "L.A. Jackson", note: "Rooftop on the Thompson." },
           { name: "Attaboy", note: "Speakeasy." },
@@ -993,18 +915,8 @@ export const itineraries: Itinerary[] = [
     days: [
       {
         day: "Day One",
-        title: "Land, Campus, and the Listening Room",
+        title: "Campus and the Listening Room",
         activities: [
-          {
-            time: "10:00",
-            description: "Land at Nashville International Airport.",
-            places: [{ name: "Nashville International Airport" }],
-          },
-          {
-            description: "Drop bags at the Aertson Hotel.",
-            places: [{ name: "Aertson Hotel" }],
-          },
-          { time: "12:00", description: "Early check in." },
           {
             description: "Walk around the Vanderbilt University campus.",
             places: [{ name: "Vanderbilt University" }],
@@ -1018,7 +930,12 @@ export const itineraries: Itinerary[] = [
           {
             time: "20:30",
             description: "The Listening Room.",
-            places: [{ name: "The Listening Room", note: "Dinner and a show. The food is fair, the show is so fun." }],
+            places: [
+              {
+                name: "The Listening Room",
+                note: "Dinner and a show. The food is fair, the show is so fun.",
+              },
+            ],
           },
         ],
       },
@@ -1068,7 +985,12 @@ export const itineraries: Itinerary[] = [
           },
           {
             description: "If hungry, snacks and live music at 5th & Broadway.",
-            places: [{ name: "5th & Broadway", note: "Food court, shopping and a lot of the Nashville staples in one complex." }],
+            places: [
+              {
+                name: "5th & Broadway",
+                note: "Food court, shopping and a lot of the Nashville staples in one complex.",
+              },
+            ],
           },
           {
             time: "20:00",
@@ -1079,18 +1001,18 @@ export const itineraries: Itinerary[] = [
       },
       {
         day: "Day Four",
-        title: "One Last Brunch, Then the Airport",
+        title: "Brunch at Adele's",
         activities: [
           {
             time: "11:45",
             description:
               "Brunch at Adele's. The all-you-can-eat buffet is Sunday only, and any other day you order off the menu. It is still the nicest brunch on this list, and it is a proper dinner restaurant too if you would rather go in the evening.",
-            places: [{ name: "Adele's", note: "The nicer brunch. The all-you-can-eat buffet runs on Sundays only, so time it for a Sunday if you want that. It is also a really good dinner spot the rest of the week, which most brunch places are not." }],
-          },
-          {
-            time: "16:10",
-            description: "Flight out of Nashville International Airport.",
-            places: [{ name: "Nashville International Airport" }],
+            places: [
+              {
+                name: "Adele's",
+                note: "The nicer brunch. The all-you-can-eat buffet runs on Sundays only, so time it for a Sunday if you want that. It is also a really good dinner spot the rest of the week, which most brunch places are not.",
+              },
+            ],
           },
         ],
       },
@@ -1104,12 +1026,11 @@ export const itineraries: Itinerary[] = [
     coords: { lat: 48.8566, lon: 2.3522 },
     duration: "5 days",
     season: "Late Spring",
-    summary:
-      "Roland-Garros, a day in Champagne, and the rest of Paris covered on foot.",
+    summary: "Roland-Garros, a day in Champagne, and the rest of Paris covered on foot.",
     cover: paris,
     gated: false,
     teaser:
-      "Five days planned around a full day at Roland-Garros and a day trip to Reims for the Champagne houses. The rest is the Marais, Montmartre, the Left Bank and a lot of walking.",
+      "A full day at Roland-Garros, a day trip to Reims for the Champagne houses, and the Marais, Montmartre and the Left Bank on foot.",
     tags: ["#RolandGarros", "#Champagne", "#LeMarais"],
     notes: [
       "This only works in May if you want Roland-Garros. Everything else here is fine any time of year, so move the tennis day out and the rest still stands.",
@@ -1129,8 +1050,7 @@ export const itineraries: Itinerary[] = [
           { time: "10:00", description: "Gates open." },
           { time: "12:00", description: "Daytime session." },
           {
-            description:
-              "Keep watching the third-round matches and wander the outside courts.",
+            description: "Keep watching the third-round matches and wander the outside courts.",
           },
           { description: "Dinner, whenever play finishes. Leave it flexible." },
         ],
@@ -1210,7 +1130,10 @@ export const itineraries: Itinerary[] = [
             places: [
               { name: "Le Bon Marché", note: "Best department store, and a grocery." },
               { name: "Citypharma", note: "Biggest French pharmacy." },
-              { name: "La Grande Épicerie de Paris", note: "Gourmet grocer. Get the French butter." },
+              {
+                name: "La Grande Épicerie de Paris",
+                note: "Gourmet grocer. Get the French butter.",
+              },
             ],
           },
           {
@@ -1283,7 +1206,7 @@ export const itineraries: Itinerary[] = [
       },
       {
         day: "Day Five",
-        title: "One Last Baguette, Then the Train",
+        title: "One Last Baguette",
         activities: [
           {
             description:
@@ -1306,15 +1229,6 @@ export const itineraries: Itinerary[] = [
             description: "Walk to Pont Neuf.",
             places: [{ name: "Pont Neuf" }],
           },
-          { time: "14:00", description: "Pick up the luggage at the hotel." },
-          { time: "18:00", description: "Thirty minute walk to the train." },
-          {
-            time: "18:30",
-            description: "Get to Paris Gare du Nord.",
-            places: [{ name: "Gare du Nord" }],
-          },
-          { time: "19:00", description: "Check-in for the train closes." },
-          { time: "20:00", description: "Late train to London." },
         ],
       },
     ],
@@ -1327,12 +1241,11 @@ export const itineraries: Itinerary[] = [
     coords: { lat: 55.6761, lon: 12.5683 },
     duration: "3 days",
     season: "Early Spring",
-    summary:
-      "A packed first day on foot, a boat and Tivoli on the second, and one very good burger on the third.",
+    summary: "The whole city on foot, a boat and Tivoli, and one very good burger.",
     cover: copenhagen,
     gated: false,
     teaser:
-      "Copenhagen is small enough that day one can be almost entirely walked. Day two is a boat, a bike ride and five hours in Tivoli. Day three is one very good burger before the airport.",
+      "Small enough to walk almost all of it: the Round Tower, La Banchina, Reffen, a boat, Tivoli, Christiania, and one very good burger at Gasoline Grill.",
     tags: ["#Tivoli", "#Reffen", "#RoundTower"],
     extras: [
       {
@@ -1351,7 +1264,6 @@ export const itineraries: Itinerary[] = [
         day: "Day One",
         title: "The Whole City on Foot",
         activities: [
-          { time: "09:00", description: "Land, drop the suitcases at the hotel and change." },
           {
             description: "Coffee at Union Kitchen. Get the one with a saying printed on top.",
             places: [{ name: "Union Kitchen" }],
@@ -1392,7 +1304,8 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "Hot Tub Copenhagen" }],
           },
           {
-            description: "Dinner at Reffen. So fun: a whole yard of food stalls, with fire pits in the winter.",
+            description:
+              "Dinner at Reffen. So fun: a whole yard of food stalls, with fire pits in the winter.",
             places: [{ name: "Reffen" }],
           },
         ],
@@ -1436,15 +1349,17 @@ export const itineraries: Itinerary[] = [
       },
       {
         day: "Day Three",
-        title: "One Burger, Then the Airport",
+        title: "One Burger, Then Christiania",
         activities: [
           {
             time: "11:00",
-            description: "Gasoline Grill. No need to queue now: there are loads of them and it is easy to get in.",
+            description:
+              "Gasoline Grill. No need to queue now: there are loads of them and it is easy to get in.",
             places: [{ name: "Gasoline Grill" }],
           },
           {
-            description: "Buka Bakery as well. It was delicious, so get both the burger and the bakery.",
+            description:
+              "Buka Bakery as well. It was delicious, so get both the burger and the bakery.",
             places: [{ name: "Buka Bakery" }],
           },
           {
@@ -1452,8 +1367,6 @@ export const itineraries: Itinerary[] = [
               "Christiania and the Church of Our Saviour. So worth it. Talking to people in Christiania was fascinating, and we spent much longer walking round than we planned.",
             places: [{ name: "Christiania" }, { name: "Church of Our Saviour" }],
           },
-          { description: "Leave thirty minutes to reach the airport by train." },
-          { time: "15:40", description: "Flight." },
         ],
       },
     ],
@@ -1469,21 +1382,16 @@ export const itineraries: Itinerary[] = [
     summary:
       "Castle Hill and the heavy museums on one day, the baths and a long dinner on the next.",
     teaser:
-      "Two full days either side of a late landing. The first is Buda, the museums and a night in the ruin bars. The second is deliberately slow: sandwiches, several hours in the baths, and dinner.",
+      "Castle Hill and the museums, a night in the ruin bars, Karaván for dinner, and several hours in the baths.",
     cover: budapest,
     gated: false,
     tags: ["#RuinBars", "#TheBaths", "#CastleHill"],
     highlights: ["Thermal baths", "Ruin bars", "Castle Hill", "The Danube"],
     days: [
       {
-        day: "Arrival",
-        title: "Land Late, Eat at Karaván",
+        day: "First Night",
+        title: "Dinner at Karaván",
         activities: [
-          { time: "17:35", description: "Land in Budapest." },
-          {
-            description:
-              "Express bus from the airport, every twenty minutes, about forty minutes into town.",
-          },
           {
             description: "Walk to Karaván for dinner from the food stalls.",
             places: [{ name: "Karaván Street Food" }],
@@ -1557,13 +1465,6 @@ export const itineraries: Itinerary[] = [
           { description: "Go out again, if you want." },
         ],
       },
-      {
-        day: "Departure",
-        title: "Train Out",
-        activities: [
-          { time: "12:40", description: "Train onward, arriving 15:20." },
-        ],
-      },
     ],
   },
   {
@@ -1579,20 +1480,15 @@ export const itineraries: Itinerary[] = [
     cover: thailand,
     gated: false,
     teaser:
-      "Six days on Phuket, four in Chiang Mai, three in Bangkok. Most of the big days are booked tours, so this one needs planning well ahead rather than deciding on the morning.",
+      "Phuket for the islands, Chiang Mai for the elephants, and Bangkok for the temples. Most of the big days are booked tours, so book well ahead.",
     tags: ["#PhiPhi", "#ChiangMai", "#Ayutthaya"],
     highlights: ["Islands", "Cooking class", "Elephants", "Temples", "Floating markets"],
     days: [
       {
         day: "Day One",
-        title: "Land in Phuket",
+        title: "Patong and Bangla Road",
         activities: [
-          {
-            time: "09:20",
-            description: "Arrive in Phuket.",
-            places: [{ name: "Phuket International Airport", near: "Phuket, Thailand" }],
-          },
-          { description: "Check in after 14:00. We stayed in Patong.", places: [{ name: "Patong" }] },
+          { description: "We stayed in Patong.", places: [{ name: "Patong" }] },
           {
             description: "Relax, then dinner on Bangla Road.",
             places: [{ name: "Bangla Road", near: "Patong, Phuket" }],
@@ -1615,8 +1511,7 @@ export const itineraries: Itinerary[] = [
         activities: [
           {
             time: "07:30",
-            description:
-              "Small group Phi Phi and Bamboo Islands tour with lunch, back at 18:30.",
+            description: "Small group Phi Phi and Bamboo Islands tour with lunch, back at 18:30.",
             places: [
               { name: "Phi Phi Islands", near: "Thailand" },
               { name: "Bamboo Island", near: "Krabi, Thailand" },
@@ -1656,14 +1551,9 @@ export const itineraries: Itinerary[] = [
       },
       {
         day: "Day Seven",
-        title: "Fly to Chiang Mai",
+        title: "Into Chiang Mai",
         activities: [
-          {
-            time: "08:45",
-            description: "Flight to Chiang Mai, landing 10:40.",
-            places: [{ name: "Chiang Mai" }],
-          },
-          { description: "Check in at 14:00. Take the rest of the day at leisure." },
+          { description: "Take the rest of the day at leisure." },
           { description: "Ladyboy cabaret show." },
         ],
       },
@@ -1712,18 +1602,11 @@ export const itineraries: Itinerary[] = [
       },
       {
         day: "Day Eleven",
-        title: "Fly to Bangkok",
+        title: "Into Bangkok",
         activities: [
-          {
-            time: "08:25",
-            description: "Flight to Bangkok, landing 09:35.",
-            places: [{ name: "Bangkok" }],
-          },
-          { description: "Check in at 15:00." },
           { description: "Walk the temples." },
           {
-            description:
-              "Maeklong Railway Market. You need to book a shuttle if you want to go.",
+            description: "Maeklong Railway Market. You need to book a shuttle if you want to go.",
             places: [{ name: "Maeklong Railway Market", near: "Samut Songkhram, Thailand" }],
           },
         ],
@@ -1744,14 +1627,6 @@ export const itineraries: Itinerary[] = [
           },
         ],
       },
-      {
-        day: "Day Thirteen",
-        title: "Breakfast, Then Singapore",
-        activities: [
-          { description: "Breakfast and a chill morning." },
-          { time: "09:45", description: "Flight to Singapore." },
-        ],
-      },
     ],
   },
   {
@@ -1767,7 +1642,7 @@ export const itineraries: Itinerary[] = [
     cover: singapore,
     gated: false,
     teaser:
-      "Three days based at Marina Bay Sands, walked hard. A hike through MacRitchie in the middle of the city, hawker food on Haji Lane, and the light show at Gardens by the Bay.",
+      "Based at Marina Bay Sands: Orchard Road, the Botanic Gardens, a hike through MacRitchie with the monkeys, hawker food on Haji Lane, and the light show at Gardens by the Bay.",
     tags: ["#GardensByTheBay", "#MacRitchie", "#HajiLane"],
     notes: [
       "The first night here happened to be New Year's Eve, which is the only reason there are fireworks on it. Any other time of year that is just dinner.",
@@ -1776,10 +1651,10 @@ export const itineraries: Itinerary[] = [
     days: [
       {
         day: "Day One",
-        title: "Land, Orchard Road, Fireworks",
+        title: "Orchard Road and Fireworks",
         activities: [
           {
-            description: "Land and check in at Marina Bay Sands.",
+            description: "Stay at Marina Bay Sands.",
             places: [{ name: "Marina Bay Sands" }],
           },
           {
@@ -1824,15 +1699,13 @@ export const itineraries: Itinerary[] = [
       },
       {
         day: "Day Three",
-        title: "Henderson Waves, Then Out",
+        title: "Henderson Waves",
         activities: [
           {
             description: "Walk the Henderson Waves.",
             places: [{ name: "Henderson Waves" }],
           },
           { description: "Breakfast somewhere around there." },
-          { description: "Check out." },
-          { time: "15:00", description: "Flight." },
         ],
       },
     ],
@@ -1850,18 +1723,10 @@ export const itineraries: Itinerary[] = [
     cover: vietnam,
     gated: false,
     teaser:
-      "Split between Hanoi and Ho Chi Minh City, with an overnight boat in the middle. The two best things on it were both booked: the Ha Long Bay cruise and the motorbike street food tour.",
+      "Hanoi's Old Quarter, an overnight cruise on Ha Long Bay, and Ho Chi Minh City. The two best things were both booked: the cruise and the motorbike street food tour.",
     tags: ["#HaLongBay", "#OldQuarter", "#StreetFood"],
     highlights: ["Ha Long Bay", "Street food", "The Old Quarter", "Bun cha", "Coffee"],
     days: [
-      {
-        day: "Arrival",
-        title: "Land in Hanoi",
-        activities: [
-          { time: "17:30", description: "Land, check in, sleep." },
-          { description: "Book the airport taxi in advance." },
-        ],
-      },
       {
         day: "Day One",
         title: "The Old Quarter",
@@ -1931,13 +1796,8 @@ export const itineraries: Itinerary[] = [
       },
       {
         day: "Day Four",
-        title: "Fly South, Then Eat From a Motorbike",
+        title: "Saigon From a Motorbike",
         activities: [
-          {
-            time: "09:00",
-            description: "Flight from Hanoi, landing in Ho Chi Minh City at 11:15.",
-            places: [{ name: "Ho Chi Minh City" }],
-          },
           {
             time: "18:00",
             description:
@@ -1993,18 +1853,9 @@ export const itineraries: Itinerary[] = [
           },
           {
             time: "19:00",
-            description:
-              "Dinner at NOIR, eaten in pitch black and led by visually impaired staff.",
+            description: "Dinner at NOIR, eaten in pitch black and led by visually impaired staff.",
             places: [{ name: "NOIR Dining in the Dark", near: "Ho Chi Minh City, Vietnam" }],
           },
-        ],
-      },
-      {
-        day: "Departure",
-        title: "On to Cambodia",
-        activities: [
-          { description: "Check out." },
-          { time: "08:20", description: "Flight to Siem Reap." },
         ],
       },
     ],
@@ -2022,19 +1873,14 @@ export const itineraries: Itinerary[] = [
     cover: cambodia,
     gated: false,
     teaser:
-      "Three days in Siem Reap, with the two big ones booked well ahead: sunrise at Angkor Wat, and a morning bike tour out through the rice fields.",
+      "Siem Reap, with sunrise at Angkor Wat, a pottery class, and a bike tour out through the rice fields. Book the big two well ahead.",
     tags: ["#AngkorWat", "#SiemReap", "#PubStreet"],
     highlights: ["Angkor Wat", "Pottery", "Cooking class", "Countryside by bike", "Pub Street"],
     days: [
       {
         day: "Day One",
-        title: "Land, Old Market, Pub Street",
+        title: "Old Market and Pub Street",
         activities: [
-          {
-            time: "13:40",
-            description: "Land at Siem Reap.",
-            places: [{ name: "Siem Reap" }],
-          },
           {
             description:
               "Walk King's Road, Old Market for dinner, and Pub Street for a drink after.",
@@ -2081,11 +1927,6 @@ export const itineraries: Itinerary[] = [
           },
         ],
       },
-      {
-        day: "Departure",
-        title: "Leave the Country",
-        activities: [{ description: "Leave the country, reluctantly." }],
-      },
     ],
   },
   {
@@ -2101,7 +1942,7 @@ export const itineraries: Itinerary[] = [
     cover: vienna,
     gated: false,
     teaser:
-      "Three days: churches and cheap opera tickets on the first, Salzburg on the second, and the big museums, the Naschmarkt and the oldest sausage stand in the city on the third.",
+      "St Stephen's Cathedral, cheap tickets to the State Opera, a day trip to Salzburg, the big museums, the Naschmarkt and the oldest sausage stand in the city.",
     tags: ["#StateOpera", "#Salzburg", "#Wurstelstand"],
     notes: ["Bring cash. Most places are cash only."],
     highlights: ["The opera", "Salzburg", "Museums", "Sausage stands"],
@@ -2110,7 +1951,6 @@ export const itineraries: Itinerary[] = [
         day: "Day One",
         title: "Churches, the Opera, and Bars",
         activities: [
-          { time: "12:40", description: "Train in, arriving 15:20." },
           {
             description:
               "St Stephen's Cathedral, or St Peter's Church, or both. They are about ten minutes apart.",
@@ -2162,7 +2002,10 @@ export const itineraries: Itinerary[] = [
           },
           {
             description: "Out at one of the clubs afterwards.",
-            places: [{ name: "Volksgarten", note: "21+, and the best music ever." }, { name: "Prater Dome" }],
+            places: [
+              { name: "Volksgarten", note: "21+, and the best music ever." },
+              { name: "Prater Dome" },
+            ],
           },
         ],
       },
@@ -2203,11 +2046,6 @@ export const itineraries: Itinerary[] = [
           { description: "Go out again, if you dare." },
         ],
       },
-      {
-        day: "Departure",
-        title: "Fly Out",
-        activities: [{ description: "Fly out." }],
-      },
     ],
     extras: [
       {
@@ -2231,10 +2069,7 @@ export const itineraries: Itinerary[] = [
       },
       {
         title: "Museums",
-        places: [
-          { name: "Albertina" },
-          { name: "Leopold Museum" },
-        ],
+        places: [{ name: "Albertina" }, { name: "Leopold Museum" }],
       },
     ],
   },
@@ -2251,7 +2086,7 @@ export const itineraries: Itinerary[] = [
     cover: ireland,
     gated: false,
     teaser:
-      "Three days in Dublin over St Patrick's Day, two in Galway with a full day out at the Cliffs of Moher, and two in Cork for Blarney Castle. All of it by train.",
+      "Dublin over St Patrick's Day, Galway and the Cliffs of Moher, then Cork for Blarney Castle. All of it by train.",
     tags: ["#StPatricks", "#CliffsOfMoher", "#Blarney"],
     notes: [
       "The Dublin days are timed for St Patrick's Day. Everything else here works any time of year.",
@@ -2260,9 +2095,8 @@ export const itineraries: Itinerary[] = [
     days: [
       {
         day: "Day One",
-        title: "Land in Dublin",
+        title: "The Guinness Storehouse",
         activities: [
-          { time: "08:45", description: "Arrive and check in." },
           {
             time: "13:00",
             description:
@@ -2307,7 +2141,6 @@ export const itineraries: Itinerary[] = [
         day: "Day Three",
         title: "Dublin to Galway",
         activities: [
-          { time: "11:30", description: "Late check out." },
           {
             description: "Brunch at Spread Cafe.",
             places: [{ name: "Spread Cafe", near: "Dublin, Ireland" }],
@@ -2328,8 +2161,7 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "Coffeewerk + Press", near: "Galway, Ireland" }],
           },
           {
-            description:
-              "Walk Quay Street and the Latin Quarter, and watch the street performers.",
+            description: "Walk Quay Street and the Latin Quarter, and watch the street performers.",
             places: [
               { name: "Quay Street", near: "Galway, Ireland" },
               { name: "Latin Quarter", near: "Galway, Ireland" },
@@ -2355,7 +2187,8 @@ export const itineraries: Itinerary[] = [
         activities: [
           {
             time: "09:15",
-            description: "Picked up for the full day Cliffs of Moher tour, back in Galway at 17:30.",
+            description:
+              "Picked up for the full day Cliffs of Moher tour, back in Galway at 17:30.",
             places: [{ name: "Cliffs of Moher", near: "County Clare, Ireland" }],
           },
           {
@@ -2381,21 +2214,12 @@ export const itineraries: Itinerary[] = [
       },
       {
         day: "Day Seven",
-        title: "St Anne's, Then Back to Dublin",
+        title: "St Anne's Church",
         activities: [
           {
             description: "Climb St Anne's Church for the panoramic views.",
             places: [{ name: "St Anne's Church Shandon", near: "Cork, Ireland" }],
           },
-          { description: "Three hour bus from Cork to Dublin Airport." },
-        ],
-      },
-      {
-        day: "Day Eight",
-        title: "Fly Home",
-        activities: [
-          { description: "Airport shuttle from the hotel, around 08:00." },
-          { time: "10:25", description: "Fly out." },
         ],
       },
     ],
@@ -2582,7 +2406,7 @@ export const itineraries: Itinerary[] = [
     cover: maine,
     gated: false,
     teaser:
-      "Driven up from New York with a night in Portsmouth and a long stop in Portland. The third day starts at 03:00 for sunrise on Cadillac Mountain and does not really stop.",
+      "A drive up from New York through Portsmouth and Portland to Acadia: sunrise on Cadillac Mountain, the Beehive Trail, Bar Harbor, and a lot of lobster.",
     tags: ["#Acadia", "#CadillacMountain", "#Lobster"],
     notes: [
       "Cadillac Mountain sunrise tickets are released well in advance and go fast. Set an alarm for the morning they drop.",
@@ -2614,7 +2438,8 @@ export const itineraries: Itinerary[] = [
           { time: "10:00", description: "Cadillac Mountain tickets are released." },
           {
             time: "11:00",
-            description: "Arrive in Portland and eat your way along Commercial Street and Old Port.",
+            description:
+              "Arrive in Portland and eat your way along Commercial Street and Old Port.",
             places: [
               { name: "Portland", near: "Maine" },
               { name: "Luke's Lobster", near: "Portland, Maine" },
@@ -2733,8 +2558,7 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "Route 66 Restaurant", near: "Bar Harbor, Maine" }],
           },
           {
-            description:
-              "Drinks at Atlantic Brewing Company, blueberry ale and soda. Or Geddy's.",
+            description: "Drinks at Atlantic Brewing Company, blueberry ale and soda. Or Geddy's.",
             places: [
               { name: "Atlantic Brewing Company", near: "Bar Harbor, Maine" },
               { name: "Geddy's", near: "Bar Harbor, Maine" },
@@ -2745,7 +2569,7 @@ export const itineraries: Itinerary[] = [
       },
       {
         day: "Day Five",
-        title: "One Last Trail, Then Home",
+        title: "One Last Trail",
         activities: [
           {
             time: "07:00",
@@ -2760,7 +2584,6 @@ export const itineraries: Itinerary[] = [
               { name: "Footbridge Lobster", near: "Ogunquit, Maine" },
             ],
           },
-          { time: "13:00", description: "Drive home." },
         ],
       },
     ],
@@ -2778,7 +2601,7 @@ export const itineraries: Itinerary[] = [
     cover: mallorca,
     gated: false,
     teaser:
-      "Five days in the north of Mallorca with a villa to cook in, then three in Ibiza built entirely around what is on at the clubs. The Ibiza half is deliberately not scheduled.",
+      "A villa in Pollença to cook in, a market day in Palma, a boat day in the south, then Ibiza, built entirely around what is on at the clubs.",
     tags: ["#Pollenca", "#BoatDay", "#Ibiza"],
     notes: [
       "The Ibiza nights depend entirely on who is playing that week, so this lists the clubs rather than a schedule. Check the line-ups before you book anything.",
@@ -2789,8 +2612,11 @@ export const itineraries: Itinerary[] = [
         day: "Day One",
         title: "Into Pollença",
         activities: [
-          { description: "Fly into Mallorca and transfer north." },
-          { time: "14:00", description: "Check in at Pollença.", places: [{ name: "Pollença" }] },
+          {
+            time: "14:00",
+            description: "Base yourself in Pollença.",
+            places: [{ name: "Pollença" }],
+          },
           {
             description: "Explore, and shop for groceries. Lidl is a ten minute walk.",
           },
@@ -2860,29 +2686,19 @@ export const itineraries: Itinerary[] = [
       },
       {
         day: "Day Five",
-        title: "Check Out, Fly to Ibiza",
+        title: "Market Morning, Then Ibiza",
         activities: [
-          { time: "10:00", description: "Check out." },
           {
-            description: "The Port de Pollença market on the way out, 09:00 to 13:00.",
+            description: "The Port de Pollença market, 09:00 to 13:00.",
             places: [{ name: "Port de Pollença Market", near: "Mallorca" }],
           },
-          { time: "14:20", description: "Fly to Ibiza, landing 15:00.", places: [{ name: "Ibiza" }] },
-          { description: "Check in, then out to whichever club has the better line-up." },
+          { description: "Out to whichever club has the better line-up." },
         ],
       },
       {
         day: "Day Six",
         title: "Ibiza",
         activities: [{ description: "Whatever is on. See the clubs below." }],
-      },
-      {
-        day: "Day Seven",
-        title: "Ibiza, Then Home",
-        activities: [
-          { description: "Check out and transfer back to Barcelona." },
-          { description: "Fly on from there." },
-        ],
       },
     ],
     extras: [
@@ -2900,10 +2716,26 @@ export const itineraries: Itinerary[] = [
         title: "Around Pollença",
         note: "Wine is a big deal in Mallorca, so look for a tour and tasting. Pa amb oli is the local thing to eat: toast with tomato, cheese and toppings.",
         places: [
-          { name: "La Trobada", near: "Pollença, Mallorca", note: "Very authentic Mallorcan food." },
-          { name: "Bar Gorreta", near: "Pollença, Mallorca", note: "Casual, cheap, drinks come with tapas." },
-          { name: "Cal Patró", near: "Cala Sant Vicenç, Mallorca", note: "Family seafood place north of Pollença, highly recommended." },
-          { name: "La Fonda", near: "Pollença, Mallorca", note: "Really good lamb, another local speciality. Book ahead." },
+          {
+            name: "La Trobada",
+            near: "Pollença, Mallorca",
+            note: "Very authentic Mallorcan food.",
+          },
+          {
+            name: "Bar Gorreta",
+            near: "Pollença, Mallorca",
+            note: "Casual, cheap, drinks come with tapas.",
+          },
+          {
+            name: "Cal Patró",
+            near: "Cala Sant Vicenç, Mallorca",
+            note: "Family seafood place north of Pollença, highly recommended.",
+          },
+          {
+            name: "La Fonda",
+            near: "Pollença, Mallorca",
+            note: "Really good lamb, another local speciality. Book ahead.",
+          },
           { name: "Ca'n Moixet", near: "Pollença, Mallorca", note: "More good tapas and pintxos." },
         ],
       },
@@ -2936,22 +2768,21 @@ export const itineraries: Itinerary[] = [
     cover: berkshires,
     gated: false,
     teaser:
-      "Two and a half hours from New York, and deliberately unambitious. Brunch, a spa appointment, and a run of small cafes, with hikes and a lake on hand if the mood changes.",
+      "Deliberately unambitious: brunch, a spa appointment and a run of small cafes, with hikes and a lake on hand if the mood changes.",
     tags: ["#Lenox", "#Spa", "#Hikes"],
     highlights: ["Lenox", "Spa", "Farmers market", "Hikes"],
     days: [
       {
         day: "Day One",
-        title: "Drive Up, Spa, Dinner",
+        title: "Spa and Dinner",
         activities: [
-          { description: "Two and a half hour drive up from New York." },
           {
             time: "11:45",
             description: "Brunch at Haven Cafe in Lenox, until 12:45.",
             places: [{ name: "Haven Cafe", near: "Lenox, Massachusetts" }],
           },
           {
-            description: "Five minute drive to Seven Hills Inn, and check in.",
+            description: "Stay at Seven Hills Inn, five minutes away.",
             places: [{ name: "Seven Hills Inn", near: "Lenox, Massachusetts" }],
           },
           {
@@ -2996,7 +2827,7 @@ export const itineraries: Itinerary[] = [
       },
       {
         day: "Day Three",
-        title: "One More Coffee, Then Home",
+        title: "One More Coffee",
         activities: [
           {
             description: "Continental breakfast, or Electra's Cafe eight minutes away.",
@@ -3006,7 +2837,6 @@ export const itineraries: Itinerary[] = [
             description: "Lunch at Shots Cafe, five minutes away.",
             places: [{ name: "Shots Cafe", near: "Lenox, Massachusetts" }],
           },
-          { description: "Two and a half hour drive back to New York." },
         ],
       },
     ],
@@ -3019,7 +2849,11 @@ export const itineraries: Itinerary[] = [
           { name: "Bash Bish Falls State Park", near: "Massachusetts" },
           { name: "Pleasant Valley Wildlife Sanctuary", near: "Lenox, Massachusetts" },
           { name: "Natural Bridge State Park", near: "North Adams, Massachusetts" },
-          { name: "Onota Lake", near: "Pittsfield, Massachusetts", note: "Kayak rentals, about twenty minutes away." },
+          {
+            name: "Onota Lake",
+            near: "Pittsfield, Massachusetts",
+            note: "Kayak rentals, about twenty minutes away.",
+          },
         ],
       },
       {
@@ -3039,12 +2873,11 @@ export const itineraries: Itinerary[] = [
     coords: { lat: 45.4642, lon: 9.19 },
     duration: "3 days",
     season: "Any",
-    summary:
-      "One day of Milan on foot, then two in Venice doing the famous things back to back.",
+    summary: "One day of Milan on foot, then two in Venice doing the famous things back to back.",
     cover: milan,
     gated: false,
     teaser:
-      "A weekend split across two cities. Milan is the Duomo and an afternoon of shopping; Venice is timed almost to the minute because everything is a five minute walk from everything else.",
+      "The Duomo and an afternoon of shopping in Milan, then Venice: the Rialto, St Mark's, the Doge's Palace, an island cruise and a gondola.",
     tags: ["#Duomo", "#Venice", "#Navigli"],
     highlights: ["The Duomo", "Navigli", "Shopping", "Venice"],
     days: [
@@ -3052,7 +2885,6 @@ export const itineraries: Itinerary[] = [
         day: "Day One",
         title: "Milan on Foot",
         activities: [
-          { time: "08:45", description: "Flight in, landing at 11:00. About 45 minutes to the centre." },
           {
             description: "Lunch at Spontini, right next to the Duomo.",
             places: [{ name: "Spontini", near: "Milan, Italy" }],
@@ -3102,7 +2934,6 @@ export const itineraries: Itinerary[] = [
         day: "Day Two",
         title: "Into Venice",
         activities: [
-          { time: "15:45", description: "Arrive in Venice, check in and get settled." },
           {
             time: "16:15",
             description: "Six minute walk to the Ponte di Rialto, stopping at Gelatoteca Suso.",
@@ -3137,11 +2968,9 @@ export const itineraries: Itinerary[] = [
           { time: "16:35", description: "The Bridge of Sighs." },
           {
             time: "17:00",
-            description: "Back to the hotel, grabbing pasta to go from Dal Moro's.",
+            description: "Pasta to go from Dal Moro's.",
             places: [{ name: "Dal Moro's Fresh Pasta To Go", near: "Venice, Italy" }],
           },
-          { time: "17:30", description: "Water taxi to the airport." },
-          { time: "20:30", description: "Flight out." },
         ],
       },
     ],
@@ -3154,12 +2983,11 @@ export const itineraries: Itinerary[] = [
     coords: { lat: 55.9533, lon: -3.1883 },
     duration: "3 days",
     season: "Any",
-    summary:
-      "A night out in Glasgow, a day in the Highlands, and the castle before the flight home.",
+    summary: "A night out in Glasgow, a day in the Highlands, and Edinburgh Castle.",
     cover: edinburgh,
     gated: false,
     teaser:
-      "Based in Edinburgh, with the first night spent over in Glasgow. The bars below are almost all student bars, which is the point.",
+      "A night out in Glasgow, a day tour of the Highlands, and Edinburgh Castle. The bars below are almost all student bars, which is the point.",
     tags: ["#Glasgow", "#Glencoe", "#EdinburghCastle", "#StudentBars"],
     highlights: ["Edinburgh Castle", "The Highlands", "Glasgow", "Student bars"],
     days: [
@@ -3167,7 +2995,6 @@ export const itineraries: Itinerary[] = [
         day: "Day One",
         title: "Straight to Glasgow",
         activities: [
-          { time: "14:55", description: "Land in Edinburgh. About 28 minutes to the flat." },
           { description: "Go over to Glasgow.", places: [{ name: "Glasgow" }] },
           {
             time: "19:30",
@@ -3194,7 +3021,8 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "Three Sisters", near: "Glencoe, Scotland" }],
           },
           {
-            description: "Fort Augustus, at the bottom of Loch Ness, and the bridge over the River Oich.",
+            description:
+              "Fort Augustus, at the bottom of Loch Ness, and the bridge over the River Oich.",
             places: [{ name: "Fort Augustus", near: "Loch Ness, Scotland" }],
           },
           { description: "Out afterwards. The Edinburgh bars are listed below." },
@@ -3202,9 +3030,8 @@ export const itineraries: Itinerary[] = [
       },
       {
         day: "Day Three",
-        title: "The Castle, Then Home",
+        title: "The Castle",
         activities: [
-          { time: "09:30", description: "Wake up." },
           {
             time: "11:00",
             description: "Edinburgh Castle.",
@@ -3214,8 +3041,6 @@ export const itineraries: Itinerary[] = [
             description: "Lunch at I.J. Mellis Cheesemonger.",
             places: [{ name: "I.J. Mellis Cheesemonger", near: "Edinburgh, Scotland" }],
           },
-          { time: "14:15", description: "Leave the flat." },
-          { time: "15:45", description: "Take off." },
         ],
       },
     ],
@@ -3224,20 +3049,56 @@ export const itineraries: Itinerary[] = [
         title: "Glasgow bars",
         places: [
           { name: "Revolution Glasgow", note: "Popular student bar, party atmosphere." },
-          { name: "Vodka Wodka", near: "Glasgow, Scotland", note: "One of the busiest student bars, next to the university, with a beer garden." },
-          { name: "Tingle Shooter Bar", near: "Glasgow, Scotland", note: "Pre-club student bar, specialises in cheap fancy shots." },
-          { name: "Firewater", near: "Glasgow, Scotland", note: "Busy student bar, indie rock, cheap cocktail pitchers." },
-          { name: "Bloc+", near: "Glasgow, Scotland", note: "Another student bar. Free entry before midnight." },
+          {
+            name: "Vodka Wodka",
+            near: "Glasgow, Scotland",
+            note: "One of the busiest student bars, next to the university, with a beer garden.",
+          },
+          {
+            name: "Tingle Shooter Bar",
+            near: "Glasgow, Scotland",
+            note: "Pre-club student bar, specialises in cheap fancy shots.",
+          },
+          {
+            name: "Firewater",
+            near: "Glasgow, Scotland",
+            note: "Busy student bar, indie rock, cheap cocktail pitchers.",
+          },
+          {
+            name: "Bloc+",
+            near: "Glasgow, Scotland",
+            note: "Another student bar. Free entry before midnight.",
+          },
         ],
       },
       {
         title: "Edinburgh bars",
         places: [
-          { name: "McSorleys", near: "Edinburgh, Scotland", note: "Party atmosphere, popular with sports teams." },
-          { name: "Cabaret Voltaire", near: "Edinburgh, Scotland", note: "Cheap entry and cheap drinks, popular with students." },
-          { name: "The Mash House", near: "Edinburgh, Scotland", note: "Live music, three floors." },
-          { name: "The Hive", near: "Edinburgh, Scotland", note: "Ugly, cheap, student discounts." },
-          { name: "Big Cheese", near: "Edinburgh, Scotland", note: "The biggest student club night, and the music is pure cheese." },
+          {
+            name: "McSorleys",
+            near: "Edinburgh, Scotland",
+            note: "Party atmosphere, popular with sports teams.",
+          },
+          {
+            name: "Cabaret Voltaire",
+            near: "Edinburgh, Scotland",
+            note: "Cheap entry and cheap drinks, popular with students.",
+          },
+          {
+            name: "The Mash House",
+            near: "Edinburgh, Scotland",
+            note: "Live music, three floors.",
+          },
+          {
+            name: "The Hive",
+            near: "Edinburgh, Scotland",
+            note: "Ugly, cheap, student discounts.",
+          },
+          {
+            name: "Big Cheese",
+            near: "Edinburgh, Scotland",
+            note: "The biggest student club night, and the music is pure cheese.",
+          },
         ],
       },
     ],
@@ -3250,12 +3111,11 @@ export const itineraries: Itinerary[] = [
     coords: { lat: 50.8503, lon: 4.3517 },
     duration: "3 days",
     season: "Any",
-    summary:
-      "A walking tour, a chocolate tasting, and a full day out in Ghent and Bruges.",
+    summary: "A walking tour, a chocolate tasting, and a full day out in Ghent and Bruges.",
     cover: brussels,
     gated: false,
     teaser:
-      "Two nights, reached by train from London. The first day is the Grand Place and chocolate, the second is entirely Ghent and Bruges, and the waffles are non-negotiable.",
+      "The Grand Place, a chocolate tasting, and a full day out in Ghent and Bruges. The waffles are non-negotiable.",
     tags: ["#GrandPlace", "#Bruges", "#Waffles"],
     highlights: ["Grand Place", "Chocolate", "Waffles", "Bruges", "Ghent"],
     days: [
@@ -3263,8 +3123,6 @@ export const itineraries: Itinerary[] = [
         day: "Day One",
         title: "The Grand Place and Chocolate",
         activities: [
-          { time: "06:47", description: "Train from London, arriving 10:07." },
-          { description: "Check in and settle. Six minute walk to the Grand Place." },
           {
             time: "11:00",
             description:
@@ -3292,7 +3150,10 @@ export const itineraries: Itinerary[] = [
           {
             time: "09:00",
             description: "Ghent and Bruges day tour, until 19:30.",
-            places: [{ name: "Ghent", near: "Belgium" }, { name: "Bruges", near: "Belgium" }],
+            places: [
+              { name: "Ghent", near: "Belgium" },
+              { name: "Bruges", near: "Belgium" },
+            ],
           },
           {
             description: "Waffles in Bruges, at Chez Albert.",
@@ -3306,14 +3167,6 @@ export const itineraries: Itinerary[] = [
               { name: "Gazette Pasta", near: "Brussels, Belgium" },
             ],
           },
-        ],
-      },
-      {
-        day: "Day Three",
-        title: "Train Home",
-        activities: [
-          { time: "08:50", description: "Leave the hotel." },
-          { time: "09:22", description: "Train back to London." },
         ],
       },
     ],
@@ -3337,46 +3190,39 @@ export const itineraries: Itinerary[] = [
     coords: { lat: 47.3769, lon: 8.5417 },
     duration: "3 days",
     season: "Any",
-    summary:
-      "A long travel day into Interlaken, and one very full day in Zurich on the way back.",
+    summary: "Interlaken, and one very full day in Zurich.",
     cover: switzerland,
     gated: false,
     teaser:
-      "Zurich to Interlaken and back, with the Zurich day timed tightly: Uetliberg, Bahnhofstrasse, a lake cruise and fondue, all before the evening flight.",
+      "Interlaken, then a full day in Zurich: Uetliberg, Bahnhofstrasse and Sprüngli, a cruise on the lake, the Old Town and fondue.",
     tags: ["#Interlaken", "#Uetliberg", "#Fondue"],
     notes: [
       "Sunday counts as a public holiday in Zurich and a lot of the shops close. The Zurich day below is built around that.",
-      "The middle day in Interlaken was never written down, so this covers the travel day out and the day in Zurich.",
+      "The middle day in Interlaken was never written down, so this is mostly the day in Zurich.",
     ],
     highlights: ["Interlaken", "Zurich", "Lake Zurich", "Chocolate", "Fondue"],
     days: [
       {
         day: "Day One",
-        title: "London to Interlaken",
+        title: "Into Interlaken",
         activities: [
-          { time: "04:30", description: "Wake up. It is a long morning." },
-          { time: "06:50", description: "Flight to Zurich, landing 09:30." },
-          { description: "Fifteen minute bus to the train station." },
           {
             time: "11:22",
-            description: "Train from Zurich to Interlaken, arriving 13:38.",
+            description: "Train from Zurich to Interlaken.",
             places: [{ name: "Interlaken" }],
           },
-          { description: "Eleven minute bus to the hostel. Check in, drop everything, get lunch." },
         ],
       },
       {
         day: "Day Two",
         title: "Interlaken",
-        activities: [
-          { description: "Not recorded. Whatever Interlaken gives you." },
-        ],
+        activities: [{ description: "Not recorded. Whatever Interlaken gives you." }],
       },
       {
         day: "Day Three",
         title: "Zurich in a Day",
         activities: [
-          { time: "07:19", description: "Train from Interlaken back to Zurich, arriving 09:28." },
+          { time: "07:19", description: "Train back to Zurich." },
           {
             time: "09:45",
             description: "Brunch at Bubbles, until 10:45.",
@@ -3416,7 +3262,6 @@ export const itineraries: Itinerary[] = [
             description: "Fondue at Raclette Stube.",
             places: [{ name: "Raclette Stube", near: "Zurich, Switzerland" }],
           },
-          { time: "21:25", description: "Flight out." },
         ],
       },
     ],
@@ -3445,20 +3290,16 @@ export const itineraries: Itinerary[] = [
     cover: lisbon,
     gated: false,
     teaser:
-      "One day in the old city, one long day out at Sintra and the western edge of Europe, and a very hilly walking tour in between. Wear comfortable shoes, seriously.",
+      "Alfama and the castle, a day out at Sintra and Cabo da Roca, Belém, and the best chocolate cake in the city. Wear comfortable shoes, seriously.",
     tags: ["#Alfama", "#Sintra", "#PasteisDeBelem"],
-    notes: [
-      "The Alfama walking tour is very hilly. Wear comfortable shoes.",
-    ],
+    notes: ["The Alfama walking tour is very hilly. Wear comfortable shoes."],
     highlights: ["Alfama", "Sintra", "Belém", "Views", "Time Out Market"],
     days: [
       {
         day: "Day One",
         title: "Alfama on Foot",
         activities: [
-          { time: "07:55", description: "Flight from London Luton, landing 10:40." },
           { description: "Pick up the unlimited travel card." },
-          { time: "11:15", description: "Train into the centre, about 33 minutes." },
           {
             time: "12:00",
             description: "Brunch at Nicolau, in Baixa.",
@@ -3510,7 +3351,8 @@ export const itineraries: Itinerary[] = [
           },
           {
             time: "13:30",
-            description: "Uber to Cabo da Roca, the westernmost point of Europe. Half an hour there.",
+            description:
+              "Uber to Cabo da Roca, the westernmost point of Europe. Half an hour there.",
             places: [{ name: "Cabo da Roca", near: "Portugal" }],
           },
           {
@@ -3535,14 +3377,6 @@ export const itineraries: Itinerary[] = [
           },
         ],
       },
-      {
-        day: "Day Three",
-        title: "Out Early",
-        activities: [
-          { time: "07:00", description: "Breakfast, then the 33 minute train to the airport." },
-          { time: "10:55", description: "Flight back to London." },
-        ],
-      },
     ],
   },
   {
@@ -3558,7 +3392,7 @@ export const itineraries: Itinerary[] = [
     cover: quito,
     gated: false,
     teaser:
-      "Quito is where you land and where you leave from, and one day is enough to see the main things. Almost everyone here is on their way to the islands.",
+      "The equator at Mitad del Mundo, the TelefériQo cable car, ceviche and the Old Town. Almost everyone here is on their way to the Galápagos.",
     tags: ["#MitadDelMundo", "#Teleferico", "#OldTown"],
     notes: [
       "Go to the TelefériQo first thing in the morning. Quito is known for afternoon fog, and by lunchtime the view has gone.",
@@ -3600,16 +3434,6 @@ export const itineraries: Itinerary[] = [
             time: "20:00",
             description: "Dinner at Somos.",
             places: [{ name: "Somos Restaurante", near: "Quito, Ecuador" }],
-          },
-        ],
-      },
-      {
-        day: "Departure",
-        title: "On to the Islands",
-        activities: [
-          {
-            description:
-              "An hour to the airport, and two hours for the forms. There is paperwork and security at Quito airport just to enter the Galápagos.",
           },
         ],
       },
@@ -3675,7 +3499,6 @@ export const itineraries: Itinerary[] = [
         title: "Tips and tricks",
         items: [
           "In Quito, go to the TelefériQo first thing. Quito is known for afternoon fog.",
-          "Arrive at both airports with plenty of time. Quito and the Galápagos airports are each about an hour from where you would stay.",
           "There is paperwork and security at Quito airport just to enter the Galápagos, so leave extra time in case of crowds.",
           "You need $20 for the transit card, and you have to get it BEFORE security at Quito airport.",
           "On arrival in the Galápagos you pay a national park entry fee.",
@@ -3695,7 +3518,6 @@ export const itineraries: Itinerary[] = [
           "Dress casually. Everyone is in athletic wear or casual linen, even at the fancier restaurants.",
           "Arrive at the ferry an hour early and hunt down your boat's captain. It is disorganised, and we almost got left behind.",
           "Bring reusable water bottles. You cannot drink the tap water, so most rooms have a filter you will want to fill from.",
-          "Every Airbnb was generous about letting us leave luggage after check out. Just ask.",
         ],
       },
     ],
@@ -3708,34 +3530,48 @@ export const itineraries: Itinerary[] = [
     coords: { lat: 35.6762, lon: 139.6503 },
     duration: "12 days",
     season: "Late Spring",
-    summary:
-      "Tokyo, Kyoto and Osaka, organised almost entirely around what and where to eat next.",
+    summary: "Tokyo, Kyoto and Osaka, organised almost entirely around what and where to eat next.",
     cover: japan,
     gated: false,
     teaser:
-      "Four days in Tokyo, three in Kyoto, two in Osaka, then back to Tokyo. Standing sushi bars, a 5am tuna auction, Golden Gai, and a lot of walking between meals.",
+      "Tokyo, Kyoto and Osaka, organised around what to eat next: standing sushi bars, a 5am tuna auction, Golden Gai, and a lot of walking between meals.",
     tags: ["#GoldenGai", "#Kyoto", "#Tsukiji"],
     highlights: ["Tokyo nightlife", "Fish market", "Kyoto", "Nara", "Go-karting"],
     days: [
       {
         day: "Day One",
-        title: "Land, and Straight Into Shinjuku",
+        title: "Straight Into Shinjuku",
         activities: [
-          { time: "16:00", description: "Land." },
           {
             description: "Dinner, drinks and a night out in Shinjuku.",
             places: [
               { name: "Godzilla Head", near: "Shinjuku, Tokyo" },
               { name: "Udon Shin", near: "Tokyo, Japan" },
               { name: "Uogashi Nihon-Ichi", near: "Tokyo, Japan", note: "Standing sushi bar." },
-              { name: "Omoide Yokocho", near: "Shinjuku, Tokyo", note: "Memory Lane. Food stalls." },
-              { name: "Golden Gai", near: "Shinjuku, Tokyo", note: "All the tiny bars, for hopping around." },
+              {
+                name: "Omoide Yokocho",
+                near: "Shinjuku, Tokyo",
+                note: "Memory Lane. Food stalls.",
+              },
+              {
+                name: "Golden Gai",
+                near: "Shinjuku, Tokyo",
+                note: "All the tiny bars, for hopping around.",
+              },
               { name: "The Open Book", near: "Shinjuku, Tokyo", note: "Order lemon sours." },
               { name: "Albatross", near: "Shinjuku, Tokyo" },
               { name: "Deathmatch in Hell", near: "Shinjuku, Tokyo", note: "Death metal bar." },
-              { name: "Nikuto", near: "Shinjuku, Tokyo", note: "Beef and chicken over charcoal. The kimchi beef." },
+              {
+                name: "Nikuto",
+                near: "Shinjuku, Tokyo",
+                note: "Beef and chicken over charcoal. The kimchi beef.",
+              },
               { name: "One Coin Bar Champion", near: "Shinjuku, Tokyo", note: "Karaoke." },
-              { name: "Ramen Nagi", near: "Shinjuku, Tokyo", note: "Tokusei niboshi ramen. Most people eat ramen as late night drunk food, so go here last. It is on the second floor." },
+              {
+                name: "Ramen Nagi",
+                near: "Shinjuku, Tokyo",
+                note: "Tokusei niboshi ramen. Most people eat ramen as late night drunk food, so go here last. It is on the second floor.",
+              },
             ],
           },
         ],
@@ -3746,7 +3582,8 @@ export const itineraries: Itinerary[] = [
         activities: [
           {
             time: "05:00",
-            description: "Toyosu and Tsukiji market with the tuna auction, until 09:00. Sushi for breakfast.",
+            description:
+              "Toyosu and Tsukiji market with the tuna auction, until 09:00. Sushi for breakfast.",
             places: [
               { name: "Toyosu Market", near: "Tokyo, Japan" },
               { name: "Tsukiji Outer Market", near: "Tokyo, Japan" },
@@ -3791,7 +3628,8 @@ export const itineraries: Itinerary[] = [
         activities: [
           {
             time: "09:00",
-            description: "Kappabashi kitchen street until 11:00. Opening times vary, so leave room to come back.",
+            description:
+              "Kappabashi kitchen street until 11:00. Opening times vary, so leave room to come back.",
             places: [{ name: "Kappabashi Street", near: "Tokyo, Japan" }],
           },
           {
@@ -3850,7 +3688,11 @@ export const itineraries: Itinerary[] = [
             places: [
               { name: "Pontocho Alley", near: "Kyoto, Japan" },
               { name: "Manten Kushiyaki", near: "Kyoto, Japan" },
-              { name: "Gyukatsu Kyoto Katsugyu", near: "Kyoto, Japan", note: "The original branch." },
+              {
+                name: "Gyukatsu Kyoto Katsugyu",
+                near: "Kyoto, Japan",
+                note: "The original branch.",
+              },
               { name: "Hello Dolly", near: "Kyoto, Japan", note: "Jazz bar." },
             ],
           },
@@ -3886,9 +3728,17 @@ export const itineraries: Itinerary[] = [
           {
             description: "Other food worth queueing for.",
             places: [
-              { name: "Gion Kitagawa Hanbei Honten", near: "Kyoto, Japan", note: "Matcha desserts. Needs a reservation." },
+              {
+                name: "Gion Kitagawa Hanbei Honten",
+                near: "Kyoto, Japan",
+                note: "Matcha desserts. Needs a reservation.",
+              },
               { name: "Motoi Gyoza", near: "Kyoto, Japan", note: "Walk in only." },
-              { name: "Men-ya Inoichi", near: "Kyoto, Japan", note: "Bib gourmand ramen. Queue at 11:00 for a ticket." },
+              {
+                name: "Men-ya Inoichi",
+                near: "Kyoto, Japan",
+                note: "Bib gourmand ramen. Queue at 11:00 for a ticket.",
+              },
             ],
           },
           {
@@ -3949,7 +3799,8 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "Nakatanidou", near: "Nara, Japan" }],
           },
           {
-            description: "Nara Park, to feed the wild deer, then Todai-ji and the Great Buddha Hall.",
+            description:
+              "Nara Park, to feed the wild deer, then Todai-ji and the Great Buddha Hall.",
             places: [
               { name: "Nara Park", near: "Nara, Japan" },
               { name: "Todai-ji", near: "Nara, Japan" },
@@ -3959,7 +3810,11 @@ export const itineraries: Itinerary[] = [
             description: "Afternoon pick-me-up at Salon Naramachi, a traditional green tea house.",
             places: [{ name: "Salon Naramachi", near: "Nara, Japan" }],
           },
-          { time: "14:00", description: "Hour-long train on to Osaka.", places: [{ name: "Osaka" }] },
+          {
+            time: "14:00",
+            description: "Hour-long train on to Osaka.",
+            places: [{ name: "Osaka" }],
+          },
           {
             time: "17:30",
             description: "Walk into Alto Tritone when it opens. It sells out quickly.",
@@ -4101,11 +3956,6 @@ export const itineraries: Itinerary[] = [
           },
         ],
       },
-      {
-        day: "Day Twelve",
-        title: "Fly Out",
-        activities: [{ time: "09:55", description: "Flight out." }],
-      },
     ],
   },
   {
@@ -4116,26 +3966,15 @@ export const itineraries: Itinerary[] = [
     coords: { lat: 19.4326, lon: -99.1332 },
     duration: "4 days",
     season: "January",
-    summary:
-      "A taco crawl, Rosetta, and a free walking tour of the historic centre, at altitude.",
+    summary: "A taco crawl, Rosetta, and a free walking tour of the historic centre, at altitude.",
     cover: mexicoCity,
     gated: false,
     teaser:
-      "Four days, one of which is given over entirely to tacos. The first day is deliberately slow while you get used to the altitude.",
+      "A whole day of tacos, Rosetta, and a free walking tour of the historic centre. Take it slow at first while you get used to the altitude.",
     tags: ["#Tacos", "#Rosetta", "#Roma"],
-    notes: [
-      "Mid 60s to low 70s during the day and high 50s to low 60s at night, so bring layers.",
-    ],
+    notes: ["Mid 60s to low 70s during the day and high 50s to low 60s at night, so bring layers."],
     highlights: ["Tacos", "Rosetta", "Chapultepec", "The historic centre", "Mezcal"],
     days: [
-      {
-        day: "Arrival",
-        title: "Land Late",
-        activities: [
-          { time: "16:52", description: "Flight out." },
-          { time: "22:00", description: "Land, check in, sleep." },
-        ],
-      },
       {
         day: "Day One",
         title: "Eat, and Get Used to the Altitude",
@@ -4151,7 +3990,8 @@ export const itineraries: Itinerary[] = [
           },
           {
             time: "14:00",
-            description: "Lunch at Entremar, the sister restaurant to the famous seafood one, same menu.",
+            description:
+              "Lunch at Entremar, the sister restaurant to the famous seafood one, same menu.",
             places: [{ name: "Entremar", near: "Mexico City" }],
           },
           {
@@ -4243,7 +4083,8 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "Palacio Postal", near: "Mexico City" }],
           },
           {
-            description: "Churros at El Moro, famous since 1935. The original is in the historic centre.",
+            description:
+              "Churros at El Moro, famous since 1935. The original is in the historic centre.",
             places: [{ name: "Churreria El Moro", near: "Mexico City" }],
           },
           {
@@ -4265,7 +4106,7 @@ export const itineraries: Itinerary[] = [
       },
       {
         day: "Day Four",
-        title: "La Condesa, Then Home",
+        title: "La Condesa",
         activities: [
           { description: "Wake up at leisure. You will need the rest after that weekend." },
           { description: "Brunch." },
@@ -4273,9 +4114,6 @@ export const itineraries: Itinerary[] = [
             description: "Casually explore La Condesa: vintage shops and design stores.",
             places: [{ name: "La Condesa", near: "Mexico City" }],
           },
-          { time: "13:00", description: "Check out." },
-          { time: "13:15", description: "Leave for the airport, about twenty minutes." },
-          { time: "15:35", description: "Flight out." },
         ],
       },
     ],
@@ -4294,7 +4132,7 @@ export const itineraries: Itinerary[] = [
     gated: true,
     bmcUrl: "https://buymeacoffee.com/lexiemeskouris/e/584147",
     teaser:
-      "Three busy days out of Funchal, with a boat, a cable car, a jeep tour of the north, and a 06:00 bus to catch sunrise on Pico do Arieiro before walking to Pico Ruivo.",
+      "Whale watching, the cable car and the wicker toboggan, a jeep tour of the north, and sunrise on Pico do Arieiro before walking to Pico Ruivo.",
     tags: ["#PicoDoArieiro", "#Toboggan", "#Levada"],
     highlights: ["Sunrise hike", "Toboggan", "Whale watching", "Levadas"],
     days: [
@@ -4356,7 +4194,7 @@ export const itineraries: Itinerary[] = [
     cover: helsinki,
     gated: false,
     teaser:
-      "A late landing and one full day, which is enough for the Design District and Löyly with the market in the evening. On the second morning you take the ferry across to Tallinn.",
+      "A library, the Design District, Löyly on the waterfront, and the Christmas market at Senate Square, then the ferry across to Tallinn.",
     tags: ["#ChristmasMarket", "#Loyly", "#DesignDistrict"],
     notes: [
       "This one is planned around the Christmas market, so it only really works in late November and December. Everything else is fine year round.",
@@ -4370,11 +4208,9 @@ export const itineraries: Itinerary[] = [
     highlights: ["Sauna", "Christmas market", "Design District", "Oodi library"],
     days: [
       {
-        day: "Arrival",
-        title: "Land Late",
+        day: "First Night",
+        title: "Wine at Bardot",
         activities: [
-          { time: "21:55", description: "Land in Helsinki." },
-          { time: "22:40", description: "Into town by train." },
           {
             description:
               "Bardot for wine and small plates, closing at midnight, or Liberty or Death, a speakeasy open until 02:00.",
@@ -4421,7 +4257,7 @@ export const itineraries: Itinerary[] = [
         ],
       },
       {
-        day: "Departure",
+        day: "Last Morning",
         title: "Coffee, Then the Ferry",
         activities: [
           {
@@ -4430,7 +4266,6 @@ export const itineraries: Itinerary[] = [
               "Walk to Cafe Regatta. So worth it: sausage, fresh cinnamon rolls and hot chocolate by the water.",
             places: [{ name: "Cafe Regatta", near: "Helsinki, Finland" }],
           },
-          { time: "12:45", description: "Be at the ferry." },
           {
             time: "13:30",
             description:
@@ -4454,7 +4289,7 @@ export const itineraries: Itinerary[] = [
     cover: tallinn,
     gated: false,
     teaser:
-      "Reached by a two hour ferry from Helsinki. The first evening is the market and the rink, and the full day is towers, cathedrals and a creative quarter, finishing at Rataskaevu 16.",
+      "Reached by ferry from Helsinki. The Christmas market as dinner, ice skating, the old town's towers and cathedrals, a creative quarter, and dinner at Rataskaevu 16.",
     tags: ["#ChristmasMarket", "#OldTown", "#Telliskivi"],
     notes: [
       "The first evening needs the Christmas market and the rink, so this works best in late November and December.",
@@ -4468,11 +4303,9 @@ export const itineraries: Itinerary[] = [
     highlights: ["Christmas market", "Old Town", "Ice skating", "Telliskivi"],
     days: [
       {
-        day: "Arrival",
-        title: "Ferry In, Market for Dinner",
+        day: "First Night",
+        title: "The Market for Dinner",
         activities: [
-          { time: "15:30", description: "Ferry arrives from Helsinki." },
-          { time: "16:00", description: "Drop bags at the hotel." },
           {
             time: "16:30",
             description: "The Christmas market at Town Hall Square. This is dinner.",
@@ -4517,14 +4350,6 @@ export const itineraries: Itinerary[] = [
           },
         ],
       },
-      {
-        day: "Departure",
-        title: "Out of Tallinn",
-        activities: [
-          { time: "09:30", description: "Twenty minute taxi to the airport." },
-          { time: "11:45", description: "Flight out." },
-        ],
-      },
     ],
   },
   {
@@ -4540,23 +4365,24 @@ export const itineraries: Itinerary[] = [
     cover: egypt,
     gated: false,
     teaser:
-      "Four nights on a Nile cruise doing the temples, then three in Cairo for the pyramids and Old Cairo. The cruise and the guides are all booked ahead; the free morning in Zamalek is not.",
+      "Luxor, a Nile cruise to Aswan and Abu Simbel, then the pyramids and Old Cairo with a guide. Book the cruise and the guides ahead.",
     tags: ["#Nile", "#Giza", "#AbuSimbel"],
     notes: [
       "Do not drink the tap water, and do not eat anything unwashed or uncooked unless you really trust the source. Just being careful about food poisoning.",
       "Modest dress is needed for the guided days in Cairo.",
     ],
-    highlights: ["Nile cruise", "The pyramids", "Abu Simbel", "Valley of the Kings", "Hot air balloon"],
+    highlights: [
+      "Nile cruise",
+      "The pyramids",
+      "Abu Simbel",
+      "Valley of the Kings",
+      "Hot air balloon",
+    ],
     days: [
       {
         day: "Day One",
-        title: "Land in Luxor",
+        title: "Luxor",
         activities: [
-          {
-            time: "10:00",
-            description: "Flight from London, landing in Luxor at 16:25.",
-            places: [{ name: "Luxor", near: "Egypt" }],
-          },
           { time: "18:00", description: "Relax at the hotel." },
           {
             time: "19:30",
@@ -4578,8 +4404,7 @@ export const itineraries: Itinerary[] = [
           },
           {
             time: "14:00",
-            description:
-              "The Aswan High Dam, then out by motor boat to Philae Temple.",
+            description: "The Aswan High Dam, then out by motor boat to Philae Temple.",
             places: [
               { name: "Aswan High Dam", near: "Egypt" },
               { name: "Philae Temple", near: "Aswan, Egypt" },
@@ -4647,8 +4472,7 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "Valley of the Kings", near: "Luxor, Egypt" }],
           },
           {
-            description:
-              "The mortuary temple of Hatshepsut at Deir el-Bahari.",
+            description: "The mortuary temple of Hatshepsut at Deir el-Bahari.",
             places: [{ name: "Temple of Hatshepsut", near: "Luxor, Egypt" }],
           },
           {
@@ -4661,8 +4485,7 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "Karnak Temple", near: "Luxor, Egypt" }],
           },
           { time: "14:00", description: "Leave the cruise." },
-          { time: "16:00", description: "Transfer to the airport." },
-          { time: "21:10", description: "Flight from Luxor to Cairo.", places: [{ name: "Cairo" }] },
+          { time: "21:10", description: "Fly on to Cairo.", places: [{ name: "Cairo" }] },
         ],
       },
       {
@@ -4700,7 +4523,8 @@ export const itineraries: Itinerary[] = [
           },
           {
             time: "14:00",
-            description: "Old Cairo guided walking tour until 17:00: history, culture and street bites.",
+            description:
+              "Old Cairo guided walking tour until 17:00: history, culture and street bites.",
             places: [{ name: "Old Cairo" }],
           },
           {
@@ -4724,13 +4548,11 @@ export const itineraries: Itinerary[] = [
       },
       {
         day: "Day Eight",
-        title: "The Pool, Then Home",
+        title: "The Pool",
         activities: [
           { description: "Breakfast at the hotel." },
           { description: "Enjoy the hotel: heated pool, gym." },
           { description: "Late lunch nearby, and any last sites." },
-          { time: "15:00", description: "Leave the hotel." },
-          { time: "17:15", description: "Flight out." },
         ],
       },
     ],
@@ -4743,20 +4565,18 @@ export const itineraries: Itinerary[] = [
     coords: { lat: 41.0082, lon: 28.9784 },
     duration: "3 days",
     season: "Early Autumn",
-    summary:
-      "The old city in one morning, sunset up in Bebek, and a ferry over to the Asian side.",
+    summary: "The old city in one morning, sunset up in Bebek, and a ferry over to the Asian side.",
     cover: istanbul,
     gated: false,
     teaser:
-      "The famous sights are done in a single tight morning so the rest of the trip can be Bebek at sunset, the Asian side, and Balat. There are late nights built in.",
+      "The famous sights of the old city in one go, then Bebek at sunset, a ferry to the Asian side, Balat, and some late nights.",
     tags: ["#HagiaSophia", "#Bebek", "#Balat"],
     highlights: ["Hagia Sophia", "Bazaars", "Hammam", "The Asian side", "Turkish breakfast"],
     days: [
       {
-        day: "Arrival",
-        title: "Land, Then Out",
+        day: "First Night",
+        title: "Straight Out",
         activities: [
-          { time: "20:30", description: "Land in Istanbul, and get in by 21:30." },
           { description: "Casual dinner nearby." },
           {
             description: "Cocktails at Biz Istanbul, then out.",
@@ -4765,7 +4585,11 @@ export const itineraries: Itinerary[] = [
               { name: "Upperist", near: "Istanbul, Turkey" },
               { name: "Komun Galataport", near: "Istanbul, Turkey" },
               { name: "Sail Loft Vakkorama", near: "Istanbul, Turkey" },
-              { name: "Geyik Cihangir", near: "Istanbul, Turkey", note: "A few more bars right next to it." },
+              {
+                name: "Geyik Cihangir",
+                near: "Istanbul, Turkey",
+                note: "A few more bars right next to it.",
+              },
             ],
           },
         ],
@@ -4780,8 +4604,7 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "Spice Bazaar", near: "Istanbul, Turkey" }],
           },
           {
-            description:
-              "Street food along the way: maraş ice cream, simit, baklava.",
+            description: "Street food along the way: maraş ice cream, simit, baklava.",
           },
           {
             time: "12:30",
@@ -4826,7 +4649,11 @@ export const itineraries: Itinerary[] = [
             places: [
               { name: "Goose 25", near: "Istanbul, Turkey" },
               { name: "Arnavutköy", near: "Istanbul, Turkey" },
-              { name: "Alexandra Arnavutkoy", near: "Istanbul, Turkey", note: "Another drink option." },
+              {
+                name: "Alexandra Arnavutkoy",
+                near: "Istanbul, Turkey",
+                note: "Another drink option.",
+              },
             ],
           },
           {
@@ -4852,7 +4679,8 @@ export const itineraries: Itinerary[] = [
           },
           { time: "11:00", description: "Turkish hammam and baths near Galata. Optional." },
           {
-            description: "Ferry over to the Asian side, and explore Üsküdar, stopping at Beylerbeyi Palace.",
+            description:
+              "Ferry over to the Asian side, and explore Üsküdar, stopping at Beylerbeyi Palace.",
             places: [
               { name: "Üsküdar", near: "Istanbul, Turkey" },
               { name: "Beylerbeyi Palace", near: "Istanbul, Turkey" },
@@ -4899,8 +4727,6 @@ export const itineraries: Itinerary[] = [
             ],
           },
           { time: "17:00", description: "Casual dinner in Balat or near the hotel." },
-          { time: "18:45", description: "Leave for the airport." },
-          { time: "21:10", description: "Take off." },
         ],
       },
     ],
@@ -4918,21 +4744,20 @@ export const itineraries: Itinerary[] = [
     cover: krakow,
     gated: false,
     teaser:
-      "Three days, one of which is a seven hour tour to Auschwitz. The last day is deliberately all food: obwarzanek, zapiekanka, pączki and a traditional milk bar.",
+      "A tour to Auschwitz, and the rest given over to pierogi, milk bars, obwarzanek, zapiekanka, pączki and Kazimierz, the Jewish quarter.",
     tags: ["#Kazimierz", "#Pierogi", "#MilkBar"],
     highlights: ["Pierogi", "Kazimierz", "Auschwitz", "Jazz", "Milk bars"],
     days: [
       {
         day: "Day One",
-        title: "Land, and Eat Pierogi",
+        title: "Pierogi in the Old Town",
         activities: [
-          { time: "10:05", description: "Land in Kraków." },
           {
-            description:
-              "Twenty minutes by car, or 33 by train, into town. Bolt is cheaper than Uber here.",
+            description: "Bolt is cheaper than Uber here.",
           },
           {
-            description: "Late night pierogi at Przystanek Pierogarnia, on Szewska in the Old Town.",
+            description:
+              "Late night pierogi at Przystanek Pierogarnia, on Szewska in the Old Town.",
             places: [{ name: "Przystanek Pierogarnia", near: "Kraków, Poland" }],
           },
         ],
@@ -4981,7 +4806,8 @@ export const itineraries: Itinerary[] = [
           },
           { description: "Eat an obwarzanek krakowski, the round bread." },
           {
-            description: "Walk Kazimierz, the Jewish quarter, and the Schindler's List passage on Józefa.",
+            description:
+              "Walk Kazimierz, the Jewish quarter, and the Schindler's List passage on Józefa.",
             places: [
               { name: "Kazimierz", near: "Kraków, Poland" },
               { name: "Józefa Street", near: "Kraków, Poland" },
@@ -5004,8 +4830,6 @@ export const itineraries: Itinerary[] = [
             description: "Otherwise, a late lunch at Tbilisuri.",
             places: [{ name: "Tbilisuri", near: "Kraków, Poland" }],
           },
-          { time: "16:30", description: "Leave for the airport." },
-          { time: "20:40", description: "Take off." },
         ],
       },
     ],
@@ -5023,7 +4847,7 @@ export const itineraries: Itinerary[] = [
     cover: tuscany,
     gated: false,
     teaser:
-      "Three days at a villa in the Tuscan hills, one night in Viareggio for the best breakfast in Italy, then La Spezia as a base for hiking the Cinque Terre. After the villa, it's trains the rest of the way.",
+      "A villa in the Tuscan hills with vineyards and a private chef, the best breakfast in Italy in Viareggio, then hiking the Cinque Terre from La Spezia.",
     tags: ["#Villa", "#Viareggio", "#CinqueTerre"],
     highlights: ["Wine tours", "Villa life", "Cinque Terre", "Private chef", "Gelato"],
     days: [
@@ -5031,9 +4855,8 @@ export const itineraries: Itinerary[] = [
         day: "Day One",
         title: "Pisa, Then the Villa",
         activities: [
-          { description: "Cars from the airport, timed to the flights. One goes early for the grocery and alcohol run." },
           {
-            description: "Explore Pisa until the villa is ready. Thirteen minutes to the city centre.",
+            description: "Explore Pisa.",
             places: [{ name: "Pisa", near: "Italy" }],
           },
           {
@@ -5045,7 +4868,7 @@ export const itineraries: Itinerary[] = [
             description: "A quick photo with the leaning tower, and a walk around the piazza.",
             places: [{ name: "Leaning Tower of Pisa" }],
           },
-          { time: "15:00", description: "Check in. An hour's drive to the villa." },
+          { time: "15:00", description: "An hour's drive to the villa." },
           {
             time: "20:00",
             description: "Dinner at i'Bacco Toscano. Four courses, paid at the restaurant.",
@@ -5142,7 +4965,7 @@ export const itineraries: Itinerary[] = [
     gated: true,
     bmcUrl: "https://buymeacoffee.com/lexiemeskouris/e/584148",
     teaser:
-      "Three days inside the Arctic Circle with one big booked thing each day. The town itself takes an afternoon, and the rest depends on the weather.",
+      "Northern lights, a fjord cruise and dog sledding inside the Arctic Circle, with a sauna and cold plunge in between. The town itself takes an afternoon.",
     tags: ["#NorthernLights", "#DogSledding", "#Fjords"],
     notes: [
       "The northern lights need dark winter nights, so this only works between roughly late September and late March.",
@@ -5177,7 +5000,7 @@ export const itineraries: Itinerary[] = [
     cover: seoul,
     gated: false,
     teaser:
-      "Based in Hongdae. One day is entirely the DMZ, one is a four to six hour hike, and one ends with ramen on the Han River at sunset. Two things need booking well ahead.",
+      "Based in Hongdae: palaces, the DMZ, a hike up Bukhansan, a baseball game, ramen on the Han River at sunset, and a skin analysis in Gangnam. Two things need booking well ahead.",
     tags: ["#Hongdae", "#DMZ", "#HanRiver"],
     highlights: ["The DMZ", "Palaces", "Bukhansan", "Han River", "Baseball"],
     days: [
@@ -5185,7 +5008,6 @@ export const itineraries: Itinerary[] = [
         day: "Day One",
         title: "Hongdae",
         activities: [
-          { description: "Land, and settle in." },
           {
             description:
               "Peruse Hongdae Street: clothing stalls, vintage shops, art studios, street art.",
@@ -5239,7 +5061,8 @@ export const itineraries: Itinerary[] = [
         title: "Palaces, Markets, and the Tower",
         activities: [
           {
-            description: "Hanbok rental, optional. Wearing traditional dress gets you into the palace free.",
+            description:
+              "Hanbok rental, optional. Wearing traditional dress gets you into the palace free.",
           },
           {
             time: "09:00",
@@ -5260,7 +5083,8 @@ export const itineraries: Itinerary[] = [
             ],
           },
           {
-            description: "Explore Myeongdong, then eat at Myeongdong Kyoja. Michelin Guide, four menu items, expect a wait.",
+            description:
+              "Explore Myeongdong, then eat at Myeongdong Kyoja. Michelin Guide, four menu items, expect a wait.",
             places: [
               { name: "Myeongdong", near: "Seoul, South Korea" },
               { name: "Myeongdong Kyoja", near: "Seoul, South Korea" },
@@ -5313,7 +5137,8 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "Yeouinaru Station", near: "Seoul, South Korea" }],
           },
           {
-            description: "Banpo Hangang Park, optional. The light show runs at 19:30, 20:00, 20:30 and 21:00.",
+            description:
+              "Banpo Hangang Park, optional. The light show runs at 19:30, 20:00, 20:30 and 21:00.",
             places: [{ name: "Banpo Hangang Park", near: "Seoul, South Korea" }],
           },
         ],
@@ -5346,14 +5171,15 @@ export const itineraries: Itinerary[] = [
           },
           {
             time: "18:30",
-            description: "Baseball at Jamsil. Apparently sick fried chicken and all round good vibes.",
+            description:
+              "Baseball at Jamsil. Apparently sick fried chicken and all round good vibes.",
             places: [{ name: "Jamsil Baseball Stadium", near: "Seoul, South Korea" }],
           },
         ],
       },
       {
         day: "Day Seven",
-        title: "One Museum, Then Home",
+        title: "One Museum",
         activities: [
           { description: "Leisure, and any last exploring." },
           {
@@ -5364,7 +5190,6 @@ export const itineraries: Itinerary[] = [
               { name: "National Museum of Korea", near: "Seoul, South Korea" },
             ],
           },
-          { time: "13:00", description: "Leave for the airport." },
         ],
       },
     ],
@@ -5377,12 +5202,11 @@ export const itineraries: Itinerary[] = [
     coords: { lat: 35.8997, lon: 14.5146 },
     duration: "3 days",
     season: "Summer",
-    summary:
-      "Valletta in a day, big nights in Paceville, and a boat into the Blue Grotto.",
+    summary: "Valletta in a day, big nights in Paceville, and a boat into the Blue Grotto.",
     cover: malta,
     gated: false,
     teaser:
-      "Based at the InterContinental in St George's Bay, St Julian's. One day of Valletta, two big nights out, and the Blue Grotto and Dingli Cliffs before the late flight. Our boat day got rained off, so it and everything else we did not get to is at the bottom for if you have another day.",
+      "Based at the InterContinental in St George's Bay, St Julian's. Valletta, big nights out in Paceville, the Blue Grotto and Dingli Cliffs. Our boat day got rained off, so it and everything else we did not get to is at the bottom.",
     tags: ["#Valletta", "#Paceville", "#BlueGrotto"],
     highlights: ["Valletta", "Paceville", "Blue Grotto", "Dingli Cliffs"],
     days: [
@@ -5390,10 +5214,13 @@ export const itineraries: Itinerary[] = [
         day: "Day One",
         title: "Valletta, Then Paceville",
         activities: [
-          { time: "09:35", description: "Land, and twenty minutes to St Julian's to drop bags.", places: [{ name: "St Julian's", near: "Malta" }] },
           {
-            description: "Walk to Sliema, about 25 minutes, grabbing coffee on the way, then the ten minute ferry to Valletta.",
-            places: [{ name: "Sliema", near: "Malta" }, { name: "Valletta", near: "Malta" }],
+            description:
+              "Walk to Sliema, about 25 minutes, grabbing coffee on the way, then the ten minute ferry to Valletta.",
+            places: [
+              { name: "Sliema", near: "Malta" },
+              { name: "Valletta", near: "Malta" },
+            ],
           },
           {
             description: "The Valletta highlights.",
@@ -5402,7 +5229,11 @@ export const itineraries: Itinerary[] = [
               { name: "City Gate", near: "Valletta, Malta" },
               { name: "St John's Co-Cathedral", near: "Valletta, Malta" },
               { name: "Grandmaster's Palace", near: "Valletta, Malta" },
-              { name: "Upper Barrakka Gardens", near: "Valletta, Malta", note: "Views, and the cannon salute at noon." },
+              {
+                name: "Upper Barrakka Gardens",
+                near: "Valletta, Malta",
+                note: "Views, and the cannon salute at noon.",
+              },
               { name: "MUZA", near: "Valletta, Malta", note: "Art museum." },
               { name: "Valletta Waterfront", near: "Malta" },
             ],
@@ -5412,7 +5243,8 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "Villa Bologna Restaurant", near: "Malta" }],
           },
           {
-            description: "Pregame, then the bars and clubs in Paceville. We went out big time and probably hit all of these.",
+            description:
+              "Pregame, then the bars and clubs in Paceville. We went out big time and probably hit all of these.",
             places: [
               { name: "Paceville", near: "Malta" },
               { name: "Havana Club", near: "Paceville, Malta" },
@@ -5435,7 +5267,7 @@ export const itineraries: Itinerary[] = [
       },
       {
         day: "Day Three",
-        title: "Cliffs, Beach, Then the Late Flight",
+        title: "Cliffs and Beaches",
         activities: [
           {
             description:
@@ -5454,8 +5286,6 @@ export const itineraries: Itinerary[] = [
               { name: "Golden Bay", near: "Malta" },
             ],
           },
-          { description: "Back to pack, and a quick dinner." },
-          { time: "22:30", description: "Leave St Julian's for the airport." },
         ],
       },
     ],
@@ -5464,16 +5294,40 @@ export const itineraries: Itinerary[] = [
         title: "If you have another day",
         note: "We did not get to these. The boat day got rained off.",
         places: [
-          { name: "Boat day", url: "https://www.google.com/maps/search/?api=1&query=Blue+Lagoon+Comino+Malta", note: "The Blue Lagoon at Comino, the caves and the Gozo coastline, 10:00 to 18:00" },
-          { name: "Rubino", near: "Valletta, Malta", note: "Traditional Maltese, for lunch in Valletta" },
+          {
+            name: "Boat day",
+            url: "https://www.google.com/maps/search/?api=1&query=Blue+Lagoon+Comino+Malta",
+            note: "The Blue Lagoon at Comino, the caves and the Gozo coastline, 10:00 to 18:00",
+          },
+          {
+            name: "Rubino",
+            near: "Valletta, Malta",
+            note: "Traditional Maltese, for lunch in Valletta",
+          },
           { name: "Rampila", near: "Valletta, Malta", note: "Built into the bastions" },
           { name: "Lot Sixty One", near: "Valletta, Malta", note: "Gelato and coffee" },
           { name: "St Paul's Bay", near: "Malta", note: "The beach" },
-          { name: "The Three Cities", near: "Malta", note: "Birgu, Senglea and Cospicua, a ferry from Valletta" },
+          {
+            name: "The Three Cities",
+            near: "Malta",
+            note: "Birgu, Senglea and Cospicua, a ferry from Valletta",
+          },
           { name: "Mdina", near: "Malta", note: "Get a taxi there for sunset" },
-          { name: "Coogi's", near: "Mdina, Malta", note: "Dinner in Mdina, like Scala, Golden Fork or Trattoria AD 1530" },
-          { name: "Crystal Palace Serkin", near: "Rabat, Malta", note: "The famous Maltese cheesecake, to go, on the way back from Mdina" },
-          { name: "Gambrinus", near: "Malta", note: "A ftira, the ring-shaped sourdough with fillings" },
+          {
+            name: "Coogi's",
+            near: "Mdina, Malta",
+            note: "Dinner in Mdina, like Scala, Golden Fork or Trattoria AD 1530",
+          },
+          {
+            name: "Crystal Palace Serkin",
+            near: "Rabat, Malta",
+            note: "The famous Maltese cheesecake, to go, on the way back from Mdina",
+          },
+          {
+            name: "Gambrinus",
+            near: "Malta",
+            note: "A ftira, the ring-shaped sourdough with fillings",
+          },
         ],
       },
       {
@@ -5502,24 +5356,17 @@ export const itineraries: Itinerary[] = [
     cover: southAfrica,
     gated: false,
     teaser:
-      "Six days in Cape Town with a hike or a tour every morning and a booked dinner every night, three along the Garden Route with a 4x4 safari, and one in Johannesburg for Soweto before flying on to Victoria Falls.",
+      "Cape Town with a hike or a tour every morning and a booked dinner every night, the Garden Route with a 4x4 safari, and Johannesburg for Soweto.",
     tags: ["#TableMountain", "#Soweto", "#VictoriaFalls"],
     notes: ["May is autumn in South Africa, not spring."],
     seeAlso: {
       slug: "victoria-falls",
       kind: "itinerary",
       title: "Victoria Falls, Zambia and Zimbabwe",
-      note: "A good little add-on if you have two or three days at the end. It is a short flight from Johannesburg, and it uses both sides of the border.",
+      note: "A good little add-on if you have two or three days at the end. It is easy to add from Johannesburg, and it uses both sides of the border.",
     },
     highlights: ["Table Mountain", "Shark diving", "Garden Route", "Safari", "Soweto"],
     days: [
-      {
-        day: "Arrival",
-        title: "Land in Cape Town",
-        activities: [
-          { time: "17:10", description: "Land in Cape Town.", places: [{ name: "Cape Town" }] },
-        ],
-      },
       {
         day: "Day One",
         title: "Sharks, Then Lion's Head",
@@ -5662,22 +5509,12 @@ export const itineraries: Itinerary[] = [
               "Three Day Garden Route Highlights with 4x4 Safari, a small group tour booked through TripAdvisor.",
             places: [{ name: "Garden Route", near: "South Africa" }],
           },
-          {
-            description:
-              "It runs out of Cape Town and comes back to it, which is why the last night of it is at an airport hotel rather than back in town.",
-          },
         ],
       },
       {
         day: "Day Nine",
         title: "Johannesburg and Soweto",
         activities: [
-          {
-            time: "08:55",
-            description: "Land in Johannesburg.",
-            places: [{ name: "Johannesburg" }],
-          },
-          { time: "09:00", description: "Eat at the airport or nearby, and check in." },
           {
             time: "11:00",
             description: "Try to make the 11:00 guided tour at Constitution Hill. It runs an hour.",
@@ -5700,19 +5537,6 @@ export const itineraries: Itinerary[] = [
             description:
               "Street food and art walking tour, meeting at the City Lodge in Newtown, about twenty minutes' drive.",
             places: [{ name: "Newtown", near: "Johannesburg, South Africa" }],
-          },
-        ],
-      },
-      {
-        day: "Day Ten",
-        title: "On to Victoria Falls",
-        activities: [
-          { time: "08:00", description: "Check out and head to the airport." },
-          {
-            time: "11:35",
-            description:
-              "Flight to Victoria Falls, landing at 13:20. The rest of this one is its own page, linked below.",
-            places: [{ name: "Victoria Falls", near: "Zimbabwe" }],
           },
         ],
       },
@@ -5763,14 +5587,8 @@ export const itineraries: Itinerary[] = [
     days: [
       {
         day: "Day One",
-        title: "Fly In",
+        title: "The Town",
         activities: [
-          {
-            time: "11:35",
-            description: "Flight from Johannesburg, landing at 13:20.",
-            places: [{ name: "Victoria Falls", near: "Zimbabwe" }],
-          },
-          { time: "14:00", description: "Settle in." },
           {
             time: "16:00",
             description: "Late lunch or early dinner at The Three Monkeys.",
@@ -5780,7 +5598,9 @@ export const itineraries: Itinerary[] = [
             time: "18:00",
             description:
               "Walk around Victoria Falls town and the Elephant's Walk Shopping Village.",
-            places: [{ name: "Elephant's Walk Shopping Village", near: "Victoria Falls, Zimbabwe" }],
+            places: [
+              { name: "Elephant's Walk Shopping Village", near: "Victoria Falls, Zimbabwe" },
+            ],
           },
         ],
       },
@@ -5832,14 +5652,6 @@ export const itineraries: Itinerary[] = [
           },
         ],
       },
-      {
-        day: "Departure",
-        title: "Fly Out",
-        activities: [
-          { time: "08:00", description: "Airport transfer." },
-          { time: "13:30", description: "Flight out." },
-        ],
-      },
     ],
     extras: [
       {
@@ -5865,7 +5677,7 @@ export const itineraries: Itinerary[] = [
     cover: stockholm,
     gated: false,
     teaser:
-      "Two tightly planned days and a Sunday left open. Almost all of it is walkable, and the evenings run late because it stays light so late in summer.",
+      "Gamla Stan on foot, ABBA, a food hall, and a park at ten at night with the sun still going down. Almost all of it is walkable.",
     tags: ["#GamlaStan", "#ABBA", "#Fika"],
     notes: [
       "The late evenings only work in summer. At 22:00 the sun is still going down, which is the whole reason for the park at the end of the first night.",
@@ -5876,16 +5688,6 @@ export const itineraries: Itinerary[] = [
         day: "Day One",
         title: "Gamla Stan, and a Park at Ten",
         activities: [
-          {
-            time: "10:00",
-            description:
-              "Land at Arlanda, then the Arlanda Express into Stockholm Central, about twenty minutes.",
-            places: [{ name: "Stockholm Arlanda Airport", near: "Sweden" }],
-          },
-          {
-            description: "Seven minute walk to the Downtown Camper to drop bags.",
-            places: [{ name: "Downtown Camper by Scandic", near: "Stockholm, Sweden" }],
-          },
           {
             time: "13:00",
             description:
@@ -5915,7 +5717,11 @@ export const itineraries: Itinerary[] = [
           {
             description: "Shops worth going into.",
             places: [
-              { name: "HildaHilda", near: "Stockholm, Sweden", note: "Swedish-made textiles and gifts." },
+              {
+                name: "HildaHilda",
+                near: "Stockholm, Sweden",
+                note: "Swedish-made textiles and gifts.",
+              },
               { name: "Made in Stockholm", near: "Sweden" },
             ],
           },
@@ -5961,9 +5767,21 @@ export const itineraries: Itinerary[] = [
             time: "10:45",
             description: "Free time until the museum. Any of these.",
             places: [
-              { name: "Gamla Stan", near: "Stockholm, Sweden", note: "Old Town again: Stortorget, shops, coffee." },
-              { name: "Norrmalm", near: "Stockholm, Sweden", note: "Shopping. ARKIVET, Zara, H&M, Gina Tricot, Nelly." },
-              { name: "Vasa Museum", near: "Stockholm, Sweden", note: "The 17th century warship raised after 333 years underwater. Two minutes from ABBA." },
+              {
+                name: "Gamla Stan",
+                near: "Stockholm, Sweden",
+                note: "Old Town again: Stortorget, shops, coffee.",
+              },
+              {
+                name: "Norrmalm",
+                near: "Stockholm, Sweden",
+                note: "Shopping. ARKIVET, Zara, H&M, Gina Tricot, Nelly.",
+              },
+              {
+                name: "Vasa Museum",
+                near: "Stockholm, Sweden",
+                note: "The 17th century warship raised after 333 years underwater. Two minutes from ABBA.",
+              },
               { name: "Strandvägen", near: "Stockholm, Sweden", note: "Waterfront walk." },
               { name: "Djurgården", near: "Stockholm, Sweden", note: "Waterfront walk." },
             ],
@@ -5995,7 +5813,11 @@ export const itineraries: Itinerary[] = [
             description: "Out afterwards, if you are still going.",
             places: [
               { name: "SPY Bar", near: "Stockholm, Sweden" },
-              { name: "Spesso", near: "Stockholm, Sweden", note: "Rooftop, cocktails, views over the skyline." },
+              {
+                name: "Spesso",
+                near: "Stockholm, Sweden",
+                note: "Rooftop, cocktails, views over the skyline.",
+              },
             ],
           },
         ],
@@ -6029,17 +5851,10 @@ export const itineraries: Itinerary[] = [
     cover: morocco,
     gated: false,
     teaser:
-      "Two riads and a tent. Marrakech is guided and packed, the desert is three days off the schedule entirely, and Fes is medina tours, a cooking class and bread making in a garden.",
+      "Two riads and a tent. Marrakech guided and packed, three days in the desert, and Fes for medina tours, a cooking class and bread making in a garden.",
     tags: ["#Marrakech", "#Chefchaouen", "#Fes"],
     highlights: ["Hot air balloon", "Medinas", "Hammam", "Jardin Majorelle", "Chefchaouen"],
     days: [
-      {
-        day: "Arrival",
-        title: "Land, and Sleep",
-        activities: [
-          { description: "Land, check in to the riad, sleep.", places: [{ name: "Marrakech" }] },
-        ],
-      },
       {
         day: "Day One",
         title: "Guided Marrakech",
@@ -6131,8 +5946,7 @@ export const itineraries: Itinerary[] = [
         activities: [
           {
             time: "10:00",
-            description:
-              "Guided tour of the medina until 13:00, meeting on Rue Talaa Kebira.",
+            description: "Guided tour of the medina until 13:00, meeting on Rue Talaa Kebira.",
             places: [
               { name: "Fes el Bali", near: "Fes, Morocco" },
               { name: "Talaa Kebira", near: "Fes, Morocco" },
@@ -6171,9 +5985,21 @@ export const itineraries: Itinerary[] = [
             time: "13:30",
             description: "Explore and lounge until 17:00.",
             places: [
-              { name: "Dar el Makhzen", near: "Fes, Morocco", note: "The doors of the Royal Palace." },
-              { name: "Chouara Tannery", near: "Fes, Morocco", note: "Leather goods, and a horrid smell." },
-              { name: "Art Naji", near: "Fes, Morocco", note: "Thirty minute free tour of the ceramics studio." },
+              {
+                name: "Dar el Makhzen",
+                near: "Fes, Morocco",
+                note: "The doors of the Royal Palace.",
+              },
+              {
+                name: "Chouara Tannery",
+                near: "Fes, Morocco",
+                note: "Leather goods, and a horrid smell.",
+              },
+              {
+                name: "Art Naji",
+                near: "Fes, Morocco",
+                note: "Thirty minute free tour of the ceramics studio.",
+              },
             ],
           },
           {
@@ -6182,11 +6008,6 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "Hotel Sahrai", near: "Fes, Morocco" }],
           },
         ],
-      },
-      {
-        day: "Departure",
-        title: "Fly Out",
-        activities: [{ description: "Pack up, say goodbye to Morocco, and fly to London." }],
       },
     ],
   },
@@ -6203,7 +6024,7 @@ export const itineraries: Itinerary[] = [
     cover: cardiff,
     gated: false,
     teaser:
-      "Under three hours from London by train, so it's an easy weekend away. The first day is all central Cardiff on foot, and the second gets out to the Brecon Beacons and back in time for the rugby.",
+      "An easy weekend from London: Cardiff Castle, the arcades and Cardiff Bay, then Pen y Fan in the Brecon Beacons and a rugby game.",
     tags: ["#PenYFan", "#CardiffBay", "#Rugby"],
     highlights: ["Rugby", "Cardiff Castle", "Pen y Fan", "Live music"],
     days: [
@@ -6211,12 +6032,6 @@ export const itineraries: Itinerary[] = [
         day: "Day One",
         title: "The Castle, the Arcades, and the Bay",
         activities: [
-          { time: "08:18", description: "Leave London." },
-          { time: "11:07", description: "Arrive in Cardiff." },
-          {
-            description: "Store the luggage in the hotel lobby.",
-            places: [{ name: "Hotel Indigo Cardiff", near: "Wales" }],
-          },
           {
             time: "12:30",
             description: "Lunch at Fresh the Baguette Bar.",
@@ -6236,7 +6051,6 @@ export const itineraries: Itinerary[] = [
               { name: "Cardiff Victorian Arcades", near: "Wales" },
             ],
           },
-          { time: "18:00", description: "Check into the hotel properly." },
           {
             time: "19:00",
             description:
@@ -6259,8 +6073,7 @@ export const itineraries: Itinerary[] = [
           { time: "10:00", description: "Uber or train out towards the hike." },
           {
             time: "11:00",
-            description:
-              "Pen y Fan. About a three hour round trip at a steady pace.",
+            description: "Pen y Fan. About a three hour round trip at a steady pace.",
             places: [{ name: "Pen y Fan", near: "Brecon Beacons, Wales" }],
           },
           { time: "15:00", description: "Back to Cardiff." },
@@ -6269,7 +6082,7 @@ export const itineraries: Itinerary[] = [
             description: "A rugby game at Cardiff Arms Park.",
             places: [{ name: "Cardiff Arms Park", near: "Wales" }],
           },
-          { description: "Explore at leisure afterwards, or take an earlier train home." },
+          { description: "Explore at leisure afterwards." },
         ],
       },
     ],
@@ -6287,7 +6100,7 @@ export const itineraries: Itinerary[] = [
     cover: peru,
     gated: false,
     teaser:
-      "Straight from the plane to 3,400 metres, up Rainbow Mountain the next morning, then the short Inca Trail with a night in camp and Machu Picchu on foot. Lima at the end, entirely for the eating.",
+      "Rainbow Mountain, the two day Inca Trail into Machu Picchu, then Lima, entirely for the eating.",
     tags: ["#MachuPicchu", "#IncaTrail", "#RainbowMountain"],
     notes: [
       "Cusco sits at about 3,400 metres and Rainbow Mountain tops out above 5,000. This itinerary goes up on the second morning, which is fast. If you have the days, put a spare one in Cusco before the mountain, drink the coca tea, and see a doctor at home about altitude tablets before you fly.",
@@ -6297,32 +6110,17 @@ export const itineraries: Itinerary[] = [
     days: [
       {
         day: "Day One",
-        title: "Fly to Lima",
-        activities: [
-          {
-            description:
-              "New York to Lima with a connection in Miami. It is a long day and the second leg ran late.",
-          },
-          {
-            description:
-              "Night near Jorge Chávez airport rather than going into the city, because the Cusco flight leaves early. The airport hotels run a shuttle from door four of the terminal.",
-            places: [{ name: "Jorge Chávez International Airport", near: "Lima, Peru" }],
-          },
-        ],
-      },
-      {
-        day: "Day Two",
         title: "Up to Cusco",
         activities: [
           {
             time: "08:35",
             description:
-              "Early flight from Lima to Cusco. Carry-on only is worth it here: the trek company gives you a duffel and you leave the rest in Cusco anyway.",
+              "Pack light: the trek company gives you a duffel and you leave the rest in Cusco anyway.",
             places: [{ name: "Cusco", near: "Peru" }],
           },
           {
             description:
-              "Check in near the Plaza de Armas, then do nothing strenuous. The altitude usually hits about an hour after you land.",
+              "Stay near the Plaza de Armas, and do nothing strenuous on the first day. The altitude usually hits about an hour after you arrive.",
             places: [{ name: "Plaza de Armas", near: "Cusco, Peru" }],
           },
           {
@@ -6341,7 +6139,7 @@ export const itineraries: Itinerary[] = [
         ],
       },
       {
-        day: "Day Three",
+        day: "Day Two",
         title: "Rainbow Mountain",
         activities: [
           {
@@ -6362,7 +6160,7 @@ export const itineraries: Itinerary[] = [
         ],
       },
       {
-        day: "Day Four",
+        day: "Day Three",
         title: "The Inca Trail, Day One",
         activities: [
           {
@@ -6383,7 +6181,7 @@ export const itineraries: Itinerary[] = [
         ],
       },
       {
-        day: "Day Five",
+        day: "Day Four",
         title: "Machu Picchu, and Huayna Picchu",
         activities: [
           {
@@ -6403,11 +6201,10 @@ export const itineraries: Itinerary[] = [
         ],
       },
       {
-        day: "Day Six",
+        day: "Day Five",
         title: "Cusco to Lima",
         activities: [
-          { description: "Taxi out to Cusco airport in the morning." },
-          { time: "13:55", description: "Flight down to Lima." },
+          { time: "13:55", description: "Fly down to Lima." },
           {
             description:
               "Into Miraflores, which is where you want to be based: walkable, on the cliffs, and ten minutes from most of the eating.",
@@ -6427,7 +6224,7 @@ export const itineraries: Itinerary[] = [
         ],
       },
       {
-        day: "Day Seven",
+        day: "Day Six",
         title: "Lima, for Lunch and Dinner",
         activities: [
           {
@@ -6439,10 +6236,6 @@ export const itineraries: Itinerary[] = [
             description:
               "Dinner at Maido, the Nikkei restaurant that put Japanese-Peruvian cooking on the map. Book this one weeks out, not days.",
             places: [{ name: "Maido", near: "Miraflores, Lima, Peru" }],
-          },
-          {
-            description:
-              "A night flight home. Uber is cheap and everywhere in Lima, and the airport run takes longer than the map says.",
           },
         ],
       },
@@ -6463,14 +6256,6 @@ export const itineraries: Itinerary[] = [
           "Cusco is around 3,400 metres and Rainbow Mountain is above 5,000. Going up the mountain on your second morning in the country is doable but not comfortable.",
           "Coca tea is everywhere and free in most hotel lobbies. It helps a little.",
           "Talk to a doctor at home about altitude sickness tablets before you fly, rather than buying something over a counter in Cusco.",
-        ],
-      },
-      {
-        title: "Flying out of Lima",
-        avoid: true,
-        items: [
-          "The budget overnight flight to Fort Lauderdale was delayed five separate times through the night, pushed back to 05:11, and then cancelled outright. The refund came through in full, but the night was gone.",
-          "The rebooking that actually worked was an overnight to Houston and a connection on from there. If you are flying home from Lima on a red-eye, think hard about which airline you book it with.",
         ],
       },
     ],
@@ -6612,36 +6397,132 @@ export const itineraries: Itinerary[] = [
         title: "Riyadh restaurants, sit down",
         note: "From the trek's own list. Grouped the way it grouped them.",
         places: [
-          { name: "Aseeb", near: "Riyadh, Saudi Arabia", note: "Modern Saudi, traditional flavours with a modern spin." },
-          { name: "Takya", near: "Riyadh, Saudi Arabia", note: "Upscale Saudi, cooking from old regional recipes." },
-          { name: "Taleed", near: "Riyadh, Saudi Arabia", note: "Fine dining Saudi, modern takes on local cooking." },
-          { name: "Villa Mamas", near: "Riyadh, Saudi Arabia", note: "Middle Eastern, Bahraini home-style cooking done properly." },
-          { name: "Signor Sassi", near: "Riyadh, Saudi Arabia", note: "Fancy Italian, classic dishes, a nice dining room." },
-          { name: "Agio", near: "Riyadh, Saudi Arabia", note: "Italian, traditional cooking in a modern setting." },
-          { name: "MAMO Michelangelo", near: "Riyadh, Saudi Arabia", note: "High-end Italian, Mediterranean end of it." },
-          { name: "Myazu", near: "Riyadh, Saudi Arabia", note: "High-end Japanese, traditional food plated in a modern way." },
-          { name: "Kuruu", near: "Riyadh, Saudi Arabia", note: "Modern Japanese, clean and minimal." },
-          { name: "Kayzo", near: "Riyadh, Saudi Arabia", note: "Contemporary Japanese, creative with the classics." },
-          { name: "Sasani", near: "Riyadh, Saudi Arabia", note: "Persian, traditional Iranian cooking, rich and aromatic." },
-          { name: "Koojah", near: "Riyadh, Saudi Arabia", note: "Modern Persian, built on regional Iranian recipes." },
-          { name: "LPM", near: "Riyadh, Saudi Arabia", note: "French Riviera style Mediterranean, on the dressy side." },
-          { name: "Le Maschou", near: "Riyadh, Saudi Arabia", note: "A classic French bistro, rich and cosy." },
+          {
+            name: "Aseeb",
+            near: "Riyadh, Saudi Arabia",
+            note: "Modern Saudi, traditional flavours with a modern spin.",
+          },
+          {
+            name: "Takya",
+            near: "Riyadh, Saudi Arabia",
+            note: "Upscale Saudi, cooking from old regional recipes.",
+          },
+          {
+            name: "Taleed",
+            near: "Riyadh, Saudi Arabia",
+            note: "Fine dining Saudi, modern takes on local cooking.",
+          },
+          {
+            name: "Villa Mamas",
+            near: "Riyadh, Saudi Arabia",
+            note: "Middle Eastern, Bahraini home-style cooking done properly.",
+          },
+          {
+            name: "Signor Sassi",
+            near: "Riyadh, Saudi Arabia",
+            note: "Fancy Italian, classic dishes, a nice dining room.",
+          },
+          {
+            name: "Agio",
+            near: "Riyadh, Saudi Arabia",
+            note: "Italian, traditional cooking in a modern setting.",
+          },
+          {
+            name: "MAMO Michelangelo",
+            near: "Riyadh, Saudi Arabia",
+            note: "High-end Italian, Mediterranean end of it.",
+          },
+          {
+            name: "Myazu",
+            near: "Riyadh, Saudi Arabia",
+            note: "High-end Japanese, traditional food plated in a modern way.",
+          },
+          {
+            name: "Kuruu",
+            near: "Riyadh, Saudi Arabia",
+            note: "Modern Japanese, clean and minimal.",
+          },
+          {
+            name: "Kayzo",
+            near: "Riyadh, Saudi Arabia",
+            note: "Contemporary Japanese, creative with the classics.",
+          },
+          {
+            name: "Sasani",
+            near: "Riyadh, Saudi Arabia",
+            note: "Persian, traditional Iranian cooking, rich and aromatic.",
+          },
+          {
+            name: "Koojah",
+            near: "Riyadh, Saudi Arabia",
+            note: "Modern Persian, built on regional Iranian recipes.",
+          },
+          {
+            name: "LPM",
+            near: "Riyadh, Saudi Arabia",
+            note: "French Riviera style Mediterranean, on the dressy side.",
+          },
+          {
+            name: "Le Maschou",
+            near: "Riyadh, Saudi Arabia",
+            note: "A classic French bistro, rich and cosy.",
+          },
         ],
       },
       {
         title: "Riyadh, faster and cheaper",
         places: [
           { name: "PrimeCut", near: "Riyadh, Saudi Arabia", note: "Premium Angus beef burgers." },
-          { name: "Section-B", near: "Riyadh, Saudi Arabia", note: "Homegrown burgers, made to order, never frozen." },
-          { name: "Marble", near: "Riyadh, Saudi Arabia", note: "Farm-to-table grill, steak cooked over an open fire." },
-          { name: "Nora Smashed Burgers", near: "Riyadh, Saudi Arabia", note: "No frills takeaway, crispy-edged Wagyu-blend patties." },
-          { name: "Jon & Vinny's", near: "Riyadh, Saudi Arabia", note: "Wood-fired pizza and fresh pasta." },
-          { name: "911 Pizza", near: "Riyadh, Saudi Arabia", note: "Thin crust, Chicago style, toppings edge to edge." },
-          { name: "Mama Noura", near: "Riyadh, Saudi Arabia", note: "Chicken shawarma, broasted chicken and fresh juice. The everyday one." },
-          { name: "Shiro", near: "Riyadh, Saudi Arabia", note: "Sushi, sashimi, noodles and tempura, in a quiet room." },
-          { name: "The Boiling Crab", near: "Riyadh, Saudi Arabia", note: "Seafood boiled in a bag with a lot of sauce." },
-          { name: "Twina", near: "Riyadh, Saudi Arabia", note: "Daily fresh seafood: calamari, shrimp, salted hamour." },
-          { name: "Pao", near: "Riyadh, Saudi Arabia", note: "Acai bowls, juices and sandwiches, for when you want something lighter." },
+          {
+            name: "Section-B",
+            near: "Riyadh, Saudi Arabia",
+            note: "Homegrown burgers, made to order, never frozen.",
+          },
+          {
+            name: "Marble",
+            near: "Riyadh, Saudi Arabia",
+            note: "Farm-to-table grill, steak cooked over an open fire.",
+          },
+          {
+            name: "Nora Smashed Burgers",
+            near: "Riyadh, Saudi Arabia",
+            note: "No frills takeaway, crispy-edged Wagyu-blend patties.",
+          },
+          {
+            name: "Jon & Vinny's",
+            near: "Riyadh, Saudi Arabia",
+            note: "Wood-fired pizza and fresh pasta.",
+          },
+          {
+            name: "911 Pizza",
+            near: "Riyadh, Saudi Arabia",
+            note: "Thin crust, Chicago style, toppings edge to edge.",
+          },
+          {
+            name: "Mama Noura",
+            near: "Riyadh, Saudi Arabia",
+            note: "Chicken shawarma, broasted chicken and fresh juice. The everyday one.",
+          },
+          {
+            name: "Shiro",
+            near: "Riyadh, Saudi Arabia",
+            note: "Sushi, sashimi, noodles and tempura, in a quiet room.",
+          },
+          {
+            name: "The Boiling Crab",
+            near: "Riyadh, Saudi Arabia",
+            note: "Seafood boiled in a bag with a lot of sauce.",
+          },
+          {
+            name: "Twina",
+            near: "Riyadh, Saudi Arabia",
+            note: "Daily fresh seafood: calamari, shrimp, salted hamour.",
+          },
+          {
+            name: "Pao",
+            near: "Riyadh, Saudi Arabia",
+            note: "Acai bowls, juices and sandwiches, for when you want something lighter.",
+          },
         ],
       },
       {
@@ -6696,26 +6577,16 @@ export const itineraries: Itinerary[] = [
     summary:
       "Two evenings in Ljubljana either side of a day trip to Lake Bled, with cream cake and the view over the island.",
     teaser:
-      "Based in Ljubljana, landing on an evening and flying out on one. The middle day is Lake Bled by bus: the walk round the lake, the short steep climb for the postcard view, then wine and cake before heading back for dinner.",
+      "Based in Ljubljana, with a day out to Lake Bled: the walk round the lake, the short steep climb for the postcard view, then wine and cream cake.",
     cover: slovenia,
     gated: false,
     tags: ["#LakeBled", "#Ljubljana", "#BledCake"],
     highlights: ["Lake Bled", "Bled cake", "Ljubljana", "Hiking"],
     days: [
       {
-        day: "Arrival",
-        title: "Land, Then Dinner at Julija",
+        day: "First Night",
+        title: "Dinner at Julija",
         activities: [
-          {
-            time: "17:15",
-            description: "Land at Ljubljana Airport.",
-            places: [{ name: "Ljubljana Airport", near: "Slovenia" }],
-          },
-          {
-            description:
-              "Public bus or a shuttle into Ljubljana, and check in. The public bus runs from the airport to the central bus station.",
-            places: [{ name: "Ljubljana Bus Station", near: "Ljubljana, Slovenia" }],
-          },
           {
             time: "20:00",
             description:
@@ -6762,10 +6633,9 @@ export const itineraries: Itinerary[] = [
       },
       {
         day: "Day Two",
-        title: "The Old Town, Then Home",
+        title: "The Old Town",
         activities: [
           { description: "Wake up at leisure." },
-          { time: "11:00", description: "Check out." },
           {
             description: "Matcha at Munchies. Skip Stow 2 Go: my latte there was atrocious.",
             places: [{ name: "Munchies", near: "Ljubljana, Slovenia" }],
@@ -6776,7 +6646,8 @@ export const itineraries: Itinerary[] = [
             places: [{ name: "Le Petit Café", near: "Ljubljana, Slovenia" }],
           },
           {
-            description: "Walk through the Old Town, past the Franciscan Church and over the Triple Bridge.",
+            description:
+              "Walk through the Old Town, past the Franciscan Church and over the Triple Bridge.",
             places: [
               { name: "Franciscan Church of the Annunciation", near: "Ljubljana, Slovenia" },
               { name: "Triple Bridge", near: "Ljubljana, Slovenia" },
@@ -6790,8 +6661,6 @@ export const itineraries: Itinerary[] = [
             description: "The Dragon Bridge.",
             places: [{ name: "Dragon Bridge", near: "Ljubljana, Slovenia" }],
           },
-          { time: "18:30", description: "Leave for the airport, about 47 minutes." },
-          { time: "21:15", description: "Flight, landing at Heathrow at 22:35." },
         ],
       },
     ],
@@ -6839,15 +6708,6 @@ export const itineraries: Itinerary[] = [
     days: [
       {
         day: "Day One",
-        title: "Fly In, Straight to Brașov",
-        activities: [
-          { time: "14:10", description: "Fly London Luton to Bucharest Otopeni, Wizz Air W4 3006." },
-          { time: "19:25", description: "Land in Bucharest." },
-          { description: "Transfer to Brașov." },
-        ],
-      },
-      {
-        day: "Day Two",
         title: "Brașov, Then Halloween at Bran Castle",
         activities: [
           { description: "Wake up at leisure." },
@@ -6863,7 +6723,11 @@ export const itineraries: Itinerary[] = [
               { name: "Strada Sforii", near: "Brașov, Romania" },
               { name: "Catherine's Gate", near: "Brașov, Romania" },
               { name: "White Tower", near: "Brașov, Romania", note: "Walk up for the view." },
-              { name: "Black Tower", near: "Brașov, Romania", note: "Another viewpoint over the old town." },
+              {
+                name: "Black Tower",
+                near: "Brașov, Romania",
+                note: "Another viewpoint over the old town.",
+              },
             ],
           },
           { time: "15:00", description: "Back to the Airbnb to rest and get ready for Halloween." },
@@ -6911,19 +6775,21 @@ export const itineraries: Itinerary[] = [
           },
           {
             time: "02:30",
-            description: "Adrian picks you up. He gives an hour's flexibility either way. We easily could have stayed longer.",
+            description:
+              "Adrian picks you up. He gives an hour's flexibility either way. We easily could have stayed longer.",
           },
         ],
       },
       {
-        day: "Day Three",
+        day: "Day Two",
         title: "Train to Bucharest",
         activities: [
-          { description: "Check out of the Airbnb." },
           { description: "Train to Bucharest." },
           {
-            description: "Drop bags at the InterContinental Athénée Palace.",
-            places: [{ name: "InterContinental Athénée Palace Bucharest", near: "Bucharest, Romania" }],
+            description: "Stay at the InterContinental Athénée Palace.",
+            places: [
+              { name: "InterContinental Athénée Palace Bucharest", near: "Bucharest, Romania" },
+            ],
           },
           {
             description: "Walk the city, ending in the Old Town.",
@@ -6937,28 +6803,20 @@ export const itineraries: Itinerary[] = [
               { name: "Cișmigiu Gardens", near: "Bucharest, Romania" },
             ],
           },
-          { description: "Back to the hotel to check in and get ready for dinner." },
+          { description: "Back to the hotel to get ready for dinner." },
           {
             description: "Drinks first, if you want them.",
-            places: [
-              { name: "Linea / Closer to the Moon", near: "Bucharest, Romania" },
-            ],
+            places: [{ name: "Linea / Closer to the Moon", near: "Bucharest, Romania" }],
           },
           {
             time: "20:00",
             description: "Dinner at Hanu' lui Manuc.",
             places: [{ name: "Hanu' lui Manuc", near: "Bucharest, Romania" }],
           },
-          { time: "22:00", description: "Drinks around Calea Victoriei or the Old Town, if you're still going." },
-        ],
-      },
-      {
-        day: "Day Four",
-        title: "Fly Home",
-        activities: [
-          { time: "08:30", description: "Breakfast at the hotel." },
-          { time: "09:30", description: "Check out and leave for Bucharest Otopeni." },
-          { time: "11:55", description: "Fly Bucharest Otopeni to London Luton, Wizz Air W4 3005, landing 13:30." },
+          {
+            time: "22:00",
+            description: "Drinks around Calea Victoriei or the Old Town, if you're still going.",
+          },
         ],
       },
     ],
