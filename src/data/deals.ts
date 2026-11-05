@@ -29,6 +29,11 @@ export type Deal = {
    * only.
    */
   page?: DealPage;
+  /**
+   * What a step in the plan says when it is this tour, so the deal can sit
+   * on that step. A deal with no matching step goes in the page's lists.
+   */
+  match?: RegExp;
 };
 
 /**
@@ -103,6 +108,7 @@ export const deals: Deal[] = [
     tour: `${city} food tour`,
     url: secretFoodTours(citySlug),
     page,
+    match: /(?<!self-guided [a-z]+ )food tour/i,
   })),
   {
     city: "Berlin",
@@ -112,6 +118,7 @@ export const deals: Deal[] = [
     url: "https://www.insidertour.com/",
     discount: "10% off with code LEXIE10, on any public or private tour except shore excursions",
     page: it("berlin"),
+    match: /Third Reich|Cold War|walking tour/i,
   },
   {
     city: "Cape Town",
@@ -120,6 +127,7 @@ export const deals: Deal[] = [
     tour: "Cape day tours, Winelands, Garden Route trips and safaris",
     url: "https://t.ly/airplanemode",
     page: it("south-africa"),
+    match: /Winelands|Cape Point|Garden Route|safari|day tour/i,
   },
   {
     city: "Cusco",
@@ -130,6 +138,7 @@ export const deals: Deal[] = [
     discount:
       "Free equipment rentals: write Lexie - Free rentals in Special Requests or Additional Comments when you book",
     page: it("peru"),
+    match: /Alpaca Expeditions|Inca Trail/i,
   },
   {
     city: "Kilimanjaro",
@@ -148,6 +157,7 @@ export const deals: Deal[] = [
     discount: "Use Lexie when reaching out for bookings to get a discounted price.",
     mention: "WhatsApp Jamal on +212 654-080957",
     page: it("morocco"),
+    match: /Jamal|guided|city tour/i,
   },
   {
     city: "Phuket",
@@ -158,6 +168,7 @@ export const deals: Deal[] = [
     discount: "Use Lexie when reaching out for bookings to get a discounted price.",
     mention: "WhatsApp Wooddy on +66 95 274 2719",
     page: it("thailand"),
+    match: /cooking class/i,
   },
   {
     city: "Tromsø",
@@ -166,8 +177,42 @@ export const deals: Deal[] = [
     tour: "Northern Lights safari",
     url: "https://www.panion.travel/p/lexiemesko",
     page: it("tromso"),
+    match: /northern lights/i,
   },
 ];
+
+/**
+ * Sits each of a page's deals on the step of the plan it belongs to: first a
+ * step that names the operator, then one that matches and sits in the deal's
+ * city, then any that matches. One deal per operator per step; the rest go
+ * in the page's list. `steps` are in page order, keyed by anchor id, with
+ * `context` the whole day or section the step is in.
+ */
+export function placeDeals(
+  pageDeals: Deal[],
+  steps: { key: string; text: string; context?: string }[],
+): { at: Map<string, Deal[]>; rest: Deal[] } {
+  const at = new Map<string, Deal[]>();
+  const fold = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  const free = (d: Deal) => steps.filter((s) => !(at.get(s.key) ?? []).some((x) => x.operator === d.operator));
+  // Most certain first, so a Hanoi tour cannot take the step that belongs
+  // to the Ho Chi Minh City one just because it was listed first.
+  const passes: ((d: Deal, s: (typeof steps)[number]) => boolean)[] = [
+    (d, s) => fold(s.text).includes(fold(d.operator)),
+    (d, s) => !!d.match?.test(s.text) && fold(s.context ?? s.text).includes(fold(d.city)),
+    (d, s) => !!d.match?.test(s.text),
+  ];
+  let left = [...pageDeals];
+  for (const pass of passes) {
+    left = left.filter((d) => {
+      const step = free(d).find((s) => pass(d, s));
+      if (step) at.set(step.key, [...(at.get(step.key) ?? []), d]);
+      return !step;
+    });
+  }
+  const rest = left;
+  return { at, rest };
+}
 
 /** Deals to show on one itinerary or guide page. */
 export function dealsFor(kind: DealPage["kind"], slug: string): Deal[] {

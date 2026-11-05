@@ -7,10 +7,10 @@ import { photosFor } from "@/data/photos";
 import { BMC_URL } from "@/data/itineraries";
 import { ActivityList, placeHref, placeLinkClass, bullet } from "@/lib/places";
 import { getGuide, guides } from "@/data/guides";
-import { DealsBlock } from "@/components/Deals";
+import { DealList } from "@/components/Deals";
 import { SpotsMap } from "@/components/SpotsMap";
 import { spotsFor } from "@/data/savedSpots";
-import { dealsFor } from "@/data/deals";
+import { dealsFor, placeDeals } from "@/data/deals";
 import { ZoomableImage } from "@/components/Lightbox";
 
 export const Route = createFileRoute("/recommendations/$slug")({
@@ -54,6 +54,16 @@ function GuidePage() {
   const { guide: g } = Route.useLoaderData();
   const others = guides.filter((x) => x.slug !== g.slug);
   const targets = guideTargets(g);
+  const tours = placeDeals(
+    dealsFor("recommendation", g.slug),
+    g.sections.flatMap((s) =>
+      (s.activities ?? []).map((a, ai) => ({
+        key: `${sectionId(s.title)}-${ai + 1}`,
+        text: `${a.description} ${(a.places ?? []).map((p) => p.name).join(" ")}`,
+        context: `${s.title} ${s.note ?? ""}`,
+      })),
+    ),
+  );
 
   return (
     <article className="mx-auto max-w-3xl px-6 py-8">
@@ -106,24 +116,13 @@ function GuidePage() {
         </div>
       )}
 
-      <p className="mt-6 rounded-2xl border-l-4 border-accent bg-secondary/70 px-5 py-4 font-medium leading-relaxed text-foreground/90">
-        {g.teaser}
-      </p>
-
-      {g.notes && g.notes.length > 0 && (
-        <ul className="mt-6 space-y-2">
-          {g.notes.map((n) => (
-            <li
-              key={n}
-              className="rounded-2xl border border-brand-yellow bg-brand-yellow/25 px-5 py-4 font-bold text-foreground"
-            >
-              {n}
-            </li>
-          ))}
-        </ul>
-      )}
-
-      <DealsBlock deals={dealsFor("recommendation", g.slug)} />
+      {/* The intro, and anything to know before you start, as plain text. */}
+      <div className="mt-6 space-y-3 leading-relaxed text-foreground/90">
+        <p className="text-lg">{g.teaser}</p>
+        {(g.notes ?? []).map((n) => (
+          <p key={n}>{n}</p>
+        ))}
+      </div>
 
       <ChildTiles parent={g.slug} />
 
@@ -156,7 +155,7 @@ function GuidePage() {
               </h2>
             </div>
             {section.note && (
-              <p className="border-b border-border bg-brand-yellow/20 px-5 py-3 font-semibold leading-relaxed text-foreground">
+              <p className="border-b border-border px-5 py-3 leading-relaxed text-foreground/90">
                 {section.note}
               </p>
             )}
@@ -171,6 +170,7 @@ function GuidePage() {
                 destination={g.destination}
                 idPrefix={section.title}
                 anchorPrefix={sectionId(section.title)}
+                dealsAt={tours.at}
               />
             )}
             {(section.places?.length || section.items?.length) && (
@@ -223,6 +223,15 @@ function GuidePage() {
         <div className="mt-10">
           <RoastTable />
         </div>
+      )}
+
+      {tours.rest.length > 0 && (
+        <section className="mt-8">
+          <h2 className="font-display text-2xl font-extrabold tracking-tight text-foreground">
+            Tours I'd book
+          </h2>
+          <DealList deals={tours.rest} />
+        </section>
       )}
 
       <SpotsMap spots={spotsFor(g.slug)} onGuide />

@@ -1,4 +1,6 @@
 import type { ReactNode } from "react";
+import type { Deal } from "@/data/deals";
+import { DealLine } from "@/components/Deals";
 import { mapsSearch } from "@/data/itineraries";
 import type { Activity, Place } from "@/data/itineraries";
 
@@ -91,12 +93,15 @@ export function ActivityList({
   destination,
   idPrefix,
   anchorPrefix,
+  dealsAt,
 }: {
   activities: Activity[];
   destination: string;
   idPrefix: string;
   /** When set, each step gets the id `${anchorPrefix}-${n}`, so tags and highlights can link to it. */
   anchorPrefix?: string;
+  /** Partner tours to star under a step, keyed by the step's anchor id. */
+  dealsAt?: Map<string, Deal[]>;
 }) {
   return (
     <ol className="divide-y divide-border">
@@ -135,6 +140,8 @@ export function ActivityList({
                   ))}
                 </ul>
               )}
+              {anchorPrefix &&
+                dealsAt?.get(`${anchorPrefix}-${i + 1}`)?.map((d) => <DealLine key={d.url} deal={d} />)}
             </div>
           </li>
         );

@@ -3,10 +3,10 @@ import { PhotoStrip, TikTokLink } from "@/components/PhotoStrip";
 import { photosFor } from "@/data/photos";
 import { getItinerary, itineraries, BMC_URL } from "@/data/itineraries";
 import { ActivityList, bullet, placeHref, placeLinkClass } from "@/lib/places";
-import { DealsBlock } from "@/components/Deals";
+import { DealList } from "@/components/Deals";
 import { SpotsMap } from "@/components/SpotsMap";
 import { spotsFor } from "@/data/savedSpots";
-import { dealsFor } from "@/data/deals";
+import { dealsFor, placeDeals } from "@/data/deals";
 import { ZoomableImage } from "@/components/Lightbox";
 import { BackToTop, JumpLink } from "@/components/JumpLink";
 import { dayId, findTarget, groupId, itineraryTargets, placeId } from "@/lib/anchors";
@@ -56,6 +56,20 @@ function ItineraryDetail() {
   const more = itineraries.filter((i) => i.slug !== it.slug).slice(0, 3);
   const targets = itineraryTargets(it);
   const showDays = !it.comingSoon && (it.days?.length ?? 0) > 0;
+  const tours = placeDeals(
+    dealsFor("itinerary", it.slug),
+    showDays
+      ? it.days!.flatMap((d, di) =>
+          d.activities.map((a, ai) => ({
+            key: `${dayId(di)}-${ai + 1}`,
+            text: `${a.description} ${(a.places ?? []).map((p) => p.name).join(" ")}`,
+            // Where the day is: its title and the places in it, not every
+            // sentence (a day that starts "Flight from Hanoi" is not in Hanoi).
+            context: `${d.title} ${d.activities.flatMap((x) => (x.places ?? []).map((p) => `${p.name} ${p.near ?? ""}`)).join(" ")}`,
+          })),
+        )
+      : [],
+  );
 
   return (
     <article className="mx-auto max-w-5xl px-6 py-8">
@@ -117,6 +131,14 @@ function ItineraryDetail() {
         </div>
       )}
 
+      {/* The intro, and anything to know before you start, as plain text. */}
+      <div className="mt-6 max-w-3xl space-y-3 leading-relaxed text-foreground/90">
+        <p className="text-lg">{it.teaser}</p>
+        {(it.notes ?? []).map((n) => (
+          <p key={n}>{n}</p>
+        ))}
+      </div>
+
       {/* Highlights. Guarded: an itinerary added without them should lose the
           section, not take the whole page down. */}
       {it.highlights && it.highlights.length > 0 && (
@@ -124,15 +146,15 @@ function ItineraryDetail() {
         <h2 className="font-display text-2xl font-extrabold tracking-tight text-foreground">
           Highlights
         </h2>
-        <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+        <ul className="mt-2 grid gap-x-6 gap-y-1 sm:grid-cols-2">
           {it.highlights.map((h) => (
             <li key={h}>
               <JumpLink
                 to={findTarget(h, targets)}
-                className="flex h-full items-start gap-3 rounded-xl border border-border bg-card px-4 py-2.5 text-foreground/90"
-                linkClassName="group transition-colors hover:border-primary"
+                className="flex items-start gap-2.5 py-0.5 text-foreground/90"
+                linkClassName="group transition-colors hover:text-primary"
               >
-                <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary" />
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                 <span className="flex-1 leading-relaxed">{h}</span>
                 <span aria-hidden className="jump-arrow mt-0.5 shrink-0 font-bold text-primary opacity-60 transition-transform group-hover:translate-y-0.5 group-hover:opacity-100">
                   &darr;
@@ -144,28 +166,6 @@ function ItineraryDetail() {
       </section>
       )}
 
-      {/* Teaser */}
-      <section className="mt-6 rounded-2xl border-l-4 border-accent bg-secondary px-5 py-4">
-        <p className="font-medium leading-relaxed text-foreground/90">
-          {it.teaser}
-        </p>
-      </section>
-
-      {/* Days - free shows all, gated shows only the sample day */}
-      {it.notes && it.notes.length > 0 && (
-        <ul className="mt-4 space-y-2">
-          {it.notes.map((n) => (
-            <li
-              key={n}
-              className="rounded-2xl border border-brand-yellow bg-brand-yellow/25 px-5 py-3 font-bold text-foreground"
-            >
-              {n}
-            </li>
-          ))}
-        </ul>
-      )}
-
-      <DealsBlock deals={dealsFor("itinerary", it.slug)} />
 
       {/* Straight to a day, or to one of the lists under the plan. */}
       {(showDays ? it.days!.length : 0) + (it.extras?.length ?? 0) > 1 && (
@@ -228,6 +228,7 @@ function ItineraryDetail() {
                   destination={it.destination}
                   idPrefix={d.day}
                   anchorPrefix={dayId(di)}
+                  dealsAt={tours.at}
                 />
               </div>
             ))}
@@ -290,10 +291,20 @@ function ItineraryDetail() {
         </div>
       )}
 
+      {/* Partner tours that do not belong to any one step of the plan. */}
+      {tours.rest.length > 0 && (
+        <section className="mt-6">
+          <h2 className="font-display text-2xl font-extrabold tracking-tight text-foreground">
+            Tours I'd book
+          </h2>
+          <DealList deals={tours.rest} />
+        </section>
+      )}
+
       {!it.comingSoon && <SpotsMap spots={spotsFor(it.slug)} />}
 
       {it.seeAlso && (
-        <section className="mt-10 rounded-2xl border border-accent/40 bg-accent/10 px-5 py-4">
+        <section className="mt-10">
           <p className="leading-relaxed text-foreground/90">{it.seeAlso.note}</p>
           {it.seeAlso.kind === "itinerary" ? (
             <Link
