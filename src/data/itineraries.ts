@@ -6767,7 +6767,14 @@ export const itineraries: Itinerary[] = [
         day: "Day Two",
         title: "Train to Bucharest",
         activities: [
-          { description: "Train to Bucharest." },
+          {
+            description: "Coffee at UP Specialty Coffee x Brunch before you leave Brașov. It was unbelievable.",
+            places: [{ name: "UP Specialty Coffee x Brunch", near: "Brașov, Romania" }],
+          },
+          {
+            description:
+              "Train to Bucharest. Be flexible on times: on peak weekends the train can sell out, and we had to wait half an hour for the next one.",
+          },
           {
             description: "Stay at the InterContinental Athénée Palace.",
             places: [
