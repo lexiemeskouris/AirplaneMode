@@ -697,7 +697,7 @@ export const guides: Guide[] = [
     cover: london,
     label: "CITY",
     summary:
-      "London itself, three day trips out of it, and 29 Sunday roasts scored on every category.",
+      "London itself, three day trips out of it, and 32 Sunday roasts scored on every category.",
     teaser:
       "I live here, so this is the one I keep adding to. London has its own page with eight full days on it. The day trips have their own, and so do the roasts, because that spreadsheet got out of hand.",
     tags: ["#SundayRoast", "#London", "#DayTrips"],
@@ -1329,7 +1329,7 @@ export const guides: Guide[] = [
         label: "The Fat Badger roast on TikTok",
       },
     ],
-    summary: "29 roasts, scored across ten categories and weighted. The whole spreadsheet.",
+    summary: "32 roasts, scored across ten categories and weighted. The whole spreadsheet.",
     teaser:
       "I have been keeping a spreadsheet. Every roast is scored out of five on ten separate things, weighted, and averaged. Here it is in full, best first, with what I actually thought of each one.",
     tags: ["#SundayRoast", "#London", "#Spreadsheet"],

@@ -119,4 +119,10 @@ export const roasts: Roast[] = [
     "Solid, and the one I would take if I needed an emergency roast nearby. You can sit outside, which is nice, but it was average. Everything needed salt and the horseradish had no flavour."),
   r("Hunter's Moon", "South Kensington", [4, 3, 4, 4, 3, 3, 4, 5, 3, 3], 3.64,
     "Quality ingredients, but a very small portion. The potatoes were almost impossible to cut, though soft inside. The service was god awful."),
+  r("The Pig's Ear", "Chelsea", [5, 2, 5, 4, 4, 4, 3, 0, 3, 4], 3.93,
+    "A very solid option for a roast, with a lively atmosphere. I wish there was more food, and cabbage instead of whatever the greens with the peas were."),
+  r("Fat Badger", "Notting Hill", [5, 2, 5, 3, 3, 4, 4, 4, 5, 5], 4.16,
+    "I don't love a prix fixe, pre-paid meal, but this place is a classic. You are there for the atmosphere and the famous bone marrow. You really can never go wrong heading here."),
+  r("Carlton Tavern", "Maida Vale", [5, 4, 3, 4, 3, 3, 4, 5, 5, 3], 4.04,
+    "Unbelievable for a casual, not well known spot, and incredibly priced and portioned. Everything was superb, except that you have to stand up and order at the bar. The cauliflower cheese had blue cheese in it, which was interesting."),
 ];
