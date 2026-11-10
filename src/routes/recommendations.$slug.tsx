@@ -4,7 +4,7 @@ import { findTarget, guideTargets, placeId, sectionId } from "@/lib/anchors";
 import { RoastTable } from "@/components/RoastTable";
 import { PhotoStrip, TikTokLinks } from "@/components/PhotoStrip";
 import { photosFor } from "@/data/photos";
-import { BMC_URL } from "@/data/itineraries";
+import { BMC_URL, placeName } from "@/data/itineraries";
 import { ActivityList, placeHref, placeLinkClass, bullet } from "@/lib/places";
 import { getGuide, guides } from "@/data/guides";
 import { DealList } from "@/components/Deals";
@@ -269,7 +269,7 @@ function GuidePage() {
                   params={{ slug: o.slug }}
                   className="font-bold text-primary transition-transform hover:translate-x-1"
                 >
-                  {o.title}
+                  {placeName(o.title)}
                 </Link>
               </li>
             ))}

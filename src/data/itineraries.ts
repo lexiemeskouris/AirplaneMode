@@ -6831,7 +6831,7 @@ export const itineraries: Itinerary[] = [
  * since the length is already in the duration chip.
  */
 export function placeName(title: string): string {
-  const place = title.replace(/^\S+ (Days?|Nights?) in /, "");
+  const place = title.replace(/^\S+ (Days?|Nights?) in /, "").replace(/ Recommendations$/, "");
   return place.charAt(0).toUpperCase() + place.slice(1);
 }
 

@@ -214,11 +214,6 @@ function ContinentNav({ regions }: { regions: Region[] }) {
   );
 }
 
-/** A guide's card name: just the place, since the RECS chip says the rest. */
-function cardTitle(title: string): string {
-  return title.replace(/ Recommendations$/, "");
-}
-
 function Index() {
   const free = itineraries.filter((i) => !i.gated && !i.comingSoon);
   const gated = itineraries.filter((i) => i.gated);
@@ -267,14 +262,14 @@ function Index() {
         // undersell a guide that is sixty pieces of advice.
         return {
           region: regionOf(g.country),
-          sortKey: cardTitle(g.title),
+          sortKey: placeName(g.title),
           node: (
             <Tile
               key={g.slug}
               kind="recommendation"
               slug={g.slug}
               cover={g.cover}
-              title={cardTitle(g.title)}
+              title={placeName(g.title)}
               summary={g.summary}
               tags={g.tags}
               chipA={g.label ?? "RECS"}

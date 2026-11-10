@@ -1,7 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { PhotoStrip, TikTokLinks } from "@/components/PhotoStrip";
 import { photosFor } from "@/data/photos";
-import { getItinerary, itineraries, BMC_URL } from "@/data/itineraries";
+import { getItinerary, itineraries, BMC_URL, placeName } from "@/data/itineraries";
 import { ActivityList, bullet, placeHref, placeLinkClass } from "@/lib/places";
 import { DealList } from "@/components/Deals";
 import { SpotsMap } from "@/components/SpotsMap";
@@ -358,7 +358,7 @@ function ItineraryDetail() {
                   {i.country}
                 </p>
                 <p className="mt-1 font-display text-lg font-extrabold tracking-tight text-foreground transition-colors group-hover:text-primary">
-                  {i.title}
+                  {placeName(i.title)}
                 </p>
               </div>
             </Link>
