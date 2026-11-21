@@ -33,6 +33,8 @@ type TileProps = {
   slug: string;
   cover?: string | undefined;
   title: string;
+  /** Shown above the title, and what the cards sort by within a continent. */
+  country: string;
   summary: string;
   tags: string[];
   /** Yellow chip: the season, or what kind of page this is. */
@@ -52,8 +54,14 @@ type TileProps = {
  * lines up: fixed 4:5 cover, clamped summary, and the link pinned to the bottom.
  */
 function Tile(props: TileProps) {
-  const { kind, slug, cover, title, summary, tags, chipA, chipB, cta, gated, comingSoon, bmcUrl } =
+  const { kind, slug, cover, title, country, summary, tags, chipA, chipB, cta, gated, comingSoon, bmcUrl } =
     props;
+  // Tags that only repeat the title ("#Ljubljana" under "Ljubljana and Lake
+  // Bled") waste the two chips a phone shows, so they are dropped.
+  const squash = (s: string) => s.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "");
+  const shownTags = tags.filter((t) => !squash(title).includes(squash(t)));
+  // The country line is skipped when the title already says it (Iceland).
+  const showCountry = !squash(title).includes(squash(country));
 
   const to = kind === "itinerary" ? "/itineraries/$slug" : "/recommendations/$slug";
   const linkProps = { to, params: { slug } } as const;
@@ -117,13 +125,18 @@ function Tile(props: TileProps) {
       </div>
 
       <div className="flex flex-1 flex-col p-3 sm:p-5">
+        {showCountry && (
+          <p className="mb-1 text-[0.65rem] font-extrabold uppercase tracking-wider text-muted-foreground sm:text-xs">
+            {country}
+          </p>
+        )}
         <h2 className="hyphens-auto font-display text-base font-extrabold leading-tight tracking-tight text-foreground [overflow-wrap:anywhere] sm:text-xl sm:[overflow-wrap:normal]">
           <Link {...linkProps}>{title}</Link>
         </h2>
         {/* Clamped so a long summary cannot make one tile taller than its row. */}
         <p className="mt-2 hidden text-sm sm:line-clamp-3 leading-relaxed text-muted-foreground">{summary}</p>
         <div className="mt-2 flex flex-wrap gap-1 sm:mt-4 sm:gap-1.5">
-          {tags.slice(0, 3).map((t, i) => (
+          {shownTags.slice(0, 3).map((t, i) => (
             <span
               key={t}
               className={`rounded-lg bg-brand-pink px-2 py-1 text-[0.65rem] font-bold text-foreground ${
@@ -222,7 +235,7 @@ function Index() {
   const tiles: { region: (typeof REGIONS)[number]; sortKey: string; node: React.ReactNode }[] = [
     ...itineraries.map((it) => ({
       region: regionOf(it.country),
-      sortKey: placeName(it.title),
+      sortKey: `${it.country}|${placeName(it.title)}`,
       node: (
         <Tile
           key={it.slug}
@@ -230,6 +243,7 @@ function Index() {
           slug={it.slug}
           cover={it.cover}
           title={placeName(it.title)}
+          country={it.country}
           summary={it.summary}
           tags={it.highlights?.length ? it.highlights : it.tags}
           chipA={it.season.toUpperCase()}
@@ -262,7 +276,7 @@ function Index() {
         // undersell a guide that is sixty pieces of advice.
         return {
           region: regionOf(g.country),
-          sortKey: placeName(g.title),
+          sortKey: `${g.country}|${placeName(g.title)}`,
           node: (
             <Tile
               key={g.slug}
@@ -270,6 +284,7 @@ function Index() {
               slug={g.slug}
               cover={g.cover}
               title={placeName(g.title)}
+              country={g.country}
               summary={g.summary}
               tags={g.tags}
               chipA={g.label ?? "RECS"}
@@ -284,7 +299,7 @@ function Index() {
     region,
     tiles: tiles
       .filter((t) => t.region === region)
-      .sort((a, b) => a.sortKey.localeCompare(b.sortKey)),
+      .sort((a, b) => a.sortKey.localeCompare(b.sortKey, "en", { sensitivity: "base" })),
   })).filter((s) => s.tiles.length > 0);
 
   return (
