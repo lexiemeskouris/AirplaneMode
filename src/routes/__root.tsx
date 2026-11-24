@@ -1,3 +1,4 @@
+import { SiteSearch } from "@/components/SiteSearch";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
@@ -46,9 +47,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-xl font-bold tracking-tight text-foreground">
-          This page didn't load
-        </h1>
+        <h1 className="text-xl font-bold tracking-tight text-foreground">This page didn't load</h1>
         <p className="mt-2 text-sm text-muted-foreground">
           Something broke on my end. Try refreshing, or head back home.
         </p>
@@ -108,14 +107,17 @@ function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <a
-          href={BMC_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:scale-105 active:scale-95 md:px-5 md:py-2.5"
-        >
-          ☕ Support
-        </a>
+        <div className="flex items-center gap-2">
+          <SiteSearch />
+          <a
+            href={BMC_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:scale-105 active:scale-95 md:px-5 md:py-2.5"
+          >
+            ☕ Support
+          </a>
+        </div>
       </div>
       {/* Phones get the same links as a swipeable row of tabs, so nothing
           sits behind a scroll to the footer. */}

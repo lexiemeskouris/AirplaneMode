@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useLocation } from "@tanstack/react-router";
 import type { Activity, Itinerary, Place } from "@/data/itineraries";
 import type { Guide } from "@/data/guides";
 
@@ -163,10 +164,12 @@ export function jumpTo(e: { preventDefault(): void }, id: string) {
  * part of the plan into view and flash it, as a chip on the page itself does.
  */
 export function useJumpOnArrival(key: string) {
+  // The hash too, so a search hit on the page you are already on still jumps.
+  const hash = useLocation({ select: (l) => l.hash });
   useEffect(() => {
     const id = decodeURIComponent(window.location.hash.slice(1));
     if (!id) return;
     const t = window.setTimeout(() => jumpTo({ preventDefault() {} }, id), 150);
     return () => window.clearTimeout(t);
-  }, [key]);
+  }, [key, hash]);
 }
