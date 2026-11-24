@@ -9,7 +9,7 @@ import { spotsFor } from "@/data/savedSpots";
 import { dealsFor, placeDeals } from "@/data/deals";
 import { ZoomableImage } from "@/components/Lightbox";
 import { BackToTop, JumpLink } from "@/components/JumpLink";
-import { dayId, findTarget, groupId, itineraryTargets, placeId } from "@/lib/anchors";
+import { dayId, findTarget, groupId, itineraryTargets, placeId, useJumpOnArrival } from "@/lib/anchors";
 
 export const Route = createFileRoute("/itineraries/$slug")({
   loader: ({ params }) => {
@@ -55,6 +55,7 @@ function ItineraryDetail() {
   const { itinerary: it } = Route.useLoaderData();
   const more = itineraries.filter((i) => i.slug !== it.slug).slice(0, 3);
   const targets = itineraryTargets(it);
+  useJumpOnArrival(it.slug);
   const showDays = !it.comingSoon && (it.days?.length ?? 0) > 0;
   const tours = placeDeals(
     dealsFor("itinerary", it.slug),

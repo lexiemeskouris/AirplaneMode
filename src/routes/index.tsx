@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { itineraries, BMC_URL, placeName } from "@/data/itineraries";
 import { guides } from "@/data/guides";
+import { findTarget, guideTargets, itineraryTargets } from "@/lib/anchors";
 import { SUGGESTIONS_ENABLED } from "@/data/site";
 import { SpinWheel, useSpinWheel } from "@/components/SpinWheel";
 import { REGIONS, regionId, regionOf, type Region } from "@/data/regions";
@@ -36,7 +37,8 @@ type TileProps = {
   /** Shown above the title, and what the cards sort by within a continent. */
   country: string;
   summary: string;
-  tags: string[];
+  /** Each chip links to the part of the page it is about, when one matches. */
+  tags: { label: string; hash?: string | undefined }[];
   /** Yellow chip: the season, or what kind of page this is. */
   chipA: string;
   /** Indigo chip: how long it runs, or how many places it names. */
@@ -59,7 +61,7 @@ function Tile(props: TileProps) {
   // Tags that only repeat the title ("#Ljubljana" under "Ljubljana and Lake
   // Bled") waste the two chips a phone shows, so they are dropped.
   const squash = (s: string) => s.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "");
-  const shownTags = tags.filter((t) => !squash(title).includes(squash(t)));
+  const shownTags = tags.filter((t) => !squash(title).includes(squash(t.label)));
   // The country line is skipped when the title already says it (Iceland).
   const showCountry = !squash(title).includes(squash(country));
 
@@ -137,14 +139,16 @@ function Tile(props: TileProps) {
         <p className="mt-2 hidden text-sm sm:line-clamp-3 leading-relaxed text-muted-foreground">{summary}</p>
         <div className="mt-2 flex flex-wrap gap-1 sm:mt-4 sm:gap-1.5">
           {shownTags.slice(0, 3).map((t, i) => (
-            <span
-              key={t}
-              className={`rounded-lg bg-brand-pink px-2 py-1 text-[0.65rem] font-bold text-foreground ${
+            <Link
+              key={t.label}
+              {...linkProps}
+              {...(t.hash ? { hash: t.hash } : {})}
+              className={`rounded-lg bg-brand-pink px-2 py-1 text-[0.65rem] font-bold text-foreground transition-colors hover:bg-foreground hover:text-background ${
                 i >= 2 ? "hidden sm:inline-block" : ""
               }`}
             >
-              {t}
-            </span>
+              {t.label}
+            </Link>
           ))}
         </div>
         {/* mt-auto pins the link to the bottom so it lines up across the row. */}
@@ -245,7 +249,10 @@ function Index() {
           title={placeName(it.title)}
           country={it.country}
           summary={it.summary}
-          tags={it.highlights?.length ? it.highlights : it.tags}
+          tags={(it.highlights?.length ? it.highlights : it.tags).map((label) => ({
+            label,
+            hash: findTarget(label, itineraryTargets(it)),
+          }))}
           chipA={it.season.toUpperCase()}
           chipB={it.duration.toUpperCase()}
           cta={
@@ -286,7 +293,7 @@ function Index() {
               title={placeName(g.title)}
               country={g.country}
               summary={g.summary}
-              tags={g.tags}
+              tags={g.tags.map((label) => ({ label, hash: findTarget(label, guideTargets(g)) }))}
               chipA={g.label ?? "RECS"}
               chipB={spots >= tips ? `${spots} SPOTS` : `${tips} TIPS`}
               cta="See the list"

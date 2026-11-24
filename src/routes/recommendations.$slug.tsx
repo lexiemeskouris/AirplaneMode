@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { BackToTop, JumpLink } from "@/components/JumpLink";
-import { findTarget, guideTargets, placeId, sectionId } from "@/lib/anchors";
+import { findTarget, guideTargets, placeId, sectionId, useJumpOnArrival } from "@/lib/anchors";
 import { RoastTable } from "@/components/RoastTable";
 import { PhotoStrip, TikTokLinks } from "@/components/PhotoStrip";
 import { photosFor } from "@/data/photos";
@@ -54,6 +54,7 @@ function GuidePage() {
   const { guide: g } = Route.useLoaderData();
   const others = guides.filter((x) => x.slug !== g.slug);
   const targets = guideTargets(g);
+  useJumpOnArrival(g.slug);
   const tours = placeDeals(
     dealsFor("recommendation", g.slug),
     g.sections.flatMap((s) =>

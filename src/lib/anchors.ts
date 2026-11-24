@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import type { Activity, Itinerary, Place } from "@/data/itineraries";
 import type { Guide } from "@/data/guides";
 
@@ -155,4 +156,17 @@ export function jumpTo(e: { preventDefault(): void }, id: string) {
   el.classList.remove("anchor-flash");
   void el.offsetWidth;
   el.classList.add("anchor-flash");
+}
+
+/**
+ * Arriving from a home-page chip (/itineraries/slovenia#day-2-3): scroll that
+ * part of the plan into view and flash it, as a chip on the page itself does.
+ */
+export function useJumpOnArrival(key: string) {
+  useEffect(() => {
+    const id = decodeURIComponent(window.location.hash.slice(1));
+    if (!id) return;
+    const t = window.setTimeout(() => jumpTo({ preventDefault() {} }, id), 150);
+    return () => window.clearTimeout(t);
+  }, [key]);
 }

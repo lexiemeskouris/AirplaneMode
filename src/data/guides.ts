@@ -84,7 +84,7 @@ export const guides: Guide[] = [
       "Eight days on the Northern Lemosho route, and everything worth knowing before you book it.",
     teaser:
       "No day-by-day plan here, just the practical stuff. Which route we picked and why, what to buy before you go, what goes in the medical kit, and the small decisions that made the biggest difference on the mountain.",
-    tags: ["#NorthernLemosho", "#Goretex", "#Diamox"],
+    tags: ["Northern Lemosho", "Gore-Tex", "Diamox"],
     notes: [
       "Bring more cash than you normally would, in USD, and enough for the whole trip. Service and bank access are patchy, and card machines often will not connect.",
       "Start Diamox the day before you land. Moshi and Arusha sit at around 6,000 feet, and it cannot help you once you are already sick.",
@@ -185,7 +185,7 @@ export const guides: Guide[] = [
       "Montserrat, the Bunkers at sunset, the Gaudí worth queuing for, and two places to eat.",
     teaser:
       "What to see and where to eat in Barcelona, with no plan attached. Take the bits you want.",
-    tags: ["#Gaudi", "#LaBoqueria", "#Montserrat"],
+    tags: ["Gaudí", "La Boqueria", "Montserrat"],
     sections: [
       {
         title: "Do",
@@ -226,7 +226,7 @@ export const guides: Guide[] = [
       "Where to eat, where it turns into a club, and the order we did it in over three nights.",
     teaser:
       "Miami was mostly about the nights, plus one long Sunday lunch. Late dinners, restaurants that turn into clubs, and the order we actually did them in.",
-    tags: ["#SundayFunDay", "#LosFuegos", "#SouthBeach"],
+    tags: ["Sunday Funday", "Los Fuegos", "South Beach"],
     sections: [
       {
         title: "Go out",
@@ -282,7 +282,7 @@ export const guides: Guide[] = [
       "A long weekend in March out of Reykjavík: the South Coast, the Golden Circle and the Blue Lagoon on the way to the airport.",
     teaser:
       "Overnight from New York, land at dawn, and base yourself in Reykjavík. One day on the South Coast, one on the Golden Circle, and the Blue Lagoon on the last morning so you go straight from it to your flight. Then everywhere we ate, with Rök the one to book if you only get one dinner.",
-    tags: ["#GoldenCircle", "#BlueLagoon", "#Rok"],
+    tags: ["Golden Circle", "Blue Lagoon", "Rok"],
     notes: [
       "Northern Lights tours get cancelled for weather a lot. Ours was cancelled three nights in a row. Book one with free cancellation for your first night, so it can roll to the next night if it is called off. GetYourGuide refunded ours in full.",
       "We stayed in an Airbnb on Einholt, right across the street from Hotel Klettur. Most day tours will collect you from a hotel, so staying near one makes pickups easy.",
@@ -431,7 +431,7 @@ export const guides: Guide[] = [
       "One vineyard hotel worth the whole trip, a tasting menu in the city, and a day out in Saint-Émilion.",
     teaser:
       "No schedule for this one, just where to stay, where to eat in the city, the town to spend a day in, and the châteaux worth tasting at.",
-    tags: ["#Caudalie", "#SaintEmilion", "#Wine"],
+    tags: ["Caudalie", "Saint-Émilion", "Wine"],
     sections: [
       {
         title: "Stay",
@@ -484,7 +484,7 @@ export const guides: Guide[] = [
       "Tours worth booking, three restaurants in the old town, and the beach club to spend a day at.",
     teaser:
       "No plan for Nice, just the tours worth taking, where to eat in the old town, and the day trips along the coast.",
-    tags: ["#OldNice", "#Riviera", "#Monaco"],
+    tags: ["Old Nice", "Riviera", "Monaco"],
     sections: [
       {
         title: "Things to do",
@@ -551,7 +551,7 @@ export const guides: Guide[] = [
       "The reservations worth chasing, the casual places I went back to, and where to drink.",
     teaser:
       "Charleston sorted by how much effort it takes to get in: the ones you queue or book for, the ones you just walk into, and the bars.",
-    tags: ["#ChubbyFish", "#LewisBarbecue", "#Vintage"],
+    tags: ["Chubby Fish", "Lewis Barbecue", "Vintage"],
     sections: [
       {
         title: "Restaurants",
@@ -631,7 +631,7 @@ export const guides: Guide[] = [
       "Where to eat around Mount Snow in southern Vermont, four hikes graded by effort, and the shops worth a detour.",
     teaser:
       "Dover and West Dover, at the Mount Snow end of southern Vermont. Dive bars and breakfast places, four hikes from beginner to moderately difficult, and a nearby town for a farmers' market.",
-    tags: ["#MountSnow", "#Vermont", "#Hikes"],
+    tags: ["Mount Snow", "Vermont", "Hikes"],
     sections: [
       {
         title: "Eat and drink",
@@ -700,7 +700,7 @@ export const guides: Guide[] = [
       "London itself, three day trips out of it, and 32 Sunday roasts scored on every category.",
     teaser:
       "I live here, so this is the one I keep adding to. London has its own page with eight full days on it. The day trips have their own, and so do the roasts, because that spreadsheet got out of hand.",
-    tags: ["#SundayRoast", "#London", "#DayTrips"],
+    tags: ["Sunday roast", "London", "Day trips"],
     notes: [
       "Pick a page below. Everything on the London page is a self-contained day, so nothing needs doing in order.",
     ],
@@ -736,7 +736,7 @@ export const guides: Guide[] = [
     summary: "Eight full days through London, plus the museums, the sandwiches and where to shop.",
     teaser:
       "Eight routes I have actually walked people through, each one a self-contained day. Take whichever fits the day you have and the part of town you are staying in. A few only work on a Sunday, and those say so.",
-    tags: ["#London", "#Marylebone", "#NottingHill"],
+    tags: ["London", "Marylebone", "Notting Hill"],
     notes: [
       "These are not meant to be done in order. Pick the one that matches where you are staying.",
     ],
@@ -1111,7 +1111,7 @@ export const guides: Guide[] = [
     summary: "An hour from London, and a full day once you are there.",
     teaser:
       "Close enough to do on a whim and pretty enough that you will wish you had booked a night. Punting, the colleges, and a long lunch.",
-    tags: ["#DayTrip", "#Punting", "#Colleges"],
+    tags: ["Day trip", "Punting", "Colleges"],
     sections: [
       {
         title: "A perfect day in Cambridge",
@@ -1174,7 +1174,7 @@ export const guides: Guide[] = [
     summary: "Honey-coloured villages, and which ones are worth the drive.",
     teaser:
       "Doable in a day from London if you start early, better over a weekend. The villages are close together and each one takes about an hour.",
-    tags: ["#DayTrip", "#Villages", "#Countryside"],
+    tags: ["Day trip", "Villages", "Countryside"],
     sections: [
       {
         title: "The Cotswolds, village by village",
@@ -1260,7 +1260,7 @@ export const guides: Guide[] = [
     summary: "Oysters on the Kent coast, about ninety minutes out of London.",
     teaser:
       "A seaside day trip that is really about the food. Oysters, the harbour, and the beach huts along the shingle.",
-    tags: ["#DayTrip", "#Oysters", "#Seaside"],
+    tags: ["Day trip", "Oysters", "Seaside"],
     sections: [
       {
         title: "A day in Whitstable",
@@ -1332,7 +1332,7 @@ export const guides: Guide[] = [
     summary: "32 roasts, scored across ten categories and weighted. The whole spreadsheet.",
     teaser:
       "I have been keeping a spreadsheet. Every roast is scored out of five on ten separate things, weighted, and averaged. Here it is in full, best first, with what I actually thought of each one.",
-    tags: ["#SundayRoast", "#London", "#Spreadsheet"],
+    tags: ["Sunday roast", "London", "Spreadsheet"],
     notes: [
       "A category marked n/a means the pub did not offer it at all, so it is dropped from that pub's average rather than scored as a zero. Nobody loses points for not having a pudding they never claimed to have.",
       "The weighting is mine and it is not neutral: the meat is a fifth of the score on its own, and gravy, pudding, portion and vibe are worth a tenth each.",
@@ -1351,7 +1351,7 @@ export const guides: Guide[] = [
       "Five routes through the city, built for people visiting, plus a very long list of everything else.",
     teaser:
       "These are days I have actually walked people through, one neighbourhood at a time. They are not meant to be done in order, so take whichever fits where you are staying.",
-    tags: ["#Pizza", "#RedHook", "#ComedyCellar"],
+    tags: ["Pizza", "Red Hook", "Comedy Cellar"],
     notes: [
       "Each route below is a self-contained day. Pick the one that suits the part of town you are in rather than doing them in sequence.",
     ],
