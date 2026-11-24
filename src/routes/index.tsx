@@ -5,7 +5,7 @@ import { findTarget, guideTargets, itineraryTargets } from "@/lib/anchors";
 import { SUGGESTIONS_ENABLED } from "@/data/site";
 import { SpinWheel, useSpinWheel } from "@/components/SpinWheel";
 import { REGIONS, regionId, regionOf, type Region } from "@/data/regions";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -211,7 +211,7 @@ function ContinentNav({ regions }: { regions: Region[] }) {
     <nav
       aria-label="Jump to a continent"
       style={{ top }}
-      className="sticky z-40 -mx-6 mb-10 flex gap-2 overflow-x-auto bg-background/90 px-6 py-3 backdrop-blur-xl"
+      className="sticky z-40 -mx-6 mb-10 flex gap-2 min-[1720px]:hidden overflow-x-auto bg-background/90 px-6 py-3 backdrop-blur-xl"
     >
       {regions.map((region) => (
         <a
@@ -231,14 +231,146 @@ function ContinentNav({ regions }: { regions: Region[] }) {
   );
 }
 
+const countryId = (c: string) => `country-${c.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+
+/**
+ * On wide screens the feed leaves an empty gutter on the left. This fills it
+ * with the continents, and the countries of the one you are in, pinned while
+ * you scroll so any part of the world is one click away. Below that width
+ * the row of continent buttons above the feed does the job instead.
+ */
+function SideRail({ sections }: { sections: { region: Region; countries: string[] }[] }) {
+  const [top, setTop] = useState(0);
+  const [active, setActive] = useState<{ region: Region | null; country: string | null }>({
+    region: null,
+    country: null,
+  });
+
+  useEffect(() => {
+    const header = document.querySelector("header");
+    if (!header) return;
+    const measure = () => setTop(header.getBoundingClientRect().height);
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(header);
+    return () => ro.disconnect();
+  }, []);
+
+  // A clicked link stays lit while the page glides to it, rather than
+  // flickering through every country on the way.
+  const held = useRef(0);
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (Date.now() < held.current) return;
+      const line = top + 160;
+      let region: Region | null = null;
+      let country: string | null = null;
+      for (const s of sections) {
+        const el = document.getElementById(regionId(s.region));
+        if (el && el.getBoundingClientRect().top <= line) {
+          region = s.region;
+          country = null;
+          // The latest row to pass the line; in a row of four countries
+          // that arrive together, the first of them.
+          let best = -Infinity;
+          for (const c of s.countries) {
+            const y = document.getElementById(countryId(c))?.getBoundingClientRect().top;
+            if (y !== undefined && y <= line && y > best + 1) {
+              best = y;
+              country = c;
+            }
+          }
+        }
+      }
+      setActive({ region, country });
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [sections, top]);
+
+  const jump = (e: React.MouseEvent, id: string, region: Region, country: string | null) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    e.preventDefault();
+    held.current = Date.now() + 1000;
+    setActive({ region, country });
+    // No hash in the address bar: the router would take that as a navigation
+    // and scroll again with its own offset, stopping short of the heading.
+    window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - top - 24, behavior: "smooth" });
+  };
+
+  // Before you reach the feed, the first continent is the one shown open.
+  const open = active.region ?? sections[0]?.region;
+
+  return (
+    <aside className="absolute inset-y-0 right-full hidden w-52 min-[1720px]:block">
+      <nav
+        aria-label="Jump to a continent or country"
+        style={{ top: top + 24, maxHeight: `calc(100vh - ${top + 48}px)` }}
+        className="sticky overflow-y-auto pr-6 [scrollbar-width:thin]"
+      >
+        <ul className="space-y-1 border-l-2 border-border">
+          {sections.map(({ region, countries }) => {
+            const isOpen = region === open;
+            return (
+              <li key={region}>
+                <a
+                  href={`#${regionId(region)}`}
+                  onClick={(e) => jump(e, regionId(region), region, null)}
+                  aria-current={active.region === region && !active.country ? "true" : undefined}
+                  className={`-ml-[2px] block border-l-2 py-1.5 pl-4 font-display text-sm font-extrabold transition-colors ${
+                    isOpen
+                      ? "border-primary text-primary"
+                      : "border-transparent text-foreground/70 hover:text-primary"
+                  }`}
+                >
+                  {region}
+                </a>
+                {isOpen && (
+                  <ul className="mb-2">
+                    {countries.map((c) => (
+                      <li key={c}>
+                        <a
+                          href={`#${countryId(c)}`}
+                          onClick={(e) => jump(e, countryId(c), region, c)}
+                          aria-current={active.country === c ? "true" : undefined}
+                          className={`block py-1 pl-7 text-[0.8rem] font-semibold transition-colors ${
+                            active.country === c
+                              ? "text-foreground"
+                              : "text-muted-foreground hover:text-foreground"
+                          }`}
+                        >
+                          {c}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
+    </aside>
+  );
+}
+
 function Index() {
   const free = itineraries.filter((i) => !i.gated && !i.comingSoon);
   const gated = itineraries.filter((i) => i.gated);
   const wheel = useSpinWheel();
 
-  const tiles: { region: (typeof REGIONS)[number]; sortKey: string; node: React.ReactNode }[] = [
+  const tiles: {
+    region: (typeof REGIONS)[number];
+    country: string;
+    sortKey: string;
+    node: React.ReactNode;
+  }[] = [
     ...itineraries.map((it) => ({
       region: regionOf(it.country),
+      country: it.country,
       sortKey: `${it.country}|${placeName(it.title)}`,
       node: (
         <Tile
@@ -283,6 +415,7 @@ function Index() {
         // undersell a guide that is sixty pieces of advice.
         return {
           region: regionOf(g.country),
+          country: g.country,
           sortKey: `${g.country}|${placeName(g.title)}`,
           node: (
             <Tile
@@ -350,7 +483,13 @@ function Index() {
       {/* Feed, by continent. Itineraries and recommendations lists share a
           section, A to Z by place within it, so everything for one part of
           the world sits together. */}
-      <section className="mx-auto max-w-7xl px-6 pb-32">
+      <section className="relative mx-auto max-w-7xl px-6 pb-32">
+        <SideRail
+          sections={sections.map((x) => ({
+            region: x.region,
+            countries: [...new Set(x.tiles.map((t) => t.country))],
+          }))}
+        />
         <ContinentNav regions={sections.map((x) => x.region)} />
 
         <div className="space-y-16">
@@ -360,7 +499,21 @@ function Index() {
                 {region}
               </h2>
               <div className="grid grid-cols-2 gap-3 sm:gap-8 lg:grid-cols-4">
-                {tiles.map((t) => t.node)}
+                {tiles.map((t, i) => (
+                  // The first tile of each country is what the side rail's
+                  // country links land on.
+                  <div
+                    key={i}
+                    id={
+                      tiles.findIndex((x) => x.country === t.country) === i
+                        ? countryId(t.country)
+                        : undefined
+                    }
+                    className="min-w-0 scroll-mt-32"
+                  >
+                    {t.node}
+                  </div>
+                ))}
               </div>
             </section>
           ))}
