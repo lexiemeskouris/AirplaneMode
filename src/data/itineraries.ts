@@ -5018,7 +5018,11 @@ export const itineraries: Itinerary[] = [
             description: "Colour and skeletal analysis at Mood Collect in Gangnam, until 13:50.",
             places: [{ name: "Mood Collect", near: "Seoul, South Korea" }],
           },
-          { time: "14:30", description: "AI skin analysis and an aqua facial, until 16:30." },
+          {
+            time: "14:30",
+            description: "AI skin analysis and an aqua facial at Shinebeam Clinic Gangnam, until 16:30.",
+            places: [{ name: "Shinebeam Clinic Gangnam", near: "Seoul, South Korea" }],
+          },
           {
             description: "Mini croissants at NUDAKE Haus Dosan.",
             places: [{ name: "NUDAKE Haus Dosan", near: "Seoul, South Korea" }],
